@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Inbox Classic: the familiar mail client, rebuilt for today</title>
+        <meta
+            name="description"
+            content="Inbox Classic is a Windows mail client with the classic three-pane layout you already know: folders, message list and reading pane. IMAP and SMTP, HTML mail made safe, drafts, an outbox, and nothing that phones home."
+        />
+        <meta property="og:title" content="Inbox Classic" />
+        <meta property="og:description" content="The familiar three-pane mail client, rebuilt for today's Windows and today's mail." />
+        <meta property="og:image" content="https://inboxclassic.com/img/main-1-inbox.png" />
+        <meta property="og:url" content="https://inboxclassic.com/" />
+        <link
+            rel="icon"
+            href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%231c5fae'/%3E%3Cpath d='M5 8l7 5 7-5v9H5z' fill='none' stroke='white' stroke-width='1.6' stroke-linejoin='round'/%3E%3C/svg%3E"
+        />
+        <style>
+            :root {
+                --ink: #1d2733;
+                --muted: #556273;
+                --face: #f0f0f0;
+                --line: #d5dbe3;
+                --blue: #1c5fae;
+                --blue-dark: #12417a;
+                --sky: #e8f1fb;
+                --paper: #ffffff;
+            }
+            * {
+                box-sizing: border-box;
+            }
+            html {
+                background: var(--paper);
+            }
+            body {
+                margin: 0;
+                color: var(--ink);
+                font:
+                    17px/1.6 'Segoe UI',
+                    Tahoma,
+                    system-ui,
+                    -apple-system,
+                    sans-serif;
+            }
+            a {
+                color: var(--blue);
+            }
+            .wrap {
+                max-width: 1120px;
+                margin: 0 auto;
+                padding: 0 24px;
+            }
+            header.top {
+                background: linear-gradient(180deg, #2a6fc0 0%, var(--blue) 55%, var(--blue-dark) 100%);
+                color: #fff;
+            }
+            nav {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 18px 0;
+            }
+            .brand {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-weight: 600;
+                font-size: 20px;
+                color: #fff;
+                text-decoration: none;
+            }
+            .brand svg {
+                width: 30px;
+                height: 30px;
+            }
+            nav .links a {
+                color: #dbe9fa;
+                text-decoration: none;
+                margin-left: 22px;
+                font-size: 15px;
+            }
+            nav .links a:hover {
+                color: #fff;
+            }
+            .hero {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 36px;
+                padding: 40px 0 0;
+                text-align: center;
+            }
+            .hero h1 {
+                margin: 0 auto;
+                max-width: 820px;
+                font-size: clamp(32px, 5vw, 52px);
+                line-height: 1.12;
+                font-weight: 700;
+                letter-spacing: -0.5px;
+            }
+            .hero p.lead {
+                margin: 16px auto 0;
+                max-width: 680px;
+                color: #dbe9fa;
+                font-size: 19px;
+            }
+            .status {
+                display: inline-block;
+                margin-top: 22px;
+                padding: 6px 14px;
+                border: 1px solid rgba(255, 255, 255, 0.45);
+                border-radius: 999px;
+                font-size: 14px;
+                color: #fff;
+                background: rgba(255, 255, 255, 0.08);
+            }
+            .shot {
+                display: block;
+                width: 100%;
+                height: auto;
+                border: 1px solid #9aa6b5;
+                border-radius: 8px 8px 0 0;
+                box-shadow: 0 18px 50px rgba(9, 30, 66, 0.35);
+                background: var(--face);
+            }
+            .hero .shot {
+                margin: 0 auto -1px;
+                max-width: 980px;
+                border-bottom: 0;
+            }
+            section {
+                padding: 72px 0;
+            }
+            section h2 {
+                margin: 0 0 10px;
+                font-size: 32px;
+                letter-spacing: -0.3px;
+            }
+            section p.intro {
+                margin: 0 0 36px;
+                max-width: 720px;
+                color: var(--muted);
+            }
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 22px;
+            }
+            .card {
+                border: 1px solid var(--line);
+                border-radius: 8px;
+                padding: 22px;
+                background: #fff;
+            }
+            .card h3 {
+                margin: 0 0 6px;
+                font-size: 18px;
+            }
+            .card p {
+                margin: 0;
+                color: var(--muted);
+                font-size: 15.5px;
+            }
+            .alt {
+                background: var(--sky);
+            }
+            .pair {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 44px;
+                align-items: center;
+                margin-bottom: 64px;
+            }
+            .pair:last-child {
+                margin-bottom: 0;
+            }
+            .pair .shot {
+                border-radius: 8px;
+                border-bottom: 1px solid #9aa6b5;
+                box-shadow: 0 10px 30px rgba(9, 30, 66, 0.18);
+            }
+            .pair h3 {
+                margin: 0 0 8px;
+                font-size: 24px;
+            }
+            .pair p {
+                margin: 0 0 10px;
+                color: var(--muted);
+            }
+            ul.checks {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 14px 36px;
+            }
+            ul.checks li {
+                position: relative;
+                padding-left: 30px;
+            }
+            ul.checks li::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 6px;
+                width: 18px;
+                height: 18px;
+                border-radius: 50%;
+                background: var(--blue)
+                    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M5 9.5l2.5 2.5L13 6.5' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+                    center/18px no-repeat;
+            }
+            ul.checks b {
+                display: block;
+            }
+            ul.checks span {
+                color: var(--muted);
+                font-size: 15.5px;
+            }
+            .cta {
+                text-align: center;
+            }
+            .cta p {
+                max-width: 640px;
+                margin: 0 auto 8px;
+                color: var(--muted);
+            }
+            footer {
+                border-top: 1px solid var(--line);
+                padding: 28px 0 40px;
+                color: var(--muted);
+                font-size: 14px;
+            }
+            footer .wrap {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            @media (max-width: 860px) {
+                .grid {
+                    grid-template-columns: 1fr;
+                }
+                .pair,
+                ul.checks {
+                    grid-template-columns: 1fr;
+                }
+                .pair {
+                    gap: 20px;
+                }
+                .pair.flip .shot {
+                    order: -1;
+                }
+                nav .links a {
+                    margin-left: 14px;
+                }
+            }
+            @media (max-width: 520px) {
+                nav .links {
+                    display: none;
+                }
+                section {
+                    padding: 52px 0;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header class="top">
+            <div class="wrap">
+                <nav>
+                    <a class="brand" href="/">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <rect width="24" height="24" rx="5" fill="#ffffff" />
+                            <path d="M5 8l7 5 7-5v9H5z" fill="none" stroke="#1c5fae" stroke-width="1.6" stroke-linejoin="round" />
+                        </svg>
+                        Inbox Classic
+                    </a>
+                    <div class="links">
+                        <a href="#features">Features</a>
+                        <a href="#tour">Tour</a>
+                        <a href="#safety">Safety</a>
+                    </div>
+                </nav>
+                <div class="hero">
+                    <div>
+                        <h1>The mail client you remember, rebuilt for today</h1>
+                        <p class="lead">
+                            Folders on the left, messages on top, the reading pane below. Inbox Classic brings back the calm three-pane layout for Windows 11,
+                            with modern IMAP, safe HTML mail and nothing in the way.
+                        </p>
+                        <span class="status">In development for Windows 11</span>
+                    </div>
+                    <img
+                        class="shot"
+                        src="img/main-1-inbox.png"
+                        width="1084"
+                        height="752"
+                        alt="The Inbox Classic main window: the folder tree, the message list and the reading pane"
+                    />
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section id="features">
+                <div class="wrap">
+                    <h2>Everything a mail program should do, and nothing else</h2>
+                    <p class="intro">
+                        No feeds, no assistants, no ads. A fast, small program that reads and writes your mail, with the shortcuts and the layout you already
+                        know.
+                    </p>
+                    <div class="grid">
+                        <div class="card">
+                            <h3>Any IMAP account</h3>
+                            <p>Type your address and password; the servers are found for you. Gmail and Outlook.com can sign in through the browser.</p>
+                        </div>
+                        <div class="card">
+                            <h3>Reads offline</h3>
+                            <p>A copy of your mail stays on your computer, so what was downloaded opens instantly, even without a connection.</p>
+                        </div>
+                        <div class="card">
+                            <h3>Replies without clutter</h3>
+                            <p>Quoted history and forwarded mail fold away behind a small button, when you read and when you reply.</p>
+                        </div>
+                        <div class="card">
+                            <h3>A real editor</h3>
+                            <p>Bold, lists, colors, links and pictures in the compose window, sent as HTML with a plain text part.</p>
+                        </div>
+                        <div class="card">
+                            <h3>Drafts and an Outbox</h3>
+                            <p>Save a message to finish later. If sending fails, it waits in the Outbox and goes with the next Send/Recv.</p>
+                        </div>
+                        <div class="card">
+                            <h3>Find, folders, print</h3>
+                            <p>Search the folder as you type, move and flag mail, manage folders, print, and save or import .eml files.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="tour" class="alt">
+                <div class="wrap">
+                    <div class="pair">
+                        <div>
+                            <h3>Read in peace</h3>
+                            <p>
+                                HTML mail keeps its layout but loses its scripts and trackers. Pictures from the internet stay blocked until you ask for them.
+                            </p>
+                            <p>Long reply chains fold away, so you see what the sender actually wrote.</p>
+                        </div>
+                        <img
+                            class="shot"
+                            src="img/read-6-folded.png"
+                            width="1084"
+                            height="752"
+                            alt="A reply with the earlier messages folded behind a button"
+                            loading="lazy"
+                        />
+                    </div>
+                    <div class="pair flip">
+                        <img
+                            class="shot"
+                            src="img/write-5-new.png"
+                            width="744"
+                            height="612"
+                            alt="The compose window with From, To, Subject, attachments and the format bar"
+                            loading="lazy"
+                        />
+                        <div>
+                            <h3>Write the way you always have</h3>
+                            <p>From shows which account sends the message, and lets you pick another. Attach files with the button or by dragging them in.</p>
+                            <p>Ctrl+Enter sends, Ctrl+S saves the draft.</p>
+                        </div>
+                    </div>
+                    <div class="pair">
+                        <div>
+                            <h3>Answer with the original folded</h3>
+                            <p>
+                                Your reply starts at the top. The original message waits behind the three dots and is sent along, unless you open it and trim
+                                it.
+                            </p>
+                        </div>
+                        <img
+                            class="shot"
+                            src="img/write-3-reply.png"
+                            width="744"
+                            height="612"
+                            alt="A reply with the original folded behind three dots"
+                            loading="lazy"
+                        />
+                    </div>
+                </div>
+            </section>
+
+            <section id="safety">
+                <div class="wrap">
+                    <h2>Safe by design</h2>
+                    <p class="intro">
+                        Email is the most common way into a computer. Inbox Classic is built so a hostile message has as little to work with as possible.
+                    </p>
+                    <ul class="checks">
+                        <li>
+                            <b>Parsed in a memory-safe core</b
+                            ><span>Everything a server or sender writes is read by a Rust core; the Windows interface only shows what it has checked.</span>
+                        </li>
+                        <li>
+                            <b>No scripts in your mail</b
+                            ><span>Messages are sanitized and shown with scripts, forms, frames and remote requests turned off.</span>
+                        </li>
+                        <li>
+                            <b>Encryption is not optional</b
+                            ><span
+                                >Servers are only picked with TLS, certificates are checked against Windows, and there is no "accept any certificate"
+                                switch.</span
+                            >
+                        </li>
+                        <li><b>Passwords in Windows</b><span>Passwords and sign-in tokens are kept in the Windows Credential Manager, not in a file.</span></li>
+                        <li>
+                            <b>Lookups nobody can tamper with</b
+                            ><span>Server settings are found over DNS-over-HTTPS, so nobody on your network can hand out other servers.</span>
+                        </li>
+                        <li>
+                            <b>Nothing phones home</b><span>No analytics, no accounts with us. Inbox Classic talks to your mail servers and nobody else.</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="alt cta">
+                <div class="wrap">
+                    <h2>Coming to Windows 11</h2>
+                    <p>
+                        Inbox Classic is in development by Postal Systems, the makers of Nodemailer and EmailEngine. A signed installer that needs no admin
+                        rights will be published here.
+                    </p>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="wrap">
+                <span>&copy; 2026 Postal Systems O&Uuml;</span>
+                <span>Toolbar icons: <a href="https://github.com/microsoft/fluentui-system-icons">Fluent UI System Icons</a> (MIT)</span>
+            </div>
+        </footer>
+    </body>
+</html>
