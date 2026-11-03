@@ -114,6 +114,43 @@
                 color: #fff;
                 background: rgba(255, 255, 255, 0.08);
             }
+            .download {
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                margin-top: 26px;
+                padding: 13px 26px;
+                border-radius: 8px;
+                background: #fff;
+                color: var(--blue-dark);
+                font-weight: 600;
+                font-size: 17px;
+                text-decoration: none;
+                box-shadow: 0 6px 18px rgba(9, 30, 66, 0.25);
+            }
+            .download:hover {
+                background: #f3f8fe;
+            }
+            .download svg {
+                width: 20px;
+                height: 20px;
+            }
+            .note {
+                display: block;
+                margin-top: 12px;
+                font-size: 14px;
+                color: #dbe9fa;
+            }
+            .cta .download {
+                background: var(--blue);
+                color: #fff;
+            }
+            .cta .download:hover {
+                background: var(--blue-dark);
+            }
+            .cta .note {
+                color: var(--muted);
+            }
             .shot {
                 display: block;
                 width: 100%;
@@ -281,6 +318,7 @@
                         <a href="#features">Features</a>
                         <a href="#tour">Tour</a>
                         <a href="#safety">Safety</a>
+                        <a href="https://github.com/postalsys/inbox-classic">GitHub</a>
                     </div>
                 </nav>
                 <div class="hero">
@@ -290,13 +328,25 @@
                             Folders on the left, messages on top, the reading pane below. Inbox Classic brings back the calm three-pane layout for Windows 11,
                             with modern IMAP, safe HTML mail and nothing in the way.
                         </p>
-                        <span class="status">In development for Windows 11</span>
+                        <a class="download" href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-Setup.exe"
+                            ><svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19h14"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                /></svg
+                            >Download for Windows</a
+                        >
+                        <span class="note">For Windows 11 &middot; signed installer &middot; no admin rights needed</span>
                     </div>
                     <img
                         class="shot"
                         src="img/main-1-inbox.png"
-                        width="1084"
-                        height="752"
+                        width="1100"
+                        height="760"
                         alt="The Inbox Classic main window: the folder tree, the message list and the reading pane"
                     />
                 </div>
@@ -315,8 +365,8 @@
                         <div class="card">
                             <h3>Any IMAP account</h3>
                             <p>
-                                Type your address and the servers are found for you. Gmail, Outlook.com and Microsoft 365 sign in on Google's or Microsoft's own
-                                page, so your password never touches the app.
+                                Gmail, Outlook.com and Microsoft 365 add with one click on Sign in with Google or Microsoft, so your password never touches the
+                                app. For any other address the servers are found for you.
                             </p>
                         </div>
                         <div class="card">
@@ -336,7 +386,10 @@
                         </div>
                         <div class="card">
                             <h3>Drafts and an Outbox</h3>
-                            <p>Save a message to finish later. If sending fails, it waits in the Outbox and goes with the next Send/Recv.</p>
+                            <p>
+                                Save a message to finish later. Send sends at once; if the server can't be reached, the message waits in the Outbox and goes by
+                                itself.
+                            </p>
                         </div>
                         <div class="card">
                             <h3>Find, folders, print</h3>
@@ -366,6 +419,23 @@
 
             <section id="tour" class="alt">
                 <div class="wrap">
+                    <div class="pair flip">
+                        <img
+                            class="shot"
+                            src="img/account-1-form.png"
+                            width="456"
+                            height="274"
+                            alt="Add Mail Account with the Sign in with Google and Sign in with Microsoft buttons"
+                            loading="lazy"
+                        />
+                        <div>
+                            <h3>Add your account in one click</h3>
+                            <p>
+                                Sign in with Google or Microsoft on their own page, and the account is there, named and set up. Any other account needs only
+                                your name and address; the servers are looked up for you.
+                            </p>
+                        </div>
+                    </div>
                     <div class="pair">
                         <div>
                             <h3>Read in peace</h3>
@@ -377,8 +447,8 @@
                         <img
                             class="shot"
                             src="img/read-6-folded.png"
-                            width="1084"
-                            height="752"
+                            width="1100"
+                            height="760"
                             alt="A reply with the earlier messages folded behind a button"
                             loading="lazy"
                         />
@@ -387,8 +457,8 @@
                         <img
                             class="shot"
                             src="img/write-5-new.png"
-                            width="744"
-                            height="612"
+                            width="760"
+                            height="620"
                             alt="The compose window with From, To, Subject, attachments and the format bar"
                             loading="lazy"
                         />
@@ -409,8 +479,8 @@
                         <img
                             class="shot"
                             src="img/write-3-reply.png"
-                            width="744"
-                            height="612"
+                            width="760"
+                            height="620"
                             alt="A reply with the original folded behind three dots"
                             loading="lazy"
                         />
@@ -454,11 +524,27 @@
 
             <section class="alt cta">
                 <div class="wrap">
-                    <h2>Coming to Windows 11</h2>
+                    <h2>Get Inbox Classic</h2>
                     <p>
-                        Inbox Classic is in development by Postal Systems, the makers of Nodemailer and EmailEngine. A signed installer that needs no admin
-                        rights will be published here.
+                        Made by Postal Systems, the makers of Nodemailer and EmailEngine. The installer is signed, installs for you alone without admin rights,
+                        and updates in place when you run a newer one.
                     </p>
+                    <a class="download" href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-Setup.exe"
+                        ><svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19h14"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            /></svg
+                        >Download for Windows</a
+                    >
+                    <span class="note"
+                        >Every <a href="https://github.com/postalsys/inbox-classic/releases">release</a> lists its changes and a GPG-signed hashes.txt to check
+                        the download against.</span
+                    >
                 </div>
             </section>
         </main>
