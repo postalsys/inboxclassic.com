@@ -3,14 +3,14 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Inbox Classic: the familiar mail client, rebuilt for today</title>
+        <title>Inbox Classic: the classic three-pane mail client for Windows</title>
         <meta
             name="description"
-            content="Inbox Classic is a Windows mail client with the classic three-pane layout you already know: folders, message list and reading pane. IMAP and SMTP, HTML mail made safe, drafts, an outbox, and nothing that phones home."
+            content="A free, open source mail client for Windows 10 and 11 with the classic three-pane layout: folders, message list and reading pane. Works with Outlook.com, Microsoft 365, Gmail and any IMAP account. No ads, no tracking."
         />
         <meta property="og:title" content="Inbox Classic" />
         <meta property="og:description" content="The familiar three-pane mail client, rebuilt for today's Windows and today's mail." />
-        <meta property="og:image" content="https://inboxclassic.com/img/main-1-inbox.png" />
+        <meta property="og:image" content="https://inboxclassic.com/img/read-1-html.png" />
         <meta property="og:url" content="https://inboxclassic.com/" />
         <link
             rel="icon"
@@ -301,6 +301,25 @@
                     padding: 52px 0;
                 }
             }
+            .faq {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 28px 44px;
+            }
+            .faq h3 {
+                margin: 0 0 6px;
+                font-size: 18px;
+            }
+            .faq p {
+                margin: 0;
+                color: var(--muted);
+                font-size: 15.5px;
+            }
+            @media (max-width: 860px) {
+                .faq {
+                    grid-template-columns: 1fr;
+                }
+            }
         </style>
     </head>
     <body>
@@ -316,8 +335,7 @@
                     </a>
                     <div class="links">
                         <a href="#features">Features</a>
-                        <a href="#tour">Tour</a>
-                        <a href="#safety">Safety</a>
+                        <a href="#faq">Questions</a>
                         <a href="https://github.com/postalsys/inbox-classic">GitHub</a>
                     </div>
                 </nav>
@@ -325,8 +343,8 @@
                     <div>
                         <h1>The mail client you remember, rebuilt for today</h1>
                         <p class="lead">
-                            Folders on the left, messages on top, the reading pane below. Inbox Classic brings back the calm three-pane layout for Windows 11,
-                            with modern IMAP, safe HTML mail and nothing in the way.
+                            Folders on the left, messages on top, the reading pane below. A fast, simple mail program for Windows with the layout you already
+                            know, and none of the clutter.
                         </p>
                         <a class="download" href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-Setup.exe"
                             ><svg viewBox="0 0 24 24" aria-hidden="true">
@@ -340,14 +358,14 @@
                                 /></svg
                             >Download for Windows</a
                         >
-                        <span class="note">For Windows 11 &middot; signed installer &middot; no admin rights needed</span>
+                        <span class="note">Free and open source &middot; Windows 10 and 11</span>
                     </div>
                     <img
                         class="shot"
-                        src="img/main-1-inbox.png"
-                        width="1100"
-                        height="760"
-                        alt="The Inbox Classic main window: the folder tree, the message list and the reading pane"
+                        src="img/read-1-html.png"
+                        width="1086"
+                        height="753"
+                        alt="The Inbox Classic main window: the folder tree, the message list and an HTML newsletter in the reading pane, its pictures from the internet blocked"
                     />
                 </div>
             </div>
@@ -356,62 +374,32 @@
         <main>
             <section id="features">
                 <div class="wrap">
-                    <h2>Everything a mail program should do, and nothing else</h2>
-                    <p class="intro">
-                        No feeds, no assistants, no ads. A fast, small program that reads and writes your mail, with the shortcuts and the layout you already
-                        know.
-                    </p>
+                    <h2>Just your mail</h2>
+                    <p class="intro">No feeds, no assistants, no ads, no account with us. A small program that reads and writes your mail, and does it well.</p>
                     <div class="grid">
                         <div class="card">
-                            <h3>Any IMAP account</h3>
-                            <p>
-                                Gmail, Outlook.com and Microsoft 365 add with one click on Sign in with Google or Microsoft, so your password never touches the
-                                app. For any other address the servers are found for you.
-                            </p>
+                            <h3>Works with your account</h3>
+                            <p>Outlook.com, Microsoft 365, Gmail and any other IMAP mailbox. Type your address and the server settings are found for you.</p>
+                        </div>
+                        <div class="card">
+                            <h3>All accounts in one place</h3>
+                            <p>Every account in one folder tree, and one click to check them all. Pick which address a message goes from as you write it.</p>
                         </div>
                         <div class="card">
                             <h3>Reads offline</h3>
-                            <p>A copy of your mail stays on your computer, so what was downloaded opens instantly, even without a connection.</p>
+                            <p>Your mail is kept on your computer too, so it opens instantly, with or without a connection.</p>
+                        </div>
+                        <div class="card">
+                            <h3>No trackers</h3>
+                            <p>Pictures that tell senders you opened their mail stay blocked until you ask for them. Scripts in messages never run.</p>
                         </div>
                         <div class="card">
                             <h3>Replies without clutter</h3>
-                            <p>Quoted history and forwarded mail fold away behind a small button, when you read and when you reply.</p>
+                            <p>Long quoted histories fold away, so you see what the sender actually wrote, and your reply starts on top.</p>
                         </div>
                         <div class="card">
-                            <h3>A real editor</h3>
-                            <p>
-                                Bold, lists, colors, links and pictures when you want them. A message without formatting goes as plain text; replies follow the
-                                original.
-                            </p>
-                        </div>
-                        <div class="card">
-                            <h3>Drafts and an Outbox</h3>
-                            <p>
-                                Save a message to finish later. Send sends at once; if the server can't be reached, the message waits in the Outbox and goes by
-                                itself.
-                            </p>
-                        </div>
-                        <div class="card">
-                            <h3>Find, folders, print</h3>
-                            <p>
-                                Search as you type, move and flag mail, manage folders, see a message's headers, print with a full preview, save or import .eml
-                                files.
-                            </p>
-                        </div>
-                        <div class="card">
-                            <h3>The look you remember</h3>
-                            <p>
-                                The folder bar, the envelopes, the paper clip and the yellow bar over blocked pictures, with crisp Fluent icons for today's
-                                screens.
-                            </p>
-                        </div>
-                        <div class="card">
-                            <h3>Several accounts</h3>
-                            <p>Every account in one tree. From shows who a message goes from and switches it; Send/Recv checks one account or all.</p>
-                        </div>
-                        <div class="card">
-                            <h3>Small and quiet</h3>
-                            <p>One program for Windows 11, installed per user without admin rights, with nothing running in the background.</p>
+                            <h3>Nothing phones home</h3>
+                            <p>No analytics and no sign-up. Inbox Classic talks to your mail servers and nobody else.</p>
                         </div>
                     </div>
                 </div>
@@ -423,112 +411,76 @@
                         <img
                             class="shot"
                             src="img/account-1-form.png"
-                            width="456"
-                            height="274"
-                            alt="Add Mail Account with the Sign in with Google and Sign in with Microsoft buttons"
+                            width="442"
+                            height="311"
+                            alt="Add Mail Account: Sign in with Microsoft, more sign-in options, or a name and address"
                             loading="lazy"
                         />
                         <div>
-                            <h3>Add your account in one click</h3>
+                            <h3>Set up in a minute</h3>
                             <p>
-                                Sign in with Google or Microsoft on their own page, and the account is there, named and set up. Any other account needs only
-                                your name and address; the servers are looked up for you.
+                                Outlook.com and Microsoft 365 sign in on Microsoft's own page, so your password never touches the app. For any other address,
+                                type your name and address; the servers are looked up for you.
                             </p>
                         </div>
                     </div>
                     <div class="pair">
                         <div>
-                            <h3>Read in peace</h3>
+                            <h3>Write the way you always have</h3>
                             <p>
-                                HTML mail keeps its layout but loses its scripts and trackers. Pictures from the internet stay blocked until you ask for them.
+                                Formatting when you want it, plain text when you don't. Drag files in to attach them. If you are offline, the message waits in
+                                the Outbox and goes by itself.
                             </p>
-                            <p>Long reply chains fold away, so you see what the sender actually wrote.</p>
                         </div>
-                        <img
-                            class="shot"
-                            src="img/read-6-folded.png"
-                            width="1100"
-                            height="760"
-                            alt="A reply with the earlier messages folded behind a button"
-                            loading="lazy"
-                        />
-                    </div>
-                    <div class="pair flip">
                         <img
                             class="shot"
                             src="img/write-5-new.png"
-                            width="760"
-                            height="620"
+                            width="746"
+                            height="400"
                             alt="The compose window with From, To, Subject, attachments and the format bar"
-                            loading="lazy"
-                        />
-                        <div>
-                            <h3>Write the way you always have</h3>
-                            <p>From shows which account sends the message, and lets you pick another. Attach files with the button or by dragging them in.</p>
-                            <p>Ctrl+Enter sends, Ctrl+S saves the draft.</p>
-                        </div>
-                    </div>
-                    <div class="pair">
-                        <div>
-                            <h3>Answer with the original folded</h3>
-                            <p>
-                                Your reply starts at the top. The original message waits behind the three dots and is sent along, unless you open it and trim
-                                it.
-                            </p>
-                        </div>
-                        <img
-                            class="shot"
-                            src="img/write-3-reply.png"
-                            width="760"
-                            height="620"
-                            alt="A reply with the original folded behind three dots"
                             loading="lazy"
                         />
                     </div>
                 </div>
             </section>
 
-            <section id="safety">
+            <section id="faq">
                 <div class="wrap">
-                    <h2>Safe by design</h2>
-                    <p class="intro">
-                        Email is the most common way into a computer. Inbox Classic is built so a hostile message has as little to work with as possible.
-                    </p>
-                    <ul class="checks">
-                        <li>
-                            <b>Parsed in a memory-safe core</b
-                            ><span>Everything a server or sender writes is read by a Rust core; the Windows interface only shows what it has checked.</span>
-                        </li>
-                        <li>
-                            <b>No scripts in your mail</b
-                            ><span>Messages are sanitized and shown with scripts, forms, frames and remote requests turned off.</span>
-                        </li>
-                        <li>
-                            <b>Encryption is not optional</b
-                            ><span
-                                >Servers are only picked with TLS, certificates are checked against Windows, and there is no "accept any certificate"
-                                switch.</span
-                            >
-                        </li>
-                        <li><b>Passwords in Windows</b><span>Passwords and sign-in tokens are kept in the Windows Credential Manager, not in a file.</span></li>
-                        <li>
-                            <b>Lookups nobody can tamper with</b
-                            ><span>Server settings are found over DNS-over-HTTPS, so nobody on your network can hand out other servers.</span>
-                        </li>
-                        <li>
-                            <b>Nothing phones home</b><span>No analytics, no accounts with us. Inbox Classic talks to your mail servers and nobody else.</span>
-                        </li>
-                    </ul>
+                    <h2>Questions</h2>
+                    <div class="faq">
+                        <div>
+                            <h3>Is it really free?</h3>
+                            <p>
+                                Yes. Inbox Classic is open source under the MIT license, made by Postal Systems, the makers of Nodemailer and EmailEngine. The
+                                <a href="https://github.com/postalsys/inbox-classic">source is on GitHub</a>.
+                            </p>
+                        </div>
+                        <div>
+                            <h3>Does it work with Gmail?</h3>
+                            <p>
+                                Yes, with a Google app password, or by signing in through a Google app of your own. One-click Sign in with Google comes once
+                                Google has finished reviewing Inbox Classic.
+                            </p>
+                        </div>
+                        <div>
+                            <h3>Where is my mail kept?</h3>
+                            <p>
+                                On your mail server, as always, with a copy on your computer for reading offline. Passwords are kept in Windows' own Credential
+                                Manager.
+                            </p>
+                        </div>
+                        <div>
+                            <h3>Can I bring old messages along?</h3>
+                            <p>Messages saved as .eml files can be imported into any folder, and any message can be saved as one.</p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
             <section class="alt cta">
                 <div class="wrap">
-                    <h2>Get Inbox Classic</h2>
-                    <p>
-                        Made by Postal Systems, the makers of Nodemailer and EmailEngine. The installer is signed, installs for you alone without admin rights,
-                        and updates in place when you run a newer one.
-                    </p>
+                    <h2>Try Inbox Classic</h2>
+                    <p>Free, no sign-up, and your mail stays where it is.</p>
                     <a class="download" href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-Setup.exe"
                         ><svg viewBox="0 0 24 24" aria-hidden="true">
                             <path
@@ -541,10 +493,7 @@
                             /></svg
                         >Download for Windows</a
                     >
-                    <span class="note"
-                        >Every <a href="https://github.com/postalsys/inbox-classic/releases">release</a> lists its changes and a GPG-signed hashes.txt to check
-                        the download against.</span
-                    >
+                    <span class="note">Windows 10 and 11 &middot; <a href="https://github.com/postalsys/inbox-classic/releases">What's new</a></span>
                 </div>
             </section>
         </main>
@@ -552,7 +501,7 @@
         <footer>
             <div class="wrap">
                 <span>&copy; 2026 Postal Systems O&Uuml;</span>
-                <span>Toolbar icons: <a href="https://github.com/microsoft/fluentui-system-icons">Fluent UI System Icons</a> (MIT)</span>
+                <span><a href="https://github.com/postalsys/inbox-classic">GitHub</a></span>
             </div>
         </footer>
     </body>
