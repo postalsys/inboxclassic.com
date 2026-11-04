@@ -3,6 +3,23 @@
     <channel>
         <title>Inbox Classic</title>
         <item>
+            <title>0.5.1</title>
+            <pubDate>Wed, 04 Nov 2026 20:13:56 +0200</pubDate>
+            <sparkle:version>0.5.1</sparkle:version>
+            <sparkle:shortVersionString>0.5.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## [0.5.1](https://github.com/postalsys/inbox-classic/compare/v0.5.0...v0.5.1) (2026-11-04)
+
+### Bug Fixes
+
+* **mac:** the message list no longer starts squeezed to its smallest. A list left that way by 0.5.0 gets its usual height back when 0.5.1 starts ([4483dc2](https://github.com/postalsys/inbox-classic/commit/4483dc2bf16c0db11a678e31346871fb5725da87))
+
+The Mac app installs this update itself (Inbox Classic > Check for Updates). Windows and Linux are unchanged apart from the version.
+]]></description>
+            <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.5.1/InboxClassic.dmg" length="6319729" type="application/octet-stream" sparkle:edSignature="6eslhsu1VdEkq0hckNd7zyXszvkpopqCK8cn2LTsfqJUgGoAqW541TmZ4DQJ0qDsBE2NAS108S9OWkp+KBMPBw=="/>
+        </item>
+        <item>
             <title>0.5.0</title>
             <pubDate>Wed, 04 Nov 2026 19:20:38 +0200</pubDate>
             <sparkle:version>0.5.0</sparkle:version>
