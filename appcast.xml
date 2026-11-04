@@ -3,6 +3,25 @@
     <channel>
         <title>Inbox Classic</title>
         <item>
+            <title>0.6.0</title>
+            <pubDate>Thu, 05 Nov 2026 00:14:52 +0200</pubDate>
+            <sparkle:version>0.6.0</sparkle:version>
+            <sparkle:shortVersionString>0.6.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## [0.6.0](https://github.com/postalsys/inbox-classic/compare/v0.5.1...v0.6.0) (2026-11-05)
+
+
+### Features
+
+* a message that is not downloaded yet no longer leaves the reading pane blank. Its sender and subject show at once, and after a moment the pane says it is being downloaded. Messages are downloaded on a connection of their own, so right after you add an account they no longer wait behind its first sync ([913f863](https://github.com/postalsys/inbox-classic/commit/913f86342ecfdefecbd4c9b27ca68e057169e305))
+* when a message can not be downloaded, the pane says why (the server could not be reached, the sign-in was refused, or the connection could not be made secure), with Try Again. The message is downloaded by itself once the account is back online ([913f863](https://github.com/postalsys/inbox-classic/commit/913f86342ecfdefecbd4c9b27ca68e057169e305))
+
+The Mac app installs this update itself (Inbox Classic > Check for Updates).
+]]></description>
+            <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.6.0/InboxClassic.dmg" length="6355637" type="application/octet-stream" sparkle:edSignature="pyNwBQs/Ehj/g0gclM42VOUIeaJ8n9KDnkdTm6SfamkkUv0tAnQaxqqLVQ1RdoefWyIxmtxtGoIXFdkwGovLBA=="/>
+        </item>
+        <item>
             <title>0.5.1</title>
             <pubDate>Wed, 04 Nov 2026 20:13:56 +0200</pubDate>
             <sparkle:version>0.5.1</sparkle:version>
