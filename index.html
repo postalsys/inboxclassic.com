@@ -3,14 +3,14 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Inbox Classic: the classic three-pane mail client for Windows</title>
+        <title>Inbox Classic: the classic three-pane mail client for Windows, Mac and Linux</title>
         <meta
             name="description"
-            content="A free, open source mail client for Windows 10 and 11 with the classic three-pane layout: folders, message list and reading pane. Works with Outlook.com, Microsoft 365, Gmail and any IMAP account. No ads, no tracking."
+            content="A free, open source mail client for Windows, Mac and Linux with the classic three-pane layout: folders, message list and reading pane. Works with Outlook.com, Microsoft 365, Gmail and any IMAP account. No ads, no tracking."
         />
         <meta property="og:title" content="Inbox Classic" />
-        <meta property="og:description" content="The familiar three-pane mail client, rebuilt for today's Windows and today's mail." />
-        <meta property="og:image" content="https://inboxclassic.com/img/read-1-html.png" />
+        <meta property="og:description" content="The familiar three-pane mail client, rebuilt for today's Windows, Mac and Linux, and today's mail." />
+        <meta property="og:image" content="https://inboxclassic.com/img/windows/read-1-html.png" />
         <meta property="og:url" content="https://inboxclassic.com/" />
         <link
             rel="icon"
@@ -150,6 +150,72 @@
             }
             .cta .note {
                 color: var(--muted);
+            }
+            .downloads {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+                margin-top: 26px;
+            }
+            .downloads .download {
+                margin-top: 0;
+            }
+            .free {
+                display: block;
+                margin-top: 12px;
+                font-size: 14px;
+                color: #dbe9fa;
+            }
+            .cta .free {
+                color: var(--muted);
+            }
+            .note a,
+            .also a {
+                color: inherit;
+            }
+            .note[data-os] {
+                margin-top: 4px;
+            }
+            .also {
+                display: none;
+                margin-top: 8px;
+                font-size: 14px;
+                color: #dbe9fa;
+            }
+            .cta .also {
+                color: var(--muted);
+            }
+            .also a {
+                margin-left: 0.6em;
+            }
+            .whatsnew {
+                display: block;
+                margin-top: 12px;
+                font-size: 14px;
+            }
+            /* once the visitor's platform is known: its button and its line only, the others as links */
+            html[data-os] .downloads .download,
+            html[data-os] .note[data-os] {
+                display: none;
+            }
+            html[data-os='windows'] .download[data-os='windows'],
+            html[data-os='mac'] .download[data-os='mac'],
+            html[data-os='linux'] .download[data-os='linux'] {
+                display: inline-flex;
+            }
+            html[data-os='windows'] .note[data-os='windows'],
+            html[data-os='mac'] .note[data-os='mac'],
+            html[data-os='linux'] .note[data-os='linux'] {
+                display: block;
+            }
+            html[data-os] .also {
+                display: block;
+            }
+            html[data-os='windows'] .also a[data-os='windows'],
+            html[data-os='mac'] .also a[data-os='mac'],
+            html[data-os='linux'] .also a[data-os='linux'] {
+                display: none;
             }
             .shot {
                 display: block;
@@ -346,26 +412,71 @@
                     <div>
                         <h1>The mail client you remember, rebuilt for today</h1>
                         <p class="lead">
-                            Folders on the left, messages on top, the reading pane below. A fast, simple mail program for Windows with the layout you already
-                            know, and none of the clutter.
+                            Folders on the left, messages on top, the reading pane below. A fast, simple mail program for Windows, Mac and Linux with the layout
+                            you already know, and none of the clutter.
                         </p>
-                        <a class="download" href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-Setup.exe"
-                            ><svg viewBox="0 0 24 24" aria-hidden="true">
-                                <path
-                                    d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19h14"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                /></svg
-                            >Download for Windows</a
+                        <div class="downloads">
+                            <a
+                                class="download"
+                                data-os="windows"
+                                href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-Setup.exe"
+                                ><svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path
+                                        d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19h14"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    /></svg
+                                >Download for Windows</a
+                            >
+                            <a class="download" data-os="mac" href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic.dmg"
+                                ><svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path
+                                        d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19h14"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    /></svg
+                                >Download for Mac</a
+                            >
+                            <a
+                                class="download"
+                                data-os="linux"
+                                href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-amd64.deb"
+                                ><svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path
+                                        d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19h14"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    /></svg
+                                >Download for Linux</a
+                            >
+                        </div>
+                        <span class="free">Free and open source</span>
+                        <span class="note" data-os="windows">Windows 10 and 11</span>
+                        <span class="note" data-os="mac">macOS 26 or newer, on Apple silicon</span>
+                        <span class="note" data-os="linux"
+                            >Ubuntu 26.04 or newer, a .deb for x86-64 (<a
+                                href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-arm64.deb"
+                                >ARM64</a
+                            >)</span
                         >
-                        <span class="note">Free and open source &middot; Windows 10 and 11</span>
+                        <span class="also"
+                            >Also for <a data-os="windows" href="#download-windows">Windows</a><a data-os="mac" href="#download-mac">Mac</a
+                            ><a data-os="linux" href="#download-linux">Linux</a></span
+                        >
                     </div>
                     <img
                         class="shot"
-                        src="img/read-1-html.png"
+                        data-shot="read-1-html"
+                        src="img/windows/read-1-html.png"
                         width="1086"
                         height="753"
                         alt="The Inbox Classic main window: the folder tree, the message list and an HTML newsletter in the reading pane, its pictures from the internet blocked"
@@ -395,8 +506,8 @@
                         <div class="card">
                             <h3>New mail right away</h3>
                             <p>
-                                Mail shows up the moment it arrives, with a notification and a count on the taskbar, even while the window is closed to the
-                                tray.
+                                Mail shows up the moment it arrives, with a notification and a count on the taskbar or the Dock, even while the window is
+                                closed.
                             </p>
                         </div>
                         <div class="card">
@@ -432,7 +543,8 @@
                     <div class="pair flip">
                         <img
                             class="shot"
-                            src="img/account-1-form.png"
+                            data-shot="account-1-form"
+                            src="img/windows/account-1-form.png"
                             width="442"
                             height="311"
                             alt="Add Mail Account: Sign in with Microsoft, more sign-in options, or a name and address"
@@ -457,7 +569,8 @@
                         </div>
                         <img
                             class="shot"
-                            src="img/find-2-every-folder.png"
+                            data-shot="find-2-every-folder"
+                            src="img/windows/find-2-every-folder.png"
                             width="1086"
                             height="753"
                             alt="Search results from every folder: a yellow bar says five results for hello in all folders, and the list has a Folder column"
@@ -467,7 +580,8 @@
                     <div class="pair flip">
                         <img
                             class="shot"
-                            src="img/write-5-new.png"
+                            data-shot="write-5-new"
+                            src="img/windows/write-5-new.png"
                             width="746"
                             height="400"
                             alt="The compose window with From, To, Subject, attachments and the format bar"
@@ -505,8 +619,16 @@
                         <div>
                             <h3>Where is my mail kept?</h3>
                             <p>
-                                On your mail server, as always, with a copy on your computer for reading offline. Passwords are kept in Windows' own Credential
-                                Manager.
+                                On your mail server, as always, with a copy on your computer for reading offline. Passwords are kept in your system's own
+                                password store: the Credential Manager on Windows, the keychain on the Mac, GNOME Keyring on Linux.
+                            </p>
+                        </div>
+                        <div>
+                            <h3>Which systems does it run on?</h3>
+                            <p>
+                                Windows 10 and 11, macOS 26 or newer on Apple silicon, and Ubuntu 26.04 or newer. Each looks the way its system does: classic
+                                Windows controls on Windows, AppKit on the Mac and GTK on Linux, with the same layout and features. The Mac version updates
+                                itself; on Linux, install a newer .deb over the old one.
                             </p>
                         </div>
                         <div>
@@ -521,19 +643,57 @@
                 <div class="wrap">
                     <h2>Try Inbox Classic</h2>
                     <p>Free, no sign-up, and your mail stays where it is.</p>
-                    <a class="download" href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-Setup.exe"
-                        ><svg viewBox="0 0 24 24" aria-hidden="true">
-                            <path
-                                d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19h14"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                            /></svg
-                        >Download for Windows</a
+                    <div class="downloads">
+                        <a class="download" data-os="windows" href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-Setup.exe"
+                            ><svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19h14"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                /></svg
+                            >Download for Windows</a
+                        >
+                        <a class="download" data-os="mac" href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic.dmg"
+                            ><svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19h14"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                /></svg
+                            >Download for Mac</a
+                        >
+                        <a class="download" data-os="linux" href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-amd64.deb"
+                            ><svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path
+                                    d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19h14"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                /></svg
+                            >Download for Linux</a
+                        >
+                    </div>
+                    <span class="note" data-os="windows">Windows 10 and 11</span>
+                    <span class="note" data-os="mac">macOS 26 or newer, on Apple silicon</span>
+                    <span class="note" data-os="linux"
+                        >Ubuntu 26.04 or newer, a .deb for x86-64 (<a
+                            href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-arm64.deb"
+                            >ARM64</a
+                        >)</span
                     >
-                    <span class="note">Windows 10 and 11 &middot; <a href="https://github.com/postalsys/inbox-classic/releases">What's new</a></span>
+                    <span class="also"
+                        >Also for <a data-os="windows" href="#download-windows">Windows</a><a data-os="mac" href="#download-mac">Mac</a
+                        ><a data-os="linux" href="#download-linux">Linux</a></span
+                    >
+                    <span class="whatsnew"><a href="https://github.com/postalsys/inbox-classic/releases">What's new</a></span>
                 </div>
             </section>
         </main>
@@ -546,5 +706,49 @@
                 >
             </div>
         </footer>
+        <script>
+            // the visitor's platform: its download is the button, the others are links under it, and the screenshots are its
+            // own. Without this all three downloads show, Windows first, with the Windows screenshots
+            (function () {
+                var platform = (navigator.userAgentData && navigator.userAgentData.platform) || navigator.platform || '';
+                var agent = navigator.userAgent;
+                var os =
+                    /mac/i.test(platform) && navigator.maxTouchPoints < 2
+                        ? 'mac'
+                        : /win/i.test(platform)
+                          ? 'windows'
+                          : /linux/i.test(platform) && !/android/i.test(agent)
+                            ? 'linux'
+                            : '';
+                var sizes = {
+                    windows: { 'read-1-html': [1086, 753], 'account-1-form': [442, 311], 'find-2-every-folder': [1086, 753], 'write-5-new': [746, 400] },
+                    mac: { 'read-1-html': [1100, 811], 'account-1-form': [480, 389], 'find-2-every-folder': [1100, 811], 'write-5-new': [760, 400] },
+                    linux: { 'read-1-html': [1090, 750], 'account-1-form': [551, 459], 'find-2-every-folder': [1090, 750], 'write-5-new': [750, 400] }
+                };
+                function choose(chosen) {
+                    document.documentElement.setAttribute('data-os', chosen);
+                    document.querySelectorAll('img[data-shot]').forEach(function (img) {
+                        var name = img.getAttribute('data-shot');
+                        var size = sizes[chosen] && sizes[chosen][name];
+                        img.src = 'img/' + chosen + '/' + name + '.png';
+                        if (size) {
+                            img.width = size[0];
+                            img.height = size[1];
+                        }
+                    });
+                }
+                document.querySelectorAll('.also a').forEach(function (link) {
+                    link.addEventListener('click', function (event) {
+                        event.preventDefault();
+                        choose(link.getAttribute('data-os'));
+                    });
+                });
+                // a link to one platform's download (#download-mac) chooses it
+                var linked = /^#download-(windows|mac|linux)$/.exec(location.hash);
+                if (linked || os) {
+                    choose(linked ? linked[1] : os);
+                }
+            })();
+        </script>
     </body>
 </html>
