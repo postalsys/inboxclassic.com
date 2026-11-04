@@ -1,0 +1,37 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>Inbox Classic</title>
+        <item>
+            <title>0.5.0</title>
+            <pubDate>Wed, 04 Nov 2026 19:20:38 +0200</pubDate>
+            <sparkle:version>0.5.0</sparkle:version>
+            <sparkle:shortVersionString>0.5.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## [0.5.0](https://github.com/postalsys/inbox-classic/compare/v0.4.1...v0.5.0) (2026-11-04)
+
+Inbox Classic now runs on the Mac and on Linux, as well as Windows. Each version looks the way its system does (classic Windows controls on Windows, AppKit on the Mac, GTK 4 on Linux), with the same layout, features and Rust core.
+
+### Downloads
+
+* **Windows** 10 and 11: `InboxClassic-Setup.exe`
+* **Mac**, macOS 26 or newer on Apple silicon: `InboxClassic.dmg`, signed and notarized. It updates itself from now on (Inbox Classic > Check for Updates).
+* **Linux**, Ubuntu 26.04 or newer: `InboxClassic-amd64.deb` or `InboxClassic-arm64.deb`, installed with `sudo apt install ./InboxClassic-amd64.deb`
+
+Check the downloads against `hashes.txt`, signed with the Postalsys Releases GPG key.
+
+### Features
+
+* **Mac:** the whole app in AppKit: folders, messages and the reading pane, writing with the HTML editor, accounts with browser sign-in, sign-in apps, the Outbox, search, printing and the help. New mail shows on the Dock and as a notification; passwords are kept in the keychain.
+* **Linux:** the whole app in GTK 4 and libadwaita, with an icon in the top bar, notifications, the unread count on the dock, and passwords in the keyring (GNOME Keyring).
+* **All platforms:** one help for all three, with each system's own keys; the same commands and words everywhere.
+
+### Bug Fixes
+
+* **Mac:** room for the size beside the Folder column of a search ([0df0dea](https://github.com/postalsys/inbox-classic/commit/0df0dea63f5a06d462268968e3fc0cd82a51c2b4))
+]]></description>
+            <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.5.0/InboxClassic.dmg" length="6322005" type="application/octet-stream" sparkle:edSignature="6RU2XrhaXpGTSvxtLNZTGCN5kvxbZj6jQAIPfBV2l6QTat+S42v0heP8aDfOFRlXM9t8CzJEc5l4H9D/4HlSBQ=="/>
+        </item>
+    </channel>
+</rss>
