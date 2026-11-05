@@ -1,0 +1,35 @@
+# Inbox Classic
+
+> Inbox Classic is a free, open source (MIT) email client for Windows, Mac and Linux with the classic three-pane layout: folders on the left, the message list on top and the reading pane below. It works with Outlook.com, Microsoft 365, Gmail and any IMAP and SMTP account. It has no ads, no analytics, no sign-up and no account with its makers. It is made by Postal Systems, the makers of Nodemailer and EmailEngine.
+
+On Windows it looks like a classic Windows mail program; on the Mac it is a native AppKit app and on Linux a native GTK 4 app, all with the same layout and features. IMAP, SMTP and MIME run in one shared Rust core, which also sanitizes every message before it is shown.
+
+## Download
+
+- [Windows installer](https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-Setup.exe): Windows 10 and 11, installs per user without admin rights
+- [Mac disk image](https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic.dmg): macOS 26 or newer on Apple silicon, signed and notarized, updates itself
+- [Linux .deb for x86-64](https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-amd64.deb): Ubuntu 26.04 or newer
+- [Linux .deb for ARM64](https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-arm64.deb): Ubuntu 26.04 or newer
+- [Release notes](https://github.com/postalsys/inbox-classic/releases): what is new in each version
+
+## Features
+
+- Accounts: Outlook.com and Microsoft 365 sign in on Microsoft's own page (OAuth). Gmail works with a Google app password or a Google sign-in app of the user's own. For any other address the IMAP and SMTP servers are found automatically. Several accounts share one folder tree.
+- Search: every folder at once, as you type, by subject, people, attachment names and text, with Gmail's search words (`from:`, `is:unread`, `has:attachment`). The search runs locally and works offline.
+- New mail: arrives right away (IMAP IDLE), with a notification and a count on the taskbar or the Dock, even while the window is closed.
+- Reading: mail is kept on the computer too, so it opens instantly and works offline. Long quoted reply histories fold away.
+- Writing: formatted or plain text, a signature per account, address completion, drag and drop attachments, and an Outbox that sends when back online.
+- A cleaner inbox: one-click unsubscribe, a Junk button, drag messages into folders, import and export of .eml files.
+- Privacy: remote pictures that track opens stay blocked until the user allows them, scripts in messages never run, and the app sends nothing to its makers. Passwords are kept in the system's own password store (Windows Credential Manager, the macOS keychain, GNOME Keyring).
+
+## Links
+
+- [Homepage](https://inboxclassic.com/)
+- [Source code on GitHub](https://github.com/postalsys/inbox-classic): MIT license, issues and discussions
+- [Privacy policy](https://inboxclassic.com/privacy): no accounts, no analytics, no cookies, no telemetry
+- [Terms of service](https://inboxclassic.com/terms)
+
+## Optional
+
+- [Postal Systems](https://postalsys.com/): the company behind Inbox Classic
+- [Nodemailer](https://nodemailer.com/) and [EmailEngine](https://emailengine.app/): other email software by the same makers

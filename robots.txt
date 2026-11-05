@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://inboxclassic.com/sitemap.xml
