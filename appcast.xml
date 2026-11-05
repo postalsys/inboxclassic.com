@@ -3,6 +3,27 @@
     <channel>
         <title>Inbox Classic</title>
         <item>
+            <title>0.7.0</title>
+            <pubDate>Thu, 05 Nov 2026 15:52:01 +0200</pubDate>
+            <sparkle:version>0.7.0</sparkle:version>
+            <sparkle:shortVersionString>0.7.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## [0.7.0](https://github.com/postalsys/inbox-classic/compare/v0.6.0...v0.7.0) (2026-11-05)
+
+
+### Features
+
+* your own AI agent (Claude, Cursor or any other MCP client) can now search, read, sort and draft your mail. Inbox Classic asks you the first time a program connects, and you choose what it may do and which accounts it sees. Every message an agent wants to send is shown to you first, with every address spelled out, and waits 30 seconds in the Outbox once you say yes. Tools > AI Agents lists the programs and everything they did, with Undo. Agents get mail as text, without what a message hides from you. Tools > AI Agents > How to Connect an Agent shows the lines to add to your agent's settings ([#9](https://github.com/postalsys/inbox-classic/issues/9)) ([16abc1f](https://github.com/postalsys/inbox-classic/commit/16abc1f3318eb9e2ee06da5288c8162d9e193db7))
+* right-click a message for what can be done with it: reply, forward, mark read or unread, flag, junk, move, delete, save, print, its source or its properties ([#9](https://github.com/postalsys/inbox-classic/issues/9)) ([16abc1f](https://github.com/postalsys/inbox-classic/commit/16abc1f3318eb9e2ee06da5288c8162d9e193db7))
+* View > Message Source shows the whole message as the server keeps it (Ctrl+U on Windows and Linux) ([#9](https://github.com/postalsys/inbox-classic/issues/9)) ([16abc1f](https://github.com/postalsys/inbox-classic/commit/16abc1f3318eb9e2ee06da5288c8162d9e193db7))
+* a collapsed account or folder shows, in bold, the unread messages of the folders it hides ([#9](https://github.com/postalsys/inbox-classic/issues/9)) ([16abc1f](https://github.com/postalsys/inbox-classic/commit/16abc1f3318eb9e2ee06da5288c8162d9e193db7))
+
+The Mac app installs this update itself (Inbox Classic > Check for Updates).
+]]></description>
+            <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.7.0/InboxClassic.dmg" length="7717929" type="application/octet-stream" sparkle:edSignature="HyJLVVmRMC6qmGFiJRZeZNnSApPxDck9aG6hx4yDLGNIWkfFW8XsKkbsr/plL2d+XY53zU1fOAz6pwE43JZEBQ=="/>
+        </item>
+        <item>
             <title>0.6.0</title>
             <pubDate>Thu, 05 Nov 2026 00:14:52 +0200</pubDate>
             <sparkle:version>0.6.0</sparkle:version>
@@ -37,37 +58,6 @@ The Mac app installs this update itself (Inbox Classic > Check for Updates).
 The Mac app installs this update itself (Inbox Classic > Check for Updates). Windows and Linux are unchanged apart from the version.
 ]]></description>
             <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.5.1/InboxClassic.dmg" length="6319729" type="application/octet-stream" sparkle:edSignature="6eslhsu1VdEkq0hckNd7zyXszvkpopqCK8cn2LTsfqJUgGoAqW541TmZ4DQJ0qDsBE2NAS108S9OWkp+KBMPBw=="/>
-        </item>
-        <item>
-            <title>0.5.0</title>
-            <pubDate>Wed, 04 Nov 2026 19:20:38 +0200</pubDate>
-            <sparkle:version>0.5.0</sparkle:version>
-            <sparkle:shortVersionString>0.5.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## [0.5.0](https://github.com/postalsys/inbox-classic/compare/v0.4.1...v0.5.0) (2026-11-04)
-
-Inbox Classic now runs on the Mac and on Linux, as well as Windows. Each version looks the way its system does (classic Windows controls on Windows, AppKit on the Mac, GTK 4 on Linux), with the same layout, features and Rust core.
-
-### Downloads
-
-* **Windows** 10 and 11: `InboxClassic-Setup.exe`
-* **Mac**, macOS 26 or newer on Apple silicon: `InboxClassic.dmg`, signed and notarized. It updates itself from now on (Inbox Classic > Check for Updates).
-* **Linux**, Ubuntu 26.04 or newer: `InboxClassic-amd64.deb` or `InboxClassic-arm64.deb`, installed with `sudo apt install ./InboxClassic-amd64.deb`
-
-Check the downloads against `hashes.txt`, signed with the Postalsys Releases GPG key.
-
-### Features
-
-* **Mac:** the whole app in AppKit: folders, messages and the reading pane, writing with the HTML editor, accounts with browser sign-in, sign-in apps, the Outbox, search, printing and the help. New mail shows on the Dock and as a notification; passwords are kept in the keychain.
-* **Linux:** the whole app in GTK 4 and libadwaita, with an icon in the top bar, notifications, the unread count on the dock, and passwords in the keyring (GNOME Keyring).
-* **All platforms:** one help for all three, with each system's own keys; the same commands and words everywhere.
-
-### Bug Fixes
-
-* **Mac:** room for the size beside the Folder column of a search ([0df0dea](https://github.com/postalsys/inbox-classic/commit/0df0dea63f5a06d462268968e3fc0cd82a51c2b4))
-]]></description>
-            <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.5.0/InboxClassic.dmg" length="6322005" type="application/octet-stream" sparkle:edSignature="6RU2XrhaXpGTSvxtLNZTGCN5kvxbZj6jQAIPfBV2l6QTat+S42v0heP8aDfOFRlXM9t8CzJEc5l4H9D/4HlSBQ=="/>
         </item>
     </channel>
 </rss>
