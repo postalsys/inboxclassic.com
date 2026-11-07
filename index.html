@@ -174,31 +174,6 @@
                 color: #dbe9fa;
                 font-size: 19px;
             }
-            .announce {
-                display: inline-flex;
-                align-items: center;
-                gap: 8px;
-                margin-bottom: 20px;
-                padding: 5px 14px 5px 6px;
-                border: 1px solid rgba(255, 255, 255, 0.35);
-                border-radius: 999px;
-                font-size: 14px;
-                color: #fff;
-                text-decoration: none;
-                background: rgba(255, 255, 255, 0.1);
-            }
-            .announce:hover {
-                background: rgba(255, 255, 255, 0.18);
-            }
-            .announce b {
-                padding: 1px 9px;
-                border-radius: 999px;
-                background: #fff;
-                color: var(--blue-dark);
-                font-size: 12.5px;
-                letter-spacing: 0.3px;
-                text-transform: uppercase;
-            }
             .ghost {
                 display: inline-flex;
                 align-items: center;
@@ -487,7 +462,7 @@
             }
             .agents p.intro,
             .agents ul.checks span,
-            .agents .connect p {
+            .agents p.connect {
                 color: #b3c6dd;
             }
             .agents .pair {
@@ -509,60 +484,9 @@
                 color: #9cc7f5;
             }
             .connect {
-                margin-top: 48px;
-                padding-top: 36px;
+                margin: 40px 0 0;
+                padding-top: 28px;
                 border-top: 1px solid #24456d;
-            }
-            .connect h3 {
-                margin: 0 0 6px;
-                font-size: 20px;
-                color: #fff;
-            }
-            .connect p {
-                margin: 0 0 14px;
-                max-width: 760px;
-            }
-            .connect pre {
-                margin: 0 0 18px;
-                padding: 16px 18px;
-                overflow-x: auto;
-                border: 1px solid #24456d;
-                border-radius: 8px;
-                background: #0a1d35;
-                color: #dce8f6;
-                font:
-                    14px/1.55 ui-monospace,
-                    'Cascadia Mono',
-                    Consolas,
-                    'SF Mono',
-                    Menlo,
-                    monospace;
-            }
-            .config[data-os] {
-                display: none;
-            }
-            html:not([data-os]) .config[data-os='windows'],
-            html[data-os='windows'] .config[data-os='windows'],
-            html[data-os='mac'] .config[data-os='mac'],
-            html[data-os='linux'] .config[data-os='linux'] {
-                display: block;
-            }
-            .tools {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 8px;
-                margin: 0;
-                padding: 0;
-                list-style: none;
-            }
-            .tools code {
-                display: inline-block;
-                padding: 3px 9px;
-                border: 1px solid #24456d;
-                border-radius: 6px;
-                background: #0a1d35;
-                color: #c7d9ee;
-                font-size: 13.5px;
             }
             @media (max-width: 860px) {
                 .grid {
@@ -585,9 +509,6 @@
             @media (max-width: 520px) {
                 nav .links {
                     display: none;
-                }
-                .connect pre {
-                    font-size: 12.5px;
                 }
                 section {
                     padding: 52px 0;
@@ -634,7 +555,6 @@
                 </nav>
                 <div class="hero">
                     <div>
-                        <a class="announce" href="#features"><b>New</b> Five languages, color flags and batch actions &rarr;</a>
                         <h1>Classic on the outside. Modern where it counts.</h1>
                         <p class="lead">
                             Folders on the left, messages on top, the reading pane below. A fast, simple mail program for Windows, Mac and Linux with the layout
@@ -730,63 +650,13 @@
                         <div class="card">
                             <span class="icon"
                                 ><svg viewBox="0 0 24 24" aria-hidden="true">
-                                    <circle cx="12" cy="12" r="4" />
-                                    <path d="M16 12v1.5a2.5 2.5 0 0 0 5 0V12a9 9 0 1 0-3.5 7.1" /></svg
-                            ></span>
-                            <h3>Works with your account</h3>
-                            <p>Outlook.com, Microsoft 365, Gmail and any other IMAP mailbox. Type your address and the server settings are found for you.</p>
-                        </div>
-                        <div class="card">
-                            <span class="icon"
-                                ><svg viewBox="0 0 24 24" aria-hidden="true">
-                                    <path d="M4 13h4l1.5 2.5h5L16 13h4" />
-                                    <path d="M6 5h12l2 8v6H4v-6z" /></svg
-                            ></span>
-                            <h3>All accounts in one place</h3>
-                            <p>
-                                Every account in one folder tree, with All Inboxes to read them together. Drag a message onto another account to move it there.
-                            </p>
-                        </div>
-                        <div class="card">
-                            <span class="icon"
-                                ><svg viewBox="0 0 24 24" aria-hidden="true">
-                                    <circle cx="11" cy="11" r="6.5" />
-                                    <path d="M16 16l4.5 4.5" /></svg
-                            ></span>
-                            <h3>Finds anything</h3>
-                            <p>Search every folder as you type, by subject, people, attachments and text, with the search words you know from Gmail.</p>
-                        </div>
-                        <div class="card">
-                            <span class="icon"
-                                ><svg viewBox="0 0 24 24" aria-hidden="true">
                                     <path d="M6 16v-5a6 6 0 0 1 12 0v5l1.5 2h-15z" />
                                     <path d="M10 21h4" /></svg
                             ></span>
-                            <h3>New mail right away</h3>
+                            <h3>Fast, even offline</h3>
                             <p>
                                 Mail shows up the moment it arrives, with a notification and a count on the taskbar or the Dock. It is kept on your computer
                                 too, so it opens instantly, even offline.
-                            </p>
-                        </div>
-                        <div class="card">
-                            <span class="icon"
-                                ><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16l-6 7.5V18l-4 2v-7.5z" /></svg
-                            ></span>
-                            <h3>A cleaner inbox</h3>
-                            <p>
-                                Select a batch to flag in color, junk or move at once, and Undo if you change your mind. Unsubscribe from a list in one click.
-                            </p>
-                        </div>
-                        <div class="card">
-                            <span class="icon"
-                                ><svg viewBox="0 0 24 24" aria-hidden="true">
-                                    <circle cx="12" cy="12" r="8.5" />
-                                    <path d="M3.5 12h17M12 3.5c2.4 2.3 3.5 5.2 3.5 8.5s-1.1 6.2-3.5 8.5c-2.4-2.3-3.5-5.2-3.5-8.5s1.1-6.2 3.5-8.5z" /></svg
-                            ></span>
-                            <h3>In five languages</h3>
-                            <p>
-                                English, Deutsch, eesti, fran&ccedil;ais and espa&ntilde;ol, in every window, menu and help page. It follows your system, or you
-                                pick one.
                             </p>
                         </div>
                         <div class="card">
@@ -809,18 +679,6 @@
                             ></span>
                             <h3>Replies without clutter</h3>
                             <p>Long quoted histories fold away, so you see what the sender actually wrote, and your reply starts on top.</p>
-                        </div>
-                        <div class="card">
-                            <span class="icon"
-                                ><svg viewBox="0 0 24 24" aria-hidden="true">
-                                    <path d="M11 3l1.9 5.1L18 10l-5.1 1.9L11 17l-1.9-5.1L4 10l5.1-1.9z" />
-                                    <path d="M18.5 15l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z" /></svg
-                            ></span>
-                            <h3>Works with your AI agent</h3>
-                            <p>
-                                Let Claude, Cursor or another MCP agent search, sort and draft your mail. You approve each agent, and nothing is sent without
-                                your yes.
-                            </p>
                         </div>
                     </div>
                 </div>
@@ -853,13 +711,6 @@
                                 <b>See it, undo it</b>
                                 <span>Changes show in the window as they happen. Tools &gt; AI Agents lists everything each agent did, with Undo.</span>
                             </li>
-                            <li>
-                                <b>Stays on your computer</b>
-                                <span
-                                    >Agents reach Inbox Classic through a local connection only programs running as you can open. Your mail goes to no AI
-                                    service of ours, because there is none.</span
-                                >
-                            </li>
                         </ul>
                         <img
                             class="shot"
@@ -871,54 +722,9 @@
                             loading="lazy"
                         />
                     </div>
-                    <div class="connect">
-                        <h3>Connect in a minute</h3>
-                        <p>
-                            Add Inbox Classic to your agent's MCP settings (in Claude Desktop: Settings &gt; Developer &gt; Edit Config).
-                            <b>Tools &gt; AI Agents &gt; How to Connect an Agent</b> gives you these lines with the path filled in.
-                        </p>
-                        <pre class="config" data-os="windows"><code>{
-  "mcpServers": {
-    "inbox-classic": {
-      "command": "C:\\Users\\you\\AppData\\Local\\Programs\\Inbox Classic\\InboxClassic.exe",
-      "args": ["--mcp"]
-    }
-  }
-}</code></pre>
-                        <pre class="config" data-os="mac"><code>{
-  "mcpServers": {
-    "inbox-classic": {
-      "command": "/Applications/Inbox Classic.app/Contents/MacOS/Inbox Classic",
-      "args": ["--mcp"]
-    }
-  }
-}</code></pre>
-                        <pre class="config" data-os="linux"><code>{
-  "mcpServers": {
-    "inbox-classic": {
-      "command": "/usr/bin/inbox-classic",
-      "args": ["--mcp"]
-    }
-  }
-}</code></pre>
-                        <p>The tools your agent gets, each within what you allowed:</p>
-                        <ul class="tools">
-                            <li><code>list_accounts</code></li>
-                            <li><code>list_folders</code></li>
-                            <li><code>list_messages</code></li>
-                            <li><code>search_messages</code></li>
-                            <li><code>get_message</code></li>
-                            <li><code>get_attachment</code></li>
-                            <li><code>mark_read</code></li>
-                            <li><code>flag_messages</code></li>
-                            <li><code>move_messages</code></li>
-                            <li><code>mark_junk</code></li>
-                            <li><code>delete_messages</code></li>
-                            <li><code>create_folder</code></li>
-                            <li><code>save_draft</code></li>
-                            <li><code>send_message</code></li>
-                        </ul>
-                    </div>
+                    <p class="connect">
+                        Already use an agent? <b>Tools &gt; AI Agents &gt; How to Connect an Agent</b> gives you the lines to add to its settings.
+                    </p>
                 </div>
             </section>
 
@@ -937,8 +743,8 @@
                         <div>
                             <h3>Set up in a minute</h3>
                             <p>
-                                Outlook.com and Microsoft 365 sign in on Microsoft's own page, so your password never touches the app. For any other address,
-                                type your name and address; the servers are looked up for you.
+                                Outlook.com and Microsoft 365 sign in on Microsoft's own page, so your password never touches the app. For Gmail or any other
+                                IMAP address, type your name and address; the servers are looked up for you. All your accounts share one folder tree.
                             </p>
                         </div>
                     </div>
@@ -1009,13 +815,6 @@
                             </p>
                         </div>
                         <div>
-                            <h3>Which AI agents work with it?</h3>
-                            <p>
-                                Any program that speaks the Model Context Protocol (MCP): Claude Desktop, Claude Code, Cursor, VS Code and many more. The agent
-                                starts Inbox Classic with <code>--mcp</code>, which connects it to the Inbox Classic you have open.
-                            </p>
-                        </div>
-                        <div>
                             <h3>Does it work with Microsoft 365 and Exchange?</h3>
                             <p>
                                 Outlook.com and Microsoft 365 accounts sign in with Microsoft, on Microsoft's own page. Other Exchange servers work when IMAP is
@@ -1030,32 +829,11 @@
                             </p>
                         </div>
                         <div>
-                            <h3>Which systems does it run on?</h3>
+                            <h3>Which systems and languages?</h3>
                             <p>
                                 Windows 10 and 11, macOS 26 or newer on Apple silicon, and Ubuntu 26.04 or newer. Each looks the way its system does: classic
-                                Windows controls on Windows, AppKit on the Mac and GTK on Linux, with the same layout and features. The Mac version updates
-                                itself; on Linux, install a newer .deb over the old one.
-                            </p>
-                        </div>
-                        <div>
-                            <h3>Which languages does it speak?</h3>
-                            <p>
-                                English, German, Estonian, French and Spanish: the windows, the menus, the help and the Windows installer. It starts in your
-                                system's language, and you can pick another one in Options (Settings on the Mac, Preferences on Linux).
-                            </p>
-                        </div>
-                        <div>
-                            <h3>Can I move mail from one account to another?</h3>
-                            <p>
-                                Yes. Drag messages onto a folder of the other account, or use Move to Folder; hold Ctrl (Option on the Mac) to copy them
-                                instead. A message is copied to the new server first and only then removed from the old one, so nothing is lost on the way.
-                            </p>
-                        </div>
-                        <div>
-                            <h3>Can I bring old messages along?</h3>
-                            <p>
-                                Yes. Drag .eml files onto a folder to put them there, and drag messages out of the list to save them as files, as many as you
-                                like.
+                                Windows controls on Windows, AppKit on the Mac and GTK on Linux, with the same layout and features. It speaks English, German,
+                                Estonian, French and Spanish, following your system's language.
                             </p>
                         </div>
                     </div>
