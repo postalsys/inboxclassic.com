@@ -17,9 +17,11 @@ On Windows it looks like a classic Windows mail program; on the Mac it is a nati
 - Accounts: Outlook.com and Microsoft 365 sign in on Microsoft's own page (OAuth). Gmail works with a Google app password or a Google sign-in app of the user's own. For any other address the IMAP and SMTP servers are found automatically. Several accounts share one folder tree.
 - Search: every folder at once, as you type, by subject, people, attachment names and text, with Gmail's search words (`from:`, `is:unread`, `has:attachment`). The search runs locally and works offline.
 - New mail: arrives right away (IMAP IDLE), with a notification and a count on the taskbar or the Dock, even while the window is closed.
-- Reading: mail is kept on the computer too, so it opens instantly and works offline. Long quoted reply histories fold away.
+- Reading: mail is kept on the computer too, so it opens instantly and works offline. Long quoted reply histories fold away. All Inboxes shows the Inbox of every account in one list.
+- Languages: English, German, Estonian, French and Spanish (the windows, the menus, the help and the Windows installer). It follows the system language, or the user picks one in the settings.
 - Writing: formatted or plain text, a signature per account, address completion, drag and drop attachments, and an Outbox that sends when back online.
-- A cleaner inbox: one-click unsubscribe, a Junk button, drag messages into folders, import and export of .eml files.
+- Organizing: select several messages to mark, flag, junk, move, delete, forward or save them at once, with Undo. Flags in the seven colours Apple Mail uses. Move and copy messages between accounts. One-click unsubscribe and a Junk button.
+- Files: drag messages out of the list to save them as .eml files, drag .eml files onto a folder to import them.
 - AI agents: the user's own AI agent (Claude, Cursor, any MCP client) can search, read, organize and draft mail through Inbox Classic's MCP server. Add `{"mcpServers": {"inbox-classic": {"command": "<path to Inbox Classic>", "args": ["--mcp"]}}}` to the agent's settings (Tools > AI Agents > How to Connect an Agent shows the exact lines). The user approves each agent program and the accounts it may use; every message an agent wants to send needs the user's yes and waits 30 seconds in the Outbox. There is no AI in the app itself.
 - Privacy: remote pictures that track opens stay blocked until the user allows them, scripts in messages never run, and the app sends nothing to its makers. Passwords are kept in the system's own password store (Windows Credential Manager, the macOS keychain, GNOME Keyring).
 
