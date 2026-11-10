@@ -10,6 +10,7 @@ On Windows it looks like a classic Windows mail program; on the Mac it is a nati
 - [Mac disk image](https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic.dmg): macOS 26 or newer on Apple silicon, signed and notarized, updates itself
 - [Linux .deb for x86-64](https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-amd64.deb): Ubuntu 26.04 or newer
 - [Linux .deb for ARM64](https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-arm64.deb): Ubuntu 26.04 or newer
+- [Linux apt repository](https://inboxclassic.com/#linux-apt): `deb [signed-by=/usr/share/keyrings/inboxclassic.gpg] https://apt.inboxclassic.com stable main`, key at https://apt.inboxclassic.com/inboxclassic.gpg, package `inbox-classic` (amd64 and arm64); updates come with the system updates
 - [Release notes](https://github.com/postalsys/inbox-classic/releases): what is new in each version
 
 ## Features

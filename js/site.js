@@ -123,3 +123,27 @@
         choose(linked ? linked[1] : os);
     }
 })();
+
+// Copy buttons for the commands on the page (the Linux apt card). They stay
+// hidden where the clipboard is not available (no script, or not https).
+(function () {
+    if (!navigator.clipboard) {
+        return;
+    }
+    for (let btn of document.querySelectorAll('.copy-btn')) {
+        let code = document.getElementById(btn.getAttribute('data-copy'));
+        let label = btn.lastChild;
+        btn.classList.remove('hidden');
+        btn.addEventListener('click', () => {
+            navigator.clipboard.writeText(code.textContent).then(
+                () => {
+                    label.textContent = 'Copied';
+                    setTimeout(() => {
+                        label.textContent = 'Copy';
+                    }, 2000);
+                },
+                () => {}
+            );
+        });
+    }
+})();
