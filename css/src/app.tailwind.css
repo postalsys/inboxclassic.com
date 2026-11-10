@@ -1,0 +1,195 @@
+/*
+ * inboxclassic.com theme - Tailwind v4 + FlyonUI.
+ *
+ * This is the build SOURCE. Compile with `npm run build:css`, which writes the
+ * committed artifact css/app.css (GitHub Pages serves the repo as is, there is
+ * no build on deploy). tailwindcss, flyonui and the iconify plugin are
+ * devDependencies only.
+ *
+ * The brand palette and font are shared with EmailEngine, postalsys.com and
+ * ethereal.email (the design is unified across Postal Systems properties):
+ * indigo #4C5CC5 = primary, coral #F8485E = secondary/accent, font PT Sans
+ * (self-hosted, loaded via /fonts/pt-sans-font.css).
+ */
+
+@import 'tailwindcss' source(none);
+
+@plugin "@iconify/tailwind4";
+
+@plugin "flyonui" {
+    themes: false;
+}
+@import 'flyonui/variants.css';
+
+/* Light theme: FlyonUI builtin "light" tokens merged with the brand colors */
+@plugin "flyonui/theme" {
+    name: 'light';
+    default: true;
+    color-scheme: light;
+    --color-primary: #4c5cc5;
+    --color-primary-content: #ffffff;
+    --color-secondary: #f8485e;
+    --color-secondary-content: #ffffff;
+    --color-accent: #f8485e;
+    --color-accent-content: #ffffff;
+}
+
+/* Dark theme: FlyonUI builtin "dark" tokens with brand colors lightened for
+ * contrast on dark surfaces; content colors darkened to keep WCAG-ish ratios */
+@plugin "flyonui/theme" {
+    name: 'dark';
+    prefersdark: true;
+    color-scheme: dark;
+    --color-primary: #7b86dc;
+    --color-primary-content: #10123a;
+    --color-secondary: #f8697b;
+    --color-secondary-content: #3b070f;
+    --color-accent: #f8697b;
+    --color-accent-content: #3b070f;
+}
+
+/* Class sources: the pages and the site script. The FlyonUI JS runtime is not
+ * used (no dropdowns or overlays), so it is not scanned. */
+@source '../../*.html';
+@source '../../js/site.js';
+
+@theme {
+    --font-sans: 'PT Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    /* single source for the page width: the navbar, sections and footer all
+     * use max-w-page */
+    --container-page: 72rem;
+}
+
+@layer base {
+    /* Tailwind preflight leaves hr at "1px solid currentColor" - a harsh
+     * full-contrast line in both themes */
+    hr {
+        border-color: color-mix(in oklab, var(--color-base-content) 10%, transparent);
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+    /* section links land below the sticky navbar */
+    [id] {
+        scroll-margin-top: 4.5rem;
+    }
+}
+
+/* FlyonUI's .link keeps the surrounding text color and .link-animated hides
+ * the underline until hover, so links read as plain text. Color them with the
+ * brand primary so they are recognizable at rest. Un-layered on purpose:
+ * FlyonUI sets --link-color in @layer utilities. */
+.link {
+    --link-color: var(--color-primary);
+}
+
+/* Buttons on the brand band: white with indigo text, and a white outline.
+ * Fixed colors, not theme tokens, because the band is the same in both
+ * themes. Un-layered so they win over FlyonUI's .btn (@layer utilities). */
+.btn-on-brand {
+    --btn-color: #ffffff;
+    --btn-fg: #3d4aa8;
+}
+.btn-on-brand-outline {
+    --btn-color: transparent;
+    --btn-fg: #ffffff;
+    --btn-border: rgba(255, 255, 255, 0.6);
+    --btn-shadow: none;
+}
+.btn-on-brand-outline:hover {
+    --btn-color: rgba(255, 255, 255, 0.12);
+}
+
+/* ---------------------------------------------------------------------------
+ * The visitor's platform (js/site.js sets data-os on <html>): its download is
+ * the button and its line the note, the other platforms are "Also for" links.
+ * Without the script all downloads show and no "Also for" line. Un-layered so
+ * display:none beats FlyonUI's .btn display (@layer utilities).
+ * ------------------------------------------------------------------------- */
+.os-also {
+    display: none;
+}
+html[data-os] .os-download,
+html[data-os] .os-note {
+    display: none;
+}
+html[data-os='windows'] .os-download[data-os='windows'],
+html[data-os='mac'] .os-download[data-os='mac'],
+html[data-os='linux'] .os-download[data-os='linux'] {
+    display: inline-flex;
+}
+html[data-os='windows'] .os-note[data-os='windows'],
+html[data-os='mac'] .os-note[data-os='mac'],
+html[data-os='linux'] .os-note[data-os='linux'] {
+    display: block;
+}
+html[data-os] .os-also {
+    display: block;
+}
+html[data-os='windows'] .os-also a[data-os='windows'],
+html[data-os='mac'] .os-also a[data-os='mac'],
+html[data-os='linux'] .os-also a[data-os='linux'] {
+    display: none;
+}
+
+/* ---------------------------------------------------------------------------
+ * Site components
+ * ------------------------------------------------------------------------- */
+@layer components {
+    /* The band of brand colour behind the hero (same as postalsys.com) */
+    .ui-brand-hero {
+        background: linear-gradient(120deg, #3f3a8f 0%, #4c5cc5 45%, #8a5cc9 75%, #f8485e 120%);
+        clip-path: polygon(0 0, 100% 0, 100% 78%, 0 100%);
+    }
+
+    /* An app screenshot. The captures are always light, whatever the page
+     * theme, so the frame keeps a fixed light surface and a soft shadow that
+     * reads on both page backgrounds. */
+    .app-shot {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 0.625rem;
+        border: 1px solid rgba(0, 0, 0, 0.14);
+        background: #f0f0f0;
+        box-shadow: 0 18px 40px -16px rgba(15, 18, 58, 0.45);
+    }
+
+    /* Typography island for the legal pages. Preflight strips all default
+     * heading sizes, margins and list bullets, so restore a minimal document
+     * look for bare elements inside the island. */
+    .ui-prose h2 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin: 2rem 0 0.5rem;
+    }
+    .ui-prose p {
+        margin: 0 0 0.75rem;
+    }
+    .ui-prose ul,
+    .ui-prose ol {
+        margin: 0 0 0.75rem;
+        padding-inline-start: 1.5rem;
+    }
+    .ui-prose ul {
+        list-style: disc;
+    }
+    .ui-prose ol {
+        list-style: decimal;
+    }
+    .ui-prose li {
+        margin: 0.375rem 0;
+    }
+    .ui-prose a {
+        color: var(--color-primary);
+        text-decoration: underline;
+    }
+    .ui-prose code,
+    code.ui-code {
+        font-family: var(--font-mono);
+        font-size: 0.875em;
+        background-color: var(--color-base-200);
+        border-radius: 0.25rem;
+        padding: 0.125rem 0.3rem;
+    }
+}

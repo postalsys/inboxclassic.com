@@ -1,0 +1,53 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+## What this is
+
+The marketing site for Inbox Classic. The app itself lives in the sibling checkout `../PostalExpress` (GitHub `postalsys/inbox-classic`); "the app repo" below means that directory, and it is where to look up features, wording, release notes and the scripts that feed this site. This site is served by GitHub Pages straight from `main` at https://inboxclassic.com (`CNAME`, `.nojekyll`). Static HTML pages with no templating and no tests. Pushing to `main` deploys, and nothing is built on deploy, so the compiled CSS is committed.
+
+## Commands
+
+- `npm install` once (devDependencies only: Tailwind, FlyonUI, iconify, Prettier).
+- `npm run build:css`: compile `css/src/app.tailwind.css` into `css/app.css`. Run it after any class change in a page or in `js/site.js`, and commit `css/app.css`; a class missing from the build is simply unstyled on the live site.
+- `npm run format`: Prettier on the pages, CSS source, JS and docs (`.prettierrc.json`: 4 spaces, print width 160, single quotes).
+- `npm run serve`: preview at http://localhost:8080. Pages link `/css/app.css`, `/fonts/...` and `/js/site.js` by absolute path, so serve from the repo root.
+
+## Design system
+
+The site uses the shared Postal Systems design, the same as postalsys.com (`../postalsys-web`), ethereal.email (`../ethereal-www`) and EmailEngine (`../emailengine`): Tailwind v4 + FlyonUI 2, brand indigo `#4C5CC5` (primary) and coral `#F8485E` (secondary), PT Sans self-hosted in `fonts/`, Tabler icons as `icon-[tabler--name]` classes. When in doubt about how something should look, copy the pattern from those repos (their `app.tailwind.css` and `views/`) rather than inventing a new one.
+
+- Light and dark themes: the dark theme follows `prefers-color-scheme`; the navbar toggle stores the choice in `localStorage` (`inboxclassicTheme`), applied before first paint by the small inline script in every page's `<head>`. Check both themes when changing anything visual.
+- Layout conventions: `bg-base-200` page, `bg-base-100` sticky navbar and footer, content in `max-w-page mx-auto px-6` (`--container-page` in the CSS source), cards as `card bg-base-100 shadow-md`, the coloured hero band is `.ui-brand-hero` (same gradient as postalsys.com). App screenshots use `.app-shot`, which keeps a light frame in both themes because the captures are light.
+- Legal pages wrap their text in `.ui-prose` (restores headings, lists and link styling that Tailwind's preflight removes).
+- FlyonUI's JS runtime is not loaded; nothing on the site needs dropdowns or overlays. If one is added, vendor `node_modules/flyonui/flyonui.js` the way the other sites do.
+- FlyonUI emits its components in `@layer utilities`, so overrides that must win (the per-platform show/hide rules, `.btn-on-brand`) are un-layered in the CSS source on purpose.
+- The navbar and footer are copied into each of `index.html`, `privacy.html`, `terms.html` and `404.html`; change all four together.
+- No third-party scripts, fonts or analytics (not even the postalsys.com `frame.js` beacon the other sites load): the privacy policy promises the site loads nothing from anyone.
+
+## How the homepage works
+
+`index.html` holds the schema.org JSON-LD in the head; the behaviour is in `js/site.js`.
+
+- **Per-platform downloads and screenshots.** `js/site.js` detects the visitor's OS and sets `data-os` on `<html>`. Rules in the CSS source keyed on `html[data-os=...]` show that platform's `.os-download` button and `.os-note`, and the `.os-also` line links to the others. A `#download-windows|mac|linux` hash forces a platform. Without the script (or an unknown OS) all three downloads show. The downloads appear twice (hero and the closing "Try Inbox Classic" card).
+- **Screenshots** are `<img data-shot="name">` with `src="img/windows/<name>.png"` as the default. The script swaps in `img/<os>/<name>.png` and sets width/height from the `sizes` table in `js/site.js`. When screenshots are replaced, update `sizes` (and the `width`/`height` attributes on the default Windows `<img>` tags) to match. Every shot must exist in all three of `img/windows`, `img/mac`, `img/linux`.
+- Screenshots come from the app repo's UI end-to-end tests, refreshed with `../PostalExpress/scripts/homepage-screenshots.sh`.
+
+## Files that must stay in step with the page
+
+When page content or features change, check all of these:
+
+- `llms.txt`: a plain-language summary of the app for language models. Keep its feature list, download links and system requirements matching `index.html`.
+- `sitemap.xml`: bump `<lastmod>` for any changed page; its `<image:image>` entries list screenshot URLs.
+- JSON-LD in `index.html` head: `operatingSystem`, `inLanguage` (app UI languages), `screenshot` URLs.
+- Open Graph / Twitter tags and canonical URL on each page; share image is `img/og.jpg` (1200x630).
+- System requirements (Windows 10/11, macOS 26+ on Apple silicon, Ubuntu 26.04+) appear in the download notes in two places on the homepage (hero and the closing download card), in the JSON-LD and in `llms.txt`.
+
+## Files written by other tooling
+
+- `appcast.xml` is the Mac app's Sparkle update feed, generated by `../PostalExpress/scripts/release.sh` (commits titled "Inbox Classic X.Y.Z for the Mac updater"). Do not hand-edit it; the `sparkle:edSignature` and `length` must match the released DMG.
+- `.well-known/microsoft-identity-association.json` verifies the publisher domain for the app's Microsoft (OAuth) registration. Leave it as is.
+
+## Copy style
+
+Site copy is plain, concrete and short: say what the app does in everyday words, one message per section, nothing said twice. Download links always point to `https://github.com/postalsys/inbox-classic/releases/latest/download/<asset>` so they never need a version bump.

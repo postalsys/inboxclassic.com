@@ -10,7 +10,7 @@
         />
         <link rel="canonical" href="https://inboxclassic.com/" />
         <meta name="robots" content="index, follow, max-image-preview:large" />
-        <meta name="theme-color" content="#1c5fae" />
+        <meta name="theme-color" content="#4c5cc5" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Inbox Classic" />
         <meta property="og:locale" content="en_US" />
@@ -85,549 +85,97 @@
                 ]
             }
         </script>
-        <style>
-            :root {
-                --ink: #1d2733;
-                --muted: #556273;
-                --face: #f0f0f0;
-                --line: #d5dbe3;
-                --blue: #1c5fae;
-                --blue-dark: #12417a;
-                --sky: #e8f1fb;
-                --paper: #ffffff;
-            }
-            * {
-                box-sizing: border-box;
-            }
-            html {
-                background: var(--paper);
-            }
-            body {
-                margin: 0;
-                color: var(--ink);
-                font:
-                    17px/1.6 'Segoe UI',
-                    Tahoma,
-                    system-ui,
-                    -apple-system,
-                    sans-serif;
-            }
-            a {
-                color: var(--blue);
-            }
-            .wrap {
-                max-width: 1120px;
-                margin: 0 auto;
-                padding: 0 24px;
-            }
-            header.top {
-                background: linear-gradient(180deg, #2a6fc0 0%, var(--blue) 55%, var(--blue-dark) 100%);
-                color: #fff;
-            }
-            nav {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                padding: 18px 0;
-            }
-            .brand {
-                display: flex;
-                align-items: center;
-                gap: 10px;
-                font-weight: 600;
-                font-size: 20px;
-                color: #fff;
-                text-decoration: none;
-            }
-            .brand svg {
-                width: 30px;
-                height: 30px;
-            }
-            nav .links a {
-                color: #dbe9fa;
-                text-decoration: none;
-                margin-left: 22px;
-                font-size: 15px;
-            }
-            nav .links a:hover {
-                color: #fff;
-            }
-            .hero {
-                display: grid;
-                grid-template-columns: 1fr;
-                gap: 36px;
-                padding: 40px 0 0;
-                text-align: center;
-            }
-            .hero h1 {
-                text-wrap: balance;
-                margin: 0 auto;
-                max-width: 820px;
-                font-size: clamp(32px, 5vw, 52px);
-                line-height: 1.12;
-                font-weight: 700;
-                letter-spacing: -0.5px;
-            }
-            .hero p.lead {
-                margin: 16px auto 0;
-                max-width: 680px;
-                color: #dbe9fa;
-                font-size: 19px;
-            }
-            .ghost {
-                display: inline-flex;
-                align-items: center;
-                gap: 9px;
-                padding: 12px 22px;
-                border: 1px solid rgba(255, 255, 255, 0.55);
-                border-radius: 8px;
-                color: #fff;
-                font-weight: 600;
-                font-size: 17px;
-                text-decoration: none;
-            }
-            .ghost:hover {
-                background: rgba(255, 255, 255, 0.1);
-            }
-            .ghost svg {
-                width: 20px;
-                height: 20px;
-            }
-            .download {
-                display: inline-flex;
-                align-items: center;
-                gap: 10px;
-                margin-top: 26px;
-                padding: 13px 26px;
-                border-radius: 8px;
-                background: #fff;
-                color: var(--blue-dark);
-                font-weight: 600;
-                font-size: 17px;
-                text-decoration: none;
-                box-shadow: 0 6px 18px rgba(9, 30, 66, 0.25);
-            }
-            .download:hover {
-                background: #f3f8fe;
-            }
-            .download svg {
-                width: 20px;
-                height: 20px;
-            }
-            .note {
-                display: block;
-                margin-top: 12px;
-                font-size: 14px;
-                color: #dbe9fa;
-            }
-            .cta .download {
-                background: var(--blue);
-                color: #fff;
-            }
-            .cta .download:hover {
-                background: var(--blue-dark);
-            }
-            .cta .note {
-                color: var(--muted);
-            }
-            .downloads {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 12px;
-                margin-top: 26px;
-            }
-            .downloads .download {
-                margin-top: 0;
-            }
-            .free {
-                display: block;
-                margin-top: 12px;
-                font-size: 14px;
-                color: #dbe9fa;
-            }
-            .cta .free {
-                color: var(--muted);
-            }
-            .note a,
-            .also a {
-                color: inherit;
-            }
-            .note[data-os] {
-                margin-top: 4px;
-            }
-            .also {
-                display: none;
-                margin-top: 8px;
-                font-size: 14px;
-                color: #dbe9fa;
-            }
-            .cta .also {
-                color: var(--muted);
-            }
-            .also a {
-                margin-left: 0.6em;
-            }
-            .whatsnew {
-                display: block;
-                margin-top: 12px;
-                font-size: 14px;
-            }
-            /* once the visitor's platform is known: its button and its line only, the others as links */
-            html[data-os] .downloads .download,
-            html[data-os] .note[data-os] {
-                display: none;
-            }
-            html[data-os='windows'] .download[data-os='windows'],
-            html[data-os='mac'] .download[data-os='mac'],
-            html[data-os='linux'] .download[data-os='linux'] {
-                display: inline-flex;
-            }
-            html[data-os='windows'] .note[data-os='windows'],
-            html[data-os='mac'] .note[data-os='mac'],
-            html[data-os='linux'] .note[data-os='linux'] {
-                display: block;
-            }
-            html[data-os] .also {
-                display: block;
-            }
-            html[data-os='windows'] .also a[data-os='windows'],
-            html[data-os='mac'] .also a[data-os='mac'],
-            html[data-os='linux'] .also a[data-os='linux'] {
-                display: none;
-            }
-            .shot {
-                display: block;
-                width: 100%;
-                height: auto;
-                border: 1px solid #9aa6b5;
-                border-radius: 8px 8px 0 0;
-                box-shadow: 0 18px 50px rgba(9, 30, 66, 0.35);
-                background: var(--face);
-            }
-            .hero .shot {
-                margin: 0 auto -1px;
-                max-width: 980px;
-                border-bottom: 0;
-            }
-            section {
-                padding: 72px 0;
-            }
-            section h2 {
-                margin: 0 0 10px;
-                line-height: 1.2;
-                text-wrap: balance;
-                font-size: 32px;
-                letter-spacing: -0.3px;
-            }
-            section p.intro {
-                margin: 0 0 36px;
-                max-width: 720px;
-                color: var(--muted);
-            }
-            .grid {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 22px;
-            }
-            .card {
-                border: 1px solid var(--line);
-                border-radius: 8px;
-                padding: 22px;
-                background: #fff;
-            }
-            .card h3 {
-                margin: 0 0 6px;
-                font-size: 18px;
-            }
-            .card .icon {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 40px;
-                height: 40px;
-                margin-bottom: 14px;
-                border-radius: 9px;
-                background: var(--sky);
-                color: var(--blue);
-            }
-            .card .icon svg {
-                width: 22px;
-                height: 22px;
-                fill: none;
-                stroke: currentColor;
-                stroke-width: 1.7;
-                stroke-linecap: round;
-                stroke-linejoin: round;
-            }
-            .card p {
-                margin: 0;
-                color: var(--muted);
-                font-size: 15.5px;
-            }
-            .alt {
-                background: var(--sky);
-            }
-            .pair {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 44px;
-                align-items: center;
-                margin-bottom: 64px;
-            }
-            .pair.wide {
-                grid-template-columns: 1fr;
-                gap: 28px;
-            }
-            .pair.wide > div {
-                max-width: 760px;
-            }
-            .pair:last-child {
-                margin-bottom: 0;
-            }
-            .pair .shot {
-                border-radius: 8px;
-                border-bottom: 1px solid #9aa6b5;
-                box-shadow: 0 10px 30px rgba(9, 30, 66, 0.18);
-            }
-            .pair h3 {
-                margin: 0 0 8px;
-                line-height: 1.25;
-                font-size: 24px;
-            }
-            .pair p {
-                margin: 0 0 10px;
-                color: var(--muted);
-            }
-            ul.checks {
-                list-style: none;
-                padding: 0;
-                margin: 0;
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 14px 36px;
-            }
-            ul.checks li {
-                position: relative;
-                padding-left: 30px;
-            }
-            ul.checks li::before {
-                content: '';
-                position: absolute;
-                left: 0;
-                top: 6px;
-                width: 18px;
-                height: 18px;
-                border-radius: 50%;
-                background: var(--blue)
-                    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M5 9.5l2.5 2.5L13 6.5' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
-                    center/18px no-repeat;
-            }
-            ul.checks b {
-                display: block;
-            }
-            ul.checks span {
-                color: var(--muted);
-                font-size: 15.5px;
-            }
-            .cta {
-                text-align: center;
-            }
-            .cta p {
-                max-width: 640px;
-                margin: 0 auto 8px;
-                color: var(--muted);
-            }
-            footer {
-                border-top: 1px solid var(--line);
-                padding: 28px 0 40px;
-                color: var(--muted);
-                font-size: 14px;
-            }
-            footer .legal a {
-                margin-left: 18px;
-            }
-            footer .wrap {
-                display: flex;
-                justify-content: space-between;
-                flex-wrap: wrap;
-                gap: 10px;
-            }
-            .agents {
-                background: #0f2a4a;
-                color: #e8f0fa;
-            }
-            .agents h2 {
-                color: #fff;
-            }
-            .agents p.intro,
-            .agents ul.checks span,
-            .agents p.connect {
-                color: #b3c6dd;
-            }
-            .agents .pair {
-                align-items: start;
-                margin-bottom: 0;
-            }
-            .agents .pair .shot {
-                border-color: #38587e;
-                box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
-            }
-            .agents ul.checks {
-                grid-template-columns: 1fr;
-                gap: 18px;
-            }
-            .agents ul.checks li::before {
-                background-color: #3b82d6;
-            }
-            .agents a {
-                color: #9cc7f5;
-            }
-            .connect {
-                margin: 40px 0 0;
-                padding-top: 28px;
-                border-top: 1px solid #24456d;
-            }
-            @media (max-width: 860px) {
-                .grid {
-                    grid-template-columns: 1fr;
+        <script>
+            // apply the stored theme before first paint (js/site.js has the toggle)
+            try {
+                var inboxclassicTheme = localStorage.getItem('inboxclassicTheme');
+                if (inboxclassicTheme === 'light' || inboxclassicTheme === 'dark') {
+                    document.documentElement.setAttribute('data-theme', inboxclassicTheme);
                 }
-                .pair,
-                ul.checks {
-                    grid-template-columns: 1fr;
-                }
-                .pair {
-                    gap: 20px;
-                }
-                .pair.flip .shot {
-                    order: -1;
-                }
-                nav .links a {
-                    margin-left: 14px;
-                }
-            }
-            @media (max-width: 520px) {
-                nav .links {
-                    display: none;
-                }
-                section {
-                    padding: 52px 0;
-                }
-            }
-            .faq {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 28px 44px;
-            }
-            .faq h3 {
-                margin: 0 0 6px;
-                font-size: 18px;
-            }
-            .faq p {
-                margin: 0;
-                color: var(--muted);
-                font-size: 15.5px;
-            }
-            @media (max-width: 860px) {
-                .faq {
-                    grid-template-columns: 1fr;
-                }
-            }
-        </style>
+            } catch (err) {}
+        </script>
+        <link href="/fonts/pt-sans-font.css" rel="stylesheet" />
+        <link href="/css/app.css" rel="stylesheet" />
     </head>
-    <body>
-        <header class="top">
-            <div class="wrap">
-                <nav>
-                    <a class="brand" href="/">
-                        <svg viewBox="0 0 24 24" aria-hidden="true">
-                            <rect width="24" height="24" rx="5" fill="#ffffff" />
-                            <path d="M5 8l7 5 7-5v9H5z" fill="none" stroke="#1c5fae" stroke-width="1.6" stroke-linejoin="round" />
-                        </svg>
-                        Inbox Classic
+    <body class="bg-base-200 text-base-content flex min-h-screen flex-col">
+        <header class="bg-base-100 border-base-content/20 sticky top-0 z-30 border-b">
+            <nav class="max-w-page mx-auto flex w-full items-center gap-2 px-6 py-2" aria-label="Main navigation">
+                <a href="/" class="text-base-content flex items-center gap-2 text-lg font-bold">
+                    <img src="/favicon.svg" alt="" class="size-7" />
+                    Inbox Classic
+                </a>
+                <ul class="ms-6 hidden items-center gap-1 md:flex">
+                    <li><a class="btn btn-text btn-sm" href="/#features">Features</a></li>
+                    <li><a class="btn btn-text btn-sm" href="/#agents">AI agents</a></li>
+                    <li><a class="btn btn-text btn-sm" href="/#faq">Questions</a></li>
+                </ul>
+                <div class="ms-auto flex items-center gap-1">
+                    <a class="btn btn-text btn-sm" href="https://github.com/postalsys/inbox-classic">
+                        <span class="icon-[tabler--brand-github] size-5"></span><span class="hidden sm:inline">GitHub</span>
                     </a>
-                    <div class="links">
-                        <a href="#features">Features</a>
-                        <a href="#agents">AI agents</a>
-                        <a href="#faq">Questions</a>
-                        <a href="https://github.com/postalsys/inbox-classic">GitHub</a>
+                    <button type="button" class="theme-toggle-btn btn btn-text btn-circle btn-sm" aria-label="Toggle theme">
+                        <span class="theme-toggle-dark icon-[tabler--moon] size-5"></span>
+                        <span class="theme-toggle-light icon-[tabler--sun] hidden size-5"></span>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <main id="content" class="grow">
+            <section class="relative" aria-labelledby="hero-title">
+                <div class="ui-brand-hero px-6 pt-14 pb-40 text-center text-white sm:pt-20 sm:pb-72">
+                    <h1 id="hero-title" class="mx-auto max-w-3xl text-4xl leading-tight font-bold text-balance sm:text-5xl">
+                        Classic on the outside. Modern where it counts.
+                    </h1>
+                    <p class="mx-auto mt-5 max-w-2xl text-lg text-white/85 sm:text-xl">
+                        Folders on the left, messages on top, the reading pane below. A fast, simple mail program for Windows, Mac and Linux with the layout you
+                        already know, and none of the clutter.
+                    </p>
+                    <div class="mt-8 flex flex-wrap justify-center gap-3">
+                        <a
+                            class="os-download btn btn-lg btn-on-brand"
+                            data-os="windows"
+                            href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-Setup.exe"
+                            ><span class="icon-[tabler--download] size-5"></span>Download for Windows</a
+                        >
+                        <a
+                            class="os-download btn btn-lg btn-on-brand"
+                            data-os="mac"
+                            href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic.dmg"
+                            ><span class="icon-[tabler--download] size-5"></span>Download for Mac</a
+                        >
+                        <a
+                            class="os-download btn btn-lg btn-on-brand"
+                            data-os="linux"
+                            href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-amd64.deb"
+                            ><span class="icon-[tabler--download] size-5"></span>Download for Linux</a
+                        >
+                        <a class="btn btn-lg btn-on-brand-outline" href="https://github.com/postalsys/inbox-classic"
+                            ><span class="icon-[tabler--brand-github] size-5"></span>View on GitHub</a
+                        >
                     </div>
-                </nav>
-                <div class="hero">
-                    <div>
-                        <h1>Classic on the outside. Modern where it counts.</h1>
-                        <p class="lead">
-                            Folders on the left, messages on top, the reading pane below. A fast, simple mail program for Windows, Mac and Linux with the layout
-                            you already know, and none of the clutter.
-                        </p>
-                        <div class="downloads">
-                            <a
-                                class="download"
-                                data-os="windows"
-                                href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-Setup.exe"
-                                ><svg viewBox="0 0 24 24" aria-hidden="true">
-                                    <path
-                                        d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19h14"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    /></svg
-                                >Download for Windows</a
-                            >
-                            <a class="download" data-os="mac" href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic.dmg"
-                                ><svg viewBox="0 0 24 24" aria-hidden="true">
-                                    <path
-                                        d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19h14"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    /></svg
-                                >Download for Mac</a
-                            >
-                            <a
-                                class="download"
-                                data-os="linux"
-                                href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-amd64.deb"
-                                ><svg viewBox="0 0 24 24" aria-hidden="true">
-                                    <path
-                                        d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19h14"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    /></svg
-                                >Download for Linux</a
-                            >
-                            <a class="ghost" href="https://github.com/postalsys/inbox-classic"
-                                ><svg viewBox="0 0 24 24" aria-hidden="true">
-                                    <path
-                                        fill="currentColor"
-                                        d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2z"
-                                    /></svg
-                                >View on GitHub</a
-                            >
-                        </div>
-                        <span class="free">Free and open source, from the makers of Nodemailer</span>
-                        <span class="note" data-os="windows">Windows 10 and 11</span>
-                        <span class="note" data-os="mac">macOS 26 or newer, on Apple silicon</span>
-                        <span class="note" data-os="linux"
-                            >Ubuntu 26.04 or newer, a .deb for x86-64 (<a
+                    <div class="mt-4 space-y-1 text-sm text-white/80">
+                        <p>Free and open source, from the makers of Nodemailer</p>
+                        <p class="os-note" data-os="windows">Windows 10 and 11</p>
+                        <p class="os-note" data-os="mac">macOS 26 or newer, on Apple silicon</p>
+                        <p class="os-note" data-os="linux">
+                            Ubuntu 26.04 or newer, a .deb for x86-64 (<a
+                                class="underline"
                                 href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-arm64.deb"
                                 >ARM64</a
-                            >)</span
-                        >
-                        <span class="also"
-                            >Also for <a data-os="windows" href="#download-windows">Windows</a><a data-os="mac" href="#download-mac">Mac</a
-                            ><a data-os="linux" href="#download-linux">Linux</a></span
-                        >
+                            >)
+                        </p>
+                        <p class="os-also">
+                            Also for
+                            <a class="ms-1 underline" data-os="windows" href="#download-windows">Windows</a>
+                            <a class="ms-1 underline" data-os="mac" href="#download-mac">Mac</a>
+                            <a class="ms-1 underline" data-os="linux" href="#download-linux">Linux</a>
+                        </p>
                     </div>
+                </div>
+                <div class="max-w-page relative mx-auto -mt-32 px-6 sm:-mt-64">
                     <img
-                        class="shot"
+                        class="app-shot mx-auto max-w-[980px]"
                         data-shot="read-1-html"
                         src="img/windows/read-1-html.png"
                         fetchpriority="high"
@@ -636,103 +184,119 @@
                         alt="The Inbox Classic main window: the folder tree, the message list and an HTML newsletter in the reading pane, its pictures from the internet blocked"
                     />
                 </div>
-            </div>
-        </header>
+            </section>
 
-        <main>
-            <section id="features">
-                <div class="wrap">
-                    <h2>Just your mail</h2>
-                    <p class="intro">
-                        No feeds, no built-in assistant, no ads, no account with us. A small program that reads and writes your mail, and does it well.
-                    </p>
-                    <div class="grid">
-                        <div class="card">
-                            <span class="icon"
-                                ><svg viewBox="0 0 24 24" aria-hidden="true">
-                                    <path d="M6 16v-5a6 6 0 0 1 12 0v5l1.5 2h-15z" />
-                                    <path d="M10 21h4" /></svg
+            <section id="features" class="max-w-page mx-auto px-6 py-16 sm:py-20">
+                <h2 class="text-3xl font-bold text-balance">Just your mail</h2>
+                <p class="text-base-content/70 mt-3 max-w-2xl text-lg">
+                    No feeds, no built-in assistant, no ads, no account with us. A small program that reads and writes your mail, and does it well.
+                </p>
+                <div class="mt-10 grid gap-6 md:grid-cols-3">
+                    <div class="card bg-base-100 shadow-md">
+                        <div class="card-body">
+                            <span class="bg-primary/10 text-primary mb-2 flex size-11 items-center justify-center rounded-lg"
+                                ><span class="icon-[tabler--bell-ringing] size-6"></span
                             ></span>
-                            <h3>Fast, even offline</h3>
-                            <p>
+                            <h3 class="text-lg font-semibold">Fast, even offline</h3>
+                            <p class="text-base-content/70">
                                 Mail shows up the moment it arrives, with a notification and a count on the taskbar or the Dock. It is kept on your computer
                                 too, so it opens instantly, even offline.
                             </p>
                         </div>
-                        <div class="card">
-                            <span class="icon"
-                                ><svg viewBox="0 0 24 24" aria-hidden="true">
-                                    <path d="M12 3l7.5 3v5.5c0 4.4-3.2 8-7.5 9.5-4.3-1.5-7.5-5.1-7.5-9.5V6z" />
-                                    <path d="M9 12l2.2 2.2L15.5 10" /></svg
+                    </div>
+                    <div class="card bg-base-100 shadow-md">
+                        <div class="card-body">
+                            <span class="bg-primary/10 text-primary mb-2 flex size-11 items-center justify-center rounded-lg"
+                                ><span class="icon-[tabler--shield-check] size-6"></span
                             ></span>
-                            <h3>Private by design</h3>
-                            <p>
+                            <h3 class="text-lg font-semibold">Private by design</h3>
+                            <p class="text-base-content/70">
                                 Pictures that tell senders you opened their mail stay blocked until you ask, and scripts in messages never run. No analytics, no
                                 sign-up, nothing sent to us.
                             </p>
                         </div>
-                        <div class="card">
-                            <span class="icon"
-                                ><svg viewBox="0 0 24 24" aria-hidden="true">
-                                    <path d="M4 6h16M4 11h10M4 16h6" />
-                                    <path d="M15 15l3 3 3-3" /></svg
+                    </div>
+                    <div class="card bg-base-100 shadow-md">
+                        <div class="card-body">
+                            <span class="bg-primary/10 text-primary mb-2 flex size-11 items-center justify-center rounded-lg"
+                                ><span class="icon-[tabler--fold] size-6"></span
                             ></span>
-                            <h3>Replies without clutter</h3>
-                            <p>Long quoted histories fold away, so you see what the sender actually wrote, and your reply starts on top.</p>
+                            <h3 class="text-lg font-semibold">Replies without clutter</h3>
+                            <p class="text-base-content/70">
+                                Long quoted histories fold away, so you see what the sender actually wrote, and your reply starts on top.
+                            </p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section id="agents" class="agents">
-                <div class="wrap">
-                    <h2>Your AI agent, on your terms</h2>
-                    <p class="intro">
-                        There is no AI in Inbox Classic. But if you already use Claude, Cursor or another agent that speaks MCP, you can let it clear out
-                        newsletters, find that invoice or draft a reply, with you in charge of every step.
-                    </p>
-                    <div class="pair">
-                        <ul class="checks">
-                            <li>
-                                <b>You let each agent in</b>
-                                <span
-                                    >The first time an agent connects, you choose what it may do (read, organize, write drafts, send) and which accounts it
-                                    sees.</span
-                                >
-                            </li>
-                            <li>
-                                <b>Nothing goes out without your yes</b>
-                                <span
-                                    >Every message it wants to send is shown to you first, every address spelled out and new ones marked, and waits 30 seconds
-                                    in the Outbox.</span
-                                >
-                            </li>
-                            <li>
-                                <b>See it, undo it</b>
-                                <span>Changes show in the window as they happen. Tools &gt; AI Agents lists everything each agent did, with Undo.</span>
-                            </li>
-                        </ul>
-                        <img
-                            class="shot"
-                            data-shot="agents-4-send"
-                            src="img/windows/agents-4-send.png"
-                            width="602"
-                            height="471"
-                            alt="An AI agent asks to send a message: Inbox Classic shows the recipient, marked as a new address, the subject and the text, with Send, Edit First and Don't Send"
-                            loading="lazy"
-                        />
+            <section id="agents" class="max-w-page mx-auto px-6 pb-16 sm:pb-20">
+                <div class="card bg-base-100 shadow-md">
+                    <div class="card-body gap-0 p-6 sm:p-10">
+                        <span class="badge badge-soft badge-primary mb-4 gap-1"><span class="icon-[tabler--plug-connected] size-4"></span>MCP</span>
+                        <h2 class="text-3xl font-bold text-balance">Your AI agent, on your terms</h2>
+                        <p class="text-base-content/70 mt-3 max-w-3xl text-lg">
+                            There is no AI in Inbox Classic. But if you already use Claude, Cursor or another agent that speaks MCP, you can let it clear out
+                            newsletters, find that invoice or draft a reply, with you in charge of every step.
+                        </p>
+                        <div class="mt-10 grid items-start gap-10 lg:grid-cols-2">
+                            <ul class="space-y-6">
+                                <li class="flex gap-4">
+                                    <span class="icon-[tabler--user-check] text-primary mt-0.5 size-6 shrink-0"></span>
+                                    <div>
+                                        <h3 class="font-semibold">You let each agent in</h3>
+                                        <p class="text-base-content/70">
+                                            The first time an agent connects, you choose what it may do (read, organize, write drafts, send) and which accounts
+                                            it sees.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="flex gap-4">
+                                    <span class="icon-[tabler--send] text-primary mt-0.5 size-6 shrink-0"></span>
+                                    <div>
+                                        <h3 class="font-semibold">Nothing goes out without your yes</h3>
+                                        <p class="text-base-content/70">
+                                            Every message it wants to send is shown to you first, every address spelled out and new ones marked, and waits 30
+                                            seconds in the Outbox.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="flex gap-4">
+                                    <span class="icon-[tabler--arrow-back-up] text-primary mt-0.5 size-6 shrink-0"></span>
+                                    <div>
+                                        <h3 class="font-semibold">See it, undo it</h3>
+                                        <p class="text-base-content/70">
+                                            Changes show in the window as they happen. Tools &gt; AI Agents lists everything each agent did, with Undo.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="bg-primary/10 rounded-box flex gap-4 p-4">
+                                    <span class="icon-[tabler--plug-connected] text-primary mt-0.5 size-6 shrink-0"></span>
+                                    <p>
+                                        Already use an agent? <b>Tools &gt; AI Agents &gt; How to Connect an Agent</b> gives you the lines to add to its
+                                        settings.
+                                    </p>
+                                </li>
+                            </ul>
+                            <img
+                                class="app-shot mx-auto max-w-[602px]"
+                                data-shot="agents-4-send"
+                                src="img/windows/agents-4-send.png"
+                                width="602"
+                                height="471"
+                                alt="An AI agent asks to send a message: Inbox Classic shows the recipient, marked as a new address, the subject and the text, with Send, Edit First and Don't Send"
+                                loading="lazy"
+                            />
+                        </div>
                     </div>
-                    <p class="connect">
-                        Already use an agent? <b>Tools &gt; AI Agents &gt; How to Connect an Agent</b> gives you the lines to add to its settings.
-                    </p>
                 </div>
             </section>
 
-            <section id="tour" class="alt">
-                <div class="wrap">
-                    <div class="pair flip">
+            <section id="tour" class="bg-base-100 border-base-content/10 border-y">
+                <div class="max-w-page mx-auto space-y-20 px-6 py-16 sm:py-20">
+                    <div class="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
                         <img
-                            class="shot"
+                            class="app-shot mx-auto max-w-[480px] lg:order-first"
                             data-shot="account-1-form"
                             src="img/windows/account-1-form.png"
                             width="442"
@@ -740,25 +304,28 @@
                             alt="Add Mail Account: Sign in with Microsoft, more sign-in options, or a name and address"
                             loading="lazy"
                         />
-                        <div>
-                            <h3>Set up in a minute</h3>
-                            <p>
+                        <div class="order-first lg:order-none">
+                            <span class="icon-[tabler--user-plus] text-primary size-7"></span>
+                            <h3 class="mt-2 text-2xl font-bold">Set up in a minute</h3>
+                            <p class="text-base-content/70 mt-2 text-lg">
                                 Outlook.com and Microsoft 365 sign in on Microsoft's own page, so your password never touches the app. For Gmail or any other
                                 IMAP address, type your name and address; the servers are looked up for you. All your accounts share one folder tree.
                             </p>
                         </div>
                     </div>
-                    <div class="pair wide">
-                        <div>
-                            <h3>Find any message</h3>
-                            <p>
+
+                    <div>
+                        <div class="max-w-3xl">
+                            <span class="icon-[tabler--search] text-primary size-7"></span>
+                            <h3 class="mt-2 text-2xl font-bold">Find any message</h3>
+                            <p class="text-base-content/70 mt-2 text-lg">
                                 Type in the search box and the list shows what matches, from every folder, with the folder each message is in. Try
-                                <code>from:anna</code>, <code>is:unread</code> or <code>has:attachment</code>. The search runs on your computer, so it is
-                                instant and works offline.
+                                <code class="ui-code">from:anna</code>, <code class="ui-code">is:unread</code> or <code class="ui-code">has:attachment</code>.
+                                The search runs on your computer, so it is instant and works offline.
                             </p>
                         </div>
                         <img
-                            class="shot"
+                            class="app-shot mt-8"
                             data-shot="find-2-every-folder"
                             src="img/windows/find-2-every-folder.png"
                             width="1086"
@@ -767,16 +334,18 @@
                             loading="lazy"
                         />
                     </div>
-                    <div class="pair">
+
+                    <div class="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
                         <div>
-                            <h3>Write the way you always have</h3>
-                            <p>
+                            <span class="icon-[tabler--pencil] text-primary size-7"></span>
+                            <h3 class="mt-2 text-2xl font-bold">Write the way you always have</h3>
+                            <p class="text-base-content/70 mt-2 text-lg">
                                 Formatting when you want it, plain text when you don't, and a signature for each account. Addresses complete as you type. Drag
                                 files in to attach them. If you are offline, the message waits in the Outbox and goes by itself.
                             </p>
                         </div>
                         <img
-                            class="shot"
+                            class="app-shot mx-auto max-w-[760px]"
                             data-shot="write-5-new"
                             src="img/windows/write-5-new.png"
                             width="746"
@@ -785,16 +354,18 @@
                             loading="lazy"
                         />
                     </div>
-                    <div class="pair wide">
-                        <div>
-                            <h3>Bounces in plain words</h3>
-                            <p>
+
+                    <div>
+                        <div class="max-w-3xl">
+                            <span class="icon-[tabler--mail-x] text-primary size-7"></span>
+                            <h3 class="mt-2 text-2xl font-bold">Bounces in plain words</h3>
+                            <p class="text-base-content/70 mt-2 text-lg">
                                 When a message can't be delivered, the returned notice says what went wrong for each address, such as one that does not exist or
                                 a mailbox that is full, and what you can do about it. Bounces and delays are marked in the list, so you see them at a glance.
                             </p>
                         </div>
                         <img
-                            class="shot"
+                            class="app-shot mt-8"
                             data-shot="bounce-1-failed"
                             src="img/windows/bounce-1-failed.png"
                             width="1086"
@@ -806,49 +377,59 @@
                 </div>
             </section>
 
-            <section id="faq">
-                <div class="wrap">
-                    <h2>Questions</h2>
-                    <div class="faq">
-                        <div>
-                            <h3>Is it really free?</h3>
-                            <p>
+            <section id="faq" class="max-w-page mx-auto px-6 py-16 sm:py-20">
+                <h2 class="text-3xl font-bold">Questions</h2>
+                <div class="mt-10 grid gap-6 md:grid-cols-2">
+                    <div class="card bg-base-100 shadow-md">
+                        <div class="card-body">
+                            <h3 class="text-lg font-semibold">Is it really free?</h3>
+                            <p class="text-base-content/70">
                                 Yes. Inbox Classic is open source under the MIT license, made by Postal Systems, the makers of Nodemailer and EmailEngine. The
-                                <a href="https://github.com/postalsys/inbox-classic">source is on GitHub</a>.
+                                <a class="link link-animated" href="https://github.com/postalsys/inbox-classic">source is on GitHub</a>.
                             </p>
                         </div>
-                        <div>
-                            <h3>Does it work with Gmail?</h3>
-                            <p>
+                    </div>
+                    <div class="card bg-base-100 shadow-md">
+                        <div class="card-body">
+                            <h3 class="text-lg font-semibold">Does it work with Gmail?</h3>
+                            <p class="text-base-content/70">
                                 Yes, with a Google app password, or by signing in through a Google app of your own. One-click Sign in with Google comes once
                                 Google has finished reviewing Inbox Classic.
                             </p>
                         </div>
-                        <div>
-                            <h3>Does Inbox Classic send my mail to an AI?</h3>
-                            <p>
+                    </div>
+                    <div class="card bg-base-100 shadow-md">
+                        <div class="card-body">
+                            <h3 class="text-lg font-semibold">Does Inbox Classic send my mail to an AI?</h3>
+                            <p class="text-base-content/70">
                                 No. There is no AI in Inbox Classic. If you connect an AI agent you already use, it reads only the accounts you allow, and
                                 anything it wants to send needs your yes first. Agents are off until you let one in, and Tools &gt; AI Agents shows everything
                                 they did.
                             </p>
                         </div>
-                        <div>
-                            <h3>Does it work with Microsoft 365 and Exchange?</h3>
-                            <p>
+                    </div>
+                    <div class="card bg-base-100 shadow-md">
+                        <div class="card-body">
+                            <h3 class="text-lg font-semibold">Does it work with Microsoft 365 and Exchange?</h3>
+                            <p class="text-base-content/70">
                                 Outlook.com and Microsoft 365 accounts sign in with Microsoft, on Microsoft's own page. Other Exchange servers work when IMAP is
                                 turned on for them.
                             </p>
                         </div>
-                        <div>
-                            <h3>Where is my mail kept?</h3>
-                            <p>
+                    </div>
+                    <div class="card bg-base-100 shadow-md">
+                        <div class="card-body">
+                            <h3 class="text-lg font-semibold">Where is my mail kept?</h3>
+                            <p class="text-base-content/70">
                                 On your mail server, as always, with a copy on your computer for reading offline. Passwords are kept in your system's own
                                 password store: the Credential Manager on Windows, the keychain on the Mac, GNOME Keyring on Linux.
                             </p>
                         </div>
-                        <div>
-                            <h3>Which systems and languages?</h3>
-                            <p>
+                    </div>
+                    <div class="card bg-base-100 shadow-md">
+                        <div class="card-body">
+                            <h3 class="text-lg font-semibold">Which systems and languages?</h3>
+                            <p class="text-base-content/70">
                                 Windows 10 and 11, macOS 26 or newer on Apple silicon, and Ubuntu 26.04 or newer. Each looks the way its system does: classic
                                 Windows controls on Windows, AppKit on the Mac and GTK on Linux, with the same layout and features. It speaks English, German,
                                 Estonian, French and Spanish, following your system's language.
@@ -858,137 +439,65 @@
                 </div>
             </section>
 
-            <section class="alt cta">
-                <div class="wrap">
-                    <h2>Try Inbox Classic</h2>
-                    <p>Free, no sign-up, and your mail stays where it is.</p>
-                    <div class="downloads">
-                        <a class="download" data-os="windows" href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-Setup.exe"
-                            ><svg viewBox="0 0 24 24" aria-hidden="true">
-                                <path
-                                    d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19h14"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                /></svg
-                            >Download for Windows</a
-                        >
-                        <a class="download" data-os="mac" href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic.dmg"
-                            ><svg viewBox="0 0 24 24" aria-hidden="true">
-                                <path
-                                    d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19h14"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                /></svg
-                            >Download for Mac</a
-                        >
-                        <a class="download" data-os="linux" href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-amd64.deb"
-                            ><svg viewBox="0 0 24 24" aria-hidden="true">
-                                <path
-                                    d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19h14"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                /></svg
-                            >Download for Linux</a
-                        >
+            <section class="max-w-page mx-auto px-6 pb-16 sm:pb-20">
+                <div class="card bg-base-100 shadow-md">
+                    <div class="card-body items-center p-8 text-center sm:p-12">
+                        <h2 class="text-3xl font-bold">Try Inbox Classic</h2>
+                        <p class="text-base-content/70 mt-2 text-lg">Free, no sign-up, and your mail stays where it is.</p>
+                        <div class="mt-6 flex flex-wrap justify-center gap-3">
+                            <a
+                                class="os-download btn btn-primary btn-lg"
+                                data-os="windows"
+                                href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-Setup.exe"
+                                ><span class="icon-[tabler--download] size-5"></span>Download for Windows</a
+                            >
+                            <a
+                                class="os-download btn btn-primary btn-lg"
+                                data-os="mac"
+                                href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic.dmg"
+                                ><span class="icon-[tabler--download] size-5"></span>Download for Mac</a
+                            >
+                            <a
+                                class="os-download btn btn-primary btn-lg"
+                                data-os="linux"
+                                href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-amd64.deb"
+                                ><span class="icon-[tabler--download] size-5"></span>Download for Linux</a
+                            >
+                        </div>
+                        <div class="text-base-content/60 mt-4 space-y-1 text-sm">
+                            <p class="os-note" data-os="windows">Windows 10 and 11</p>
+                            <p class="os-note" data-os="mac">macOS 26 or newer, on Apple silicon</p>
+                            <p class="os-note" data-os="linux">
+                                Ubuntu 26.04 or newer, a .deb for x86-64 (<a
+                                    class="link link-animated"
+                                    href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-arm64.deb"
+                                    >ARM64</a
+                                >)
+                            </p>
+                            <p class="os-also">
+                                Also for
+                                <a class="link ms-1" data-os="windows" href="#download-windows">Windows</a>
+                                <a class="link ms-1" data-os="mac" href="#download-mac">Mac</a>
+                                <a class="link ms-1" data-os="linux" href="#download-linux">Linux</a>
+                            </p>
+                            <p class="pt-2">
+                                <a class="link link-animated" href="https://github.com/postalsys/inbox-classic/releases">What's new</a>
+                            </p>
+                        </div>
                     </div>
-                    <span class="note" data-os="windows">Windows 10 and 11</span>
-                    <span class="note" data-os="mac">macOS 26 or newer, on Apple silicon</span>
-                    <span class="note" data-os="linux"
-                        >Ubuntu 26.04 or newer, a .deb for x86-64 (<a
-                            href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-arm64.deb"
-                            >ARM64</a
-                        >)</span
-                    >
-                    <span class="also"
-                        >Also for <a data-os="windows" href="#download-windows">Windows</a><a data-os="mac" href="#download-mac">Mac</a
-                        ><a data-os="linux" href="#download-linux">Linux</a></span
-                    >
-                    <span class="whatsnew"><a href="https://github.com/postalsys/inbox-classic/releases">What's new</a></span>
                 </div>
             </section>
         </main>
 
-        <footer>
-            <div class="wrap">
+        <footer class="bg-base-100 border-base-content/20 border-t py-6">
+            <div class="text-base-content/60 flex flex-wrap items-center justify-center gap-x-4 gap-y-1 px-6 text-center text-sm">
                 <span>&copy; 2026 Postal Systems O&Uuml;</span>
-                <span class="legal"
-                    ><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="https://github.com/postalsys/inbox-classic">GitHub</a></span
-                >
+                <a class="link link-animated" href="/privacy">Privacy</a>
+                <a class="link link-animated" href="/terms">Terms</a>
+                <a class="link link-animated" href="https://github.com/postalsys/inbox-classic">GitHub</a>
             </div>
         </footer>
-        <script>
-            // the visitor's platform: its download is the button, the others are links under it, and the screenshots are its
-            // own. Without this all three downloads show, Windows first, with the Windows screenshots
-            (function () {
-                var platform = (navigator.userAgentData && navigator.userAgentData.platform) || navigator.platform || '';
-                var agent = navigator.userAgent;
-                var os =
-                    /mac/i.test(platform) && navigator.maxTouchPoints < 2
-                        ? 'mac'
-                        : /win/i.test(platform)
-                          ? 'windows'
-                          : /linux/i.test(platform) && !/android/i.test(agent)
-                            ? 'linux'
-                            : '';
-                var sizes = {
-                    windows: {
-                        'read-1-html': [1086, 753],
-                        'account-1-form': [442, 311],
-                        'find-2-every-folder': [1086, 399],
-                        'write-5-new': [746, 400],
-                        'agents-4-send': [602, 471],
-                        'bounce-1-failed': [1086, 646]
-                    },
-                    mac: {
-                        'read-1-html': [1100, 811],
-                        'account-1-form': [480, 403],
-                        'find-2-every-folder': [1100, 430],
-                        'write-5-new': [760, 400],
-                        'agents-4-send': [560, 445],
-                        'bounce-1-failed': [1100, 618]
-                    },
-                    linux: {
-                        'read-1-html': [1090, 750],
-                        'account-1-form': [551, 459],
-                        'find-2-every-folder': [1090, 398],
-                        'write-5-new': [750, 400],
-                        'agents-4-send': [528, 481],
-                        'bounce-1-failed': [1090, 618]
-                    }
-                };
-                function choose(chosen) {
-                    document.documentElement.setAttribute('data-os', chosen);
-                    document.querySelectorAll('img[data-shot]').forEach(function (img) {
-                        var name = img.getAttribute('data-shot');
-                        var size = sizes[chosen] && sizes[chosen][name];
-                        img.src = 'img/' + chosen + '/' + name + '.png';
-                        if (size) {
-                            img.width = size[0];
-                            img.height = size[1];
-                        }
-                    });
-                }
-                document.querySelectorAll('.also a').forEach(function (link) {
-                    link.addEventListener('click', function (event) {
-                        event.preventDefault();
-                        choose(link.getAttribute('data-os'));
-                    });
-                });
-                // a link to one platform's download (#download-mac) chooses it
-                var linked = /^#download-(windows|mac|linux)$/.exec(location.hash);
-                if (linked || os) {
-                    choose(linked ? linked[1] : os);
-                }
-            })();
-        </script>
+
+        <script src="/js/site.js"></script>
     </body>
 </html>
