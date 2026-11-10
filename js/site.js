@@ -77,7 +77,8 @@
             'find-2-every-folder': [1086, 399],
             'write-5-new': [746, 400],
             'agents-4-send': [602, 471],
-            'bounce-1-failed': [1086, 646]
+            'bounce-1-failed': [1086, 646],
+            'otp-1-card': [1086, 753]
         },
         mac: {
             'read-1-html': [1100, 811],
@@ -85,7 +86,8 @@
             'find-2-every-folder': [1100, 430],
             'write-5-new': [760, 400],
             'agents-4-send': [560, 445],
-            'bounce-1-failed': [1100, 618]
+            'bounce-1-failed': [1100, 618],
+            'otp-1-card': [1100, 811]
         },
         linux: {
             'read-1-html': [1090, 750],
@@ -93,7 +95,8 @@
             'find-2-every-folder': [1090, 398],
             'write-5-new': [750, 400],
             'agents-4-send': [528, 481],
-            'bounce-1-failed': [1090, 618]
+            'bounce-1-failed': [1090, 618],
+            'otp-1-card': [1090, 750]
         }
     };
 
