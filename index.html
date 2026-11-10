@@ -180,7 +180,7 @@
                                 class="underline plausible-event-name=Download plausible-event-os=linux-arm64 plausible-event-location=hero"
                                 href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-arm64.deb"
                                 >ARM64</a
-                            >)
+                            >), or <a class="underline" href="#linux-apt">install with apt</a> for updates
                         </p>
                         <p class="os-also">
                             Also for
@@ -457,6 +457,28 @@
                             </p>
                         </div>
                     </div>
+                    <div id="linux-apt" class="card bg-base-100 min-w-0 shadow-md md:col-span-2">
+                        <div class="card-body">
+                            <h3 class="text-lg font-semibold">How do I get updates on Linux?</h3>
+                            <p class="text-base-content/70">
+                                Install Inbox Classic from our apt repository, and new versions come with your system's own updates. In a terminal:
+                            </p>
+                            <div class="relative mt-2">
+                                <button type="button" class="copy-btn btn btn-soft btn-xs absolute end-2 top-2 hidden" data-copy="linux-apt-commands">
+                                    <span class="icon-[tabler--copy] size-4"></span>Copy
+                                </button>
+                                <pre
+                                    class="bg-base-200 rounded-box overflow-x-auto p-4 pe-24 text-sm"
+                                ><code id="linux-apt-commands">wget -qO- https://apt.inboxclassic.com/inboxclassic.gpg | sudo tee /usr/share/keyrings/inboxclassic.gpg &gt;/dev/null
+echo "deb [signed-by=/usr/share/keyrings/inboxclassic.gpg] https://apt.inboxclassic.com stable main" | sudo tee /etc/apt/sources.list.d/inboxclassic.list
+sudo apt update &amp;&amp; sudo apt install inbox-classic</code></pre>
+                            </div>
+                            <p class="text-base-content/70 mt-2">
+                                The repository is signed with the Postal Systems release key, the same key that signs each release's
+                                <code class="ui-code">hashes.txt</code>. If you already installed the .deb, this updates it in place.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -493,7 +515,7 @@
                                     class="link link-animated plausible-event-name=Download plausible-event-os=linux-arm64 plausible-event-location=bottom"
                                     href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-arm64.deb"
                                     >ARM64</a
-                                >)
+                                >), or <a class="link link-animated" href="#linux-apt">install with apt</a> for updates
                             </p>
                             <p class="os-also">
                                 Also for
