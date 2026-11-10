@@ -3,6 +3,36 @@
     <channel>
         <title>Inbox Classic</title>
         <item>
+            <title>0.10.0</title>
+            <pubDate>Tue, 10 Nov 2026 18:15:09 +0200</pubDate>
+            <sparkle:version>0.10.0</sparkle:version>
+            <sparkle:shortVersionString>0.10.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## [0.10.0](https://github.com/postalsys/inbox-classic/compare/v0.9.0...v0.10.0) (2026-11-10)
+
+
+### Features
+
+* one-time codes: a message with a sign-in or verification code shows it in a card above the message, in large type with the domain it is for, and Copy puts it on the clipboard. The code comes from the sender's OTP-Token header or is found in the text, and the card appears only when your mail provider says that domain signed the message, so a code in a forged message is not offered ([c71a72c](https://github.com/postalsys/inbox-classic/commit/c71a72ce218a414e08c5b607d3cc9724f71d0a17))
+* the message list has no Watch or Size column any more, and the subject gets the room. Watch Conversation and Ignore Conversation are in a message's right-click menu, checked while the conversation is watched or ignored; `larger:` in the search still finds big messages ([4082bff](https://github.com/postalsys/inbox-classic/commit/4082bff1d062a81e7ce1e0d8e0c21af3419d2b7f))
+* a calendar invitation is shown in a card above the message, in the same style as the cards of bounces and one-time codes, with Open in Calendar on it; the dates read as everywhere else in the app ([60820d3](https://github.com/postalsys/inbox-classic/commit/60820d31b99d87b70d8503a742ea224b5084e90c))
+* **mac, linux:** with several accounts, each account is a heading over its folders, as in Mail: a click opens or closes it, and the folder shown stays shown. All Inboxes stays at the top ([f7105da](https://github.com/postalsys/inbox-classic/commit/f7105daa826903d18cec615287bdfe6c070abc5b))
+
+
+### Bug Fixes
+
+* security: a sender's address with spaces or a comment around a dot of its domain (`ceo@victim.example .evil.example`) is read with its whole domain, so the From line can not name another domain than the one that was checked; an address holding a control character is not shown as an address. Header text that looks like an encoded word is sent encoded ([30dd7db](https://github.com/postalsys/inbox-classic/commit/30dd7db8206371c3b27ee5a8bc32fb7892538b0f))
+* Tab goes from field to field in every form, and on to the message and its links in the reading pane ([43a63d9](https://github.com/postalsys/inbox-classic/commit/43a63d96ba792b1e8e55543a82e215dff2e2718b), [14d9e41](https://github.com/postalsys/inbox-classic/commit/14d9e419788b9f046aeeafdd45407846057a429d))
+* **windows:** Enter in a dialog presses its default button: in an AI agent's access prompt that is Don't Allow ([43a63d9](https://github.com/postalsys/inbox-classic/commit/43a63d96ba792b1e8e55543a82e215dff2e2718b))
+* the "..." of a folded quote has its dots in the middle; **mac:** the rows of the Accounts, Sign-in Apps, AI agents and Outbox windows have their text in the middle, and the sidebar's selection no longer runs under its edge ([b3baf4a](https://github.com/postalsys/inbox-classic/commit/b3baf4ab00f49d856a786c1521c2c701ce4db8c6))
+
+
+The Mac app installs this update itself (Inbox Classic > Check for Updates).
+]]></description>
+            <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.10.0/InboxClassic.dmg" length="10376042" type="application/octet-stream" sparkle:edSignature="SBnr1dKFIFgIvoa6fS+LZ0kEXIbFLfXzSKYYQWzjEl6oAvuv9IXZ4GObMAfph4mpzBIx2Lqy31jM0b0e4abLBA=="/>
+        </item>
+        <item>
             <title>0.9.0</title>
             <pubDate>Tue, 10 Nov 2026 09:49:37 +0200</pubDate>
             <sparkle:version>0.9.0</sparkle:version>
@@ -60,27 +90,6 @@ The Mac app installs this update itself (Inbox Classic > Check for Updates).
 The Mac app installs this update itself (Inbox Classic > Check for Updates).
 ]]></description>
             <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.8.0/InboxClassic.dmg" length="8295279" type="application/octet-stream" sparkle:edSignature="xwmmgfI7IcBlCZyQEAMCoOLT5ixg9LXDE9nW4ua6EM1H3NuC6261t0xxi2uFshIXzAc9px3oqDFaebbEZgFDAw=="/>
-        </item>
-        <item>
-            <title>0.7.0</title>
-            <pubDate>Thu, 05 Nov 2026 15:52:01 +0200</pubDate>
-            <sparkle:version>0.7.0</sparkle:version>
-            <sparkle:shortVersionString>0.7.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## [0.7.0](https://github.com/postalsys/inbox-classic/compare/v0.6.0...v0.7.0) (2026-11-05)
-
-
-### Features
-
-* your own AI agent (Claude, Cursor or any other MCP client) can now search, read, sort and draft your mail. Inbox Classic asks you the first time a program connects, and you choose what it may do and which accounts it sees. Every message an agent wants to send is shown to you first, with every address spelled out, and waits 30 seconds in the Outbox once you say yes. Tools > AI Agents lists the programs and everything they did, with Undo. Agents get mail as text, without what a message hides from you. Tools > AI Agents > How to Connect an Agent shows the lines to add to your agent's settings ([#9](https://github.com/postalsys/inbox-classic/issues/9)) ([16abc1f](https://github.com/postalsys/inbox-classic/commit/16abc1f3318eb9e2ee06da5288c8162d9e193db7))
-* right-click a message for what can be done with it: reply, forward, mark read or unread, flag, junk, move, delete, save, print, its source or its properties ([#9](https://github.com/postalsys/inbox-classic/issues/9)) ([16abc1f](https://github.com/postalsys/inbox-classic/commit/16abc1f3318eb9e2ee06da5288c8162d9e193db7))
-* View > Message Source shows the whole message as the server keeps it (Ctrl+U on Windows and Linux) ([#9](https://github.com/postalsys/inbox-classic/issues/9)) ([16abc1f](https://github.com/postalsys/inbox-classic/commit/16abc1f3318eb9e2ee06da5288c8162d9e193db7))
-* a collapsed account or folder shows, in bold, the unread messages of the folders it hides ([#9](https://github.com/postalsys/inbox-classic/issues/9)) ([16abc1f](https://github.com/postalsys/inbox-classic/commit/16abc1f3318eb9e2ee06da5288c8162d9e193db7))
-
-The Mac app installs this update itself (Inbox Classic > Check for Updates).
-]]></description>
-            <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.7.0/InboxClassic.dmg" length="7717929" type="application/octet-stream" sparkle:edSignature="HyJLVVmRMC6qmGFiJRZeZNnSApPxDck9aG6hx4yDLGNIWkfFW8XsKkbsr/plL2d+XY53zU1fOAz6pwE43JZEBQ=="/>
         </item>
     </channel>
 </rss>
