@@ -4,14 +4,20 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Privacy Policy - Inbox Classic</title>
-        <meta name="description" content="How Inbox Classic and inboxclassic.com handle data: no accounts, no analytics, no cookies, no telemetry." />
+        <meta
+            name="description"
+            content="How Inbox Classic and inboxclassic.com handle data: no accounts, no telemetry, no cookies, and cookieless visit counts on the website."
+        />
         <link rel="canonical" href="https://inboxclassic.com/privacy" />
         <meta name="theme-color" content="#4c5cc5" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Inbox Classic" />
         <meta property="og:url" content="https://inboxclassic.com/privacy" />
         <meta property="og:title" content="Privacy Policy - Inbox Classic" />
-        <meta property="og:description" content="How Inbox Classic and inboxclassic.com handle data: no accounts, no analytics, no cookies, no telemetry." />
+        <meta
+            property="og:description"
+            content="How Inbox Classic and inboxclassic.com handle data: no accounts, no telemetry, no cookies, and cookieless visit counts on the website."
+        />
         <meta property="og:image" content="https://inboxclassic.com/img/og.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -30,6 +36,23 @@
         </script>
         <link href="/fonts/pt-sans-font.css" rel="stylesheet" />
         <link href="/css/app.css" rel="stylesheet" />
+        <!-- Plausible (cookieless, self-hosted), served first-party from a.inboxclassic.com so ad blockers do
+             not drop it: /pv.js and /e are handle blocks in the Caddyfile on srv-04 (see CLAUDE.md). The endpoint
+             must be set, or the script posts to plausible.emailengine.dev, which blockers catch. -->
+        <script async src="https://a.inboxclassic.com/pv.js"></script>
+        <script>
+            window.plausible =
+                window.plausible ||
+                function () {
+                    (plausible.q = plausible.q || []).push(arguments);
+                };
+            plausible.init =
+                plausible.init ||
+                function (i) {
+                    plausible.o = i || {};
+                };
+            plausible.init({ endpoint: 'https://a.inboxclassic.com/e' });
+        </script>
     </head>
     <body class="bg-base-200 text-base-content flex min-h-screen flex-col">
         <header class="bg-base-100 border-base-content/20 sticky top-0 z-30 border-b">
@@ -58,10 +81,11 @@
         <main id="content" class="grow">
             <div class="ui-prose mx-auto w-full max-w-3xl px-6 py-12 sm:py-16">
                 <h1 class="text-4xl font-bold">Privacy Policy</h1>
-                <p class="text-base-content/60 mt-2 mb-8">Effective 3 November 2026</p>
+                <p class="text-base-content/60 mt-2 mb-8">Effective 10 November 2026</p>
                 <p class="bg-primary/10 border-primary rounded-e-box border-s-4 px-5 py-4">
-                    Postal Systems collects no personal data through Inbox Classic or this website. There are no accounts, no analytics, no cookies and no
-                    telemetry. Your mail and your passwords stay on your computer and with your own mail provider.
+                    Postal Systems collects no personal data through Inbox Classic. There are no accounts, no telemetry and no crash reports. Your mail and your
+                    passwords stay on your computer and with your own mail provider. This website counts visits with Plausible, which uses no cookies and keeps
+                    no personal data.
                 </p>
 
                 <h2>Who we are</h2>
@@ -72,28 +96,39 @@
 
                 <h2>This website</h2>
                 <p>
-                    inboxclassic.com is a static website. It sets no cookies and loads no analytics, advertising, fonts or scripts from anyone. It is hosted on
-                    GitHub Pages, and the installer is downloaded from GitHub. As the host, GitHub, Inc. processes technical data such as your IP address to
-                    deliver and protect the site, as described in the
-                    <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>. Postal Systems
-                    receives no data about your visit.
+                    inboxclassic.com is a static website hosted on GitHub Pages. It sets no cookies and loads no advertising, and its fonts, icons and images
+                    are served from the site itself. As the host, GitHub, Inc. processes technical data such as your IP address to deliver and protect the site,
+                    as described in the
+                    <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>. The app is
+                    downloaded from GitHub.
+                </p>
+                <p>
+                    To see how many people visit and which downloads they choose, the site uses <a href="https://plausible.io/data-policy">Plausible</a>, an
+                    analytics tool without cookies that we run ourselves on our own server in the European Union (at a.inboxclassic.com). It records the page
+                    you visit, the page or site that sent you there, your browser, operating system and device type, your country, and the links and download
+                    buttons you click. Your IP address is used only to work out your country and, together with your browser, a daily changing code that counts
+                    unique visitors; neither is stored, and the code cannot be traced back to you. No data is shared with anyone else, and nothing is used for
+                    advertising or to follow you across websites.
                 </p>
 
                 <h2>The Inbox Classic app</h2>
-                <p>
-                    Inbox Classic runs on your computer and never contacts Postal Systems. It has no telemetry, crash reporting or update checks that send data
-                    to us.
-                </p>
+                <p>Inbox Classic runs on your computer. It has no telemetry or crash reporting, and it sends Postal Systems nothing about you or your mail.</p>
                 <ul>
                     <li>
-                        Your account settings and a copy of your mail, for reading offline, are kept in a file on your computer
-                        (<code>%LOCALAPPDATA%\InboxClassic</code>).
+                        Your accounts, a copy of your mail for reading offline, its search index, the addresses you have written to and the AI agent log are
+                        kept in a folder on your computer: <code>%LOCALAPPDATA%\InboxClassic</code> on Windows,
+                        <code>~/Library/Application Support/Inbox Classic</code> on the Mac and <code>~/.local/share/inbox-classic</code> on Linux. Your
+                        settings are kept the way your system keeps them.
                     </li>
-                    <li>Your passwords and sign-in tokens are kept in the Windows Credential Manager, encrypted for your Windows account.</li>
                     <li>
-                        Removing an account in Inbox Classic removes its mail copy and its password from your computer. Uninstalling Inbox Classic offers to
-                        remove the accounts and mail it kept; passwords of accounts still set up then stay in the Credential Manager (under Inbox Classic),
-                        where you can remove them. Your mail on your mail server is never removed.
+                        Your passwords and sign-in tokens are kept in your system's own password store: the Windows Credential Manager, the macOS keychain or,
+                        on Linux, the Secret Service (such as GNOME Keyring). If there is none, they are kept in memory only, until Inbox Classic quits.
+                    </li>
+                    <li>
+                        Removing an account in Inbox Classic removes its mail copy and its password from your computer; the addresses remembered for address
+                        completion and the AI agent log stay until you clear them. Uninstalling Inbox Classic on Windows offers to remove the accounts and mail
+                        it kept; on the Mac and Linux the data folder stays until you delete it. Passwords of accounts still set up stay in your password store
+                        (under InboxClassic), where you can remove them. Your mail on your mail server is never removed.
                     </li>
                 </ul>
 
@@ -108,10 +143,10 @@
                         receive your address and password, as other mail programs send them.
                     </li>
                     <li>
-                        <b>When you sign in with Microsoft or Google</b> (or with a sign-in app you added), you sign in on the provider's own page. The provider
-                        gives Inbox Classic your name, your e-mail address and tokens that let it read and send your mail over IMAP and SMTP. Inbox Classic uses
-                        them only to work with your own mailbox, keeps them only on your computer and shares them with nobody. You can withdraw this access at
-                        any time in your Microsoft or Google account settings.
+                        <b>When you sign in with Microsoft or Google</b> (or with a sign-in app you added, whose provider Inbox Classic asks for its sign-in
+                        settings), you sign in on the provider's own page. The provider gives Inbox Classic your name, your e-mail address and tokens that let
+                        it read and send your mail over IMAP and SMTP. Inbox Classic uses them only to work with your own mailbox, keeps them only on your
+                        computer and shares them with nobody. You can withdraw this access at any time in your Microsoft or Google account settings.
                     </li>
                     <li>
                         <b>Pictures from the internet</b> in a message are loaded from the sender's servers only when you choose to see them. Links in messages
@@ -126,6 +161,11 @@
                         <b>Brand logos</b>: when your mail provider has checked that a message really comes from a brand and approved its logo (BIMI), Inbox
                         Classic may fetch that logo from the brand's address once per run, without cookies, when you open the message.
                     </li>
+                    <li>
+                        <b>Updates on the Mac</b>: the Mac app checks once a day for a new version by reading the update list on this website (inboxclassic.com,
+                        hosted by GitHub) and downloads updates from GitHub. The check sends no information about you or your computer beyond what any web
+                        request does, such as your IP address. The Windows and Linux apps do not check for updates.
+                    </li>
                 </ul>
                 <p>
                     Inbox Classic's use and transfer of information received from Google APIs adheres to the
@@ -133,8 +173,19 @@
                     Use requirements.
                 </p>
                 <p>
-                    Messages are shown with the Microsoft Edge WebView2 Runtime, a part of Windows. Any diagnostic data it sends to Microsoft follows your
-                    Windows settings and the <a href="https://privacy.microsoft.com/privacystatement">Microsoft Privacy Statement</a>.
+                    Messages are shown with your system's own web component: the Microsoft Edge WebView2 Runtime on Windows, WebKit on the Mac and WebKitGTK on
+                    Linux. Any diagnostic data the WebView2 Runtime sends to Microsoft follows your Windows settings and the
+                    <a href="https://privacy.microsoft.com/privacystatement">Microsoft Privacy Statement</a>.
+                </p>
+
+                <h2>AI agents</h2>
+                <p>
+                    There is no AI in Inbox Classic. If you use an AI agent of your own, such as Claude or Cursor, it can connect to Inbox Classic on your
+                    computer. The first time a program connects, you choose what it may do and which accounts it sees. Inbox Classic gives it the mail of those
+                    accounts on your computer only; what the agent does with it, including whether it sends it to an AI service, is up to the agent and its
+                    maker's terms. An agent allowed to organize mail can also unsubscribe from mailing lists for you. Every message an agent wants to send is
+                    shown to you first and needs your yes. Tools &gt; AI Agents lists what each agent did, and there you can remove a program or turn agents
+                    off.
                 </p>
 
                 <h2>Your rights</h2>

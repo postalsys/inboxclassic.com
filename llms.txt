@@ -29,7 +29,7 @@ On Windows it looks like a classic Windows mail program; on the Mac it is a nati
 
 - [Homepage](https://inboxclassic.com/)
 - [Source code on GitHub](https://github.com/postalsys/inbox-classic): MIT license, issues and discussions
-- [Privacy policy](https://inboxclassic.com/privacy): no accounts, no analytics, no cookies, no telemetry
+- [Privacy policy](https://inboxclassic.com/privacy): no accounts, no telemetry and no cookies; the website counts visits with self-hosted Plausible
 - [Terms of service](https://inboxclassic.com/terms)
 
 ## Optional

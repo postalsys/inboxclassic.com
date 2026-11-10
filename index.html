@@ -96,6 +96,23 @@
         </script>
         <link href="/fonts/pt-sans-font.css" rel="stylesheet" />
         <link href="/css/app.css" rel="stylesheet" />
+        <!-- Plausible (cookieless, self-hosted), served first-party from a.inboxclassic.com so ad blockers do
+             not drop it: /pv.js and /e are handle blocks in the Caddyfile on srv-04 (see CLAUDE.md). The endpoint
+             must be set, or the script posts to plausible.emailengine.dev, which blockers catch. -->
+        <script async src="https://a.inboxclassic.com/pv.js"></script>
+        <script>
+            window.plausible =
+                window.plausible ||
+                function () {
+                    (plausible.q = plausible.q || []).push(arguments);
+                };
+            plausible.init =
+                plausible.init ||
+                function (i) {
+                    plausible.o = i || {};
+                };
+            plausible.init({ endpoint: 'https://a.inboxclassic.com/e' });
+        </script>
     </head>
     <body class="bg-base-200 text-base-content flex min-h-screen flex-col">
         <header class="bg-base-100 border-base-content/20 sticky top-0 z-30 border-b">
@@ -133,19 +150,19 @@
                     </p>
                     <div class="mt-8 flex flex-wrap justify-center gap-3">
                         <a
-                            class="os-download btn btn-lg btn-on-brand"
+                            class="os-download btn btn-lg btn-on-brand plausible-event-name=Download plausible-event-os=windows plausible-event-location=hero"
                             data-os="windows"
                             href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-Setup.exe"
                             ><span class="icon-[tabler--download] size-5"></span>Download for Windows</a
                         >
                         <a
-                            class="os-download btn btn-lg btn-on-brand"
+                            class="os-download btn btn-lg btn-on-brand plausible-event-name=Download plausible-event-os=mac plausible-event-location=hero"
                             data-os="mac"
                             href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic.dmg"
                             ><span class="icon-[tabler--download] size-5"></span>Download for Mac</a
                         >
                         <a
-                            class="os-download btn btn-lg btn-on-brand"
+                            class="os-download btn btn-lg btn-on-brand plausible-event-name=Download plausible-event-os=linux plausible-event-location=hero"
                             data-os="linux"
                             href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-amd64.deb"
                             ><span class="icon-[tabler--download] size-5"></span>Download for Linux</a
@@ -160,7 +177,7 @@
                         <p class="os-note" data-os="mac">macOS 26 or newer, on Apple silicon</p>
                         <p class="os-note" data-os="linux">
                             Ubuntu 26.04 or newer, a .deb for x86-64 (<a
-                                class="underline"
+                                class="underline plausible-event-name=Download plausible-event-os=linux-arm64 plausible-event-location=hero"
                                 href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-arm64.deb"
                                 >ARM64</a
                             >)
@@ -450,19 +467,19 @@
                         <p class="text-base-content/70 mt-2 text-lg">Free, no sign-up, and your mail stays where it is.</p>
                         <div class="mt-6 flex flex-wrap justify-center gap-3">
                             <a
-                                class="os-download btn btn-primary btn-lg"
+                                class="os-download btn btn-primary btn-lg plausible-event-name=Download plausible-event-os=windows plausible-event-location=bottom"
                                 data-os="windows"
                                 href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-Setup.exe"
                                 ><span class="icon-[tabler--download] size-5"></span>Download for Windows</a
                             >
                             <a
-                                class="os-download btn btn-primary btn-lg"
+                                class="os-download btn btn-primary btn-lg plausible-event-name=Download plausible-event-os=mac plausible-event-location=bottom"
                                 data-os="mac"
                                 href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic.dmg"
                                 ><span class="icon-[tabler--download] size-5"></span>Download for Mac</a
                             >
                             <a
-                                class="os-download btn btn-primary btn-lg"
+                                class="os-download btn btn-primary btn-lg plausible-event-name=Download plausible-event-os=linux plausible-event-location=bottom"
                                 data-os="linux"
                                 href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-amd64.deb"
                                 ><span class="icon-[tabler--download] size-5"></span>Download for Linux</a
@@ -473,7 +490,7 @@
                             <p class="os-note" data-os="mac">macOS 26 or newer, on Apple silicon</p>
                             <p class="os-note" data-os="linux">
                                 Ubuntu 26.04 or newer, a .deb for x86-64 (<a
-                                    class="link link-animated"
+                                    class="link link-animated plausible-event-name=Download plausible-event-os=linux-arm64 plausible-event-location=bottom"
                                     href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-arm64.deb"
                                     >ARM64</a
                                 >)
