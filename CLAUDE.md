@@ -24,7 +24,7 @@ The site uses the shared Postal Systems design, the same as postalsys.com (`../p
 - FlyonUI emits its components in `@layer utilities`, so overrides that must win (the per-platform show/hide rules, `.btn-on-brand`) are un-layered in the CSS source on purpose.
 - The navbar and footer are copied into each of `index.html`, `privacy.html`, `terms.html` and `404.html`; change all four together.
 - EmailEngine is linked the way the other Postal Systems sites link it (the shared `oss-docs` scheme): every link is `https://emailengine.app/?utm_source=inboxclassic.com&utm_medium=<homepage|footer|inline>&utm_campaign=oss-docs&utm_content=<placement slug>` (the footer link has no `utm_content`). The logo `img/emailengine.png` (from postalsys-web) sits on a white pad because its dark lettering disappears on the dark theme. The footer's "From the makers of" logo line is on every page; the homepage also has an EmailEngine card and a link in the "Is it really free?" answer.
-- No third-party scripts, fonts or analytics (not even the postalsys.com `frame.js` beacon the other sites load): the privacy policy promises the site loads nothing from anyone.
+- Nothing is loaded from third parties (fonts, icons and images are all self-hosted). The one outside request is Plausible, our own; the postalsys.com `frame.js` beacon the other sites load is deliberately left out. The privacy policy describes exactly this, so update it if that ever changes.
 
 ## How the homepage works
 
@@ -43,6 +43,17 @@ When page content or features change, check all of these:
 - JSON-LD in `index.html` head: `operatingSystem`, `inLanguage` (app UI languages), `screenshot` URLs.
 - Open Graph / Twitter tags and canonical URL on each page; share image is `img/og.jpg` (1200x630).
 - System requirements (Windows 10/11, macOS 26+ on Apple silicon, Ubuntu 26.04+) appear in the download notes in two places on the homepage (hero and the closing download card), in the JSON-LD and in `llms.txt`.
+
+## Analytics: Plausible through a.inboxclassic.com (the vhost is load-bearing)
+
+Every page's `<head>` loads `https://a.inboxclassic.com/pv.js` and calls `plausible.init({ endpoint: 'https://a.inboxclassic.com/e' })`. Neither path is a file anywhere: `a.inboxclassic.com` is a DNS-only A record (Cloudflare) to srv-04 (`ssh andris@srv-04.emailengine.dev`), and the `a.inboxclassic.com` vhost in `/etc/caddy/Caddyfile` there rewrites `/pv.js` to the site's own script `/js/pa-3rttl1epShN1LnJaVLLFD.js` and `/e` to `/api/event`, proxying both to the self-hosted Plausible CE on `localhost:11800` (the instance behind plausible.emailengine.dev). It is the same pattern as `a.emailengine.app` for emailengine.app; GitHub Pages cannot proxy, hence the subdomain.
+
+- It is proxied because EasyPrivacy (on by default in uBlock Origin and AdGuard) blocks `plausible.*` hostnames. Do not rename the host or paths to anything resembling `plausible`, `stats`, `analytics`, `script.js` or `/api/event`.
+- The `endpoint` in `plausible.init()` is required: the `pa-` script has `https://plausible.emailengine.dev/api/event` built in, which blockers catch.
+- The vhost SETS `X-Plausible-IP` and `X-Forwarded-For` from the socket, so visitors cannot choose their own country.
+- The script's options (outbound links, file downloads, form submissions) are set per site in the Plausible dashboard, not here.
+- Custom events: every download link on the homepage carries `plausible-event-name=Download` with `plausible-event-os` (`windows`, `mac`, `linux`, `linux-arm64`) and `plausible-event-location` (`hero`, `bottom`) classes; a new download link needs the same classes. `404.html` sends `404` with the missing `path`. Both need a matching goal in Plausible (site id 10; goals are rows in the `goals` table of the `plausible_db` database in the `plausible-plausible_db-1` container, or Site Settings > Goals in the dashboard). Renaming an event without its goal silently stops counting it.
+- Changing the tag or the vhost alone silently stops analytics. To check without recording a visit, load the page in Playwright with `navigator.webdriver` hidden (Plausible ignores automated browsers otherwise) and intercept the POST to `/e`.
 
 ## Files written by other tooling
 

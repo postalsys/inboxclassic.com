@@ -30,6 +30,23 @@
         </script>
         <link href="/fonts/pt-sans-font.css" rel="stylesheet" />
         <link href="/css/app.css" rel="stylesheet" />
+        <!-- Plausible (cookieless, self-hosted), served first-party from a.inboxclassic.com so ad blockers do
+             not drop it: /pv.js and /e are handle blocks in the Caddyfile on srv-04 (see CLAUDE.md). The endpoint
+             must be set, or the script posts to plausible.emailengine.dev, which blockers catch. -->
+        <script async src="https://a.inboxclassic.com/pv.js"></script>
+        <script>
+            window.plausible =
+                window.plausible ||
+                function () {
+                    (plausible.q = plausible.q || []).push(arguments);
+                };
+            plausible.init =
+                plausible.init ||
+                function (i) {
+                    plausible.o = i || {};
+                };
+            plausible.init({ endpoint: 'https://a.inboxclassic.com/e' });
+        </script>
     </head>
     <body class="bg-base-200 text-base-content flex min-h-screen flex-col">
         <header class="bg-base-100 border-base-content/20 sticky top-0 z-30 border-b">
@@ -58,7 +75,7 @@
         <main id="content" class="grow">
             <div class="ui-prose mx-auto w-full max-w-3xl px-6 py-12 sm:py-16">
                 <h1 class="text-4xl font-bold">Terms of Service</h1>
-                <p class="text-base-content/60 mt-2 mb-8">Effective 3 November 2026</p>
+                <p class="text-base-content/60 mt-2 mb-8">Effective 10 November 2026</p>
                 <p class="bg-primary/10 border-primary rounded-e-box border-s-4 px-5 py-4">
                     Inbox Classic is free, open source software. You may use, copy, change and share it under the MIT license. It comes without warranty.
                 </p>
@@ -80,7 +97,8 @@
                 <p>
                     Use Inbox Classic only with mail accounts you are allowed to use, and follow the terms of your mail provider. When you sign in with
                     Microsoft, Google or another provider, their terms apply to your account there. Inbox Classic is not made, endorsed or supported by
-                    Microsoft or Google; their names and logos belong to them.
+                    Microsoft or Google; their names and logos belong to them. If you connect an AI agent to Inbox Classic, you decide what it may do, and the
+                    agent's own terms apply to it.
                 </p>
 
                 <h2>No warranty</h2>
@@ -93,8 +111,10 @@
 
                 <h2>Downloads</h2>
                 <p>
-                    Download Inbox Classic only from this website or its <a href="https://github.com/postalsys/inbox-classic/releases">GitHub releases</a>. Each
-                    release is signed by Postal Systems O&Uuml;.
+                    Download Inbox Classic only from this website or its <a href="https://github.com/postalsys/inbox-classic/releases">GitHub releases</a>. The
+                    Windows installer and the Mac app are signed by Postal Systems O&Uuml;, and the Mac app is notarized by Apple. Each release lists the
+                    checksums of its files in <code>hashes.txt</code>, signed with the Postal Systems release key, so you can check any download, including the
+                    Linux packages. The Mac app installs updates only when they are signed by us.
                 </p>
 
                 <h2>Privacy</h2>
