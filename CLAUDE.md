@@ -23,6 +23,7 @@ The site uses the shared Postal Systems design, the same as postalsys.com (`../p
 - FlyonUI's JS runtime is not loaded; nothing on the site needs dropdowns or overlays. If one is added, vendor `node_modules/flyonui/flyonui.js` the way the other sites do.
 - FlyonUI emits its components in `@layer utilities`, so overrides that must win (the per-platform show/hide rules, `.btn-on-brand`) are un-layered in the CSS source on purpose.
 - The navbar and footer are copied into each of `index.html`, `privacy.html`, `terms.html` and `404.html`; change all four together.
+- EmailEngine is linked the way the other Postal Systems sites link it (the shared `oss-docs` scheme): every link is `https://emailengine.app/?utm_source=inboxclassic.com&utm_medium=<homepage|footer|inline>&utm_campaign=oss-docs&utm_content=<placement slug>` (the footer link has no `utm_content`). The logo `img/emailengine.png` (from postalsys-web) sits on a white pad because its dark lettering disappears on the dark theme. The footer's "From the makers of" logo line is on every page; the homepage also has an EmailEngine card and a link in the "Is it really free?" answer.
 - No third-party scripts, fonts or analytics (not even the postalsys.com `frame.js` beacon the other sites load): the privacy policy promises the site loads nothing from anyone.
 
 ## How the homepage works
