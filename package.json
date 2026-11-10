@@ -1,0 +1,20 @@
+{
+    "name": "inboxclassic.com",
+    "private": true,
+    "description": "The Inbox Classic homepage, served by GitHub Pages",
+    "scripts": {
+        "build:css": "tailwindcss -i css/src/app.tailwind.css -o css/app.css --minify",
+        "format": "prettier --write \"*.html\" \"css/src/*.css\" \"js/*.js\" CLAUDE.md README.md",
+        "serve": "python3 -m http.server 8080"
+    },
+    "author": "Postal Systems OÜ",
+    "license": "MIT",
+    "devDependencies": {
+        "@iconify-json/tabler": "1.2.43",
+        "@iconify/tailwind4": "1.2.3",
+        "@tailwindcss/cli": "4.3.4",
+        "flyonui": "2.4.1",
+        "prettier": "3.9.10",
+        "tailwindcss": "4.3.4"
+    }
+}
