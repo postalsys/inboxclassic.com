@@ -150,24 +150,24 @@
                     </p>
                     <div class="mt-8 flex flex-wrap justify-center gap-3">
                         <a
-                            class="os-download btn btn-lg btn-on-brand plausible-event-name=Download plausible-event-os=windows plausible-event-location=hero"
+                            class="os-download btn btn-lg btn-on-brand max-sm:w-64 plausible-event-name=Download plausible-event-os=windows plausible-event-location=hero"
                             data-os="windows"
                             href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-Setup.exe"
                             ><span class="icon-[tabler--download] size-5"></span>Download for Windows</a
                         >
                         <a
-                            class="os-download btn btn-lg btn-on-brand plausible-event-name=Download plausible-event-os=mac plausible-event-location=hero"
+                            class="os-download btn btn-lg btn-on-brand max-sm:w-64 plausible-event-name=Download plausible-event-os=mac plausible-event-location=hero"
                             data-os="mac"
                             href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic.dmg"
                             ><span class="icon-[tabler--download] size-5"></span>Download for Mac</a
                         >
                         <a
-                            class="os-download btn btn-lg btn-on-brand plausible-event-name=Download plausible-event-os=linux plausible-event-location=hero"
+                            class="os-download btn btn-lg btn-on-brand max-sm:w-64 plausible-event-name=Download plausible-event-os=linux plausible-event-location=hero"
                             data-os="linux"
                             href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-amd64.deb"
                             ><span class="icon-[tabler--download] size-5"></span>Download for Linux</a
                         >
-                        <a class="btn btn-lg btn-on-brand-outline" href="https://github.com/postalsys/inbox-classic"
+                        <a class="btn btn-lg btn-on-brand-outline max-sm:w-64" href="https://github.com/postalsys/inbox-classic"
                             ><span class="icon-[tabler--brand-github] size-5"></span>View on GitHub</a
                         >
                     </div>
@@ -176,11 +176,15 @@
                         <p class="os-note" data-os="windows">Windows 10 and 11</p>
                         <p class="os-note" data-os="mac">macOS 26 or newer, on Apple silicon</p>
                         <p class="os-note" data-os="linux">
-                            Ubuntu 26.04 or newer, a .deb for x86-64 (<a
+                            Ubuntu 26.04 or newer, x86-64<span class="mx-1 opacity-60"> &middot;</span>
+                            <a
                                 class="underline plausible-event-name=Download plausible-event-os=linux-arm64 plausible-event-location=hero"
                                 href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-arm64.deb"
                                 >ARM64</a
-                            >), or <a class="underline" href="#linux-apt">install with apt</a> for updates
+                            >
+                            <span class="whitespace-nowrap"
+                                ><span class="mx-1 opacity-60">&middot;</span> <a class="underline" href="#linux-apt">Install with apt</a></span
+                            >
                         </p>
                         <p class="os-also">
                             Also for
@@ -212,7 +216,7 @@
                     <div class="card bg-base-100 shadow-md">
                         <div class="card-body">
                             <span class="bg-primary/10 text-primary mb-2 flex size-11 items-center justify-center rounded-lg"
-                                ><span class="icon-[tabler--bell-ringing] size-6"></span
+                                ><span class="icon-[tabler--bolt] size-6"></span
                             ></span>
                             <h3 class="text-lg font-semibold">Fast, even offline</h3>
                             <p class="text-base-content/70">
@@ -460,22 +464,24 @@
                     <div id="linux-apt" class="card bg-base-100 min-w-0 shadow-md md:col-span-2">
                         <div class="card-body">
                             <h3 class="text-lg font-semibold">How do I get updates on Linux?</h3>
-                            <p class="text-base-content/70">
-                                Install Inbox Classic from our apt repository, and new versions come with your system's own updates. In a terminal:
-                            </p>
-                            <div class="relative mt-2">
-                                <button type="button" class="copy-btn btn btn-soft btn-xs absolute end-2 top-2 hidden" data-copy="linux-apt-commands">
-                                    <span class="icon-[tabler--copy] size-4"></span>Copy
-                                </button>
-                                <pre
-                                    class="bg-base-200 rounded-box overflow-x-auto p-4 pe-24 text-sm"
-                                ><code id="linux-apt-commands">wget -qO- https://apt.inboxclassic.com/inboxclassic.gpg | sudo tee /usr/share/keyrings/inboxclassic.gpg &gt;/dev/null
-echo "deb [signed-by=/usr/share/keyrings/inboxclassic.gpg] https://apt.inboxclassic.com stable main" | sudo tee /etc/apt/sources.list.d/inboxclassic.list
-sudo apt update &amp;&amp; sudo apt install inbox-classic</code></pre>
+                            <p class="text-base-content/70">Add our apt repository, and new versions come with your system's own updates. In a terminal:</p>
+                            <div class="ui-terminal mt-2">
+                                <div class="ui-terminal-bar">
+                                    <span>Terminal</span>
+                                    <button type="button" class="copy-btn btn btn-text btn-xs hidden" data-copy="linux-apt-commands">
+                                        <span class="icon-[tabler--copy] size-4"></span><span class="copy-label" aria-live="polite">Copy</span>
+                                    </button>
+                                </div>
+                                <div id="linux-apt-commands" class="ui-terminal-body">
+                                    <code
+                                        >sudo wget -qO /etc/apt/<wbr />sources.list.d/<wbr />inboxclassic.sources https://apt.inboxclassic.com/<wbr />inboxclassic.sources</code
+                                    >
+                                    <code>sudo apt update &amp;&amp; sudo apt install inbox-classic</code>
+                                </div>
                             </div>
                             <p class="text-base-content/70 mt-2">
-                                The repository is signed with the Postal Systems release key, the same key that signs each release's
-                                <code class="ui-code">hashes.txt</code>. If you already installed the .deb, this updates it in place.
+                                It is signed with the Postal Systems release key, the same key that signs each release's
+                                <code class="ui-code">hashes.txt</code>. Already installed the .deb? This updates it in place.
                             </p>
                         </div>
                     </div>
@@ -511,17 +517,21 @@ sudo apt update &amp;&amp; sudo apt install inbox-classic</code></pre>
                             <p class="os-note" data-os="windows">Windows 10 and 11</p>
                             <p class="os-note" data-os="mac">macOS 26 or newer, on Apple silicon</p>
                             <p class="os-note" data-os="linux">
-                                Ubuntu 26.04 or newer, a .deb for x86-64 (<a
+                                Ubuntu 26.04 or newer, x86-64<span class="mx-1 opacity-60"> &middot;</span>
+                                <a
                                     class="link link-animated plausible-event-name=Download plausible-event-os=linux-arm64 plausible-event-location=bottom"
                                     href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-arm64.deb"
                                     >ARM64</a
-                                >), or <a class="link link-animated" href="#linux-apt">install with apt</a> for updates
+                                >
+                                <span class="whitespace-nowrap"
+                                    ><span class="mx-1 opacity-60">&middot;</span> <a class="link link-animated" href="#linux-apt">Install with apt</a></span
+                                >
                             </p>
                             <p class="os-also">
                                 Also for
-                                <a class="link ms-1" data-os="windows" href="#download-windows">Windows</a>
-                                <a class="link ms-1" data-os="mac" href="#download-mac">Mac</a>
-                                <a class="link ms-1" data-os="linux" href="#download-linux">Linux</a>
+                                <a class="link link-animated ms-1" data-os="windows" href="#download-windows">Windows</a>
+                                <a class="link link-animated ms-1" data-os="mac" href="#download-mac">Mac</a>
+                                <a class="link link-animated ms-1" data-os="linux" href="#download-linux">Linux</a>
                             </p>
                             <p class="pt-2">
                                 <a class="link link-animated" href="https://github.com/postalsys/inbox-classic/releases">What's new</a>
@@ -532,7 +542,7 @@ sudo apt update &amp;&amp; sudo apt install inbox-classic</code></pre>
             </section>
             <section class="max-w-page mx-auto px-6 pb-16 sm:pb-20">
                 <div class="card bg-base-100 shadow-md">
-                    <div class="card-body items-center gap-6 p-8 text-center sm:flex-row sm:p-10 sm:text-start">
+                    <div class="card-body items-center gap-6 p-8 text-center sm:p-10 lg:flex-row lg:text-start">
                         <a
                             class="shrink-0 rounded-lg bg-white p-3"
                             href="https://emailengine.app/?utm_source=inboxclassic.com&utm_medium=homepage&utm_campaign=oss-docs&utm_content=makers-card-logo"

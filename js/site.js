@@ -124,18 +124,20 @@
     }
 })();
 
-// Copy buttons for the commands on the page (the Linux apt card). They stay
-// hidden where the clipboard is not available (no script, or not https).
+// Copy buttons for the commands on the page (the Linux apt card): each <code>
+// line of the target, one per line. They stay hidden where the clipboard is
+// not available (no script, or not https).
 (function () {
     if (!navigator.clipboard) {
         return;
     }
     for (let btn of document.querySelectorAll('.copy-btn')) {
-        let code = document.getElementById(btn.getAttribute('data-copy'));
-        let label = btn.lastChild;
+        let target = document.getElementById(btn.getAttribute('data-copy'));
+        let label = btn.querySelector('.copy-label');
+        let text = Array.from(target.querySelectorAll('code'), code => code.textContent).join('\n');
         btn.classList.remove('hidden');
         btn.addEventListener('click', () => {
-            navigator.clipboard.writeText(code.textContent).then(
+            navigator.clipboard.writeText(text).then(
                 () => {
                     label.textContent = 'Copied';
                     setTimeout(() => {
