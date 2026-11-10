@@ -3,6 +3,25 @@
     <channel>
         <title>Inbox Classic</title>
         <item>
+            <title>0.11.0</title>
+            <pubDate>Tue, 10 Nov 2026 20:12:35 +0200</pubDate>
+            <sparkle:version>0.11.0</sparkle:version>
+            <sparkle:shortVersionString>0.11.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## [0.11.0](https://github.com/postalsys/inbox-classic/compare/v0.10.0...v0.11.0) (2026-11-10)
+
+
+### Features
+
+* new mail notifications can show a sign-in code: with Show sign-in codes in new mail notifications turned on (Tools > Options, Settings on the Mac, Preferences on Linux), a message that just arrived with a code, from a site your mail provider says sent it, is announced with "482913 is your code for example.com" first. Off unless you turn it on, as a notification can be read on a locked screen ([2a41d28](https://github.com/postalsys/inbox-classic/commit/2a41d283438066bd8d6299084aef48e3e68bbe1e))
+
+
+The Mac app installs this update itself (Inbox Classic > Check for Updates).
+]]></description>
+            <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.11.0/InboxClassic.dmg" length="10378190" type="application/octet-stream" sparkle:edSignature="VCs6zYofUd/+EBXu2h6fPnGLu7pTVlbp4Z2ogQfgSjg3H62Bm+uc8LiA2PqbYb6JB5G41mh48GIypgNWdFbqCA=="/>
+        </item>
+        <item>
             <title>0.10.0</title>
             <pubDate>Tue, 10 Nov 2026 18:15:09 +0200</pubDate>
             <sparkle:version>0.10.0</sparkle:version>
@@ -65,31 +84,6 @@ The Mac app installs this update itself (Inbox Classic > Check for Updates).
 The Mac app installs this update itself (Inbox Classic > Check for Updates).
 ]]></description>
             <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.9.0/InboxClassic.dmg" length="10227626" type="application/octet-stream" sparkle:edSignature="XxhWkpoS081fpB5/tfUYP/gITn60rXD8n1xaM/iARoIYu6PrQc75y+d7jJR1rIMhVneE+2leq5WxIcDmUPZmDg=="/>
-        </item>
-        <item>
-            <title>0.8.0</title>
-            <pubDate>Sat, 07 Nov 2026 08:41:00 +0200</pubDate>
-            <sparkle:version>0.8.0</sparkle:version>
-            <sparkle:shortVersionString>0.8.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## [0.8.0](https://github.com/postalsys/inbox-classic/compare/v0.7.0...v0.8.0) (2026-11-07)
-
-
-### Features
-
-* Inbox Classic speaks German, Estonian, French and Spanish as well as English: the windows, the menus, the help and the Windows installer. It follows the system's language, and Tools > Options (Settings on the Mac, Preferences on Linux) lets you pick another one ([222d8d6](https://github.com/postalsys/inbox-classic/commit/222d8d6ceb6b83ef4b33fcf7b24f742ab71fe22e), [5b2155a](https://github.com/postalsys/inbox-classic/commit/5b2155ab7763fc4a66d01afaf10d30e4b5037f3c))
-* select several messages with Shift or Ctrl (Cmd on the Mac), or all of them with Select All, and mark, flag, junk, move, delete, forward or save them all at once. Edit > Undo takes back the last move, delete or junk, however many messages it was ([03b6d72](https://github.com/postalsys/inbox-classic/commit/03b6d7201f983d38eae30311ed1fd4b44d39326a))
-* move and copy messages from one account to another, by dragging them onto a folder of the other account or with Move to Folder and Copy to Folder ([34ce542](https://github.com/postalsys/inbox-classic/commit/34ce54208ca977020a91c7be0ef9c6eebea0aa1d))
-* drag messages out of the list into a folder on your computer to save them as .eml files, and drag .eml files into a folder to put them there. Save As and Forward work on several messages at once ([177a837](https://github.com/postalsys/inbox-classic/commit/177a837d91fff24faa50826fdbb02072df557d05))
-* Message > Flag flags a message in a colour, the seven Apple Mail uses, so a colour set in either shows in the other ([fdade16](https://github.com/postalsys/inbox-classic/commit/fdade1685857d065cf94e5dee046bc4e8634caa7))
-* All Inboxes shows the mail of every account's Inbox in one list, and the app opens on the newest message ([4607c7f](https://github.com/postalsys/inbox-classic/commit/4607c7f7537948ace9f3d9e662de662d0eaa28dc))
-* the message list has no envelope column any more, so the subject gets the room ([1178459](https://github.com/postalsys/inbox-classic/commit/1178459b29a99f00d8ce9971dd38b23c94a121a9))
-
-
-The Mac app installs this update itself (Inbox Classic > Check for Updates).
-]]></description>
-            <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.8.0/InboxClassic.dmg" length="8295279" type="application/octet-stream" sparkle:edSignature="xwmmgfI7IcBlCZyQEAMCoOLT5ixg9LXDE9nW4ua6EM1H3NuC6261t0xxi2uFshIXzAc9px3oqDFaebbEZgFDAw=="/>
         </item>
     </channel>
 </rss>
