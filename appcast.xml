@@ -3,6 +3,38 @@
     <channel>
         <title>Inbox Classic</title>
         <item>
+            <title>0.12.0</title>
+            <pubDate>Wed, 11 Nov 2026 13:41:04 +0200</pubDate>
+            <sparkle:version>0.12.0</sparkle:version>
+            <sparkle:shortVersionString>0.12.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## [0.12.0](https://github.com/postalsys/inbox-classic/compare/v0.11.0...v0.12.0) (2026-11-11)
+
+
+### Features
+
+* **Every Inbox in one place:** with two or more accounts, All Inboxes now opens to a row for each account's Inbox, with its unread count. Pick All Inboxes for all of them together, or a row for one account's Inbox alone ("Inbox - Gmail" in the title). The folder list remembers which rows you closed. ([6307745](https://github.com/postalsys/inbox-classic/commit/63077456ad78de57facfda7e51103c02cdfdd472))
+* **Account names:** give an account a short name such as Gmail or Work, the first field of its Properties. The folder list, File > Accounts, the status bar and the prompts use it. A new account starts with its provider's name or its domain. ([b84570e](https://github.com/postalsys/inbox-classic/commit/b84570eed8456c7f10131b5ae8b36383eb06c1f0))
+* **The account's menu:** a right-click on an account offers Send and Receive for that account, Mark All Read for all its folders, New Folder and Properties. ([6307745](https://github.com/postalsys/inbox-classic/commit/63077456ad78de57facfda7e51103c02cdfdd472))
+* **Arch Linux and Omarchy:** packages for x86_64 and ARM come with each release; install with `sudo pacman -U`. ([82b5a9a](https://github.com/postalsys/inbox-classic/commit/82b5a9afda8dd1f9f68b091ef10c559dad546df6))
+* **Linux:** the window fits a tiling window manager's narrow tile, dropping what it can spare step by step and keeping every command in the menu. ([112655f](https://github.com/postalsys/inbox-classic/commit/112655f01f1b6ded444b97ff6e6b4286effda439))
+
+
+### Bug Fixes
+
+* Polish from a review of every window on Windows, the Mac and Linux, in every language ([051c526](https://github.com/postalsys/inbox-classic/commit/051c526900e6bf7a96da19686aeaca95dd46fcd1), [2d7f6c4](https://github.com/postalsys/inbox-classic/commit/2d7f6c4b6edd5b1b0b27421316e3ad0b7d0e567a)):
+  * Commands on messages (Reply, Delete, Mark Read and the rest) are off when nothing is selected.
+  * Errors read as plain sentences: a refused sign-in or a broken connection says so, without system error numbers.
+  * The Sent line of a quoted message is in your own date and time format.
+  * Windows: the selected row is highlighted across, flags keep their colour on it, toolbar buttons that do not fit are in a » menu, the editor's right-click menu is the app's own, and the Outbox shows why a message did not go.
+  * Mac: Reply and Print no longer stay off after clicking a message; clipped labels and columns fit.
+  * Linux: the window that waits while servers are looked up is GNOME's own alert; menus use the … character; the folder name fits in the header bar in every language.
+* **Linux:** the tray icon shows right after installing, not only after the next login. ([6c1e922](https://github.com/postalsys/inbox-classic/commit/6c1e922b63448412ff69a46e19cb81836778190a))
+]]></description>
+            <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.12.0/InboxClassic.dmg" length="10429492" type="application/octet-stream" sparkle:edSignature="3uXk6BEKH+qiBtZHpbs+UZJbN+JOTHV0p0O4uWWw7itKZSQ53Qzr/rFFV6RS/sb+wnso3pA6atd0jtwIibCLAA=="/>
+        </item>
+        <item>
             <title>0.11.0</title>
             <pubDate>Tue, 10 Nov 2026 20:12:35 +0200</pubDate>
             <sparkle:version>0.11.0</sparkle:version>
@@ -50,40 +82,6 @@ The Mac app installs this update itself (Inbox Classic > Check for Updates).
 The Mac app installs this update itself (Inbox Classic > Check for Updates).
 ]]></description>
             <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.10.0/InboxClassic.dmg" length="10376042" type="application/octet-stream" sparkle:edSignature="SBnr1dKFIFgIvoa6fS+LZ0kEXIbFLfXzSKYYQWzjEl6oAvuv9IXZ4GObMAfph4mpzBIx2Lqy31jM0b0e4abLBA=="/>
-        </item>
-        <item>
-            <title>0.9.0</title>
-            <pubDate>Tue, 10 Nov 2026 09:49:37 +0200</pubDate>
-            <sparkle:version>0.9.0</sparkle:version>
-            <sparkle:shortVersionString>0.9.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## [0.9.0](https://github.com/postalsys/inbox-classic/compare/v0.8.0...v0.9.0) (2026-11-10)
-
-
-### Features
-
-* the message list groups messages by conversation: a conversation is one row with its count, placed and dated by its newest message, and opens with the +/- box (the triangle on the Mac and Linux) or the Right and Left keys. View > Expand All Conversations and Collapse All Conversations do the whole list, and an action on a closed conversation acts on all of its messages. Tools > Options (Settings on the Mac, Preferences on Linux) turns it off ([fc9469e](https://github.com/postalsys/inbox-classic/commit/fc9469e36ed39fc093bd19ed4cd43d2fe4e0cde2))
-* Message > Watch Conversation (W) and Ignore Conversation (K): new mail in a watched conversation is always announced, new mail in an ignored one is marked read without a notification, and View > Hide Ignored Conversations takes them out of the list ([6f10659](https://github.com/postalsys/inbox-classic/commit/6f10659dbd21a1b0ba376b2bc7dd9cf7998a57b6))
-* bounces explained: a message that came back undelivered or delayed says for each address what went wrong, such as an address that does not exist or a full mailbox, and what you can do, with a link to the message that bounced. Bounces are marked in the list, and the search takes `is:bounce` ([f46d86b](https://github.com/postalsys/inbox-classic/commit/f46d86b312d9e34211ebd339f0ec9ea325c1010e))
-* the Address Book (Tools > Address Book): contacts and groups, Select Recipients behind the To, Cc and Bcc buttons of a new message, groups completed by name in the address fields, Add Sender to Address Book, and import from vCard and CSV and export to vCard in the File menu ([cf0d79f](https://github.com/postalsys/inbox-classic/commit/cf0d79f92be1c2e102d8a19d609c1ece8c18ddf1))
-* Archive, on the toolbar, in the Message menu and on the A key, moves messages into the account's Archive folder, made the first time when there is none. On Gmail it takes the labels off, leaving the message in All Mail. Undo puts them back ([95e8441](https://github.com/postalsys/inbox-classic/commit/95e8441d9f9805378248570c75ada5fea735a99d))
-* double-click a message, or press Enter, to open it in a window of its own, with Reply, Forward, Delete, Archive, Junk and Previous and Next through the list it came from ([5f6dba2](https://github.com/postalsys/inbox-classic/commit/5f6dba2168e279a702cdc785dae293749faba94b))
-* reading with the keyboard: Next and Previous Message, Next Unread Message (N) that goes on to the next folder with unread mail, Go to Folder, and Edit > Find in This Message ([93bbd11](https://github.com/postalsys/inbox-classic/commit/93bbd115b4e97c8e310d73954e7338eb189c1558))
-* Empty Folder, in the File menu and on the folder's right-click menu, empties Deleted Items and Junk E-mail for good, after asking ([fc6c39c](https://github.com/postalsys/inbox-classic/commit/fc6c39cb32610d5b2aeaa35db0508c5c88f8f5aa))
-* Sent Items and Drafts show whom each message went to in a To column, and the date column is titled Sent ([a1a010b](https://github.com/postalsys/inbox-classic/commit/a1a010b56a5c6a5bb9ffec39137213277f231852))
-* all of it in German, Estonian, French and Spanish too, the translations reviewed by native speakers ([851cef4](https://github.com/postalsys/inbox-classic/commit/851cef4718467ea3c1b9cd09296dd04b9b80b8f9))
-
-
-### Bug Fixes
-
-* **windows:** the toolbar keeps its labels after the window is minimized and restored ([bec19ab](https://github.com/postalsys/inbox-classic/commit/bec19abdb99a4b789a158a01c5ffb5fbc29ea26a))
-* **mac:** the Folder column of a search no longer cuts off the Size column ([c2d5edc](https://github.com/postalsys/inbox-classic/commit/c2d5edca045baeb17ebc3c03147aa660adafd4aa))
-
-
-The Mac app installs this update itself (Inbox Classic > Check for Updates).
-]]></description>
-            <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.9.0/InboxClassic.dmg" length="10227626" type="application/octet-stream" sparkle:edSignature="XxhWkpoS081fpB5/tfUYP/gITn60rXD8n1xaM/iARoIYu6PrQc75y+d7jJR1rIMhVneE+2leq5WxIcDmUPZmDg=="/>
         </item>
     </channel>
 </rss>
