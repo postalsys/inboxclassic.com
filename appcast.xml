@@ -3,6 +3,29 @@
     <channel>
         <title>Inbox Classic</title>
         <item>
+            <title>0.12.2</title>
+            <pubDate>Wed, 11 Nov 2026 23:32:50 +0200</pubDate>
+            <sparkle:version>0.12.2</sparkle:version>
+            <sparkle:shortVersionString>0.12.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## [0.12.2](https://github.com/postalsys/inbox-classic/compare/v0.12.1...v0.12.2) (2026-11-11)
+
+
+### Bug Fixes
+
+* **Forwarding keeps the attachments:** a forwarded message now carries the original's attached files. ([4af7f91](https://github.com/postalsys/inbox-classic/commit/4af7f9120e5461a2082fa90c4894f74bbed2e08b))
+* **A delayed delivery is not a bounce:** a notice that a message is only delayed is shown as a delay, with a link to the delayed message, not as a failed delivery. ([0dcbb51](https://github.com/postalsys/inbox-classic/commit/0dcbb513fd6e8b1d2115612e9645a745680394a4))
+* **The compose window is named by its subject** as you type it, on Windows and the Mac as on Linux. ([6614717](https://github.com/postalsys/inbox-classic/commit/66147170599cd28fa5ddf53272c963224c8958c9))
+* **Flags on a selected row** stay visible on Windows, the blue one on the blue highlight too. ([6614717](https://github.com/postalsys/inbox-classic/commit/66147170599cd28fa5ddf53272c963224c8958c9))
+* **Clearer messages:** errors are full sentences with the system's own words, sign-in and connection failures say what happened, and no alert leaves one word alone on its last line. ([e548e21](https://github.com/postalsys/inbox-classic/commit/e548e21a7a5822a8debe7d5c1afaf1b7fd8ee3e9), [687ee1c](https://github.com/postalsys/inbox-classic/commit/687ee1ce8dcd39396b12296030c1caf9ca5668cb))
+* **Punctuation in every language:** proper apostrophes and quotes in English, each language's own quote marks, and dates in printouts and quoted replies in your own time zone. ([e548e21](https://github.com/postalsys/inbox-classic/commit/e548e21a7a5822a8debe7d5c1afaf1b7fd8ee3e9), [25ec362](https://github.com/postalsys/inbox-classic/commit/25ec36215f2a0f041312943fd52c817174721d6c))
+* **Tidier windows on all three systems:** text no longer cut off or misaligned in forms, the reading pane's header, the Outbox, the Address Book and Message Properties; menus on Linux open at their full height; the status bar says Done from the start. ([4af7f91](https://github.com/postalsys/inbox-classic/commit/4af7f9120e5461a2082fa90c4894f74bbed2e08b), [ff953e4](https://github.com/postalsys/inbox-classic/commit/ff953e4cac640395065b92c4d60a4552cd4168f0), [25ec362](https://github.com/postalsys/inbox-classic/commit/25ec36215f2a0f041312943fd52c817174721d6c), [43fe65d](https://github.com/postalsys/inbox-classic/commit/43fe65d4ac7935c3502f047c7c9dd2a54607af7d))
+* **Underline in links:** the editor's Underline button no longer shows as pressed just because the cursor is in a link. ([ff953e4](https://github.com/postalsys/inbox-classic/commit/ff953e4cac640395065b92c4d60a4552cd4168f0))
+]]></description>
+            <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.12.2/InboxClassic.dmg" length="10492954" type="application/octet-stream" sparkle:edSignature="nZTGUw7+hScjC1HGtkNeowcgKvzTB+QIA03VRBkz1mljOmWM1X4ZqrrIRUIJq3jiNwFMDgDP0NFGeIO4h9MmDA=="/>
+        </item>
+        <item>
             <title>0.12.1</title>
             <pubDate>Wed, 11 Nov 2026 15:04:54 +0200</pubDate>
             <sparkle:version>0.12.1</sparkle:version>
@@ -50,25 +73,6 @@
 * **Linux:** the tray icon shows right after installing, not only after the next login. ([6c1e922](https://github.com/postalsys/inbox-classic/commit/6c1e922b63448412ff69a46e19cb81836778190a))
 ]]></description>
             <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.12.0/InboxClassic.dmg" length="10429492" type="application/octet-stream" sparkle:edSignature="3uXk6BEKH+qiBtZHpbs+UZJbN+JOTHV0p0O4uWWw7itKZSQ53Qzr/rFFV6RS/sb+wnso3pA6atd0jtwIibCLAA=="/>
-        </item>
-        <item>
-            <title>0.11.0</title>
-            <pubDate>Tue, 10 Nov 2026 20:12:35 +0200</pubDate>
-            <sparkle:version>0.11.0</sparkle:version>
-            <sparkle:shortVersionString>0.11.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## [0.11.0](https://github.com/postalsys/inbox-classic/compare/v0.10.0...v0.11.0) (2026-11-10)
-
-
-### Features
-
-* new mail notifications can show a sign-in code: with Show sign-in codes in new mail notifications turned on (Tools > Options, Settings on the Mac, Preferences on Linux), a message that just arrived with a code, from a site your mail provider says sent it, is announced with "482913 is your code for example.com" first. Off unless you turn it on, as a notification can be read on a locked screen ([2a41d28](https://github.com/postalsys/inbox-classic/commit/2a41d283438066bd8d6299084aef48e3e68bbe1e))
-
-
-The Mac app installs this update itself (Inbox Classic > Check for Updates).
-]]></description>
-            <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.11.0/InboxClassic.dmg" length="10378190" type="application/octet-stream" sparkle:edSignature="VCs6zYofUd/+EBXu2h6fPnGLu7pTVlbp4Z2ogQfgSjg3H62Bm+uc8LiA2PqbYb6JB5G41mh48GIypgNWdFbqCA=="/>
         </item>
     </channel>
 </rss>
