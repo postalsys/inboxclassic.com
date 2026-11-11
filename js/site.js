@@ -75,6 +75,7 @@
             'read-1-html': [1086, 753],
             'account-1-form': [442, 311],
             'find-2-every-folder': [1086, 399],
+            'all-inboxes-3-accounts': [1086, 753],
             'write-5-new': [746, 400],
             'agents-4-send': [602, 471],
             'bounce-1-failed': [1086, 646],
@@ -84,19 +85,21 @@
             'read-1-html': [1100, 811],
             'account-1-form': [480, 403],
             'find-2-every-folder': [1100, 430],
+            'all-inboxes-3-accounts': [1100, 811],
             'write-5-new': [760, 400],
             'agents-4-send': [560, 445],
             'bounce-1-failed': [1100, 618],
             'otp-1-card': [1100, 811]
         },
         linux: {
-            'read-1-html': [1090, 750],
+            'read-1-html': [1190, 750],
             'account-1-form': [551, 459],
-            'find-2-every-folder': [1090, 398],
+            'find-2-every-folder': [1190, 398],
+            'all-inboxes-3-accounts': [1190, 750],
             'write-5-new': [750, 400],
             'agents-4-send': [528, 481],
-            'bounce-1-failed': [1090, 618],
-            'otp-1-card': [1090, 750]
+            'bounce-1-failed': [1190, 618],
+            'otp-1-card': [1190, 750]
         }
     };
 
