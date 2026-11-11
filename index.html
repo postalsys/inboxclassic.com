@@ -183,7 +183,8 @@
                                 >ARM64</a
                             >
                             <span class="whitespace-nowrap"
-                                ><span class="mx-1 opacity-60">&middot;</span> <a class="underline" href="#linux-apt">Install with apt</a></span
+                                ><span class="mx-1 opacity-60">&middot;</span> <a class="underline" href="#linux-apt">Install with apt</a>
+                                <span class="mx-1 opacity-60">&middot;</span> <a class="underline" href="#linux-omarchy">Arch / Omarchy</a></span
                             >
                         </p>
                         <p class="os-also">
@@ -506,6 +507,34 @@
                             </p>
                         </div>
                     </div>
+                    <div id="linux-omarchy" class="card bg-base-100 min-w-0 shadow-md md:col-span-2">
+                        <div class="card-body">
+                            <h3 class="text-lg font-semibold">How do I install it on Omarchy or Arch Linux?</h3>
+                            <p class="text-base-content/70">
+                                Download the package of the latest release and install it with pacman, which brings GTK, libadwaita and WebKitGTK from Arch's
+                                own repositories. On a new Omarchy, run its Update first. In a terminal:
+                            </p>
+                            <div class="ui-terminal mt-2">
+                                <div class="ui-terminal-bar">
+                                    <span>Terminal</span>
+                                    <button type="button" class="copy-btn btn btn-text btn-xs hidden" data-copy="linux-omarchy-commands">
+                                        <span class="icon-[tabler--copy] size-4"></span><span class="copy-label" aria-live="polite">Copy</span>
+                                    </button>
+                                </div>
+                                <div id="linux-omarchy-commands" class="ui-terminal-body">
+                                    <code
+                                        >curl -LO https://github.com/postalsys/inbox-classic/<wbr />releases/latest/download/<wbr />InboxClassic-x86_64.pkg.tar.zst</code
+                                    >
+                                    <code>sudo pacman -U InboxClassic-x86_64.pkg.tar.zst</code>
+                                </div>
+                            </div>
+                            <p class="text-base-content/70 mt-2">
+                                On ARM, use <code class="ui-code">InboxClassic-aarch64.pkg.tar.zst</code>. Run both again to update; the packages are listed in
+                                each release's signed <code class="ui-code">hashes.txt</code>. Inbox Classic is on its way into Omarchy's own package
+                                repository, which will bring updates with Omarchy's.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -545,7 +574,8 @@
                                     >ARM64</a
                                 >
                                 <span class="whitespace-nowrap"
-                                    ><span class="mx-1 opacity-60">&middot;</span> <a class="link link-animated" href="#linux-apt">Install with apt</a></span
+                                    ><span class="mx-1 opacity-60">&middot;</span> <a class="link link-animated" href="#linux-apt">Install with apt</a>
+                                    <span class="mx-1 opacity-60">&middot;</span> <a class="link link-animated" href="#linux-omarchy">Arch / Omarchy</a></span
                                 >
                             </p>
                             <p class="os-also">
