@@ -182,8 +182,8 @@
                                 href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-arm64.deb"
                                 >ARM64</a
                             >
-                            <span class="whitespace-nowrap"
-                                ><span class="mx-1 opacity-60">&middot;</span> <a class="underline" href="#linux-apt">Install with apt</a>
+                            <span class="block whitespace-nowrap sm:inline"
+                                ><span class="mx-1 hidden opacity-60 sm:inline">&middot;</span> <a class="underline" href="#linux-apt">Install with apt</a>
                                 <span class="mx-1 opacity-60">&middot;</span> <a class="underline" href="#linux-omarchy">Arch / Omarchy</a></span
                             >
                         </p>
@@ -505,7 +505,7 @@
                     </div>
                     <div id="linux-apt" class="card bg-base-100 min-w-0 shadow-md md:col-span-2">
                         <div class="card-body">
-                            <h3 class="text-lg font-semibold">How do I get updates on Linux?</h3>
+                            <h3 class="text-lg font-semibold">How do I get updates on Ubuntu?</h3>
                             <p class="text-base-content/70">Add our apt repository, and new versions come with your system's own updates. In a terminal:</p>
                             <div class="ui-terminal mt-2">
                                 <div class="ui-terminal-bar">
@@ -534,24 +534,55 @@
                                 Download the package of the latest release and install it with pacman, which brings GTK, libadwaita and WebKitGTK from Arch's
                                 own repositories. On a new Omarchy, run its Update first. In a terminal:
                             </p>
-                            <div class="ui-terminal mt-2">
+                            <div class="ui-terminal mt-2" data-tabs>
                                 <div class="ui-terminal-bar">
-                                    <span>Terminal</span>
+                                    <span class="ui-terminal-title">Terminal</span>
+                                    <div class="ui-terminal-tabs hidden" role="tablist" aria-label="Processor">
+                                        <button
+                                            type="button"
+                                            role="tab"
+                                            id="linux-omarchy-tab-x86_64"
+                                            aria-controls="linux-omarchy-x86_64"
+                                            aria-selected="true"
+                                        >
+                                            Intel / AMD
+                                        </button>
+                                        <button
+                                            type="button"
+                                            role="tab"
+                                            id="linux-omarchy-tab-aarch64"
+                                            aria-controls="linux-omarchy-aarch64"
+                                            aria-selected="false"
+                                            tabindex="-1"
+                                        >
+                                            ARM
+                                        </button>
+                                    </div>
                                     <button type="button" class="copy-btn btn btn-text btn-xs hidden" data-copy="linux-omarchy-commands">
                                         <span class="icon-[tabler--copy] size-4"></span><span class="copy-label" aria-live="polite">Copy</span>
                                     </button>
                                 </div>
-                                <div id="linux-omarchy-commands" class="ui-terminal-body">
-                                    <code
-                                        >curl -LO https://github.com/postalsys/inbox-classic/<wbr />releases/latest/download/<wbr />InboxClassic-x86_64.pkg.tar.zst</code
-                                    >
-                                    <code>sudo pacman -U InboxClassic-x86_64.pkg.tar.zst</code>
+                                <div id="linux-omarchy-commands">
+                                    <div id="linux-omarchy-x86_64" class="ui-terminal-body" role="tabpanel" aria-labelledby="linux-omarchy-tab-x86_64">
+                                        <p class="ui-terminal-label">Intel / AMD (x86-64)</p>
+                                        <code
+                                            >curl -LO https://github.com/<wbr />postalsys/<wbr />inbox-classic/<wbr />releases/latest/download/<wbr />InboxClassic-x86_64.pkg.tar.zst</code
+                                        >
+                                        <code>sudo pacman -U <span class="whitespace-nowrap">InboxClassic-x86_64.pkg.tar.zst</span></code>
+                                    </div>
+                                    <div id="linux-omarchy-aarch64" class="ui-terminal-body" role="tabpanel" aria-labelledby="linux-omarchy-tab-aarch64">
+                                        <p class="ui-terminal-label">ARM (aarch64)</p>
+                                        <code
+                                            >curl -LO https://github.com/<wbr />postalsys/<wbr />inbox-classic/<wbr />releases/latest/download/<wbr />InboxClassic-aarch64.pkg.tar.zst</code
+                                        >
+                                        <code>sudo pacman -U <span class="whitespace-nowrap">InboxClassic-aarch64.pkg.tar.zst</span></code>
+                                    </div>
                                 </div>
                             </div>
                             <p class="text-base-content/70 mt-2">
-                                On ARM, use <code class="ui-code">InboxClassic-aarch64.pkg.tar.zst</code>. Run both again to update; the packages are listed in
-                                each release's signed <code class="ui-code">hashes.txt</code>. Inbox Classic is on its way into Omarchy's own package
-                                repository, which will bring updates with Omarchy's.
+                                Run the same two commands again to update. The packages are listed in each release's signed
+                                <code class="ui-code">hashes.txt</code>. Inbox Classic is on its way into Omarchy's own package repository, which will bring
+                                updates with Omarchy's.
                             </p>
                         </div>
                     </div>
@@ -593,9 +624,10 @@
                                     href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-arm64.deb"
                                     >ARM64</a
                                 >
-                                <span class="whitespace-nowrap"
-                                    ><span class="mx-1 opacity-60">&middot;</span> <a class="link link-animated" href="#linux-apt">Install with apt</a>
-                                    <span class="mx-1 opacity-60">&middot;</span> <a class="link link-animated" href="#linux-omarchy">Arch / Omarchy</a></span
+                                <span class="block whitespace-nowrap sm:inline"
+                                    ><span class="mx-1 hidden opacity-60 sm:inline">&middot;</span>
+                                    <a class="link link-animated" href="#linux-apt">Install with apt</a> <span class="mx-1 opacity-60">&middot;</span>
+                                    <a class="link link-animated" href="#linux-omarchy">Arch / Omarchy</a></span
                                 >
                             </p>
                             <p class="os-also">

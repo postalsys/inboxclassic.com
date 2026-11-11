@@ -181,6 +181,13 @@ html[data-os='linux'] .os-also a[data-os='linux'] {
         font-size: 0.875rem;
         line-height: 1.6;
     }
+    /* a package file name fits on one line on a phone */
+    @media (width < 40rem) {
+        .ui-terminal-body {
+            padding-inline: 0.75rem;
+            font-size: 0.8125rem;
+        }
+    }
     .ui-terminal-body code {
         display: block;
         padding-inline-start: 2ch;
@@ -196,6 +203,45 @@ html[data-os='linux'] .os-also a[data-os='linux'] {
         content: '$ ';
         color: color-mix(in oklab, var(--color-base-content) 40%, transparent);
         user-select: none;
+    }
+
+    /* A terminal with tabs (one command set per processor). The script turns
+     * the labels into the tabs in the bar; without it both sets show, one
+     * under the other, each with its label. */
+    .ui-terminal-body + .ui-terminal-body {
+        border-top: 1px solid color-mix(in oklab, var(--color-base-content) 10%, transparent);
+    }
+    .ui-terminal-label {
+        margin-bottom: 0.25rem;
+        font-family: var(--font-sans);
+        font-size: 0.75rem;
+        color: color-mix(in oklab, var(--color-base-content) 60%, transparent);
+    }
+    .ui-terminal.has-tabs .ui-terminal-label {
+        display: none;
+    }
+    .ui-terminal-tabs {
+        display: flex;
+        gap: 0.25rem;
+    }
+    .ui-terminal-tabs [role='tab'] {
+        padding: 0.25rem 0.75rem;
+        border-radius: var(--radius-field);
+        font-size: 0.8125rem;
+        font-weight: 600;
+        color: color-mix(in oklab, var(--color-base-content) 65%, transparent);
+        cursor: pointer;
+    }
+    .ui-terminal-tabs [role='tab']:hover {
+        color: var(--color-base-content);
+    }
+    .ui-terminal-tabs [role='tab'][aria-selected='true'] {
+        background-color: color-mix(in oklab, var(--color-primary) 14%, transparent);
+        color: var(--color-primary);
+    }
+    .ui-terminal-tabs [role='tab']:focus-visible {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 1px;
     }
 
     /* Typography island for the legal pages. Preflight strips all default

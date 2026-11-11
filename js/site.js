@@ -130,9 +130,58 @@
     }
 })();
 
-// Copy buttons for the commands on the page (the Linux apt card): each <code>
-// line of the target, one per line. They stay hidden where the clipboard is
-// not available (no script, or not https).
+// Tabs on a terminal (the Arch / Omarchy card: Intel / AMD or ARM). Without
+// the script both command sets show, each with its own label. ARM is chosen
+// first when the browser says it runs on ARM.
+(function () {
+    for (let terminal of document.querySelectorAll('.ui-terminal[data-tabs]')) {
+        let tabs = Array.from(terminal.querySelectorAll('[role="tab"]'));
+        let select = (tab, focus) => {
+            for (let other of tabs) {
+                let selected = other === tab;
+                other.setAttribute('aria-selected', selected ? 'true' : 'false');
+                other.tabIndex = selected ? 0 : -1;
+                document.getElementById(other.getAttribute('aria-controls')).hidden = !selected;
+            }
+            if (focus) {
+                tab.focus();
+            }
+        };
+        tabs.forEach((tab, i) => {
+            tab.addEventListener('click', () => select(tab));
+            tab.addEventListener('keydown', event => {
+                let step = { ArrowRight: 1, ArrowLeft: -1 }[event.key];
+                if (step) {
+                    event.preventDefault();
+                    select(tabs[(i + step + tabs.length) % tabs.length], true);
+                }
+            });
+        });
+        terminal.classList.add('has-tabs');
+        terminal.querySelector('.ui-terminal-tabs').classList.remove('hidden');
+        terminal.querySelector('.ui-terminal-title').hidden = true;
+        select(tabs[0]);
+
+        let arm = tabs.find(tab => /aarch64|arm/i.test(tab.getAttribute('aria-controls')));
+        if (arm && /aarch64|arm/i.test(navigator.userAgent)) {
+            select(arm);
+        } else if (arm && navigator.userAgentData && navigator.userAgentData.getHighEntropyValues) {
+            navigator.userAgentData.getHighEntropyValues(['architecture']).then(
+                values => {
+                    if (values.architecture === 'arm') {
+                        select(arm);
+                    }
+                },
+                () => {}
+            );
+        }
+    }
+})();
+
+// Copy buttons for the commands on the page (the Linux terminal cards): the
+// <code> lines of the target, one per line, from the tab that is showing.
+// They stay hidden where the clipboard is not available (no script, or not
+// https).
 (function () {
     if (!navigator.clipboard) {
         return;
@@ -140,9 +189,10 @@
     for (let btn of document.querySelectorAll('.copy-btn')) {
         let target = document.getElementById(btn.getAttribute('data-copy'));
         let label = btn.querySelector('.copy-label');
-        let text = Array.from(target.querySelectorAll('code'), code => code.textContent).join('\n');
         btn.classList.remove('hidden');
         btn.addEventListener('click', () => {
+            let codes = Array.from(target.querySelectorAll('code')).filter(code => !code.closest('[hidden]'));
+            let text = codes.map(code => code.textContent).join('\n');
             navigator.clipboard.writeText(text).then(
                 () => {
                     label.textContent = 'Copied';
