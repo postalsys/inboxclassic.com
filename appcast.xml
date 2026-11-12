@@ -3,6 +3,34 @@
     <channel>
         <title>Inbox Classic</title>
         <item>
+            <title>0.13.0</title>
+            <pubDate>Thu, 12 Nov 2026 15:09:28 +0200</pubDate>
+            <sparkle:version>0.13.0</sparkle:version>
+            <sparkle:shortVersionString>0.13.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## [0.13.0](https://github.com/postalsys/inbox-classic/compare/v0.12.2...v0.13.0) (2026-11-12)
+
+
+### Features
+
+* **A new help:** 45 short topics in ten sections, from getting started to troubleshooting, in English, German, Spanish, Estonian and French. Every key and every control is named exactly as the app names it, on each platform. F1 opens the topic of the window you are in. ([273e537](https://github.com/postalsys/inbox-classic/commit/273e5376c0113db3cb80b137406bdf333b742a8a))
+  * **Windows:** a classic help window with Contents and Search beside the topic, Back, Forward and Print. ([705220b](https://github.com/postalsys/inbox-classic/commit/705220b769b3dfd1a0f90d6e9d14cc98400c1b4f))
+  * **Mac:** an Apple Help Book: the Help menu's search finds its topics, and dialogs have the round help button. ([52ec3a2](https://github.com/postalsys/inbox-classic/commit/52ec3a2e8109742348776834dd8f1d862c1df99d))
+  * **Linux:** a help window with search, or Yelp where it is installed. ([6d01c6b](https://github.com/postalsys/inbox-classic/commit/6d01c6ba0163168c74c18833356c4f931da75f8f))
+  * **On the web:** the same help at inboxclassic.com/help. ([314e2d2](https://github.com/postalsys/inbox-classic/commit/314e2d2a8b1e9adff7789fef92582734715ee8ad))
+* **Reorder your accounts:** drag an account, or its Inbox under All Inboxes, above or below another; All Inboxes and the folder list follow the same order. The account's menu has Move Up and Move Down. ([c439505](https://github.com/postalsys/inbox-classic/commit/c439505a26f77cd66de22d7e717fce5cdfe28c92))
+
+
+### Bug Fixes
+
+* **A message's title is no longer shown as its first line:** some HTML messages (a Stripe payout notice, for one) showed their page title above the message. ([9e0655f](https://github.com/postalsys/inbox-classic/commit/9e0655fed5d5ed5659ad49f76363feeac1facbe7))
+* **Omarchy:** a window on a floating workspace no longer shows a second close button under Omarchy's own title bar. ([51a03e4](https://github.com/postalsys/inbox-classic/commit/51a03e4884b05c1dd86dcb08819d8b17a3a3be21))
+* **The old help gave Mac users wrong keys:** it said Ctrl+Q for Mark as Read, which on the Mac is Quit. ([4e7c627](https://github.com/postalsys/inbox-classic/commit/4e7c6275b17a9a6593ec195d9d453121edfd9d5b))
+]]></description>
+            <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.13.0/InboxClassic.dmg" length="11454078" type="application/octet-stream" sparkle:edSignature="jYqq+HpLBZhTodykKbpTr7+LIGi8mzC7j6O2JHrrPqDCgetkZNqO7UJtC/JQLEt7hwiSSVvILqQq93zW3H00BA=="/>
+        </item>
+        <item>
             <title>0.12.2</title>
             <pubDate>Wed, 11 Nov 2026 23:32:50 +0200</pubDate>
             <sparkle:version>0.12.2</sparkle:version>
@@ -41,38 +69,6 @@
 * **A message not downloaded yet** no longer says so twice: the bar says when it is tried again, the page under it why it failed. ([96f137e](https://github.com/postalsys/inbox-classic/commit/96f137e52eb43a85d8ba8dc12280d916c7e3b64c))
 ]]></description>
             <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.12.1/InboxClassic.dmg" length="10409991" type="application/octet-stream" sparkle:edSignature="q6sVcoBiFg0rcghM7VX1MGOP/sLT4hw6Ie1q7S6SGCOtp/6p474b2T5JdqAZSSphaWrNGhuXhCqCWiuYFnYKAQ=="/>
-        </item>
-        <item>
-            <title>0.12.0</title>
-            <pubDate>Wed, 11 Nov 2026 13:41:04 +0200</pubDate>
-            <sparkle:version>0.12.0</sparkle:version>
-            <sparkle:shortVersionString>0.12.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## [0.12.0](https://github.com/postalsys/inbox-classic/compare/v0.11.0...v0.12.0) (2026-11-11)
-
-
-### Features
-
-* **Every Inbox in one place:** with two or more accounts, All Inboxes now opens to a row for each account's Inbox, with its unread count. Pick All Inboxes for all of them together, or a row for one account's Inbox alone ("Inbox - Gmail" in the title). The folder list remembers which rows you closed. ([6307745](https://github.com/postalsys/inbox-classic/commit/63077456ad78de57facfda7e51103c02cdfdd472))
-* **Account names:** give an account a short name such as Gmail or Work, the first field of its Properties. The folder list, File > Accounts, the status bar and the prompts use it. A new account starts with its provider's name or its domain. ([b84570e](https://github.com/postalsys/inbox-classic/commit/b84570eed8456c7f10131b5ae8b36383eb06c1f0))
-* **The account's menu:** a right-click on an account offers Send and Receive for that account, Mark All Read for all its folders, New Folder and Properties. ([6307745](https://github.com/postalsys/inbox-classic/commit/63077456ad78de57facfda7e51103c02cdfdd472))
-* **Arch Linux and Omarchy:** packages for x86_64 and ARM come with each release; install with `sudo pacman -U`. ([82b5a9a](https://github.com/postalsys/inbox-classic/commit/82b5a9afda8dd1f9f68b091ef10c559dad546df6))
-* **Linux:** the window fits a tiling window manager's narrow tile, dropping what it can spare step by step and keeping every command in the menu. ([112655f](https://github.com/postalsys/inbox-classic/commit/112655f01f1b6ded444b97ff6e6b4286effda439))
-
-
-### Bug Fixes
-
-* Polish from a review of every window on Windows, the Mac and Linux, in every language ([051c526](https://github.com/postalsys/inbox-classic/commit/051c526900e6bf7a96da19686aeaca95dd46fcd1), [2d7f6c4](https://github.com/postalsys/inbox-classic/commit/2d7f6c4b6edd5b1b0b27421316e3ad0b7d0e567a)):
-  * Commands on messages (Reply, Delete, Mark Read and the rest) are off when nothing is selected.
-  * Errors read as plain sentences: a refused sign-in or a broken connection says so, without system error numbers.
-  * The Sent line of a quoted message is in your own date and time format.
-  * Windows: the selected row is highlighted across, flags keep their colour on it, toolbar buttons that do not fit are in a » menu, the editor's right-click menu is the app's own, and the Outbox shows why a message did not go.
-  * Mac: Reply and Print no longer stay off after clicking a message; clipped labels and columns fit.
-  * Linux: the window that waits while servers are looked up is GNOME's own alert; menus use the … character; the folder name fits in the header bar in every language.
-* **Linux:** the tray icon shows right after installing, not only after the next login. ([6c1e922](https://github.com/postalsys/inbox-classic/commit/6c1e922b63448412ff69a46e19cb81836778190a))
-]]></description>
-            <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.12.0/InboxClassic.dmg" length="10429492" type="application/octet-stream" sparkle:edSignature="3uXk6BEKH+qiBtZHpbs+UZJbN+JOTHV0p0O4uWWw7itKZSQ53Qzr/rFFV6RS/sb+wnso3pA6atd0jtwIibCLAA=="/>
         </item>
     </channel>
 </rss>

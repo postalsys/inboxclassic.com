@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inbox Classic Help</title>
+<link rel="canonical" href="https://inboxclassic.com/help/en/windows/index.html">
+<script>
+(function () {
+    var languages = ['en', 'de', 'es', 'et', 'fr'];
+    var language = 'en';
+    var wanted = navigator.languages || [navigator.language || 'en'];
+    for (var i = 0; i < wanted.length; i++) {
+        var code = String(wanted[i]).slice(0, 2).toLowerCase();
+        if (languages.indexOf(code) >= 0) { language = code; break; }
+    }
+    var platform = (navigator.userAgentData && navigator.userAgentData.platform) || navigator.platform || '';
+    var name = /mac/i.test(platform) ? 'mac' : /linux/i.test(platform) && !/android/i.test(navigator.userAgent) ? 'linux' : 'windows';
+    location.replace(language + '/' + name + '/index.html' + location.hash);
+})();
+</script>
+</head>
+<body>
+<p><a href="en/windows/index.html">Inbox Classic Help</a>: <a href="en/windows/index.html">Windows</a>, <a href="en/mac/index.html">Mac</a>, <a href="en/linux/index.html">Linux</a></p>
+</body>
+</html>
