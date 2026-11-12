@@ -3,6 +3,31 @@
     <channel>
         <title>Inbox Classic</title>
         <item>
+            <title>0.14.0</title>
+            <pubDate>Thu, 12 Nov 2026 17:29:22 +0200</pubDate>
+            <sparkle:version>0.14.0</sparkle:version>
+            <sparkle:shortVersionString>0.14.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## [0.14.0](https://github.com/postalsys/inbox-classic/compare/v0.13.0...v0.14.0) (2026-11-12)
+
+
+### Features
+
+* **Pictures from senders you trust:** the pictures bar can always download pictures from a sender, or from everyone at their domain. They load by themselves only when your mail provider confirms the message really comes from that domain, so a forged sender still asks; never in Junk E-mail. Options lists the trusted senders, and has "Download pictures in all messages" (off unless you turn it on). ([439b663](https://github.com/postalsys/inbox-classic/commit/439b663c89058a698ae9cec6528b92d9597a55c2))
+* **Unread only:** View > Hide Read Messages, or the filter button in the toolbar, lists only unread mail in every folder. A message you read stays in the list until you leave the folder. ([05ee333](https://github.com/postalsys/inbox-classic/commit/05ee333e147f11bdee0bf70023decddbbc0cb6ec))
+* **Open .eml files:** double-click a saved message in Finder, File Explorer or your file manager and it opens in a message window, with Reply, Reply All, Forward, Print, Save As and its attachments. Options can make Inbox Classic the app for .eml files. ([b9be469](https://github.com/postalsys/inbox-classic/commit/b9be4693db87c95da53c9b6ddbc3589a50800a3d), [92eea3a](https://github.com/postalsys/inbox-classic/commit/92eea3ab21b10d5dff6f9a7f3d504091dd36b032))
+* **The help on the website** now looks like the rest of inboxclassic.com. ([46e108b](https://github.com/postalsys/inbox-classic/commit/46e108b0a1d8ed29b06bd68cbcf37c1507e29e13))
+
+
+### Bug Fixes
+
+* **Spam dated in the future no longer stays on top:** the list uses a message's date, but never later than when it arrived. ([911e35c](https://github.com/postalsys/inbox-classic/commit/911e35c07bd2bea828c55f85a7e45facd5605109))
+* **Windows:** the unread count on the taskbar button is drawn at the size of the screen. ([d028ed3](https://github.com/postalsys/inbox-classic/commit/d028ed39b0c51364a8b8cd3082e03643fa0765a7))
+]]></description>
+            <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.14.0/InboxClassic.dmg" length="11626388" type="application/octet-stream" sparkle:edSignature="4jIjMbRg+I5mIVCwMbvBmDhgtopGfnxN4B9Ia41OQCElHIOZeXgoc0/khx5yQhbEFgTaRROxxEdZ/wgrxkWiDA=="/>
+        </item>
+        <item>
             <title>0.13.0</title>
             <pubDate>Thu, 12 Nov 2026 15:09:28 +0200</pubDate>
             <sparkle:version>0.13.0</sparkle:version>
@@ -52,23 +77,6 @@
 * **Underline in links:** the editor's Underline button no longer shows as pressed just because the cursor is in a link. ([ff953e4](https://github.com/postalsys/inbox-classic/commit/ff953e4cac640395065b92c4d60a4552cd4168f0))
 ]]></description>
             <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.12.2/InboxClassic.dmg" length="10492954" type="application/octet-stream" sparkle:edSignature="nZTGUw7+hScjC1HGtkNeowcgKvzTB+QIA03VRBkz1mljOmWM1X4ZqrrIRUIJq3jiNwFMDgDP0NFGeIO4h9MmDA=="/>
-        </item>
-        <item>
-            <title>0.12.1</title>
-            <pubDate>Wed, 11 Nov 2026 15:04:54 +0200</pubDate>
-            <sparkle:version>0.12.1</sparkle:version>
-            <sparkle:shortVersionString>0.12.1</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## [0.12.1](https://github.com/postalsys/inbox-classic/compare/v0.12.0...v0.12.1) (2026-11-11)
-
-
-### Bug Fixes
-
-* **Sign-in buttons in your language:** the Sign in with Google and Sign in with Microsoft buttons of Add Mail Account now speak German, Spanish, Estonian and French, not only English. ([96f137e](https://github.com/postalsys/inbox-classic/commit/96f137e52eb43a85d8ba8dc12280d916c7e3b64c))
-* **A message not downloaded yet** no longer says so twice: the bar says when it is tried again, the page under it why it failed. ([96f137e](https://github.com/postalsys/inbox-classic/commit/96f137e52eb43a85d8ba8dc12280d916c7e3b64c))
-]]></description>
-            <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.12.1/InboxClassic.dmg" length="10409991" type="application/octet-stream" sparkle:edSignature="q6sVcoBiFg0rcghM7VX1MGOP/sLT4hw6Ie1q7S6SGCOtp/6p474b2T5JdqAZSSphaWrNGhuXhCqCWiuYFnYKAQ=="/>
         </item>
     </channel>
 </rss>
