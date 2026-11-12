@@ -16,7 +16,7 @@ On Windows it looks like a classic Windows mail program; on the Mac it is a nati
 
 ## Features
 
-- Accounts: Outlook.com and Microsoft 365 sign in on Microsoft's own page (OAuth). Gmail works with a Google app password or a Google sign-in app of the user's own. For any other address the IMAP and SMTP servers are found automatically. Several accounts share one folder tree, each with a short name of its own (Gmail, Work) that the folder list shows.
+- Accounts: Outlook.com and Microsoft 365 sign in on Microsoft's own page (OAuth). Gmail works with a Google app password or a Google sign-in app of the user's own. For any other address the IMAP and SMTP servers are found automatically. Several accounts share one folder tree, each with a short name of its own (Gmail, Work) that the folder list shows, in an order of the user's own (drag an account, or Move Up and Move Down).
 - Search: every folder at once, as you type, by subject, people, attachment names and text, with Gmail's search words (`from:`, `is:unread`, `has:attachment`). The search runs locally and works offline.
 - New mail: arrives right away (IMAP IDLE), with a notification and a count on the taskbar or the Dock, even while the window is closed.
 - Reading: mail is kept on the computer too, so it opens instantly and works offline. Long quoted reply histories fold away. All Inboxes shows the Inbox of every account in one list, with a row for each account's Inbox under it. Bounces are explained in plain words: for each address that failed or was delayed, what went wrong and what to do. A sign-in or verification code is shown in a card above the message with a Copy button, only when the provider confirms the site it is for signed the message; an option shows it in the new mail notification too.
@@ -30,6 +30,7 @@ On Windows it looks like a classic Windows mail program; on the Mac it is a nati
 ## Links
 
 - [Homepage](https://inboxclassic.com/)
+- [Help](https://inboxclassic.com/help/): the user help in short topics, in English, German, Spanish, Estonian and French, for Windows, Mac and Linux
 - [Source code on GitHub](https://github.com/postalsys/inbox-classic): MIT license, issues and discussions
 - [Privacy policy](https://inboxclassic.com/privacy): no accounts, no telemetry and no cookies; the website counts visits with self-hosted Plausible
 - [Terms of service](https://inboxclassic.com/terms)

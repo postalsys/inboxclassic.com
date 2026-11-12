@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://inboxclassic.com/sitemap.xml
+Sitemap: https://inboxclassic.com/help/sitemap.xml
