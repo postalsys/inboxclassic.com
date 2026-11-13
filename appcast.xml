@@ -3,6 +3,41 @@
     <channel>
         <title>Inbox Classic</title>
         <item>
+            <title>0.15.0</title>
+            <pubDate>Fri, 13 Nov 2026 15:25:19 +0200</pubDate>
+            <sparkle:version>0.15.0</sparkle:version>
+            <sparkle:shortVersionString>0.15.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## [0.15.0](https://github.com/postalsys/inbox-classic/compare/v0.14.2...v0.15.0) (2026-11-13)
+
+Messages open faster, on Windows, the Mac and Linux.
+
+### Features
+
+* **New mail is downloaded as it arrives**, so it opens at once, also offline. Settings (Options on Windows, Preferences on Linux) has a new Downloading section: download recent messages up to 1 MB ahead (the default), all messages, or only when opened, and how much each account keeps (1 GB to begin with; past it the oldest go, and download again when opened). Junk E-mail, Deleted Items and Gmail's All Mail are downloaded only when opened.
+* **The messages above and below the one opened are fetched too**, for Next and Previous.
+* **A large message shows its text first.** Over 1 MB, its text and pictures show before its attachments; the status bar says how far the rest is.
+* **The downloading page says how large the message is.**
+* A new app icon.
+
+### Performance Improvements
+
+* The connection that downloads opened messages is ready before the first click and kept alive; one that went dead (after sleep, a network change, or a router that forgot it) is replaced within seconds instead of after five minutes.
+* Indexing for search and threading runs on a connection of its own, so new mail no longer waits behind it.
+* A click during a large download is answered at once, and drafts and the copies of sent messages are uploaded without holding up anything else.
+* A server that allows only one connection still gets all of this done on that one.
+
+### Bug Fixes
+
+* A one-time code in a new mail notification no longer leaves an IMAP response half read.
+* A message the server refuses to give text for no longer holds up the search index of the rest.
+* A moved or archived message keeps its downloaded copy.
+* The small app icon's corners stay clear at 16 pixels.
+]]></description>
+            <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.15.0/InboxClassic.dmg" length="11723181" type="application/octet-stream" sparkle:edSignature="qIjVdD1BvApV3LG6ZPgIavy1IbczLfmvsCCyN5hqWzyK2M8OowP46eyrP3w4i4Pz9NgFyR3Oxf4hUDVU1W6UBw=="/>
+        </item>
+        <item>
             <title>0.14.2</title>
             <pubDate>Fri, 13 Nov 2026 07:39:45 +0200</pubDate>
             <sparkle:version>0.14.2</sparkle:version>
@@ -32,31 +67,6 @@
 * **Mac and Linux: a quieter pictures bar.** When the sender of a message with blocked pictures could not be confirmed, which is most mail, the bar showed a second line saying so. That note is now in the Download Pictures menu, as on Windows, and the bar keeps one line. ([72d8215](https://github.com/postalsys/inbox-classic/commit/72d82152ea25779e2f6b1be9a58c91142eb60111))
 ]]></description>
             <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.14.1/InboxClassic.dmg" length="11629777" type="application/octet-stream" sparkle:edSignature="0jmWoX1XLlROd/XhgVAisSArBDch2smxuTWX8S0qmWCcQA4oDTyncKxE0IbzJy40Y4C1jxRtxCGY7IVYdxVwBA=="/>
-        </item>
-        <item>
-            <title>0.14.0</title>
-            <pubDate>Thu, 12 Nov 2026 17:29:22 +0200</pubDate>
-            <sparkle:version>0.14.0</sparkle:version>
-            <sparkle:shortVersionString>0.14.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## [0.14.0](https://github.com/postalsys/inbox-classic/compare/v0.13.0...v0.14.0) (2026-11-12)
-
-
-### Features
-
-* **Pictures from senders you trust:** the pictures bar can always download pictures from a sender, or from everyone at their domain. They load by themselves only when your mail provider confirms the message really comes from that domain, so a forged sender still asks; never in Junk E-mail. Options lists the trusted senders, and has "Download pictures in all messages" (off unless you turn it on). ([439b663](https://github.com/postalsys/inbox-classic/commit/439b663c89058a698ae9cec6528b92d9597a55c2))
-* **Unread only:** View > Hide Read Messages, or the filter button in the toolbar, lists only unread mail in every folder. A message you read stays in the list until you leave the folder. ([05ee333](https://github.com/postalsys/inbox-classic/commit/05ee333e147f11bdee0bf70023decddbbc0cb6ec))
-* **Open .eml files:** double-click a saved message in Finder, File Explorer or your file manager and it opens in a message window, with Reply, Reply All, Forward, Print, Save As and its attachments. Options can make Inbox Classic the app for .eml files. ([b9be469](https://github.com/postalsys/inbox-classic/commit/b9be4693db87c95da53c9b6ddbc3589a50800a3d), [92eea3a](https://github.com/postalsys/inbox-classic/commit/92eea3ab21b10d5dff6f9a7f3d504091dd36b032))
-* **The help on the website** now looks like the rest of inboxclassic.com. ([46e108b](https://github.com/postalsys/inbox-classic/commit/46e108b0a1d8ed29b06bd68cbcf37c1507e29e13))
-
-
-### Bug Fixes
-
-* **Spam dated in the future no longer stays on top:** the list uses a message's date, but never later than when it arrived. ([911e35c](https://github.com/postalsys/inbox-classic/commit/911e35c07bd2bea828c55f85a7e45facd5605109))
-* **Windows:** the unread count on the taskbar button is drawn at the size of the screen. ([d028ed3](https://github.com/postalsys/inbox-classic/commit/d028ed39b0c51364a8b8cd3082e03643fa0765a7))
-]]></description>
-            <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.14.0/InboxClassic.dmg" length="11626388" type="application/octet-stream" sparkle:edSignature="4jIjMbRg+I5mIVCwMbvBmDhgtopGfnxN4B9Ia41OQCElHIOZeXgoc0/khx5yQhbEFgTaRROxxEdZ/wgrxkWiDA=="/>
         </item>
     </channel>
 </rss>
