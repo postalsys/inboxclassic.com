@@ -3,6 +3,33 @@
     <channel>
         <title>Inbox Classic</title>
         <item>
+            <title>0.16.0</title>
+            <pubDate>Sat, 14 Nov 2026 00:39:41 +0200</pubDate>
+            <sparkle:version>0.16.0</sparkle:version>
+            <sparkle:shortVersionString>0.16.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## [0.16.0](https://github.com/postalsys/inbox-classic/compare/v0.15.0...v0.16.0) (2026-11-13)
+
+A column layout for wide screens, on Windows, the Mac and Linux.
+
+### Features
+
+* **The column layout.** On a wide screen the folders, the messages and the message you read sit side by side, and each message is a row of three lines: who sent it and when, the subject, and the first words of the message, without the earlier messages it quotes. View > Layout chooses Automatic (the default: the column layout in a window 1320 wide or wider, the classic one below 1200), Classic or Columns; the same choice is in Options (Settings on the Mac, Preferences on Linux). The classic layout is unchanged.
+* **Senders' pictures** in the column layout: a brand's logo when your mail provider verified it, the picture of a contact for mail your provider confirmed comes from them, and quiet initials for everyone else. A logo is downloaded once for each brand, never for each message.
+* **A picture for each contact.** Contact Properties takes a PNG or JPEG picture, chosen or dropped on it; vCard files carry it in and out. A forged message from a contact's address shows initials, never the picture.
+* **Hide the folder list** with View > Folder List (F9, Control-Command-S on the Mac), the close box on its Folders caption on Windows, or the sidebar button on the Mac and Linux. On Windows the folder bar then drops the list down.
+* **View > Sort By** sorts by date, sender, subject or size, ascending or descending, in both layouts.
+* Plain text messages keep lines of a readable length in a wide reading pane.
+* Windows remembers the window's place and the sizes of its panes.
+
+### Bug Fixes
+
+* A conversation's row shows the first words of the message that opens when you select it.
+]]></description>
+            <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.16.0/InboxClassic.dmg" length="12222004" type="application/octet-stream" sparkle:edSignature="66rp93xZBeLRGw+BtDO6/W+gGfW46RNlthR7oKoMHXh/1r3EMjznLyxQ+HOH5E0qcckh8NDzfuSMDCNdQ1PkAQ=="/>
+        </item>
+        <item>
             <title>0.15.0</title>
             <pubDate>Fri, 13 Nov 2026 15:25:19 +0200</pubDate>
             <sparkle:version>0.15.0</sparkle:version>
@@ -51,22 +78,6 @@ Messages open faster, on Windows, the Mac and Linux.
 * **Linux:** closing the print dialog with its close button or Escape could crash the app. It now closes cleanly.
 ]]></description>
             <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.14.2/InboxClassic.dmg" length="11627615" type="application/octet-stream" sparkle:edSignature="1DglNOUY562fLmWK1FFGuD7Dig5T8T9zltFLG1jiK+df3R94TXWbY/dQqGSa+KNxHiyIFw8IuRXwZ4prOAaTCw=="/>
-        </item>
-        <item>
-            <title>0.14.1</title>
-            <pubDate>Thu, 12 Nov 2026 19:34:59 +0200</pubDate>
-            <sparkle:version>0.14.1</sparkle:version>
-            <sparkle:shortVersionString>0.14.1</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## [0.14.1](https://github.com/postalsys/inbox-classic/compare/v0.14.0...v0.14.1) (2026-11-12)
-
-
-### Bug Fixes
-
-* **Mac and Linux: a quieter pictures bar.** When the sender of a message with blocked pictures could not be confirmed, which is most mail, the bar showed a second line saying so. That note is now in the Download Pictures menu, as on Windows, and the bar keeps one line. ([72d8215](https://github.com/postalsys/inbox-classic/commit/72d82152ea25779e2f6b1be9a58c91142eb60111))
-]]></description>
-            <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.14.1/InboxClassic.dmg" length="11629777" type="application/octet-stream" sparkle:edSignature="0jmWoX1XLlROd/XhgVAisSArBDch2smxuTWX8S0qmWCcQA4oDTyncKxE0IbzJy40Y4C1jxRtxCGY7IVYdxVwBA=="/>
         </item>
     </channel>
 </rss>
