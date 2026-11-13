@@ -3,6 +3,21 @@
     <channel>
         <title>Inbox Classic</title>
         <item>
+            <title>0.14.2</title>
+            <pubDate>Fri, 13 Nov 2026 07:39:45 +0200</pubDate>
+            <sparkle:version>0.14.2</sparkle:version>
+            <sparkle:shortVersionString>0.14.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## [0.14.2](https://github.com/postalsys/inbox-classic/compare/v0.14.1...v0.14.2) (2026-11-13)
+
+### Bug Fixes
+
+* **Linux:** closing the print dialog with its close button or Escape could crash the app. It now closes cleanly.
+]]></description>
+            <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.14.2/InboxClassic.dmg" length="11627615" type="application/octet-stream" sparkle:edSignature="1DglNOUY562fLmWK1FFGuD7Dig5T8T9zltFLG1jiK+df3R94TXWbY/dQqGSa+KNxHiyIFw8IuRXwZ4prOAaTCw=="/>
+        </item>
+        <item>
             <title>0.14.1</title>
             <pubDate>Thu, 12 Nov 2026 19:34:59 +0200</pubDate>
             <sparkle:version>0.14.1</sparkle:version>
@@ -42,34 +57,6 @@
 * **Windows:** the unread count on the taskbar button is drawn at the size of the screen. ([d028ed3](https://github.com/postalsys/inbox-classic/commit/d028ed39b0c51364a8b8cd3082e03643fa0765a7))
 ]]></description>
             <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.14.0/InboxClassic.dmg" length="11626388" type="application/octet-stream" sparkle:edSignature="4jIjMbRg+I5mIVCwMbvBmDhgtopGfnxN4B9Ia41OQCElHIOZeXgoc0/khx5yQhbEFgTaRROxxEdZ/wgrxkWiDA=="/>
-        </item>
-        <item>
-            <title>0.13.0</title>
-            <pubDate>Thu, 12 Nov 2026 15:09:28 +0200</pubDate>
-            <sparkle:version>0.13.0</sparkle:version>
-            <sparkle:shortVersionString>0.13.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## [0.13.0](https://github.com/postalsys/inbox-classic/compare/v0.12.2...v0.13.0) (2026-11-12)
-
-
-### Features
-
-* **A new help:** 45 short topics in ten sections, from getting started to troubleshooting, in English, German, Spanish, Estonian and French. Every key and every control is named exactly as the app names it, on each platform. F1 opens the topic of the window you are in. ([273e537](https://github.com/postalsys/inbox-classic/commit/273e5376c0113db3cb80b137406bdf333b742a8a))
-  * **Windows:** a classic help window with Contents and Search beside the topic, Back, Forward and Print. ([705220b](https://github.com/postalsys/inbox-classic/commit/705220b769b3dfd1a0f90d6e9d14cc98400c1b4f))
-  * **Mac:** an Apple Help Book: the Help menu's search finds its topics, and dialogs have the round help button. ([52ec3a2](https://github.com/postalsys/inbox-classic/commit/52ec3a2e8109742348776834dd8f1d862c1df99d))
-  * **Linux:** a help window with search, or Yelp where it is installed. ([6d01c6b](https://github.com/postalsys/inbox-classic/commit/6d01c6ba0163168c74c18833356c4f931da75f8f))
-  * **On the web:** the same help at inboxclassic.com/help. ([314e2d2](https://github.com/postalsys/inbox-classic/commit/314e2d2a8b1e9adff7789fef92582734715ee8ad))
-* **Reorder your accounts:** drag an account, or its Inbox under All Inboxes, above or below another; All Inboxes and the folder list follow the same order. The account's menu has Move Up and Move Down. ([c439505](https://github.com/postalsys/inbox-classic/commit/c439505a26f77cd66de22d7e717fce5cdfe28c92))
-
-
-### Bug Fixes
-
-* **A message's title is no longer shown as its first line:** some HTML messages (a Stripe payout notice, for one) showed their page title above the message. ([9e0655f](https://github.com/postalsys/inbox-classic/commit/9e0655fed5d5ed5659ad49f76363feeac1facbe7))
-* **Omarchy:** a window on a floating workspace no longer shows a second close button under Omarchy's own title bar. ([51a03e4](https://github.com/postalsys/inbox-classic/commit/51a03e4884b05c1dd86dcb08819d8b17a3a3be21))
-* **The old help gave Mac users wrong keys:** it said Ctrl+Q for Mark as Read, which on the Mac is Quit. ([4e7c627](https://github.com/postalsys/inbox-classic/commit/4e7c6275b17a9a6593ec195d9d453121edfd9d5b))
-]]></description>
-            <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.13.0/InboxClassic.dmg" length="11454078" type="application/octet-stream" sparkle:edSignature="jYqq+HpLBZhTodykKbpTr7+LIGi8mzC7j6O2JHrrPqDCgetkZNqO7UJtC/JQLEt7hwiSSVvILqQq93zW3H00BA=="/>
         </item>
     </channel>
 </rss>
