@@ -3,6 +3,23 @@
     <channel>
         <title>Inbox Classic</title>
         <item>
+            <title>0.17.1</title>
+            <pubDate>Sat, 14 Nov 2026 13:45:53 +0200</pubDate>
+            <sparkle:version>0.17.1</sparkle:version>
+            <sparkle:shortVersionString>0.17.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## [0.17.1](https://github.com/postalsys/inbox-classic/compare/v0.17.0...v0.17.1) (2026-11-14)
+
+Reviewed translations.
+
+### Bug Fixes
+
+* **Clearer wording in every language.** The German, Estonian, Spanish and French translations are reviewed, and the English is plainer too: Options names the download setting a storage limit for each account, the pictures settings speak of verified sender domains, and the .eml setting of the default app. The help pages say the same.
+]]></description>
+            <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.17.1/InboxClassic.dmg" length="12219080" type="application/octet-stream" sparkle:edSignature="gg0DBsZtw+F8mrYLqC/Z9Ikbl8+hG/3vsEKMMlqbaQFpUYz5ZuzpMWf3+VjuJAsob/Y0nxUXOKZrTxyDM31kDw=="/>
+        </item>
+        <item>
             <title>0.17.0</title>
             <pubDate>Sat, 14 Nov 2026 03:24:49 +0200</pubDate>
             <sparkle:version>0.17.0</sparkle:version>
@@ -49,41 +66,6 @@ A column layout for wide screens, on Windows, the Mac and Linux.
 * A conversation's row shows the first words of the message that opens when you select it.
 ]]></description>
             <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.16.0/InboxClassic.dmg" length="12222004" type="application/octet-stream" sparkle:edSignature="66rp93xZBeLRGw+BtDO6/W+gGfW46RNlthR7oKoMHXh/1r3EMjznLyxQ+HOH5E0qcckh8NDzfuSMDCNdQ1PkAQ=="/>
-        </item>
-        <item>
-            <title>0.15.0</title>
-            <pubDate>Fri, 13 Nov 2026 15:25:19 +0200</pubDate>
-            <sparkle:version>0.15.0</sparkle:version>
-            <sparkle:shortVersionString>0.15.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## [0.15.0](https://github.com/postalsys/inbox-classic/compare/v0.14.2...v0.15.0) (2026-11-13)
-
-Messages open faster, on Windows, the Mac and Linux.
-
-### Features
-
-* **New mail is downloaded as it arrives**, so it opens at once, also offline. Settings (Options on Windows, Preferences on Linux) has a new Downloading section: download recent messages up to 1 MB ahead (the default), all messages, or only when opened, and how much each account keeps (1 GB to begin with; past it the oldest go, and download again when opened). Junk E-mail, Deleted Items and Gmail's All Mail are downloaded only when opened.
-* **The messages above and below the one opened are fetched too**, for Next and Previous.
-* **A large message shows its text first.** Over 1 MB, its text and pictures show before its attachments; the status bar says how far the rest is.
-* **The downloading page says how large the message is.**
-* A new app icon.
-
-### Performance Improvements
-
-* The connection that downloads opened messages is ready before the first click and kept alive; one that went dead (after sleep, a network change, or a router that forgot it) is replaced within seconds instead of after five minutes.
-* Indexing for search and threading runs on a connection of its own, so new mail no longer waits behind it.
-* A click during a large download is answered at once, and drafts and the copies of sent messages are uploaded without holding up anything else.
-* A server that allows only one connection still gets all of this done on that one.
-
-### Bug Fixes
-
-* A one-time code in a new mail notification no longer leaves an IMAP response half read.
-* A message the server refuses to give text for no longer holds up the search index of the rest.
-* A moved or archived message keeps its downloaded copy.
-* The small app icon's corners stay clear at 16 pixels.
-]]></description>
-            <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.15.0/InboxClassic.dmg" length="11723181" type="application/octet-stream" sparkle:edSignature="qIjVdD1BvApV3LG6ZPgIavy1IbczLfmvsCCyN5hqWzyK2M8OowP46eyrP3w4i4Pz9NgFyR3Oxf4hUDVU1W6UBw=="/>
         </item>
     </channel>
 </rss>
