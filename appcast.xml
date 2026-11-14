@@ -3,6 +3,27 @@
     <channel>
         <title>Inbox Classic</title>
         <item>
+            <title>0.17.0</title>
+            <pubDate>Sat, 14 Nov 2026 03:24:49 +0200</pubDate>
+            <sparkle:version>0.17.0</sparkle:version>
+            <sparkle:shortVersionString>0.17.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## [0.17.0](https://github.com/postalsys/inbox-classic/compare/v0.16.0...v0.17.0) (2026-11-14)
+
+Finishing touches to the column layout.
+
+### Features
+
+* **A Folders button on the Windows toolbar** shows and hides the folder list, and stays pressed while the list is shown, like the sidebar buttons on the Mac and Linux.
+* **The sorted column shows its arrow** in the Windows message list's headings, pointing up or down with the order.
+* **Watched and ignored conversations are marked** in the column layout's rows on Linux, as they are on Windows and the Mac.
+* The Windows main window keeps a size its toolbar and panes fit in.
+* The help for Options describes Layout and the pictures in the list.
+]]></description>
+            <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.17.0/InboxClassic.dmg" length="12242324" type="application/octet-stream" sparkle:edSignature="Ou/50pdxjzFTzwmTPgF0nTds/k6qK5onnNNjq0pW0GXf06amydWp/69FYgvSCQWr6ra0t7RI9hXqShrnPDe7Bw=="/>
+        </item>
+        <item>
             <title>0.16.0</title>
             <pubDate>Sat, 14 Nov 2026 00:39:41 +0200</pubDate>
             <sparkle:version>0.16.0</sparkle:version>
@@ -63,21 +84,6 @@ Messages open faster, on Windows, the Mac and Linux.
 * The small app icon's corners stay clear at 16 pixels.
 ]]></description>
             <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.15.0/InboxClassic.dmg" length="11723181" type="application/octet-stream" sparkle:edSignature="qIjVdD1BvApV3LG6ZPgIavy1IbczLfmvsCCyN5hqWzyK2M8OowP46eyrP3w4i4Pz9NgFyR3Oxf4hUDVU1W6UBw=="/>
-        </item>
-        <item>
-            <title>0.14.2</title>
-            <pubDate>Fri, 13 Nov 2026 07:39:45 +0200</pubDate>
-            <sparkle:version>0.14.2</sparkle:version>
-            <sparkle:shortVersionString>0.14.2</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## [0.14.2](https://github.com/postalsys/inbox-classic/compare/v0.14.1...v0.14.2) (2026-11-13)
-
-### Bug Fixes
-
-* **Linux:** closing the print dialog with its close button or Escape could crash the app. It now closes cleanly.
-]]></description>
-            <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.14.2/InboxClassic.dmg" length="11627615" type="application/octet-stream" sparkle:edSignature="1DglNOUY562fLmWK1FFGuD7Dig5T8T9zltFLG1jiK+df3R94TXWbY/dQqGSa+KNxHiyIFw8IuRXwZ4prOAaTCw=="/>
         </item>
     </channel>
 </rss>
