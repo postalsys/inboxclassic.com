@@ -75,34 +75,25 @@
             'read-1-html': [1086, 753],
             'account-1-form': [442, 311],
             'find-2-every-folder': [1086, 399],
-            'all-inboxes-3-accounts': [1086, 753],
             'pictures-4-list': [1086, 753],
             'write-5-new': [746, 400],
-            'agents-4-send': [602, 471],
-            'bounce-1-failed': [1086, 646],
-            'otp-1-card': [1086, 753]
+            'agents-4-send': [602, 471]
         },
         mac: {
             'read-1-html': [1100, 811],
             'account-1-form': [480, 403],
             'find-2-every-folder': [1100, 430],
-            'all-inboxes-3-accounts': [1100, 811],
             'pictures-4-list': [1100, 811],
             'write-5-new': [760, 400],
-            'agents-4-send': [560, 445],
-            'bounce-1-failed': [1100, 618],
-            'otp-1-card': [1100, 811]
+            'agents-4-send': [560, 445]
         },
         linux: {
             'read-1-html': [1250, 750],
             'account-1-form': [551, 459],
             'find-2-every-folder': [1250, 398],
-            'all-inboxes-3-accounts': [1240, 740],
             'pictures-4-list': [1240, 740],
             'write-5-new': [750, 400],
-            'agents-4-send': [528, 481],
-            'bounce-1-failed': [1250, 618],
-            'otp-1-card': [1250, 750]
+            'agents-4-send': [528, 481]
         }
     };
 
