@@ -23,6 +23,7 @@
 <li><a href="find-messages.html">Buscar mensajes</a></li>
 <li><a href="conversations.html">Conversaciones</a></li>
 <li><a href="organize-mail.html">Marcar, archivar y mover mensajes</a></li>
+<li><a href="message-rules.html">Ordenar el correo nuevo con reglas</a></li>
 <li><a href="delete-and-undo.html">Eliminar mensajes y deshacer</a></li>
 <li><a href="folders.html">Trabajar con carpetas</a></li>
 <li><a href="write-message.html">Escribir un mensaje</a></li>
@@ -93,18 +94,22 @@
 <p class="summary">Guarde un mensaje para terminarlo más tarde y vea lo que espera para enviarse.</p>
 <h2>Guardar un borrador</h2>
 <p>Haga clic en <b>Guardar</b> o pulse <kbd>Ctrl</kbd>+<kbd>S</kbd>. El mensaje se guarda en la carpeta <b>Borradores</b> de la cuenta, en el servidor. Al guardar de nuevo se sustituye la copia anterior. La barra de estado del mensaje indica cuándo se guardó.</p>
+<p>Inbox Classic también guarda el mensaje automáticamente unos segundos después de que deje de escribir, o cada treinta segundos mientras sigue escribiendo. Si Inbox Classic se cierra o el equipo se apaga de forma inesperada, los mensajes que estaba redactando se volverán a abrir la próxima vez que inicie Inbox Classic.</p>
 <p>Al cerrar un mensaje con cambios, se le pregunta si desea guardarlos:</p>
 <ul>
     <li><b>Sí</b> lo guarda en <b>Borradores</b>.</li>
-    <li><b>No</b> descarta los cambios.</li>
+    <li><b>No</b> descarta los cambios. Si el borrador solo se guardó automáticamente, también se elimina de <b>Borradores</b>.</li>
     <li><b>Cancelar</b> vuelve al mensaje.</li>
 </ul>
 <p>Para seguir escribiendo, haga doble clic en el borrador en <b>Borradores</b>. Se abre con sus destinatarios, su texto y sus archivos. Una vez enviado, el borrador se elimina.</p>
 <p>Cada mensaje que escribe es una ventana independiente, así que puede leer el correo mientras sigue abierto. Al cerrar Inbox Classic, primero se cierran los mensajes que está escribiendo, y se le pregunta por los que tienen cambios.</p>
 <h2>La Bandeja de salida</h2>
-<p><b>Enviar</b> coloca el mensaje en la Bandeja de salida y lo envía de inmediato. La barra de estado de la ventana principal indica cuándo se ha enviado.</p>
+<p><b>Enviar</b> coloca el mensaje en la Bandeja de salida. De forma predeterminada, se envía unos segundos después. Durante ese tiempo puede cancelar el envío (vea más abajo). La barra de estado de la ventana principal indica cuándo se ha enviado.</p>
 <p>Cuando un mensaje no puede salir, por ejemplo sin conexión, se queda en la Bandeja de salida. Sale con la siguiente comprobación de correo, así que no se pierde nada de lo que escribió.</p>
 <p>Para ver lo que espera, elija <b>Herramientas</b> &gt; <b>Bandeja de salida</b>. Muestra cada mensaje con el motivo por el que no salió. <b>Enviar todo ahora</b> vuelve a intentarlo enseguida, y también puede eliminar un mensaje desde allí.</p>
+<h2>Cancelar el envío de un mensaje</h2>
+<p>De forma predeterminada, después de hacer clic en <b>Enviar</b>, el mensaje espera unos segundos antes de enviarse. La barra de estado muestra una cuenta atrás. Durante ese tiempo, puede cancelar el envío haciendo clic en <b>Deshacer</b> junto a la cuenta atrás, o eligiendo <b>Edición</b> &gt; <b>Deshacer envío</b>. El mensaje se vuelve a abrir para que pueda editarlo o descartarlo. Esta opción solo está disponible mientras el mensaje esté pendiente de envío.</p>
+<p>Para cambiar el retraso o enviar los mensajes de inmediato, elija <b>Herramientas</b> &gt; <b>Opciones</b> y ajuste <b>Retraso antes de enviar</b>. Si sale de Inbox Classic mientras un mensaje está en espera, la aplicación intentará enviarlo de inmediato.</p>
 <nav class="related"><a href="write-message.html">Escribir un mensaje</a> <a href="new-mail.html">Recibir correo nuevo</a> <a href="no-connection.html">Inbox Classic no se puede conectar</a></nav>
 </main></div>
 </body>

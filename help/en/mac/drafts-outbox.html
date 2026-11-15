@@ -23,6 +23,7 @@
 <li><a href="find-messages.html">Find messages</a></li>
 <li><a href="conversations.html">Conversations</a></li>
 <li><a href="organize-mail.html">Flag, archive and move messages</a></li>
+<li><a href="message-rules.html">Sort new mail with rules</a></li>
 <li><a href="delete-and-undo.html">Delete messages and undo</a></li>
 <li><a href="folders.html">Work with folders</a></li>
 <li><a href="write-message.html">Write a message</a></li>
@@ -93,18 +94,22 @@
 <p class="summary">Save a message to finish later, and see what waits to be sent.</p>
 <h2>Save a draft</h2>
 <p>Click <b>Save</b>, or press <kbd>⌘S</kbd>. The message is kept in the account’s <b>Drafts</b> folder, on the server. Saving again replaces the earlier copy. The status bar of the message says when it was saved.</p>
+<p>Inbox Classic also saves your message automatically a few seconds after you stop typing, or every thirty seconds while you keep typing. If Inbox Classic or your computer shuts down unexpectedly, your unfinished messages reopen the next time Inbox Classic starts.</p>
 <p>Closing a message with changes asks whether to save them:</p>
 <ul>
     <li><b>Save</b> saves it in <b>Drafts</b>.</li>
-    <li><b>Don’t Save</b> throws the changes away.</li>
+    <li><b>Don’t Save</b> discards the changes. If the draft was only saved automatically, it is also removed from <b>Drafts</b>.</li>
     <li><b>Cancel</b> goes back to the message.</li>
 </ul>
 <p>To go on writing, double-click the draft in <b>Drafts</b>. It opens with its recipients, text and files. Once it is sent, the draft is removed.</p>
 <p>A message you write is a window of its own, so you can read mail while it stays open. Closing Inbox Classic first closes the messages you are writing, asking about those with changes.</p>
 <h2>The Outbox</h2>
-<p><b>Send</b> puts the message in the Outbox and sends it right away. The status bar of the main window says when it is sent.</p>
+<p><b>Send</b> puts the message in the Outbox. By default, it is sent after a few seconds. During this time you can cancel sending (see below). The status bar of the main window says when it is sent.</p>
 <p>When a message cannot go, for example without a connection, it stays in the Outbox. It goes with the next check for mail, so nothing you wrote is lost.</p>
 <p>To see what waits, choose <b>Tools</b> &gt; <b>Outbox</b>. It lists each message with why it did not go. <b>Send All Now</b> tries again at once, and you can delete a message there too.</p>
+<h2>Cancel sending a message</h2>
+<p>By default, after you click <b>Send</b>, the message waits a few seconds before it is sent. The status bar shows a countdown. During this time, click <b>Undo</b> beside the countdown, or choose <b>Edit</b> &gt; <b>Undo Send</b> to cancel sending. The message reopens for you to edit or discard. This option is only available while the message is waiting to be sent.</p>
+<p>To change the delay or send messages immediately, choose Inbox Classic &gt; <b>Settings</b> and adjust <b>Delay before sending</b>. If you quit Inbox Classic while a message is waiting, the app tries to send it immediately.</p>
 <nav class="related"><a href="write-message.html">Write a message</a> <a href="new-mail.html">Get new mail</a> <a href="no-connection.html">Inbox Classic cannot connect</a></nav>
 </main></div>
 </body>

@@ -23,6 +23,7 @@
 <li><a href="find-messages.html">Rechercher des messages</a></li>
 <li><a href="conversations.html">Conversations</a></li>
 <li><a href="organize-mail.html">Ajouter un indicateur, archiver et déplacer des messages</a></li>
+<li><a href="message-rules.html">Trier le nouveau courrier avec des règles</a></li>
 <li><a href="delete-and-undo.html">Supprimer des messages et annuler</a></li>
 <li><a href="folders.html">Travailler avec les dossiers</a></li>
 <li><a href="write-message.html">Écrire un message</a></li>
@@ -93,18 +94,22 @@
 <p class="summary">Enregistrez un message pour le terminer plus tard, et voyez ce qui attend d'être envoyé.</p>
 <h2>Enregistrer un brouillon</h2>
 <p>Cliquez sur <b>Enregistrer</b>, ou appuyez sur <kbd>⌘S</kbd>. Le message est conservé dans le dossier <b>Brouillons</b> du compte, sur le serveur. Enregistrer de nouveau remplace la copie précédente. La barre d'état du message indique quand il a été enregistré.</p>
+<p>Inbox Classic enregistre aussi votre message automatiquement, quelques secondes après une pause dans la saisie, ou toutes les trente secondes si vous continuez à écrire. Si Inbox Classic ou votre ordinateur s’arrête de façon inattendue, vos messages en cours de rédaction se rouvrent au prochain démarrage d’Inbox Classic.</p>
 <p>Quand vous fermez un message modifié, Inbox Classic demande s'il faut enregistrer les modifications :</p>
 <ul>
     <li><b>Enregistrer</b> l'enregistre dans <b>Brouillons</b>.</li>
-    <li><b>Ne pas enregistrer</b> abandonne les modifications.</li>
+    <li><b>Ne pas enregistrer</b> abandonne les modifications. Si le brouillon n’a été enregistré qu’automatiquement, il est également supprimé du dossier <b>Brouillons</b>.</li>
     <li><b>Annuler</b> revient au message.</li>
 </ul>
 <p>Pour continuer à écrire, double-cliquez sur le brouillon dans <b>Brouillons</b>. Il s'ouvre avec ses destinataires, son texte et ses fichiers. Une fois le message envoyé, le brouillon est supprimé.</p>
 <p>Un message que vous écrivez est une fenêtre à part : vous pouvez lire votre courrier pendant qu'il reste ouvert. Quand vous fermez Inbox Classic, il ferme d'abord les messages en cours de rédaction, en demandant quoi faire de ceux qui ont des modifications.</p>
 <h2>La Boîte d'envoi</h2>
-<p><b>Envoyer</b> place le message dans la Boîte d'envoi et l'envoie aussitôt. La barre d'état de la fenêtre principale indique quand il est parti.</p>
+<p><b>Envoyer</b> place le message dans la Boîte d’envoi. Par défaut, il est envoyé après quelques secondes. Pendant ce délai, vous pouvez annuler l’envoi (voir ci-dessous). La barre d'état de la fenêtre principale indique quand il est parti.</p>
 <p>Quand un message ne peut pas partir, par exemple faute de connexion, il reste dans la Boîte d'envoi. Il part à la prochaine relève du courrier : rien de ce que vous avez écrit n'est perdu.</p>
 <p>Pour voir ce qui attend, choisissez <b>Outils</b> &gt; <b>Boîte d'envoi</b>. Chaque message y est listé avec la raison pour laquelle il n'est pas parti. <b>Tout envoyer maintenant</b> réessaie aussitôt, et vous pouvez aussi y supprimer un message.</p>
+<h2>Annuler l’envoi d’un message</h2>
+<p>Par défaut, après un clic sur <b>Envoyer</b>, le message attend quelques secondes avant d’être envoyé. La barre d’état affiche un compte à rebours. Pendant ce délai, cliquez sur <b>Annuler</b> à côté du compte à rebours, ou choisissez <b>Édition</b> &gt; <b>Annuler l’envoi</b> pour annuler l’envoi. Le message se rouvre pour que vous puissiez le modifier ou l’abandonner. Cette option n’est disponible que tant que le message est en attente d’envoi.</p>
+<p>Pour modifier le délai ou envoyer les messages immédiatement, choisissez Inbox Classic &gt; <b>Réglages</b> et réglez <b>Délai avant l’envoi</b>. Si vous quittez Inbox Classic alors qu’un message est en attente, l’application tente de l’envoyer immédiatement.</p>
 <nav class="related"><a href="write-message.html">Écrire un message</a> <a href="new-mail.html">Recevoir le nouveau courrier</a> <a href="no-connection.html">Inbox Classic ne parvient pas à se connecter</a></nav>
 </main></div>
 </body>

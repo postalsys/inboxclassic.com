@@ -3,6 +3,32 @@
     <channel>
         <title>Inbox Classic</title>
         <item>
+            <title>0.18.0</title>
+            <pubDate>Sun, 15 Nov 2026 04:31:29 +0200</pubDate>
+            <sparkle:version>0.18.0</sparkle:version>
+            <sparkle:shortVersionString>0.18.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## [0.18.0](https://github.com/postalsys/inbox-classic/compare/v0.17.1...v0.18.0) (2026-11-15)
+
+Safer sending, message rules and reading comfort.
+
+### Features
+
+* **Drafts are saved as you write**, a few seconds after you stop typing and every half a minute while you go on. If Inbox Classic or your computer stops unexpectedly, the messages you were writing open again at the next start.
+* **Undo Send**: a message waits a few seconds before it goes, with a countdown and an Undo button in the status bar, and Edit > Undo takes it back. The wait is 10 seconds by default; choose 5 to 30 seconds, or none, in Options (Settings on the Mac, Preferences on Linux).
+* **A reminder when a file seems forgotten**: a message that says something is attached, with no file attached, asks before it goes. Only your own text counts, not the quoted message or your signature.
+* **Message Rules** (Tools > Message Rules) sort new Inbox mail as it arrives: a search in the search box's words, and what to do with what matches (move, mark read, flag, archive, junk, delete, or not notify). Start one from a message (Message > Create Rule from Message) or from a search (Create Rule… on the search bar). The new `list:` search word finds a mailing list's mail.
+* **Send from another address**: list your aliases in the account's properties, choose one in the compose window's From list, and a reply goes from the address the message was sent to.
+* **The Flagged folder** at the top of the folder list shows the flagged messages of all your accounts.
+* **View > Text Size** shows messages and the text you write larger or smaller, with no shortcut keys to change it by accident.
+* **Messages in dark mode** on the Mac and Linux: when the system is dark, mail as people write it is shown dark too, and so is the editor; newsletters and receipts keep their own design. A setting turns it off.
+
+### Bug Fixes
+]]></description>
+            <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.18.0/InboxClassic.dmg" length="12456545" type="application/octet-stream" sparkle:edSignature="nD6nCzvIMx1+jOWNbQzMJxLk2c8vzSJfm/YmkLErkC6PTsLKtx/4fVoB6K7Pa6sr/jQVVmXXI3dxgMI+l0mfDQ=="/>
+        </item>
+        <item>
             <title>0.17.1</title>
             <pubDate>Sat, 14 Nov 2026 13:45:53 +0200</pubDate>
             <sparkle:version>0.17.1</sparkle:version>
@@ -39,33 +65,6 @@ Finishing touches to the column layout.
 * The help for Options describes Layout and the pictures in the list.
 ]]></description>
             <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.17.0/InboxClassic.dmg" length="12242324" type="application/octet-stream" sparkle:edSignature="Ou/50pdxjzFTzwmTPgF0nTds/k6qK5onnNNjq0pW0GXf06amydWp/69FYgvSCQWr6ra0t7RI9hXqShrnPDe7Bw=="/>
-        </item>
-        <item>
-            <title>0.16.0</title>
-            <pubDate>Sat, 14 Nov 2026 00:39:41 +0200</pubDate>
-            <sparkle:version>0.16.0</sparkle:version>
-            <sparkle:shortVersionString>0.16.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## [0.16.0](https://github.com/postalsys/inbox-classic/compare/v0.15.0...v0.16.0) (2026-11-13)
-
-A column layout for wide screens, on Windows, the Mac and Linux.
-
-### Features
-
-* **The column layout.** On a wide screen the folders, the messages and the message you read sit side by side, and each message is a row of three lines: who sent it and when, the subject, and the first words of the message, without the earlier messages it quotes. View > Layout chooses Automatic (the default: the column layout in a window 1320 wide or wider, the classic one below 1200), Classic or Columns; the same choice is in Options (Settings on the Mac, Preferences on Linux). The classic layout is unchanged.
-* **Senders' pictures** in the column layout: a brand's logo when your mail provider verified it, the picture of a contact for mail your provider confirmed comes from them, and quiet initials for everyone else. A logo is downloaded once for each brand, never for each message.
-* **A picture for each contact.** Contact Properties takes a PNG or JPEG picture, chosen or dropped on it; vCard files carry it in and out. A forged message from a contact's address shows initials, never the picture.
-* **Hide the folder list** with View > Folder List (F9, Control-Command-S on the Mac), the close box on its Folders caption on Windows, or the sidebar button on the Mac and Linux. On Windows the folder bar then drops the list down.
-* **View > Sort By** sorts by date, sender, subject or size, ascending or descending, in both layouts.
-* Plain text messages keep lines of a readable length in a wide reading pane.
-* Windows remembers the window's place and the sizes of its panes.
-
-### Bug Fixes
-
-* A conversation's row shows the first words of the message that opens when you select it.
-]]></description>
-            <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.16.0/InboxClassic.dmg" length="12222004" type="application/octet-stream" sparkle:edSignature="66rp93xZBeLRGw+BtDO6/W+gGfW46RNlthR7oKoMHXh/1r3EMjznLyxQ+HOH5E0qcckh8NDzfuSMDCNdQ1PkAQ=="/>
         </item>
     </channel>
 </rss>
