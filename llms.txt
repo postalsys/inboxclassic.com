@@ -33,6 +33,7 @@ On Windows it looks like a classic Windows mail program; on the Mac it is a nati
 - [Homepage](https://inboxclassic.com/)
 - [Help](https://inboxclassic.com/help/): the user help in short topics, in English, German, Spanish, Estonian and French, for Windows, Mac and Linux
 - [Source code on GitHub](https://github.com/postalsys/inbox-classic): MIT license, issues and discussions
+- [Feedback board](https://features.inboxclassic.com): suggest features, report bugs and vote on what gets built next
 - [Privacy policy](https://inboxclassic.com/privacy): no accounts, no telemetry and no cookies; the website counts visits with self-hosted Plausible
 - [Terms of service](https://inboxclassic.com/terms)
 
