@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'">
+<title>Què pot fer un agent</title>
+<style>body{margin:16px 24px;line-height:1.5}body>:not(.web),main{max-width:42em}h1{font-size:1.6em;margin:0 0 4px}h2{font-size:1.2em;margin:1.4em 0 .4em}p.summary{font-size:1.05em;opacity:.8;margin-top:0}ol,ul{padding-left:1.6em}li{margin:.3em 0}table{border-collapse:collapse;margin:.6em 0}th,td{text-align:left;padding:4px 12px 4px 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent);vertical-align:top}kbd{font-size:.9em;border:1px solid color-mix(in srgb,currentColor 35%,transparent);border-bottom-width:2px;border-radius:4px;padding:0 4px;white-space:nowrap}aside{padding:8px 12px;margin:.8em 0}.side a[aria-current]{font-weight:700;text-decoration:none}aside.warning{border-left:4px solid #c60}img.picture{max-width:100%;height:auto;margin:.6em 0;border:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related{margin-top:1.6em;padding-top:.6em;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related a{margin-right:1.2em}p.home{margin:0 0 1em;font-size:.9em}header.bar{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;max-width:none;padding:0 0 12px;margin:0 0 20px;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}header.bar .brand{font-weight:700;text-decoration:none;margin-right:auto}header.bar a,header.bar b{margin-right:10px}.web{display:flex;gap:32px}.web .side{flex:0 0 240px;font-size:.92em}.web .side ul{padding-left:1.1em}.web main{flex:1;min-width:0}@media(max-width:700px){.web{display:block}.web .side{display:none}}body{font:10pt Tahoma,Arial,sans-serif;color:#000;background:#fff}h1,h2{color:#036}h2{border-bottom:1px solid #9ab}a{color:#03c}aside.note,aside.warning{background:#ffffe1;border:1px solid #c9c9a0}kbd{background:#f4f4f4;border-color:#999}body.windows,body.mac,body.linux{font:16px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif;margin:0;background:#f7f7fb;color:#1f2330}header.bar{max-width:1180px;margin:0 auto;padding:14px 24px;border-bottom:1px solid #e3e3ee}header.bar .brand{color:#3d4aa8;font-size:1.1em}header.bar a{color:#3d4aa8}.web{max-width:1180px;margin:0 auto;padding:24px}.web main{background:#fff;border-radius:12px;padding:28px 36px;box-shadow:0 1px 3px rgba(20,20,60,.08)}.web .side{position:sticky;top:16px;align-self:flex-start;max-height:calc(100vh - 32px);overflow:auto}.web .side a{color:#30395e;text-decoration:none}.web .side a:hover,.web main a{color:#3d4aa8}h1,h2{color:#1f2330}h2{border-bottom:none}aside.note,aside.warning{background:#f1f2fb;border:1px solid #e0e2f5;border-radius:10px}@media(prefers-color-scheme:dark){body.windows,body.mac,body.linux{background:#14151c;color:#e6e7ef}.web main{background:#1d1f29;box-shadow:none}header.bar{border-color:#2c2f3d}.web .side a{color:#c5c9e6}h1,h2{color:#e6e7ef}aside.note,aside.warning{background:#232637;border-color:#30344a}header.bar a,header.bar .brand,.web main a,.web .side a:hover{color:#9aa6ff}}</style>
+</head>
+<body class="windows">
+<header class="bar"><a class="brand" href="/">Inbox Classic</a><span class="platforms"><b>Windows</b> <a href="../mac/agents-permissions.html">Mac</a> <a href="../linux/agents-permissions.html">Linux</a></span><span class="languages"><a href="../../en/windows/agents-permissions.html" hreflang="en">English</a> <b>Català</b> <a href="../../cs/windows/agents-permissions.html" hreflang="cs">Čeština</a> <a href="../../da/windows/agents-permissions.html" hreflang="da">Dansk</a> <a href="../../de/windows/agents-permissions.html" hreflang="de">Deutsch</a> <a href="../../et/windows/agents-permissions.html" hreflang="et">Eesti</a> <a href="../../es/windows/agents-permissions.html" hreflang="es">Español</a> <a href="../../fr/windows/agents-permissions.html" hreflang="fr">Français</a> <a href="../../hr/windows/agents-permissions.html" hreflang="hr">Hrvatski</a> <a href="../../it/windows/agents-permissions.html" hreflang="it">Italiano</a> <a href="../../lv/windows/agents-permissions.html" hreflang="lv">Latviešu</a> <a href="../../lt/windows/agents-permissions.html" hreflang="lt">Lietuvių</a> <a href="../../hu/windows/agents-permissions.html" hreflang="hu">Magyar</a> <a href="../../nl/windows/agents-permissions.html" hreflang="nl">Nederlands</a> <a href="../../nb/windows/agents-permissions.html" hreflang="nb">Norsk bokmål</a> <a href="../../pl/windows/agents-permissions.html" hreflang="pl">Polski</a> <a href="../../pt-BR/windows/agents-permissions.html" hreflang="pt-BR">Português (Brasil)</a> <a href="../../pt/windows/agents-permissions.html" hreflang="pt">Português (Portugal)</a> <a href="../../ro/windows/agents-permissions.html" hreflang="ro">Română</a> <a href="../../sk/windows/agents-permissions.html" hreflang="sk">Slovenčina</a> <a href="../../sl/windows/agents-permissions.html" hreflang="sl">Slovenščina</a> <a href="../../sr-Latn/windows/agents-permissions.html" hreflang="sr-Latn">Srpski</a> <a href="../../fi/windows/agents-permissions.html" hreflang="fi">Suomi</a> <a href="../../sv/windows/agents-permissions.html" hreflang="sv">Svenska</a> <a href="../../tr/windows/agents-permissions.html" hreflang="tr">Türkçe</a> <a href="../../el/windows/agents-permissions.html" hreflang="el">Ελληνικά</a> <a href="../../bg/windows/agents-permissions.html" hreflang="bg">Български</a> <a href="../../ru/windows/agents-permissions.html" hreflang="ru">Русский</a> <a href="../../uk/windows/agents-permissions.html" hreflang="uk">Українська</a></span></header>
+<div class="web"><nav class="side"><nav class="contents">
+<h2>Primers passos</h2>
+<ul>
+<li><a href="add-account.html">Afegir un compte de correu</a></li>
+<li><a href="gmail-outlook.html">Gmail i Outlook.com</a></li>
+<li><a href="main-window.html">La finestra principal</a></li>
+<li><a href="layouts.html">Disposicions</a></li>
+</ul>
+<h2>Tasques habituals</h2>
+<ul>
+<li><a href="read-messages.html">Llegir missatges</a></li>
+<li><a href="find-messages.html">Cercar missatges</a></li>
+<li><a href="conversations.html">Converses</a></li>
+<li><a href="organize-mail.html">Marcar amb bandera, arxivar i moure missatges</a></li>
+<li><a href="message-rules.html">Organitzar el correu nou amb regles</a></li>
+<li><a href="delete-and-undo.html">Suprimir missatges i desfer</a></li>
+<li><a href="folders.html">Treballar amb carpetes</a></li>
+<li><a href="write-message.html">Escriure un missatge</a></li>
+<li><a href="reply-forward.html">Respondre i reenviar</a></li>
+<li><a href="attachments.html">Fitxers adjunts</a></li>
+<li><a href="drafts-outbox.html">Esborranys i la Safata de sortida</a></li>
+<li><a href="signatures.html">Signatures</a></li>
+<li><a href="address-book.html">La Llibreta d’adreces</a></li>
+<li><a href="save-print-import.html">Desar, imprimir i importar missatges</a></li>
+<li><a href="new-mail.html">Rebre correu nou</a></li>
+</ul>
+<h2>Diversos comptes</h2>
+<ul>
+<li><a href="all-inboxes.html">Totes les safates d’entrada</a></li>
+<li><a href="manage-accounts.html">Canviar, ordenar i suprimir comptes</a></li>
+<li><a href="move-computer.html">Passar a un altre ordinador</a></li>
+</ul>
+<h2>Funcions dels missatges</h2>
+<ul>
+<li><a href="sign-in-codes.html">Codis d’inici de sessió</a></li>
+<li><a href="delivery-problems.html">Missatges que no s’han lliurat</a></li>
+<li><a href="invitations.html">Invitacions de calendari</a></li>
+<li><a href="unsubscribe.html">Sortir d’una llista de correu</a></li>
+<li><a href="brand-logos.html">Logotips de marca</a></li>
+</ul>
+<h2>Correu xifrat i signat</h2>
+<ul>
+<li><a href="encrypted-and-signed-mail.html">Correu xifrat i signat</a></li>
+<li><a href="sign-and-encrypt.html">Signar i xifrar un missatge</a></li>
+<li><a href="encryption-keys.html">Claus de xifratge</a></li>
+<li><a href="verify-a-key.html">Verificar la clau d’un contacte</a></li>
+</ul>
+<h2>Configuració</h2>
+<ul>
+<li><a href="options-language.html">Configuració</a></li>
+<li><a href="download-ahead.html">Missatges baixats per endavant</a></li>
+<li><a href="account-security.html">Configuració de seguretat del compte</a></li>
+<li><a href="default-mail-program.html">Definir Inbox Classic com a aplicació de correu predeterminada</a></li>
+<li><a href="updates.html">Actualitzar Inbox Classic</a></li>
+</ul>
+<h2>Agents d’IA</h2>
+<ul>
+<li><a href="agents-connect.html">Connectar un agent d’IA</a></li>
+<li><a href="agents-permissions.html" aria-current="page">Què pot fer un agent</a></li>
+<li><a href="agents-sending.html">Quan un agent envia correu</a></li>
+</ul>
+<h2>Referència</h2>
+<ul>
+<li><a href="keyboard-shortcuts.html">Dreceres de teclat</a></li>
+<li><a href="search-words.html">Operadors de cerca</a></li>
+</ul>
+<h2>Resolució de problemes</h2>
+<ul>
+<li><a href="password-not-accepted.html">No s’accepta la contrasenya</a></li>
+<li><a href="certificate-errors.html">Errors de certificat</a></li>
+<li><a href="encryption-errors.html">Errors de xifratge</a></li>
+<li><a href="no-connection.html">Inbox Classic no es pot connectar</a></li>
+<li><a href="message-not-shown.html">No es mostra un missatge</a></li>
+</ul>
+<h2>Privadesa i seguretat</h2>
+<ul>
+<li><a href="pictures-tracking.html">Imatges i rastreig</a></li>
+<li><a href="links-scripts.html">Enllaços, scripts i fitxers adjunts</a></li>
+<li><a href="data-storage.html">On es guarden el correu i les contrasenyes</a></li>
+<li><a href="connections.html">Les connexions que fa Inbox Classic</a></li>
+<li><a href="removing.html">Desinstal·lar Inbox Classic</a></li>
+</ul>
+<h2>Avançat</h2>
+<ul>
+<li><a href="sign-in-apps.html">Aplicacions d’inici de sessió</a></li>
+<li><a href="command-line.html">Opcions de la línia d’ordres</a></li>
+</ul>
+</nav>
+</nav><main>
+<h1>Què pot fer un agent</h1>
+<p class="summary">Trieu què pot fer cada agent d’IA amb el vostre correu, consulteu-ne l’activitat i desfeu-ne els canvis.</p>
+<p>La primera vegada que es connecta l’agent d’un programa, Inbox Classic demana autorització i mostra el nom del programa. Trieu què pot fer:</p>
+<ul>
+    <li>llegir el correu: consultar carpetes, llistes, missatges i converses, cercar missatges, consultar regles i cercar persones per nom o adreça. Pot llegir fitxers de text de fins a 256 KiB, i fitxers PDF, formats d’Office admesos i imatges PNG, JPEG, GIF o WebP de fins a 10 MB</li>
+    <li>organitzar el correu: canviar l’estat de lectura, les banderes i els seus colors, gestionar el correu brossa, moure i arxivar missatges, crear carpetes, canviar el nom de les vostres carpetes, seguir i ignorar converses, suprimir missatges (movent-los a la carpeta <b>Elements suprimits</b>), aplicar les operacions de missatge compatibles als resultats d’una cerca i cancel·lar subscripcions a llistes de correu amb la vostra autorització</li>
+    <li>escriure esborranys perquè els envieu vós i modificar o descartar els esborranys creats pel mateix agent, mentre no els deseu</li>
+    <li>enviar correu, amb la vostra aprovació per a cada missatge</li>
+</ul>
+<p>Després trieu els comptes que pot veure i feu clic a <b>Permet</b>. <b>No ho permetis</b> rebutja el programa, i no se us tornarà a demanar autorització per a aquest programa.</p>
+<p>Un agent només pot suprimir definitivament els esborranys que ha creat i que encara no heu desat. No canvia la configuració dels vostres comptes. Pot consultar les regles de missatges i veure a quins missatges s’aplicarien, sense modificar aquests missatges. No pot crear, modificar ni suprimir regles. Mai no llegeix el contingut ni els fitxers adjunts d’un missatge xifrat. Llegir un missatge no el marca com a llegit. Els canvis de l’agent es mostren de seguida a les finestres. Desar un esborrany, també automàticament, posa fi a l’accés de l’agent a aquell esborrany.</p>
+<h2>Cancel·lar subscripcions a llistes de correu</h2>
+<p>Un agent autoritzat a organitzar el correu pot proposar-vos de cancel·lar subscripcions a llistes de correu. Inbox Classic mostra les adreces dels remitents i demana una sola confirmació per a totes les llistes seleccionades:</p>
+<ul>
+    <li><b>Cancel·la la subscripció</b> demana a les llistes seleccionades que deixin d’enviar-vos missatges.</li>
+    <li><b>No cancel·lis la subscripció</b> és l’opció predeterminada i no envia cap sol·licitud de cancel·lació.</li>
+</ul>
+<p>Un agent no pot fer servir missatges de la carpeta <b>Correu brossa</b> per cancel·lar subscripcions. Per a cada programa, el límit és de 30 sol·licituds de cancel·lació autoritzades per vós durant les últimes 24 hores. Les sol·licituds que fallen també compten per a aquest límit.</p>
+<h2>Canviar molts missatges alhora</h2>
+<p>Un agent autoritzat pot aplicar canvis d’estat de lectura, bandera o color, trasllats, arxivament, correu brossa o supressió a resultats d’una cerca. Primer se’n fixa el conjunt i se’n mostra una mostra. En aplicar els canvis, se’n comprova de nou l’estat i s’ometen els missatges que ja no compleixen les condicions; no s’hi afegeix el correu arribat després. Si hi ha més de 1.000 missatges aptes o cal examinar-ne més de 10.000, l’operació es rebutja. S’utilitza el permís d’organització ja concedit, sense una confirmació addicional. El registre ho agrupa en una entrada, com ara «Ha marcat 37 missatges com a llegits (cerca: from:news)». Desfer aquesta entrada pot restaurar només una part dels missatges.</p>
+<h2>Veure i canviar l’accés</h2>
+<p><b>Eines</b> &gt; <b>Agents d’IA</b> mostra els programes als quals heu permès o denegat l’accés, i tot el que han fet els agents, del més nou al més antic.</p>
+<p>El que llegeix un agent apareix en una fila per programa i hora, com ara «Ha llegit 14 missatges i ha cercat 3 vegades». Seleccioneu la fila per veure els assumptes, noms de fitxers, cerques i llistes consultades, però no el text dels missatges. Les entrades caduquen en afegir-ne de noves, al cap d’un màxim de 30 dies; algunes entrades ordinàries es poden eliminar abans. Esborrar l’historial no reinicia els límits d’enviament ni de cancel·lació de subscripcions.</p>
+<ul>
+    <li>El botó <b>Canvia</b> canvia què pot fer un programa.</li>
+    <li>El botó <b>Elimina</b> elimina els permisos i l’historial del programa, sense desinstal·lar-lo. La propera vegada que es connecti, caldrà tornar-ne a autoritzar l’accés.</li>
+    <li>El botó <b>Desfés</b> desfà els canvis en l’estat de lectura, les banderes i els seus colors, i la classificació com a correu brossa, així com els trasllats, els arxivaments i les supressions de missatges. També permet cancel·lar l’enviament de missatges que encara són a la Safata de sortida.</li>
+    <li>El botó <b>Desfés des de</b> intenta desfer els canvis del programa seleccionat durant el període que trieu, com ara l’última hora, del més nou al més antic.</li>
+</ul>
+<p>En desfer canvis, s’ometen els missatges que ja no són a la ubicació o en l’estat esperats. Una entrada del registre compta com a desfeta encara que només se n’hagi pogut desfer una part. Un agent pot desfer els seus propis canvis, però mai els d’un altre programa.</p>
+<aside class="warning">El correu l’escriuen altres persones, i un missatge pot intentar convèncer un agent perquè reenviï o suprimeixi el vostre correu. Inbox Classic oculta als agents el text que no veieu al missatge i els indica que el contingut del correu no s’ha de tractar com a instruccions. Tot i així, un agent es pot deixar enganyar. Permeteu només el que necessiteu.</aside>
+<nav class="related"><a href="agents-connect.html">Connectar un agent d’IA</a> <a href="agents-sending.html">Quan un agent envia correu</a> <a href="data-storage.html">On es guarden el correu i les contrasenyes</a></nav>
+</main></div>
+</body>
+</html>

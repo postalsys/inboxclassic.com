@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'">
+<title>İleti bulma</title>
+<style>body{margin:16px 24px;line-height:1.5}body>:not(.web),main{max-width:42em}h1{font-size:1.6em;margin:0 0 4px}h2{font-size:1.2em;margin:1.4em 0 .4em}p.summary{font-size:1.05em;opacity:.8;margin-top:0}ol,ul{padding-left:1.6em}li{margin:.3em 0}table{border-collapse:collapse;margin:.6em 0}th,td{text-align:left;padding:4px 12px 4px 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent);vertical-align:top}kbd{font-size:.9em;border:1px solid color-mix(in srgb,currentColor 35%,transparent);border-bottom-width:2px;border-radius:4px;padding:0 4px;white-space:nowrap}aside{padding:8px 12px;margin:.8em 0}.side a[aria-current]{font-weight:700;text-decoration:none}aside.warning{border-left:4px solid #c60}img.picture{max-width:100%;height:auto;margin:.6em 0;border:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related{margin-top:1.6em;padding-top:.6em;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related a{margin-right:1.2em}p.home{margin:0 0 1em;font-size:.9em}header.bar{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;max-width:none;padding:0 0 12px;margin:0 0 20px;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}header.bar .brand{font-weight:700;text-decoration:none;margin-right:auto}header.bar a,header.bar b{margin-right:10px}.web{display:flex;gap:32px}.web .side{flex:0 0 240px;font-size:.92em}.web .side ul{padding-left:1.1em}.web main{flex:1;min-width:0}@media(max-width:700px){.web{display:block}.web .side{display:none}}body{font:10pt Tahoma,Arial,sans-serif;color:#000;background:#fff}h1,h2{color:#036}h2{border-bottom:1px solid #9ab}a{color:#03c}aside.note,aside.warning{background:#ffffe1;border:1px solid #c9c9a0}kbd{background:#f4f4f4;border-color:#999}body.windows,body.mac,body.linux{font:16px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif;margin:0;background:#f7f7fb;color:#1f2330}header.bar{max-width:1180px;margin:0 auto;padding:14px 24px;border-bottom:1px solid #e3e3ee}header.bar .brand{color:#3d4aa8;font-size:1.1em}header.bar a{color:#3d4aa8}.web{max-width:1180px;margin:0 auto;padding:24px}.web main{background:#fff;border-radius:12px;padding:28px 36px;box-shadow:0 1px 3px rgba(20,20,60,.08)}.web .side{position:sticky;top:16px;align-self:flex-start;max-height:calc(100vh - 32px);overflow:auto}.web .side a{color:#30395e;text-decoration:none}.web .side a:hover,.web main a{color:#3d4aa8}h1,h2{color:#1f2330}h2{border-bottom:none}aside.note,aside.warning{background:#f1f2fb;border:1px solid #e0e2f5;border-radius:10px}@media(prefers-color-scheme:dark){body.windows,body.mac,body.linux{background:#14151c;color:#e6e7ef}.web main{background:#1d1f29;box-shadow:none}header.bar{border-color:#2c2f3d}.web .side a{color:#c5c9e6}h1,h2{color:#e6e7ef}aside.note,aside.warning{background:#232637;border-color:#30344a}header.bar a,header.bar .brand,.web main a,.web .side a:hover{color:#9aa6ff}}</style>
+</head>
+<body class="windows">
+<header class="bar"><a class="brand" href="/">Inbox Classic</a><span class="platforms"><b>Windows</b> <a href="../mac/find-messages.html">Mac</a> <a href="../linux/find-messages.html">Linux</a></span><span class="languages"><a href="../../en/windows/find-messages.html" hreflang="en">English</a> <a href="../../ca/windows/find-messages.html" hreflang="ca">Català</a> <a href="../../cs/windows/find-messages.html" hreflang="cs">Čeština</a> <a href="../../da/windows/find-messages.html" hreflang="da">Dansk</a> <a href="../../de/windows/find-messages.html" hreflang="de">Deutsch</a> <a href="../../et/windows/find-messages.html" hreflang="et">Eesti</a> <a href="../../es/windows/find-messages.html" hreflang="es">Español</a> <a href="../../fr/windows/find-messages.html" hreflang="fr">Français</a> <a href="../../hr/windows/find-messages.html" hreflang="hr">Hrvatski</a> <a href="../../it/windows/find-messages.html" hreflang="it">Italiano</a> <a href="../../lv/windows/find-messages.html" hreflang="lv">Latviešu</a> <a href="../../lt/windows/find-messages.html" hreflang="lt">Lietuvių</a> <a href="../../hu/windows/find-messages.html" hreflang="hu">Magyar</a> <a href="../../nl/windows/find-messages.html" hreflang="nl">Nederlands</a> <a href="../../nb/windows/find-messages.html" hreflang="nb">Norsk bokmål</a> <a href="../../pl/windows/find-messages.html" hreflang="pl">Polski</a> <a href="../../pt-BR/windows/find-messages.html" hreflang="pt-BR">Português (Brasil)</a> <a href="../../pt/windows/find-messages.html" hreflang="pt">Português (Portugal)</a> <a href="../../ro/windows/find-messages.html" hreflang="ro">Română</a> <a href="../../sk/windows/find-messages.html" hreflang="sk">Slovenčina</a> <a href="../../sl/windows/find-messages.html" hreflang="sl">Slovenščina</a> <a href="../../sr-Latn/windows/find-messages.html" hreflang="sr-Latn">Srpski</a> <a href="../../fi/windows/find-messages.html" hreflang="fi">Suomi</a> <a href="../../sv/windows/find-messages.html" hreflang="sv">Svenska</a> <b>Türkçe</b> <a href="../../el/windows/find-messages.html" hreflang="el">Ελληνικά</a> <a href="../../bg/windows/find-messages.html" hreflang="bg">Български</a> <a href="../../ru/windows/find-messages.html" hreflang="ru">Русский</a> <a href="../../uk/windows/find-messages.html" hreflang="uk">Українська</a></span></header>
+<div class="web"><nav class="side"><nav class="contents">
+<h2>Başlarken</h2>
+<ul>
+<li><a href="add-account.html">Posta hesabı ekleme</a></li>
+<li><a href="gmail-outlook.html">Gmail ve Outlook.com</a></li>
+<li><a href="main-window.html">Ana pencere</a></li>
+<li><a href="layouts.html">Pencere yerleşimleri</a></li>
+</ul>
+<h2>Günlük işler</h2>
+<ul>
+<li><a href="read-messages.html">İletileri okuma</a></li>
+<li><a href="find-messages.html" aria-current="page">İleti bulma</a></li>
+<li><a href="conversations.html">Konuşmalar</a></li>
+<li><a href="organize-mail.html">İletilere bayrak koyma, arşivleme ve taşıma</a></li>
+<li><a href="message-rules.html">Yeni postaları kurallarla düzenleme</a></li>
+<li><a href="delete-and-undo.html">İletileri silme ve geri alma</a></li>
+<li><a href="folders.html">Klasörlerle çalışma</a></li>
+<li><a href="write-message.html">İleti yazma</a></li>
+<li><a href="reply-forward.html">Yanıtlama ve iletme</a></li>
+<li><a href="attachments.html">Ekler</a></li>
+<li><a href="drafts-outbox.html">Taslaklar ve Giden Kutusu</a></li>
+<li><a href="signatures.html">İmzalar</a></li>
+<li><a href="address-book.html">Adres Defteri</a></li>
+<li><a href="save-print-import.html">İletileri kaydetme, yazdırma ve içe aktarma</a></li>
+<li><a href="new-mail.html">Yeni postaları alma</a></li>
+</ul>
+<h2>Birden fazla hesap</h2>
+<ul>
+<li><a href="all-inboxes.html">Tüm Gelen Kutuları</a></li>
+<li><a href="manage-accounts.html">Hesapları düzenleme, sıralama ve kaldırma</a></li>
+<li><a href="move-computer.html">Başka bir bilgisayara taşıma</a></li>
+</ul>
+<h2>İleti özellikleri</h2>
+<ul>
+<li><a href="sign-in-codes.html">Oturum açma kodları</a></li>
+<li><a href="delivery-problems.html">Teslim edilemeyen iletiler</a></li>
+<li><a href="invitations.html">Takvim davetleri</a></li>
+<li><a href="unsubscribe.html">Posta listesi aboneliğinden çıkma</a></li>
+<li><a href="brand-logos.html">Marka logoları</a></li>
+</ul>
+<h2>Şifreli ve imzalı posta</h2>
+<ul>
+<li><a href="encrypted-and-signed-mail.html">Şifreli ve imzalı postalar</a></li>
+<li><a href="sign-and-encrypt.html">İletiyi imzalama ve şifreleme</a></li>
+<li><a href="encryption-keys.html">Şifreleme anahtarları</a></li>
+<li><a href="verify-a-key.html">Bir kişinin anahtarını doğrulama</a></li>
+</ul>
+<h2>Ayarlar</h2>
+<ul>
+<li><a href="options-language.html">Ayarlar</a></li>
+<li><a href="download-ahead.html">İletileri önceden indirme</a></li>
+<li><a href="account-security.html">Hesap güvenlik ayarları</a></li>
+<li><a href="default-mail-program.html">Inbox Classic'i varsayılan posta uygulaması yapma</a></li>
+<li><a href="updates.html">Inbox Classic'i güncelleme</a></li>
+</ul>
+<h2>Yapay zeka aracıları</h2>
+<ul>
+<li><a href="agents-connect.html">Yapay zeka aracısı bağlama</a></li>
+<li><a href="agents-permissions.html">Bir aracının yapabilecekleri</a></li>
+<li><a href="agents-sending.html">Bir aracı posta gönderdiğinde</a></li>
+</ul>
+<h2>Başvuru</h2>
+<ul>
+<li><a href="keyboard-shortcuts.html">Klavye kısayolları</a></li>
+<li><a href="search-words.html">Arama ifadeleri</a></li>
+</ul>
+<h2>Sorun giderme</h2>
+<ul>
+<li><a href="password-not-accepted.html">Parola kabul edilmiyor</a></li>
+<li><a href="certificate-errors.html">Sertifika hataları</a></li>
+<li><a href="encryption-errors.html">Şifreleme hataları</a></li>
+<li><a href="no-connection.html">Inbox Classic bağlanamıyor</a></li>
+<li><a href="message-not-shown.html">Bir ileti gösterilmiyor</a></li>
+</ul>
+<h2>Gizlilik ve güvenlik</h2>
+<ul>
+<li><a href="pictures-tracking.html">Resimler ve izleme</a></li>
+<li><a href="links-scripts.html">Bağlantılar, betikler ve ekler</a></li>
+<li><a href="data-storage.html">Postanızın ve parolalarınızın saklandığı yer</a></li>
+<li><a href="connections.html">Inbox Classic'in kurduğu bağlantılar</a></li>
+<li><a href="removing.html">Inbox Classic'i kaldırma</a></li>
+</ul>
+<h2>Gelişmiş</h2>
+<ul>
+<li><a href="sign-in-apps.html">Oturum açma uygulamaları</a></li>
+<li><a href="command-line.html">Komut satırı seçenekleri</a></li>
+</ul>
+</nav>
+</nav><main>
+<h1>İleti bulma</h1>
+<p class="summary">Yazarken tüm hesaplarınızdaki klasörlerde aynı anda arama yapın.</p>
+<p>Bir iletiyi bulmak için:</p>
+<ol>
+    <li>Araç çubuğunun sağındaki arama kutusuna tıklayın veya <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd> tuşlarına basın.</li>
+    <li>İletideki bir sözcüğü yazın. Eşleşen iletiler tüm klasörlerden listelenir. Her iletinin konumunu <b>Klasör</b> sütununda görebilirsiniz.</li>
+    <li>Okumak için bir sonucu seçin. Yanıtlama, silme, taşıma ve bayrak koyma, ileti kendi klasöründeymiş gibi çalışır.</li>
+</ol>
+<p>Listenin üstündeki bir çubuk, arama sözcüklerini ve bulunan ileti sayısını gösterir.</p>
+<p>Arama; konuda, gönderen ve alıcılarda, ekli dosya adlarında ve ileti metninde yapılır. Sözcükler başlarından eşleşir, yani <code>büt</code> araması <i>bütçe</i> sözcüğünü bulur. Önek eşleştirmesi için en az iki karakter gerekir; tek karakter yalnızca tam bir sözcükle eşleşir. Arama, büyük ve küçük harfleri veya harflerin üzerindeki işaretleri ayırt etmez.</p>
+<p>Aramayı bitirip klasörü yeniden görmek için <kbd>Esc</kbd> tuşuna basın, <b>Aramayı temizle</b> düğmesine tıklayın, arama kutusunu boşaltın veya bir klasör seçin.</p>
+<p>Örneğin yalnızca okunmamış iletileri veya yalnızca bir kişiden gelen postaları aramak gibi daha kesin aramalar için <code>from:</code> ve <code>is:unread</code> gibi arama ifadelerini kullanın. Örnekleri görmek için fareyi arama kutusunun üzerine getirin.</p>
+<aside class="note">Arama yerel dizini kullandığı için çevrimdışı da çalışır; yalnızca bu bilgisayarda dizinlenmiş içerik bulunabilir. Inbox Classic, en yeni iletilerden başlayarak ileti metinlerini arka planda dizinler. Bu işlem iletileri okundu olarak işaretlemez. Eşitlemeden sonra konu, gönderen, alıcı ve mevcut ek adlarıyla arama yapabilirsiniz. İleti metinleri dizinlendikçe içerik aramalarında da bulunur. Şifreli metinlerde arama için şifreli e-posta araması da açık olmalı ve kullanılabilir şifre çözme anahtarları bulunmalıdır.</aside>
+<nav class="related"><a href="search-words.html">Arama ifadeleri</a> <a href="conversations.html">Konuşmalar</a> <a href="read-messages.html">İletileri okuma</a></nav>
+</main></div>
+</body>
+</html>

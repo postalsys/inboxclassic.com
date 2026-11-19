@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'">
+<title>Operadores de pesquisa</title>
+<style>body{margin:16px 24px;line-height:1.5}body>:not(.web),main{max-width:42em}h1{font-size:1.6em;margin:0 0 4px}h2{font-size:1.2em;margin:1.4em 0 .4em}p.summary{font-size:1.05em;opacity:.8;margin-top:0}ol,ul{padding-left:1.6em}li{margin:.3em 0}table{border-collapse:collapse;margin:.6em 0}th,td{text-align:left;padding:4px 12px 4px 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent);vertical-align:top}kbd{font-size:.9em;border:1px solid color-mix(in srgb,currentColor 35%,transparent);border-bottom-width:2px;border-radius:4px;padding:0 4px;white-space:nowrap}aside{padding:8px 12px;margin:.8em 0}.side a[aria-current]{font-weight:700;text-decoration:none}aside.warning{border-left:4px solid #c60}img.picture{max-width:100%;height:auto;margin:.6em 0;border:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related{margin-top:1.6em;padding-top:.6em;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related a{margin-right:1.2em}p.home{margin:0 0 1em;font-size:.9em}header.bar{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;max-width:none;padding:0 0 12px;margin:0 0 20px;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}header.bar .brand{font-weight:700;text-decoration:none;margin-right:auto}header.bar a,header.bar b{margin-right:10px}.web{display:flex;gap:32px}.web .side{flex:0 0 240px;font-size:.92em}.web .side ul{padding-left:1.1em}.web main{flex:1;min-width:0}@media(max-width:700px){.web{display:block}.web .side{display:none}}:root{color-scheme:light dark}body{font:13px -apple-system,BlinkMacSystemFont,sans-serif;color:CanvasText;background:Canvas}a{color:LinkText}aside.note,aside.warning{background:color-mix(in srgb,CanvasText 6%,Canvas);border-radius:8px}kbd{font-family:-apple-system,sans-serif}body.windows,body.mac,body.linux{font:16px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif;margin:0;background:#f7f7fb;color:#1f2330}header.bar{max-width:1180px;margin:0 auto;padding:14px 24px;border-bottom:1px solid #e3e3ee}header.bar .brand{color:#3d4aa8;font-size:1.1em}header.bar a{color:#3d4aa8}.web{max-width:1180px;margin:0 auto;padding:24px}.web main{background:#fff;border-radius:12px;padding:28px 36px;box-shadow:0 1px 3px rgba(20,20,60,.08)}.web .side{position:sticky;top:16px;align-self:flex-start;max-height:calc(100vh - 32px);overflow:auto}.web .side a{color:#30395e;text-decoration:none}.web .side a:hover,.web main a{color:#3d4aa8}h1,h2{color:#1f2330}h2{border-bottom:none}aside.note,aside.warning{background:#f1f2fb;border:1px solid #e0e2f5;border-radius:10px}@media(prefers-color-scheme:dark){body.windows,body.mac,body.linux{background:#14151c;color:#e6e7ef}.web main{background:#1d1f29;box-shadow:none}header.bar{border-color:#2c2f3d}.web .side a{color:#c5c9e6}h1,h2{color:#e6e7ef}aside.note,aside.warning{background:#232637;border-color:#30344a}header.bar a,header.bar .brand,.web main a,.web .side a:hover{color:#9aa6ff}}</style>
+</head>
+<body class="mac">
+<header class="bar"><a class="brand" href="/">Inbox Classic</a><span class="platforms"><a href="../windows/search-words.html">Windows</a> <b>Mac</b> <a href="../linux/search-words.html">Linux</a></span><span class="languages"><a href="../../en/mac/search-words.html" hreflang="en">English</a> <a href="../../ca/mac/search-words.html" hreflang="ca">Català</a> <a href="../../cs/mac/search-words.html" hreflang="cs">Čeština</a> <a href="../../da/mac/search-words.html" hreflang="da">Dansk</a> <a href="../../de/mac/search-words.html" hreflang="de">Deutsch</a> <a href="../../et/mac/search-words.html" hreflang="et">Eesti</a> <a href="../../es/mac/search-words.html" hreflang="es">Español</a> <a href="../../fr/mac/search-words.html" hreflang="fr">Français</a> <a href="../../hr/mac/search-words.html" hreflang="hr">Hrvatski</a> <a href="../../it/mac/search-words.html" hreflang="it">Italiano</a> <a href="../../lv/mac/search-words.html" hreflang="lv">Latviešu</a> <a href="../../lt/mac/search-words.html" hreflang="lt">Lietuvių</a> <a href="../../hu/mac/search-words.html" hreflang="hu">Magyar</a> <a href="../../nl/mac/search-words.html" hreflang="nl">Nederlands</a> <a href="../../nb/mac/search-words.html" hreflang="nb">Norsk bokmål</a> <a href="../../pl/mac/search-words.html" hreflang="pl">Polski</a> <b>Português (Brasil)</b> <a href="../../pt/mac/search-words.html" hreflang="pt">Português (Portugal)</a> <a href="../../ro/mac/search-words.html" hreflang="ro">Română</a> <a href="../../sk/mac/search-words.html" hreflang="sk">Slovenčina</a> <a href="../../sl/mac/search-words.html" hreflang="sl">Slovenščina</a> <a href="../../sr-Latn/mac/search-words.html" hreflang="sr-Latn">Srpski</a> <a href="../../fi/mac/search-words.html" hreflang="fi">Suomi</a> <a href="../../sv/mac/search-words.html" hreflang="sv">Svenska</a> <a href="../../tr/mac/search-words.html" hreflang="tr">Türkçe</a> <a href="../../el/mac/search-words.html" hreflang="el">Ελληνικά</a> <a href="../../bg/mac/search-words.html" hreflang="bg">Български</a> <a href="../../ru/mac/search-words.html" hreflang="ru">Русский</a> <a href="../../uk/mac/search-words.html" hreflang="uk">Українська</a></span></header>
+<div class="web"><nav class="side"><nav class="contents">
+<h2>Primeiros passos</h2>
+<ul>
+<li><a href="add-account.html">Adicionar uma conta de e-mail</a></li>
+<li><a href="gmail-outlook.html">Gmail e Outlook.com</a></li>
+<li><a href="main-window.html">A janela principal</a></li>
+<li><a href="layouts.html">Layouts</a></li>
+</ul>
+<h2>Tarefas do dia a dia</h2>
+<ul>
+<li><a href="read-messages.html">Ler mensagens</a></li>
+<li><a href="find-messages.html">Localizar mensagens</a></li>
+<li><a href="conversations.html">Conversas</a></li>
+<li><a href="organize-mail.html">Sinalizar, arquivar e mover mensagens</a></li>
+<li><a href="message-rules.html">Organizar os e-mails novos com regras</a></li>
+<li><a href="delete-and-undo.html">Excluir mensagens e desfazer</a></li>
+<li><a href="folders.html">Trabalhar com pastas</a></li>
+<li><a href="write-message.html">Escrever uma mensagem</a></li>
+<li><a href="reply-forward.html">Responder e encaminhar</a></li>
+<li><a href="attachments.html">Anexos</a></li>
+<li><a href="drafts-outbox.html">Rascunhos e Caixa de Saída</a></li>
+<li><a href="signatures.html">Assinaturas</a></li>
+<li><a href="address-book.html">O Catálogo de Endereços</a></li>
+<li><a href="save-print-import.html">Salvar, imprimir e importar mensagens</a></li>
+<li><a href="new-mail.html">Receber e-mails novos</a></li>
+</ul>
+<h2>Várias contas</h2>
+<ul>
+<li><a href="all-inboxes.html">Todas as Caixas de Entrada</a></li>
+<li><a href="manage-accounts.html">Alterar, ordenar e remover contas</a></li>
+<li><a href="move-computer.html">Mudar para outro computador</a></li>
+</ul>
+<h2>Recursos das mensagens</h2>
+<ul>
+<li><a href="sign-in-codes.html">Códigos de login</a></li>
+<li><a href="delivery-problems.html">Mensagens que não foram entregues</a></li>
+<li><a href="invitations.html">Convites de calendário</a></li>
+<li><a href="unsubscribe.html">Sair de uma lista de e-mails</a></li>
+<li><a href="brand-logos.html">Logotipos de marcas</a></li>
+</ul>
+<h2>E-mail criptografado e assinado</h2>
+<ul>
+<li><a href="encrypted-and-signed-mail.html">E-mails criptografados e assinados</a></li>
+<li><a href="sign-and-encrypt.html">Assinar e criptografar uma mensagem</a></li>
+<li><a href="encryption-keys.html">Chaves de criptografia</a></li>
+<li><a href="verify-a-key.html">Verificar a chave de um contato</a></li>
+</ul>
+<h2>Configurações</h2>
+<ul>
+<li><a href="options-language.html">Configurações</a></li>
+<li><a href="download-ahead.html">Mensagens baixadas antecipadamente</a></li>
+<li><a href="account-security.html">Configurações de segurança da conta</a></li>
+<li><a href="default-mail-program.html">Definir o Inbox Classic como aplicativo de e-mail padrão</a></li>
+<li><a href="updates.html">Atualizar o Inbox Classic</a></li>
+</ul>
+<h2>Agentes de IA</h2>
+<ul>
+<li><a href="agents-connect.html">Conectar um agente de IA</a></li>
+<li><a href="agents-permissions.html">O que um agente pode fazer</a></li>
+<li><a href="agents-sending.html">Quando um agente envia e-mails</a></li>
+</ul>
+<h2>Referência</h2>
+<ul>
+<li><a href="keyboard-shortcuts.html">Atalhos de teclado</a></li>
+<li><a href="search-words.html" aria-current="page">Operadores de pesquisa</a></li>
+</ul>
+<h2>Solução de problemas</h2>
+<ul>
+<li><a href="password-not-accepted.html">A senha não é aceita</a></li>
+<li><a href="certificate-errors.html">Erros de certificado</a></li>
+<li><a href="encryption-errors.html">Erros de criptografia</a></li>
+<li><a href="no-connection.html">O Inbox Classic não consegue se conectar</a></li>
+<li><a href="message-not-shown.html">Uma mensagem não aparece</a></li>
+</ul>
+<h2>Privacidade e segurança</h2>
+<ul>
+<li><a href="pictures-tracking.html">Imagens e rastreamento</a></li>
+<li><a href="links-scripts.html">Links, scripts e anexos</a></li>
+<li><a href="data-storage.html">Onde ficam seus e-mails e senhas</a></li>
+<li><a href="connections.html">As conexões que o Inbox Classic faz</a></li>
+<li><a href="removing.html">Remover o Inbox Classic</a></li>
+</ul>
+<h2>Avançado</h2>
+<ul>
+<li><a href="sign-in-apps.html">Aplicativos de login</a></li>
+<li><a href="command-line.html">Opções da linha de comando</a></li>
+</ul>
+</nav>
+</nav><main>
+<h1>Operadores de pesquisa</h1>
+<p class="summary">Os termos e operadores aceitos na caixa de pesquisa, para encontrar exatamente as mensagens que você quer.</p>
+<p>A caixa de pesquisa aceita os operadores abaixo, com uma sintaxe semelhante à do Gmail; nem todos os operadores e comportamentos do Gmail são suportados. Combine vários critérios para encontrar mensagens que atendam a todos eles. Passe o ponteiro sobre a caixa de pesquisa para ver uma lista resumida.</p>
+<table>
+    <tr><th>Digite</th><th>Encontra</th></tr>
+    <tr><td><code>orçamento</code></td><td>Mensagens com uma palavra que começa com <i>orçamento</i>, em qualquer parte</td></tr>
+    <tr><td><code>"frase exata"</code></td><td>Estas palavras, nesta ordem</td></tr>
+    <tr><td><code>-palavra</code></td><td>Mensagens sem essa palavra. Você também pode usar o sinal de menos com alguns filtros, como <code>-is:unread</code></td></tr>
+    <tr><td><code>isto OR aquilo</code></td><td>Mensagens com pelo menos uma das palavras. Escreva <code>OR</code> em maiúsculas</td></tr>
+    <tr><td><code>from:ana</code></td><td>E-mails da Ana</td></tr>
+    <tr><td><code>to:ana</code>, <code>cc:</code>, <code>bcc:</code></td><td>E-mails para a Ana, em qualquer linha de destinatários</td></tr>
+    <tr><td><code>subject:almoço</code></td><td>A palavra no assunto</td></tr>
+    <tr><td><code>filename:pdf</code></td><td>A palavra no nome de um arquivo anexado</td></tr>
+    <tr><td><code>list:news.example.com</code></td><td>E-mails de uma lista de e-mails, pelo List-Id dela</td></tr>
+    <tr><td><code>has:attachment</code></td><td>Mensagens com anexos</td></tr>
+    <tr><td><code>is:unread</code>, <code>is:read</code></td><td>Mensagens não lidas ou lidas</td></tr>
+    <tr><td><code>is:starred</code> ou <code>is:flagged</code></td><td>Mensagens sinalizadas</td></tr>
+    <tr><td><code>is:answered</code></td><td>Mensagens que você respondeu</td></tr>
+    <tr><td><code>is:bounce</code></td><td>Avisos de mensagens que não foram entregues ou estão atrasadas</td></tr>
+    <tr><td><code>is:encrypted</code>, <code>is:signed</code></td><td>Mensagens criptografadas ou assinadas</td></tr>
+    <tr><td><code>in:inbox</code>, <code>in:sent</code>, <code>in:drafts</code>, <code>in:trash</code>, <code>in:spam</code>, <code>in:archive</code></td><td>Apenas essa pasta, em todas as contas</td></tr>
+    <tr><td><code>in:projetos</code></td><td>Apenas a pasta com esse nome</td></tr>
+    <tr><td><code>in:anywhere</code></td><td>Todas as pastas</td></tr>
+    <tr><td><code>before:2025/01/31</code>, <code>after:2025/01/01</code></td><td>E-mails anteriores ao início da data ou a partir dela, respectivamente, considerando o dia em UTC. <code>2025-01-31</code> também funciona</td></tr>
+    <tr><td><code>older_than:2d</code>, <code>newer_than:1m</code></td><td>E-mails mais antigos ou mais recentes que um número de dias (<code>d</code>), meses (<code>m</code>) ou anos (<code>y</code>); um mês corresponde a 30 dias e um ano a 365 dias</td></tr>
+    <tr><td><code>larger:5M</code>, <code>smaller:100k</code></td><td>E-mails maiores ou menores que um tamanho, em bytes ou com <code>K</code>, <code>M</code> ou <code>G</code>, em múltiplos de 1024</td></tr>
+</table>
+<p>A busca pelo início de uma palavra exige pelo menos dois caracteres; um único caractere é procurado como palavra inteira. O sinal de menos é ignorado nos filtros de data, idade e tamanho. A pesquisa não diferencia maiúsculas de minúsculas nem letras com ou sem acento. Operadores não reconhecidos são pesquisados como texto comum.</p>
+<p>Você pode encontrar mensagens criptografadas pelo remetente, pelos destinatários e pelo assunto. Com a opção <b>Pesquisar em mensagens criptografadas</b> ativada em Inbox Classic &gt; <b>Ajustes</b> &gt; <b>Leitura</b>, também pode pesquisar no texto depois de descriptografar as mensagens.</p>
+<p>A lista não mostra os tamanhos. Para ver os cabeçalhos da Internet de uma mensagem, escolha <b>Arquivo</b> &gt; <b>Propriedades</b>.</p>
+<nav class="related"><a href="find-messages.html">Localizar mensagens</a> <a href="delivery-problems.html">Mensagens que não foram entregues</a> <a href="keyboard-shortcuts.html">Atalhos de teclado</a></nav>
+</main></div>
+</body>
+</html>

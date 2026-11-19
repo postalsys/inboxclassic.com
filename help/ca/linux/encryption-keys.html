@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'">
+<title>Claus de xifratge</title>
+<style>body{margin:16px 24px;line-height:1.5}body>:not(.web),main{max-width:42em}h1{font-size:1.6em;margin:0 0 4px}h2{font-size:1.2em;margin:1.4em 0 .4em}p.summary{font-size:1.05em;opacity:.8;margin-top:0}ol,ul{padding-left:1.6em}li{margin:.3em 0}table{border-collapse:collapse;margin:.6em 0}th,td{text-align:left;padding:4px 12px 4px 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent);vertical-align:top}kbd{font-size:.9em;border:1px solid color-mix(in srgb,currentColor 35%,transparent);border-bottom-width:2px;border-radius:4px;padding:0 4px;white-space:nowrap}aside{padding:8px 12px;margin:.8em 0}.side a[aria-current]{font-weight:700;text-decoration:none}aside.warning{border-left:4px solid #c60}img.picture{max-width:100%;height:auto;margin:.6em 0;border:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related{margin-top:1.6em;padding-top:.6em;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related a{margin-right:1.2em}p.home{margin:0 0 1em;font-size:.9em}header.bar{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;max-width:none;padding:0 0 12px;margin:0 0 20px;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}header.bar .brand{font-weight:700;text-decoration:none;margin-right:auto}header.bar a,header.bar b{margin-right:10px}.web{display:flex;gap:32px}.web .side{flex:0 0 240px;font-size:.92em}.web .side ul{padding-left:1.1em}.web main{flex:1;min-width:0}@media(max-width:700px){.web{display:block}.web .side{display:none}}:root{color-scheme:light dark}body{font:11pt system-ui,'Adwaita Sans',Cantarell,sans-serif;color:CanvasText;background:Canvas}a{color:#1c71d8}@media(prefers-color-scheme:dark){a{color:#78aeed}}aside.note,aside.warning{background:color-mix(in srgb,CanvasText 6%,Canvas);border-radius:12px}body.windows,body.mac,body.linux{font:16px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif;margin:0;background:#f7f7fb;color:#1f2330}header.bar{max-width:1180px;margin:0 auto;padding:14px 24px;border-bottom:1px solid #e3e3ee}header.bar .brand{color:#3d4aa8;font-size:1.1em}header.bar a{color:#3d4aa8}.web{max-width:1180px;margin:0 auto;padding:24px}.web main{background:#fff;border-radius:12px;padding:28px 36px;box-shadow:0 1px 3px rgba(20,20,60,.08)}.web .side{position:sticky;top:16px;align-self:flex-start;max-height:calc(100vh - 32px);overflow:auto}.web .side a{color:#30395e;text-decoration:none}.web .side a:hover,.web main a{color:#3d4aa8}h1,h2{color:#1f2330}h2{border-bottom:none}aside.note,aside.warning{background:#f1f2fb;border:1px solid #e0e2f5;border-radius:10px}@media(prefers-color-scheme:dark){body.windows,body.mac,body.linux{background:#14151c;color:#e6e7ef}.web main{background:#1d1f29;box-shadow:none}header.bar{border-color:#2c2f3d}.web .side a{color:#c5c9e6}h1,h2{color:#e6e7ef}aside.note,aside.warning{background:#232637;border-color:#30344a}header.bar a,header.bar .brand,.web main a,.web .side a:hover{color:#9aa6ff}}</style>
+</head>
+<body class="linux">
+<header class="bar"><a class="brand" href="/">Inbox Classic</a><span class="platforms"><a href="../windows/encryption-keys.html">Windows</a> <a href="../mac/encryption-keys.html">Mac</a> <b>Linux</b></span><span class="languages"><a href="../../en/linux/encryption-keys.html" hreflang="en">English</a> <b>Català</b> <a href="../../cs/linux/encryption-keys.html" hreflang="cs">Čeština</a> <a href="../../da/linux/encryption-keys.html" hreflang="da">Dansk</a> <a href="../../de/linux/encryption-keys.html" hreflang="de">Deutsch</a> <a href="../../et/linux/encryption-keys.html" hreflang="et">Eesti</a> <a href="../../es/linux/encryption-keys.html" hreflang="es">Español</a> <a href="../../fr/linux/encryption-keys.html" hreflang="fr">Français</a> <a href="../../hr/linux/encryption-keys.html" hreflang="hr">Hrvatski</a> <a href="../../it/linux/encryption-keys.html" hreflang="it">Italiano</a> <a href="../../lv/linux/encryption-keys.html" hreflang="lv">Latviešu</a> <a href="../../lt/linux/encryption-keys.html" hreflang="lt">Lietuvių</a> <a href="../../hu/linux/encryption-keys.html" hreflang="hu">Magyar</a> <a href="../../nl/linux/encryption-keys.html" hreflang="nl">Nederlands</a> <a href="../../nb/linux/encryption-keys.html" hreflang="nb">Norsk bokmål</a> <a href="../../pl/linux/encryption-keys.html" hreflang="pl">Polski</a> <a href="../../pt-BR/linux/encryption-keys.html" hreflang="pt-BR">Português (Brasil)</a> <a href="../../pt/linux/encryption-keys.html" hreflang="pt">Português (Portugal)</a> <a href="../../ro/linux/encryption-keys.html" hreflang="ro">Română</a> <a href="../../sk/linux/encryption-keys.html" hreflang="sk">Slovenčina</a> <a href="../../sl/linux/encryption-keys.html" hreflang="sl">Slovenščina</a> <a href="../../sr-Latn/linux/encryption-keys.html" hreflang="sr-Latn">Srpski</a> <a href="../../fi/linux/encryption-keys.html" hreflang="fi">Suomi</a> <a href="../../sv/linux/encryption-keys.html" hreflang="sv">Svenska</a> <a href="../../tr/linux/encryption-keys.html" hreflang="tr">Türkçe</a> <a href="../../el/linux/encryption-keys.html" hreflang="el">Ελληνικά</a> <a href="../../bg/linux/encryption-keys.html" hreflang="bg">Български</a> <a href="../../ru/linux/encryption-keys.html" hreflang="ru">Русский</a> <a href="../../uk/linux/encryption-keys.html" hreflang="uk">Українська</a></span></header>
+<div class="web"><nav class="side"><nav class="contents">
+<h2>Primers passos</h2>
+<ul>
+<li><a href="add-account.html">Afegir un compte de correu</a></li>
+<li><a href="gmail-outlook.html">Gmail i Outlook.com</a></li>
+<li><a href="main-window.html">La finestra principal</a></li>
+<li><a href="layouts.html">Disposicions</a></li>
+</ul>
+<h2>Tasques habituals</h2>
+<ul>
+<li><a href="read-messages.html">Llegir missatges</a></li>
+<li><a href="find-messages.html">Cercar missatges</a></li>
+<li><a href="conversations.html">Converses</a></li>
+<li><a href="organize-mail.html">Marcar amb bandera, arxivar i moure missatges</a></li>
+<li><a href="message-rules.html">Organitzar el correu nou amb regles</a></li>
+<li><a href="delete-and-undo.html">Suprimir missatges i desfer</a></li>
+<li><a href="folders.html">Treballar amb carpetes</a></li>
+<li><a href="write-message.html">Escriure un missatge</a></li>
+<li><a href="reply-forward.html">Respondre i reenviar</a></li>
+<li><a href="attachments.html">Fitxers adjunts</a></li>
+<li><a href="drafts-outbox.html">Esborranys i la Safata de sortida</a></li>
+<li><a href="signatures.html">Signatures</a></li>
+<li><a href="address-book.html">La Llibreta d’adreces</a></li>
+<li><a href="save-print-import.html">Desar, imprimir i importar missatges</a></li>
+<li><a href="new-mail.html">Rebre correu nou</a></li>
+</ul>
+<h2>Diversos comptes</h2>
+<ul>
+<li><a href="all-inboxes.html">Totes les safates d’entrada</a></li>
+<li><a href="manage-accounts.html">Canviar, ordenar i suprimir comptes</a></li>
+<li><a href="move-computer.html">Passar a un altre ordinador</a></li>
+</ul>
+<h2>Funcions dels missatges</h2>
+<ul>
+<li><a href="sign-in-codes.html">Codis d’inici de sessió</a></li>
+<li><a href="delivery-problems.html">Missatges que no s’han lliurat</a></li>
+<li><a href="invitations.html">Invitacions de calendari</a></li>
+<li><a href="unsubscribe.html">Sortir d’una llista de correu</a></li>
+<li><a href="brand-logos.html">Logotips de marca</a></li>
+</ul>
+<h2>Correu xifrat i signat</h2>
+<ul>
+<li><a href="encrypted-and-signed-mail.html">Correu xifrat i signat</a></li>
+<li><a href="sign-and-encrypt.html">Signar i xifrar un missatge</a></li>
+<li><a href="encryption-keys.html" aria-current="page">Claus de xifratge</a></li>
+<li><a href="verify-a-key.html">Verificar la clau d’un contacte</a></li>
+</ul>
+<h2>Configuració</h2>
+<ul>
+<li><a href="options-language.html">Configuració</a></li>
+<li><a href="download-ahead.html">Missatges baixats per endavant</a></li>
+<li><a href="account-security.html">Configuració de seguretat del compte</a></li>
+<li><a href="default-mail-program.html">Definir Inbox Classic com a aplicació de correu predeterminada</a></li>
+<li><a href="updates.html">Actualitzar Inbox Classic</a></li>
+</ul>
+<h2>Agents d’IA</h2>
+<ul>
+<li><a href="agents-connect.html">Connectar un agent d’IA</a></li>
+<li><a href="agents-permissions.html">Què pot fer un agent</a></li>
+<li><a href="agents-sending.html">Quan un agent envia correu</a></li>
+</ul>
+<h2>Referència</h2>
+<ul>
+<li><a href="keyboard-shortcuts.html">Dreceres de teclat</a></li>
+<li><a href="search-words.html">Operadors de cerca</a></li>
+</ul>
+<h2>Resolució de problemes</h2>
+<ul>
+<li><a href="password-not-accepted.html">No s’accepta la contrasenya</a></li>
+<li><a href="certificate-errors.html">Errors de certificat</a></li>
+<li><a href="encryption-errors.html">Errors de xifratge</a></li>
+<li><a href="no-connection.html">Inbox Classic no es pot connectar</a></li>
+<li><a href="message-not-shown.html">No es mostra un missatge</a></li>
+</ul>
+<h2>Privadesa i seguretat</h2>
+<ul>
+<li><a href="pictures-tracking.html">Imatges i rastreig</a></li>
+<li><a href="links-scripts.html">Enllaços, scripts i fitxers adjunts</a></li>
+<li><a href="data-storage.html">On es guarden el correu i les contrasenyes</a></li>
+<li><a href="connections.html">Les connexions que fa Inbox Classic</a></li>
+<li><a href="removing.html">Desinstal·lar Inbox Classic</a></li>
+</ul>
+<h2>Avançat</h2>
+<ul>
+<li><a href="sign-in-apps.html">Aplicacions d’inici de sessió</a></li>
+<li><a href="command-line.html">Opcions de la línia d’ordres</a></li>
+</ul>
+</nav>
+</nav><main>
+<h1>Claus de xifratge</h1>
+<p class="summary">Creeu una clau per signar els missatges i rebre correu xifrat, i deseu les claus dels vostres contactes.</p>
+<p>Inbox Classic signa i xifra el correu amb claus OpenPGP. Disposeu d’un parell de claus: una de pública, que podeu compartir, i una de privada, que es queda a l’ordinador. Les claus dels contactes us permeten comprovar-ne les signatures i xifrar-los correu.</p>
+<p>Per crear la vostra clau:</p>
+<ol>
+    <li>Trieu <b>Eines</b> &gt; <b>Claus de xifratge</b> i feu clic a <b>Clau nova</b>.</li>
+    <li>Trieu el compte i feu clic a <b>Crea la clau</b>. La clau es fa servir per a l’adreça del compte i les seves altres adreces.</li>
+    <li>Feu clic a <b>Desa una còpia de seguretat</b> i trieu una frase de pas. Guardeu el fitxer i la frase de pas en llocs segurs diferents.</li>
+</ol>
+<aside class="warning">Sense una còpia de seguretat, la clau no es pot recuperar si es perd o es restableix aquest ordinador, i el correu xifrat amb la clau ja no es pot llegir.</aside>
+<h2>Protecció de les claus a l’ordinador</h2>
+<p>Les claus privades estan protegides per una clau mestra desada a l’anell de claus del sistema, de manera que normalment no heu d’introduir una frase de pas a cada ús. El sistema pot demanar que desbloquegeu el gestor o n’autoritzeu l’accés. La frase de pas protegeix el fitxer de còpia de seguretat. Si una clau apareix bloquejada, comproveu primer que el gestor del sistema estigui disponible i permeti l’accés. Si la clau de protecció ha desaparegut, restaureu la clau privada: feu clic a <b>Importa</b> i trieu la còpia de seguretat d’aquesta clau privada.</p>
+<h2>Afegir claus</h2>
+<p>Feu clic a <b>Importa</b> per afegir una clau des d’un fitxer, com ara una que us ha enviat un contacte o una còpia de seguretat vostra. Si la clau privada està protegida amb una frase de pas, l’haureu d’introduir durant la importació. Després, Inbox Classic us pregunta si voleu associar la clau importada a les vostres adreces d’enviament.</p>
+<p>A partir d’aleshores, la clau d’un contacte es fa servir per a la seva adreça. Si més endavant apareix una clau diferent per a la mateixa adreça, l’actual continua en ús fins que trieu la nova a les propietats del contacte.</p>
+<p>Per compartir la vostra clau pública, seleccioneu-la i feu clic a <b>Exporta</b>. També podeu triar la clau del compte a les seves propietats, a la pestanya <b>Seguretat</b>.</p>
+<p>Si falta la clau d’un destinatari en xifrar un missatge, Inbox Classic la cerca primer al domini de la seva adreça de correu. Si no la troba i la cerca a keys.openpgp.org està activada, hi envia l’adreça. Una cerca per empremta digital o identificador de clau transmet aquell identificador en lloc de l’adreça. Per desactivar aquesta consulta a keys.openpgp.org, desactiveu l’opció <b>Cerca claus a keys.openpgp.org</b> a <b>Menú principal</b> &gt; <b>Preferències</b> &gt; <b>Lectura</b>. La cerca al domini continua disponible.</p>
+<p>Si l’Autocrypt està activat i la vostra adreça de remitent té una clau associada, Inbox Classic inclou la clau pública als missatges. Altres aplicacions poden fer-la servir per enviar-vos missatges xifrats. En obrir un missatge rebut, Inbox Classic també pot obtenir la clau pública del remitent. Això no confirma a qui pertany la clau. Per deixar d’enviar la vostra, desactiveu l’opció <b>Envia la meva clau pública amb els meus missatges (Autocrypt)</b> a la pestanya <b>Seguretat</b> de les propietats del compte.</p>
+<nav class="related"><a href="verify-a-key.html">Verificar la clau d’un contacte</a> <a href="address-book.html">La Llibreta d’adreces</a> <a href="manage-accounts.html">Canviar, ordenar i suprimir comptes</a></nav>
+</main></div>
+</body>
+</html>

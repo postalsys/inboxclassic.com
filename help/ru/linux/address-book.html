@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'">
+<title>Адресная книга</title>
+<style>body{margin:16px 24px;line-height:1.5}body>:not(.web),main{max-width:42em}h1{font-size:1.6em;margin:0 0 4px}h2{font-size:1.2em;margin:1.4em 0 .4em}p.summary{font-size:1.05em;opacity:.8;margin-top:0}ol,ul{padding-left:1.6em}li{margin:.3em 0}table{border-collapse:collapse;margin:.6em 0}th,td{text-align:left;padding:4px 12px 4px 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent);vertical-align:top}kbd{font-size:.9em;border:1px solid color-mix(in srgb,currentColor 35%,transparent);border-bottom-width:2px;border-radius:4px;padding:0 4px;white-space:nowrap}aside{padding:8px 12px;margin:.8em 0}.side a[aria-current]{font-weight:700;text-decoration:none}aside.warning{border-left:4px solid #c60}img.picture{max-width:100%;height:auto;margin:.6em 0;border:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related{margin-top:1.6em;padding-top:.6em;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related a{margin-right:1.2em}p.home{margin:0 0 1em;font-size:.9em}header.bar{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;max-width:none;padding:0 0 12px;margin:0 0 20px;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}header.bar .brand{font-weight:700;text-decoration:none;margin-right:auto}header.bar a,header.bar b{margin-right:10px}.web{display:flex;gap:32px}.web .side{flex:0 0 240px;font-size:.92em}.web .side ul{padding-left:1.1em}.web main{flex:1;min-width:0}@media(max-width:700px){.web{display:block}.web .side{display:none}}:root{color-scheme:light dark}body{font:11pt system-ui,'Adwaita Sans',Cantarell,sans-serif;color:CanvasText;background:Canvas}a{color:#1c71d8}@media(prefers-color-scheme:dark){a{color:#78aeed}}aside.note,aside.warning{background:color-mix(in srgb,CanvasText 6%,Canvas);border-radius:12px}body.windows,body.mac,body.linux{font:16px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif;margin:0;background:#f7f7fb;color:#1f2330}header.bar{max-width:1180px;margin:0 auto;padding:14px 24px;border-bottom:1px solid #e3e3ee}header.bar .brand{color:#3d4aa8;font-size:1.1em}header.bar a{color:#3d4aa8}.web{max-width:1180px;margin:0 auto;padding:24px}.web main{background:#fff;border-radius:12px;padding:28px 36px;box-shadow:0 1px 3px rgba(20,20,60,.08)}.web .side{position:sticky;top:16px;align-self:flex-start;max-height:calc(100vh - 32px);overflow:auto}.web .side a{color:#30395e;text-decoration:none}.web .side a:hover,.web main a{color:#3d4aa8}h1,h2{color:#1f2330}h2{border-bottom:none}aside.note,aside.warning{background:#f1f2fb;border:1px solid #e0e2f5;border-radius:10px}@media(prefers-color-scheme:dark){body.windows,body.mac,body.linux{background:#14151c;color:#e6e7ef}.web main{background:#1d1f29;box-shadow:none}header.bar{border-color:#2c2f3d}.web .side a{color:#c5c9e6}h1,h2{color:#e6e7ef}aside.note,aside.warning{background:#232637;border-color:#30344a}header.bar a,header.bar .brand,.web main a,.web .side a:hover{color:#9aa6ff}}</style>
+</head>
+<body class="linux">
+<header class="bar"><a class="brand" href="/">Inbox Classic</a><span class="platforms"><a href="../windows/address-book.html">Windows</a> <a href="../mac/address-book.html">Mac</a> <b>Linux</b></span><span class="languages"><a href="../../en/linux/address-book.html" hreflang="en">English</a> <a href="../../ca/linux/address-book.html" hreflang="ca">Català</a> <a href="../../cs/linux/address-book.html" hreflang="cs">Čeština</a> <a href="../../da/linux/address-book.html" hreflang="da">Dansk</a> <a href="../../de/linux/address-book.html" hreflang="de">Deutsch</a> <a href="../../et/linux/address-book.html" hreflang="et">Eesti</a> <a href="../../es/linux/address-book.html" hreflang="es">Español</a> <a href="../../fr/linux/address-book.html" hreflang="fr">Français</a> <a href="../../hr/linux/address-book.html" hreflang="hr">Hrvatski</a> <a href="../../it/linux/address-book.html" hreflang="it">Italiano</a> <a href="../../lv/linux/address-book.html" hreflang="lv">Latviešu</a> <a href="../../lt/linux/address-book.html" hreflang="lt">Lietuvių</a> <a href="../../hu/linux/address-book.html" hreflang="hu">Magyar</a> <a href="../../nl/linux/address-book.html" hreflang="nl">Nederlands</a> <a href="../../nb/linux/address-book.html" hreflang="nb">Norsk bokmål</a> <a href="../../pl/linux/address-book.html" hreflang="pl">Polski</a> <a href="../../pt-BR/linux/address-book.html" hreflang="pt-BR">Português (Brasil)</a> <a href="../../pt/linux/address-book.html" hreflang="pt">Português (Portugal)</a> <a href="../../ro/linux/address-book.html" hreflang="ro">Română</a> <a href="../../sk/linux/address-book.html" hreflang="sk">Slovenčina</a> <a href="../../sl/linux/address-book.html" hreflang="sl">Slovenščina</a> <a href="../../sr-Latn/linux/address-book.html" hreflang="sr-Latn">Srpski</a> <a href="../../fi/linux/address-book.html" hreflang="fi">Suomi</a> <a href="../../sv/linux/address-book.html" hreflang="sv">Svenska</a> <a href="../../tr/linux/address-book.html" hreflang="tr">Türkçe</a> <a href="../../el/linux/address-book.html" hreflang="el">Ελληνικά</a> <a href="../../bg/linux/address-book.html" hreflang="bg">Български</a> <b>Русский</b> <a href="../../uk/linux/address-book.html" hreflang="uk">Українська</a></span></header>
+<div class="web"><nav class="side"><nav class="contents">
+<h2>Начало работы</h2>
+<ul>
+<li><a href="add-account.html">Добавление учетной записи почты</a></li>
+<li><a href="gmail-outlook.html">Gmail и Outlook.com</a></li>
+<li><a href="main-window.html">Главное окно</a></li>
+<li><a href="layouts.html">Макеты</a></li>
+</ul>
+<h2>Повседневные задачи</h2>
+<ul>
+<li><a href="read-messages.html">Чтение сообщений</a></li>
+<li><a href="find-messages.html">Поиск сообщений</a></li>
+<li><a href="conversations.html">Беседы</a></li>
+<li><a href="organize-mail.html">Флажки, архив и перемещение сообщений</a></li>
+<li><a href="message-rules.html">Сортировка новой почты с помощью правил</a></li>
+<li><a href="delete-and-undo.html">Удаление сообщений и отмена</a></li>
+<li><a href="folders.html">Работа с папками</a></li>
+<li><a href="write-message.html">Создание сообщения</a></li>
+<li><a href="reply-forward.html">Ответ и пересылка</a></li>
+<li><a href="attachments.html">Вложения</a></li>
+<li><a href="drafts-outbox.html">Черновики и папка «Исходящие»</a></li>
+<li><a href="signatures.html">Текстовые подписи</a></li>
+<li><a href="address-book.html" aria-current="page">Адресная книга</a></li>
+<li><a href="save-print-import.html">Сохранение, печать и импорт сообщений</a></li>
+<li><a href="new-mail.html">Получение новой почты</a></li>
+</ul>
+<h2>Работа с несколькими учетными записями</h2>
+<ul>
+<li><a href="all-inboxes.html">Все входящие</a></li>
+<li><a href="manage-accounts.html">Настройка, порядок и удаление учетных записей</a></li>
+<li><a href="move-computer.html">Перенос на другой компьютер</a></li>
+</ul>
+<h2>Особенности сообщений</h2>
+<ul>
+<li><a href="sign-in-codes.html">Коды для входа</a></li>
+<li><a href="delivery-problems.html">Недоставленные сообщения</a></li>
+<li><a href="invitations.html">Приглашения на события</a></li>
+<li><a href="unsubscribe.html">Отписка от рассылки</a></li>
+<li><a href="brand-logos.html">Логотипы брендов</a></li>
+</ul>
+<h2>Зашифрованная и подписанная почта</h2>
+<ul>
+<li><a href="encrypted-and-signed-mail.html">Зашифрованная и подписанная почта</a></li>
+<li><a href="sign-and-encrypt.html">Подпись и шифрование сообщения</a></li>
+<li><a href="encryption-keys.html">Ключи шифрования</a></li>
+<li><a href="verify-a-key.html">Проверка ключа контакта</a></li>
+</ul>
+<h2>Параметры</h2>
+<ul>
+<li><a href="options-language.html">Настройки</a></li>
+<li><a href="download-ahead.html">Предварительная загрузка сообщений</a></li>
+<li><a href="account-security.html">Параметры безопасности учетной записи</a></li>
+<li><a href="default-mail-program.html">Inbox Classic как почтовая программа по умолчанию</a></li>
+<li><a href="updates.html">Обновление Inbox Classic</a></li>
+</ul>
+<h2>ИИ-агенты</h2>
+<ul>
+<li><a href="agents-connect.html">Подключение ИИ-агента</a></li>
+<li><a href="agents-permissions.html">Что разрешено агенту</a></li>
+<li><a href="agents-sending.html">Когда агент отправляет почту</a></li>
+</ul>
+<h2>Справочник</h2>
+<ul>
+<li><a href="keyboard-shortcuts.html">Сочетания клавиш</a></li>
+<li><a href="search-words.html">Поисковые операторы</a></li>
+</ul>
+<h2>Устранение неполадок</h2>
+<ul>
+<li><a href="password-not-accepted.html">Пароль не принимается</a></li>
+<li><a href="certificate-errors.html">Ошибки сертификата</a></li>
+<li><a href="encryption-errors.html">Ошибки шифрования</a></li>
+<li><a href="no-connection.html">Inbox Classic не может подключиться</a></li>
+<li><a href="message-not-shown.html">Сообщение не показывается</a></li>
+</ul>
+<h2>Конфиденциальность и безопасность</h2>
+<ul>
+<li><a href="pictures-tracking.html">Изображения и отслеживание</a></li>
+<li><a href="links-scripts.html">Ссылки, скрипты и вложения</a></li>
+<li><a href="data-storage.html">Где хранятся почта и пароли</a></li>
+<li><a href="connections.html">Подключения Inbox Classic</a></li>
+<li><a href="removing.html">Удаление Inbox Classic</a></li>
+</ul>
+<h2>Дополнительно</h2>
+<ul>
+<li><a href="sign-in-apps.html">Приложения для входа</a></li>
+<li><a href="command-line.html">Параметры командной строки</a></li>
+</ul>
+</nav>
+</nav><main>
+<h1>Адресная книга</h1>
+<p class="summary">Сохраняйте контакты, объединяйте их в группы и выбирайте получателей сообщений.</p>
+<p>Выберите <b>Сервис</b> &gt; <b>Адресная книга</b> (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd>). Слева показаны группы, справа контакты.</p>
+<h2>Добавление контакта</h2>
+<ol>
+    <li>Нажмите <b>Новый контакт</b>.</li>
+    <li>Введите имя, адреса электронной почты, номера телефонов и заметки. Сообщения отправляются на первый адрес. Чтобы использовать другой, выделите его и нажмите <b>Сделать основным</b>.</li>
+    <li>Нажмите <b>ОК</b>.</li>
+</ol>
+<p>Кнопка <b>Свойства</b> изменяет выделенный контакт, а <b>Удалить</b> удаляет его после подтверждения.</p>
+<h2>Создание группы</h2>
+<ol>
+    <li>Нажмите <b>Новая группа</b> и введите ее имя.</li>
+    <li>Нажмите <b>Выбрать участников</b>, чтобы добавить контакты из адресной книги, или введите адрес, которого в ней нет.</li>
+    <li>Нажмите <b>ОК</b>.</li>
+</ol>
+<h2>Изображение контакта</h2>
+<p>В свойствах контакта нажмите <b>Выбрать</b> рядом с изображением и выберите файл PNG или JPEG либо перетащите его туда. Кнопка <b>Удалить</b> убирает изображение. Оно показывается рядом с почтой контакта при расположении панелей в столбцы и в области чтения, но только если ваш почтовый провайдер подтвердил, что сообщение пришло с домена этого адреса. Без такого подтверждения изображение не показывается. Логотип бренда имеет приоритет. При импорте и экспорте vCard изображение сохраняется.</p>
+<h2>Отправка сообщений контактам</h2>
+<p>Выделите контакты или группу и нажмите <b>Написать</b>. В сообщении нажмите <b>Кому</b>, <b>Копия</b> или <b>Скрытая</b> в начале строки, чтобы открыть окно <b>Выбор получателей</b>. Если ввести имя группы в поле адреса, туда будут добавлены адреса всех ее участников.</p>
+<p>Чтобы добавить отправителя выделенного сообщения, выберите <b>Сервис</b> &gt; <b>Добавить отправителя в адресную книгу</b>; эта команда есть и в контекстном меню сообщения.</p>
+<h2>Импорт и экспорт</h2>
+<p><b>Файл</b> &gt; <b>Импорт адресной книги</b> позволяет импортировать контакты из файла vCard (<code>.vcf</code>) или CSV из большинства других программ. Контакт пропускается, если у него есть адреса и все они уже сохранены в адресной книге. <b>Экспорт адресной книги</b> записывает все контакты в файл vCard.</p>
+<nav class="related"><a href="write-message.html">Создание сообщения</a> <a href="keyboard-shortcuts.html">Сочетания клавиш</a> <a href="save-print-import.html">Сохранение, печать и импорт сообщений</a></nav>
+</main></div>
+</body>
+</html>

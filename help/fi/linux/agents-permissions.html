@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'">
+<title>Mitä agentti saa tehdä</title>
+<style>body{margin:16px 24px;line-height:1.5}body>:not(.web),main{max-width:42em}h1{font-size:1.6em;margin:0 0 4px}h2{font-size:1.2em;margin:1.4em 0 .4em}p.summary{font-size:1.05em;opacity:.8;margin-top:0}ol,ul{padding-left:1.6em}li{margin:.3em 0}table{border-collapse:collapse;margin:.6em 0}th,td{text-align:left;padding:4px 12px 4px 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent);vertical-align:top}kbd{font-size:.9em;border:1px solid color-mix(in srgb,currentColor 35%,transparent);border-bottom-width:2px;border-radius:4px;padding:0 4px;white-space:nowrap}aside{padding:8px 12px;margin:.8em 0}.side a[aria-current]{font-weight:700;text-decoration:none}aside.warning{border-left:4px solid #c60}img.picture{max-width:100%;height:auto;margin:.6em 0;border:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related{margin-top:1.6em;padding-top:.6em;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related a{margin-right:1.2em}p.home{margin:0 0 1em;font-size:.9em}header.bar{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;max-width:none;padding:0 0 12px;margin:0 0 20px;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}header.bar .brand{font-weight:700;text-decoration:none;margin-right:auto}header.bar a,header.bar b{margin-right:10px}.web{display:flex;gap:32px}.web .side{flex:0 0 240px;font-size:.92em}.web .side ul{padding-left:1.1em}.web main{flex:1;min-width:0}@media(max-width:700px){.web{display:block}.web .side{display:none}}:root{color-scheme:light dark}body{font:11pt system-ui,'Adwaita Sans',Cantarell,sans-serif;color:CanvasText;background:Canvas}a{color:#1c71d8}@media(prefers-color-scheme:dark){a{color:#78aeed}}aside.note,aside.warning{background:color-mix(in srgb,CanvasText 6%,Canvas);border-radius:12px}body.windows,body.mac,body.linux{font:16px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif;margin:0;background:#f7f7fb;color:#1f2330}header.bar{max-width:1180px;margin:0 auto;padding:14px 24px;border-bottom:1px solid #e3e3ee}header.bar .brand{color:#3d4aa8;font-size:1.1em}header.bar a{color:#3d4aa8}.web{max-width:1180px;margin:0 auto;padding:24px}.web main{background:#fff;border-radius:12px;padding:28px 36px;box-shadow:0 1px 3px rgba(20,20,60,.08)}.web .side{position:sticky;top:16px;align-self:flex-start;max-height:calc(100vh - 32px);overflow:auto}.web .side a{color:#30395e;text-decoration:none}.web .side a:hover,.web main a{color:#3d4aa8}h1,h2{color:#1f2330}h2{border-bottom:none}aside.note,aside.warning{background:#f1f2fb;border:1px solid #e0e2f5;border-radius:10px}@media(prefers-color-scheme:dark){body.windows,body.mac,body.linux{background:#14151c;color:#e6e7ef}.web main{background:#1d1f29;box-shadow:none}header.bar{border-color:#2c2f3d}.web .side a{color:#c5c9e6}h1,h2{color:#e6e7ef}aside.note,aside.warning{background:#232637;border-color:#30344a}header.bar a,header.bar .brand,.web main a,.web .side a:hover{color:#9aa6ff}}</style>
+</head>
+<body class="linux">
+<header class="bar"><a class="brand" href="/">Inbox Classic</a><span class="platforms"><a href="../windows/agents-permissions.html">Windows</a> <a href="../mac/agents-permissions.html">Mac</a> <b>Linux</b></span><span class="languages"><a href="../../en/linux/agents-permissions.html" hreflang="en">English</a> <a href="../../ca/linux/agents-permissions.html" hreflang="ca">Català</a> <a href="../../cs/linux/agents-permissions.html" hreflang="cs">Čeština</a> <a href="../../da/linux/agents-permissions.html" hreflang="da">Dansk</a> <a href="../../de/linux/agents-permissions.html" hreflang="de">Deutsch</a> <a href="../../et/linux/agents-permissions.html" hreflang="et">Eesti</a> <a href="../../es/linux/agents-permissions.html" hreflang="es">Español</a> <a href="../../fr/linux/agents-permissions.html" hreflang="fr">Français</a> <a href="../../hr/linux/agents-permissions.html" hreflang="hr">Hrvatski</a> <a href="../../it/linux/agents-permissions.html" hreflang="it">Italiano</a> <a href="../../lv/linux/agents-permissions.html" hreflang="lv">Latviešu</a> <a href="../../lt/linux/agents-permissions.html" hreflang="lt">Lietuvių</a> <a href="../../hu/linux/agents-permissions.html" hreflang="hu">Magyar</a> <a href="../../nl/linux/agents-permissions.html" hreflang="nl">Nederlands</a> <a href="../../nb/linux/agents-permissions.html" hreflang="nb">Norsk bokmål</a> <a href="../../pl/linux/agents-permissions.html" hreflang="pl">Polski</a> <a href="../../pt-BR/linux/agents-permissions.html" hreflang="pt-BR">Português (Brasil)</a> <a href="../../pt/linux/agents-permissions.html" hreflang="pt">Português (Portugal)</a> <a href="../../ro/linux/agents-permissions.html" hreflang="ro">Română</a> <a href="../../sk/linux/agents-permissions.html" hreflang="sk">Slovenčina</a> <a href="../../sl/linux/agents-permissions.html" hreflang="sl">Slovenščina</a> <a href="../../sr-Latn/linux/agents-permissions.html" hreflang="sr-Latn">Srpski</a> <b>Suomi</b> <a href="../../sv/linux/agents-permissions.html" hreflang="sv">Svenska</a> <a href="../../tr/linux/agents-permissions.html" hreflang="tr">Türkçe</a> <a href="../../el/linux/agents-permissions.html" hreflang="el">Ελληνικά</a> <a href="../../bg/linux/agents-permissions.html" hreflang="bg">Български</a> <a href="../../ru/linux/agents-permissions.html" hreflang="ru">Русский</a> <a href="../../uk/linux/agents-permissions.html" hreflang="uk">Українська</a></span></header>
+<div class="web"><nav class="side"><nav class="contents">
+<h2>Aloittaminen</h2>
+<ul>
+<li><a href="add-account.html">Sähköpostitilin lisääminen</a></li>
+<li><a href="gmail-outlook.html">Gmail ja Outlook.com</a></li>
+<li><a href="main-window.html">Pääikkuna</a></li>
+<li><a href="layouts.html">Asettelut</a></li>
+</ul>
+<h2>Päivittäiset tehtävät</h2>
+<ul>
+<li><a href="read-messages.html">Viestien lukeminen</a></li>
+<li><a href="find-messages.html">Viestien etsiminen</a></li>
+<li><a href="conversations.html">Keskustelut</a></li>
+<li><a href="organize-mail.html">Viestien liputtaminen, arkistointi ja siirtäminen</a></li>
+<li><a href="message-rules.html">Saapuvien viestien käsittely säännöillä</a></li>
+<li><a href="delete-and-undo.html">Viestien poistaminen ja kumoaminen</a></li>
+<li><a href="folders.html">Kansioiden käyttö</a></li>
+<li><a href="write-message.html">Viestin kirjoittaminen</a></li>
+<li><a href="reply-forward.html">Vastaaminen ja edelleenvälitys</a></li>
+<li><a href="attachments.html">Liitteet</a></li>
+<li><a href="drafts-outbox.html">Luonnokset ja Lähtevät</a></li>
+<li><a href="signatures.html">Allekirjoitukset</a></li>
+<li><a href="address-book.html">Osoitekirja</a></li>
+<li><a href="save-print-import.html">Viestien tallennus, tulostus ja tuonti</a></li>
+<li><a href="new-mail.html">Uusien viestien noutaminen</a></li>
+</ul>
+<h2>Useita tilejä</h2>
+<ul>
+<li><a href="all-inboxes.html">Kaikki saapuneet</a></li>
+<li><a href="manage-accounts.html">Tilien muuttaminen, järjestäminen ja poistaminen</a></li>
+<li><a href="move-computer.html">Siirtyminen toiselle tietokoneelle</a></li>
+</ul>
+<h2>Viestien ominaisuudet</h2>
+<ul>
+<li><a href="sign-in-codes.html">Kirjautumiskoodit</a></li>
+<li><a href="delivery-problems.html">Viestit, joita ei toimitettu</a></li>
+<li><a href="invitations.html">Kalenterikutsut</a></li>
+<li><a href="unsubscribe.html">Postituslistalta eroaminen</a></li>
+<li><a href="brand-logos.html">Tuotemerkkien logot</a></li>
+</ul>
+<h2>Salattu ja allekirjoitettu posti</h2>
+<ul>
+<li><a href="encrypted-and-signed-mail.html">Salattu ja digitaalisesti allekirjoitettu posti</a></li>
+<li><a href="sign-and-encrypt.html">Viestin allekirjoittaminen ja salaaminen</a></li>
+<li><a href="encryption-keys.html">Salausavaimet</a></li>
+<li><a href="verify-a-key.html">Yhteystiedon avaimen vahvistaminen</a></li>
+</ul>
+<h2>Asetukset</h2>
+<ul>
+<li><a href="options-language.html">Asetukset</a></li>
+<li><a href="download-ahead.html">Etukäteen ladatut viestit</a></li>
+<li><a href="account-security.html">Tilin suojausasetukset</a></li>
+<li><a href="default-mail-program.html">Inbox Classic oletussähköpostiohjelmaksi</a></li>
+<li><a href="updates.html">Inbox Classicin päivittäminen</a></li>
+</ul>
+<h2>Tekoälyagentit</h2>
+<ul>
+<li><a href="agents-connect.html">Tekoälyagentin yhdistäminen</a></li>
+<li><a href="agents-permissions.html" aria-current="page">Mitä agentti saa tehdä</a></li>
+<li><a href="agents-sending.html">Kun agentti lähettää postia</a></li>
+</ul>
+<h2>Viitetiedot</h2>
+<ul>
+<li><a href="keyboard-shortcuts.html">Pikanäppäimet</a></li>
+<li><a href="search-words.html">Hakusanat</a></li>
+</ul>
+<h2>Vianmääritys</h2>
+<ul>
+<li><a href="password-not-accepted.html">Salasanaa ei hyväksytä</a></li>
+<li><a href="certificate-errors.html">Varmennevirheet</a></li>
+<li><a href="encryption-errors.html">Salausvirheet</a></li>
+<li><a href="no-connection.html">Inbox Classic ei saa yhteyttä</a></li>
+<li><a href="message-not-shown.html">Viesti ei näy</a></li>
+</ul>
+<h2>Tietosuoja ja turvallisuus</h2>
+<ul>
+<li><a href="pictures-tracking.html">Kuvat ja seuranta</a></li>
+<li><a href="links-scripts.html">Linkit, skriptit ja liitteet</a></li>
+<li><a href="data-storage.html">Missä postiasi ja salasanojasi säilytetään</a></li>
+<li><a href="connections.html">Inbox Classicin muodostamat yhteydet</a></li>
+<li><a href="removing.html">Inbox Classicin poistaminen</a></li>
+</ul>
+<h2>Lisätoiminnot</h2>
+<ul>
+<li><a href="sign-in-apps.html">Kirjautumissovellukset</a></li>
+<li><a href="command-line.html">Komentorivin valitsimet</a></li>
+</ul>
+</nav>
+</nav><main>
+<h1>Mitä agentti saa tehdä</h1>
+<p class="summary">Määritä kunkin tekoälyagentin käyttöoikeudet, tarkastele sen toimia ja kumoa muutoksia.</p>
+<p>Kun agentti muodostaa yhteyden ensimmäisen kerran, Inbox Classic näyttää sen ohjelman nimen ja pyytää käyttöoikeuksia. Valitse sallitut toiminnot:</p>
+<ul>
+    <li>lukea postia: tarkastella kansioita, viestiluetteloita, keskusteluja ja hakutuloksia, lukea viestejä sekä tuettuja enintään 10 Mt:n PDF-, Office- ja kuvaliitteitä tai enintään 256 kt:n tekstiliitteitä, tarkastella viestisääntöjä ja hakea yhteystietoja</li>
+    <li>järjestellä postia: muuttaa lukutilaa, lippuja ja niiden värejä, käsitellä roskapostia, siirtää ja arkistoida viestejä tai siirtää niitä kansioon <b>Poistetut</b>; luoda ja nimetä uudelleen kansioita, seurata ja ohittaa keskusteluja sekä peruuttaa postituslistojen tilauksia luvallasi. Useita viestejä voi käsitellä kerralla jäljempänä kuvatuilla toiminnoilla</li>
+    <li>kirjoittaa luonnoksia, jotka sinä lähetät, sekä muokata tai hylätä itse luomiaan luonnoksia, kunnes tallennat ne</li>
+    <li>lähettää viestejä, joista jokainen edellyttää erillistä hyväksyntääsi</li>
+</ul>
+<p>Valitse sitten tilit, joita agentti saa käyttää, ja napsauta <b>Salli</b>. <b>Älä salli</b> estää ohjelman yhteyden. Samaa lupaa ei kysytä uudelleen.</p>
+<p>Agentti ei muuta tiliasetuksia. Se voi pyytää poistamaan pysyvästi vain itse luomiaan luonnoksia, joita et ole tallentanut; tällöin roskakoria ei käytetä. Tavallisten viestien poistaminen edellyttää tilin roskakoria. Agentti voi lukea ja kokeilla viestisääntöjä, mutta ei luoda, muuttaa tai poistaa niitä. Salatuista viesteistä se näkee vain ulkoiset metatiedot, ei purettua sisältöä, suojattua aihetta eikä liitteitä. Lukeminen ei merkitse viestiä luetuksi. Agentin tekemät muutokset näkyvät heti sovelluksen ikkunoissa.</p>
+<h2>Postituslistojen tilausten peruuttaminen</h2>
+<p>Agentti, jolla on oikeus järjestellä postia, voi ehdottaa postituslistojen tilausten peruuttamista. Inbox Classic näyttää lähettäjien osoitteet ja pyytää yhden vahvistuksen kaikille valituille listoille:</p>
+<ul>
+    <li><b>Peruuta tilaus</b> lähettää valituille listoille pyynnön lopettaa viestien lähettäminen sinulle.</li>
+    <li><b>Älä peruuta tilausta</b> on oletusvalinta eikä lähetä peruutuspyyntöjä.</li>
+</ul>
+<p>Agentti ei voi käyttää kansiossa <b>Roskaposti</b> olevia viestejä tilausten peruuttamiseen. Ohjelmakohtainen raja on 30 hyväksymääsi peruutuspyyntöä viimeisten 24 tunnin aikana. Myös epäonnistuneet pyynnöt lasketaan mukaan.</p>
+<h2>Monen viestin muuttaminen kerralla</h2>
+<p>Järjestelyoikeudella agentti voi merkitä hakutuloksia luetuiksi tai lukemattomiksi, muuttaa lippuja ja niiden värejä, siirtää tai arkistoida viestejä, käsitellä roskapostimerkintöjä ja siirtää viestejä roskakoriin. Ensin hakutulokset tallennetaan. Muutoksen yhteydessä niiden soveltuvuus tarkistetaan uudelleen ja käsitellään enintään 1 000 viestiä. Myöhemmin saapuneita viestejä ei lisätä mukaan. Toiminto hylätään, jos sopivia viestejä on yli 1 000 tai tarkistettavia merkintöjä yli 10 000; tuloksia ei vain katkaista rajaan. Erillistä lupaa ei kysytä, koska järjestelyoikeus on jo myönnetty. Lokiin tulee yksi yhteenvetomerkintä. Kumoaminen onnistuu vain siltä osin kuin viestien nykyinen tila sen sallii.</p>
+<h2>Käyttöoikeuksien tarkastelu ja muuttaminen</h2>
+<p><b>Työkalut</b> &gt; <b>Tekoälyagentit</b> näyttää ohjelmat, joille olet sallinut tai estänyt yhteyden, sekä agenttien toimet uusimmasta alkaen.</p>
+<p>Lukutoiminnot kootaan yhdeksi riviksi ohjelmaa ja tuntia kohden. Esimerkiksi ”Luki 14 viestiä ja haki 3 kertaa” sisältää erikseen lasketut toiminnot. Avaa rivi sen nuolella, niin näet viestien aiheet ja hakutekstit. Viestien sisältöä ei tallenneta lokiin. Luettelohaun määrä tarkoittaa palautettuja merkintöjä, ei kokonaan luettuja viestejä. Vanhoja merkintöjä siivotaan uusia lisättäessä. Säilytysaika on enintään 30 päivää lisäämisestä, ja joitakin merkintöjä voidaan poistaa aiemmin. Myös lokin tyhjentäminen tai ohjelman poistaminen luettelosta poistaa tietoja. Tyhjentäminen ei nollaa lähettämisen tai tilausten peruuttamisen rajoja.</p>
+<ul>
+    <li><b>Muuta</b> avaa ohjelman käyttöoikeudet muokattaviksi.</li>
+    <li><b>Poista</b> poistaa ohjelman tallennetun lupapäätöksen. Käyttöoikeuksia kysytään uudelleen, kun ohjelma seuraavan kerran muodostaa yhteyden.</li>
+    <li><b>Kumoa</b> kumoaa luettu/lukematon-merkintöjen, lippujen ja niiden värien sekä roskapostimerkintöjen muutokset sekä viestien siirrot, arkistoinnit ja poistot. Sillä voi myös perua lähettämisen, jos viesti odottaa vielä Lähtevät-kansiossa.</li>
+    <li><b>Kumoa ajalta</b> yrittää kumota valitun ajanjakson muutokset uusimmasta alkaen. Vahvistuksessa lasketaan lokimerkintöjä, ei yksittäisiä viestejä. Osa muutoksista voidaan kumota vain osittain.</li>
+</ul>
+<p>Kumoaminen ohittaa viestit, jotka eivät enää ole odotetussa sijainnissa tai tilassa. Lokimerkintä lasketaan kumotuksi, vaikka vain osa muutoksista saataisiin kumottua. Agentti voi kumota omia muutoksiaan, mutta ei toisen ohjelman muutoksia.</p>
+<aside class="warning">Viestin sisältö voi yrittää ohjata agenttia välittämään tai poistamaan postiasi. Inbox Classic jättää agenteille annetusta tekstistä pois viestissä piilotetun sisällön ja ohjeistaa käsittelemään postia tietona, ei toimintaohjeina. Agenttia voidaan silti huijata. Myönnä vain tarvitsemasi oikeudet.</aside>
+<nav class="related"><a href="agents-connect.html">Tekoälyagentin yhdistäminen</a> <a href="agents-sending.html">Kun agentti lähettää postia</a> <a href="data-storage.html">Missä postiasi ja salasanojasi säilytetään</a></nav>
+</main></div>
+</body>
+</html>

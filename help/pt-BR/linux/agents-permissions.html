@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'">
+<title>O que um agente pode fazer</title>
+<style>body{margin:16px 24px;line-height:1.5}body>:not(.web),main{max-width:42em}h1{font-size:1.6em;margin:0 0 4px}h2{font-size:1.2em;margin:1.4em 0 .4em}p.summary{font-size:1.05em;opacity:.8;margin-top:0}ol,ul{padding-left:1.6em}li{margin:.3em 0}table{border-collapse:collapse;margin:.6em 0}th,td{text-align:left;padding:4px 12px 4px 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent);vertical-align:top}kbd{font-size:.9em;border:1px solid color-mix(in srgb,currentColor 35%,transparent);border-bottom-width:2px;border-radius:4px;padding:0 4px;white-space:nowrap}aside{padding:8px 12px;margin:.8em 0}.side a[aria-current]{font-weight:700;text-decoration:none}aside.warning{border-left:4px solid #c60}img.picture{max-width:100%;height:auto;margin:.6em 0;border:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related{margin-top:1.6em;padding-top:.6em;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related a{margin-right:1.2em}p.home{margin:0 0 1em;font-size:.9em}header.bar{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;max-width:none;padding:0 0 12px;margin:0 0 20px;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}header.bar .brand{font-weight:700;text-decoration:none;margin-right:auto}header.bar a,header.bar b{margin-right:10px}.web{display:flex;gap:32px}.web .side{flex:0 0 240px;font-size:.92em}.web .side ul{padding-left:1.1em}.web main{flex:1;min-width:0}@media(max-width:700px){.web{display:block}.web .side{display:none}}:root{color-scheme:light dark}body{font:11pt system-ui,'Adwaita Sans',Cantarell,sans-serif;color:CanvasText;background:Canvas}a{color:#1c71d8}@media(prefers-color-scheme:dark){a{color:#78aeed}}aside.note,aside.warning{background:color-mix(in srgb,CanvasText 6%,Canvas);border-radius:12px}body.windows,body.mac,body.linux{font:16px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif;margin:0;background:#f7f7fb;color:#1f2330}header.bar{max-width:1180px;margin:0 auto;padding:14px 24px;border-bottom:1px solid #e3e3ee}header.bar .brand{color:#3d4aa8;font-size:1.1em}header.bar a{color:#3d4aa8}.web{max-width:1180px;margin:0 auto;padding:24px}.web main{background:#fff;border-radius:12px;padding:28px 36px;box-shadow:0 1px 3px rgba(20,20,60,.08)}.web .side{position:sticky;top:16px;align-self:flex-start;max-height:calc(100vh - 32px);overflow:auto}.web .side a{color:#30395e;text-decoration:none}.web .side a:hover,.web main a{color:#3d4aa8}h1,h2{color:#1f2330}h2{border-bottom:none}aside.note,aside.warning{background:#f1f2fb;border:1px solid #e0e2f5;border-radius:10px}@media(prefers-color-scheme:dark){body.windows,body.mac,body.linux{background:#14151c;color:#e6e7ef}.web main{background:#1d1f29;box-shadow:none}header.bar{border-color:#2c2f3d}.web .side a{color:#c5c9e6}h1,h2{color:#e6e7ef}aside.note,aside.warning{background:#232637;border-color:#30344a}header.bar a,header.bar .brand,.web main a,.web .side a:hover{color:#9aa6ff}}</style>
+</head>
+<body class="linux">
+<header class="bar"><a class="brand" href="/">Inbox Classic</a><span class="platforms"><a href="../windows/agents-permissions.html">Windows</a> <a href="../mac/agents-permissions.html">Mac</a> <b>Linux</b></span><span class="languages"><a href="../../en/linux/agents-permissions.html" hreflang="en">English</a> <a href="../../ca/linux/agents-permissions.html" hreflang="ca">Català</a> <a href="../../cs/linux/agents-permissions.html" hreflang="cs">Čeština</a> <a href="../../da/linux/agents-permissions.html" hreflang="da">Dansk</a> <a href="../../de/linux/agents-permissions.html" hreflang="de">Deutsch</a> <a href="../../et/linux/agents-permissions.html" hreflang="et">Eesti</a> <a href="../../es/linux/agents-permissions.html" hreflang="es">Español</a> <a href="../../fr/linux/agents-permissions.html" hreflang="fr">Français</a> <a href="../../hr/linux/agents-permissions.html" hreflang="hr">Hrvatski</a> <a href="../../it/linux/agents-permissions.html" hreflang="it">Italiano</a> <a href="../../lv/linux/agents-permissions.html" hreflang="lv">Latviešu</a> <a href="../../lt/linux/agents-permissions.html" hreflang="lt">Lietuvių</a> <a href="../../hu/linux/agents-permissions.html" hreflang="hu">Magyar</a> <a href="../../nl/linux/agents-permissions.html" hreflang="nl">Nederlands</a> <a href="../../nb/linux/agents-permissions.html" hreflang="nb">Norsk bokmål</a> <a href="../../pl/linux/agents-permissions.html" hreflang="pl">Polski</a> <b>Português (Brasil)</b> <a href="../../pt/linux/agents-permissions.html" hreflang="pt">Português (Portugal)</a> <a href="../../ro/linux/agents-permissions.html" hreflang="ro">Română</a> <a href="../../sk/linux/agents-permissions.html" hreflang="sk">Slovenčina</a> <a href="../../sl/linux/agents-permissions.html" hreflang="sl">Slovenščina</a> <a href="../../sr-Latn/linux/agents-permissions.html" hreflang="sr-Latn">Srpski</a> <a href="../../fi/linux/agents-permissions.html" hreflang="fi">Suomi</a> <a href="../../sv/linux/agents-permissions.html" hreflang="sv">Svenska</a> <a href="../../tr/linux/agents-permissions.html" hreflang="tr">Türkçe</a> <a href="../../el/linux/agents-permissions.html" hreflang="el">Ελληνικά</a> <a href="../../bg/linux/agents-permissions.html" hreflang="bg">Български</a> <a href="../../ru/linux/agents-permissions.html" hreflang="ru">Русский</a> <a href="../../uk/linux/agents-permissions.html" hreflang="uk">Українська</a></span></header>
+<div class="web"><nav class="side"><nav class="contents">
+<h2>Primeiros passos</h2>
+<ul>
+<li><a href="add-account.html">Adicionar uma conta de e-mail</a></li>
+<li><a href="gmail-outlook.html">Gmail e Outlook.com</a></li>
+<li><a href="main-window.html">A janela principal</a></li>
+<li><a href="layouts.html">Layouts</a></li>
+</ul>
+<h2>Tarefas do dia a dia</h2>
+<ul>
+<li><a href="read-messages.html">Ler mensagens</a></li>
+<li><a href="find-messages.html">Localizar mensagens</a></li>
+<li><a href="conversations.html">Conversas</a></li>
+<li><a href="organize-mail.html">Sinalizar, arquivar e mover mensagens</a></li>
+<li><a href="message-rules.html">Organizar os e-mails novos com regras</a></li>
+<li><a href="delete-and-undo.html">Excluir mensagens e desfazer</a></li>
+<li><a href="folders.html">Trabalhar com pastas</a></li>
+<li><a href="write-message.html">Escrever uma mensagem</a></li>
+<li><a href="reply-forward.html">Responder e encaminhar</a></li>
+<li><a href="attachments.html">Anexos</a></li>
+<li><a href="drafts-outbox.html">Rascunhos e Caixa de Saída</a></li>
+<li><a href="signatures.html">Assinaturas</a></li>
+<li><a href="address-book.html">O Catálogo de Endereços</a></li>
+<li><a href="save-print-import.html">Salvar, imprimir e importar mensagens</a></li>
+<li><a href="new-mail.html">Receber e-mails novos</a></li>
+</ul>
+<h2>Várias contas</h2>
+<ul>
+<li><a href="all-inboxes.html">Todas as Caixas de Entrada</a></li>
+<li><a href="manage-accounts.html">Alterar, ordenar e remover contas</a></li>
+<li><a href="move-computer.html">Mudar para outro computador</a></li>
+</ul>
+<h2>Recursos das mensagens</h2>
+<ul>
+<li><a href="sign-in-codes.html">Códigos de login</a></li>
+<li><a href="delivery-problems.html">Mensagens que não foram entregues</a></li>
+<li><a href="invitations.html">Convites de calendário</a></li>
+<li><a href="unsubscribe.html">Sair de uma lista de e-mails</a></li>
+<li><a href="brand-logos.html">Logotipos de marcas</a></li>
+</ul>
+<h2>E-mail criptografado e assinado</h2>
+<ul>
+<li><a href="encrypted-and-signed-mail.html">E-mails criptografados e assinados</a></li>
+<li><a href="sign-and-encrypt.html">Assinar e criptografar uma mensagem</a></li>
+<li><a href="encryption-keys.html">Chaves de criptografia</a></li>
+<li><a href="verify-a-key.html">Verificar a chave de um contato</a></li>
+</ul>
+<h2>Configurações</h2>
+<ul>
+<li><a href="options-language.html">Configurações</a></li>
+<li><a href="download-ahead.html">Mensagens baixadas antecipadamente</a></li>
+<li><a href="account-security.html">Configurações de segurança da conta</a></li>
+<li><a href="default-mail-program.html">Definir o Inbox Classic como aplicativo de e-mail padrão</a></li>
+<li><a href="updates.html">Atualizar o Inbox Classic</a></li>
+</ul>
+<h2>Agentes de IA</h2>
+<ul>
+<li><a href="agents-connect.html">Conectar um agente de IA</a></li>
+<li><a href="agents-permissions.html" aria-current="page">O que um agente pode fazer</a></li>
+<li><a href="agents-sending.html">Quando um agente envia e-mails</a></li>
+</ul>
+<h2>Referência</h2>
+<ul>
+<li><a href="keyboard-shortcuts.html">Atalhos de teclado</a></li>
+<li><a href="search-words.html">Operadores de pesquisa</a></li>
+</ul>
+<h2>Solução de problemas</h2>
+<ul>
+<li><a href="password-not-accepted.html">A senha não é aceita</a></li>
+<li><a href="certificate-errors.html">Erros de certificado</a></li>
+<li><a href="encryption-errors.html">Erros de criptografia</a></li>
+<li><a href="no-connection.html">O Inbox Classic não consegue se conectar</a></li>
+<li><a href="message-not-shown.html">Uma mensagem não aparece</a></li>
+</ul>
+<h2>Privacidade e segurança</h2>
+<ul>
+<li><a href="pictures-tracking.html">Imagens e rastreamento</a></li>
+<li><a href="links-scripts.html">Links, scripts e anexos</a></li>
+<li><a href="data-storage.html">Onde ficam seus e-mails e senhas</a></li>
+<li><a href="connections.html">As conexões que o Inbox Classic faz</a></li>
+<li><a href="removing.html">Remover o Inbox Classic</a></li>
+</ul>
+<h2>Avançado</h2>
+<ul>
+<li><a href="sign-in-apps.html">Aplicativos de login</a></li>
+<li><a href="command-line.html">Opções da linha de comando</a></li>
+</ul>
+</nav>
+</nav><main>
+<h1>O que um agente pode fazer</h1>
+<p class="summary">Escolha o que cada agente de IA pode fazer com seus e-mails, consulte o histórico de atividade e desfaça alterações.</p>
+<p>Na primeira vez que o agente de um programa se conecta, o Inbox Classic pede autorização e mostra o nome do programa. Escolha o que ele pode fazer:</p>
+<ul>
+    <li>ler e-mails: acessar pastas, listas, mensagens e conversas; ler anexos de texto de até 256 KiB e formatos compatíveis de PDF, Office e imagens de até 10 MB; pesquisar mensagens e consultar regras e contatos. O Catálogo de Endereços fica acessível; a busca de contatos no histórico de e-mails exige acesso a todas as contas</li>
+    <li>organizar e-mails: alterar o status de leitura, os sinalizadores e suas cores, gerenciar o lixo eletrônico, mover e arquivar mensagens, criar pastas, renomear suas próprias pastas, acompanhar e ignorar conversas, excluir mensagens (movendo-as para <b>Itens Excluídos</b>), aplicar em lote as ações de organização compatíveis aos resultados de uma pesquisa, e cancelar inscrições em listas de e-mails com sua autorização</li>
+    <li>escrever rascunhos para você enviar e alterar ou descartar os rascunhos criados pelo próprio agente, enquanto você não os salvar</li>
+    <li>enviar e-mails, com sua aprovação para cada mensagem</li>
+</ul>
+<p>Depois escolha as contas que ele pode ver e clique em <b>Permitir</b>. <b>Não permitir</b> recusa o programa, e o aplicativo não volta a pedir autorização para esse programa.</p>
+<p>Um agente só pode excluir permanentemente os rascunhos que ele criou e que você ainda não salvou. Ele não altera as configurações das suas contas. Pode consultar regras de mensagens e ver quais mensagens corresponderiam a elas, sem alterar essas mensagens. Não pode criar, alterar ou excluir regras. Ele nunca lê o conteúdo nem os anexos de uma mensagem criptografada. Ler uma mensagem não a marca como lida. As alterações do agente aparecem imediatamente nas janelas.</p>
+<h2>Cancelar inscrições em listas de e-mails</h2>
+<p>Um agente autorizado a organizar e-mails pode propor o cancelamento de inscrições em listas de e-mails. O Inbox Classic mostra os endereços dos remetentes e pede uma única confirmação para todas as listas selecionadas:</p>
+<ul>
+    <li><b>Cancelar inscrição</b> pede às listas selecionadas que parem de enviar mensagens para você.</li>
+    <li><b>Não cancelar inscrição</b> é a opção padrão e não envia pedidos de cancelamento.</li>
+</ul>
+<p>Um agente não pode usar mensagens da pasta <b>Lixo Eletrônico</b> para cancelar inscrições. Para cada programa, o limite é de 30 pedidos de cancelamento aprovados por você nas últimas 24 horas. Pedidos que falham também contam para esse limite.</p>
+<h2>Alterar muitas mensagens de uma vez</h2>
+<p>Um agente autorizado a organizar e-mails pode alterar em uma única etapa todas as mensagens que uma pesquisa encontrar, por exemplo marcar todas as newsletters como lidas ou movê-las para uma pasta. Primeiro ele conta as mensagens e vê algumas delas. A operação usa esse conjunto de resultados e verifica novamente as mensagens antes de alterá-las, sem incluir as que chegaram depois. Pedidos que excedam 1.000 alterações ou exijam examinar mais de 10.000 mensagens são recusados. A permissão para organizar já autoriza essas operações, sem nova pergunta. O registro mostra cada operação em uma linha, por exemplo “Marcou 37 mensagens como lidas (pesquisa: from:news)”. Desfazer tenta reverter a operação, mas pode restaurar apenas parte dela.</p>
+<h2>Ver e alterar o acesso</h2>
+<p><b>Ferramentas</b> &gt; <b>Agentes de IA</b> mostra os programas que você permitiu ou recusou, e tudo o que os agentes fizeram, do mais recente para o mais antigo.</p>
+<p>O que um agente lê aparece em uma linha por programa e por hora, por exemplo “Leu 14 mensagens e pesquisou 3 vezes”. Abra a linha com a seta dela para ver os assuntos que ele leu e o que pesquisou, nunca o texto das mensagens. O registro mantém até 30 dias de atividade, sujeito também ao limite de capacidade; entradas antigas podem desaparecer antes disso. Limpar o histórico exclui os detalhes de leitura e oculta as alterações, mas não redefine os limites de leitura, alteração, envio ou cancelamento de inscrição.</p>
+<ul>
+    <li><b>Alterar</b> altera o que um programa pode fazer.</li>
+    <li><b>Remover</b> remove um programa, suas permissões e o histórico de atividade dos agentes. Na próxima conexão, será necessário autorizar o acesso novamente.</li>
+    <li><b>Desfazer</b> desfaz alterações no status de leitura, nos sinalizadores e em suas cores, na classificação como lixo eletrônico, além de movimentações, arquivamentos e exclusões de mensagens. Também cancela o envio de mensagens que ainda estão na Caixa de Saída.</li>
+    <li><b>Desfazer desde</b> tenta desfazer as alterações reversíveis do programa selecionado no período que você escolher, por exemplo na última hora, do mais recente para o mais antigo.</li>
+</ul>
+<p>Ao desfazer alterações, são ignoradas as mensagens que já não estão no local ou no estado esperado. Uma entrada do registro conta como desfeita mesmo que só tenha sido possível desfazer parte das alterações. Um agente pode desfazer as próprias alterações, mas nunca as de outro programa.</p>
+<aside class="warning">Os e-mails são escritos por outras pessoas, e uma mensagem pode tentar convencer um agente a encaminhar ou excluir seus e-mails. O Inbox Classic oculta dos agentes o texto que não aparece para você na mensagem e informa a eles que o conteúdo dos e-mails não deve ser tratado como instruções. Mesmo assim, um agente pode ser enganado. Permita apenas o que for necessário.</aside>
+<nav class="related"><a href="agents-connect.html">Conectar um agente de IA</a> <a href="agents-sending.html">Quando um agente envia e-mails</a> <a href="data-storage.html">Onde ficam seus e-mails e senhas</a></nav>
+</main></div>
+</body>
+</html>

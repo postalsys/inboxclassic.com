@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'">
+<title>Wat een agent mag doen</title>
+<style>body{margin:16px 24px;line-height:1.5}body>:not(.web),main{max-width:42em}h1{font-size:1.6em;margin:0 0 4px}h2{font-size:1.2em;margin:1.4em 0 .4em}p.summary{font-size:1.05em;opacity:.8;margin-top:0}ol,ul{padding-left:1.6em}li{margin:.3em 0}table{border-collapse:collapse;margin:.6em 0}th,td{text-align:left;padding:4px 12px 4px 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent);vertical-align:top}kbd{font-size:.9em;border:1px solid color-mix(in srgb,currentColor 35%,transparent);border-bottom-width:2px;border-radius:4px;padding:0 4px;white-space:nowrap}aside{padding:8px 12px;margin:.8em 0}.side a[aria-current]{font-weight:700;text-decoration:none}aside.warning{border-left:4px solid #c60}img.picture{max-width:100%;height:auto;margin:.6em 0;border:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related{margin-top:1.6em;padding-top:.6em;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related a{margin-right:1.2em}p.home{margin:0 0 1em;font-size:.9em}header.bar{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;max-width:none;padding:0 0 12px;margin:0 0 20px;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}header.bar .brand{font-weight:700;text-decoration:none;margin-right:auto}header.bar a,header.bar b{margin-right:10px}.web{display:flex;gap:32px}.web .side{flex:0 0 240px;font-size:.92em}.web .side ul{padding-left:1.1em}.web main{flex:1;min-width:0}@media(max-width:700px){.web{display:block}.web .side{display:none}}body{font:10pt Tahoma,Arial,sans-serif;color:#000;background:#fff}h1,h2{color:#036}h2{border-bottom:1px solid #9ab}a{color:#03c}aside.note,aside.warning{background:#ffffe1;border:1px solid #c9c9a0}kbd{background:#f4f4f4;border-color:#999}body.windows,body.mac,body.linux{font:16px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif;margin:0;background:#f7f7fb;color:#1f2330}header.bar{max-width:1180px;margin:0 auto;padding:14px 24px;border-bottom:1px solid #e3e3ee}header.bar .brand{color:#3d4aa8;font-size:1.1em}header.bar a{color:#3d4aa8}.web{max-width:1180px;margin:0 auto;padding:24px}.web main{background:#fff;border-radius:12px;padding:28px 36px;box-shadow:0 1px 3px rgba(20,20,60,.08)}.web .side{position:sticky;top:16px;align-self:flex-start;max-height:calc(100vh - 32px);overflow:auto}.web .side a{color:#30395e;text-decoration:none}.web .side a:hover,.web main a{color:#3d4aa8}h1,h2{color:#1f2330}h2{border-bottom:none}aside.note,aside.warning{background:#f1f2fb;border:1px solid #e0e2f5;border-radius:10px}@media(prefers-color-scheme:dark){body.windows,body.mac,body.linux{background:#14151c;color:#e6e7ef}.web main{background:#1d1f29;box-shadow:none}header.bar{border-color:#2c2f3d}.web .side a{color:#c5c9e6}h1,h2{color:#e6e7ef}aside.note,aside.warning{background:#232637;border-color:#30344a}header.bar a,header.bar .brand,.web main a,.web .side a:hover{color:#9aa6ff}}</style>
+</head>
+<body class="windows">
+<header class="bar"><a class="brand" href="/">Inbox Classic</a><span class="platforms"><b>Windows</b> <a href="../mac/agents-permissions.html">Mac</a> <a href="../linux/agents-permissions.html">Linux</a></span><span class="languages"><a href="../../en/windows/agents-permissions.html" hreflang="en">English</a> <a href="../../ca/windows/agents-permissions.html" hreflang="ca">Català</a> <a href="../../cs/windows/agents-permissions.html" hreflang="cs">Čeština</a> <a href="../../da/windows/agents-permissions.html" hreflang="da">Dansk</a> <a href="../../de/windows/agents-permissions.html" hreflang="de">Deutsch</a> <a href="../../et/windows/agents-permissions.html" hreflang="et">Eesti</a> <a href="../../es/windows/agents-permissions.html" hreflang="es">Español</a> <a href="../../fr/windows/agents-permissions.html" hreflang="fr">Français</a> <a href="../../hr/windows/agents-permissions.html" hreflang="hr">Hrvatski</a> <a href="../../it/windows/agents-permissions.html" hreflang="it">Italiano</a> <a href="../../lv/windows/agents-permissions.html" hreflang="lv">Latviešu</a> <a href="../../lt/windows/agents-permissions.html" hreflang="lt">Lietuvių</a> <a href="../../hu/windows/agents-permissions.html" hreflang="hu">Magyar</a> <b>Nederlands</b> <a href="../../nb/windows/agents-permissions.html" hreflang="nb">Norsk bokmål</a> <a href="../../pl/windows/agents-permissions.html" hreflang="pl">Polski</a> <a href="../../pt-BR/windows/agents-permissions.html" hreflang="pt-BR">Português (Brasil)</a> <a href="../../pt/windows/agents-permissions.html" hreflang="pt">Português (Portugal)</a> <a href="../../ro/windows/agents-permissions.html" hreflang="ro">Română</a> <a href="../../sk/windows/agents-permissions.html" hreflang="sk">Slovenčina</a> <a href="../../sl/windows/agents-permissions.html" hreflang="sl">Slovenščina</a> <a href="../../sr-Latn/windows/agents-permissions.html" hreflang="sr-Latn">Srpski</a> <a href="../../fi/windows/agents-permissions.html" hreflang="fi">Suomi</a> <a href="../../sv/windows/agents-permissions.html" hreflang="sv">Svenska</a> <a href="../../tr/windows/agents-permissions.html" hreflang="tr">Türkçe</a> <a href="../../el/windows/agents-permissions.html" hreflang="el">Ελληνικά</a> <a href="../../bg/windows/agents-permissions.html" hreflang="bg">Български</a> <a href="../../ru/windows/agents-permissions.html" hreflang="ru">Русский</a> <a href="../../uk/windows/agents-permissions.html" hreflang="uk">Українська</a></span></header>
+<div class="web"><nav class="side"><nav class="contents">
+<h2>Aan de slag</h2>
+<ul>
+<li><a href="add-account.html">Een e-mailaccount toevoegen</a></li>
+<li><a href="gmail-outlook.html">Gmail en Outlook.com</a></li>
+<li><a href="main-window.html">Het hoofdvenster</a></li>
+<li><a href="layouts.html">Indelingen</a></li>
+</ul>
+<h2>Dagelijkse taken</h2>
+<ul>
+<li><a href="read-messages.html">Berichten lezen</a></li>
+<li><a href="find-messages.html">Berichten zoeken</a></li>
+<li><a href="conversations.html">Gesprekken</a></li>
+<li><a href="organize-mail.html">Berichten markeren, archiveren en verplaatsen</a></li>
+<li><a href="message-rules.html">Nieuwe e-mail verwerken met regels</a></li>
+<li><a href="delete-and-undo.html">Berichten verwijderen en acties ongedaan maken</a></li>
+<li><a href="folders.html">Werken met mappen</a></li>
+<li><a href="write-message.html">Een bericht schrijven</a></li>
+<li><a href="reply-forward.html">Beantwoorden en doorsturen</a></li>
+<li><a href="attachments.html">Bijlagen</a></li>
+<li><a href="drafts-outbox.html">Concepten en het Postvak UIT</a></li>
+<li><a href="signatures.html">Handtekeningen</a></li>
+<li><a href="address-book.html">Het Adresboek</a></li>
+<li><a href="save-print-import.html">Berichten opslaan, afdrukken en importeren</a></li>
+<li><a href="new-mail.html">Nieuwe e-mail ophalen</a></li>
+</ul>
+<h2>Meerdere accounts</h2>
+<ul>
+<li><a href="all-inboxes.html">Alle Postvakken IN</a></li>
+<li><a href="manage-accounts.html">Accounts wijzigen, ordenen en verwijderen</a></li>
+<li><a href="move-computer.html">Naar een andere computer verhuizen</a></li>
+</ul>
+<h2>Berichtfuncties</h2>
+<ul>
+<li><a href="sign-in-codes.html">Aanmeldcodes</a></li>
+<li><a href="delivery-problems.html">Berichten die niet zijn bezorgd</a></li>
+<li><a href="invitations.html">Agenda-uitnodigingen</a></li>
+<li><a href="unsubscribe.html">Afmelden voor een mailinglijst</a></li>
+<li><a href="brand-logos.html">Merklogo’s</a></li>
+</ul>
+<h2>Versleutelde en ondertekende e-mail</h2>
+<ul>
+<li><a href="encrypted-and-signed-mail.html">Versleutelde en ondertekende e-mail</a></li>
+<li><a href="sign-and-encrypt.html">Een bericht ondertekenen en versleutelen</a></li>
+<li><a href="encryption-keys.html">Versleutelingssleutels</a></li>
+<li><a href="verify-a-key.html">De sleutel van een contactpersoon verifiëren</a></li>
+</ul>
+<h2>Instellingen</h2>
+<ul>
+<li><a href="options-language.html">Instellingen</a></li>
+<li><a href="download-ahead.html">Berichten vooraf downloaden</a></li>
+<li><a href="account-security.html">Beveiligingsinstellingen van een account</a></li>
+<li><a href="default-mail-program.html">Inbox Classic als standaardapp voor e-mail instellen</a></li>
+<li><a href="updates.html">Inbox Classic bijwerken</a></li>
+</ul>
+<h2>AI-agents</h2>
+<ul>
+<li><a href="agents-connect.html">Een AI-agent verbinden</a></li>
+<li><a href="agents-permissions.html" aria-current="page">Wat een agent mag doen</a></li>
+<li><a href="agents-sending.html">Als een agent e-mail verzendt</a></li>
+</ul>
+<h2>Naslag</h2>
+<ul>
+<li><a href="keyboard-shortcuts.html">Sneltoetsen</a></li>
+<li><a href="search-words.html">Zoekoperatoren</a></li>
+</ul>
+<h2>Problemen oplossen</h2>
+<ul>
+<li><a href="password-not-accepted.html">Het wachtwoord wordt niet geaccepteerd</a></li>
+<li><a href="certificate-errors.html">Certificaatfouten</a></li>
+<li><a href="encryption-errors.html">Problemen met verbindingsbeveiliging</a></li>
+<li><a href="no-connection.html">Inbox Classic kan geen verbinding maken</a></li>
+<li><a href="message-not-shown.html">Een bericht wordt niet weergegeven</a></li>
+</ul>
+<h2>Privacy en beveiliging</h2>
+<ul>
+<li><a href="pictures-tracking.html">Afbeeldingen en tracking</a></li>
+<li><a href="links-scripts.html">Links, scripts en bijlagen</a></li>
+<li><a href="data-storage.html">Waar je e-mail en wachtwoorden worden bewaard</a></li>
+<li><a href="connections.html">De verbindingen die Inbox Classic maakt</a></li>
+<li><a href="removing.html">Inbox Classic verwijderen</a></li>
+</ul>
+<h2>Geavanceerd</h2>
+<ul>
+<li><a href="sign-in-apps.html">Aanmeldapps</a></li>
+<li><a href="command-line.html">Opdrachtregelopties</a></li>
+</ul>
+</nav>
+</nav><main>
+<h1>Wat een agent mag doen</h1>
+<p class="summary">Bepaal welke toegang AI-agents krijgen, bekijk hun acties en maak wijzigingen ongedaan.</p>
+<p>Als de agent van een programma voor het eerst verbinding maakt, toont Inbox Classic de programmanaam en vraagt om toestemming. Kies welke acties je toestaat:</p>
+<ul>
+    <li>e-mail lezen: mappen, berichten en gesprekken bekijken, ook de gegevens van PDF-, Office- en afbeeldingsbijlagen tot 10 MB en tekstbijlagen tot 256 KB lezen, berichten doorzoeken, berichtenregels bekijken en namen of e-mailadressen opzoeken</li>
+    <li>e-mail ordenen: leesstatus, markeringen en hun kleuren wijzigen, ongewenste e-mail markeren, berichten verplaatsen, archiveren en verwijderen (naar <b>Verwijderde items</b>), mappen maken, je eigen mappen hernoemen, gesprekken volgen en negeren, ondersteunde berichtacties toepassen op zoekresultaten zoals hieronder beschreven, en je na jouw toestemming afmelden voor mailinglijsten</li>
+    <li>concepten schrijven die jij verzendt, en zelfgeschreven concepten wijzigen of verwijderen totdat jij ze opslaat</li>
+    <li>e-mail verzenden, met jouw toestemming voor elk bericht</li>
+</ul>
+<p>Kies daarna de accounts waartoe het programma toegang mag krijgen en klik op <b>Toestaan</b>. <b>Niet toestaan</b> weigert het programma. Daarna vraagt Inbox Classic niet opnieuw om toestemming.</p>
+<p>Een agent verwijdert je berichten niet definitief, behalve concepten die hij zelf heeft gemaakt en die jij nog niet hebt opgeslagen. Hij wijzigt je accountinstellingen niet. Hij kan berichtregels bekijken en nagaan op welke berichten ze van toepassing zouden zijn, zonder die berichten te wijzigen. Hij kan geen regels maken, wijzigen of verwijderen. Hij kan de inhoud, bijlagen en ontsleutelde zoekgegevens van versleutelde berichten niet lezen. De onversleutelde berichtgegevens blijven wel beschikbaar. Bij het opzoeken van contactpersonen gebruikt hij het Adresboek; adressen uit je e-mail zijn alleen beschikbaar als je toegang tot alle accounts hebt gegeven. Als hij een bericht leest, wordt het niet als gelezen gemarkeerd. Zijn wijzigingen zie je meteen in de vensters.</p>
+<h2>Afmelden voor mailinglijsten</h2>
+<p>Een agent die e-mail mag ordenen, kan voorstellen om je af te melden voor mailinglijsten. Inbox Classic toont de adressen van de afzenders en vraagt één keer toestemming voor alle geselecteerde lijsten:</p>
+<ul>
+    <li><b>Afmelden</b> vraagt de geselecteerde mailinglijsten om je geen berichten meer te sturen.</li>
+    <li><b>Niet afmelden</b> is standaard geselecteerd en verstuurt geen afmeldverzoeken.</li>
+</ul>
+<p>Een agent kan je niet afmelden op basis van berichten in de map <b>Ongewenste e-mail</b>. Per programma geldt een limiet van 30 goedgekeurde afmeldverzoeken in de afgelopen 24 uur. Ook verzoeken die mislukken tellen mee.</p>
+<h2>Veel berichten tegelijk wijzigen</h2>
+<p>Een agent die e-mail mag ordenen, kan alle berichten die een zoekopdracht vindt in één stap wijzigen, bijvoorbeeld alle nieuwsbrieven als gelezen markeren of ze naar een map verplaatsen. Eerst telt hij de berichten en bekijkt hij er een paar. Daarna controleert Inbox Classic de gevonden berichten opnieuw en wijzigt het maximaal 1.000 berichten uit die selectie. Later binnengekomen berichten worden niet meegenomen. Een zoekopdracht die meer dan 10.000 berichten moet bekijken of meer dan 1.000 berichten zou wijzigen, wordt geweigerd; de agent moet de zoekopdracht beperken. Binnen de gegeven machtigingen is geen aparte bevestiging nodig. Het logboek toont de actie als één regel, zoals “37 berichten gemarkeerd als gelezen (zoekopdracht: from:news)”. Terugdraaien herstelt alleen wat op dat moment nog kan worden hersteld.</p>
+<h2>Toegang bekijken en wijzigen</h2>
+<p><b>Extra</b> &gt; <b>AI-agents</b> toont de programma’s die je toegang gaf of weigerde, en de acties van agents, met de nieuwste bovenaan.</p>
+<p>Wat een agent leest, verschijnt als één rij per programma en uur, zoals “14 berichten gelezen en 3 keer gezocht”. Selecteer de rij om de onderwerpen te zien die hij heeft gelezen en waarnaar hij heeft gezocht, maar nooit de tekst van de berichten. Regels ouder dan 30 dagen worden opgeruimd wanneer nieuwe worden toegevoegd. Gewone wijzigingsregels kunnen eerder worden verwijderd om de omvang van het logboek te beperken. Lijstactiviteiten tellen de bekeken berichtregels, niet het aantal keren dat een lijst is geopend. Een verzoek om een bijlage wordt ook vastgelegd als het bestand daarna vanwege type of grootte wordt geweigerd; het wordt niet in een extern programma geopend. Wissen verwijdert leesactiviteiten en verbergt wijzigingsactiviteiten, maar herstelt geen wijzigingen en zet de limieten niet terug.</p>
+<ul>
+    <li><b>Wijzigen</b> wijzigt wat een programma mag doen.</li>
+    <li><b>Verwijderen</b> verwijdert de vermelding, machtigingen en activiteitengeschiedenis van een programma; het programma zelf wordt niet verwijderd. Bij de volgende verbinding wordt opnieuw om toestemming gevraagd.</li>
+    <li><b>Ongedaan maken</b> maakt wijzigingen in de leesstatus, markeringen en hun kleur ongedaan, evenals het markeren als ongewenste e-mail, verplaatsen, archiveren en verwijderen. Je kunt hiermee ook de verzending annuleren van een bericht dat nog in Postvak UIT staat.</li>
+    <li><b>Wijzigingen terugdraaien</b> probeert de wijzigingen van het geselecteerde programma uit de gekozen periode terug te draaien, bijvoorbeeld die van het afgelopen uur, met de nieuwste eerst.</li>
+</ul>
+<p>Bij het ongedaan maken worden berichten overgeslagen die niet meer op de verwachte plaats of in de verwachte toestand zijn. Een logboekvermelding telt als ongedaan gemaakt, ook als dat maar voor een deel is gelukt. Een agent kan zijn eigen wijzigingen terugdraaien, maar nooit die van een ander programma.</p>
+<aside class="warning">E-mail van anderen kan instructies bevatten die een agent proberen te misleiden, bijvoorbeeld om berichten door te sturen of te verwijderen. Inbox Classic verbergt tekst die ook voor jou verborgen is en geeft aan dat berichtinhoud geen instructie is. Toch kan een agent worden misleid. Geef alleen de toegang die nodig is.</aside>
+<nav class="related"><a href="agents-connect.html">Een AI-agent verbinden</a> <a href="agents-sending.html">Als een agent e-mail verzendt</a> <a href="data-storage.html">Waar je e-mail en wachtwoorden worden bewaard</a></nav>
+</main></div>
+</body>
+</html>

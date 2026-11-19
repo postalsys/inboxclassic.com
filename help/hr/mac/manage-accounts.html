@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="hr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'">
+<title>Uređivanje, redoslijed i uklanjanje računa</title>
+<style>body{margin:16px 24px;line-height:1.5}body>:not(.web),main{max-width:42em}h1{font-size:1.6em;margin:0 0 4px}h2{font-size:1.2em;margin:1.4em 0 .4em}p.summary{font-size:1.05em;opacity:.8;margin-top:0}ol,ul{padding-left:1.6em}li{margin:.3em 0}table{border-collapse:collapse;margin:.6em 0}th,td{text-align:left;padding:4px 12px 4px 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent);vertical-align:top}kbd{font-size:.9em;border:1px solid color-mix(in srgb,currentColor 35%,transparent);border-bottom-width:2px;border-radius:4px;padding:0 4px;white-space:nowrap}aside{padding:8px 12px;margin:.8em 0}.side a[aria-current]{font-weight:700;text-decoration:none}aside.warning{border-left:4px solid #c60}img.picture{max-width:100%;height:auto;margin:.6em 0;border:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related{margin-top:1.6em;padding-top:.6em;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related a{margin-right:1.2em}p.home{margin:0 0 1em;font-size:.9em}header.bar{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;max-width:none;padding:0 0 12px;margin:0 0 20px;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}header.bar .brand{font-weight:700;text-decoration:none;margin-right:auto}header.bar a,header.bar b{margin-right:10px}.web{display:flex;gap:32px}.web .side{flex:0 0 240px;font-size:.92em}.web .side ul{padding-left:1.1em}.web main{flex:1;min-width:0}@media(max-width:700px){.web{display:block}.web .side{display:none}}:root{color-scheme:light dark}body{font:13px -apple-system,BlinkMacSystemFont,sans-serif;color:CanvasText;background:Canvas}a{color:LinkText}aside.note,aside.warning{background:color-mix(in srgb,CanvasText 6%,Canvas);border-radius:8px}kbd{font-family:-apple-system,sans-serif}body.windows,body.mac,body.linux{font:16px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif;margin:0;background:#f7f7fb;color:#1f2330}header.bar{max-width:1180px;margin:0 auto;padding:14px 24px;border-bottom:1px solid #e3e3ee}header.bar .brand{color:#3d4aa8;font-size:1.1em}header.bar a{color:#3d4aa8}.web{max-width:1180px;margin:0 auto;padding:24px}.web main{background:#fff;border-radius:12px;padding:28px 36px;box-shadow:0 1px 3px rgba(20,20,60,.08)}.web .side{position:sticky;top:16px;align-self:flex-start;max-height:calc(100vh - 32px);overflow:auto}.web .side a{color:#30395e;text-decoration:none}.web .side a:hover,.web main a{color:#3d4aa8}h1,h2{color:#1f2330}h2{border-bottom:none}aside.note,aside.warning{background:#f1f2fb;border:1px solid #e0e2f5;border-radius:10px}@media(prefers-color-scheme:dark){body.windows,body.mac,body.linux{background:#14151c;color:#e6e7ef}.web main{background:#1d1f29;box-shadow:none}header.bar{border-color:#2c2f3d}.web .side a{color:#c5c9e6}h1,h2{color:#e6e7ef}aside.note,aside.warning{background:#232637;border-color:#30344a}header.bar a,header.bar .brand,.web main a,.web .side a:hover{color:#9aa6ff}}</style>
+</head>
+<body class="mac">
+<header class="bar"><a class="brand" href="/">Inbox Classic</a><span class="platforms"><a href="../windows/manage-accounts.html">Windows</a> <b>Mac</b> <a href="../linux/manage-accounts.html">Linux</a></span><span class="languages"><a href="../../en/mac/manage-accounts.html" hreflang="en">English</a> <a href="../../ca/mac/manage-accounts.html" hreflang="ca">Català</a> <a href="../../cs/mac/manage-accounts.html" hreflang="cs">Čeština</a> <a href="../../da/mac/manage-accounts.html" hreflang="da">Dansk</a> <a href="../../de/mac/manage-accounts.html" hreflang="de">Deutsch</a> <a href="../../et/mac/manage-accounts.html" hreflang="et">Eesti</a> <a href="../../es/mac/manage-accounts.html" hreflang="es">Español</a> <a href="../../fr/mac/manage-accounts.html" hreflang="fr">Français</a> <b>Hrvatski</b> <a href="../../it/mac/manage-accounts.html" hreflang="it">Italiano</a> <a href="../../lv/mac/manage-accounts.html" hreflang="lv">Latviešu</a> <a href="../../lt/mac/manage-accounts.html" hreflang="lt">Lietuvių</a> <a href="../../hu/mac/manage-accounts.html" hreflang="hu">Magyar</a> <a href="../../nl/mac/manage-accounts.html" hreflang="nl">Nederlands</a> <a href="../../nb/mac/manage-accounts.html" hreflang="nb">Norsk bokmål</a> <a href="../../pl/mac/manage-accounts.html" hreflang="pl">Polski</a> <a href="../../pt-BR/mac/manage-accounts.html" hreflang="pt-BR">Português (Brasil)</a> <a href="../../pt/mac/manage-accounts.html" hreflang="pt">Português (Portugal)</a> <a href="../../ro/mac/manage-accounts.html" hreflang="ro">Română</a> <a href="../../sk/mac/manage-accounts.html" hreflang="sk">Slovenčina</a> <a href="../../sl/mac/manage-accounts.html" hreflang="sl">Slovenščina</a> <a href="../../sr-Latn/mac/manage-accounts.html" hreflang="sr-Latn">Srpski</a> <a href="../../fi/mac/manage-accounts.html" hreflang="fi">Suomi</a> <a href="../../sv/mac/manage-accounts.html" hreflang="sv">Svenska</a> <a href="../../tr/mac/manage-accounts.html" hreflang="tr">Türkçe</a> <a href="../../el/mac/manage-accounts.html" hreflang="el">Ελληνικά</a> <a href="../../bg/mac/manage-accounts.html" hreflang="bg">Български</a> <a href="../../ru/mac/manage-accounts.html" hreflang="ru">Русский</a> <a href="../../uk/mac/manage-accounts.html" hreflang="uk">Українська</a></span></header>
+<div class="web"><nav class="side"><nav class="contents">
+<h2>Prvi koraci</h2>
+<ul>
+<li><a href="add-account.html">Dodavanje računa e-pošte</a></li>
+<li><a href="gmail-outlook.html">Gmail i Outlook.com</a></li>
+<li><a href="main-window.html">Glavni prozor</a></li>
+<li><a href="layouts.html">Rasporedi</a></li>
+</ul>
+<h2>Svakodnevni zadaci</h2>
+<ul>
+<li><a href="read-messages.html">Čitanje poruka</a></li>
+<li><a href="find-messages.html">Traženje poruka</a></li>
+<li><a href="conversations.html">Razgovori</a></li>
+<li><a href="organize-mail.html">Označavanje zastavicom, arhiviranje i premještanje poruka</a></li>
+<li><a href="message-rules.html">Pravila za novu poštu</a></li>
+<li><a href="delete-and-undo.html">Brisanje poruka i poništavanje</a></li>
+<li><a href="folders.html">Rad s mapama</a></li>
+<li><a href="write-message.html">Pisanje poruke</a></li>
+<li><a href="reply-forward.html">Odgovaranje i prosljeđivanje</a></li>
+<li><a href="attachments.html">Privici</a></li>
+<li><a href="drafts-outbox.html">Skice i Izlazna pošta</a></li>
+<li><a href="signatures.html">Potpisi</a></li>
+<li><a href="address-book.html">Adresar</a></li>
+<li><a href="save-print-import.html">Spremanje, ispis i uvoz poruka</a></li>
+<li><a href="new-mail.html">Primanje nove pošte</a></li>
+</ul>
+<h2>Više računa</h2>
+<ul>
+<li><a href="all-inboxes.html">Sva ulazna pošta</a></li>
+<li><a href="manage-accounts.html" aria-current="page">Uređivanje, redoslijed i uklanjanje računa</a></li>
+<li><a href="move-computer.html">Prijelaz na drugo računalo</a></li>
+</ul>
+<h2>Značajke poruka</h2>
+<ul>
+<li><a href="sign-in-codes.html">Kodovi za prijavu</a></li>
+<li><a href="delivery-problems.html">Poruke koje nisu isporučene</a></li>
+<li><a href="invitations.html">Pozivnice za događaje</a></li>
+<li><a href="unsubscribe.html">Otkazivanje pretplate na listu e-pošte</a></li>
+<li><a href="brand-logos.html">Logotipi robnih marki</a></li>
+</ul>
+<h2>Šifrirana i digitalno potpisana pošta</h2>
+<ul>
+<li><a href="encrypted-and-signed-mail.html">Šifrirana i digitalno potpisana pošta</a></li>
+<li><a href="sign-and-encrypt.html">Potpisivanje i šifriranje poruke</a></li>
+<li><a href="encryption-keys.html">Ključevi za šifriranje</a></li>
+<li><a href="verify-a-key.html">Provjera ključa kontakta</a></li>
+</ul>
+<h2>Postavke</h2>
+<ul>
+<li><a href="options-language.html">Postavke</a></li>
+<li><a href="download-ahead.html">Unaprijed preuzete poruke</a></li>
+<li><a href="account-security.html">Sigurnosne postavke računa</a></li>
+<li><a href="default-mail-program.html">Inbox Classic kao zadana aplikacija za poštu</a></li>
+<li><a href="updates.html">Ažuriranje programa Inbox Classic</a></li>
+</ul>
+<h2>AI agenti</h2>
+<ul>
+<li><a href="agents-connect.html">Povezivanje AI agenta</a></li>
+<li><a href="agents-permissions.html">Dozvole AI agenta</a></li>
+<li><a href="agents-sending.html">Slanje pošte putem AI agenta</a></li>
+</ul>
+<h2>Prečaci i pretraživanje</h2>
+<ul>
+<li><a href="keyboard-shortcuts.html">Tipkovni prečaci</a></li>
+<li><a href="search-words.html">Izrazi za pretraživanje</a></li>
+</ul>
+<h2>Rješavanje problema</h2>
+<ul>
+<li><a href="password-not-accepted.html">Lozinka nije prihvaćena</a></li>
+<li><a href="certificate-errors.html">Pogreške certifikata</a></li>
+<li><a href="encryption-errors.html">Pogreške šifriranja</a></li>
+<li><a href="no-connection.html">Inbox Classic se ne može povezati</a></li>
+<li><a href="message-not-shown.html">Poruka se ne prikazuje</a></li>
+</ul>
+<h2>Privatnost i sigurnost</h2>
+<ul>
+<li><a href="pictures-tracking.html">Slike i praćenje</a></li>
+<li><a href="links-scripts.html">Poveznice, skripte i privici</a></li>
+<li><a href="data-storage.html">Gdje se čuvaju vaša pošta i lozinke</a></li>
+<li><a href="connections.html">Veze koje Inbox Classic uspostavlja</a></li>
+<li><a href="removing.html">Uklanjanje programa Inbox Classic</a></li>
+</ul>
+<h2>Napredno</h2>
+<ul>
+<li><a href="sign-in-apps.html">Aplikacije za prijavu</a></li>
+<li><a href="command-line.html">Mogućnosti naredbenog retka</a></li>
+</ul>
+</nav>
+</nav><main>
+<h1>Uređivanje, redoslijed i uklanjanje računa</h1>
+<p class="summary">Promijenite naziv, postavke ili lozinku računa, presložite račune ili ih uklonite s ovog računala.</p>
+<h2>Uređivanje računa</h2>
+<ol>
+    <li>Odaberite <b>Datoteka</b> &gt; <b>Računi</b>. Otvara se popis vaših računa.</li>
+    <li>Odaberite račun i kliknite <b>Svojstva</b> ili dvaput kliknite račun.</li>
+    <li>Unesite promjene pa kliknite <b>U redu</b>.</li>
+</ol>
+<ul>
+    <li>Polje <b>Naziv računa</b> određuje naziv računa na popisu mapa, primjerice <i>Gmail</i> ili <i>Posao</i>.</li>
+    <li>Polje <b>Ime za prikaz</b> određuje ime koje vide primatelji vaših poruka.</li>
+    <li>Ako želite zadržati postojeću lozinku, ostavite polje <b>Lozinka</b> prazno.</li>
+    <li>Za račun s prijavom putem preglednika prikazuje se naziv aplikacije za prijavu koju koristi.</li>
+    <li>U polje „<b>Druge adrese s kojih šaljete</b>“ unesite dodatne adrese za slanje s ovog računa, odvojene zarezima. Možete navesti i ime, primjerice <code>Prodaja &lt;prodaja@primjer.hr&gt;</code>, ili samo adresu. Te će se adrese nuditi ispod računa u polju <b>Od</b>.</li>
+</ul>
+<p>Gumbom <b>Dodaj</b> u istom prozoru dodajete novi račun.</p>
+<h2>Redoslijed računa</h2>
+<p>Ako imate više računa, povucite naziv računa na popisu mapa ili njegov redak ispod stavke <b>Sva ulazna pošta</b> iznad ili ispod drugog računa. Crta pokazuje novi položaj. Možete i desnom tipkom miša kliknuti račun pa odabrati <b>Premjesti gore</b> ili <b>Premjesti dolje</b>. Novi redoslijed vrijedi i na popisu mapa i ispod stavke <b>Sva ulazna pošta</b>.</p>
+<h2>Izbornik računa</h2>
+<p>Ako imate više računa, desnim klikom na naziv računa na popisu mapa otvarate njegov izbornik. Za jedan račun nema zasebnog retka s nazivom. Njegova svojstva otvorite putem izbornika <b>Datoteka</b> &gt; <b>Računi</b>, a ostale naredbe potražite u izborniku <b>Alati</b>.</p>
+<ul>
+    <li>Naredba „<b>Pošalji i primi</b>“ provjerava poštu samo na tom računu.</li>
+    <li>Naredba „<b>Označi sve kao pročitano</b>“ označava poruke u svim mapama tog računa kao pročitane.</li>
+    <li>Dostupne su i naredbe <b>Nova mapa</b>, <b>Svojstva</b>, <b>Premjesti gore</b> i <b>Premjesti dolje</b>.</li>
+</ul>
+<h2>Uklanjanje računa</h2>
+<aside class="note">Uklanjanjem računa s ovog računala brišu se njegove preuzete poruke, njegove lokalne poruke u mapi Izlazna pošta i spremljeni podaci za prijavu. Pošta na poslužitelju ostaje.</aside>
+<p>Da biste uklonili račun:</p>
+<ol>
+    <li>Odaberite <b>Datoteka</b> &gt; <b>Računi</b>.</li>
+    <li>Odaberite račun i kliknite <b>Ukloni</b> ili u sustavu Windows pritisnite <kbd>⌫</kbd>.</li>
+    <li>Potvrdite uklanjanje. Račun nestaje s popisa mapa.</li>
+</ol>
+<nav class="related"><a href="add-account.html">Dodavanje računa e-pošte</a> <a href="all-inboxes.html">Sva ulazna pošta</a> <a href="signatures.html">Potpisi</a></nav>
+</main></div>
+</body>
+</html>

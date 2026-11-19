@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'">
+<title>Hva en agent har lov til</title>
+<style>body{margin:16px 24px;line-height:1.5}body>:not(.web),main{max-width:42em}h1{font-size:1.6em;margin:0 0 4px}h2{font-size:1.2em;margin:1.4em 0 .4em}p.summary{font-size:1.05em;opacity:.8;margin-top:0}ol,ul{padding-left:1.6em}li{margin:.3em 0}table{border-collapse:collapse;margin:.6em 0}th,td{text-align:left;padding:4px 12px 4px 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent);vertical-align:top}kbd{font-size:.9em;border:1px solid color-mix(in srgb,currentColor 35%,transparent);border-bottom-width:2px;border-radius:4px;padding:0 4px;white-space:nowrap}aside{padding:8px 12px;margin:.8em 0}.side a[aria-current]{font-weight:700;text-decoration:none}aside.warning{border-left:4px solid #c60}img.picture{max-width:100%;height:auto;margin:.6em 0;border:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related{margin-top:1.6em;padding-top:.6em;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related a{margin-right:1.2em}p.home{margin:0 0 1em;font-size:.9em}header.bar{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;max-width:none;padding:0 0 12px;margin:0 0 20px;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}header.bar .brand{font-weight:700;text-decoration:none;margin-right:auto}header.bar a,header.bar b{margin-right:10px}.web{display:flex;gap:32px}.web .side{flex:0 0 240px;font-size:.92em}.web .side ul{padding-left:1.1em}.web main{flex:1;min-width:0}@media(max-width:700px){.web{display:block}.web .side{display:none}}:root{color-scheme:light dark}body{font:11pt system-ui,'Adwaita Sans',Cantarell,sans-serif;color:CanvasText;background:Canvas}a{color:#1c71d8}@media(prefers-color-scheme:dark){a{color:#78aeed}}aside.note,aside.warning{background:color-mix(in srgb,CanvasText 6%,Canvas);border-radius:12px}body.windows,body.mac,body.linux{font:16px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif;margin:0;background:#f7f7fb;color:#1f2330}header.bar{max-width:1180px;margin:0 auto;padding:14px 24px;border-bottom:1px solid #e3e3ee}header.bar .brand{color:#3d4aa8;font-size:1.1em}header.bar a{color:#3d4aa8}.web{max-width:1180px;margin:0 auto;padding:24px}.web main{background:#fff;border-radius:12px;padding:28px 36px;box-shadow:0 1px 3px rgba(20,20,60,.08)}.web .side{position:sticky;top:16px;align-self:flex-start;max-height:calc(100vh - 32px);overflow:auto}.web .side a{color:#30395e;text-decoration:none}.web .side a:hover,.web main a{color:#3d4aa8}h1,h2{color:#1f2330}h2{border-bottom:none}aside.note,aside.warning{background:#f1f2fb;border:1px solid #e0e2f5;border-radius:10px}@media(prefers-color-scheme:dark){body.windows,body.mac,body.linux{background:#14151c;color:#e6e7ef}.web main{background:#1d1f29;box-shadow:none}header.bar{border-color:#2c2f3d}.web .side a{color:#c5c9e6}h1,h2{color:#e6e7ef}aside.note,aside.warning{background:#232637;border-color:#30344a}header.bar a,header.bar .brand,.web main a,.web .side a:hover{color:#9aa6ff}}</style>
+</head>
+<body class="linux">
+<header class="bar"><a class="brand" href="/">Inbox Classic</a><span class="platforms"><a href="../windows/agents-permissions.html">Windows</a> <a href="../mac/agents-permissions.html">Mac</a> <b>Linux</b></span><span class="languages"><a href="../../en/linux/agents-permissions.html" hreflang="en">English</a> <a href="../../ca/linux/agents-permissions.html" hreflang="ca">Català</a> <a href="../../cs/linux/agents-permissions.html" hreflang="cs">Čeština</a> <a href="../../da/linux/agents-permissions.html" hreflang="da">Dansk</a> <a href="../../de/linux/agents-permissions.html" hreflang="de">Deutsch</a> <a href="../../et/linux/agents-permissions.html" hreflang="et">Eesti</a> <a href="../../es/linux/agents-permissions.html" hreflang="es">Español</a> <a href="../../fr/linux/agents-permissions.html" hreflang="fr">Français</a> <a href="../../hr/linux/agents-permissions.html" hreflang="hr">Hrvatski</a> <a href="../../it/linux/agents-permissions.html" hreflang="it">Italiano</a> <a href="../../lv/linux/agents-permissions.html" hreflang="lv">Latviešu</a> <a href="../../lt/linux/agents-permissions.html" hreflang="lt">Lietuvių</a> <a href="../../hu/linux/agents-permissions.html" hreflang="hu">Magyar</a> <a href="../../nl/linux/agents-permissions.html" hreflang="nl">Nederlands</a> <b>Norsk bokmål</b> <a href="../../pl/linux/agents-permissions.html" hreflang="pl">Polski</a> <a href="../../pt-BR/linux/agents-permissions.html" hreflang="pt-BR">Português (Brasil)</a> <a href="../../pt/linux/agents-permissions.html" hreflang="pt">Português (Portugal)</a> <a href="../../ro/linux/agents-permissions.html" hreflang="ro">Română</a> <a href="../../sk/linux/agents-permissions.html" hreflang="sk">Slovenčina</a> <a href="../../sl/linux/agents-permissions.html" hreflang="sl">Slovenščina</a> <a href="../../sr-Latn/linux/agents-permissions.html" hreflang="sr-Latn">Srpski</a> <a href="../../fi/linux/agents-permissions.html" hreflang="fi">Suomi</a> <a href="../../sv/linux/agents-permissions.html" hreflang="sv">Svenska</a> <a href="../../tr/linux/agents-permissions.html" hreflang="tr">Türkçe</a> <a href="../../el/linux/agents-permissions.html" hreflang="el">Ελληνικά</a> <a href="../../bg/linux/agents-permissions.html" hreflang="bg">Български</a> <a href="../../ru/linux/agents-permissions.html" hreflang="ru">Русский</a> <a href="../../uk/linux/agents-permissions.html" hreflang="uk">Українська</a></span></header>
+<div class="web"><nav class="side"><nav class="contents">
+<h2>Kom i gang</h2>
+<ul>
+<li><a href="add-account.html">Legg til en e-postkonto</a></li>
+<li><a href="gmail-outlook.html">Gmail og Outlook.com</a></li>
+<li><a href="main-window.html">Hovedvinduet</a></li>
+<li><a href="layouts.html">Oppsett</a></li>
+</ul>
+<h2>Daglige oppgaver</h2>
+<ul>
+<li><a href="read-messages.html">Les meldinger</a></li>
+<li><a href="find-messages.html">Finn meldinger</a></li>
+<li><a href="conversations.html">Samtaler</a></li>
+<li><a href="organize-mail.html">Flagg, arkiver og flytt meldinger</a></li>
+<li><a href="message-rules.html">Behandle ny e-post med regler</a></li>
+<li><a href="delete-and-undo.html">Slett meldinger og angre</a></li>
+<li><a href="folders.html">Arbeid med mapper</a></li>
+<li><a href="write-message.html">Skriv en melding</a></li>
+<li><a href="reply-forward.html">Svar og videresend</a></li>
+<li><a href="attachments.html">Vedlegg</a></li>
+<li><a href="drafts-outbox.html">Utkast og Utboks</a></li>
+<li><a href="signatures.html">Signaturer</a></li>
+<li><a href="address-book.html">Adresseboken</a></li>
+<li><a href="save-print-import.html">Lagre, skriv ut og importer meldinger</a></li>
+<li><a href="new-mail.html">Hent ny e-post</a></li>
+</ul>
+<h2>Flere kontoer</h2>
+<ul>
+<li><a href="all-inboxes.html">Alle innbokser</a></li>
+<li><a href="manage-accounts.html">Endre, ordne og fjern kontoer</a></li>
+<li><a href="move-computer.html">Flytt til en annen datamaskin</a></li>
+</ul>
+<h2>Meldingsfunksjoner</h2>
+<ul>
+<li><a href="sign-in-codes.html">Påloggingskoder</a></li>
+<li><a href="delivery-problems.html">Meldinger som ikke ble levert</a></li>
+<li><a href="invitations.html">Kalenderinvitasjoner</a></li>
+<li><a href="unsubscribe.html">Meld deg av en e-postliste</a></li>
+<li><a href="brand-logos.html">Merkelogoer</a></li>
+</ul>
+<h2>Kryptert og signert e-post</h2>
+<ul>
+<li><a href="encrypted-and-signed-mail.html">Kryptert og signert e-post</a></li>
+<li><a href="sign-and-encrypt.html">Signer og krypter en melding</a></li>
+<li><a href="encryption-keys.html">Krypteringsnøkler</a></li>
+<li><a href="verify-a-key.html">Bekreft nøkkelen til en kontakt</a></li>
+</ul>
+<h2>Innstillinger</h2>
+<ul>
+<li><a href="options-language.html">Innstillinger</a></li>
+<li><a href="download-ahead.html">Last ned meldinger på forhånd</a></li>
+<li><a href="account-security.html">Sikkerhetsinnstillinger for kontoer</a></li>
+<li><a href="default-mail-program.html">Velg Inbox Classic som standard e-postprogram</a></li>
+<li><a href="updates.html">Oppdater Inbox Classic</a></li>
+</ul>
+<h2>KI-agenter</h2>
+<ul>
+<li><a href="agents-connect.html">Koble til en KI-agent</a></li>
+<li><a href="agents-permissions.html" aria-current="page">Hva en agent har lov til</a></li>
+<li><a href="agents-sending.html">Når en agent sender e-post</a></li>
+</ul>
+<h2>Referanse</h2>
+<ul>
+<li><a href="keyboard-shortcuts.html">Hurtigtaster</a></li>
+<li><a href="search-words.html">Søkeoperatorer</a></li>
+</ul>
+<h2>Feilsøking</h2>
+<ul>
+<li><a href="password-not-accepted.html">Passordet godtas ikke</a></li>
+<li><a href="certificate-errors.html">Sertifikatfeil</a></li>
+<li><a href="encryption-errors.html">Krypteringsfeil</a></li>
+<li><a href="no-connection.html">Inbox Classic får ikke kontakt</a></li>
+<li><a href="message-not-shown.html">En melding vises ikke</a></li>
+</ul>
+<h2>Personvern og sikkerhet</h2>
+<ul>
+<li><a href="pictures-tracking.html">Bilder og sporing</a></li>
+<li><a href="links-scripts.html">Lenker, skript og vedlegg</a></li>
+<li><a href="data-storage.html">Hvor e-posten og passordene dine oppbevares</a></li>
+<li><a href="connections.html">Tilkoblingene Inbox Classic oppretter</a></li>
+<li><a href="removing.html">Fjern Inbox Classic</a></li>
+</ul>
+<h2>Avansert</h2>
+<ul>
+<li><a href="sign-in-apps.html">Påloggingsapper</a></li>
+<li><a href="command-line.html">Kommandolinjealternativer</a></li>
+</ul>
+</nav>
+</nav><main>
+<h1>Hva en agent har lov til</h1>
+<p class="summary">Velg hva hver KI-agent har lov til å gjøre med e-posten din, og se og angre det den har gjort.</p>
+<p>Første gang agenten til et program kobler til, spør Inbox Classic deg og oppgir navnet på programmet. Velg hva den har lov til:</p>
+<ul>
+    <li>lese e-post: se mapper, meldingslister og samtaler, søke etter og lese meldinger, se meldingsregler og finne kontakter; lese tekstvedlegg på opptil 256 kB og støttede PDF-, Office-, PNG-, JPEG-, GIF- og WebP-filer på opptil 10 MB</li>
+    <li>organisere e-post: merke meldinger som lest eller ulest, endre flagg og flaggfarger, håndtere søppelpost, flytte og arkivere meldinger, opprette mapper, gi egne mapper nytt navn, følge og ignorere samtaler, slette meldinger (flytte dem til <b>Slettede elementer</b>), og melde deg av e-postlister med din godkjenning. Enkelte meldingshandlinger kan også utføres samlet, som forklart nedenfor</li>
+    <li>skrive utkast som du sender selv, og endre eller forkaste utkast agenten selv har skrevet, frem til du lagrer dem</li>
+    <li>sende e-post etter at du har godkjent hver melding</li>
+</ul>
+<p>Velg så hvilke kontoer den kan se, og klikk <b>Tillat</b>. <b>Ikke tillat</b> avviser programmet, og du blir ikke spurt om det igjen.</p>
+<p>En agent kan bare be om permanent sletting av utkast hvis den har skrevet dem selv og du ikke har lagret dem. Den kan ikke endre kontoinnstillingene. Den kan se meldingsregler og hvilke meldinger som oppfyller kriteriene, uten å endre meldingene. Den kan ikke opprette, endre eller slette regler. Den ser bare de ytre opplysningene om krypterte meldinger og får ikke tilgang til dekryptert tekst, beskyttet emne, vedlegg eller søkeresultater fra dette innholdet. Å lese en melding merker den ikke som lest. Agentens endringer vises med en gang i vinduene.</p>
+<h2>Melde seg av e-postlister</h2>
+<p>En agent med tillatelse til å organisere e-post kan be om å melde deg av e-postlister. Inbox Classic viser avsenderadressene og ber om én felles godkjenning for alle de valgte listene:</p>
+<ul>
+    <li><b>Meld meg av</b> ber de valgte listene om å slutte å sende deg meldinger.</li>
+    <li><b>Ikke meld meg av</b> er standardvalget og sender ingen avmeldingsforespørsler.</li>
+</ul>
+<p>En agent kan ikke bruke meldinger i <b>Søppelpost</b> til avmelding. For hvert program er grensen 30 avmeldingsforespørsler som du har godkjent i løpet av de siste 24 timene. Mislykkede forespørsler teller også med. Loggen registrerer godkjenningen før forespørselen sendes; den bekrefter ikke at listen har sluttet å sende e-post.</p>
+<h2>Endre mange meldinger på én gang</h2>
+<p>En agent som kan organisere e-post, kan merke flere meldinger som lest eller ulest, endre flagg og farger, flytte, arkivere eller håndtere søppelpost og flytting til Slettede elementer. Først forhåndsvises et søk. Bare meldingene fra denne forhåndsvisningen kan behandles; nye treff tas ikke med, og meldingenes tilstand kontrolleres på nytt. Forespørselen avvises hvis mer enn 1000 meldinger kan behandles eller mer enn 10000 må undersøkes. Handlingen bruker tillatelsen du allerede har gitt. Den vises som én loggoppføring, men serveren kan fortsatt ha endringer til behandling. En angring kan lykkes bare delvis.</p>
+<h2>Se og endre tilgang</h2>
+<p><b>Verktøy</b> &gt; <b>KI-agenter</b> viser programmene du har gitt eller nektet tilgang, og alt agentene har gjort, med det nyeste først.</p>
+<p>Leseaktivitet grupperes etter program og time, med egne antall for meldinger, vedlegg, søk og listeoppslag. Åpne raden med pilen for å se emner og søk, ikke meldingstekst. Et listeoppslag teller oppføringer, som også kan være samtaler. Loggen beholdes i opptil 30 dager; gamle oppføringer ryddes når nye legges til, og vanlige oppføringer kan fjernes tidligere for å holde loggen innenfor størrelsesgrensen. Å tømme loggen nullstiller ikke agentens sende- eller bruksgrenser.</p>
+<ul>
+    <li><b>Endre</b> endrer hva et program har lov til.</li>
+    <li><b>Fjern</b> fjerner programmets lagrede tillatelser og aktivitetslogg. Selve programmet avinstalleres ikke. Du blir spurt på nytt neste gang det kobler til.</li>
+    <li><b>Angre</b> angrer merking som lest eller ulest og endringer i flagg, flaggfarge og søppelpoststatus. Du kan også angre flytting, arkivering og sletting, eller avbryte sending av en melding som fortsatt ligger i Utboks.</li>
+    <li><b>Angre siden</b> forsøker å angre det valgte programmets endringer i tidsrommet du velger, med de nyeste først. Bekreftelsen teller loggoppføringer, ikke enkeltmeldinger.</li>
+</ul>
+<p>Når endringer angres, hoppes meldinger over hvis de ikke lenger er på forventet sted eller i forventet tilstand. En loggoppføring teller som angret selv om bare en del av endringene kunne angres. En agent kan angre egne endringer, men aldri endringer fra et annet program.</p>
+<aside class="warning">E-post skrives av andre, og en melding kan prøve å lure en agent til å videresende eller slette e-posten din. Inbox Classic skjuler for agentene teksten som en melding skjuler for deg, og forteller dem at innholdet i e-post ikke skal behandles som instruksjoner til agenten. En agent kan likevel bli lurt. Tillat bare det du trenger.</aside>
+<nav class="related"><a href="agents-connect.html">Koble til en KI-agent</a> <a href="agents-sending.html">Når en agent sender e-post</a> <a href="data-storage.html">Hvor e-posten og passordene dine oppbevares</a></nav>
+</main></div>
+</body>
+</html>

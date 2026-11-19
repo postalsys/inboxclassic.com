@@ -3,6 +3,44 @@
     <channel>
         <title>Inbox Classic</title>
         <item>
+            <title>0.19.0</title>
+            <pubDate>Thu, 19 Nov 2026 21:26:45 +0200</pubDate>
+            <sparkle:version>0.19.0</sparkle:version>
+            <sparkle:shortVersionString>0.19.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## [0.19.0](https://github.com/postalsys/inbox-classic/compare/v0.18.0...v0.19.0) (2026-11-19)
+
+Encrypted mail, attachment previews, 24 more languages, and lists that stay fast in large mailboxes.
+
+### Features
+
+* **Encrypted and signed mail (OpenPGP)**: a bar over a signed or encrypted message says who signed it and whether it was encrypted, and Details names each part and its key. In the compose window, Sign and Encrypt (on the toolbar and in Tools) protect what you send, and a reply to encrypted mail starts encrypted. Tools > Encryption Keys makes, imports, backs up and verifies keys. Your contacts' keys are found on their domain's Web Key Directory, on keys.openpgp.org (a setting turns it off) or in the Autocrypt headers of their mail. Search finds encrypted messages once they are decrypted, and `is:encrypted` and `is:signed` find them by their kind.
+* **Attachment previews**: pictures and the first pages of PDF files show after the message's text. Inbox Classic draws them itself, as it now does every picture inside a message, so no picture of a sender's is decoded by the web view. A setting on the Reading page of the settings turns them off.
+* **Open attachments with a double-click**: a strip under the message header lists each file, with Open, Save As and Save All. Files that can run code, such as programs, scripts and Office files with macros, are only saved, never opened.
+* **24 more languages**: Brazilian and European Portuguese, Bulgarian, Catalan, Croatian, Czech, Danish, Dutch, Finnish, Greek, Hungarian, Italian, Latvian, Lithuanian, Norwegian Bokmål, Polish, Romanian, Russian, Serbian (Latin), Slovak, Slovenian, Swedish, Turkish and Ukrainian, with the whole help in each.
+* **Move to another computer**: File > Export Settings and Accounts writes one file with the parts you choose: settings, accounts, sign-in apps, contacts, encryption keys, message rules and trusted senders. With a passphrase, the file is encrypted and also carries passwords and private keys. File > Import Settings and Accounts shows what the file holds before anything changes, and Add Mail Account offers it on a new computer.
+* **All Sent and All Drafts**: with two or more accounts, the folder list shows every account's sent mail and drafts together, under All Inboxes.
+* **The folder list starts with the Inbox**: with one account, Inbox and Flagged come first and there is no account heading.
+* **Settings in three pages**, General, Reading and Downloading, with the same groups in the same order on Windows, the Mac and Linux.
+* **Fast in large mailboxes**: a folder shows the moment you click it, and moves, deletes and marks happen at once while the server catches up. On a mailbox of 229,000 messages, a folder's list loads in under a millisecond.
+* **AI agents**:
+  * Agents can work with whole conversations and with all the messages of a search at once, answer invitations, set flag colours and manage folders. A draft an agent writes says so when you open it.
+  * Unsubscribing asks you first.
+  * Tools > AI Agents shows what each program read, and Undo Since takes back what one did in a chosen period.
+  * Inbox Classic asks the system which program is connecting, so one program cannot use the access you gave another.
+  * Agents never see the text of encrypted mail.
+
+### Bug Fixes
+
+* Searching Turkish text treats ı as i, and sorting by sender or subject follows every alphabet.
+* A sync in the background no longer replaces what you just did in the list.
+* On the Mac, Return, Enter and Esc always answer a question with its safe button, and a compose window comes to the front while the app is in the background.
+* On Windows, a dialog keeps its focus when it comes back to the front.
+]]></description>
+            <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.19.0/InboxClassic.dmg" length="27422415" type="application/octet-stream" sparkle:edSignature="GHn5BopLbc3jsOjjOU6jlrbE8R+WYC6fH3UswEJFfuHaNf+hwTua0SFRO5+DAac+kA3RMWYMbWIfdGREeqyJDQ=="/>
+        </item>
+        <item>
             <title>0.18.0</title>
             <pubDate>Sun, 15 Nov 2026 04:31:29 +0200</pubDate>
             <sparkle:version>0.18.0</sparkle:version>
@@ -44,27 +82,6 @@ Reviewed translations.
 * **Clearer wording in every language.** The German, Estonian, Spanish and French translations are reviewed, and the English is plainer too: Options names the download setting a storage limit for each account, the pictures settings speak of verified sender domains, and the .eml setting of the default app. The help pages say the same.
 ]]></description>
             <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.17.1/InboxClassic.dmg" length="12219080" type="application/octet-stream" sparkle:edSignature="gg0DBsZtw+F8mrYLqC/Z9Ikbl8+hG/3vsEKMMlqbaQFpUYz5ZuzpMWf3+VjuJAsob/Y0nxUXOKZrTxyDM31kDw=="/>
-        </item>
-        <item>
-            <title>0.17.0</title>
-            <pubDate>Sat, 14 Nov 2026 03:24:49 +0200</pubDate>
-            <sparkle:version>0.17.0</sparkle:version>
-            <sparkle:shortVersionString>0.17.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## [0.17.0](https://github.com/postalsys/inbox-classic/compare/v0.16.0...v0.17.0) (2026-11-14)
-
-Finishing touches to the column layout.
-
-### Features
-
-* **A Folders button on the Windows toolbar** shows and hides the folder list, and stays pressed while the list is shown, like the sidebar buttons on the Mac and Linux.
-* **The sorted column shows its arrow** in the Windows message list's headings, pointing up or down with the order.
-* **Watched and ignored conversations are marked** in the column layout's rows on Linux, as they are on Windows and the Mac.
-* The Windows main window keeps a size its toolbar and panes fit in.
-* The help for Options describes Layout and the pictures in the list.
-]]></description>
-            <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.17.0/InboxClassic.dmg" length="12242324" type="application/octet-stream" sparkle:edSignature="Ou/50pdxjzFTzwmTPgF0nTds/k6qK5onnNNjq0pW0GXf06amydWp/69FYgvSCQWr6ra0t7RI9hXqShrnPDe7Bw=="/>
         </item>
     </channel>
 </rss>

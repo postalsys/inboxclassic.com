@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'">
+<title>Chei de criptare</title>
+<style>body{margin:16px 24px;line-height:1.5}body>:not(.web),main{max-width:42em}h1{font-size:1.6em;margin:0 0 4px}h2{font-size:1.2em;margin:1.4em 0 .4em}p.summary{font-size:1.05em;opacity:.8;margin-top:0}ol,ul{padding-left:1.6em}li{margin:.3em 0}table{border-collapse:collapse;margin:.6em 0}th,td{text-align:left;padding:4px 12px 4px 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent);vertical-align:top}kbd{font-size:.9em;border:1px solid color-mix(in srgb,currentColor 35%,transparent);border-bottom-width:2px;border-radius:4px;padding:0 4px;white-space:nowrap}aside{padding:8px 12px;margin:.8em 0}.side a[aria-current]{font-weight:700;text-decoration:none}aside.warning{border-left:4px solid #c60}img.picture{max-width:100%;height:auto;margin:.6em 0;border:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related{margin-top:1.6em;padding-top:.6em;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related a{margin-right:1.2em}p.home{margin:0 0 1em;font-size:.9em}header.bar{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;max-width:none;padding:0 0 12px;margin:0 0 20px;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}header.bar .brand{font-weight:700;text-decoration:none;margin-right:auto}header.bar a,header.bar b{margin-right:10px}.web{display:flex;gap:32px}.web .side{flex:0 0 240px;font-size:.92em}.web .side ul{padding-left:1.1em}.web main{flex:1;min-width:0}@media(max-width:700px){.web{display:block}.web .side{display:none}}:root{color-scheme:light dark}body{font:11pt system-ui,'Adwaita Sans',Cantarell,sans-serif;color:CanvasText;background:Canvas}a{color:#1c71d8}@media(prefers-color-scheme:dark){a{color:#78aeed}}aside.note,aside.warning{background:color-mix(in srgb,CanvasText 6%,Canvas);border-radius:12px}body.windows,body.mac,body.linux{font:16px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif;margin:0;background:#f7f7fb;color:#1f2330}header.bar{max-width:1180px;margin:0 auto;padding:14px 24px;border-bottom:1px solid #e3e3ee}header.bar .brand{color:#3d4aa8;font-size:1.1em}header.bar a{color:#3d4aa8}.web{max-width:1180px;margin:0 auto;padding:24px}.web main{background:#fff;border-radius:12px;padding:28px 36px;box-shadow:0 1px 3px rgba(20,20,60,.08)}.web .side{position:sticky;top:16px;align-self:flex-start;max-height:calc(100vh - 32px);overflow:auto}.web .side a{color:#30395e;text-decoration:none}.web .side a:hover,.web main a{color:#3d4aa8}h1,h2{color:#1f2330}h2{border-bottom:none}aside.note,aside.warning{background:#f1f2fb;border:1px solid #e0e2f5;border-radius:10px}@media(prefers-color-scheme:dark){body.windows,body.mac,body.linux{background:#14151c;color:#e6e7ef}.web main{background:#1d1f29;box-shadow:none}header.bar{border-color:#2c2f3d}.web .side a{color:#c5c9e6}h1,h2{color:#e6e7ef}aside.note,aside.warning{background:#232637;border-color:#30344a}header.bar a,header.bar .brand,.web main a,.web .side a:hover{color:#9aa6ff}}</style>
+</head>
+<body class="linux">
+<header class="bar"><a class="brand" href="/">Inbox Classic</a><span class="platforms"><a href="../windows/encryption-keys.html">Windows</a> <a href="../mac/encryption-keys.html">Mac</a> <b>Linux</b></span><span class="languages"><a href="../../en/linux/encryption-keys.html" hreflang="en">English</a> <a href="../../ca/linux/encryption-keys.html" hreflang="ca">Català</a> <a href="../../cs/linux/encryption-keys.html" hreflang="cs">Čeština</a> <a href="../../da/linux/encryption-keys.html" hreflang="da">Dansk</a> <a href="../../de/linux/encryption-keys.html" hreflang="de">Deutsch</a> <a href="../../et/linux/encryption-keys.html" hreflang="et">Eesti</a> <a href="../../es/linux/encryption-keys.html" hreflang="es">Español</a> <a href="../../fr/linux/encryption-keys.html" hreflang="fr">Français</a> <a href="../../hr/linux/encryption-keys.html" hreflang="hr">Hrvatski</a> <a href="../../it/linux/encryption-keys.html" hreflang="it">Italiano</a> <a href="../../lv/linux/encryption-keys.html" hreflang="lv">Latviešu</a> <a href="../../lt/linux/encryption-keys.html" hreflang="lt">Lietuvių</a> <a href="../../hu/linux/encryption-keys.html" hreflang="hu">Magyar</a> <a href="../../nl/linux/encryption-keys.html" hreflang="nl">Nederlands</a> <a href="../../nb/linux/encryption-keys.html" hreflang="nb">Norsk bokmål</a> <a href="../../pl/linux/encryption-keys.html" hreflang="pl">Polski</a> <a href="../../pt-BR/linux/encryption-keys.html" hreflang="pt-BR">Português (Brasil)</a> <a href="../../pt/linux/encryption-keys.html" hreflang="pt">Português (Portugal)</a> <b>Română</b> <a href="../../sk/linux/encryption-keys.html" hreflang="sk">Slovenčina</a> <a href="../../sl/linux/encryption-keys.html" hreflang="sl">Slovenščina</a> <a href="../../sr-Latn/linux/encryption-keys.html" hreflang="sr-Latn">Srpski</a> <a href="../../fi/linux/encryption-keys.html" hreflang="fi">Suomi</a> <a href="../../sv/linux/encryption-keys.html" hreflang="sv">Svenska</a> <a href="../../tr/linux/encryption-keys.html" hreflang="tr">Türkçe</a> <a href="../../el/linux/encryption-keys.html" hreflang="el">Ελληνικά</a> <a href="../../bg/linux/encryption-keys.html" hreflang="bg">Български</a> <a href="../../ru/linux/encryption-keys.html" hreflang="ru">Русский</a> <a href="../../uk/linux/encryption-keys.html" hreflang="uk">Українська</a></span></header>
+<div class="web"><nav class="side"><nav class="contents">
+<h2>Primii pași</h2>
+<ul>
+<li><a href="add-account.html">Adăugarea unui cont de e-mail</a></li>
+<li><a href="gmail-outlook.html">Gmail și Outlook.com</a></li>
+<li><a href="main-window.html">Fereastra principală</a></li>
+<li><a href="layouts.html">Aspecte</a></li>
+</ul>
+<h2>Activități zilnice</h2>
+<ul>
+<li><a href="read-messages.html">Citirea mesajelor</a></li>
+<li><a href="find-messages.html">Găsirea mesajelor</a></li>
+<li><a href="conversations.html">Conversații</a></li>
+<li><a href="organize-mail.html">Semnalizarea, arhivarea și mutarea mesajelor</a></li>
+<li><a href="message-rules.html">Organizarea mesajelor noi cu ajutorul regulilor</a></li>
+<li><a href="delete-and-undo.html">Ștergerea mesajelor și anularea</a></li>
+<li><a href="folders.html">Lucrul cu folderele</a></li>
+<li><a href="write-message.html">Scrierea unui mesaj</a></li>
+<li><a href="reply-forward.html">Răspunsul și redirecționarea</a></li>
+<li><a href="attachments.html">Atașări</a></li>
+<li><a href="drafts-outbox.html">Schițe și Mesaje de trimis</a></li>
+<li><a href="signatures.html">Textul semnăturii</a></li>
+<li><a href="address-book.html">Agenda</a></li>
+<li><a href="save-print-import.html">Salvarea, imprimarea și importul mesajelor</a></li>
+<li><a href="new-mail.html">Primirea e-mailurilor noi</a></li>
+</ul>
+<h2>Mai multe conturi</h2>
+<ul>
+<li><a href="all-inboxes.html">Toate mesajele primite</a></li>
+<li><a href="manage-accounts.html">Modificarea, ordonarea și eliminarea conturilor</a></li>
+<li><a href="move-computer.html">Mutarea pe alt computer</a></li>
+</ul>
+<h2>Funcții pentru mesaje</h2>
+<ul>
+<li><a href="sign-in-codes.html">Coduri de conectare</a></li>
+<li><a href="delivery-problems.html">Mesaje care nu au fost livrate</a></li>
+<li><a href="invitations.html">Invitații în calendar</a></li>
+<li><a href="unsubscribe.html">Dezabonarea de la o listă de corespondență</a></li>
+<li><a href="brand-logos.html">Siglele mărcilor</a></li>
+</ul>
+<h2>Mesaje criptate și semnate</h2>
+<ul>
+<li><a href="encrypted-and-signed-mail.html">Mesaje criptate și semnate</a></li>
+<li><a href="sign-and-encrypt.html">Semnarea și criptarea unui mesaj</a></li>
+<li><a href="encryption-keys.html" aria-current="page">Chei de criptare</a></li>
+<li><a href="verify-a-key.html">Verificarea cheii unui contact</a></li>
+</ul>
+<h2>Setări</h2>
+<ul>
+<li><a href="options-language.html">Setări</a></li>
+<li><a href="download-ahead.html">Mesaje descărcate în avans</a></li>
+<li><a href="account-security.html">Setările de securitate ale contului</a></li>
+<li><a href="default-mail-program.html">Inbox Classic ca aplicație de e-mail</a></li>
+<li><a href="updates.html">Actualizarea Inbox Classic</a></li>
+</ul>
+<h2>Agenți IA</h2>
+<ul>
+<li><a href="agents-connect.html">Conectarea unui agent IA</a></li>
+<li><a href="agents-permissions.html">Ce poate face un agent</a></li>
+<li><a href="agents-sending.html">Când un agent trimite e-mail</a></li>
+</ul>
+<h2>Informații de referință</h2>
+<ul>
+<li><a href="keyboard-shortcuts.html">Comenzi rapide de la tastatură</a></li>
+<li><a href="search-words.html">Cuvinte de căutare</a></li>
+</ul>
+<h2>Depanare</h2>
+<ul>
+<li><a href="password-not-accepted.html">Parola nu este acceptată</a></li>
+<li><a href="certificate-errors.html">Erori de certificat</a></li>
+<li><a href="encryption-errors.html">Erori de criptare</a></li>
+<li><a href="no-connection.html">Inbox Classic nu se poate conecta</a></li>
+<li><a href="message-not-shown.html">Un mesaj nu este afișat</a></li>
+</ul>
+<h2>Confidențialitate și securitate</h2>
+<ul>
+<li><a href="pictures-tracking.html">Imagini și urmărire</a></li>
+<li><a href="links-scripts.html">Linkuri, scripturi și atașări</a></li>
+<li><a href="data-storage.html">Unde sunt păstrate e-mailurile și parolele</a></li>
+<li><a href="connections.html">Conexiunile pe care le face Inbox Classic</a></li>
+<li><a href="removing.html">Eliminarea Inbox Classic</a></li>
+</ul>
+<h2>Avansat</h2>
+<ul>
+<li><a href="sign-in-apps.html">Aplicații de conectare</a></li>
+<li><a href="command-line.html">Opțiuni din linia de comandă</a></li>
+</ul>
+</nav>
+</nav><main>
+<h1>Chei de criptare</h1>
+<p class="summary">Creați o cheie cu care să vă semnați mesajele și să primiți e-mailuri criptate. Adăugați și cheile contactelor.</p>
+<p>Inbox Classic semnează și criptează e-mailurile cu chei OpenPGP. Cheia dvs. are două componente: o cheie publică pe care o puteți distribui și o cheie privată care rămâne pe computerul dvs. Cheile contactelor vă permit să le verificați semnăturile și să le trimiteți e-mail criptat.</p>
+<p>Pentru a vă crea cheia:</p>
+<ol>
+    <li>Alegeți <b>Instrumente</b> &gt; <b>Chei de criptare</b>, apoi faceți clic pe <b>Cheie nouă</b>.</li>
+    <li>Alegeți contul și faceți clic pe <b>Creare cheie</b>. Cheia este folosită pentru adresa contului și pentru celelalte adrese ale lui.</li>
+    <li>Faceți clic pe <b>Salvare copie de rezervă</b> și alegeți o frază-parolă. Păstrați fișierul și fraza-parolă în locuri sigure diferite.</li>
+</ol>
+<aside class="warning">Fără o copie de rezervă, cheia nu poate fi recuperată dacă pierdeți sau resetați computerul, iar mesajele criptate cu cheia publică respectivă nu mai pot fi citite.</aside>
+<h2>Cheile rămân protejate fără fraze-parolă</h2>
+<p>Cheile private sunt protejate de o cheie păstrată în portcheiul sistemului, așa că nu trebuie să introduceți fraza-parolă a fiecărei chei la utilizare. Alegeți o frază-parolă pentru copia de rezervă. Dacă o cheie apare ca blocată, verificați mai întâi dacă portcheiul sistemului este disponibil și deblocat. Dacă protecția ei a fost pierdută sau resetată, faceți clic pe <b>Import</b> și alegeți copia ei de rezervă.</p>
+<h2>Adăugarea cheilor</h2>
+<p>Faceți clic pe <b>Import</b> pentru a adăuga o cheie dintr-un fișier, de exemplu una trimisă de un contact sau o copie de rezervă a propriei chei. Dacă cheia privată este protejată de o frază-parolă, vi se cere să o introduceți o singură dată. Când importați o cheie proprie, Inbox Classic vă întreabă apoi dacă doriți să o folosiți pentru adresele dvs.</p>
+<p>Cheia unui contact este folosită de atunci înainte pentru adresa lui. Dacă mai târziu apare o altă cheie pentru aceeași adresă, cea actuală rămâne în uz până când o alegeți pe cea nouă în proprietățile contactului.</p>
+<p>Pentru a distribui cheia publică, selectați-o și faceți clic pe <b>Export</b>. Puteți alege cheia contului și în proprietățile lui, în fila <b>Securitate</b>.</p>
+<p>Când criptați un mesaj pentru un destinatar a cărui cheie nu o aveți, Inbox Classic o caută mai întâi la domeniul adresei acestuia, apoi pe keys.openpgp.org. Căutarea după adresă transmite adresa destinatarului. O căutare manuală după amprenta sau identificatorul cheii transmite acel identificator. Pentru a dezactiva căutarea pe keys.openpgp.org, debifați <b>Căutare chei pe keys.openpgp.org</b> în <b>Meniu principal</b> &gt; <b>Preferințe</b> &gt; <b>Citire</b>.</p>
+<p>Cheile se pot transmite și prin e-mail. Când Autocrypt este activat și pentru adresa expeditorului este selectată o cheie, mesajele includ cheia publică. Alte aplicații compatibile o pot folosi pentru a vă trimite mesaje criptate. Când deschideți un mesaj care include cheia expeditorului, Inbox Classic o păstrează fără a confirma cui îi aparține. Dacă adresa are deja o altă cheie, cea nouă este folosită doar după ce o alegeți în proprietățile contactului. Pentru a nu mai trimite cheia dvs., dezactivați <b>Trimitere cheie publică proprie împreună cu mesajele (Autocrypt)</b> în fila <b>Securitate</b> a contului.</p>
+<nav class="related"><a href="verify-a-key.html">Verificarea cheii unui contact</a> <a href="address-book.html">Agenda</a> <a href="manage-accounts.html">Modificarea, ordonarea și eliminarea conturilor</a></nav>
+</main></div>
+</body>
+</html>

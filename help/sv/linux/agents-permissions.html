@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'">
+<title>Vad en agent får göra</title>
+<style>body{margin:16px 24px;line-height:1.5}body>:not(.web),main{max-width:42em}h1{font-size:1.6em;margin:0 0 4px}h2{font-size:1.2em;margin:1.4em 0 .4em}p.summary{font-size:1.05em;opacity:.8;margin-top:0}ol,ul{padding-left:1.6em}li{margin:.3em 0}table{border-collapse:collapse;margin:.6em 0}th,td{text-align:left;padding:4px 12px 4px 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent);vertical-align:top}kbd{font-size:.9em;border:1px solid color-mix(in srgb,currentColor 35%,transparent);border-bottom-width:2px;border-radius:4px;padding:0 4px;white-space:nowrap}aside{padding:8px 12px;margin:.8em 0}.side a[aria-current]{font-weight:700;text-decoration:none}aside.warning{border-left:4px solid #c60}img.picture{max-width:100%;height:auto;margin:.6em 0;border:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related{margin-top:1.6em;padding-top:.6em;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related a{margin-right:1.2em}p.home{margin:0 0 1em;font-size:.9em}header.bar{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;max-width:none;padding:0 0 12px;margin:0 0 20px;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}header.bar .brand{font-weight:700;text-decoration:none;margin-right:auto}header.bar a,header.bar b{margin-right:10px}.web{display:flex;gap:32px}.web .side{flex:0 0 240px;font-size:.92em}.web .side ul{padding-left:1.1em}.web main{flex:1;min-width:0}@media(max-width:700px){.web{display:block}.web .side{display:none}}:root{color-scheme:light dark}body{font:11pt system-ui,'Adwaita Sans',Cantarell,sans-serif;color:CanvasText;background:Canvas}a{color:#1c71d8}@media(prefers-color-scheme:dark){a{color:#78aeed}}aside.note,aside.warning{background:color-mix(in srgb,CanvasText 6%,Canvas);border-radius:12px}body.windows,body.mac,body.linux{font:16px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif;margin:0;background:#f7f7fb;color:#1f2330}header.bar{max-width:1180px;margin:0 auto;padding:14px 24px;border-bottom:1px solid #e3e3ee}header.bar .brand{color:#3d4aa8;font-size:1.1em}header.bar a{color:#3d4aa8}.web{max-width:1180px;margin:0 auto;padding:24px}.web main{background:#fff;border-radius:12px;padding:28px 36px;box-shadow:0 1px 3px rgba(20,20,60,.08)}.web .side{position:sticky;top:16px;align-self:flex-start;max-height:calc(100vh - 32px);overflow:auto}.web .side a{color:#30395e;text-decoration:none}.web .side a:hover,.web main a{color:#3d4aa8}h1,h2{color:#1f2330}h2{border-bottom:none}aside.note,aside.warning{background:#f1f2fb;border:1px solid #e0e2f5;border-radius:10px}@media(prefers-color-scheme:dark){body.windows,body.mac,body.linux{background:#14151c;color:#e6e7ef}.web main{background:#1d1f29;box-shadow:none}header.bar{border-color:#2c2f3d}.web .side a{color:#c5c9e6}h1,h2{color:#e6e7ef}aside.note,aside.warning{background:#232637;border-color:#30344a}header.bar a,header.bar .brand,.web main a,.web .side a:hover{color:#9aa6ff}}</style>
+</head>
+<body class="linux">
+<header class="bar"><a class="brand" href="/">Inbox Classic</a><span class="platforms"><a href="../windows/agents-permissions.html">Windows</a> <a href="../mac/agents-permissions.html">Mac</a> <b>Linux</b></span><span class="languages"><a href="../../en/linux/agents-permissions.html" hreflang="en">English</a> <a href="../../ca/linux/agents-permissions.html" hreflang="ca">Català</a> <a href="../../cs/linux/agents-permissions.html" hreflang="cs">Čeština</a> <a href="../../da/linux/agents-permissions.html" hreflang="da">Dansk</a> <a href="../../de/linux/agents-permissions.html" hreflang="de">Deutsch</a> <a href="../../et/linux/agents-permissions.html" hreflang="et">Eesti</a> <a href="../../es/linux/agents-permissions.html" hreflang="es">Español</a> <a href="../../fr/linux/agents-permissions.html" hreflang="fr">Français</a> <a href="../../hr/linux/agents-permissions.html" hreflang="hr">Hrvatski</a> <a href="../../it/linux/agents-permissions.html" hreflang="it">Italiano</a> <a href="../../lv/linux/agents-permissions.html" hreflang="lv">Latviešu</a> <a href="../../lt/linux/agents-permissions.html" hreflang="lt">Lietuvių</a> <a href="../../hu/linux/agents-permissions.html" hreflang="hu">Magyar</a> <a href="../../nl/linux/agents-permissions.html" hreflang="nl">Nederlands</a> <a href="../../nb/linux/agents-permissions.html" hreflang="nb">Norsk bokmål</a> <a href="../../pl/linux/agents-permissions.html" hreflang="pl">Polski</a> <a href="../../pt-BR/linux/agents-permissions.html" hreflang="pt-BR">Português (Brasil)</a> <a href="../../pt/linux/agents-permissions.html" hreflang="pt">Português (Portugal)</a> <a href="../../ro/linux/agents-permissions.html" hreflang="ro">Română</a> <a href="../../sk/linux/agents-permissions.html" hreflang="sk">Slovenčina</a> <a href="../../sl/linux/agents-permissions.html" hreflang="sl">Slovenščina</a> <a href="../../sr-Latn/linux/agents-permissions.html" hreflang="sr-Latn">Srpski</a> <a href="../../fi/linux/agents-permissions.html" hreflang="fi">Suomi</a> <b>Svenska</b> <a href="../../tr/linux/agents-permissions.html" hreflang="tr">Türkçe</a> <a href="../../el/linux/agents-permissions.html" hreflang="el">Ελληνικά</a> <a href="../../bg/linux/agents-permissions.html" hreflang="bg">Български</a> <a href="../../ru/linux/agents-permissions.html" hreflang="ru">Русский</a> <a href="../../uk/linux/agents-permissions.html" hreflang="uk">Українська</a></span></header>
+<div class="web"><nav class="side"><nav class="contents">
+<h2>Kom igång</h2>
+<ul>
+<li><a href="add-account.html">Lägga till ett e-postkonto</a></li>
+<li><a href="gmail-outlook.html">Gmail och Outlook.com</a></li>
+<li><a href="main-window.html">Huvudfönstret</a></li>
+<li><a href="layouts.html">Layouter</a></li>
+</ul>
+<h2>Vanliga uppgifter</h2>
+<ul>
+<li><a href="read-messages.html">Läsa meddelanden</a></li>
+<li><a href="find-messages.html">Hitta meddelanden</a></li>
+<li><a href="conversations.html">Konversationer</a></li>
+<li><a href="organize-mail.html">Flagga, arkivera och flytta meddelanden</a></li>
+<li><a href="message-rules.html">Sortera ny e-post med regler</a></li>
+<li><a href="delete-and-undo.html">Ta bort meddelanden och ångra</a></li>
+<li><a href="folders.html">Arbeta med mappar</a></li>
+<li><a href="write-message.html">Skriva ett meddelande</a></li>
+<li><a href="reply-forward.html">Svara och vidarebefordra</a></li>
+<li><a href="attachments.html">Bilagor</a></li>
+<li><a href="drafts-outbox.html">Utkast och Utkorgen</a></li>
+<li><a href="signatures.html">Textsignaturer</a></li>
+<li><a href="address-book.html">Adressboken</a></li>
+<li><a href="save-print-import.html">Spara, skriv ut och importera meddelanden</a></li>
+<li><a href="new-mail.html">Hämta ny e-post</a></li>
+</ul>
+<h2>Flera konton</h2>
+<ul>
+<li><a href="all-inboxes.html">Alla inkorgar</a></li>
+<li><a href="manage-accounts.html">Ändra, ordna och ta bort konton</a></li>
+<li><a href="move-computer.html">Flytta till en annan dator</a></li>
+</ul>
+<h2>Meddelandefunktioner</h2>
+<ul>
+<li><a href="sign-in-codes.html">Engångskoder</a></li>
+<li><a href="delivery-problems.html">Meddelanden som inte levererades</a></li>
+<li><a href="invitations.html">Kalenderinbjudningar</a></li>
+<li><a href="unsubscribe.html">Lämna en e-postlista</a></li>
+<li><a href="brand-logos.html">Varumärkeslogotyper</a></li>
+</ul>
+<h2>Krypterad och signerad e-post</h2>
+<ul>
+<li><a href="encrypted-and-signed-mail.html">Krypterad och signerad e-post</a></li>
+<li><a href="sign-and-encrypt.html">Signera och kryptera ett meddelande</a></li>
+<li><a href="encryption-keys.html">Krypteringsnycklar</a></li>
+<li><a href="verify-a-key.html">Verifiera en kontakts nyckel</a></li>
+</ul>
+<h2>Inställningar</h2>
+<ul>
+<li><a href="options-language.html">Inställningar</a></li>
+<li><a href="download-ahead.html">Meddelanden som hämtas i förväg</a></li>
+<li><a href="account-security.html">Säkerhetsinställningar för konton</a></li>
+<li><a href="default-mail-program.html">Gör Inbox Classic till ditt e-postprogram</a></li>
+<li><a href="updates.html">Uppdatera Inbox Classic</a></li>
+</ul>
+<h2>AI-agenter</h2>
+<ul>
+<li><a href="agents-connect.html">Ansluta en AI-agent</a></li>
+<li><a href="agents-permissions.html" aria-current="page">Vad en agent får göra</a></li>
+<li><a href="agents-sending.html">När en agent skickar e-post</a></li>
+</ul>
+<h2>Referens</h2>
+<ul>
+<li><a href="keyboard-shortcuts.html">Kortkommandon</a></li>
+<li><a href="search-words.html">Sökord</a></li>
+</ul>
+<h2>Felsökning</h2>
+<ul>
+<li><a href="password-not-accepted.html">Lösenordet godtas inte</a></li>
+<li><a href="certificate-errors.html">Certifikatfel</a></li>
+<li><a href="encryption-errors.html">Krypteringsfel</a></li>
+<li><a href="no-connection.html">Inbox Classic kan inte ansluta</a></li>
+<li><a href="message-not-shown.html">Ett meddelande visas inte</a></li>
+</ul>
+<h2>Integritet och säkerhet</h2>
+<ul>
+<li><a href="pictures-tracking.html">Bilder och spårning</a></li>
+<li><a href="links-scripts.html">Länkar, skript och bilagor</a></li>
+<li><a href="data-storage.html">Var din e-post och dina lösenord sparas</a></li>
+<li><a href="connections.html">Inbox Classics nätverksanslutningar</a></li>
+<li><a href="removing.html">Ta bort Inbox Classic</a></li>
+</ul>
+<h2>Avancerat</h2>
+<ul>
+<li><a href="sign-in-apps.html">Inloggningsappar</a></li>
+<li><a href="command-line.html">Kommandoradsalternativ</a></li>
+</ul>
+</nav>
+</nav><main>
+<h1>Vad en agent får göra</h1>
+<p class="summary">Välj vad AI-agenter får göra med din e-post, granska deras aktivitet och ångra ändringar vid behov.</p>
+<p>När en agent ansluter för första gången visar Inbox Classic programmets namn och ber om ditt godkännande. Välj vad agenten får göra:</p>
+<ul>
+    <li>läsa e-post: visa mappar, meddelanden och konversationer, även PDF-, Office- och bildbilagor i format som stöds på upp till 10 MB vardera. Vanliga textbilagor har en gräns på 256 KB. Agenten kan också söka efter meddelanden, visa regler och söka efter kontakter</li>
+    <li>hantera e-post: ändra lästmarkeringar, flaggor och flaggfärger samt skräppostmarkeringar, flytta och arkivera meddelanden, skapa mappar, byta namn på dina egna mappar, bevaka och ignorera konversationer, flytta meddelanden till <b>Borttaget</b>, utföra de meddelandeåtgärder som stöds på ett helt sökresultat, och avsluta prenumerationer på e-postlistor med ditt godkännande</li>
+    <li>skriva utkast som du kan skicka själv samt ändra sina egna utkast eller ta bort dem permanent, tills du sparar eller skickar dem</li>
+    <li>skicka e-post när du har godkänt varje meddelande</li>
+</ul>
+<p>Välj sedan vilka konton agenten får komma åt och klicka på <b>Tillåt</b>. Med <b>Tillåt inte</b> nekar du programmet åtkomst och slipper fler frågor om det. Du kan ändra behörigheterna senare.</p>
+<p>När agenten tar bort meddelanden flyttas de till mappen för borttagen e-post. Om kontot saknar en sådan mapp nekas åtgärden. Agenten får bara ta bort sina egna utkast permanent, och bara om du ännu inte har sparat dem i redigeraren. Den kan inte ändra kontoinställningar eller skapa, ändra eller ta bort regler. Den kan visa regler och vilka meddelanden som matchar dem, utan att utföra reglernas åtgärder. Krypterade meddelandens innehåll och bilagor är inte tillgängliga för agenten. Att agenten läser ett meddelande markerar det inte som läst. Agentens ändringar syns direkt i programmets fönster.</p>
+<h2>Avsluta prenumerationer på e-postlistor</h2>
+<p>En agent med behörighet att hantera e-post kan be om att avsluta prenumerationer på e-postlistor. Inbox Classic ber om ditt godkännande för alla listor i samma begäran och visar avsändaren för varje lista:</p>
+<ul>
+    <li>Med <b>Avsluta prenumeration</b> skickas en begäran om avanmälan till varje lista.</li>
+    <li>Med <b>Avsluta inte</b>, som är förvalt, avböjer du begäran och behåller prenumerationerna.</li>
+</ul>
+<p>Agenten kan inte begära avanmälan utifrån meddelanden i <b>Skräppost</b>. Gränsen är 30 godkända avanmälningar per program under de senaste 24 timmarna, en per e-postlista. Även misslyckade avanmälningar räknas om du har godkänt dem.</p>
+<h2>Ändra många meddelanden på en gång</h2>
+<p>En agent som får hantera e-post kan ändra alla meddelanden som en sökning hittar i ett enda steg, till exempel markera alla nyhetsbrev som lästa eller flytta dem till en mapp. Först räknar den meddelandena och tittar på några av dem. Urvalet låses och kontrolleras igen före åtgärden. En begäran nekas om fler än 1 000 meddelanden är lämpade för ändringen eller fler än 10 000 sökträffar behöver granskas. Nytillkommen e-post tas inte med. Åtgärden kräver ingen separat bekräftelse, och ändringar som fortfarande går att återställa kan ångras. Loggen visar det som en rad, till exempel ”Markerade 37 meddelanden som lästa (sökning: from:news)”, och du kan begära att hela åtgärden ångras på en gång.</p>
+<h2>Se och ändra åtkomst</h2>
+<p>Under <b>Verktyg</b> &gt; <b>AI-agenter</b> visas de program du har tillåtit eller nekat åtkomst och deras agenters aktivitet. De senaste händelserna visas först.</p>
+<p>Det en agent läser visas som en rad per program och timme, till exempel ”Läste 14 meddelanden och sökte 3 gånger”. Öppna raden med dess pil för att se ämnena på det den läste och vad den sökte efter, men aldrig texten i meddelandena. Loggposter äldre än 30 dagar tas bort när nya poster skrivs. Att rensa loggen återställer inte gränserna för sändning eller avregistrering från e-postlistor.</p>
+<ul>
+    <li>Med <b>Ändra</b> ändrar du programmets behörigheter.</li>
+    <li>Med <b>Ta bort</b> tar du bort programmets behörigheter och aktivitetshistorik. Programmet avinstalleras inte. Nästa gång det ansluter frågar Inbox Classic om åtkomst igen.</li>
+    <li>Med <b>Ångra</b> återställer du lästmarkeringar, flaggor och deras färger samt skräppostmarkeringar eller ångrar en flytt, arkivering eller borttagning. Du kan också stoppa ett meddelande som fortfarande ligger i Utkorgen. Ett meddelande som redan har skickats kan inte återkallas.</li>
+    <li>Med <b>Ångra allt sedan</b> begär du att ändringar från det markerade programmet under den valda tiden ska ångras, till exempel från den senaste timmen. De senaste ändringarna behandlas först.</li>
+</ul>
+<p>När ändringar ångras hoppas meddelanden över om de inte längre har förväntad plats eller status. En loggpost räknas som ångrad även om bara en del av ändringarna kunde ångras. En agent kan ångra sina egna ändringar, men aldrig ett annat programs.</p>
+<aside class="warning">Meddelanden från andra kan innehålla instruktioner som försöker få agenten att vidarebefordra eller ta bort din e-post. Inbox Classic döljer text som inte visas för dig och uppmanar agenten att inte följa instruktioner i e-posten. Agenten kan ändå bli lurad. Tillåt bara de åtgärder du behöver.</aside>
+<nav class="related"><a href="agents-connect.html">Ansluta en AI-agent</a> <a href="agents-sending.html">När en agent skickar e-post</a> <a href="data-storage.html">Var din e-post och dina lösenord sparas</a></nav>
+</main></div>
+</body>
+</html>

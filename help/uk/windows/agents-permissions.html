@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'">
+<title>Що може робити агент</title>
+<style>body{margin:16px 24px;line-height:1.5}body>:not(.web),main{max-width:42em}h1{font-size:1.6em;margin:0 0 4px}h2{font-size:1.2em;margin:1.4em 0 .4em}p.summary{font-size:1.05em;opacity:.8;margin-top:0}ol,ul{padding-left:1.6em}li{margin:.3em 0}table{border-collapse:collapse;margin:.6em 0}th,td{text-align:left;padding:4px 12px 4px 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent);vertical-align:top}kbd{font-size:.9em;border:1px solid color-mix(in srgb,currentColor 35%,transparent);border-bottom-width:2px;border-radius:4px;padding:0 4px;white-space:nowrap}aside{padding:8px 12px;margin:.8em 0}.side a[aria-current]{font-weight:700;text-decoration:none}aside.warning{border-left:4px solid #c60}img.picture{max-width:100%;height:auto;margin:.6em 0;border:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related{margin-top:1.6em;padding-top:.6em;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related a{margin-right:1.2em}p.home{margin:0 0 1em;font-size:.9em}header.bar{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;max-width:none;padding:0 0 12px;margin:0 0 20px;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}header.bar .brand{font-weight:700;text-decoration:none;margin-right:auto}header.bar a,header.bar b{margin-right:10px}.web{display:flex;gap:32px}.web .side{flex:0 0 240px;font-size:.92em}.web .side ul{padding-left:1.1em}.web main{flex:1;min-width:0}@media(max-width:700px){.web{display:block}.web .side{display:none}}body{font:10pt Tahoma,Arial,sans-serif;color:#000;background:#fff}h1,h2{color:#036}h2{border-bottom:1px solid #9ab}a{color:#03c}aside.note,aside.warning{background:#ffffe1;border:1px solid #c9c9a0}kbd{background:#f4f4f4;border-color:#999}body.windows,body.mac,body.linux{font:16px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif;margin:0;background:#f7f7fb;color:#1f2330}header.bar{max-width:1180px;margin:0 auto;padding:14px 24px;border-bottom:1px solid #e3e3ee}header.bar .brand{color:#3d4aa8;font-size:1.1em}header.bar a{color:#3d4aa8}.web{max-width:1180px;margin:0 auto;padding:24px}.web main{background:#fff;border-radius:12px;padding:28px 36px;box-shadow:0 1px 3px rgba(20,20,60,.08)}.web .side{position:sticky;top:16px;align-self:flex-start;max-height:calc(100vh - 32px);overflow:auto}.web .side a{color:#30395e;text-decoration:none}.web .side a:hover,.web main a{color:#3d4aa8}h1,h2{color:#1f2330}h2{border-bottom:none}aside.note,aside.warning{background:#f1f2fb;border:1px solid #e0e2f5;border-radius:10px}@media(prefers-color-scheme:dark){body.windows,body.mac,body.linux{background:#14151c;color:#e6e7ef}.web main{background:#1d1f29;box-shadow:none}header.bar{border-color:#2c2f3d}.web .side a{color:#c5c9e6}h1,h2{color:#e6e7ef}aside.note,aside.warning{background:#232637;border-color:#30344a}header.bar a,header.bar .brand,.web main a,.web .side a:hover{color:#9aa6ff}}</style>
+</head>
+<body class="windows">
+<header class="bar"><a class="brand" href="/">Inbox Classic</a><span class="platforms"><b>Windows</b> <a href="../mac/agents-permissions.html">Mac</a> <a href="../linux/agents-permissions.html">Linux</a></span><span class="languages"><a href="../../en/windows/agents-permissions.html" hreflang="en">English</a> <a href="../../ca/windows/agents-permissions.html" hreflang="ca">Català</a> <a href="../../cs/windows/agents-permissions.html" hreflang="cs">Čeština</a> <a href="../../da/windows/agents-permissions.html" hreflang="da">Dansk</a> <a href="../../de/windows/agents-permissions.html" hreflang="de">Deutsch</a> <a href="../../et/windows/agents-permissions.html" hreflang="et">Eesti</a> <a href="../../es/windows/agents-permissions.html" hreflang="es">Español</a> <a href="../../fr/windows/agents-permissions.html" hreflang="fr">Français</a> <a href="../../hr/windows/agents-permissions.html" hreflang="hr">Hrvatski</a> <a href="../../it/windows/agents-permissions.html" hreflang="it">Italiano</a> <a href="../../lv/windows/agents-permissions.html" hreflang="lv">Latviešu</a> <a href="../../lt/windows/agents-permissions.html" hreflang="lt">Lietuvių</a> <a href="../../hu/windows/agents-permissions.html" hreflang="hu">Magyar</a> <a href="../../nl/windows/agents-permissions.html" hreflang="nl">Nederlands</a> <a href="../../nb/windows/agents-permissions.html" hreflang="nb">Norsk bokmål</a> <a href="../../pl/windows/agents-permissions.html" hreflang="pl">Polski</a> <a href="../../pt-BR/windows/agents-permissions.html" hreflang="pt-BR">Português (Brasil)</a> <a href="../../pt/windows/agents-permissions.html" hreflang="pt">Português (Portugal)</a> <a href="../../ro/windows/agents-permissions.html" hreflang="ro">Română</a> <a href="../../sk/windows/agents-permissions.html" hreflang="sk">Slovenčina</a> <a href="../../sl/windows/agents-permissions.html" hreflang="sl">Slovenščina</a> <a href="../../sr-Latn/windows/agents-permissions.html" hreflang="sr-Latn">Srpski</a> <a href="../../fi/windows/agents-permissions.html" hreflang="fi">Suomi</a> <a href="../../sv/windows/agents-permissions.html" hreflang="sv">Svenska</a> <a href="../../tr/windows/agents-permissions.html" hreflang="tr">Türkçe</a> <a href="../../el/windows/agents-permissions.html" hreflang="el">Ελληνικά</a> <a href="../../bg/windows/agents-permissions.html" hreflang="bg">Български</a> <a href="../../ru/windows/agents-permissions.html" hreflang="ru">Русский</a> <b>Українська</b></span></header>
+<div class="web"><nav class="side"><nav class="contents">
+<h2>Початок роботи</h2>
+<ul>
+<li><a href="add-account.html">Додавання поштового облікового запису</a></li>
+<li><a href="gmail-outlook.html">Gmail і Outlook.com</a></li>
+<li><a href="main-window.html">Головне вікно</a></li>
+<li><a href="layouts.html">Макети</a></li>
+</ul>
+<h2>Щоденні завдання</h2>
+<ul>
+<li><a href="read-messages.html">Читання повідомлень</a></li>
+<li><a href="find-messages.html">Пошук повідомлень</a></li>
+<li><a href="conversations.html">Розмови</a></li>
+<li><a href="organize-mail.html">Прапорці, архівування й переміщення повідомлень</a></li>
+<li><a href="message-rules.html">Упорядкування нової пошти за правилами</a></li>
+<li><a href="delete-and-undo.html">Видалення повідомлень і скасування</a></li>
+<li><a href="folders.html">Робота з папками</a></li>
+<li><a href="write-message.html">Написання повідомлення</a></li>
+<li><a href="reply-forward.html">Відповідь і пересилання</a></li>
+<li><a href="attachments.html">Вкладення</a></li>
+<li><a href="drafts-outbox.html">Чернетки й папка «Вихідні»</a></li>
+<li><a href="signatures.html">Текстові підписи</a></li>
+<li><a href="address-book.html">Адресна книга</a></li>
+<li><a href="save-print-import.html">Збереження, друк та імпорт повідомлень</a></li>
+<li><a href="new-mail.html">Отримання нової пошти</a></li>
+</ul>
+<h2>Кілька облікових записів</h2>
+<ul>
+<li><a href="all-inboxes.html">Усі вхідні</a></li>
+<li><a href="manage-accounts.html">Зміна, порядок і вилучення облікових записів</a></li>
+<li><a href="move-computer.html">Перенесення на інший комп’ютер</a></li>
+</ul>
+<h2>Додаткові можливості пошти</h2>
+<ul>
+<li><a href="sign-in-codes.html">Коди входу</a></li>
+<li><a href="delivery-problems.html">Недоставлені повідомлення</a></li>
+<li><a href="invitations.html">Запрошення в календар</a></li>
+<li><a href="unsubscribe.html">Вихід зі списку розсилки</a></li>
+<li><a href="brand-logos.html">Логотипи брендів</a></li>
+</ul>
+<h2>Зашифрована й підписана пошта</h2>
+<ul>
+<li><a href="encrypted-and-signed-mail.html">Зашифрована й підписана пошта</a></li>
+<li><a href="sign-and-encrypt.html">Підписування й шифрування повідомлення</a></li>
+<li><a href="encryption-keys.html">Ключі шифрування</a></li>
+<li><a href="verify-a-key.html">Підтвердження власника ключа</a></li>
+</ul>
+<h2>Параметри</h2>
+<ul>
+<li><a href="options-language.html">Параметри</a></li>
+<li><a href="download-ahead.html">Повідомлення, завантажені заздалегідь</a></li>
+<li><a href="account-security.html">Параметри безпеки облікового запису</a></li>
+<li><a href="default-mail-program.html">Inbox Classic як ваша поштова програма</a></li>
+<li><a href="updates.html">Оновлення Inbox Classic</a></li>
+</ul>
+<h2>ШІ-агенти</h2>
+<ul>
+<li><a href="agents-connect.html">Під’єднання ШІ-агента</a></li>
+<li><a href="agents-permissions.html" aria-current="page">Що може робити агент</a></li>
+<li><a href="agents-sending.html">Коли агент надсилає пошту</a></li>
+</ul>
+<h2>Довідник</h2>
+<ul>
+<li><a href="keyboard-shortcuts.html">Сполучення клавіш</a></li>
+<li><a href="search-words.html">Пошукові слова</a></li>
+</ul>
+<h2>Усунення проблем</h2>
+<ul>
+<li><a href="password-not-accepted.html">Пароль не приймається</a></li>
+<li><a href="certificate-errors.html">Помилки сертифіката</a></li>
+<li><a href="encryption-errors.html">Помилки шифрування</a></li>
+<li><a href="no-connection.html">Inbox Classic не може під’єднатися</a></li>
+<li><a href="message-not-shown.html">Повідомлення не показується</a></li>
+</ul>
+<h2>Конфіденційність і безпека</h2>
+<ul>
+<li><a href="pictures-tracking.html">Зображення й стеження</a></li>
+<li><a href="links-scripts.html">Посилання, сценарії та вкладення</a></li>
+<li><a href="data-storage.html">Де зберігаються ваша пошта й паролі</a></li>
+<li><a href="connections.html">З’єднання, які встановлює Inbox Classic</a></li>
+<li><a href="removing.html">Видалення Inbox Classic</a></li>
+</ul>
+<h2>Розширені можливості</h2>
+<ul>
+<li><a href="sign-in-apps.html">Застосунки для входу</a></li>
+<li><a href="command-line.html">Параметри командного рядка</a></li>
+</ul>
+</nav>
+</nav><main>
+<h1>Що може робити агент</h1>
+<p class="summary">Вибирайте дозволені дії для ШІ-агентів, переглядайте їхню активність і за потреби скасовуйте зміни.</p>
+<p>Коли агент під’єднується вперше, Inbox Classic показує назву програми й запитує вашого дозволу. Виберіть, що агент може робити:</p>
+<ul>
+    <li>читати пошту: переглядати папки, списки повідомлень, розмови й самі повідомлення; читати текстові вкладення розміром до 256 КБ та підтримувані вкладення PDF, Office і зображення розміром до 10 МБ; шукати пошту, переглядати правила й шукати контакти. Контакти адресної книги доступні в межах цього дозволу, а пошук людей за поштою потребує доступу до всіх облікових записів</li>
+    <li>упорядковувати пошту: змінювати стан прочитання, прапорці та їхні кольори й позначки небажаної пошти, переміщувати й архівувати повідомлення, створювати папки, перейменовувати власні папки, відстежувати й ігнорувати розмови, переміщувати повідомлення до папки <b>Видалені</b>, а також виконувати дозволені групові дії над результатами пошуку та скасовувати підписки на розсилки з вашої згоди</li>
+    <li>писати чернетки, які ви можете надіслати, а також змінювати чи назавжди видаляти власні чернетки, доки ви їх не збережете або не надішлете</li>
+    <li>надсилати пошту лише після вашого схвалення кожного повідомлення</li>
+</ul>
+<p>Потім виберіть облікові записи, до яких агент матиме доступ, і клацніть <b>Дозволити</b>. Кнопка <b>Не дозволяти</b> забороняє програмі доступ. Повторних запитів не буде, але ви зможете змінити дозволи згодом.</p>
+<p>Коли агент видаляє повідомлення, вони переміщуються до папки для видаленої пошти. Якщо такої папки немає, дію буде відхилено. Назавжди він може видаляти лише власні чернетки, які ви ще не зберегли в редакторі. Агент не може змінювати параметри облікових записів або створювати, змінювати чи видаляти правила. Він може переглядати правила й повідомлення, що їм відповідають, без виконання дій за цими правилами. Вміст і вкладення зашифрованих повідомлень агенту недоступні. Читання агентом не позначає повідомлення як прочитане. Зміни агента відразу відображаються у вікнах програми.</p>
+<h2>Скасування підписок на розсилки</h2>
+<p>Агент із дозволом упорядковувати пошту може запитати про скасування підписок на розсилки. Inbox Classic просить вашого схвалення для всіх розсилок в одному запиті й показує відправника кожної з них:</p>
+<ul>
+    <li>Кнопка <b>Скасувати підписку</b> надсилає кожній розсилці запит на скасування підписки.</li>
+    <li>Кнопка <b>Не скасовувати підписку</b>, вибрана за замовчуванням, відхиляє запит і залишає підписки чинними.</li>
+</ul>
+<p>Агент не може запитати про скасування підписки на основі повідомлень із папки <b>Небажана пошта</b>. Для кожної програми діє обмеження: 30 схвалених запитів за останні 24 години, по одному на розсилку. Невдалі спроби також враховуються, якщо ви їх схвалили.</p>
+<h2>Зміна багатьох повідомлень одразу</h2>
+<p>Агент із дозволом упорядковувати пошту може змінити стан прочитання, прапорці, позначку небажаної пошти або розташування повідомлень, знайдених пошуком. Спочатку формується фіксований набір придатних повідомлень, щонайбільше 1000. Якщо результатів для перегляду понад 10 000 або придатних повідомлень понад 1000, запит відхиляється, а не виконується частково за першими результатами. Нові повідомлення та ті, чий відповідний стан уже змінився, не включаються. Окремого підтвердження не потрібно. Дія записується одним рядком журналу; її можна скасувати для повідомлень, які досі відповідають умовам скасування.</p>
+<h2>Перегляд і зміна доступу</h2>
+<p>У меню <b>Сервіс</b> &gt; <b>ШІ-агенти</b> можна переглянути програми, яким ви дозволили або заборонили доступ, та активність їхніх агентів. Найновіші записи показано першими.</p>
+<p>Читання даних підсумовується одним рядком для кожної програми за годину: окремо рахуються повідомлення, розмови, списки, пошукові запити та файли. Читання вкладення агентом не означає відкриття файлу в зовнішній програмі. Виберіть рядок, щоб побачити теми прочитаних повідомлень і пошукові запити, але не текст повідомлень. Старі записи видаляються під час додавання нових; журнал розрахований приблизно на 30 днів. Його очищення не скидає обмеження на надсилання чи скасування підписок.</p>
+<ul>
+    <li>Кнопка <b>Змінити</b> дає змогу змінити дозволи програми.</li>
+    <li>Кнопка <b>Вилучити</b> видаляє дозволи програми та історію її агентів. Сама програма залишається встановленою. Наступного разу, коли вона під’єднається, Inbox Classic знову запитає про доступ.</li>
+    <li>Кнопка <b>Скасувати</b> скасовує зміну стану прочитання, прапорців чи їхніх кольорів, позначок небажаної пошти, переміщення, архівування або видалення. Також можна зупинити надсилання повідомлення, яке ще є в папці «Вихідні». Уже надіслане повідомлення відкликати неможливо.</li>
+    <li>Кнопка <b>Скасувати за період</b> намагається скасувати підтримувані дії вибраної програми за вказаний період, наприклад за останню годину, починаючи з найновіших. Лічильник стосується записів дій у журналі, а не кількості повідомлень.</li>
+</ul>
+<p>Під час скасування пропускаються повідомлення, які вже не перебувають в очікуваному місці або стані. Запис у журналі вважається скасованим, навіть якщо вдалося скасувати лише частину змін. Агент може скасовувати власні зміни, але ніколи не зміни іншої програми.</p>
+<aside class="warning">Повідомлення від інших людей можуть містити інструкції, покликані змусити агента переслати чи видалити вашу пошту. Inbox Classic приховує текст, якого ви не бачите, і вказує агенту не виконувати інструкції з повідомлень. Проте агента все одно можна обдурити. Дозволяйте лише потрібні вам дії.</aside>
+<nav class="related"><a href="agents-connect.html">Під’єднання ШІ-агента</a> <a href="agents-sending.html">Коли агент надсилає пошту</a> <a href="data-storage.html">Де зберігаються ваша пошта й паролі</a></nav>
+</main></div>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'">
+<title>Krypteringsnøkler</title>
+<style>body{margin:16px 24px;line-height:1.5}body>:not(.web),main{max-width:42em}h1{font-size:1.6em;margin:0 0 4px}h2{font-size:1.2em;margin:1.4em 0 .4em}p.summary{font-size:1.05em;opacity:.8;margin-top:0}ol,ul{padding-left:1.6em}li{margin:.3em 0}table{border-collapse:collapse;margin:.6em 0}th,td{text-align:left;padding:4px 12px 4px 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent);vertical-align:top}kbd{font-size:.9em;border:1px solid color-mix(in srgb,currentColor 35%,transparent);border-bottom-width:2px;border-radius:4px;padding:0 4px;white-space:nowrap}aside{padding:8px 12px;margin:.8em 0}.side a[aria-current]{font-weight:700;text-decoration:none}aside.warning{border-left:4px solid #c60}img.picture{max-width:100%;height:auto;margin:.6em 0;border:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related{margin-top:1.6em;padding-top:.6em;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related a{margin-right:1.2em}p.home{margin:0 0 1em;font-size:.9em}header.bar{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;max-width:none;padding:0 0 12px;margin:0 0 20px;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}header.bar .brand{font-weight:700;text-decoration:none;margin-right:auto}header.bar a,header.bar b{margin-right:10px}.web{display:flex;gap:32px}.web .side{flex:0 0 240px;font-size:.92em}.web .side ul{padding-left:1.1em}.web main{flex:1;min-width:0}@media(max-width:700px){.web{display:block}.web .side{display:none}}:root{color-scheme:light dark}body{font:11pt system-ui,'Adwaita Sans',Cantarell,sans-serif;color:CanvasText;background:Canvas}a{color:#1c71d8}@media(prefers-color-scheme:dark){a{color:#78aeed}}aside.note,aside.warning{background:color-mix(in srgb,CanvasText 6%,Canvas);border-radius:12px}body.windows,body.mac,body.linux{font:16px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif;margin:0;background:#f7f7fb;color:#1f2330}header.bar{max-width:1180px;margin:0 auto;padding:14px 24px;border-bottom:1px solid #e3e3ee}header.bar .brand{color:#3d4aa8;font-size:1.1em}header.bar a{color:#3d4aa8}.web{max-width:1180px;margin:0 auto;padding:24px}.web main{background:#fff;border-radius:12px;padding:28px 36px;box-shadow:0 1px 3px rgba(20,20,60,.08)}.web .side{position:sticky;top:16px;align-self:flex-start;max-height:calc(100vh - 32px);overflow:auto}.web .side a{color:#30395e;text-decoration:none}.web .side a:hover,.web main a{color:#3d4aa8}h1,h2{color:#1f2330}h2{border-bottom:none}aside.note,aside.warning{background:#f1f2fb;border:1px solid #e0e2f5;border-radius:10px}@media(prefers-color-scheme:dark){body.windows,body.mac,body.linux{background:#14151c;color:#e6e7ef}.web main{background:#1d1f29;box-shadow:none}header.bar{border-color:#2c2f3d}.web .side a{color:#c5c9e6}h1,h2{color:#e6e7ef}aside.note,aside.warning{background:#232637;border-color:#30344a}header.bar a,header.bar .brand,.web main a,.web .side a:hover{color:#9aa6ff}}</style>
+</head>
+<body class="linux">
+<header class="bar"><a class="brand" href="/">Inbox Classic</a><span class="platforms"><a href="../windows/encryption-keys.html">Windows</a> <a href="../mac/encryption-keys.html">Mac</a> <b>Linux</b></span><span class="languages"><a href="../../en/linux/encryption-keys.html" hreflang="en">English</a> <a href="../../ca/linux/encryption-keys.html" hreflang="ca">Català</a> <a href="../../cs/linux/encryption-keys.html" hreflang="cs">Čeština</a> <a href="../../da/linux/encryption-keys.html" hreflang="da">Dansk</a> <a href="../../de/linux/encryption-keys.html" hreflang="de">Deutsch</a> <a href="../../et/linux/encryption-keys.html" hreflang="et">Eesti</a> <a href="../../es/linux/encryption-keys.html" hreflang="es">Español</a> <a href="../../fr/linux/encryption-keys.html" hreflang="fr">Français</a> <a href="../../hr/linux/encryption-keys.html" hreflang="hr">Hrvatski</a> <a href="../../it/linux/encryption-keys.html" hreflang="it">Italiano</a> <a href="../../lv/linux/encryption-keys.html" hreflang="lv">Latviešu</a> <a href="../../lt/linux/encryption-keys.html" hreflang="lt">Lietuvių</a> <a href="../../hu/linux/encryption-keys.html" hreflang="hu">Magyar</a> <a href="../../nl/linux/encryption-keys.html" hreflang="nl">Nederlands</a> <b>Norsk bokmål</b> <a href="../../pl/linux/encryption-keys.html" hreflang="pl">Polski</a> <a href="../../pt-BR/linux/encryption-keys.html" hreflang="pt-BR">Português (Brasil)</a> <a href="../../pt/linux/encryption-keys.html" hreflang="pt">Português (Portugal)</a> <a href="../../ro/linux/encryption-keys.html" hreflang="ro">Română</a> <a href="../../sk/linux/encryption-keys.html" hreflang="sk">Slovenčina</a> <a href="../../sl/linux/encryption-keys.html" hreflang="sl">Slovenščina</a> <a href="../../sr-Latn/linux/encryption-keys.html" hreflang="sr-Latn">Srpski</a> <a href="../../fi/linux/encryption-keys.html" hreflang="fi">Suomi</a> <a href="../../sv/linux/encryption-keys.html" hreflang="sv">Svenska</a> <a href="../../tr/linux/encryption-keys.html" hreflang="tr">Türkçe</a> <a href="../../el/linux/encryption-keys.html" hreflang="el">Ελληνικά</a> <a href="../../bg/linux/encryption-keys.html" hreflang="bg">Български</a> <a href="../../ru/linux/encryption-keys.html" hreflang="ru">Русский</a> <a href="../../uk/linux/encryption-keys.html" hreflang="uk">Українська</a></span></header>
+<div class="web"><nav class="side"><nav class="contents">
+<h2>Kom i gang</h2>
+<ul>
+<li><a href="add-account.html">Legg til en e-postkonto</a></li>
+<li><a href="gmail-outlook.html">Gmail og Outlook.com</a></li>
+<li><a href="main-window.html">Hovedvinduet</a></li>
+<li><a href="layouts.html">Oppsett</a></li>
+</ul>
+<h2>Daglige oppgaver</h2>
+<ul>
+<li><a href="read-messages.html">Les meldinger</a></li>
+<li><a href="find-messages.html">Finn meldinger</a></li>
+<li><a href="conversations.html">Samtaler</a></li>
+<li><a href="organize-mail.html">Flagg, arkiver og flytt meldinger</a></li>
+<li><a href="message-rules.html">Behandle ny e-post med regler</a></li>
+<li><a href="delete-and-undo.html">Slett meldinger og angre</a></li>
+<li><a href="folders.html">Arbeid med mapper</a></li>
+<li><a href="write-message.html">Skriv en melding</a></li>
+<li><a href="reply-forward.html">Svar og videresend</a></li>
+<li><a href="attachments.html">Vedlegg</a></li>
+<li><a href="drafts-outbox.html">Utkast og Utboks</a></li>
+<li><a href="signatures.html">Signaturer</a></li>
+<li><a href="address-book.html">Adresseboken</a></li>
+<li><a href="save-print-import.html">Lagre, skriv ut og importer meldinger</a></li>
+<li><a href="new-mail.html">Hent ny e-post</a></li>
+</ul>
+<h2>Flere kontoer</h2>
+<ul>
+<li><a href="all-inboxes.html">Alle innbokser</a></li>
+<li><a href="manage-accounts.html">Endre, ordne og fjern kontoer</a></li>
+<li><a href="move-computer.html">Flytt til en annen datamaskin</a></li>
+</ul>
+<h2>Meldingsfunksjoner</h2>
+<ul>
+<li><a href="sign-in-codes.html">Påloggingskoder</a></li>
+<li><a href="delivery-problems.html">Meldinger som ikke ble levert</a></li>
+<li><a href="invitations.html">Kalenderinvitasjoner</a></li>
+<li><a href="unsubscribe.html">Meld deg av en e-postliste</a></li>
+<li><a href="brand-logos.html">Merkelogoer</a></li>
+</ul>
+<h2>Kryptert og signert e-post</h2>
+<ul>
+<li><a href="encrypted-and-signed-mail.html">Kryptert og signert e-post</a></li>
+<li><a href="sign-and-encrypt.html">Signer og krypter en melding</a></li>
+<li><a href="encryption-keys.html" aria-current="page">Krypteringsnøkler</a></li>
+<li><a href="verify-a-key.html">Bekreft nøkkelen til en kontakt</a></li>
+</ul>
+<h2>Innstillinger</h2>
+<ul>
+<li><a href="options-language.html">Innstillinger</a></li>
+<li><a href="download-ahead.html">Last ned meldinger på forhånd</a></li>
+<li><a href="account-security.html">Sikkerhetsinnstillinger for kontoer</a></li>
+<li><a href="default-mail-program.html">Velg Inbox Classic som standard e-postprogram</a></li>
+<li><a href="updates.html">Oppdater Inbox Classic</a></li>
+</ul>
+<h2>KI-agenter</h2>
+<ul>
+<li><a href="agents-connect.html">Koble til en KI-agent</a></li>
+<li><a href="agents-permissions.html">Hva en agent har lov til</a></li>
+<li><a href="agents-sending.html">Når en agent sender e-post</a></li>
+</ul>
+<h2>Referanse</h2>
+<ul>
+<li><a href="keyboard-shortcuts.html">Hurtigtaster</a></li>
+<li><a href="search-words.html">Søkeoperatorer</a></li>
+</ul>
+<h2>Feilsøking</h2>
+<ul>
+<li><a href="password-not-accepted.html">Passordet godtas ikke</a></li>
+<li><a href="certificate-errors.html">Sertifikatfeil</a></li>
+<li><a href="encryption-errors.html">Krypteringsfeil</a></li>
+<li><a href="no-connection.html">Inbox Classic får ikke kontakt</a></li>
+<li><a href="message-not-shown.html">En melding vises ikke</a></li>
+</ul>
+<h2>Personvern og sikkerhet</h2>
+<ul>
+<li><a href="pictures-tracking.html">Bilder og sporing</a></li>
+<li><a href="links-scripts.html">Lenker, skript og vedlegg</a></li>
+<li><a href="data-storage.html">Hvor e-posten og passordene dine oppbevares</a></li>
+<li><a href="connections.html">Tilkoblingene Inbox Classic oppretter</a></li>
+<li><a href="removing.html">Fjern Inbox Classic</a></li>
+</ul>
+<h2>Avansert</h2>
+<ul>
+<li><a href="sign-in-apps.html">Påloggingsapper</a></li>
+<li><a href="command-line.html">Kommandolinjealternativer</a></li>
+</ul>
+</nav>
+</nav><main>
+<h1>Krypteringsnøkler</h1>
+<p class="summary">Lag en nøkkel for å signere meldingene dine og motta kryptert e-post, og administrer kontaktenes nøkler.</p>
+<p>Inbox Classic signerer og krypterer e-post med OpenPGP-nøkler. Din egen nøkkel har to deler: en offentlig nøkkel som du gir til andre, og en privat nøkkel som du må holde hemmelig. Kontaktenes nøkler lar deg kontrollere signaturene deres og kryptere e-post til dem.</p>
+<p>Slik lager du nøkkelen din:</p>
+<ol>
+    <li>Velg <b>Verktøy</b> &gt; <b>Krypteringsnøkler</b>, og klikk deretter på <b>Ny nøkkel</b>.</li>
+    <li>Velg kontoen, og klikk på <b>Lag nøkkel</b>. Nøkkelen brukes for kontoens adresse og dens andre adresser.</li>
+    <li>Klikk på <b>Lagre en sikkerhetskopi</b>, og velg en passfrase. Oppbevar filen og passfrasen på to forskjellige trygge steder.</li>
+</ol>
+<aside class="warning">Uten en sikkerhetskopi kan ikke nøkkelen gjenopprettes hvis denne datamaskinen går tapt eller tilbakestilles, og e-post som er kryptert til den, kan ikke lenger leses.</aside>
+<h2>Beskyttelse av lagrede nøkler</h2>
+<p>De private nøklene dine er beskyttet av en nøkkel som oppbevares i systemets nøkkelring, så du slipper å skrive en passfrase hver gang du bruker dem. Du bruker en passfrase til sikkerhetskopier og eventuelt ved import. Hvis en privat nøkkel ikke kan åpnes, kontrollerer du først at nøkkellageret er tilgjengelig og låst opp. Hvis beskyttelsesnøkkelen mangler, klikker du på <b>Importer</b> og velger en sikkerhetskopi av den private nøkkelen.</p>
+<h2>Legg til nøkler</h2>
+<p>Klikk på <b>Importer</b> for å legge til en nøkkel fra en fil, for eksempel en som en kontakt har sendt deg, eller en sikkerhetskopi av din egen. Hvis den private nøkkelen er beskyttet med en passfrase, blir du bedt om den ved import. Inbox Classic spør deretter om en importert nøkkel som er din, skal brukes for adressene dine.</p>
+<p>En kontakts nøkkel brukes for kontaktens adresse fra da av. Hvis det senere dukker opp en annen nøkkel for den samme adressen, brukes den nåværende til du velger den nye i kontaktens egenskaper.</p>
+<p>For å dele den offentlige nøkkelen din merker du den og klikker på <b>Eksporter</b>. Du kan også velge kontoens nøkkel i egenskapene for kontoen, i fanen <b>Sikkerhet</b>.</p>
+<p>Når du skal kryptere en melding og mangler en brukbar nøkkel til en mottaker, søker Inbox Classic først på domenet til mottakerens e-postadresse. Finner appen ikke nøkkelen der, sendes adressen til keys.openpgp.org hvis dette søket er slått på. Slå av <b>Søk etter nøkler på keys.openpgp.org</b> under <b>Hovedmeny</b> &gt; <b>Brukervalg</b> &gt; <b>Lesing</b> for å deaktivere dette søket på keys.openpgp.org. Søk via domenet er fortsatt tilgjengelig. Når du søker etter et fingeravtrykk eller en nøkkel-ID, sendes denne identifikatoren i stedet for en e-postadresse.</p>
+<p>Når Autocrypt er slått på og avsenderadressen din har en tilknyttet nøkkel, sender Inbox Classic den offentlige nøkkelen med meldingene dine. Andre apper kan bruke den til å sende deg krypterte meldinger. Når du åpner en mottatt melding, kan Inbox Classic også lagre avsenderens offentlige nøkkel. Det bekrefter ikke hvem nøkkelen tilhører. Hvis du ikke vil sende din egen nøkkel, slår du av <b>Send den offentlige nøkkelen min med meldingene mine (Autocrypt)</b> på fanen <b>Sikkerhet</b> i kontoegenskapene.</p>
+<nav class="related"><a href="verify-a-key.html">Bekreft nøkkelen til en kontakt</a> <a href="address-book.html">Adresseboken</a> <a href="manage-accounts.html">Endre, ordne og fjern kontoer</a></nav>
+</main></div>
+</body>
+</html>

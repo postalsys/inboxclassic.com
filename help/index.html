@@ -7,12 +7,21 @@
 <link rel="canonical" href="https://inboxclassic.com/help/en/windows/index.html">
 <script>
 (function () {
-    var languages = ['en', 'de', 'es', 'et', 'fr'];
+    // the catalog of each tag a system may give (pe_i18n::supported, as core/include/languages.tsv has it): the
+    // tag's language with a region or script of it first, then the language alone
+    var keys = {'en': 'en', 'ca': 'ca', 'cs': 'cs', 'da': 'da', 'de': 'de', 'et': 'et', 'es': 'es', 'fr': 'fr', 'hr': 'hr', 'it': 'it', 'lv': 'lv', 'lt': 'lt', 'hu': 'hu', 'nl': 'nl', 'nb': 'nb', 'no': 'nb', 'pl': 'pl', 'pt-br': 'pt-BR', 'pt': 'pt', 'ro': 'ro', 'sk': 'sk', 'sl': 'sl', 'sr-latn': 'sr-Latn', 'sr': 'sr-Latn', 'fi': 'fi', 'sv': 'sv', 'tr': 'tr', 'el': 'el', 'bg': 'bg', 'ru': 'ru', 'uk': 'uk'};
+    function pick(tag) {
+        var parts = String(tag).toLowerCase().split(/[.@]/)[0].split(/[-_]/);
+        for (var k = 1; k < parts.length; k++) {
+            if (keys.hasOwnProperty(parts[0] + '-' + parts[k])) return keys[parts[0] + '-' + parts[k]];
+        }
+        return keys.hasOwnProperty(parts[0]) ? keys[parts[0]] : null;
+    }
     var language = 'en';
     var wanted = navigator.languages || [navigator.language || 'en'];
     for (var i = 0; i < wanted.length; i++) {
-        var code = String(wanted[i]).slice(0, 2).toLowerCase();
-        if (languages.indexOf(code) >= 0) { language = code; break; }
+        var found = pick(wanted[i]);
+        if (found) { language = found; break; }
     }
     var platform = (navigator.userAgentData && navigator.userAgentData.platform) || navigator.platform || '';
     var name = /mac/i.test(platform) ? 'mac' : /linux/i.test(platform) && !/android/i.test(navigator.userAgent) ? 'linux' : 'windows';

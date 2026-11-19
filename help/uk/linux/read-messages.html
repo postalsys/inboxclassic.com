@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'">
+<title>Читання повідомлень</title>
+<style>body{margin:16px 24px;line-height:1.5}body>:not(.web),main{max-width:42em}h1{font-size:1.6em;margin:0 0 4px}h2{font-size:1.2em;margin:1.4em 0 .4em}p.summary{font-size:1.05em;opacity:.8;margin-top:0}ol,ul{padding-left:1.6em}li{margin:.3em 0}table{border-collapse:collapse;margin:.6em 0}th,td{text-align:left;padding:4px 12px 4px 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent);vertical-align:top}kbd{font-size:.9em;border:1px solid color-mix(in srgb,currentColor 35%,transparent);border-bottom-width:2px;border-radius:4px;padding:0 4px;white-space:nowrap}aside{padding:8px 12px;margin:.8em 0}.side a[aria-current]{font-weight:700;text-decoration:none}aside.warning{border-left:4px solid #c60}img.picture{max-width:100%;height:auto;margin:.6em 0;border:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related{margin-top:1.6em;padding-top:.6em;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related a{margin-right:1.2em}p.home{margin:0 0 1em;font-size:.9em}header.bar{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;max-width:none;padding:0 0 12px;margin:0 0 20px;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}header.bar .brand{font-weight:700;text-decoration:none;margin-right:auto}header.bar a,header.bar b{margin-right:10px}.web{display:flex;gap:32px}.web .side{flex:0 0 240px;font-size:.92em}.web .side ul{padding-left:1.1em}.web main{flex:1;min-width:0}@media(max-width:700px){.web{display:block}.web .side{display:none}}:root{color-scheme:light dark}body{font:11pt system-ui,'Adwaita Sans',Cantarell,sans-serif;color:CanvasText;background:Canvas}a{color:#1c71d8}@media(prefers-color-scheme:dark){a{color:#78aeed}}aside.note,aside.warning{background:color-mix(in srgb,CanvasText 6%,Canvas);border-radius:12px}body.windows,body.mac,body.linux{font:16px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif;margin:0;background:#f7f7fb;color:#1f2330}header.bar{max-width:1180px;margin:0 auto;padding:14px 24px;border-bottom:1px solid #e3e3ee}header.bar .brand{color:#3d4aa8;font-size:1.1em}header.bar a{color:#3d4aa8}.web{max-width:1180px;margin:0 auto;padding:24px}.web main{background:#fff;border-radius:12px;padding:28px 36px;box-shadow:0 1px 3px rgba(20,20,60,.08)}.web .side{position:sticky;top:16px;align-self:flex-start;max-height:calc(100vh - 32px);overflow:auto}.web .side a{color:#30395e;text-decoration:none}.web .side a:hover,.web main a{color:#3d4aa8}h1,h2{color:#1f2330}h2{border-bottom:none}aside.note,aside.warning{background:#f1f2fb;border:1px solid #e0e2f5;border-radius:10px}@media(prefers-color-scheme:dark){body.windows,body.mac,body.linux{background:#14151c;color:#e6e7ef}.web main{background:#1d1f29;box-shadow:none}header.bar{border-color:#2c2f3d}.web .side a{color:#c5c9e6}h1,h2{color:#e6e7ef}aside.note,aside.warning{background:#232637;border-color:#30344a}header.bar a,header.bar .brand,.web main a,.web .side a:hover{color:#9aa6ff}}</style>
+</head>
+<body class="linux">
+<header class="bar"><a class="brand" href="/">Inbox Classic</a><span class="platforms"><a href="../windows/read-messages.html">Windows</a> <a href="../mac/read-messages.html">Mac</a> <b>Linux</b></span><span class="languages"><a href="../../en/linux/read-messages.html" hreflang="en">English</a> <a href="../../ca/linux/read-messages.html" hreflang="ca">Català</a> <a href="../../cs/linux/read-messages.html" hreflang="cs">Čeština</a> <a href="../../da/linux/read-messages.html" hreflang="da">Dansk</a> <a href="../../de/linux/read-messages.html" hreflang="de">Deutsch</a> <a href="../../et/linux/read-messages.html" hreflang="et">Eesti</a> <a href="../../es/linux/read-messages.html" hreflang="es">Español</a> <a href="../../fr/linux/read-messages.html" hreflang="fr">Français</a> <a href="../../hr/linux/read-messages.html" hreflang="hr">Hrvatski</a> <a href="../../it/linux/read-messages.html" hreflang="it">Italiano</a> <a href="../../lv/linux/read-messages.html" hreflang="lv">Latviešu</a> <a href="../../lt/linux/read-messages.html" hreflang="lt">Lietuvių</a> <a href="../../hu/linux/read-messages.html" hreflang="hu">Magyar</a> <a href="../../nl/linux/read-messages.html" hreflang="nl">Nederlands</a> <a href="../../nb/linux/read-messages.html" hreflang="nb">Norsk bokmål</a> <a href="../../pl/linux/read-messages.html" hreflang="pl">Polski</a> <a href="../../pt-BR/linux/read-messages.html" hreflang="pt-BR">Português (Brasil)</a> <a href="../../pt/linux/read-messages.html" hreflang="pt">Português (Portugal)</a> <a href="../../ro/linux/read-messages.html" hreflang="ro">Română</a> <a href="../../sk/linux/read-messages.html" hreflang="sk">Slovenčina</a> <a href="../../sl/linux/read-messages.html" hreflang="sl">Slovenščina</a> <a href="../../sr-Latn/linux/read-messages.html" hreflang="sr-Latn">Srpski</a> <a href="../../fi/linux/read-messages.html" hreflang="fi">Suomi</a> <a href="../../sv/linux/read-messages.html" hreflang="sv">Svenska</a> <a href="../../tr/linux/read-messages.html" hreflang="tr">Türkçe</a> <a href="../../el/linux/read-messages.html" hreflang="el">Ελληνικά</a> <a href="../../bg/linux/read-messages.html" hreflang="bg">Български</a> <a href="../../ru/linux/read-messages.html" hreflang="ru">Русский</a> <b>Українська</b></span></header>
+<div class="web"><nav class="side"><nav class="contents">
+<h2>Початок роботи</h2>
+<ul>
+<li><a href="add-account.html">Додавання поштового облікового запису</a></li>
+<li><a href="gmail-outlook.html">Gmail і Outlook.com</a></li>
+<li><a href="main-window.html">Головне вікно</a></li>
+<li><a href="layouts.html">Макети</a></li>
+</ul>
+<h2>Щоденні завдання</h2>
+<ul>
+<li><a href="read-messages.html" aria-current="page">Читання повідомлень</a></li>
+<li><a href="find-messages.html">Пошук повідомлень</a></li>
+<li><a href="conversations.html">Розмови</a></li>
+<li><a href="organize-mail.html">Прапорці, архівування й переміщення повідомлень</a></li>
+<li><a href="message-rules.html">Упорядкування нової пошти за правилами</a></li>
+<li><a href="delete-and-undo.html">Видалення повідомлень і скасування</a></li>
+<li><a href="folders.html">Робота з папками</a></li>
+<li><a href="write-message.html">Написання повідомлення</a></li>
+<li><a href="reply-forward.html">Відповідь і пересилання</a></li>
+<li><a href="attachments.html">Вкладення</a></li>
+<li><a href="drafts-outbox.html">Чернетки й папка «Вихідні»</a></li>
+<li><a href="signatures.html">Текстові підписи</a></li>
+<li><a href="address-book.html">Адресна книга</a></li>
+<li><a href="save-print-import.html">Збереження, друк та імпорт повідомлень</a></li>
+<li><a href="new-mail.html">Отримання нової пошти</a></li>
+</ul>
+<h2>Кілька облікових записів</h2>
+<ul>
+<li><a href="all-inboxes.html">Усі вхідні</a></li>
+<li><a href="manage-accounts.html">Зміна, порядок і вилучення облікових записів</a></li>
+<li><a href="move-computer.html">Перенесення на інший комп’ютер</a></li>
+</ul>
+<h2>Додаткові можливості пошти</h2>
+<ul>
+<li><a href="sign-in-codes.html">Коди входу</a></li>
+<li><a href="delivery-problems.html">Недоставлені повідомлення</a></li>
+<li><a href="invitations.html">Запрошення в календар</a></li>
+<li><a href="unsubscribe.html">Вихід зі списку розсилки</a></li>
+<li><a href="brand-logos.html">Логотипи брендів</a></li>
+</ul>
+<h2>Зашифрована й підписана пошта</h2>
+<ul>
+<li><a href="encrypted-and-signed-mail.html">Зашифрована й підписана пошта</a></li>
+<li><a href="sign-and-encrypt.html">Підписування й шифрування повідомлення</a></li>
+<li><a href="encryption-keys.html">Ключі шифрування</a></li>
+<li><a href="verify-a-key.html">Підтвердження власника ключа</a></li>
+</ul>
+<h2>Параметри</h2>
+<ul>
+<li><a href="options-language.html">Параметри</a></li>
+<li><a href="download-ahead.html">Повідомлення, завантажені заздалегідь</a></li>
+<li><a href="account-security.html">Параметри безпеки облікового запису</a></li>
+<li><a href="default-mail-program.html">Inbox Classic як ваша поштова програма</a></li>
+<li><a href="updates.html">Оновлення Inbox Classic</a></li>
+</ul>
+<h2>ШІ-агенти</h2>
+<ul>
+<li><a href="agents-connect.html">Під’єднання ШІ-агента</a></li>
+<li><a href="agents-permissions.html">Що може робити агент</a></li>
+<li><a href="agents-sending.html">Коли агент надсилає пошту</a></li>
+</ul>
+<h2>Довідник</h2>
+<ul>
+<li><a href="keyboard-shortcuts.html">Сполучення клавіш</a></li>
+<li><a href="search-words.html">Пошукові слова</a></li>
+</ul>
+<h2>Усунення проблем</h2>
+<ul>
+<li><a href="password-not-accepted.html">Пароль не приймається</a></li>
+<li><a href="certificate-errors.html">Помилки сертифіката</a></li>
+<li><a href="encryption-errors.html">Помилки шифрування</a></li>
+<li><a href="no-connection.html">Inbox Classic не може під’єднатися</a></li>
+<li><a href="message-not-shown.html">Повідомлення не показується</a></li>
+</ul>
+<h2>Конфіденційність і безпека</h2>
+<ul>
+<li><a href="pictures-tracking.html">Зображення й стеження</a></li>
+<li><a href="links-scripts.html">Посилання, сценарії та вкладення</a></li>
+<li><a href="data-storage.html">Де зберігаються ваша пошта й паролі</a></li>
+<li><a href="connections.html">З’єднання, які встановлює Inbox Classic</a></li>
+<li><a href="removing.html">Видалення Inbox Classic</a></li>
+</ul>
+<h2>Розширені можливості</h2>
+<ul>
+<li><a href="sign-in-apps.html">Застосунки для входу</a></li>
+<li><a href="command-line.html">Параметри командного рядка</a></li>
+</ul>
+</nav>
+</nav><main>
+<h1>Читання повідомлень</h1>
+<p class="summary">Читайте повідомлення в області читання чи в окремому вікні й переходьте між повідомленнями за допомогою клавіатури.</p>
+<p>Виділіть повідомлення в списку, щоб побачити його в області читання під відомостями про відправника, дату, одержувачів і тему. Повідомлення позначається як прочитане, коли його показано протягом секунди. Список показує дату кожного повідомлення, але ніколи не пізнішу за час його надходження, тому пошта, датована майбутнім, не залишається вгорі.</p>
+<ul>
+    <li>Щоб позначити його самостійно, виберіть <b>Редагування</b> &gt; <b>Позначити як прочитане</b> (<kbd>Ctrl</kbd>+<kbd>Q</kbd>) або <b>Позначити як непрочитане</b>.</li>
+    <li>Щоб позначити всі повідомлення папки як прочитані, виберіть <b>Редагування</b> &gt; <b>Позначити усі як прочитані</b> (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>A</kbd>) або клацніть папку правою кнопкою миші.</li>
+</ul>
+<h2>Лише непрочитані повідомлення</h2>
+<p>Щоб показувати лише ще не прочитані повідомлення, виберіть <b>Вигляд</b> &gt; <b>Приховати прочитані повідомлення</b> або клацніть кнопку фільтра на панелі заголовка. Це працює в кожній папці й залишається ввімкненим, доки ви це не вимкнете. Повідомлення, позначене як прочитане після відкриття поточного списку, залишається видимим до зміни списку.</p>
+<h2>Повідомлення в окремому вікні</h2>
+<p>Двічі клацніть повідомлення або виділіть його й натисніть <kbd>Enter</kbd>. Вікно має кнопки <b>Відповісти</b>, <b>Відповісти всім</b>, <b>Переслати</b>, <b>Друк</b>, <b>Видалити</b>, <b>Архівувати</b> і <b>Небажане</b>. Кнопки <b>Попереднє</b> і <b>Наступне</b> переходять списком, з якого відкрито вікно. Чернетка натомість відкривається у вікні написання повідомлення.</p>
+<h2>Читання з клавіатури</h2>
+<ul>
+    <li>Команди <b>Вигляд</b> &gt; <b>Наступне повідомлення</b> (<kbd>Ctrl</kbd>+<kbd>.</kbd>) і <b>Попереднє повідомлення</b> (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>,</kbd>) переходять униз і вгору списком.</li>
+    <li>Команда <b>Вигляд</b> &gt; <b>Наступне непрочитане</b> або клавіша <kbd>N</kbd> у списку повідомлень знаходить наступне непрочитане повідомлення. Коли в папці таких не залишилося, пропонується наступна папка, де вони є.</li>
+    <li>Команда <b>Вигляд</b> &gt; <b>Перейти до папки</b> (<kbd>Ctrl</kbd>+<kbd>Y</kbd>) відкриває будь-яку папку будь-якого облікового запису. Щоб знайти її, введіть частину назви.</li>
+    <li>Команда <b>Редагування</b> &gt; <b>Знайти в цьому повідомленні</b> (<kbd>F3</kbd>) знаходить слова в показаному повідомленні.</li>
+</ul>
+<h2>Попередні повідомлення у відповіді</h2>
+<p>Відповідь часто містить попередні повідомлення. Inbox Classic згортає цитований текст попередніх повідомлень; щоб розгорнути його, скористайтеся кнопкою ••• під текстом відправника. Клацніть її, щоб побачити їх.</p>
+<p>Одразу після додавання облікового запису в області читання може бути вказано, що повідомлення ще завантажується. Див. <a href="message-not-shown.html">Повідомлення не показується</a>.</p>
+
+<h2>Темний режим</h2><p>Коли ваш робочий стіл у темному режимі, повідомлення, які ви читаєте й пишете, теж мають темне тло. Повідомлення з власними кольорами тла, як-от розсилки й квитанції, зберігають свій початковий вигляд, якщо не містять темної версії. Друк завжди використовує світлий режим. Щоб залишити повідомлення у світлому режимі, вимкніть <b>Показувати повідомлення на темному тлі, коли система в темному режимі</b> у розділі <b>Головне меню</b> &gt; <b>Налаштування</b> &gt; <b>Читання</b>.</p>
+<h2>Розмір тексту</h2>
+<p>Щоб показувати повідомлення більшими чи меншими, виберіть <b>Вигляд</b> &gt; <b>Розмір тексту</b> і розмір. Це також змінює розмір відображення під час написання повідомлення, не змінюючи форматування, яке бачать одержувачі. Виберіть <b>Середній</b>, щоб повернути типовий розмір.</p>
+<nav class="related"><a href="conversations.html">Розмови</a> <a href="organize-mail.html">Прапорці, архівування й переміщення повідомлень</a> <a href="message-not-shown.html">Повідомлення не показується</a></nav>
+</main></div>
+</body>
+</html>

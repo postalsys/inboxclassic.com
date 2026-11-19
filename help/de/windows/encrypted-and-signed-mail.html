@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'">
+<title>Verschlüsselte und signierte E-Mails</title>
+<style>body{margin:16px 24px;line-height:1.5}body>:not(.web),main{max-width:42em}h1{font-size:1.6em;margin:0 0 4px}h2{font-size:1.2em;margin:1.4em 0 .4em}p.summary{font-size:1.05em;opacity:.8;margin-top:0}ol,ul{padding-left:1.6em}li{margin:.3em 0}table{border-collapse:collapse;margin:.6em 0}th,td{text-align:left;padding:4px 12px 4px 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent);vertical-align:top}kbd{font-size:.9em;border:1px solid color-mix(in srgb,currentColor 35%,transparent);border-bottom-width:2px;border-radius:4px;padding:0 4px;white-space:nowrap}aside{padding:8px 12px;margin:.8em 0}.side a[aria-current]{font-weight:700;text-decoration:none}aside.warning{border-left:4px solid #c60}img.picture{max-width:100%;height:auto;margin:.6em 0;border:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related{margin-top:1.6em;padding-top:.6em;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related a{margin-right:1.2em}p.home{margin:0 0 1em;font-size:.9em}header.bar{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;max-width:none;padding:0 0 12px;margin:0 0 20px;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}header.bar .brand{font-weight:700;text-decoration:none;margin-right:auto}header.bar a,header.bar b{margin-right:10px}.web{display:flex;gap:32px}.web .side{flex:0 0 240px;font-size:.92em}.web .side ul{padding-left:1.1em}.web main{flex:1;min-width:0}@media(max-width:700px){.web{display:block}.web .side{display:none}}body{font:10pt Tahoma,Arial,sans-serif;color:#000;background:#fff}h1,h2{color:#036}h2{border-bottom:1px solid #9ab}a{color:#03c}aside.note,aside.warning{background:#ffffe1;border:1px solid #c9c9a0}kbd{background:#f4f4f4;border-color:#999}body.windows,body.mac,body.linux{font:16px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif;margin:0;background:#f7f7fb;color:#1f2330}header.bar{max-width:1180px;margin:0 auto;padding:14px 24px;border-bottom:1px solid #e3e3ee}header.bar .brand{color:#3d4aa8;font-size:1.1em}header.bar a{color:#3d4aa8}.web{max-width:1180px;margin:0 auto;padding:24px}.web main{background:#fff;border-radius:12px;padding:28px 36px;box-shadow:0 1px 3px rgba(20,20,60,.08)}.web .side{position:sticky;top:16px;align-self:flex-start;max-height:calc(100vh - 32px);overflow:auto}.web .side a{color:#30395e;text-decoration:none}.web .side a:hover,.web main a{color:#3d4aa8}h1,h2{color:#1f2330}h2{border-bottom:none}aside.note,aside.warning{background:#f1f2fb;border:1px solid #e0e2f5;border-radius:10px}@media(prefers-color-scheme:dark){body.windows,body.mac,body.linux{background:#14151c;color:#e6e7ef}.web main{background:#1d1f29;box-shadow:none}header.bar{border-color:#2c2f3d}.web .side a{color:#c5c9e6}h1,h2{color:#e6e7ef}aside.note,aside.warning{background:#232637;border-color:#30344a}header.bar a,header.bar .brand,.web main a,.web .side a:hover{color:#9aa6ff}}</style>
+</head>
+<body class="windows">
+<header class="bar"><a class="brand" href="/">Inbox Classic</a><span class="platforms"><b>Windows</b> <a href="../mac/encrypted-and-signed-mail.html">Mac</a> <a href="../linux/encrypted-and-signed-mail.html">Linux</a></span><span class="languages"><a href="../../en/windows/encrypted-and-signed-mail.html" hreflang="en">English</a> <a href="../../ca/windows/encrypted-and-signed-mail.html" hreflang="ca">Català</a> <a href="../../cs/windows/encrypted-and-signed-mail.html" hreflang="cs">Čeština</a> <a href="../../da/windows/encrypted-and-signed-mail.html" hreflang="da">Dansk</a> <b>Deutsch</b> <a href="../../et/windows/encrypted-and-signed-mail.html" hreflang="et">Eesti</a> <a href="../../es/windows/encrypted-and-signed-mail.html" hreflang="es">Español</a> <a href="../../fr/windows/encrypted-and-signed-mail.html" hreflang="fr">Français</a> <a href="../../hr/windows/encrypted-and-signed-mail.html" hreflang="hr">Hrvatski</a> <a href="../../it/windows/encrypted-and-signed-mail.html" hreflang="it">Italiano</a> <a href="../../lv/windows/encrypted-and-signed-mail.html" hreflang="lv">Latviešu</a> <a href="../../lt/windows/encrypted-and-signed-mail.html" hreflang="lt">Lietuvių</a> <a href="../../hu/windows/encrypted-and-signed-mail.html" hreflang="hu">Magyar</a> <a href="../../nl/windows/encrypted-and-signed-mail.html" hreflang="nl">Nederlands</a> <a href="../../nb/windows/encrypted-and-signed-mail.html" hreflang="nb">Norsk bokmål</a> <a href="../../pl/windows/encrypted-and-signed-mail.html" hreflang="pl">Polski</a> <a href="../../pt-BR/windows/encrypted-and-signed-mail.html" hreflang="pt-BR">Português (Brasil)</a> <a href="../../pt/windows/encrypted-and-signed-mail.html" hreflang="pt">Português (Portugal)</a> <a href="../../ro/windows/encrypted-and-signed-mail.html" hreflang="ro">Română</a> <a href="../../sk/windows/encrypted-and-signed-mail.html" hreflang="sk">Slovenčina</a> <a href="../../sl/windows/encrypted-and-signed-mail.html" hreflang="sl">Slovenščina</a> <a href="../../sr-Latn/windows/encrypted-and-signed-mail.html" hreflang="sr-Latn">Srpski</a> <a href="../../fi/windows/encrypted-and-signed-mail.html" hreflang="fi">Suomi</a> <a href="../../sv/windows/encrypted-and-signed-mail.html" hreflang="sv">Svenska</a> <a href="../../tr/windows/encrypted-and-signed-mail.html" hreflang="tr">Türkçe</a> <a href="../../el/windows/encrypted-and-signed-mail.html" hreflang="el">Ελληνικά</a> <a href="../../bg/windows/encrypted-and-signed-mail.html" hreflang="bg">Български</a> <a href="../../ru/windows/encrypted-and-signed-mail.html" hreflang="ru">Русский</a> <a href="../../uk/windows/encrypted-and-signed-mail.html" hreflang="uk">Українська</a></span></header>
+<div class="web"><nav class="side"><nav class="contents">
+<h2>Erste Schritte</h2>
+<ul>
+<li><a href="add-account.html">Ein E-Mail-Konto hinzufügen</a></li>
+<li><a href="gmail-outlook.html">Gmail und Outlook.com</a></li>
+<li><a href="main-window.html">Das Hauptfenster</a></li>
+<li><a href="layouts.html">Layouts</a></li>
+</ul>
+<h2>Alltägliche Aufgaben</h2>
+<ul>
+<li><a href="read-messages.html">Nachrichten lesen</a></li>
+<li><a href="find-messages.html">Nachrichten suchen</a></li>
+<li><a href="conversations.html">Unterhaltungen</a></li>
+<li><a href="organize-mail.html">Nachrichten kennzeichnen, archivieren und verschieben</a></li>
+<li><a href="message-rules.html">Neue Nachrichten mit Regeln sortieren</a></li>
+<li><a href="delete-and-undo.html">Nachrichten löschen und rückgängig machen</a></li>
+<li><a href="folders.html">Mit Ordnern arbeiten</a></li>
+<li><a href="write-message.html">Eine Nachricht schreiben</a></li>
+<li><a href="reply-forward.html">Antworten und weiterleiten</a></li>
+<li><a href="attachments.html">Anlagen</a></li>
+<li><a href="drafts-outbox.html">Entwürfe und der Postausgang</a></li>
+<li><a href="signatures.html">Signaturen</a></li>
+<li><a href="address-book.html">Das Adressbuch</a></li>
+<li><a href="save-print-import.html">Nachrichten speichern, drucken und importieren</a></li>
+<li><a href="new-mail.html">Neue E-Mails abrufen</a></li>
+</ul>
+<h2>Mehrere Konten</h2>
+<ul>
+<li><a href="all-inboxes.html">Alle Posteingänge</a></li>
+<li><a href="manage-accounts.html">Konten ändern, ordnen und entfernen</a></li>
+<li><a href="move-computer.html">Auf einen anderen Computer umziehen</a></li>
+</ul>
+<h2>Funktionen in Nachrichten</h2>
+<ul>
+<li><a href="sign-in-codes.html">Anmeldecodes</a></li>
+<li><a href="delivery-problems.html">Nicht zugestellte Nachrichten</a></li>
+<li><a href="invitations.html">Kalendereinladungen</a></li>
+<li><a href="unsubscribe.html">Eine Mailingliste verlassen</a></li>
+<li><a href="brand-logos.html">Markenlogos</a></li>
+</ul>
+<h2>Verschlüsselte und signierte E-Mails</h2>
+<ul>
+<li><a href="encrypted-and-signed-mail.html" aria-current="page">Verschlüsselte und signierte E-Mails</a></li>
+<li><a href="sign-and-encrypt.html">Eine Nachricht signieren und verschlüsseln</a></li>
+<li><a href="encryption-keys.html">Verschlüsselungsschlüssel</a></li>
+<li><a href="verify-a-key.html">Den Schlüssel eines Kontakts überprüfen</a></li>
+</ul>
+<h2>Einstellungen</h2>
+<ul>
+<li><a href="options-language.html">Einstellungen</a></li>
+<li><a href="download-ahead.html">Nachrichten vorab herunterladen</a></li>
+<li><a href="account-security.html">Sicherheitseinstellungen eines Kontos</a></li>
+<li><a href="default-mail-program.html">Inbox Classic als E-Mail-Programm festlegen</a></li>
+<li><a href="updates.html">Inbox Classic aktualisieren</a></li>
+</ul>
+<h2>KI-Agenten</h2>
+<ul>
+<li><a href="agents-connect.html">Einen KI-Agenten verbinden</a></li>
+<li><a href="agents-permissions.html">Was ein Agent tun darf</a></li>
+<li><a href="agents-sending.html">Wenn ein Agent E-Mails sendet</a></li>
+</ul>
+<h2>Referenz</h2>
+<ul>
+<li><a href="keyboard-shortcuts.html">Tastenkombinationen</a></li>
+<li><a href="search-words.html">Suchwörter</a></li>
+</ul>
+<h2>Problembehandlung</h2>
+<ul>
+<li><a href="password-not-accepted.html">Das Passwort wird nicht angenommen</a></li>
+<li><a href="certificate-errors.html">Zertifikatfehler</a></li>
+<li><a href="encryption-errors.html">Verschlüsselungsfehler</a></li>
+<li><a href="no-connection.html">Inbox Classic kann keine Verbindung herstellen</a></li>
+<li><a href="message-not-shown.html">Eine Nachricht wird nicht angezeigt</a></li>
+</ul>
+<h2>Datenschutz und Sicherheit</h2>
+<ul>
+<li><a href="pictures-tracking.html">Bilder und Tracking</a></li>
+<li><a href="links-scripts.html">Links, Skripte und Anlagen</a></li>
+<li><a href="data-storage.html">Wo Ihre E-Mails und Passwörter aufbewahrt werden</a></li>
+<li><a href="connections.html">Die Verbindungen von Inbox Classic</a></li>
+<li><a href="removing.html">Inbox Classic entfernen</a></li>
+</ul>
+<h2>Erweitert</h2>
+<ul>
+<li><a href="sign-in-apps.html">Anmelde-Apps</a></li>
+<li><a href="command-line.html">Befehlszeilenoptionen</a></li>
+</ul>
+</nav>
+</nav><main>
+<h1>Verschlüsselte und signierte E-Mails</h1>
+<p class="summary">Die Leiste über einer Nachricht zeigt, ob sie vom Absender signiert und für Sie verschlüsselt wurde.</p>
+<p>Eine gültige Signatur bestätigt, dass der Inhalt seit dem Signieren unverändert ist. Ob der verwendete Schlüssel wirklich dem Absender gehört, müssen Sie separat überprüfen. Verschlüsselte Nachrichten lassen sich nur mit einem passenden privaten Schlüssel lesen.</p>
+<p>Die Farbe der Leiste zeigt den Schutzstatus der gesamten Nachricht:</p>
+<table>
+    <tr><th>Farbe</th><th>Bedeutung</th></tr>
+    <tr><td>Grün</td><td>Gültige Signatur des Absenders; Sie haben bestätigt, dass der Schlüssel ihm gehört.</td></tr>
+    <tr><td>Blau</td><td>Gültige Signatur des Absenders mit einem noch nicht überprüften Schlüssel, oder eine für Sie verschlüsselte Nachricht.</td></tr>
+    <tr><td>Orange</td><td>Die Signatur ist ungültig, eine andere Person als der Absender hat signiert oder ein Teil der Nachricht lässt sich nicht lesen.</td></tr>
+    <tr><td>Grau</td><td>Keine Signatur oder keine überprüfbare Signatur, etwa weil der benötigte Schlüssel fehlt.</td></tr>
+</table>
+<p>Sind die Teile einer Nachricht unterschiedlich geschützt, erhält jeder Teil einen eigenen Rahmen und Schutzstatus. Die Leiste zählt die Teile nach ihrem Status. Klicken Sie auf einen Schutzstatus oder in der Leiste auf <b>Details</b>, um Signaturdatum und Schlüssel der einzelnen Teile anzuzeigen.</p>
+<aside class="warning">Nur die Leiste und die Statusangaben über den Rahmen stammen von Inbox Classic. Im Nachrichtentext kann der Absender solche Angaben nachahmen. Verlassen Sie sich deshalb auf die Leiste.</aside>
+<p>Bilder aus dem Internet werden in verschlüsselten Teilen erst geladen, wenn Sie dies in der Bilderleiste erlauben. Das gilt bei jedem Öffnen erneut. Der Schutzstatus weist anschließend darauf hin, dass Bilder geladen wurden.</p>
+<p>Bilder und PDF-Vorschauen erscheinen im Rahmen ihres Nachrichtenteils. Entschlüsselte Vorschauen bleiben im Arbeitsspeicher. Wenn Sie eine Anlage separat öffnen, wird eine unverschlüsselte temporäre Kopie gespeichert; beim Speichern entsteht eine Kopie am gewählten Ort.</p>
+<p>In der Liste der angehängten Dateien kennzeichnet ein Schloss jede Datei eines verschlüsselten Teils. Zeigen Sie auf eine Datei, um zu sehen, aus welchem Teil sie stammt.</p>
+<p>Beim Antworten und Weiterleiten werden nur die angezeigten Inhalte zitiert.</p>
+<p>In der Nachrichtenliste kennzeichnet ein Schloss verschlüsselte und ein Siegel signierte Nachrichten. Bei aktivierter Suche in verschlüsselten Nachrichten entschlüsselt Inbox Classic heruntergeladene oder geöffnete Nachrichten mit verfügbaren Schlüsseln. Die Liste kann dann eine Textvorschau und, sofern vorhanden, den geschützten Betreff zeigen. Ohne entschlüsselte Vorschau steht dort <b>Verschlüsselte Nachricht</b>. Benachrichtigungen über neue verschlüsselte Nachrichten verwenden ebenfalls diese Angabe.</p>
+<p>Mit der Option <b>In verschlüsselten Nachrichten suchen</b> unter <b>Extras</b> &gt; <b>Optionen</b> &gt; <b>Lesen</b> können Sie erfolgreich entschlüsselten Nachrichtentext durchsuchen. Text und geschützte Betreffe werden dabei unverschlüsselt im lokalen Index gespeichert. Beim Ausschalten entfernt Inbox Classic diese abgeleiteten Daten und zeigt wieder die äußeren Betreffe an. KI-Agenten können den Inhalt und die Anlagen verschlüsselter Nachrichten weder lesen noch durchsuchen.</p>
+<nav class="related"><a href="verify-a-key.html">Den Schlüssel eines Kontakts überprüfen</a> <a href="encryption-keys.html">Verschlüsselungsschlüssel</a></nav>
+</main></div>
+</body>
+</html>

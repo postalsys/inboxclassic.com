@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="bg">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'">
+<title>Шифрована и подписана поща</title>
+<style>body{margin:16px 24px;line-height:1.5}body>:not(.web),main{max-width:42em}h1{font-size:1.6em;margin:0 0 4px}h2{font-size:1.2em;margin:1.4em 0 .4em}p.summary{font-size:1.05em;opacity:.8;margin-top:0}ol,ul{padding-left:1.6em}li{margin:.3em 0}table{border-collapse:collapse;margin:.6em 0}th,td{text-align:left;padding:4px 12px 4px 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent);vertical-align:top}kbd{font-size:.9em;border:1px solid color-mix(in srgb,currentColor 35%,transparent);border-bottom-width:2px;border-radius:4px;padding:0 4px;white-space:nowrap}aside{padding:8px 12px;margin:.8em 0}.side a[aria-current]{font-weight:700;text-decoration:none}aside.warning{border-left:4px solid #c60}img.picture{max-width:100%;height:auto;margin:.6em 0;border:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related{margin-top:1.6em;padding-top:.6em;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related a{margin-right:1.2em}p.home{margin:0 0 1em;font-size:.9em}header.bar{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;max-width:none;padding:0 0 12px;margin:0 0 20px;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}header.bar .brand{font-weight:700;text-decoration:none;margin-right:auto}header.bar a,header.bar b{margin-right:10px}.web{display:flex;gap:32px}.web .side{flex:0 0 240px;font-size:.92em}.web .side ul{padding-left:1.1em}.web main{flex:1;min-width:0}@media(max-width:700px){.web{display:block}.web .side{display:none}}:root{color-scheme:light dark}body{font:13px -apple-system,BlinkMacSystemFont,sans-serif;color:CanvasText;background:Canvas}a{color:LinkText}aside.note,aside.warning{background:color-mix(in srgb,CanvasText 6%,Canvas);border-radius:8px}kbd{font-family:-apple-system,sans-serif}body.windows,body.mac,body.linux{font:16px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif;margin:0;background:#f7f7fb;color:#1f2330}header.bar{max-width:1180px;margin:0 auto;padding:14px 24px;border-bottom:1px solid #e3e3ee}header.bar .brand{color:#3d4aa8;font-size:1.1em}header.bar a{color:#3d4aa8}.web{max-width:1180px;margin:0 auto;padding:24px}.web main{background:#fff;border-radius:12px;padding:28px 36px;box-shadow:0 1px 3px rgba(20,20,60,.08)}.web .side{position:sticky;top:16px;align-self:flex-start;max-height:calc(100vh - 32px);overflow:auto}.web .side a{color:#30395e;text-decoration:none}.web .side a:hover,.web main a{color:#3d4aa8}h1,h2{color:#1f2330}h2{border-bottom:none}aside.note,aside.warning{background:#f1f2fb;border:1px solid #e0e2f5;border-radius:10px}@media(prefers-color-scheme:dark){body.windows,body.mac,body.linux{background:#14151c;color:#e6e7ef}.web main{background:#1d1f29;box-shadow:none}header.bar{border-color:#2c2f3d}.web .side a{color:#c5c9e6}h1,h2{color:#e6e7ef}aside.note,aside.warning{background:#232637;border-color:#30344a}header.bar a,header.bar .brand,.web main a,.web .side a:hover{color:#9aa6ff}}</style>
+</head>
+<body class="mac">
+<header class="bar"><a class="brand" href="/">Inbox Classic</a><span class="platforms"><a href="../windows/encrypted-and-signed-mail.html">Windows</a> <b>Mac</b> <a href="../linux/encrypted-and-signed-mail.html">Linux</a></span><span class="languages"><a href="../../en/mac/encrypted-and-signed-mail.html" hreflang="en">English</a> <a href="../../ca/mac/encrypted-and-signed-mail.html" hreflang="ca">Català</a> <a href="../../cs/mac/encrypted-and-signed-mail.html" hreflang="cs">Čeština</a> <a href="../../da/mac/encrypted-and-signed-mail.html" hreflang="da">Dansk</a> <a href="../../de/mac/encrypted-and-signed-mail.html" hreflang="de">Deutsch</a> <a href="../../et/mac/encrypted-and-signed-mail.html" hreflang="et">Eesti</a> <a href="../../es/mac/encrypted-and-signed-mail.html" hreflang="es">Español</a> <a href="../../fr/mac/encrypted-and-signed-mail.html" hreflang="fr">Français</a> <a href="../../hr/mac/encrypted-and-signed-mail.html" hreflang="hr">Hrvatski</a> <a href="../../it/mac/encrypted-and-signed-mail.html" hreflang="it">Italiano</a> <a href="../../lv/mac/encrypted-and-signed-mail.html" hreflang="lv">Latviešu</a> <a href="../../lt/mac/encrypted-and-signed-mail.html" hreflang="lt">Lietuvių</a> <a href="../../hu/mac/encrypted-and-signed-mail.html" hreflang="hu">Magyar</a> <a href="../../nl/mac/encrypted-and-signed-mail.html" hreflang="nl">Nederlands</a> <a href="../../nb/mac/encrypted-and-signed-mail.html" hreflang="nb">Norsk bokmål</a> <a href="../../pl/mac/encrypted-and-signed-mail.html" hreflang="pl">Polski</a> <a href="../../pt-BR/mac/encrypted-and-signed-mail.html" hreflang="pt-BR">Português (Brasil)</a> <a href="../../pt/mac/encrypted-and-signed-mail.html" hreflang="pt">Português (Portugal)</a> <a href="../../ro/mac/encrypted-and-signed-mail.html" hreflang="ro">Română</a> <a href="../../sk/mac/encrypted-and-signed-mail.html" hreflang="sk">Slovenčina</a> <a href="../../sl/mac/encrypted-and-signed-mail.html" hreflang="sl">Slovenščina</a> <a href="../../sr-Latn/mac/encrypted-and-signed-mail.html" hreflang="sr-Latn">Srpski</a> <a href="../../fi/mac/encrypted-and-signed-mail.html" hreflang="fi">Suomi</a> <a href="../../sv/mac/encrypted-and-signed-mail.html" hreflang="sv">Svenska</a> <a href="../../tr/mac/encrypted-and-signed-mail.html" hreflang="tr">Türkçe</a> <a href="../../el/mac/encrypted-and-signed-mail.html" hreflang="el">Ελληνικά</a> <b>Български</b> <a href="../../ru/mac/encrypted-and-signed-mail.html" hreflang="ru">Русский</a> <a href="../../uk/mac/encrypted-and-signed-mail.html" hreflang="uk">Українська</a></span></header>
+<div class="web"><nav class="side"><nav class="contents">
+<h2>Първи стъпки</h2>
+<ul>
+<li><a href="add-account.html">Добавяне на пощенски акаунт</a></li>
+<li><a href="gmail-outlook.html">Gmail и Outlook.com</a></li>
+<li><a href="main-window.html">Главният прозорец</a></li>
+<li><a href="layouts.html">Оформления</a></li>
+</ul>
+<h2>Ежедневни задачи</h2>
+<ul>
+<li><a href="read-messages.html">Четене на съобщения</a></li>
+<li><a href="find-messages.html">Търсене на съобщения</a></li>
+<li><a href="conversations.html">Разговори</a></li>
+<li><a href="organize-mail.html">Флагове, архивиране и преместване на съобщения</a></li>
+<li><a href="message-rules.html">Обработка на новата поща с правила</a></li>
+<li><a href="delete-and-undo.html">Изтриване на съобщения и отмяна</a></li>
+<li><a href="folders.html">Работа с папки</a></li>
+<li><a href="write-message.html">Писане на съобщение</a></li>
+<li><a href="reply-forward.html">Отговор и препращане</a></li>
+<li><a href="attachments.html">Прикачени файлове</a></li>
+<li><a href="drafts-outbox.html">Чернови и „Изходящи“</a></li>
+<li><a href="signatures.html">Подписи</a></li>
+<li><a href="address-book.html">Адресната книга</a></li>
+<li><a href="save-print-import.html">Запазване, печат и импортиране на съобщения</a></li>
+<li><a href="new-mail.html">Получаване на нова поща</a></li>
+</ul>
+<h2>Няколко акаунта</h2>
+<ul>
+<li><a href="all-inboxes.html">Всички входящи</a></li>
+<li><a href="manage-accounts.html">Промяна, подреждане и премахване на акаунти</a></li>
+<li><a href="move-computer.html">Преместване на друг компютър</a></li>
+</ul>
+<h2>Функции за съобщенията</h2>
+<ul>
+<li><a href="sign-in-codes.html">Кодове за влизане</a></li>
+<li><a href="delivery-problems.html">Недоставени съобщения</a></li>
+<li><a href="invitations.html">Покани за календар</a></li>
+<li><a href="unsubscribe.html">Отписване от пощенски списък</a></li>
+<li><a href="brand-logos.html">Логата на марките</a></li>
+</ul>
+<h2>Шифрована и подписана поща</h2>
+<ul>
+<li><a href="encrypted-and-signed-mail.html" aria-current="page">Шифрована и подписана поща</a></li>
+<li><a href="sign-and-encrypt.html">Подписване и шифроване на съобщение</a></li>
+<li><a href="encryption-keys.html">Ключове за шифроване</a></li>
+<li><a href="verify-a-key.html">Потвърждаване на ключа на контакт</a></li>
+</ul>
+<h2>Настройки</h2>
+<ul>
+<li><a href="options-language.html">Настройки</a></li>
+<li><a href="download-ahead.html">Предварително изтеглени съобщения</a></li>
+<li><a href="account-security.html">Настройки за защита на акаунта</a></li>
+<li><a href="default-mail-program.html">Inbox Classic като пощенска програма по подразбиране</a></li>
+<li><a href="updates.html">Обновяване на Inbox Classic</a></li>
+</ul>
+<h2>ИИ агенти</h2>
+<ul>
+<li><a href="agents-connect.html">Свързване на ИИ агент</a></li>
+<li><a href="agents-permissions.html">Какво може да прави агентът</a></li>
+<li><a href="agents-sending.html">Когато агент изпраща поща</a></li>
+</ul>
+<h2>Справочник</h2>
+<ul>
+<li><a href="keyboard-shortcuts.html">Клавишни комбинации</a></li>
+<li><a href="search-words.html">Оператори за търсене</a></li>
+</ul>
+<h2>Отстраняване на проблеми</h2>
+<ul>
+<li><a href="password-not-accepted.html">Паролата не се приема</a></li>
+<li><a href="certificate-errors.html">Грешки със сертификати</a></li>
+<li><a href="encryption-errors.html">Грешки при шифроването</a></li>
+<li><a href="no-connection.html">Inbox Classic не може да се свърже</a></li>
+<li><a href="message-not-shown.html">Съобщението не се показва</a></li>
+</ul>
+<h2>Поверителност и сигурност</h2>
+<ul>
+<li><a href="pictures-tracking.html">Изображения и проследяване</a></li>
+<li><a href="links-scripts.html">Връзки, скриптове и прикачени файлове</a></li>
+<li><a href="data-storage.html">Къде се пазят пощата и паролите ви</a></li>
+<li><a href="connections.html">Връзките, които Inbox Classic осъществява</a></li>
+<li><a href="removing.html">Премахване на Inbox Classic</a></li>
+</ul>
+<h2>За напреднали</h2>
+<ul>
+<li><a href="sign-in-apps.html">Приложения за влизане</a></li>
+<li><a href="command-line.html">Опции на командния ред</a></li>
+</ul>
+</nav>
+</nav><main>
+<h1>Шифрована и подписана поща</h1>
+<p class="summary">Лентата над съобщението показва състоянието на цифровия подпис и шифроването.</p>
+<p>Валидният цифров подпис потвърждава, че подписаното съдържание не е променено след подписването. За да знаете чий е подписът, трябва да потвърдите притежателя на ключа. За прочитане на шифрована поща е нужен подходящ частен ключ на някой от получателите.</p>
+<p>Лентата над съобщението описва съобщението като цяло:</p>
+<table>
+    <tr><th>Цвят</th><th>Какво означава</th></tr>
+    <tr><td>Зелен</td><td>Валиден подпис от подателя с ключ, чийто притежател сте потвърдили.</td></tr>
+    <tr><td>Син</td><td>Валиден подпис от подателя с непотвърден ключ, или шифровано съобщение без потвърден подпис.</td></tr>
+    <tr><td>Кехлибарен</td><td>Нещо не е наред: подписът не съвпада, съобщението е подписано от друг човек, а не от подателя, или част не може да бъде прочетена.</td></tr>
+    <tr><td>Сив</td><td>Няма подпис, липсва ключът за проверката му или подписът още не е проверен.</td></tr>
+</table>
+<p>Съобщение, чиито части са защитени по различен начин, показва всяка част в собствена рамка със собствен етикет. Тогава лентата преброява частите от всеки вид. Щракнете върху етикет или върху <b>Подробности</b> в лентата, за да видите кой е подписал всяка част, с кой ключ и кога.</p>
+<aside class="warning">Само лентата и етикетите над рамките се създават от Inbox Classic. В текста на съобщението подателят може да постави имитация на такъв етикет. Проверявайте състоянието в лентата на програмата.</aside>
+<p>При всяко отваряне на шифрована част изображенията от интернет изискват изрично разрешение чрез лентата за изображения. След изтеглянето етикетът на частта показва това.</p>
+<p>Изображенията и PDF файловете, приложени към част, се показват в рамката на тази част, никога в рамката на друга. Дешифрираните прегледи се пазят само в паметта. Отварянето с външна програма записва нешифровано временно копие, а запазването на файл създава избраното от вас копие на диска.</p>
+<p>В списъка с прикачени файлове катинар отбелязва всеки файл от шифрована част. Посочете файл, за да видите от коя част е.</p>
+<p>Когато отговаряте или препращате, се цитира само това, което е било показано.</p>
+<p>В списъка със съобщения катинарът означава шифровано съобщение, а печатът означава подписано съобщение. Ако търсенето в шифровани съобщения е включено и подходящият частен ключ е наличен, Inbox Classic може да ги дешифрира след изтегляне или при отваряне. Списъкът тогава показва началото на текста и, ако е налична, темата от шифрованата част. Ако няма дешифриран текст за показване, се изписва <b>Шифровано съобщение</b>. Известията за нови шифровани съобщения винаги използват този надпис.</p>
+<p>Опцията <b>Търсене в шифрованите съобщения</b> в Inbox Classic &gt; <b>Настройки</b> &gt; <b>Четене</b> позволява да търсите и в текста на дешифрираните съобщения. Текстът и защитената тема се съхраняват нешифровани в локалния индекс. Изключването на настройката премахва тези производни данни и връща външните теми в списъка. Агентите с ИИ не могат да четат съдържанието и прикачените файлове на шифрованите съобщения, нито да търсят в съдържанието им.</p>
+<nav class="related"><a href="verify-a-key.html">Потвърждаване на ключа на контакт</a> <a href="encryption-keys.html">Ключове за шифроване</a></nav>
+</main></div>
+</body>
+</html>

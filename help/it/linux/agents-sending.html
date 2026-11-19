@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'">
+<title>Quando un agente invia posta</title>
+<style>body{margin:16px 24px;line-height:1.5}body>:not(.web),main{max-width:42em}h1{font-size:1.6em;margin:0 0 4px}h2{font-size:1.2em;margin:1.4em 0 .4em}p.summary{font-size:1.05em;opacity:.8;margin-top:0}ol,ul{padding-left:1.6em}li{margin:.3em 0}table{border-collapse:collapse;margin:.6em 0}th,td{text-align:left;padding:4px 12px 4px 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent);vertical-align:top}kbd{font-size:.9em;border:1px solid color-mix(in srgb,currentColor 35%,transparent);border-bottom-width:2px;border-radius:4px;padding:0 4px;white-space:nowrap}aside{padding:8px 12px;margin:.8em 0}.side a[aria-current]{font-weight:700;text-decoration:none}aside.warning{border-left:4px solid #c60}img.picture{max-width:100%;height:auto;margin:.6em 0;border:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related{margin-top:1.6em;padding-top:.6em;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related a{margin-right:1.2em}p.home{margin:0 0 1em;font-size:.9em}header.bar{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;max-width:none;padding:0 0 12px;margin:0 0 20px;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}header.bar .brand{font-weight:700;text-decoration:none;margin-right:auto}header.bar a,header.bar b{margin-right:10px}.web{display:flex;gap:32px}.web .side{flex:0 0 240px;font-size:.92em}.web .side ul{padding-left:1.1em}.web main{flex:1;min-width:0}@media(max-width:700px){.web{display:block}.web .side{display:none}}:root{color-scheme:light dark}body{font:11pt system-ui,'Adwaita Sans',Cantarell,sans-serif;color:CanvasText;background:Canvas}a{color:#1c71d8}@media(prefers-color-scheme:dark){a{color:#78aeed}}aside.note,aside.warning{background:color-mix(in srgb,CanvasText 6%,Canvas);border-radius:12px}body.windows,body.mac,body.linux{font:16px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif;margin:0;background:#f7f7fb;color:#1f2330}header.bar{max-width:1180px;margin:0 auto;padding:14px 24px;border-bottom:1px solid #e3e3ee}header.bar .brand{color:#3d4aa8;font-size:1.1em}header.bar a{color:#3d4aa8}.web{max-width:1180px;margin:0 auto;padding:24px}.web main{background:#fff;border-radius:12px;padding:28px 36px;box-shadow:0 1px 3px rgba(20,20,60,.08)}.web .side{position:sticky;top:16px;align-self:flex-start;max-height:calc(100vh - 32px);overflow:auto}.web .side a{color:#30395e;text-decoration:none}.web .side a:hover,.web main a{color:#3d4aa8}h1,h2{color:#1f2330}h2{border-bottom:none}aside.note,aside.warning{background:#f1f2fb;border:1px solid #e0e2f5;border-radius:10px}@media(prefers-color-scheme:dark){body.windows,body.mac,body.linux{background:#14151c;color:#e6e7ef}.web main{background:#1d1f29;box-shadow:none}header.bar{border-color:#2c2f3d}.web .side a{color:#c5c9e6}h1,h2{color:#e6e7ef}aside.note,aside.warning{background:#232637;border-color:#30344a}header.bar a,header.bar .brand,.web main a,.web .side a:hover{color:#9aa6ff}}</style>
+</head>
+<body class="linux">
+<header class="bar"><a class="brand" href="/">Inbox Classic</a><span class="platforms"><a href="../windows/agents-sending.html">Windows</a> <a href="../mac/agents-sending.html">Mac</a> <b>Linux</b></span><span class="languages"><a href="../../en/linux/agents-sending.html" hreflang="en">English</a> <a href="../../ca/linux/agents-sending.html" hreflang="ca">Català</a> <a href="../../cs/linux/agents-sending.html" hreflang="cs">Čeština</a> <a href="../../da/linux/agents-sending.html" hreflang="da">Dansk</a> <a href="../../de/linux/agents-sending.html" hreflang="de">Deutsch</a> <a href="../../et/linux/agents-sending.html" hreflang="et">Eesti</a> <a href="../../es/linux/agents-sending.html" hreflang="es">Español</a> <a href="../../fr/linux/agents-sending.html" hreflang="fr">Français</a> <a href="../../hr/linux/agents-sending.html" hreflang="hr">Hrvatski</a> <b>Italiano</b> <a href="../../lv/linux/agents-sending.html" hreflang="lv">Latviešu</a> <a href="../../lt/linux/agents-sending.html" hreflang="lt">Lietuvių</a> <a href="../../hu/linux/agents-sending.html" hreflang="hu">Magyar</a> <a href="../../nl/linux/agents-sending.html" hreflang="nl">Nederlands</a> <a href="../../nb/linux/agents-sending.html" hreflang="nb">Norsk bokmål</a> <a href="../../pl/linux/agents-sending.html" hreflang="pl">Polski</a> <a href="../../pt-BR/linux/agents-sending.html" hreflang="pt-BR">Português (Brasil)</a> <a href="../../pt/linux/agents-sending.html" hreflang="pt">Português (Portugal)</a> <a href="../../ro/linux/agents-sending.html" hreflang="ro">Română</a> <a href="../../sk/linux/agents-sending.html" hreflang="sk">Slovenčina</a> <a href="../../sl/linux/agents-sending.html" hreflang="sl">Slovenščina</a> <a href="../../sr-Latn/linux/agents-sending.html" hreflang="sr-Latn">Srpski</a> <a href="../../fi/linux/agents-sending.html" hreflang="fi">Suomi</a> <a href="../../sv/linux/agents-sending.html" hreflang="sv">Svenska</a> <a href="../../tr/linux/agents-sending.html" hreflang="tr">Türkçe</a> <a href="../../el/linux/agents-sending.html" hreflang="el">Ελληνικά</a> <a href="../../bg/linux/agents-sending.html" hreflang="bg">Български</a> <a href="../../ru/linux/agents-sending.html" hreflang="ru">Русский</a> <a href="../../uk/linux/agents-sending.html" hreflang="uk">Українська</a></span></header>
+<div class="web"><nav class="side"><nav class="contents">
+<h2>Per iniziare</h2>
+<ul>
+<li><a href="add-account.html">Aggiungere un account di posta</a></li>
+<li><a href="gmail-outlook.html">Gmail e Outlook.com</a></li>
+<li><a href="main-window.html">La finestra principale</a></li>
+<li><a href="layouts.html">Layout</a></li>
+</ul>
+<h2>Attività quotidiane</h2>
+<ul>
+<li><a href="read-messages.html">Leggere i messaggi</a></li>
+<li><a href="find-messages.html">Trovare i messaggi</a></li>
+<li><a href="conversations.html">Conversazioni</a></li>
+<li><a href="organize-mail.html">Contrassegnare, archiviare e spostare i messaggi</a></li>
+<li><a href="message-rules.html">Smistare la nuova posta con le regole</a></li>
+<li><a href="delete-and-undo.html">Eliminare messaggi e annullare le modifiche</a></li>
+<li><a href="folders.html">Gestire le cartelle</a></li>
+<li><a href="write-message.html">Scrivere un messaggio</a></li>
+<li><a href="reply-forward.html">Rispondere e inoltrare</a></li>
+<li><a href="attachments.html">Allegati</a></li>
+<li><a href="drafts-outbox.html">Bozze e Posta in uscita</a></li>
+<li><a href="signatures.html">Firme</a></li>
+<li><a href="address-book.html">La Rubrica</a></li>
+<li><a href="save-print-import.html">Salvare, stampare e importare messaggi</a></li>
+<li><a href="new-mail.html">Ricevere nuova posta</a></li>
+</ul>
+<h2>Più account</h2>
+<ul>
+<li><a href="all-inboxes.html">Tutta la posta in arrivo</a></li>
+<li><a href="manage-accounts.html">Modificare, ordinare e rimuovere gli account</a></li>
+<li><a href="move-computer.html">Passare a un altro computer</a></li>
+</ul>
+<h2>Funzioni dei messaggi</h2>
+<ul>
+<li><a href="sign-in-codes.html">Codici di accesso</a></li>
+<li><a href="delivery-problems.html">Messaggi non recapitati</a></li>
+<li><a href="invitations.html">Inviti a eventi</a></li>
+<li><a href="unsubscribe.html">Annullare l’iscrizione a una mailing list</a></li>
+<li><a href="brand-logos.html">Loghi dei marchi</a></li>
+</ul>
+<h2>Posta crittografata e firmata</h2>
+<ul>
+<li><a href="encrypted-and-signed-mail.html">Posta crittografata e firmata</a></li>
+<li><a href="sign-and-encrypt.html">Firmare e crittografare un messaggio</a></li>
+<li><a href="encryption-keys.html">Chiavi di crittografia</a></li>
+<li><a href="verify-a-key.html">Verificare la chiave di un contatto</a></li>
+</ul>
+<h2>Impostazioni</h2>
+<ul>
+<li><a href="options-language.html">Impostazioni</a></li>
+<li><a href="download-ahead.html">Scaricare i messaggi in anticipo</a></li>
+<li><a href="account-security.html">Impostazioni di sicurezza dell’account</a></li>
+<li><a href="default-mail-program.html">Impostare Inbox Classic come app di posta predefinita</a></li>
+<li><a href="updates.html">Aggiornare Inbox Classic</a></li>
+</ul>
+<h2>Agenti IA</h2>
+<ul>
+<li><a href="agents-connect.html">Collegare un agente IA</a></li>
+<li><a href="agents-permissions.html">Che cosa può fare un agente</a></li>
+<li><a href="agents-sending.html" aria-current="page">Quando un agente invia posta</a></li>
+</ul>
+<h2>Consultazione</h2>
+<ul>
+<li><a href="keyboard-shortcuts.html">Scelte rapide da tastiera</a></li>
+<li><a href="search-words.html">Operatori di ricerca</a></li>
+</ul>
+<h2>Risoluzione dei problemi</h2>
+<ul>
+<li><a href="password-not-accepted.html">La password non viene accettata</a></li>
+<li><a href="certificate-errors.html">Errori di certificato</a></li>
+<li><a href="encryption-errors.html">Errori di crittografia della connessione</a></li>
+<li><a href="no-connection.html">Inbox Classic non riesce a connettersi</a></li>
+<li><a href="message-not-shown.html">Un messaggio non viene mostrato</a></li>
+</ul>
+<h2>Privacy e sicurezza</h2>
+<ul>
+<li><a href="pictures-tracking.html">Immagini e tracciamento</a></li>
+<li><a href="links-scripts.html">Collegamenti, script e allegati</a></li>
+<li><a href="data-storage.html">Dove sono conservate la posta e le password</a></li>
+<li><a href="connections.html">Le connessioni di Inbox Classic</a></li>
+<li><a href="removing.html">Rimuovere Inbox Classic</a></li>
+</ul>
+<h2>Funzioni avanzate</h2>
+<ul>
+<li><a href="sign-in-apps.html">App di accesso</a></li>
+<li><a href="command-line.html">Opzioni della riga di comando</a></li>
+</ul>
+</nav>
+</nav><main>
+<h1>Quando un agente invia posta</h1>
+<p class="summary">Ogni messaggio che un agente IA vuole inviare ti viene mostrato prima, e attende in Posta in uscita prima di partire.</p>
+<p>Un agente può inviare posta solo se glielo hai permesso, e richiede la tua conferma per ogni messaggio.</p>
+<img class="picture" src="pictures/agents-4-send.png" alt="La finestra che chiede se inviare un messaggio scritto da un agente, con ogni destinatario e un indirizzo nuovo evidenziato">
+<p>Quando l’agente vuole inviare, Inbox Classic mostra il messaggio con l’indirizzo completo di ogni destinatario. Gli indirizzi a cui non hai mai scritto sono segnati con <b>Nuovo indirizzo</b>.</p>
+<ol>
+    <li>Leggi i destinatari e il testo.</li>
+    <li>Scegli una di queste opzioni:
+        <ul>
+            <li><b>Invia</b> mette il messaggio in coda per l’invio. Il pulsante si attiva dopo un breve intervallo per ridurre il rischio di conferme accidentali.</li>
+            <li><b>Modifica prima dell’invio</b> apre il messaggio in una finestra di composizione per modificarlo.</li>
+            <li><b>Non inviare</b>, la scelta predefinita, non lo invia.</li>
+        </ul>
+    </li>
+</ol>
+<p>Ogni programma può avere un solo messaggio in attesa della tua conferma. Se non rispondi subito, Inbox Classic informa l’agente che la tua risposta è ancora in sospeso. L’agente può controllare più tardi che cosa hai deciso. Per impostazione predefinita, i messaggi e le bozze dell’agente includono il testo della firma del tuo account. L’agente può anche ometterlo.</p>
+<p>Un messaggio dell’agente che approvi attende 30 secondi in Posta in uscita. Finché è ancora in Posta in uscita, puoi eliminarlo da lì, oppure fare clic su <b>Annulla</b> in <b>Strumenti</b> &gt; <b>Agenti IA</b>.</p>
+<h2>Risposte agli inviti</h2>
+<p>Un agente che può inviare posta può accettare, accettare con riserva o rifiutare un invito del calendario per te. La risposta viene mostrata nella stessa finestra di conferma. Sopra il testo viene indicato a quale invito risponde il messaggio e quando si svolge l’evento. Inbox Classic scrive la risposta all’organizzatore a partire dall’invito stesso, quindi il messaggio non può essere aperto per modificarlo prima. La risposta di calendario non include il testo della firma dell’account. Inbox Classic aggiorna la tua risposta quando il server accetta l’invio, senza attendere una conferma dall’organizzatore.</p>
+<h2>Bozze scritte da un agente</h2>
+<p>Quando apri una bozza scritta da un agente, il nome dell’agente compare sopra il testo del messaggio. Controlla i destinatari e il testo prima di inviarla.</p>
+<img class="picture" src="pictures/agents-8-draft.png" alt="Bozza scritta da un agente IA, aperta in una finestra separata. Il nome dell’agente compare sopra il testo del messaggio.">
+<p>Un agente può modificare o eliminare solo le bozze che ha creato. Quando salvi o invii una di queste bozze, l’agente non può più modificarla né eliminarla. Questo vale anche quando Inbox Classic salva automaticamente le tue modifiche. Se apri soltanto la bozza, l’agente può ancora modificarla. Quando elimina una propria bozza, ne richiede la rimozione definitiva.</p>
+<aside class="warning">Un agente con altri strumenti, per esempio per navigare sul web o leggere file, potrebbe usarli per trasmettere i dati della tua posta. Inbox Classic non può controllare questi strumenti. Concedi all’agente solo l’accesso necessario.</aside>
+<nav class="related"><a href="agents-permissions.html">Che cosa può fare un agente</a> <a href="agents-connect.html">Collegare un agente IA</a> <a href="drafts-outbox.html">Bozze e Posta in uscita</a></nav>
+</main></div>
+</body>
+</html>

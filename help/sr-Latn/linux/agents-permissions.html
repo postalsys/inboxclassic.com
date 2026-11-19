@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="sr-Latn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'">
+<title>Šta agent sme da radi</title>
+<style>body{margin:16px 24px;line-height:1.5}body>:not(.web),main{max-width:42em}h1{font-size:1.6em;margin:0 0 4px}h2{font-size:1.2em;margin:1.4em 0 .4em}p.summary{font-size:1.05em;opacity:.8;margin-top:0}ol,ul{padding-left:1.6em}li{margin:.3em 0}table{border-collapse:collapse;margin:.6em 0}th,td{text-align:left;padding:4px 12px 4px 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent);vertical-align:top}kbd{font-size:.9em;border:1px solid color-mix(in srgb,currentColor 35%,transparent);border-bottom-width:2px;border-radius:4px;padding:0 4px;white-space:nowrap}aside{padding:8px 12px;margin:.8em 0}.side a[aria-current]{font-weight:700;text-decoration:none}aside.warning{border-left:4px solid #c60}img.picture{max-width:100%;height:auto;margin:.6em 0;border:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related{margin-top:1.6em;padding-top:.6em;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related a{margin-right:1.2em}p.home{margin:0 0 1em;font-size:.9em}header.bar{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;max-width:none;padding:0 0 12px;margin:0 0 20px;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}header.bar .brand{font-weight:700;text-decoration:none;margin-right:auto}header.bar a,header.bar b{margin-right:10px}.web{display:flex;gap:32px}.web .side{flex:0 0 240px;font-size:.92em}.web .side ul{padding-left:1.1em}.web main{flex:1;min-width:0}@media(max-width:700px){.web{display:block}.web .side{display:none}}:root{color-scheme:light dark}body{font:11pt system-ui,'Adwaita Sans',Cantarell,sans-serif;color:CanvasText;background:Canvas}a{color:#1c71d8}@media(prefers-color-scheme:dark){a{color:#78aeed}}aside.note,aside.warning{background:color-mix(in srgb,CanvasText 6%,Canvas);border-radius:12px}body.windows,body.mac,body.linux{font:16px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif;margin:0;background:#f7f7fb;color:#1f2330}header.bar{max-width:1180px;margin:0 auto;padding:14px 24px;border-bottom:1px solid #e3e3ee}header.bar .brand{color:#3d4aa8;font-size:1.1em}header.bar a{color:#3d4aa8}.web{max-width:1180px;margin:0 auto;padding:24px}.web main{background:#fff;border-radius:12px;padding:28px 36px;box-shadow:0 1px 3px rgba(20,20,60,.08)}.web .side{position:sticky;top:16px;align-self:flex-start;max-height:calc(100vh - 32px);overflow:auto}.web .side a{color:#30395e;text-decoration:none}.web .side a:hover,.web main a{color:#3d4aa8}h1,h2{color:#1f2330}h2{border-bottom:none}aside.note,aside.warning{background:#f1f2fb;border:1px solid #e0e2f5;border-radius:10px}@media(prefers-color-scheme:dark){body.windows,body.mac,body.linux{background:#14151c;color:#e6e7ef}.web main{background:#1d1f29;box-shadow:none}header.bar{border-color:#2c2f3d}.web .side a{color:#c5c9e6}h1,h2{color:#e6e7ef}aside.note,aside.warning{background:#232637;border-color:#30344a}header.bar a,header.bar .brand,.web main a,.web .side a:hover{color:#9aa6ff}}</style>
+</head>
+<body class="linux">
+<header class="bar"><a class="brand" href="/">Inbox Classic</a><span class="platforms"><a href="../windows/agents-permissions.html">Windows</a> <a href="../mac/agents-permissions.html">Mac</a> <b>Linux</b></span><span class="languages"><a href="../../en/linux/agents-permissions.html" hreflang="en">English</a> <a href="../../ca/linux/agents-permissions.html" hreflang="ca">Català</a> <a href="../../cs/linux/agents-permissions.html" hreflang="cs">Čeština</a> <a href="../../da/linux/agents-permissions.html" hreflang="da">Dansk</a> <a href="../../de/linux/agents-permissions.html" hreflang="de">Deutsch</a> <a href="../../et/linux/agents-permissions.html" hreflang="et">Eesti</a> <a href="../../es/linux/agents-permissions.html" hreflang="es">Español</a> <a href="../../fr/linux/agents-permissions.html" hreflang="fr">Français</a> <a href="../../hr/linux/agents-permissions.html" hreflang="hr">Hrvatski</a> <a href="../../it/linux/agents-permissions.html" hreflang="it">Italiano</a> <a href="../../lv/linux/agents-permissions.html" hreflang="lv">Latviešu</a> <a href="../../lt/linux/agents-permissions.html" hreflang="lt">Lietuvių</a> <a href="../../hu/linux/agents-permissions.html" hreflang="hu">Magyar</a> <a href="../../nl/linux/agents-permissions.html" hreflang="nl">Nederlands</a> <a href="../../nb/linux/agents-permissions.html" hreflang="nb">Norsk bokmål</a> <a href="../../pl/linux/agents-permissions.html" hreflang="pl">Polski</a> <a href="../../pt-BR/linux/agents-permissions.html" hreflang="pt-BR">Português (Brasil)</a> <a href="../../pt/linux/agents-permissions.html" hreflang="pt">Português (Portugal)</a> <a href="../../ro/linux/agents-permissions.html" hreflang="ro">Română</a> <a href="../../sk/linux/agents-permissions.html" hreflang="sk">Slovenčina</a> <a href="../../sl/linux/agents-permissions.html" hreflang="sl">Slovenščina</a> <b>Srpski</b> <a href="../../fi/linux/agents-permissions.html" hreflang="fi">Suomi</a> <a href="../../sv/linux/agents-permissions.html" hreflang="sv">Svenska</a> <a href="../../tr/linux/agents-permissions.html" hreflang="tr">Türkçe</a> <a href="../../el/linux/agents-permissions.html" hreflang="el">Ελληνικά</a> <a href="../../bg/linux/agents-permissions.html" hreflang="bg">Български</a> <a href="../../ru/linux/agents-permissions.html" hreflang="ru">Русский</a> <a href="../../uk/linux/agents-permissions.html" hreflang="uk">Українська</a></span></header>
+<div class="web"><nav class="side"><nav class="contents">
+<h2>Prvi koraci</h2>
+<ul>
+<li><a href="add-account.html">Dodavanje naloga e-pošte</a></li>
+<li><a href="gmail-outlook.html">Gmail i Outlook.com</a></li>
+<li><a href="main-window.html">Glavni prozor</a></li>
+<li><a href="layouts.html">Rasporedi</a></li>
+</ul>
+<h2>Svakodnevni zadaci</h2>
+<ul>
+<li><a href="read-messages.html">Čitanje poruka</a></li>
+<li><a href="find-messages.html">Pronalaženje poruka</a></li>
+<li><a href="conversations.html">Razgovori</a></li>
+<li><a href="organize-mail.html">Označavanje zastavicom, arhiviranje i premeštanje poruka</a></li>
+<li><a href="message-rules.html">Automatska obrada nove pošte pravilima</a></li>
+<li><a href="delete-and-undo.html">Brisanje poruka i opozivanje</a></li>
+<li><a href="folders.html">Rad sa fasciklama</a></li>
+<li><a href="write-message.html">Pisanje poruke</a></li>
+<li><a href="reply-forward.html">Odgovaranje i prosleđivanje</a></li>
+<li><a href="attachments.html">Prilozi</a></li>
+<li><a href="drafts-outbox.html">Radne verzije i Izlazno sanduče</a></li>
+<li><a href="signatures.html">Potpisi</a></li>
+<li><a href="address-book.html">Adresar</a></li>
+<li><a href="save-print-import.html">Čuvanje, štampanje i uvoz poruka</a></li>
+<li><a href="new-mail.html">Primanje nove pošte</a></li>
+</ul>
+<h2>Više naloga</h2>
+<ul>
+<li><a href="all-inboxes.html">Sva prijemna sandučad</a></li>
+<li><a href="manage-accounts.html">Uređivanje, razmeštanje i uklanjanje naloga</a></li>
+<li><a href="move-computer.html">Prelazak na drugi računar</a></li>
+</ul>
+<h2>Funkcije poruka</h2>
+<ul>
+<li><a href="sign-in-codes.html">Kodovi za prijavu</a></li>
+<li><a href="delivery-problems.html">Poruke koje nisu isporučene</a></li>
+<li><a href="invitations.html">Pozivnice za događaje</a></li>
+<li><a href="unsubscribe.html">Odjava sa liste za slanje</a></li>
+<li><a href="brand-logos.html">Logotipi brendova</a></li>
+</ul>
+<h2>Šifrovana i potpisana pošta</h2>
+<ul>
+<li><a href="encrypted-and-signed-mail.html">Šifrovana i potpisana pošta</a></li>
+<li><a href="sign-and-encrypt.html">Potpisivanje i šifrovanje poruke</a></li>
+<li><a href="encryption-keys.html">Ključevi za šifrovanje</a></li>
+<li><a href="verify-a-key.html">Provera ključa kontakta</a></li>
+</ul>
+<h2>Podešavanja</h2>
+<ul>
+<li><a href="options-language.html">Podešavanja</a></li>
+<li><a href="download-ahead.html">Preuzimanje poruka unapred</a></li>
+<li><a href="account-security.html">Bezbednosna podešavanja naloga</a></li>
+<li><a href="default-mail-program.html">Inbox Classic kao podrazumevana aplikacija za poštu</a></li>
+<li><a href="updates.html">Ažuriranje programa Inbox Classic</a></li>
+</ul>
+<h2>AI agenti</h2>
+<ul>
+<li><a href="agents-connect.html">Povezivanje AI agenta</a></li>
+<li><a href="agents-permissions.html" aria-current="page">Šta agent sme da radi</a></li>
+<li><a href="agents-sending.html">Kada agent šalje poštu</a></li>
+</ul>
+<h2>Komande i prečice</h2>
+<ul>
+<li><a href="keyboard-shortcuts.html">Tasterske prečice</a></li>
+<li><a href="search-words.html">Izrazi za pretragu</a></li>
+</ul>
+<h2>Rešavanje problema</h2>
+<ul>
+<li><a href="password-not-accepted.html">Lozinka nije prihvaćena</a></li>
+<li><a href="certificate-errors.html">Greške sertifikata</a></li>
+<li><a href="encryption-errors.html">Greške šifrovanja</a></li>
+<li><a href="no-connection.html">Inbox Classic ne može da se poveže</a></li>
+<li><a href="message-not-shown.html">Poruka se ne prikazuje</a></li>
+</ul>
+<h2>Privatnost i bezbednost</h2>
+<ul>
+<li><a href="pictures-tracking.html">Slike i praćenje</a></li>
+<li><a href="links-scripts.html">Veze, skripte i prilozi</a></li>
+<li><a href="data-storage.html">Gde se čuvaju vaša pošta i lozinke</a></li>
+<li><a href="connections.html">Veze koje Inbox Classic uspostavlja</a></li>
+<li><a href="removing.html">Uklanjanje programa Inbox Classic</a></li>
+</ul>
+<h2>Napredno</h2>
+<ul>
+<li><a href="sign-in-apps.html">Aplikacije za prijavljivanje</a></li>
+<li><a href="command-line.html">Opcije komandne linije</a></li>
+</ul>
+</nav>
+</nav><main>
+<h1>Šta agent sme da radi</h1>
+<p class="summary">Odredite dozvole za svakog AI agenta, pregledajte njegove radnje i opozovite promene.</p>
+<p>Kada se agent prvi put poveže, Inbox Classic prikazuje naziv programa i traži vašu dozvolu. Izaberite šta sme da radi:</p>
+<ul>
+    <li>da čita poštu: pregleda fascikle, liste, poruke i razgovore, pretražuje poštu, pregleda pravila i traži kontakte. Može da čita tekstualne priloge do 256 kB, kao i podržane PDF, Office i slikovne priloge do 10 MB po datoteci</li>
+    <li>da organizuje poštu: menja stanje pročitanosti, zastavice i njihove boje, upravlja neželjenom poštom, premešta i arhivira poruke, pravi fascikle, preimenuje vaše sopstvene fascikle, prati i zanemaruje razgovore, briše poruke premeštanjem u fasciklu <b>Izbrisane stavke</b>, i otkazuje pretplate na liste za slanje pošte uz vaše odobrenje. Neke radnje nad porukama može da primeni grupno, kako je opisano ispod</li>
+    <li>da piše radne verzije koje ćete vi poslati i da menja ili odbaci svoje radne verzije dok ih vi ne sačuvate</li>
+    <li>da šalje poštu, svaku poruku tek kada vi to odobrite</li>
+</ul>
+<p>Zatim izaberite naloge koje sme da vidi i kliknite na <b>Dozvoli</b>. <b>Nemoj dozvoliti</b> odbija pristup tom programu i pamti vašu odluku.</p>
+<p>Agent može trajno da izbriše samo radne verzije koje je sam napravio, a koje vi još niste sačuvali. Ne može da menja podešavanja naloga. Može da pregleda pravila za poruke i proveri na koje bi se poruke primenila, bez menjanja tih poruka. Ne može da pravi, menja ili briše pravila. Nikada ne čita sadržaj ni priloge šifrovane poruke. Kada agent pročita poruku, ona se ne označava kao pročitana. Promene koje agent napravi odmah se prikazuju u prozorima aplikacije.</p>
+<h2>Otkazivanje pretplata na liste za slanje pošte</h2>
+<p>Agent koji sme da organizuje poštu može da predloži otkazivanje pretplata na liste za slanje pošte. Inbox Classic prikazuje adrese pošiljalaca i traži jednu potvrdu za sve izabrane liste:</p>
+<ul>
+    <li><b>Otkaži pretplatu</b> šalje zahtev da vam sa izabranih lista više ne stižu poruke.</li>
+    <li><b>Nemoj otkazati pretplatu</b> je podrazumevani izbor i ne šalje zahtev za otkazivanje pretplate.</li>
+</ul>
+<p>Agent ne može da koristi poruke iz fascikle <b>Neželjena e-pošta</b> za otkazivanje pretplata. Za svaki program važi ograničenje od 30 zahteva za otkazivanje pretplate koje ste odobrili u poslednja 24 sata. U taj broj ulaze i zahtevi koji nisu uspeli. Dnevnik beleži vaše odobrenje pre slanja zahteva, a ne potvrdu da je lista prestala da šalje poruke.</p>
+<h2>Promena više poruka odjednom</h2>
+<p>Agent može grupno da menja stanje pročitanosti, zastavice i njihove boje, oznake neželjene pošte i da premešta, arhivira ili briše poruke u okviru dozvola. Prvo dobija pregled i uzorak rezultata. Zahtev se odbija ako obuhvata više od 1.000 podobnih poruka ili zahteva pregled više od 10.000 poruka. Izbor se zatim fiksira i ponovo proverava pre primene; kasnije pristigle poruke ne dodaju se. Nema dodatne potvrde korisnika. Dnevnik prikazuje jedan zapis, ali opozivanje može da vrati samo promene koje su i dalje moguće.</p>
+<h2>Pregled i promena pristupa</h2>
+<p><b>Alatke</b> &gt; <b>AI agenti</b> prikazuje programe kojima ste dozvolili ili odbili pristup i evidenciju radnji agenata, od najnovijih.</p>
+<p>Čitanja se prikazuju u jednom redu po programu i satu, uz zasebne brojače poruka, priloga, pretraga i pregleda lista, na primer „Pročitano 14 poruka i 3 pretrage“. Otvorite red njegovom strelicom da biste videli teme pročitanih poruka i pojmove koje je tražio, ali nikada tekst poruka. Zapisi stariji od 30 dana uklanjaju se kada se dodaje novi zapis; obični zapisi mogu se ukloniti ranije radi ograničenja veličine. Brisanje dnevnika ne poništava ograničenja slanja, čitanja ili promena.</p>
+<ul>
+    <li><b>Promeni</b> omogućava promenu dozvola za program.</li>
+    <li><b>Ukloni</b> uklanja sačuvane dozvole programa i njegov dnevnik aktivnosti, ali ne deinstalira program. Pri sledećem povezivanju ponovo će se tražiti vaša dozvola.</li>
+    <li><b>Opozovi</b> opoziva promene stanja pročitanosti, zastavica i njihovih boja i oznaka neželjene pošte, kao i premeštanje, arhiviranje i brisanje poruka. Može da otkaže i slanje poruke koja još čeka u fascikli Izlazno sanduče.</li>
+    <li><b>Opozovi za period</b> pokušava da opozove promene izabranog programa u izabranom periodu, počev od najnovijih. Potvrda broji zapise dnevnika, ne pojedinačne poruke.</li>
+</ul>
+<p>Pri opozivanju se preskaču poruke koje više nisu na očekivanom mestu ili u očekivanom stanju. Zapis u evidenciji računa se kao opozvan čak i ako je opozivanje uspelo samo delimično. Agent može da opozove sopstvene promene, ali nikada promene drugog programa.</p>
+<aside class="warning">Poštu pišu drugi ljudi, a poruka može da pokuša da nagovori agenta da prosledi ili izbriše vašu poštu. Inbox Classic izostavlja skriveni tekst poruke iz sadržaja koji prosleđuje agentu i naglašava da sadržaj pošte nije uputstvo za rad. Agent ipak može biti prevaren. Dozvolite samo ono što vam je potrebno.</aside>
+<nav class="related"><a href="agents-connect.html">Povezivanje AI agenta</a> <a href="agents-sending.html">Kada agent šalje poštu</a> <a href="data-storage.html">Gde se čuvaju vaša pošta i lozinke</a></nav>
+</main></div>
+</body>
+</html>

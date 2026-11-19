@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'">
+<title>Podpísanie a zašifrovanie správy</title>
+<style>body{margin:16px 24px;line-height:1.5}body>:not(.web),main{max-width:42em}h1{font-size:1.6em;margin:0 0 4px}h2{font-size:1.2em;margin:1.4em 0 .4em}p.summary{font-size:1.05em;opacity:.8;margin-top:0}ol,ul{padding-left:1.6em}li{margin:.3em 0}table{border-collapse:collapse;margin:.6em 0}th,td{text-align:left;padding:4px 12px 4px 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent);vertical-align:top}kbd{font-size:.9em;border:1px solid color-mix(in srgb,currentColor 35%,transparent);border-bottom-width:2px;border-radius:4px;padding:0 4px;white-space:nowrap}aside{padding:8px 12px;margin:.8em 0}.side a[aria-current]{font-weight:700;text-decoration:none}aside.warning{border-left:4px solid #c60}img.picture{max-width:100%;height:auto;margin:.6em 0;border:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related{margin-top:1.6em;padding-top:.6em;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related a{margin-right:1.2em}p.home{margin:0 0 1em;font-size:.9em}header.bar{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;max-width:none;padding:0 0 12px;margin:0 0 20px;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}header.bar .brand{font-weight:700;text-decoration:none;margin-right:auto}header.bar a,header.bar b{margin-right:10px}.web{display:flex;gap:32px}.web .side{flex:0 0 240px;font-size:.92em}.web .side ul{padding-left:1.1em}.web main{flex:1;min-width:0}@media(max-width:700px){.web{display:block}.web .side{display:none}}body{font:10pt Tahoma,Arial,sans-serif;color:#000;background:#fff}h1,h2{color:#036}h2{border-bottom:1px solid #9ab}a{color:#03c}aside.note,aside.warning{background:#ffffe1;border:1px solid #c9c9a0}kbd{background:#f4f4f4;border-color:#999}body.windows,body.mac,body.linux{font:16px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif;margin:0;background:#f7f7fb;color:#1f2330}header.bar{max-width:1180px;margin:0 auto;padding:14px 24px;border-bottom:1px solid #e3e3ee}header.bar .brand{color:#3d4aa8;font-size:1.1em}header.bar a{color:#3d4aa8}.web{max-width:1180px;margin:0 auto;padding:24px}.web main{background:#fff;border-radius:12px;padding:28px 36px;box-shadow:0 1px 3px rgba(20,20,60,.08)}.web .side{position:sticky;top:16px;align-self:flex-start;max-height:calc(100vh - 32px);overflow:auto}.web .side a{color:#30395e;text-decoration:none}.web .side a:hover,.web main a{color:#3d4aa8}h1,h2{color:#1f2330}h2{border-bottom:none}aside.note,aside.warning{background:#f1f2fb;border:1px solid #e0e2f5;border-radius:10px}@media(prefers-color-scheme:dark){body.windows,body.mac,body.linux{background:#14151c;color:#e6e7ef}.web main{background:#1d1f29;box-shadow:none}header.bar{border-color:#2c2f3d}.web .side a{color:#c5c9e6}h1,h2{color:#e6e7ef}aside.note,aside.warning{background:#232637;border-color:#30344a}header.bar a,header.bar .brand,.web main a,.web .side a:hover{color:#9aa6ff}}</style>
+</head>
+<body class="windows">
+<header class="bar"><a class="brand" href="/">Inbox Classic</a><span class="platforms"><b>Windows</b> <a href="../mac/sign-and-encrypt.html">Mac</a> <a href="../linux/sign-and-encrypt.html">Linux</a></span><span class="languages"><a href="../../en/windows/sign-and-encrypt.html" hreflang="en">English</a> <a href="../../ca/windows/sign-and-encrypt.html" hreflang="ca">Català</a> <a href="../../cs/windows/sign-and-encrypt.html" hreflang="cs">Čeština</a> <a href="../../da/windows/sign-and-encrypt.html" hreflang="da">Dansk</a> <a href="../../de/windows/sign-and-encrypt.html" hreflang="de">Deutsch</a> <a href="../../et/windows/sign-and-encrypt.html" hreflang="et">Eesti</a> <a href="../../es/windows/sign-and-encrypt.html" hreflang="es">Español</a> <a href="../../fr/windows/sign-and-encrypt.html" hreflang="fr">Français</a> <a href="../../hr/windows/sign-and-encrypt.html" hreflang="hr">Hrvatski</a> <a href="../../it/windows/sign-and-encrypt.html" hreflang="it">Italiano</a> <a href="../../lv/windows/sign-and-encrypt.html" hreflang="lv">Latviešu</a> <a href="../../lt/windows/sign-and-encrypt.html" hreflang="lt">Lietuvių</a> <a href="../../hu/windows/sign-and-encrypt.html" hreflang="hu">Magyar</a> <a href="../../nl/windows/sign-and-encrypt.html" hreflang="nl">Nederlands</a> <a href="../../nb/windows/sign-and-encrypt.html" hreflang="nb">Norsk bokmål</a> <a href="../../pl/windows/sign-and-encrypt.html" hreflang="pl">Polski</a> <a href="../../pt-BR/windows/sign-and-encrypt.html" hreflang="pt-BR">Português (Brasil)</a> <a href="../../pt/windows/sign-and-encrypt.html" hreflang="pt">Português (Portugal)</a> <a href="../../ro/windows/sign-and-encrypt.html" hreflang="ro">Română</a> <b>Slovenčina</b> <a href="../../sl/windows/sign-and-encrypt.html" hreflang="sl">Slovenščina</a> <a href="../../sr-Latn/windows/sign-and-encrypt.html" hreflang="sr-Latn">Srpski</a> <a href="../../fi/windows/sign-and-encrypt.html" hreflang="fi">Suomi</a> <a href="../../sv/windows/sign-and-encrypt.html" hreflang="sv">Svenska</a> <a href="../../tr/windows/sign-and-encrypt.html" hreflang="tr">Türkçe</a> <a href="../../el/windows/sign-and-encrypt.html" hreflang="el">Ελληνικά</a> <a href="../../bg/windows/sign-and-encrypt.html" hreflang="bg">Български</a> <a href="../../ru/windows/sign-and-encrypt.html" hreflang="ru">Русский</a> <a href="../../uk/windows/sign-and-encrypt.html" hreflang="uk">Українська</a></span></header>
+<div class="web"><nav class="side"><nav class="contents">
+<h2>Začíname</h2>
+<ul>
+<li><a href="add-account.html">Pridanie poštového konta</a></li>
+<li><a href="gmail-outlook.html">Gmail a Outlook.com</a></li>
+<li><a href="main-window.html">Hlavné okno</a></li>
+<li><a href="layouts.html">Rozloženia</a></li>
+</ul>
+<h2>Každodenné úlohy</h2>
+<ul>
+<li><a href="read-messages.html">Čítanie správ</a></li>
+<li><a href="find-messages.html">Hľadanie správ</a></li>
+<li><a href="conversations.html">Konverzácie</a></li>
+<li><a href="organize-mail.html">Príznaky, archivácia a presúvanie správ</a></li>
+<li><a href="message-rules.html">Triedenie novej pošty pravidlami</a></li>
+<li><a href="delete-and-undo.html">Odstránenie správ a vrátenie akcie</a></li>
+<li><a href="folders.html">Práca s priečinkami</a></li>
+<li><a href="write-message.html">Písanie správy</a></li>
+<li><a href="reply-forward.html">Odpovedanie a preposielanie</a></li>
+<li><a href="attachments.html">Prílohy</a></li>
+<li><a href="drafts-outbox.html">Koncepty a Pošta na odoslanie</a></li>
+<li><a href="signatures.html">Textové podpisy</a></li>
+<li><a href="address-book.html">Adresár</a></li>
+<li><a href="save-print-import.html">Ukladanie, tlač a import správ</a></li>
+<li><a href="new-mail.html">Prijímanie novej pošty</a></li>
+</ul>
+<h2>Viac kont</h2>
+<ul>
+<li><a href="all-inboxes.html">Všetka doručená pošta</a></li>
+<li><a href="manage-accounts.html">Zmena, poradie a odstránenie kont</a></li>
+<li><a href="move-computer.html">Prechod na iný počítač</a></li>
+</ul>
+<h2>Funkcie správ</h2>
+<ul>
+<li><a href="sign-in-codes.html">Jednorazové kódy</a></li>
+<li><a href="delivery-problems.html">Správy, ktoré neboli doručené</a></li>
+<li><a href="invitations.html">Pozvánky z kalendára</a></li>
+<li><a href="unsubscribe.html">Odhlásenie odberu správ</a></li>
+<li><a href="brand-logos.html">Logá značiek</a></li>
+</ul>
+<h2>Šifrovaná a digitálne podpísaná pošta</h2>
+<ul>
+<li><a href="encrypted-and-signed-mail.html">Šifrovaná a digitálne podpísaná pošta</a></li>
+<li><a href="sign-and-encrypt.html" aria-current="page">Podpísanie a zašifrovanie správy</a></li>
+<li><a href="encryption-keys.html">Šifrovacie kľúče</a></li>
+<li><a href="verify-a-key.html">Overenie kľúča kontaktu</a></li>
+</ul>
+<h2>Nastavenia</h2>
+<ul>
+<li><a href="options-language.html">Nastavenia</a></li>
+<li><a href="download-ahead.html">Správy stiahnuté vopred</a></li>
+<li><a href="account-security.html">Nastavenia zabezpečenia konta</a></li>
+<li><a href="default-mail-program.html">Inbox Classic ako vaša poštová aplikácia</a></li>
+<li><a href="updates.html">Aktualizácia Inbox Classic</a></li>
+</ul>
+<h2>AI agenti</h2>
+<ul>
+<li><a href="agents-connect.html">Pripojenie AI agenta</a></li>
+<li><a href="agents-permissions.html">Čo smie agent robiť</a></li>
+<li><a href="agents-sending.html">Keď agent odosiela poštu</a></li>
+</ul>
+<h2>Prehľady</h2>
+<ul>
+<li><a href="keyboard-shortcuts.html">Klávesové skratky</a></li>
+<li><a href="search-words.html">Hľadané výrazy</a></li>
+</ul>
+<h2>Riešenie problémov</h2>
+<ul>
+<li><a href="password-not-accepted.html">Server odmieta heslo alebo prihlásenie</a></li>
+<li><a href="certificate-errors.html">Chyby certifikátu</a></li>
+<li><a href="encryption-errors.html">Chyby zabezpečeného pripojenia</a></li>
+<li><a href="no-connection.html">Inbox Classic sa nemôže pripojiť</a></li>
+<li><a href="message-not-shown.html">Správa sa nezobrazuje</a></li>
+</ul>
+<h2>Súkromie a zabezpečenie</h2>
+<ul>
+<li><a href="pictures-tracking.html">Obrázky a sledovanie</a></li>
+<li><a href="links-scripts.html">Odkazy, skripty a prílohy</a></li>
+<li><a href="data-storage.html">Kde sa uchováva vaša pošta a heslá</a></li>
+<li><a href="connections.html">Pripojenia, ktoré Inbox Classic nadväzuje</a></li>
+<li><a href="removing.html">Odstránenie Inbox Classic</a></li>
+</ul>
+<h2>Rozšírené</h2>
+<ul>
+<li><a href="sign-in-apps.html">Prihlasovacie aplikácie</a></li>
+<li><a href="command-line.html">Možnosti príkazového riadka</a></li>
+</ul>
+</nav>
+</nav><main>
+<h1>Podpísanie a zašifrovanie správy</h1>
+<p class="summary">Chráňte obsah správy digitálnym podpisom a šifrovaním.</p>
+<p>Digitálny podpis umožňuje overiť, či sa obsah správy po podpísaní nezmenil. Vlastník kľúča sa overuje osobitne. Zašifrovaný obsah môžu čítať iba príjemcovia a vy. Správy odoslané v zašifrovanej podobe sú aj digitálne podpísané. Na podpisovanie a šifrovanie potrebujete vlastný kľúč.</p>
+<p>Ak chcete správu podpísať alebo zašifrovať:</p>
+<ol>
+    <li>V okne správy kliknite na „<b>Podpísať</b>“ alebo „<b>Šifrovať</b>“, prípadne vyberte „<b>Nástroje</b>“ &gt; „<b>Digitálne podpísať</b>“ alebo „<b>Šifrovať</b>“. Môžete tiež stlačiť <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd> alebo <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>E</kbd>. Ak nemáte vlastný kľúč pre adresu odosielateľa, Inbox Classic ponúkne jeho vytvorenie.</li>
+    <li>Kliknite na „<b>Odoslať</b>“.</li>
+</ol>
+<p>Keď je zapnutá možnosť „<b>Šifrovať</b>“, pod predmetom sa zobrazuje stav kľúča každého príjemcu, označený farbou a ikonou. Inbox Classic automaticky hľadá chýbajúce kľúče:</p>
+<table>
+    <tr><th>Farba</th><th>Význam</th></tr>
+    <tr><td>Zelená</td><td>Overili ste, že kľúč patrí príjemcovi.</td></tr>
+    <tr><td>Modrá</td><td>Kľúč príjemcu máte, ale jeho vlastník ešte nie je overený. Modrá označuje aj váš vlastný kľúč.</td></tr>
+    <tr><td>Sivá</td><td>Inbox Classic hľadá kľúč príjemcu.</td></tr>
+    <tr><td>Jantárová</td><td>Kľúč príjemcu chýba alebo ho nemožno použiť na šifrovanie.</td></tr>
+</table>
+<h2>Keď chýba použiteľný kľúč</h2>
+<p>Na odoslanie zašifrovanej správy potrebujete použiteľný kľúč každého príjemcu. Ak niektorý chýba, kliknutím na „<b>Odoslať</b>“ otvoríte okno „<b>Kľúče príjemcov</b>“. Kliknutím na „<b>Nájsť kľúč</b>“ zopakujete hľadanie a kliknutím na „<b>Odstrániť zo správy</b>“ odstránite príjemcu zo správy. Možnosť „<b>Odoslať bez šifrovania</b>“ je dostupná iba vtedy, keď správa neobsahuje text, obrázky ani prílohy zo zašifrovanej správy. Príjemcu môžete tiež požiadať o verejný kľúč a importovať ho.</p>
+<h2>Odpovede na zašifrované správy</h2>
+<p>Pri odpovedi na zašifrovanú správu alebo jej preposlaní je možnosť „<b>Šifrovať</b>“ najprv zapnutá. Inbox Classic si pred vypnutím šifrovania vyžiada potvrdenie. Správu môžete odoslať bez šifrovania až po odstránení textu, obrázkov a príloh zo zašifrovanej správy.</p>
+<p>Pri zapnutom šifrovaní sa koncepty šifrujú iba vaším kľúčom a ukladajú bez digitálneho podpisu. Ak koncept obsahuje text, obrázky alebo prílohy zo zašifrovanej správy, uloží sa zašifrovaný aj po vypnutí šifrovania. Kópia odoslanej zašifrovanej správy v priečinku „<b>Odoslaná pošta</b>“ tiež zostáva zašifrovaná.</p>
+<h2>Zdieľanie verejného kľúča</h2>
+<p>Aby vám ostatní mohli posielať zašifrované správy, vyberte „<b>Vložiť</b>“ &gt; „<b>Priložiť svoj verejný kľúč</b>“. Verejný kľúč vybratej adresy odosielateľa sa k správe priloží ako súbor.</p>
+<nav class="related"><a href="encryption-keys.html">Šifrovacie kľúče</a> <a href="encrypted-and-signed-mail.html">Šifrovaná a digitálne podpísaná pošta</a> <a href="verify-a-key.html">Overenie kľúča kontaktu</a></nav>
+</main></div>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'">
+<title>Что разрешено агенту</title>
+<style>body{margin:16px 24px;line-height:1.5}body>:not(.web),main{max-width:42em}h1{font-size:1.6em;margin:0 0 4px}h2{font-size:1.2em;margin:1.4em 0 .4em}p.summary{font-size:1.05em;opacity:.8;margin-top:0}ol,ul{padding-left:1.6em}li{margin:.3em 0}table{border-collapse:collapse;margin:.6em 0}th,td{text-align:left;padding:4px 12px 4px 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent);vertical-align:top}kbd{font-size:.9em;border:1px solid color-mix(in srgb,currentColor 35%,transparent);border-bottom-width:2px;border-radius:4px;padding:0 4px;white-space:nowrap}aside{padding:8px 12px;margin:.8em 0}.side a[aria-current]{font-weight:700;text-decoration:none}aside.warning{border-left:4px solid #c60}img.picture{max-width:100%;height:auto;margin:.6em 0;border:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related{margin-top:1.6em;padding-top:.6em;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related a{margin-right:1.2em}p.home{margin:0 0 1em;font-size:.9em}header.bar{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;max-width:none;padding:0 0 12px;margin:0 0 20px;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}header.bar .brand{font-weight:700;text-decoration:none;margin-right:auto}header.bar a,header.bar b{margin-right:10px}.web{display:flex;gap:32px}.web .side{flex:0 0 240px;font-size:.92em}.web .side ul{padding-left:1.1em}.web main{flex:1;min-width:0}@media(max-width:700px){.web{display:block}.web .side{display:none}}:root{color-scheme:light dark}body{font:13px -apple-system,BlinkMacSystemFont,sans-serif;color:CanvasText;background:Canvas}a{color:LinkText}aside.note,aside.warning{background:color-mix(in srgb,CanvasText 6%,Canvas);border-radius:8px}kbd{font-family:-apple-system,sans-serif}body.windows,body.mac,body.linux{font:16px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif;margin:0;background:#f7f7fb;color:#1f2330}header.bar{max-width:1180px;margin:0 auto;padding:14px 24px;border-bottom:1px solid #e3e3ee}header.bar .brand{color:#3d4aa8;font-size:1.1em}header.bar a{color:#3d4aa8}.web{max-width:1180px;margin:0 auto;padding:24px}.web main{background:#fff;border-radius:12px;padding:28px 36px;box-shadow:0 1px 3px rgba(20,20,60,.08)}.web .side{position:sticky;top:16px;align-self:flex-start;max-height:calc(100vh - 32px);overflow:auto}.web .side a{color:#30395e;text-decoration:none}.web .side a:hover,.web main a{color:#3d4aa8}h1,h2{color:#1f2330}h2{border-bottom:none}aside.note,aside.warning{background:#f1f2fb;border:1px solid #e0e2f5;border-radius:10px}@media(prefers-color-scheme:dark){body.windows,body.mac,body.linux{background:#14151c;color:#e6e7ef}.web main{background:#1d1f29;box-shadow:none}header.bar{border-color:#2c2f3d}.web .side a{color:#c5c9e6}h1,h2{color:#e6e7ef}aside.note,aside.warning{background:#232637;border-color:#30344a}header.bar a,header.bar .brand,.web main a,.web .side a:hover{color:#9aa6ff}}</style>
+</head>
+<body class="mac">
+<header class="bar"><a class="brand" href="/">Inbox Classic</a><span class="platforms"><a href="../windows/agents-permissions.html">Windows</a> <b>Mac</b> <a href="../linux/agents-permissions.html">Linux</a></span><span class="languages"><a href="../../en/mac/agents-permissions.html" hreflang="en">English</a> <a href="../../ca/mac/agents-permissions.html" hreflang="ca">Català</a> <a href="../../cs/mac/agents-permissions.html" hreflang="cs">Čeština</a> <a href="../../da/mac/agents-permissions.html" hreflang="da">Dansk</a> <a href="../../de/mac/agents-permissions.html" hreflang="de">Deutsch</a> <a href="../../et/mac/agents-permissions.html" hreflang="et">Eesti</a> <a href="../../es/mac/agents-permissions.html" hreflang="es">Español</a> <a href="../../fr/mac/agents-permissions.html" hreflang="fr">Français</a> <a href="../../hr/mac/agents-permissions.html" hreflang="hr">Hrvatski</a> <a href="../../it/mac/agents-permissions.html" hreflang="it">Italiano</a> <a href="../../lv/mac/agents-permissions.html" hreflang="lv">Latviešu</a> <a href="../../lt/mac/agents-permissions.html" hreflang="lt">Lietuvių</a> <a href="../../hu/mac/agents-permissions.html" hreflang="hu">Magyar</a> <a href="../../nl/mac/agents-permissions.html" hreflang="nl">Nederlands</a> <a href="../../nb/mac/agents-permissions.html" hreflang="nb">Norsk bokmål</a> <a href="../../pl/mac/agents-permissions.html" hreflang="pl">Polski</a> <a href="../../pt-BR/mac/agents-permissions.html" hreflang="pt-BR">Português (Brasil)</a> <a href="../../pt/mac/agents-permissions.html" hreflang="pt">Português (Portugal)</a> <a href="../../ro/mac/agents-permissions.html" hreflang="ro">Română</a> <a href="../../sk/mac/agents-permissions.html" hreflang="sk">Slovenčina</a> <a href="../../sl/mac/agents-permissions.html" hreflang="sl">Slovenščina</a> <a href="../../sr-Latn/mac/agents-permissions.html" hreflang="sr-Latn">Srpski</a> <a href="../../fi/mac/agents-permissions.html" hreflang="fi">Suomi</a> <a href="../../sv/mac/agents-permissions.html" hreflang="sv">Svenska</a> <a href="../../tr/mac/agents-permissions.html" hreflang="tr">Türkçe</a> <a href="../../el/mac/agents-permissions.html" hreflang="el">Ελληνικά</a> <a href="../../bg/mac/agents-permissions.html" hreflang="bg">Български</a> <b>Русский</b> <a href="../../uk/mac/agents-permissions.html" hreflang="uk">Українська</a></span></header>
+<div class="web"><nav class="side"><nav class="contents">
+<h2>Начало работы</h2>
+<ul>
+<li><a href="add-account.html">Добавление учетной записи почты</a></li>
+<li><a href="gmail-outlook.html">Gmail и Outlook.com</a></li>
+<li><a href="main-window.html">Главное окно</a></li>
+<li><a href="layouts.html">Макеты</a></li>
+</ul>
+<h2>Повседневные задачи</h2>
+<ul>
+<li><a href="read-messages.html">Чтение сообщений</a></li>
+<li><a href="find-messages.html">Поиск сообщений</a></li>
+<li><a href="conversations.html">Беседы</a></li>
+<li><a href="organize-mail.html">Флажки, архив и перемещение сообщений</a></li>
+<li><a href="message-rules.html">Сортировка новой почты с помощью правил</a></li>
+<li><a href="delete-and-undo.html">Удаление сообщений и отмена</a></li>
+<li><a href="folders.html">Работа с папками</a></li>
+<li><a href="write-message.html">Создание сообщения</a></li>
+<li><a href="reply-forward.html">Ответ и пересылка</a></li>
+<li><a href="attachments.html">Вложения</a></li>
+<li><a href="drafts-outbox.html">Черновики и папка «Исходящие»</a></li>
+<li><a href="signatures.html">Текстовые подписи</a></li>
+<li><a href="address-book.html">Адресная книга</a></li>
+<li><a href="save-print-import.html">Сохранение, печать и импорт сообщений</a></li>
+<li><a href="new-mail.html">Получение новой почты</a></li>
+</ul>
+<h2>Работа с несколькими учетными записями</h2>
+<ul>
+<li><a href="all-inboxes.html">Все входящие</a></li>
+<li><a href="manage-accounts.html">Настройка, порядок и удаление учетных записей</a></li>
+<li><a href="move-computer.html">Перенос на другой компьютер</a></li>
+</ul>
+<h2>Особенности сообщений</h2>
+<ul>
+<li><a href="sign-in-codes.html">Коды для входа</a></li>
+<li><a href="delivery-problems.html">Недоставленные сообщения</a></li>
+<li><a href="invitations.html">Приглашения на события</a></li>
+<li><a href="unsubscribe.html">Отписка от рассылки</a></li>
+<li><a href="brand-logos.html">Логотипы брендов</a></li>
+</ul>
+<h2>Зашифрованная и подписанная почта</h2>
+<ul>
+<li><a href="encrypted-and-signed-mail.html">Зашифрованная и подписанная почта</a></li>
+<li><a href="sign-and-encrypt.html">Подпись и шифрование сообщения</a></li>
+<li><a href="encryption-keys.html">Ключи шифрования</a></li>
+<li><a href="verify-a-key.html">Проверка ключа контакта</a></li>
+</ul>
+<h2>Параметры</h2>
+<ul>
+<li><a href="options-language.html">Настройки</a></li>
+<li><a href="download-ahead.html">Предварительная загрузка сообщений</a></li>
+<li><a href="account-security.html">Параметры безопасности учетной записи</a></li>
+<li><a href="default-mail-program.html">Inbox Classic как почтовая программа по умолчанию</a></li>
+<li><a href="updates.html">Обновление Inbox Classic</a></li>
+</ul>
+<h2>ИИ-агенты</h2>
+<ul>
+<li><a href="agents-connect.html">Подключение ИИ-агента</a></li>
+<li><a href="agents-permissions.html" aria-current="page">Что разрешено агенту</a></li>
+<li><a href="agents-sending.html">Когда агент отправляет почту</a></li>
+</ul>
+<h2>Справочник</h2>
+<ul>
+<li><a href="keyboard-shortcuts.html">Сочетания клавиш</a></li>
+<li><a href="search-words.html">Поисковые операторы</a></li>
+</ul>
+<h2>Устранение неполадок</h2>
+<ul>
+<li><a href="password-not-accepted.html">Пароль не принимается</a></li>
+<li><a href="certificate-errors.html">Ошибки сертификата</a></li>
+<li><a href="encryption-errors.html">Ошибки шифрования</a></li>
+<li><a href="no-connection.html">Inbox Classic не может подключиться</a></li>
+<li><a href="message-not-shown.html">Сообщение не показывается</a></li>
+</ul>
+<h2>Конфиденциальность и безопасность</h2>
+<ul>
+<li><a href="pictures-tracking.html">Изображения и отслеживание</a></li>
+<li><a href="links-scripts.html">Ссылки, скрипты и вложения</a></li>
+<li><a href="data-storage.html">Где хранятся почта и пароли</a></li>
+<li><a href="connections.html">Подключения Inbox Classic</a></li>
+<li><a href="removing.html">Удаление Inbox Classic</a></li>
+</ul>
+<h2>Дополнительно</h2>
+<ul>
+<li><a href="sign-in-apps.html">Приложения для входа</a></li>
+<li><a href="command-line.html">Параметры командной строки</a></li>
+</ul>
+</nav>
+</nav><main>
+<h1>Что разрешено агенту</h1>
+<p class="summary">Настройте разрешения ИИ-агентов, просматривайте историю их действий и при необходимости отменяйте изменения.</p>
+<p>При первом подключении агента Inbox Classic показывает название его программы и запрашивает ваше согласие. Выберите разрешенные действия:</p>
+<ul>
+    <li>чтение почты: просмотр папок, списков сообщений, бесед, содержимого сообщений, текстовых вложений размером до 256 КБ и поддерживаемых вложений PDF, Office и изображений размером до 10 МБ, поиск почты, просмотр правил для сообщений и поиск людей, которым вы пишете</li>
+    <li>управление почтой: отметки о прочтении, флажки и их цвета, пометка нежелательных сообщений, перемещение, архивирование, создание папок, переименование ваших собственных папок, отслеживание и игнорирование бесед, удаление в папку <b>Удаленные</b>, отписка от рассылок с вашего согласия. Отметки о прочтении, флажки, перемещение, архивирование, пометки нежелательной почты и удаление можно применять сразу к результатам поиска</li>
+    <li>создание черновиков для вас, а также изменение и безвозвратное удаление собственных черновиков, пока вы сами не сохраните или не отправите их</li>
+    <li>отправка сообщений только с вашим согласием на каждую отправку</li>
+</ul>
+<p>Затем выберите учетные записи, к которым агент получит доступ, и нажмите <b>Разрешить</b>. Кнопка <b>Не разрешать</b> запрещает программе доступ, и запрос больше не появляется. Позже вы сможете изменить ее разрешения.</p>
+<p>При удалении сообщений агент перемещает их в папку для удаленных сообщений; если такой папки нет, операция отклоняется. Безвозвратно он может удалить только собственные черновики, которые вы еще не сохранили в редакторе. Агент не может менять параметры учетных записей или создавать, изменять и удалять правила. Он может просматривать правила и проверять, какие сообщения им соответствуют, без выполнения действий. Содержимое и вложения зашифрованных сообщений агенту недоступны. Чтение сообщения не помечает его как прочитанное. Изменения агента сразу видны в окнах программы.</p>
+<h2>Отписка от рассылок</h2>
+<p>Агент с разрешением на управление почтой может запросить отписку от рассылок. Inbox Classic запрашивает ваше согласие сразу для всех рассылок в запросе и показывает отправителя каждой из них:</p>
+<ul>
+    <li>Кнопка <b>Отписаться</b> отправляет каждой рассылке запрос на отписку.</li>
+    <li>Кнопка <b>Не отписываться</b>, выбранная по умолчанию, отклоняет запрос и сохраняет подписки.</li>
+</ul>
+<p>Агент не может запрашивать отписку по сообщениям из папки <b>Нежелательная почта</b>. Для каждой программы допускается не более 30 одобренных запросов за последние 24 часа, по одному на рассылку. Учитываются и одобренные запросы, завершившиеся ошибкой.</p>
+<h2>Изменение нескольких сообщений сразу</h2>
+<p>Агент с разрешением на управление почтой может за один шаг изменить все сообщения, найденные поиском, например отметить все рассылки как прочитанные или переместить их в папку. Сначала он подсчитывает сообщения и просматривает некоторые из них. Затем он изменяет только подходящие сообщения из этого набора; почта, пришедшая позже, в него не входит. Перед изменением состояние выбранных сообщений проверяется снова. Если подходящих сообщений больше 1000 или нужно проверить более 10 000 результатов, операция отклоняется. Новое согласие не требуется, поскольку разрешение на управление почтой уже выдано. В журнале такое изменение показывается одной строкой, например «Помечены как прочитанные: 37 сообщений (поиск: from:news)». Одна команда пытается отменить всю операцию, но восстановить может только часть сообщений.</p>
+<h2>Просмотр и изменение доступа</h2>
+<p>В окне <b>Сервис</b> &gt; <b>ИИ-агенты</b> показаны программы, которым вы разрешили или запретили доступ, и история действий их агентов. Последние действия находятся в начале списка.</p>
+<p>Действия по чтению почты группируются в журнале по программе и часу, например «Прочитано 14 сообщений и поиск выполнен 3 раза». Раскройте строку стрелкой, чтобы увидеть темы прочитанных сообщений и поисковые запросы. Текст сообщений там не показывается. Журнал рассчитан на 30 дней, но некоторые записи могут удаляться раньше при достижении лимита. Его очистка не сбрасывает ограничения на отправку и отписку.</p>
+<ul>
+    <li>Кнопка <b>Изменить</b> позволяет изменить разрешения программы.</li>
+    <li>Кнопка <b>Удалить</b> удаляет запись о программе, ее разрешения и историю действий. Сама программа остается на компьютере. При следующем подключении Inbox Classic снова запросит ваше согласие.</li>
+    <li>Кнопка <b>Отменить</b> отменяет изменение отметки о прочтении, флажка или его цвета, пометки нежелательной почты, перемещение, архивирование или удаление. Она также отменяет отправку сообщения, пока оно находится в папке «Исходящие». Уже отправленное сообщение отозвать нельзя.</li>
+    <li>Кнопка <b>Отменить за период</b> отменяет обратимые изменения выбранной программы за указанный период, например за последний час. Отмена начинается с последних действий.</li>
+</ul>
+<p>При отмене пропускаются сообщения, которые больше не находятся в ожидаемом месте или состоянии. Запись в журнале считается отмененной, даже если удалось отменить лишь часть изменений. Агент может отменять собственные изменения, но никогда не изменения другой программы.</p>
+<aside class="warning">Чужие сообщения могут содержать инструкции, рассчитанные на обман агента, например просьбу переслать или удалить вашу почту. Inbox Classic скрывает от агентов невидимый вам текст и указывает им воспринимать сообщения как данные, а не как инструкции к действию. Однако агента все равно можно обмануть. Разрешайте только необходимые действия.</aside>
+<nav class="related"><a href="agents-connect.html">Подключение ИИ-агента</a> <a href="agents-sending.html">Когда агент отправляет почту</a> <a href="data-storage.html">Где хранятся почта и пароли</a></nav>
+</main></div>
+</body>
+</html>

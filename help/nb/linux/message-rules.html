@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'">
+<title>Behandle ny e-post med regler</title>
+<style>body{margin:16px 24px;line-height:1.5}body>:not(.web),main{max-width:42em}h1{font-size:1.6em;margin:0 0 4px}h2{font-size:1.2em;margin:1.4em 0 .4em}p.summary{font-size:1.05em;opacity:.8;margin-top:0}ol,ul{padding-left:1.6em}li{margin:.3em 0}table{border-collapse:collapse;margin:.6em 0}th,td{text-align:left;padding:4px 12px 4px 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent);vertical-align:top}kbd{font-size:.9em;border:1px solid color-mix(in srgb,currentColor 35%,transparent);border-bottom-width:2px;border-radius:4px;padding:0 4px;white-space:nowrap}aside{padding:8px 12px;margin:.8em 0}.side a[aria-current]{font-weight:700;text-decoration:none}aside.warning{border-left:4px solid #c60}img.picture{max-width:100%;height:auto;margin:.6em 0;border:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related{margin-top:1.6em;padding-top:.6em;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related a{margin-right:1.2em}p.home{margin:0 0 1em;font-size:.9em}header.bar{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;max-width:none;padding:0 0 12px;margin:0 0 20px;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}header.bar .brand{font-weight:700;text-decoration:none;margin-right:auto}header.bar a,header.bar b{margin-right:10px}.web{display:flex;gap:32px}.web .side{flex:0 0 240px;font-size:.92em}.web .side ul{padding-left:1.1em}.web main{flex:1;min-width:0}@media(max-width:700px){.web{display:block}.web .side{display:none}}:root{color-scheme:light dark}body{font:11pt system-ui,'Adwaita Sans',Cantarell,sans-serif;color:CanvasText;background:Canvas}a{color:#1c71d8}@media(prefers-color-scheme:dark){a{color:#78aeed}}aside.note,aside.warning{background:color-mix(in srgb,CanvasText 6%,Canvas);border-radius:12px}body.windows,body.mac,body.linux{font:16px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif;margin:0;background:#f7f7fb;color:#1f2330}header.bar{max-width:1180px;margin:0 auto;padding:14px 24px;border-bottom:1px solid #e3e3ee}header.bar .brand{color:#3d4aa8;font-size:1.1em}header.bar a{color:#3d4aa8}.web{max-width:1180px;margin:0 auto;padding:24px}.web main{background:#fff;border-radius:12px;padding:28px 36px;box-shadow:0 1px 3px rgba(20,20,60,.08)}.web .side{position:sticky;top:16px;align-self:flex-start;max-height:calc(100vh - 32px);overflow:auto}.web .side a{color:#30395e;text-decoration:none}.web .side a:hover,.web main a{color:#3d4aa8}h1,h2{color:#1f2330}h2{border-bottom:none}aside.note,aside.warning{background:#f1f2fb;border:1px solid #e0e2f5;border-radius:10px}@media(prefers-color-scheme:dark){body.windows,body.mac,body.linux{background:#14151c;color:#e6e7ef}.web main{background:#1d1f29;box-shadow:none}header.bar{border-color:#2c2f3d}.web .side a{color:#c5c9e6}h1,h2{color:#e6e7ef}aside.note,aside.warning{background:#232637;border-color:#30344a}header.bar a,header.bar .brand,.web main a,.web .side a:hover{color:#9aa6ff}}</style>
+</head>
+<body class="linux">
+<header class="bar"><a class="brand" href="/">Inbox Classic</a><span class="platforms"><a href="../windows/message-rules.html">Windows</a> <a href="../mac/message-rules.html">Mac</a> <b>Linux</b></span><span class="languages"><a href="../../en/linux/message-rules.html" hreflang="en">English</a> <a href="../../ca/linux/message-rules.html" hreflang="ca">Català</a> <a href="../../cs/linux/message-rules.html" hreflang="cs">Čeština</a> <a href="../../da/linux/message-rules.html" hreflang="da">Dansk</a> <a href="../../de/linux/message-rules.html" hreflang="de">Deutsch</a> <a href="../../et/linux/message-rules.html" hreflang="et">Eesti</a> <a href="../../es/linux/message-rules.html" hreflang="es">Español</a> <a href="../../fr/linux/message-rules.html" hreflang="fr">Français</a> <a href="../../hr/linux/message-rules.html" hreflang="hr">Hrvatski</a> <a href="../../it/linux/message-rules.html" hreflang="it">Italiano</a> <a href="../../lv/linux/message-rules.html" hreflang="lv">Latviešu</a> <a href="../../lt/linux/message-rules.html" hreflang="lt">Lietuvių</a> <a href="../../hu/linux/message-rules.html" hreflang="hu">Magyar</a> <a href="../../nl/linux/message-rules.html" hreflang="nl">Nederlands</a> <b>Norsk bokmål</b> <a href="../../pl/linux/message-rules.html" hreflang="pl">Polski</a> <a href="../../pt-BR/linux/message-rules.html" hreflang="pt-BR">Português (Brasil)</a> <a href="../../pt/linux/message-rules.html" hreflang="pt">Português (Portugal)</a> <a href="../../ro/linux/message-rules.html" hreflang="ro">Română</a> <a href="../../sk/linux/message-rules.html" hreflang="sk">Slovenčina</a> <a href="../../sl/linux/message-rules.html" hreflang="sl">Slovenščina</a> <a href="../../sr-Latn/linux/message-rules.html" hreflang="sr-Latn">Srpski</a> <a href="../../fi/linux/message-rules.html" hreflang="fi">Suomi</a> <a href="../../sv/linux/message-rules.html" hreflang="sv">Svenska</a> <a href="../../tr/linux/message-rules.html" hreflang="tr">Türkçe</a> <a href="../../el/linux/message-rules.html" hreflang="el">Ελληνικά</a> <a href="../../bg/linux/message-rules.html" hreflang="bg">Български</a> <a href="../../ru/linux/message-rules.html" hreflang="ru">Русский</a> <a href="../../uk/linux/message-rules.html" hreflang="uk">Українська</a></span></header>
+<div class="web"><nav class="side"><nav class="contents">
+<h2>Kom i gang</h2>
+<ul>
+<li><a href="add-account.html">Legg til en e-postkonto</a></li>
+<li><a href="gmail-outlook.html">Gmail og Outlook.com</a></li>
+<li><a href="main-window.html">Hovedvinduet</a></li>
+<li><a href="layouts.html">Oppsett</a></li>
+</ul>
+<h2>Daglige oppgaver</h2>
+<ul>
+<li><a href="read-messages.html">Les meldinger</a></li>
+<li><a href="find-messages.html">Finn meldinger</a></li>
+<li><a href="conversations.html">Samtaler</a></li>
+<li><a href="organize-mail.html">Flagg, arkiver og flytt meldinger</a></li>
+<li><a href="message-rules.html" aria-current="page">Behandle ny e-post med regler</a></li>
+<li><a href="delete-and-undo.html">Slett meldinger og angre</a></li>
+<li><a href="folders.html">Arbeid med mapper</a></li>
+<li><a href="write-message.html">Skriv en melding</a></li>
+<li><a href="reply-forward.html">Svar og videresend</a></li>
+<li><a href="attachments.html">Vedlegg</a></li>
+<li><a href="drafts-outbox.html">Utkast og Utboks</a></li>
+<li><a href="signatures.html">Signaturer</a></li>
+<li><a href="address-book.html">Adresseboken</a></li>
+<li><a href="save-print-import.html">Lagre, skriv ut og importer meldinger</a></li>
+<li><a href="new-mail.html">Hent ny e-post</a></li>
+</ul>
+<h2>Flere kontoer</h2>
+<ul>
+<li><a href="all-inboxes.html">Alle innbokser</a></li>
+<li><a href="manage-accounts.html">Endre, ordne og fjern kontoer</a></li>
+<li><a href="move-computer.html">Flytt til en annen datamaskin</a></li>
+</ul>
+<h2>Meldingsfunksjoner</h2>
+<ul>
+<li><a href="sign-in-codes.html">Påloggingskoder</a></li>
+<li><a href="delivery-problems.html">Meldinger som ikke ble levert</a></li>
+<li><a href="invitations.html">Kalenderinvitasjoner</a></li>
+<li><a href="unsubscribe.html">Meld deg av en e-postliste</a></li>
+<li><a href="brand-logos.html">Merkelogoer</a></li>
+</ul>
+<h2>Kryptert og signert e-post</h2>
+<ul>
+<li><a href="encrypted-and-signed-mail.html">Kryptert og signert e-post</a></li>
+<li><a href="sign-and-encrypt.html">Signer og krypter en melding</a></li>
+<li><a href="encryption-keys.html">Krypteringsnøkler</a></li>
+<li><a href="verify-a-key.html">Bekreft nøkkelen til en kontakt</a></li>
+</ul>
+<h2>Innstillinger</h2>
+<ul>
+<li><a href="options-language.html">Innstillinger</a></li>
+<li><a href="download-ahead.html">Last ned meldinger på forhånd</a></li>
+<li><a href="account-security.html">Sikkerhetsinnstillinger for kontoer</a></li>
+<li><a href="default-mail-program.html">Velg Inbox Classic som standard e-postprogram</a></li>
+<li><a href="updates.html">Oppdater Inbox Classic</a></li>
+</ul>
+<h2>KI-agenter</h2>
+<ul>
+<li><a href="agents-connect.html">Koble til en KI-agent</a></li>
+<li><a href="agents-permissions.html">Hva en agent har lov til</a></li>
+<li><a href="agents-sending.html">Når en agent sender e-post</a></li>
+</ul>
+<h2>Referanse</h2>
+<ul>
+<li><a href="keyboard-shortcuts.html">Hurtigtaster</a></li>
+<li><a href="search-words.html">Søkeoperatorer</a></li>
+</ul>
+<h2>Feilsøking</h2>
+<ul>
+<li><a href="password-not-accepted.html">Passordet godtas ikke</a></li>
+<li><a href="certificate-errors.html">Sertifikatfeil</a></li>
+<li><a href="encryption-errors.html">Krypteringsfeil</a></li>
+<li><a href="no-connection.html">Inbox Classic får ikke kontakt</a></li>
+<li><a href="message-not-shown.html">En melding vises ikke</a></li>
+</ul>
+<h2>Personvern og sikkerhet</h2>
+<ul>
+<li><a href="pictures-tracking.html">Bilder og sporing</a></li>
+<li><a href="links-scripts.html">Lenker, skript og vedlegg</a></li>
+<li><a href="data-storage.html">Hvor e-posten og passordene dine oppbevares</a></li>
+<li><a href="connections.html">Tilkoblingene Inbox Classic oppretter</a></li>
+<li><a href="removing.html">Fjern Inbox Classic</a></li>
+</ul>
+<h2>Avansert</h2>
+<ul>
+<li><a href="sign-in-apps.html">Påloggingsapper</a></li>
+<li><a href="command-line.html">Kommandolinjealternativer</a></li>
+</ul>
+</nav>
+</nav><main>
+<h1>Behandle ny e-post med regler</h1>
+<p class="summary">Flytt, merk som lest, flagg eller arkiver innkommende meldinger som oppfyller kriteriene dine, automatisk.</p>
+<p>En regel kombinerer søkekriterier med handlinger som brukes på meldinger som passer, når de kommer til innboksen. En regel med <code>from:news@example.com</code> kan for eksempel flytte nyhetsbrev fra den adressen til en egen mappe og merke dem som lest.</p>
+<p>Slik lager du en regel:</p>
+<ol>
+    <li>Velg <b>Verktøy</b> &gt; <b>Meldingsregler</b>, og klikk deretter på <b>Ny</b>.</li>
+    <li>Skriv et navn, og fyll ut <b>Søkekriterier</b> med de samme søkeoperatorene som i søkefeltet, for eksempel <code>from:</code>, <code>subject:</code> eller <code>list:</code>. Linjen under viser hvor mange av meldingene som allerede er i den valgte kontoens innboks, som passer til kriteriene.</li>
+    <li>Velg én eller flere handlinger for meldinger som passer: flytt dem til en mappe, merk dem som lest, flagg dem, arkiver dem, flytt dem til Søppelpost, slett dem eller slå av varsler.</li>
+    <li>Klikk på <b>OK</b>.</li>
+</ol>
+<p>Du kan også lage en regel fra en melding eller et søk. Velg <b>Melding</b> &gt; <b>Opprett regel fra melding</b> for å bruke e-postlisten fra List-Id-hodet, eller avsenderen hvis meldingen ikke har dette hodet. Klikk på <b>Opprett regel</b> over søkeresultatene for å bruke de gjeldende søkekriteriene.</p>
+<h2>Slik virker regler</h2>
+<p>Regler behandler nye meldinger i innboksen mens Inbox Classic kjører, også når hovedvinduet er lukket og programmet fortsatt kjører i bakgrunnen. Eksisterende meldinger påvirkes bare hvis du merker av for <b>Bruk den også på meldingene som allerede er i innboksen</b>. Regler brukes i rekkefølgen i listen på meldinger som oppfyller kriteriene. Når en regel planlegger å flytte en melding ut av innboksen, brukes ingen flere regler på den, selv om serveren ennå ikke har bekreftet flyttingen. Fjern avmerkingen for en regel i listen for å slå den av uten å slette den.</p>
+<h2>Endre regler</h2>
+<p>For å redigere en regel merker du den i listen og klikker på <b>Rediger</b>, eller dobbeltklikker på den. Bruk <b>Flytt opp</b> og <b>Flytt ned</b> for å endre rekkefølgen, eller <b>Slett</b> for å slette regelen. I regelredigeringen klikker du på <b>Vis</b> for å lukke redigeringen uten å lagre endringer og søke etter treff i alle kontoenes innbokser i hovedvinduet.</p>
+<p>Regler gjelder nye meldinger i innboksen, så mappe- og datofiltre støttes ikke. Hvis du bruker <code>in:</code>, <code>before:</code>, <code>after:</code>, <code>older_than:</code> eller <code>newer_than:</code>, forklarer en melding hvorfor disse filtrene ikke kan brukes. Regler kan ikke sende meldinger eller slette dem permanent: <b>Slett den</b> flytter dem til <b>Slettede elementer</b> hvis kontoen har en slik mappe.</p>
+<aside class="note">Regler kjøres på denne datamaskinen. For å sortere e-post mens den er slått av bruker du filtrene til e-postleverandøren din.</aside>
+<nav class="related"><a href="find-messages.html">Finn meldinger</a> <a href="search-words.html">Søkeoperatorer</a> <a href="organize-mail.html">Flagg, arkiver og flytt meldinger</a></nav>
+</main></div>
+</body>
+</html>

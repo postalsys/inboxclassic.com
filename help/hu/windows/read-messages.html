@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'">
+<title>Üzenetek olvasása</title>
+<style>body{margin:16px 24px;line-height:1.5}body>:not(.web),main{max-width:42em}h1{font-size:1.6em;margin:0 0 4px}h2{font-size:1.2em;margin:1.4em 0 .4em}p.summary{font-size:1.05em;opacity:.8;margin-top:0}ol,ul{padding-left:1.6em}li{margin:.3em 0}table{border-collapse:collapse;margin:.6em 0}th,td{text-align:left;padding:4px 12px 4px 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent);vertical-align:top}kbd{font-size:.9em;border:1px solid color-mix(in srgb,currentColor 35%,transparent);border-bottom-width:2px;border-radius:4px;padding:0 4px;white-space:nowrap}aside{padding:8px 12px;margin:.8em 0}.side a[aria-current]{font-weight:700;text-decoration:none}aside.warning{border-left:4px solid #c60}img.picture{max-width:100%;height:auto;margin:.6em 0;border:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related{margin-top:1.6em;padding-top:.6em;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related a{margin-right:1.2em}p.home{margin:0 0 1em;font-size:.9em}header.bar{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;max-width:none;padding:0 0 12px;margin:0 0 20px;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}header.bar .brand{font-weight:700;text-decoration:none;margin-right:auto}header.bar a,header.bar b{margin-right:10px}.web{display:flex;gap:32px}.web .side{flex:0 0 240px;font-size:.92em}.web .side ul{padding-left:1.1em}.web main{flex:1;min-width:0}@media(max-width:700px){.web{display:block}.web .side{display:none}}body{font:10pt Tahoma,Arial,sans-serif;color:#000;background:#fff}h1,h2{color:#036}h2{border-bottom:1px solid #9ab}a{color:#03c}aside.note,aside.warning{background:#ffffe1;border:1px solid #c9c9a0}kbd{background:#f4f4f4;border-color:#999}body.windows,body.mac,body.linux{font:16px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif;margin:0;background:#f7f7fb;color:#1f2330}header.bar{max-width:1180px;margin:0 auto;padding:14px 24px;border-bottom:1px solid #e3e3ee}header.bar .brand{color:#3d4aa8;font-size:1.1em}header.bar a{color:#3d4aa8}.web{max-width:1180px;margin:0 auto;padding:24px}.web main{background:#fff;border-radius:12px;padding:28px 36px;box-shadow:0 1px 3px rgba(20,20,60,.08)}.web .side{position:sticky;top:16px;align-self:flex-start;max-height:calc(100vh - 32px);overflow:auto}.web .side a{color:#30395e;text-decoration:none}.web .side a:hover,.web main a{color:#3d4aa8}h1,h2{color:#1f2330}h2{border-bottom:none}aside.note,aside.warning{background:#f1f2fb;border:1px solid #e0e2f5;border-radius:10px}@media(prefers-color-scheme:dark){body.windows,body.mac,body.linux{background:#14151c;color:#e6e7ef}.web main{background:#1d1f29;box-shadow:none}header.bar{border-color:#2c2f3d}.web .side a{color:#c5c9e6}h1,h2{color:#e6e7ef}aside.note,aside.warning{background:#232637;border-color:#30344a}header.bar a,header.bar .brand,.web main a,.web .side a:hover{color:#9aa6ff}}</style>
+</head>
+<body class="windows">
+<header class="bar"><a class="brand" href="/">Inbox Classic</a><span class="platforms"><b>Windows</b> <a href="../mac/read-messages.html">Mac</a> <a href="../linux/read-messages.html">Linux</a></span><span class="languages"><a href="../../en/windows/read-messages.html" hreflang="en">English</a> <a href="../../ca/windows/read-messages.html" hreflang="ca">Català</a> <a href="../../cs/windows/read-messages.html" hreflang="cs">Čeština</a> <a href="../../da/windows/read-messages.html" hreflang="da">Dansk</a> <a href="../../de/windows/read-messages.html" hreflang="de">Deutsch</a> <a href="../../et/windows/read-messages.html" hreflang="et">Eesti</a> <a href="../../es/windows/read-messages.html" hreflang="es">Español</a> <a href="../../fr/windows/read-messages.html" hreflang="fr">Français</a> <a href="../../hr/windows/read-messages.html" hreflang="hr">Hrvatski</a> <a href="../../it/windows/read-messages.html" hreflang="it">Italiano</a> <a href="../../lv/windows/read-messages.html" hreflang="lv">Latviešu</a> <a href="../../lt/windows/read-messages.html" hreflang="lt">Lietuvių</a> <b>Magyar</b> <a href="../../nl/windows/read-messages.html" hreflang="nl">Nederlands</a> <a href="../../nb/windows/read-messages.html" hreflang="nb">Norsk bokmål</a> <a href="../../pl/windows/read-messages.html" hreflang="pl">Polski</a> <a href="../../pt-BR/windows/read-messages.html" hreflang="pt-BR">Português (Brasil)</a> <a href="../../pt/windows/read-messages.html" hreflang="pt">Português (Portugal)</a> <a href="../../ro/windows/read-messages.html" hreflang="ro">Română</a> <a href="../../sk/windows/read-messages.html" hreflang="sk">Slovenčina</a> <a href="../../sl/windows/read-messages.html" hreflang="sl">Slovenščina</a> <a href="../../sr-Latn/windows/read-messages.html" hreflang="sr-Latn">Srpski</a> <a href="../../fi/windows/read-messages.html" hreflang="fi">Suomi</a> <a href="../../sv/windows/read-messages.html" hreflang="sv">Svenska</a> <a href="../../tr/windows/read-messages.html" hreflang="tr">Türkçe</a> <a href="../../el/windows/read-messages.html" hreflang="el">Ελληνικά</a> <a href="../../bg/windows/read-messages.html" hreflang="bg">Български</a> <a href="../../ru/windows/read-messages.html" hreflang="ru">Русский</a> <a href="../../uk/windows/read-messages.html" hreflang="uk">Українська</a></span></header>
+<div class="web"><nav class="side"><nav class="contents">
+<h2>Első lépések</h2>
+<ul>
+<li><a href="add-account.html">Levelezőfiók hozzáadása</a></li>
+<li><a href="gmail-outlook.html">Gmail és Outlook.com</a></li>
+<li><a href="main-window.html">A főablak</a></li>
+<li><a href="layouts.html">Elrendezések</a></li>
+</ul>
+<h2>Mindennapi feladatok</h2>
+<ul>
+<li><a href="read-messages.html" aria-current="page">Üzenetek olvasása</a></li>
+<li><a href="find-messages.html">Üzenetek keresése</a></li>
+<li><a href="conversations.html">Beszélgetések</a></li>
+<li><a href="organize-mail.html">Üzenetek megjelölése, archiválása és áthelyezése</a></li>
+<li><a href="message-rules.html">Új levelek kezelése szabályokkal</a></li>
+<li><a href="delete-and-undo.html">Üzenetek törlése és visszavonás</a></li>
+<li><a href="folders.html">Mappák kezelése</a></li>
+<li><a href="write-message.html">Üzenet írása</a></li>
+<li><a href="reply-forward.html">Válasz és továbbítás</a></li>
+<li><a href="attachments.html">Mellékletek</a></li>
+<li><a href="drafts-outbox.html">Piszkozatok és a Postázandó üzenetek mappa</a></li>
+<li><a href="signatures.html">Aláírások</a></li>
+<li><a href="address-book.html">Címjegyzék</a></li>
+<li><a href="save-print-import.html">Üzenetek mentése, nyomtatása és importálása</a></li>
+<li><a href="new-mail.html">Új levelek fogadása</a></li>
+</ul>
+<h2>Több fiók</h2>
+<ul>
+<li><a href="all-inboxes.html">Összes beérkezett üzenet</a></li>
+<li><a href="manage-accounts.html">Fiókok módosítása, átrendezése és eltávolítása</a></li>
+<li><a href="move-computer.html">Átköltözés másik számítógépre</a></li>
+</ul>
+<h2>Üzenetfunkciók</h2>
+<ul>
+<li><a href="sign-in-codes.html">Bejelentkezési kódok</a></li>
+<li><a href="delivery-problems.html">Kézbesítési problémák</a></li>
+<li><a href="invitations.html">Naptármeghívások</a></li>
+<li><a href="unsubscribe.html">Leiratkozás levelezőlistáról</a></li>
+<li><a href="brand-logos.html">Márkalogók</a></li>
+</ul>
+<h2>Titkosított és digitálisan aláírt levelek</h2>
+<ul>
+<li><a href="encrypted-and-signed-mail.html">Titkosított és digitálisan aláírt levelek</a></li>
+<li><a href="sign-and-encrypt.html">Üzenet aláírása és titkosítása</a></li>
+<li><a href="encryption-keys.html">Titkosítási kulcsok</a></li>
+<li><a href="verify-a-key.html">Kulcs tulajdonosának ellenőrzése</a></li>
+</ul>
+<h2>Beállítások</h2>
+<ul>
+<li><a href="options-language.html">Beállítások</a></li>
+<li><a href="download-ahead.html">Üzenetek előzetes letöltése</a></li>
+<li><a href="account-security.html">A fiók biztonsági beállításai</a></li>
+<li><a href="default-mail-program.html">Az Inbox Classic beállítása alapértelmezett levelezőalkalmazásként</a></li>
+<li><a href="updates.html">Az Inbox Classic frissítése</a></li>
+</ul>
+<h2>MI-ügynökök</h2>
+<ul>
+<li><a href="agents-connect.html">MI-ügynök csatlakoztatása</a></li>
+<li><a href="agents-permissions.html">Mit tehet egy ügynök</a></li>
+<li><a href="agents-sending.html">Amikor egy ügynök levelet küld</a></li>
+</ul>
+<h2>Billentyűparancsok és keresés</h2>
+<ul>
+<li><a href="keyboard-shortcuts.html">Billentyűparancsok</a></li>
+<li><a href="search-words.html">Keresőszavak</a></li>
+</ul>
+<h2>Hibaelhárítás</h2>
+<ul>
+<li><a href="password-not-accepted.html">A kiszolgáló nem fogadja el a jelszót</a></li>
+<li><a href="certificate-errors.html">Tanúsítványhibák</a></li>
+<li><a href="encryption-errors.html">Titkosítási hibák</a></li>
+<li><a href="no-connection.html">Az Inbox Classic nem tud kapcsolódni</a></li>
+<li><a href="message-not-shown.html">Egy üzenet nem jelenik meg</a></li>
+</ul>
+<h2>Adatvédelem és biztonság</h2>
+<ul>
+<li><a href="pictures-tracking.html">Képek és követés</a></li>
+<li><a href="links-scripts.html">Hivatkozások, szkriptek és mellékletek</a></li>
+<li><a href="data-storage.html">A levelek és a jelszavak tárolása</a></li>
+<li><a href="connections.html">Az Inbox Classic hálózati kapcsolatai</a></li>
+<li><a href="removing.html">Az Inbox Classic eltávolítása</a></li>
+</ul>
+<h2>Speciális</h2>
+<ul>
+<li><a href="sign-in-apps.html">Bejelentkezési alkalmazások</a></li>
+<li><a href="command-line.html">Parancssori kapcsolók</a></li>
+</ul>
+</nav>
+</nav><main>
+<h1>Üzenetek olvasása</h1>
+<p class="summary">Olvassa az üzeneteket az olvasóablakban vagy külön ablakban, és lépkedjen közöttük a billentyűzettel.</p>
+<p>A listában kijelölt üzenet az olvasóablakban jelenik meg, a feladó, a dátum, a címzettek és a tárgy alatt. A program egy másodperc után olvasottként jelöli meg. Ha az üzenetet az érkezésénél későbbre keltezték, a listában az érkezés időpontja jelenik meg. Így a jövőre keltezett levelek nem ragadnak a lista tetején.</p>
+<ul>
+    <li>Az olvasottság kézi módosításához válassza ezt: <b>Szerkesztés</b> &gt; <b>Megjelölés olvasottként</b> (<kbd>Ctrl</kbd>+<kbd>Q</kbd>) vagy <b>Megjelölés olvasatlanként</b>.</li>
+    <li>Egy mappa összes üzenetének olvasottként jelöléséhez válassza ezt: <b>Szerkesztés</b> &gt; <b>Összes megjelölése olvasottként</b> (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>A</kbd>). A parancs a mappa helyi menüjében is elérhető.</li>
+</ul>
+<h2>Csak az olvasatlan üzenetek</h2>
+<p>Ha csak az olvasatlan üzeneteket szeretné látni, válassza ezt: <b>Nézet</b> &gt; <b>Olvasott üzenetek elrejtése</b>, vagy kattintson az eszköztár <b>Olvasatlan</b> gombjára. A szűrő minden mappában érvényes, amíg ki nem kapcsolja. Az aktuális lista megnyitása után olvasottként megjelölt üzenet látható marad, amíg másik listára nem vált.</p>
+<h2>Üzenet külön ablakban</h2>
+<p>Kattintson duplán egy üzenetre, vagy jelölje ki, és nyomja le az <kbd>Enter</kbd> billentyűt. Az ablak gombjai: <b>Válasz</b>, <b>Válasz mind.</b>, <b>Továbbítás</b>, <b>Nyomtatás</b>, <b>Törlés</b>, <b>Archiválás</b> és <b>Levélszemét</b>. Az <b>Előző</b> és a <b>Következő</b> gombbal az eredeti lista üzenetei között lépkedhet. A piszkozat szerkesztésre nyílik meg.</p>
+<h2>Olvasás a billentyűzettel</h2>
+<ul>
+    <li>A lista következő vagy előző üzenetére ezekkel a parancsokkal léphet: <b>Nézet</b> &gt; <b>Következő üzenet</b> (<kbd>Ctrl</kbd>+<kbd>.</kbd>), illetve <b>Előző üzenet</b> (<kbd>Ctrl</kbd>+<kbd>,</kbd>).</li>
+    <li>A következő olvasatlan üzenethez válassza ezt: <b>Nézet</b> &gt; <b>Következő olvasatlan üzenet</b>, vagy nyomja le az <kbd>N</kbd> billentyűt az üzenetlistában. Ha a mappában már nincs olvasatlan üzenet, a program felajánlja a következő olyan mappát, amelyben van.</li>
+    <li>Bármelyik fiók mappáját megnyithatja ezzel: <b>Nézet</b> &gt; <b>Ugrás mappára</b> (<kbd>Ctrl</kbd>+<kbd>Y</kbd>). A kereséshez írja be a mappanév egy részét.</li>
+    <li>A megjelenített üzenet szövegében ezzel kereshet: <b>Szerkesztés</b> &gt; <b>Keresés ebben az üzenetben</b> (<kbd>F3</kbd>).</li>
+</ul>
+<h2>Korábbi üzenetek egy válaszban</h2>
+<p>A válaszok gyakran idézik a korábbi üzeneteket. Az Inbox Classic az idézett részeket a feladó új szövege alatt, egy ••• gomb mögé rejti. Kattintson a gombra a megjelenítésükhöz.</p>
+<p>Közvetlenül egy fiók hozzáadása után az olvasóablak jelezheti, hogy az üzenet letöltése még folyamatban van. Lásd: <a href="message-not-shown.html">Egy üzenet nem jelenik meg</a>.</p>
+
+
+<h2>Szövegméret</h2>
+<p>Az üzenetek megjelenítési méretét itt választhatja ki: <b>Nézet</b> &gt; <b>Betűméret</b>. Ez a szerkesztőben látható méretet is módosítja, a címzettek által látott formázást azonban nem. Az alapértelmezett mérethez válassza a <b>Közepes</b> lehetőséget.</p>
+<nav class="related"><a href="conversations.html">Beszélgetések</a> <a href="organize-mail.html">Üzenetek megjelölése, archiválása és áthelyezése</a> <a href="message-not-shown.html">Egy üzenet nem jelenik meg</a></nav>
+</main></div>
+</body>
+</html>

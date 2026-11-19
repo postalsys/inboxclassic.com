@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="lt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'">
+<title>Laiško pasirašymas ir šifravimas</title>
+<style>body{margin:16px 24px;line-height:1.5}body>:not(.web),main{max-width:42em}h1{font-size:1.6em;margin:0 0 4px}h2{font-size:1.2em;margin:1.4em 0 .4em}p.summary{font-size:1.05em;opacity:.8;margin-top:0}ol,ul{padding-left:1.6em}li{margin:.3em 0}table{border-collapse:collapse;margin:.6em 0}th,td{text-align:left;padding:4px 12px 4px 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent);vertical-align:top}kbd{font-size:.9em;border:1px solid color-mix(in srgb,currentColor 35%,transparent);border-bottom-width:2px;border-radius:4px;padding:0 4px;white-space:nowrap}aside{padding:8px 12px;margin:.8em 0}.side a[aria-current]{font-weight:700;text-decoration:none}aside.warning{border-left:4px solid #c60}img.picture{max-width:100%;height:auto;margin:.6em 0;border:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related{margin-top:1.6em;padding-top:.6em;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related a{margin-right:1.2em}p.home{margin:0 0 1em;font-size:.9em}header.bar{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;max-width:none;padding:0 0 12px;margin:0 0 20px;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}header.bar .brand{font-weight:700;text-decoration:none;margin-right:auto}header.bar a,header.bar b{margin-right:10px}.web{display:flex;gap:32px}.web .side{flex:0 0 240px;font-size:.92em}.web .side ul{padding-left:1.1em}.web main{flex:1;min-width:0}@media(max-width:700px){.web{display:block}.web .side{display:none}}:root{color-scheme:light dark}body{font:13px -apple-system,BlinkMacSystemFont,sans-serif;color:CanvasText;background:Canvas}a{color:LinkText}aside.note,aside.warning{background:color-mix(in srgb,CanvasText 6%,Canvas);border-radius:8px}kbd{font-family:-apple-system,sans-serif}body.windows,body.mac,body.linux{font:16px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif;margin:0;background:#f7f7fb;color:#1f2330}header.bar{max-width:1180px;margin:0 auto;padding:14px 24px;border-bottom:1px solid #e3e3ee}header.bar .brand{color:#3d4aa8;font-size:1.1em}header.bar a{color:#3d4aa8}.web{max-width:1180px;margin:0 auto;padding:24px}.web main{background:#fff;border-radius:12px;padding:28px 36px;box-shadow:0 1px 3px rgba(20,20,60,.08)}.web .side{position:sticky;top:16px;align-self:flex-start;max-height:calc(100vh - 32px);overflow:auto}.web .side a{color:#30395e;text-decoration:none}.web .side a:hover,.web main a{color:#3d4aa8}h1,h2{color:#1f2330}h2{border-bottom:none}aside.note,aside.warning{background:#f1f2fb;border:1px solid #e0e2f5;border-radius:10px}@media(prefers-color-scheme:dark){body.windows,body.mac,body.linux{background:#14151c;color:#e6e7ef}.web main{background:#1d1f29;box-shadow:none}header.bar{border-color:#2c2f3d}.web .side a{color:#c5c9e6}h1,h2{color:#e6e7ef}aside.note,aside.warning{background:#232637;border-color:#30344a}header.bar a,header.bar .brand,.web main a,.web .side a:hover{color:#9aa6ff}}</style>
+</head>
+<body class="mac">
+<header class="bar"><a class="brand" href="/">Inbox Classic</a><span class="platforms"><a href="../windows/sign-and-encrypt.html">Windows</a> <b>Mac</b> <a href="../linux/sign-and-encrypt.html">Linux</a></span><span class="languages"><a href="../../en/mac/sign-and-encrypt.html" hreflang="en">English</a> <a href="../../ca/mac/sign-and-encrypt.html" hreflang="ca">Català</a> <a href="../../cs/mac/sign-and-encrypt.html" hreflang="cs">Čeština</a> <a href="../../da/mac/sign-and-encrypt.html" hreflang="da">Dansk</a> <a href="../../de/mac/sign-and-encrypt.html" hreflang="de">Deutsch</a> <a href="../../et/mac/sign-and-encrypt.html" hreflang="et">Eesti</a> <a href="../../es/mac/sign-and-encrypt.html" hreflang="es">Español</a> <a href="../../fr/mac/sign-and-encrypt.html" hreflang="fr">Français</a> <a href="../../hr/mac/sign-and-encrypt.html" hreflang="hr">Hrvatski</a> <a href="../../it/mac/sign-and-encrypt.html" hreflang="it">Italiano</a> <a href="../../lv/mac/sign-and-encrypt.html" hreflang="lv">Latviešu</a> <b>Lietuvių</b> <a href="../../hu/mac/sign-and-encrypt.html" hreflang="hu">Magyar</a> <a href="../../nl/mac/sign-and-encrypt.html" hreflang="nl">Nederlands</a> <a href="../../nb/mac/sign-and-encrypt.html" hreflang="nb">Norsk bokmål</a> <a href="../../pl/mac/sign-and-encrypt.html" hreflang="pl">Polski</a> <a href="../../pt-BR/mac/sign-and-encrypt.html" hreflang="pt-BR">Português (Brasil)</a> <a href="../../pt/mac/sign-and-encrypt.html" hreflang="pt">Português (Portugal)</a> <a href="../../ro/mac/sign-and-encrypt.html" hreflang="ro">Română</a> <a href="../../sk/mac/sign-and-encrypt.html" hreflang="sk">Slovenčina</a> <a href="../../sl/mac/sign-and-encrypt.html" hreflang="sl">Slovenščina</a> <a href="../../sr-Latn/mac/sign-and-encrypt.html" hreflang="sr-Latn">Srpski</a> <a href="../../fi/mac/sign-and-encrypt.html" hreflang="fi">Suomi</a> <a href="../../sv/mac/sign-and-encrypt.html" hreflang="sv">Svenska</a> <a href="../../tr/mac/sign-and-encrypt.html" hreflang="tr">Türkçe</a> <a href="../../el/mac/sign-and-encrypt.html" hreflang="el">Ελληνικά</a> <a href="../../bg/mac/sign-and-encrypt.html" hreflang="bg">Български</a> <a href="../../ru/mac/sign-and-encrypt.html" hreflang="ru">Русский</a> <a href="../../uk/mac/sign-and-encrypt.html" hreflang="uk">Українська</a></span></header>
+<div class="web"><nav class="side"><nav class="contents">
+<h2>Pradžia</h2>
+<ul>
+<li><a href="add-account.html">Pašto paskyros pridėjimas</a></li>
+<li><a href="gmail-outlook.html">Gmail ir Outlook.com</a></li>
+<li><a href="main-window.html">Pagrindinis langas</a></li>
+<li><a href="layouts.html">Išdėstymai</a></li>
+</ul>
+<h2>Kasdienės užduotys</h2>
+<ul>
+<li><a href="read-messages.html">Laiškų skaitymas</a></li>
+<li><a href="find-messages.html">Laiškų paieška</a></li>
+<li><a href="conversations.html">Pokalbiai</a></li>
+<li><a href="organize-mail.html">Laiškų žymėjimas vėliavėle, archyvavimas ir perkėlimas</a></li>
+<li><a href="message-rules.html">Naujų laiškų rūšiavimas pagal taisykles</a></li>
+<li><a href="delete-and-undo.html">Laiškų naikinimas ir veiksmų atšaukimas</a></li>
+<li><a href="folders.html">Darbas su aplankais</a></li>
+<li><a href="write-message.html">Laiško rašymas</a></li>
+<li><a href="reply-forward.html">Atsakymas ir persiuntimas</a></li>
+<li><a href="attachments.html">Priedai</a></li>
+<li><a href="drafts-outbox.html">Juodraščiai ir siunčiami laiškai</a></li>
+<li><a href="signatures.html">Parašo tekstas</a></li>
+<li><a href="address-book.html">Adresų knygelė</a></li>
+<li><a href="save-print-import.html">Laiškų įrašymas, spausdinimas ir importas</a></li>
+<li><a href="new-mail.html">Naujų laiškų gavimas</a></li>
+</ul>
+<h2>Kelios paskyros</h2>
+<ul>
+<li><a href="all-inboxes.html">Visi gauti laiškai</a></li>
+<li><a href="manage-accounts.html">Paskyrų nustatymai, tvarka ir šalinimas</a></li>
+<li><a href="move-computer.html">Duomenų perkėlimas į kitą kompiuterį</a></li>
+</ul>
+<h2>Papildomos laiškų funkcijos</h2>
+<ul>
+<li><a href="sign-in-codes.html">Prisijungimo kodai</a></li>
+<li><a href="delivery-problems.html">Nepristatyti laiškai</a></li>
+<li><a href="invitations.html">Kalendoriaus kvietimai</a></li>
+<li><a href="unsubscribe.html">Adresatų sąrašo prenumeratos atsisakymas</a></li>
+<li><a href="brand-logos.html">Prekių ženklų logotipai</a></li>
+</ul>
+<h2>Užšifruoti ir pasirašyti laiškai</h2>
+<ul>
+<li><a href="encrypted-and-signed-mail.html">Užšifruoti ir pasirašyti laiškai</a></li>
+<li><a href="sign-and-encrypt.html" aria-current="page">Laiško pasirašymas ir šifravimas</a></li>
+<li><a href="encryption-keys.html">Šifravimo raktai</a></li>
+<li><a href="verify-a-key.html">Rakto savininko patikrinimas</a></li>
+</ul>
+<h2>Nustatymai</h2>
+<ul>
+<li><a href="options-language.html">Nustatymai</a></li>
+<li><a href="download-ahead.html">Iš anksto atsisiunčiami laiškai</a></li>
+<li><a href="account-security.html">Paskyros saugos nustatymai</a></li>
+<li><a href="default-mail-program.html">Numatytoji pašto programa</a></li>
+<li><a href="updates.html">Inbox Classic naujinimas</a></li>
+</ul>
+<h2>DI agentai</h2>
+<ul>
+<li><a href="agents-connect.html">DI agento prijungimas</a></li>
+<li><a href="agents-permissions.html">Ką agentas gali daryti</a></li>
+<li><a href="agents-sending.html">Kai agentas siunčia laišką</a></li>
+</ul>
+<h2>Informacinė medžiaga</h2>
+<ul>
+<li><a href="keyboard-shortcuts.html">Spartieji klavišai</a></li>
+<li><a href="search-words.html">Paieškos žodžiai</a></li>
+</ul>
+<h2>Problemų sprendimas</h2>
+<ul>
+<li><a href="password-not-accepted.html">Slaptažodis nepriimamas</a></li>
+<li><a href="certificate-errors.html">Sertifikatų klaidos</a></li>
+<li><a href="encryption-errors.html">Šifravimo klaidos</a></li>
+<li><a href="no-connection.html">Inbox Classic negali prisijungti</a></li>
+<li><a href="message-not-shown.html">Laiškas nerodomas</a></li>
+</ul>
+<h2>Privatumas ir sauga</h2>
+<ul>
+<li><a href="pictures-tracking.html">Paveikslėliai ir sekimas</a></li>
+<li><a href="links-scripts.html">Nuorodos, scenarijai ir priedai</a></li>
+<li><a href="data-storage.html">Kur saugomi laiškai ir prisijungimo duomenys</a></li>
+<li><a href="connections.html">Inbox Classic užmezgami ryšiai</a></li>
+<li><a href="removing.html">Inbox Classic šalinimas</a></li>
+</ul>
+<h2>Išplėstinės funkcijos</h2>
+<ul>
+<li><a href="sign-in-apps.html">Prisijungimo programos</a></li>
+<li><a href="command-line.html">Komandinės eilutės parinktys</a></li>
+</ul>
+</nav>
+</nav><main>
+<h1>Laiško pasirašymas ir šifravimas</h1>
+<p class="summary">Apsaugokite laiško turinį skaitmeniniu parašu ir šifravimu.</p>
+<p>Skaitmeniniu parašu galima patikrinti, ar po pasirašymo laiško turinys nebuvo pakeistas. Kam priklauso raktas, tikrinama atskirai. Užšifruotą turinį galite perskaityti tik jūs ir gavėjai. Siunčiami užšifruoti laiškai taip pat pasirašomi. Pasirašymui ir šifravimui reikia savo rakto.</p>
+<p>Norėdami pasirašyti arba užšifruoti laišką:</p>
+<ol>
+    <li>Laiško lange spustelėkite mygtuką „<b>Pasirašyti</b>“ arba „<b>Šifruoti</b>“ arba pasirinkite meniu punktą „<b>Įrankiai</b>“ &gt; „<b>Skaitmeniškai pasirašyti</b>“ ar „<b>Šifruoti</b>“. Taip pat galite naudoti klavišų derinį <kbd>⌥⌘Y</kbd> arba <kbd>⌥⌘X</kbd>. Jei siuntėjo adresui dar neturite savo rakto, Inbox Classic pasiūlys jį sukurti.</li>
+    <li>Spustelėkite mygtuką „<b>Siųsti</b>“.</li>
+</ol>
+<p>Kai įjungta parinktis „<b>Šifruoti</b>“, eilutėje po tema kiekvieno gavėjo rakto būseną nurodo spalva ir piktograma. Inbox Classic automatiškai ieško trūkstamų raktų:</p>
+<table>
+    <tr><th>Spalva</th><th>Reikšmė</th></tr>
+    <tr><td>Žalia</td><td>Patikrinote, kad raktas priklauso gavėjui.</td></tr>
+    <tr><td>Mėlyna</td><td>Gavėjo raktą turite, bet dar nepatikrinote, kam jis priklauso. Mėlyna spalva taip pat žymi jūsų raktą.</td></tr>
+    <tr><td>Pilka</td><td>Inbox Classic ieško gavėjo rakto.</td></tr>
+    <tr><td>Gintarinė</td><td>Nėra gavėjui tinkamo rakto.</td></tr>
+</table>
+<h2>Jei trūksta tinkamo rakto</h2>
+<p>Norint išsiųsti užšifruotą laišką, reikia tinkamo rakto kiekvienam gavėjui. Jei kurio nors rakto trūksta, spustelėjus mygtuką „<b>Siųsti</b>“ atidaromas langas „<b>Gavėjų raktai</b>“. Mygtuku „<b>Rasti raktą</b>“ galite pakartoti paiešką, o mygtuku „<b>Pašalinti iš laiško</b>“ pašalinti gavėją iš laiško. Parinktis „<b>Siųsti nešifruotą</b>“ galima tik tada, kai laiške nebelieka teksto, paveikslėlių ar priedų iš užšifruoto laiško. Taip pat galite paprašyti gavėjo viešojo rakto ir jį importuoti.</p>
+<h2>Atsakymai į užšifruotus laiškus</h2>
+<p>Atsakant į užšifruotą laišką arba jį persiunčiant, parinktis „<b>Šifruoti</b>“ iš pradžių būna įjungta. Prieš išjungdama šifravimą Inbox Classic prašo patvirtinimo. Laišką galima išsiųsti nešifruotą tik pašalinus iš jo tekstą, paveikslėlius ir priedus, paimtus iš užšifruoto laiško.</p>
+<p>Įjungus šifravimą, juodraščiai įrašomi užšifruoti tik jūsų raktu, be skaitmeninio parašo. Jei juodraštyje lieka teksto, paveikslėlių ar priedų iš užšifruoto laiško, jis įrašomas užšifruotas net ir išjungus šifravimą. Išsiųsto užšifruoto laiško kopija aplanke „<b>Išsiųsti laiškai</b>“ taip pat lieka užšifruota.</p>
+<h2>Savo viešojo rakto bendrinimas</h2>
+<p>Kad kiti galėtų jums siųsti užšifruotus laiškus, pasirinkite meniu punktą „<b>Failas</b>“ &gt; „<b>Pridėti savo viešąjį raktą</b>“. Pasirinkto siuntėjo adreso viešasis raktas pridedamas prie laiško kaip failas.</p>
+<nav class="related"><a href="encryption-keys.html">Šifravimo raktai</a> <a href="encrypted-and-signed-mail.html">Užšifruoti ir pasirašyti laiškai</a> <a href="verify-a-key.html">Rakto savininko patikrinimas</a></nav>
+</main></div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'">
+<title>Organitzar el correu nou amb regles</title>
+<style>body{margin:16px 24px;line-height:1.5}body>:not(.web),main{max-width:42em}h1{font-size:1.6em;margin:0 0 4px}h2{font-size:1.2em;margin:1.4em 0 .4em}p.summary{font-size:1.05em;opacity:.8;margin-top:0}ol,ul{padding-left:1.6em}li{margin:.3em 0}table{border-collapse:collapse;margin:.6em 0}th,td{text-align:left;padding:4px 12px 4px 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent);vertical-align:top}kbd{font-size:.9em;border:1px solid color-mix(in srgb,currentColor 35%,transparent);border-bottom-width:2px;border-radius:4px;padding:0 4px;white-space:nowrap}aside{padding:8px 12px;margin:.8em 0}.side a[aria-current]{font-weight:700;text-decoration:none}aside.warning{border-left:4px solid #c60}img.picture{max-width:100%;height:auto;margin:.6em 0;border:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related{margin-top:1.6em;padding-top:.6em;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related a{margin-right:1.2em}p.home{margin:0 0 1em;font-size:.9em}header.bar{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;max-width:none;padding:0 0 12px;margin:0 0 20px;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}header.bar .brand{font-weight:700;text-decoration:none;margin-right:auto}header.bar a,header.bar b{margin-right:10px}.web{display:flex;gap:32px}.web .side{flex:0 0 240px;font-size:.92em}.web .side ul{padding-left:1.1em}.web main{flex:1;min-width:0}@media(max-width:700px){.web{display:block}.web .side{display:none}}body{font:10pt Tahoma,Arial,sans-serif;color:#000;background:#fff}h1,h2{color:#036}h2{border-bottom:1px solid #9ab}a{color:#03c}aside.note,aside.warning{background:#ffffe1;border:1px solid #c9c9a0}kbd{background:#f4f4f4;border-color:#999}body.windows,body.mac,body.linux{font:16px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif;margin:0;background:#f7f7fb;color:#1f2330}header.bar{max-width:1180px;margin:0 auto;padding:14px 24px;border-bottom:1px solid #e3e3ee}header.bar .brand{color:#3d4aa8;font-size:1.1em}header.bar a{color:#3d4aa8}.web{max-width:1180px;margin:0 auto;padding:24px}.web main{background:#fff;border-radius:12px;padding:28px 36px;box-shadow:0 1px 3px rgba(20,20,60,.08)}.web .side{position:sticky;top:16px;align-self:flex-start;max-height:calc(100vh - 32px);overflow:auto}.web .side a{color:#30395e;text-decoration:none}.web .side a:hover,.web main a{color:#3d4aa8}h1,h2{color:#1f2330}h2{border-bottom:none}aside.note,aside.warning{background:#f1f2fb;border:1px solid #e0e2f5;border-radius:10px}@media(prefers-color-scheme:dark){body.windows,body.mac,body.linux{background:#14151c;color:#e6e7ef}.web main{background:#1d1f29;box-shadow:none}header.bar{border-color:#2c2f3d}.web .side a{color:#c5c9e6}h1,h2{color:#e6e7ef}aside.note,aside.warning{background:#232637;border-color:#30344a}header.bar a,header.bar .brand,.web main a,.web .side a:hover{color:#9aa6ff}}</style>
+</head>
+<body class="windows">
+<header class="bar"><a class="brand" href="/">Inbox Classic</a><span class="platforms"><b>Windows</b> <a href="../mac/message-rules.html">Mac</a> <a href="../linux/message-rules.html">Linux</a></span><span class="languages"><a href="../../en/windows/message-rules.html" hreflang="en">English</a> <b>Català</b> <a href="../../cs/windows/message-rules.html" hreflang="cs">Čeština</a> <a href="../../da/windows/message-rules.html" hreflang="da">Dansk</a> <a href="../../de/windows/message-rules.html" hreflang="de">Deutsch</a> <a href="../../et/windows/message-rules.html" hreflang="et">Eesti</a> <a href="../../es/windows/message-rules.html" hreflang="es">Español</a> <a href="../../fr/windows/message-rules.html" hreflang="fr">Français</a> <a href="../../hr/windows/message-rules.html" hreflang="hr">Hrvatski</a> <a href="../../it/windows/message-rules.html" hreflang="it">Italiano</a> <a href="../../lv/windows/message-rules.html" hreflang="lv">Latviešu</a> <a href="../../lt/windows/message-rules.html" hreflang="lt">Lietuvių</a> <a href="../../hu/windows/message-rules.html" hreflang="hu">Magyar</a> <a href="../../nl/windows/message-rules.html" hreflang="nl">Nederlands</a> <a href="../../nb/windows/message-rules.html" hreflang="nb">Norsk bokmål</a> <a href="../../pl/windows/message-rules.html" hreflang="pl">Polski</a> <a href="../../pt-BR/windows/message-rules.html" hreflang="pt-BR">Português (Brasil)</a> <a href="../../pt/windows/message-rules.html" hreflang="pt">Português (Portugal)</a> <a href="../../ro/windows/message-rules.html" hreflang="ro">Română</a> <a href="../../sk/windows/message-rules.html" hreflang="sk">Slovenčina</a> <a href="../../sl/windows/message-rules.html" hreflang="sl">Slovenščina</a> <a href="../../sr-Latn/windows/message-rules.html" hreflang="sr-Latn">Srpski</a> <a href="../../fi/windows/message-rules.html" hreflang="fi">Suomi</a> <a href="../../sv/windows/message-rules.html" hreflang="sv">Svenska</a> <a href="../../tr/windows/message-rules.html" hreflang="tr">Türkçe</a> <a href="../../el/windows/message-rules.html" hreflang="el">Ελληνικά</a> <a href="../../bg/windows/message-rules.html" hreflang="bg">Български</a> <a href="../../ru/windows/message-rules.html" hreflang="ru">Русский</a> <a href="../../uk/windows/message-rules.html" hreflang="uk">Українська</a></span></header>
+<div class="web"><nav class="side"><nav class="contents">
+<h2>Primers passos</h2>
+<ul>
+<li><a href="add-account.html">Afegir un compte de correu</a></li>
+<li><a href="gmail-outlook.html">Gmail i Outlook.com</a></li>
+<li><a href="main-window.html">La finestra principal</a></li>
+<li><a href="layouts.html">Disposicions</a></li>
+</ul>
+<h2>Tasques habituals</h2>
+<ul>
+<li><a href="read-messages.html">Llegir missatges</a></li>
+<li><a href="find-messages.html">Cercar missatges</a></li>
+<li><a href="conversations.html">Converses</a></li>
+<li><a href="organize-mail.html">Marcar amb bandera, arxivar i moure missatges</a></li>
+<li><a href="message-rules.html" aria-current="page">Organitzar el correu nou amb regles</a></li>
+<li><a href="delete-and-undo.html">Suprimir missatges i desfer</a></li>
+<li><a href="folders.html">Treballar amb carpetes</a></li>
+<li><a href="write-message.html">Escriure un missatge</a></li>
+<li><a href="reply-forward.html">Respondre i reenviar</a></li>
+<li><a href="attachments.html">Fitxers adjunts</a></li>
+<li><a href="drafts-outbox.html">Esborranys i la Safata de sortida</a></li>
+<li><a href="signatures.html">Signatures</a></li>
+<li><a href="address-book.html">La Llibreta d’adreces</a></li>
+<li><a href="save-print-import.html">Desar, imprimir i importar missatges</a></li>
+<li><a href="new-mail.html">Rebre correu nou</a></li>
+</ul>
+<h2>Diversos comptes</h2>
+<ul>
+<li><a href="all-inboxes.html">Totes les safates d’entrada</a></li>
+<li><a href="manage-accounts.html">Canviar, ordenar i suprimir comptes</a></li>
+<li><a href="move-computer.html">Passar a un altre ordinador</a></li>
+</ul>
+<h2>Funcions dels missatges</h2>
+<ul>
+<li><a href="sign-in-codes.html">Codis d’inici de sessió</a></li>
+<li><a href="delivery-problems.html">Missatges que no s’han lliurat</a></li>
+<li><a href="invitations.html">Invitacions de calendari</a></li>
+<li><a href="unsubscribe.html">Sortir d’una llista de correu</a></li>
+<li><a href="brand-logos.html">Logotips de marca</a></li>
+</ul>
+<h2>Correu xifrat i signat</h2>
+<ul>
+<li><a href="encrypted-and-signed-mail.html">Correu xifrat i signat</a></li>
+<li><a href="sign-and-encrypt.html">Signar i xifrar un missatge</a></li>
+<li><a href="encryption-keys.html">Claus de xifratge</a></li>
+<li><a href="verify-a-key.html">Verificar la clau d’un contacte</a></li>
+</ul>
+<h2>Configuració</h2>
+<ul>
+<li><a href="options-language.html">Configuració</a></li>
+<li><a href="download-ahead.html">Missatges baixats per endavant</a></li>
+<li><a href="account-security.html">Configuració de seguretat del compte</a></li>
+<li><a href="default-mail-program.html">Definir Inbox Classic com a aplicació de correu predeterminada</a></li>
+<li><a href="updates.html">Actualitzar Inbox Classic</a></li>
+</ul>
+<h2>Agents d’IA</h2>
+<ul>
+<li><a href="agents-connect.html">Connectar un agent d’IA</a></li>
+<li><a href="agents-permissions.html">Què pot fer un agent</a></li>
+<li><a href="agents-sending.html">Quan un agent envia correu</a></li>
+</ul>
+<h2>Referència</h2>
+<ul>
+<li><a href="keyboard-shortcuts.html">Dreceres de teclat</a></li>
+<li><a href="search-words.html">Operadors de cerca</a></li>
+</ul>
+<h2>Resolució de problemes</h2>
+<ul>
+<li><a href="password-not-accepted.html">No s’accepta la contrasenya</a></li>
+<li><a href="certificate-errors.html">Errors de certificat</a></li>
+<li><a href="encryption-errors.html">Errors de xifratge</a></li>
+<li><a href="no-connection.html">Inbox Classic no es pot connectar</a></li>
+<li><a href="message-not-shown.html">No es mostra un missatge</a></li>
+</ul>
+<h2>Privadesa i seguretat</h2>
+<ul>
+<li><a href="pictures-tracking.html">Imatges i rastreig</a></li>
+<li><a href="links-scripts.html">Enllaços, scripts i fitxers adjunts</a></li>
+<li><a href="data-storage.html">On es guarden el correu i les contrasenyes</a></li>
+<li><a href="connections.html">Les connexions que fa Inbox Classic</a></li>
+<li><a href="removing.html">Desinstal·lar Inbox Classic</a></li>
+</ul>
+<h2>Avançat</h2>
+<ul>
+<li><a href="sign-in-apps.html">Aplicacions d’inici de sessió</a></li>
+<li><a href="command-line.html">Opcions de la línia d’ordres</a></li>
+</ul>
+</nav>
+</nav><main>
+<h1>Organitzar el correu nou amb regles</h1>
+<p class="summary">Moveu, marqueu com a llegits, marqueu amb bandera o arxiveu automàticament els missatges entrants que compleixen els vostres criteris.</p>
+<p>Una regla combina criteris de cerca amb accions que s’apliquen als missatges coincidents quan arriben a la Safata d’entrada. Per exemple, una regla amb <code>from:news@example.com</code> pot moure els butlletins d’aquella adreça a una carpeta a part i marcar-los com a llegits.</p>
+<p>Per crear una regla:</p>
+<ol>
+    <li>Trieu <b>Eines</b> &gt; <b>Regles de missatge</b> i feu clic a <b>Nova</b>.</li>
+    <li>Escriviu un nom i ompliu <b>Criteris de cerca</b> amb els mateixos termes que al quadre de cerca, com ara <code>from:</code>, <code>subject:</code> o <code>list:</code>. La línia de sota mostra quants missatges de la Safata d’entrada dels comptes seleccionats compleixen aquests criteris.</li>
+    <li>Trieu una o més accions per als missatges coincidents: moure’ls a una carpeta, marcar-los com a llegits, marcar-los amb bandera, arxivar-los, moure’ls a Correu brossa, suprimir-los o silenciar-ne les notificacions.</li>
+    <li>Feu clic a <b>D’acord</b>.</li>
+</ol>
+<p>També podeu crear una regla a partir d’un missatge o d’una cerca. Trieu <b>Missatge</b> &gt; <b>Crea una regla per a aquest missatge</b> per omplir-la amb el remitent o la llista de correu del missatge seleccionat. Feu clic a <b>Crea una regla</b>, a sobre dels resultats de la cerca, per fer servir els criteris de la cerca actual.</p>
+<h2>Com funcionen les regles</h2>
+<p>Les regles processen els missatges nous de la Safata d’entrada mentre Inbox Classic s’executa, també quan la finestra està tancada i l’aplicació continua en segon pla. Els missatges que ja hi són només es veuen afectats si marqueu <b>Aplica-la també als missatges que ja són a la Safata d’entrada</b>. Les regles aplicables s’executen en l’ordre de la llista. Quan una regla posa en cua una acció que mourà el missatge fora de la Safata d’entrada, les regles següents ja no s’hi apliquen. Desmarqueu la casella d’una regla a la llista per desactivar-la sense suprimir-la.</p>
+<h2>Canviar les regles</h2>
+<p>Per editar una regla, seleccioneu-la a la llista i feu clic a <b>Edita</b>, o feu-hi doble clic. Feu servir <b>Mou amunt</b> i <b>Mou avall</b> per canviar l’ordre, o <b>Suprimeix</b> per suprimir la regla. A l’editor de regles, feu clic a <b>Mostra</b> per cercar a totes les safates d’entrada des de la finestra principal amb els criteris actuals. L’editor es tanca sense desar els canvis pendents.</p>
+<p>Les regles s’apliquen als missatges nous de la Safata d’entrada, de manera que no admeten filtres de carpeta ni de data. Si feu servir <code>in:</code>, <code>before:</code>, <code>after:</code>, <code>older_than:</code> o <code>newer_than:</code>, un missatge explica per què no es poden fer servir aquests filtres. Les regles no poden enviar missatges ni suprimir-los definitivament: <b>Suprimeix-lo</b> els mou a la carpeta <b>Elements suprimits</b> si el compte disposa d’aquesta carpeta.</p>
+<aside class="note">Les regles s’executen en aquest ordinador. Per organitzar el correu mentre l’ordinador està apagat, feu servir els filtres del vostre proveïdor de correu.</aside>
+<nav class="related"><a href="find-messages.html">Cercar missatges</a> <a href="search-words.html">Operadors de cerca</a> <a href="organize-mail.html">Marcar amb bandera, arxivar i moure missatges</a></nav>
+</main></div>
+</body>
+</html>

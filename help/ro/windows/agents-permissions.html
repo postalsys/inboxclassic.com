@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'">
+<title>Ce poate face un agent</title>
+<style>body{margin:16px 24px;line-height:1.5}body>:not(.web),main{max-width:42em}h1{font-size:1.6em;margin:0 0 4px}h2{font-size:1.2em;margin:1.4em 0 .4em}p.summary{font-size:1.05em;opacity:.8;margin-top:0}ol,ul{padding-left:1.6em}li{margin:.3em 0}table{border-collapse:collapse;margin:.6em 0}th,td{text-align:left;padding:4px 12px 4px 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent);vertical-align:top}kbd{font-size:.9em;border:1px solid color-mix(in srgb,currentColor 35%,transparent);border-bottom-width:2px;border-radius:4px;padding:0 4px;white-space:nowrap}aside{padding:8px 12px;margin:.8em 0}.side a[aria-current]{font-weight:700;text-decoration:none}aside.warning{border-left:4px solid #c60}img.picture{max-width:100%;height:auto;margin:.6em 0;border:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related{margin-top:1.6em;padding-top:.6em;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related a{margin-right:1.2em}p.home{margin:0 0 1em;font-size:.9em}header.bar{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;max-width:none;padding:0 0 12px;margin:0 0 20px;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}header.bar .brand{font-weight:700;text-decoration:none;margin-right:auto}header.bar a,header.bar b{margin-right:10px}.web{display:flex;gap:32px}.web .side{flex:0 0 240px;font-size:.92em}.web .side ul{padding-left:1.1em}.web main{flex:1;min-width:0}@media(max-width:700px){.web{display:block}.web .side{display:none}}body{font:10pt Tahoma,Arial,sans-serif;color:#000;background:#fff}h1,h2{color:#036}h2{border-bottom:1px solid #9ab}a{color:#03c}aside.note,aside.warning{background:#ffffe1;border:1px solid #c9c9a0}kbd{background:#f4f4f4;border-color:#999}body.windows,body.mac,body.linux{font:16px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif;margin:0;background:#f7f7fb;color:#1f2330}header.bar{max-width:1180px;margin:0 auto;padding:14px 24px;border-bottom:1px solid #e3e3ee}header.bar .brand{color:#3d4aa8;font-size:1.1em}header.bar a{color:#3d4aa8}.web{max-width:1180px;margin:0 auto;padding:24px}.web main{background:#fff;border-radius:12px;padding:28px 36px;box-shadow:0 1px 3px rgba(20,20,60,.08)}.web .side{position:sticky;top:16px;align-self:flex-start;max-height:calc(100vh - 32px);overflow:auto}.web .side a{color:#30395e;text-decoration:none}.web .side a:hover,.web main a{color:#3d4aa8}h1,h2{color:#1f2330}h2{border-bottom:none}aside.note,aside.warning{background:#f1f2fb;border:1px solid #e0e2f5;border-radius:10px}@media(prefers-color-scheme:dark){body.windows,body.mac,body.linux{background:#14151c;color:#e6e7ef}.web main{background:#1d1f29;box-shadow:none}header.bar{border-color:#2c2f3d}.web .side a{color:#c5c9e6}h1,h2{color:#e6e7ef}aside.note,aside.warning{background:#232637;border-color:#30344a}header.bar a,header.bar .brand,.web main a,.web .side a:hover{color:#9aa6ff}}</style>
+</head>
+<body class="windows">
+<header class="bar"><a class="brand" href="/">Inbox Classic</a><span class="platforms"><b>Windows</b> <a href="../mac/agents-permissions.html">Mac</a> <a href="../linux/agents-permissions.html">Linux</a></span><span class="languages"><a href="../../en/windows/agents-permissions.html" hreflang="en">English</a> <a href="../../ca/windows/agents-permissions.html" hreflang="ca">Català</a> <a href="../../cs/windows/agents-permissions.html" hreflang="cs">Čeština</a> <a href="../../da/windows/agents-permissions.html" hreflang="da">Dansk</a> <a href="../../de/windows/agents-permissions.html" hreflang="de">Deutsch</a> <a href="../../et/windows/agents-permissions.html" hreflang="et">Eesti</a> <a href="../../es/windows/agents-permissions.html" hreflang="es">Español</a> <a href="../../fr/windows/agents-permissions.html" hreflang="fr">Français</a> <a href="../../hr/windows/agents-permissions.html" hreflang="hr">Hrvatski</a> <a href="../../it/windows/agents-permissions.html" hreflang="it">Italiano</a> <a href="../../lv/windows/agents-permissions.html" hreflang="lv">Latviešu</a> <a href="../../lt/windows/agents-permissions.html" hreflang="lt">Lietuvių</a> <a href="../../hu/windows/agents-permissions.html" hreflang="hu">Magyar</a> <a href="../../nl/windows/agents-permissions.html" hreflang="nl">Nederlands</a> <a href="../../nb/windows/agents-permissions.html" hreflang="nb">Norsk bokmål</a> <a href="../../pl/windows/agents-permissions.html" hreflang="pl">Polski</a> <a href="../../pt-BR/windows/agents-permissions.html" hreflang="pt-BR">Português (Brasil)</a> <a href="../../pt/windows/agents-permissions.html" hreflang="pt">Português (Portugal)</a> <b>Română</b> <a href="../../sk/windows/agents-permissions.html" hreflang="sk">Slovenčina</a> <a href="../../sl/windows/agents-permissions.html" hreflang="sl">Slovenščina</a> <a href="../../sr-Latn/windows/agents-permissions.html" hreflang="sr-Latn">Srpski</a> <a href="../../fi/windows/agents-permissions.html" hreflang="fi">Suomi</a> <a href="../../sv/windows/agents-permissions.html" hreflang="sv">Svenska</a> <a href="../../tr/windows/agents-permissions.html" hreflang="tr">Türkçe</a> <a href="../../el/windows/agents-permissions.html" hreflang="el">Ελληνικά</a> <a href="../../bg/windows/agents-permissions.html" hreflang="bg">Български</a> <a href="../../ru/windows/agents-permissions.html" hreflang="ru">Русский</a> <a href="../../uk/windows/agents-permissions.html" hreflang="uk">Українська</a></span></header>
+<div class="web"><nav class="side"><nav class="contents">
+<h2>Primii pași</h2>
+<ul>
+<li><a href="add-account.html">Adăugarea unui cont de e-mail</a></li>
+<li><a href="gmail-outlook.html">Gmail și Outlook.com</a></li>
+<li><a href="main-window.html">Fereastra principală</a></li>
+<li><a href="layouts.html">Aspecte</a></li>
+</ul>
+<h2>Activități zilnice</h2>
+<ul>
+<li><a href="read-messages.html">Citirea mesajelor</a></li>
+<li><a href="find-messages.html">Găsirea mesajelor</a></li>
+<li><a href="conversations.html">Conversații</a></li>
+<li><a href="organize-mail.html">Semnalizarea, arhivarea și mutarea mesajelor</a></li>
+<li><a href="message-rules.html">Organizarea mesajelor noi cu ajutorul regulilor</a></li>
+<li><a href="delete-and-undo.html">Ștergerea mesajelor și anularea</a></li>
+<li><a href="folders.html">Lucrul cu folderele</a></li>
+<li><a href="write-message.html">Scrierea unui mesaj</a></li>
+<li><a href="reply-forward.html">Răspunsul și redirecționarea</a></li>
+<li><a href="attachments.html">Atașări</a></li>
+<li><a href="drafts-outbox.html">Schițe și Mesaje de trimis</a></li>
+<li><a href="signatures.html">Textul semnăturii</a></li>
+<li><a href="address-book.html">Agenda</a></li>
+<li><a href="save-print-import.html">Salvarea, imprimarea și importul mesajelor</a></li>
+<li><a href="new-mail.html">Primirea e-mailurilor noi</a></li>
+</ul>
+<h2>Mai multe conturi</h2>
+<ul>
+<li><a href="all-inboxes.html">Toate mesajele primite</a></li>
+<li><a href="manage-accounts.html">Modificarea, ordonarea și eliminarea conturilor</a></li>
+<li><a href="move-computer.html">Mutarea pe alt computer</a></li>
+</ul>
+<h2>Funcții pentru mesaje</h2>
+<ul>
+<li><a href="sign-in-codes.html">Coduri de conectare</a></li>
+<li><a href="delivery-problems.html">Mesaje care nu au fost livrate</a></li>
+<li><a href="invitations.html">Invitații în calendar</a></li>
+<li><a href="unsubscribe.html">Dezabonarea de la o listă de corespondență</a></li>
+<li><a href="brand-logos.html">Siglele mărcilor</a></li>
+</ul>
+<h2>Mesaje criptate și semnate</h2>
+<ul>
+<li><a href="encrypted-and-signed-mail.html">Mesaje criptate și semnate</a></li>
+<li><a href="sign-and-encrypt.html">Semnarea și criptarea unui mesaj</a></li>
+<li><a href="encryption-keys.html">Chei de criptare</a></li>
+<li><a href="verify-a-key.html">Verificarea cheii unui contact</a></li>
+</ul>
+<h2>Setări</h2>
+<ul>
+<li><a href="options-language.html">Setări</a></li>
+<li><a href="download-ahead.html">Mesaje descărcate în avans</a></li>
+<li><a href="account-security.html">Setările de securitate ale contului</a></li>
+<li><a href="default-mail-program.html">Inbox Classic ca aplicație de e-mail</a></li>
+<li><a href="updates.html">Actualizarea Inbox Classic</a></li>
+</ul>
+<h2>Agenți IA</h2>
+<ul>
+<li><a href="agents-connect.html">Conectarea unui agent IA</a></li>
+<li><a href="agents-permissions.html" aria-current="page">Ce poate face un agent</a></li>
+<li><a href="agents-sending.html">Când un agent trimite e-mail</a></li>
+</ul>
+<h2>Informații de referință</h2>
+<ul>
+<li><a href="keyboard-shortcuts.html">Comenzi rapide de la tastatură</a></li>
+<li><a href="search-words.html">Cuvinte de căutare</a></li>
+</ul>
+<h2>Depanare</h2>
+<ul>
+<li><a href="password-not-accepted.html">Parola nu este acceptată</a></li>
+<li><a href="certificate-errors.html">Erori de certificat</a></li>
+<li><a href="encryption-errors.html">Erori de criptare</a></li>
+<li><a href="no-connection.html">Inbox Classic nu se poate conecta</a></li>
+<li><a href="message-not-shown.html">Un mesaj nu este afișat</a></li>
+</ul>
+<h2>Confidențialitate și securitate</h2>
+<ul>
+<li><a href="pictures-tracking.html">Imagini și urmărire</a></li>
+<li><a href="links-scripts.html">Linkuri, scripturi și atașări</a></li>
+<li><a href="data-storage.html">Unde sunt păstrate e-mailurile și parolele</a></li>
+<li><a href="connections.html">Conexiunile pe care le face Inbox Classic</a></li>
+<li><a href="removing.html">Eliminarea Inbox Classic</a></li>
+</ul>
+<h2>Avansat</h2>
+<ul>
+<li><a href="sign-in-apps.html">Aplicații de conectare</a></li>
+<li><a href="command-line.html">Opțiuni din linia de comandă</a></li>
+</ul>
+</nav>
+</nav><main>
+<h1>Ce poate face un agent</h1>
+<p class="summary">Stabiliți ce poate face fiecare agent IA cu mesajele dvs., consultați istoricul și anulați acțiuni.</p>
+<p>La prima conectare a agentului unui program, Inbox Classic afișează numele programului și vă cere acordul. Alegeți ce îi permiteți:</p>
+<ul>
+    <li>citirea mesajelor: consultarea folderelor, listelor de mesaje și conversațiilor, căutarea și citirea mesajelor, inclusiv a atașărilor text de până la 256 KB și a fișierelor PDF, Office și imaginilor de până la 10 MB, consultarea regulilor și căutarea persoanelor din Agendă. Cu acces la toate conturile, căutarea persoanelor include și contactele din e-mailuri</li>
+    <li>organizarea mesajelor: marcare ca citite sau necitite, semnalizare și alegerea culorii semnalizării, marcare ca nedorite, mutare, arhivare, creare de foldere, redenumirea folderelor proprii, urmărirea și ignorarea conversațiilor, mutare în <b>Elemente șterse</b>. Acțiunile pentru mesaje compatibile cu operațiile în grup pot fi aplicate și rezultatelor unei căutări. Dezabonarea de la listele de corespondență necesită acordul dvs.</li>
+    <li>crearea de schițe pentru dvs. și modificarea sau ștergerea definitivă a propriilor schițe, până când le salvați în editor, manual sau automat, ori le trimiteți</li>
+    <li>trimiterea mesajelor, numai cu aprobarea dvs. pentru fiecare mesaj</li>
+</ul>
+<p>Selectați apoi conturile la care are acces și faceți clic pe <b>Permitere</b>. Dacă alegeți <b>Nu permiteți</b>, accesul programului este refuzat, iar cererea nu se mai repetă. Puteți schimba ulterior accesul programului.</p>
+<p>La ștergerea mesajelor, agentul le mută în folderul pentru elemente șterse; dacă acesta lipsește, operația este refuzată. Poate șterge definitiv doar propriile schițe pe care nu le-ați salvat în editor. Nu poate modifica setările conturilor sau crea, modifica ori șterge reguli. Poate consulta regulile și verifica ce mesaje corespund criteriilor lor, fără să aplice acțiunile. Conținutul decriptat și atașările mesajelor criptate nu sunt accesibile agenților; informațiile exterioare mesajului, precum adresele și data, pot fi citite. Citirea unui mesaj nu îl marchează ca citit. Modificările agentului apar imediat în ferestrele aplicației.</p>
+<h2>Dezabonarea de la liste de corespondență</h2>
+<p>Un agent cu permisiunea de a organiza mesajele poate cere dezabonarea de la liste de corespondență. Inbox Classic vă cere acordul pentru toate listele din cerere și afișează expeditorul fiecăreia:</p>
+<ul>
+    <li>Cu <b>Dezabonare</b> trimiteți fiecărei liste o cerere de dezabonare.</li>
+    <li>Cu <b>Nu vă dezabonați</b>, opțiunea implicită, refuzați cererea și păstrați abonările.</li>
+</ul>
+<p>Agentul nu poate cere dezabonarea folosind mesaje din <b>E-mail nedorit</b>. Se iau în calcul cererile aprobate în ultimele 24 de ore, inclusiv cele care au eșuat. Limita este de 30 pentru fiecare program, câte o cerere pentru fiecare listă.</p>
+<h2>Modificarea mai multor mesaje deodată</h2>
+<p>Un agent cu permisiunea de a organiza mesajele poate modifica într-un singur pas toate mesajele găsite de o căutare, de exemplu poate marca toate buletinele informative ca citite sau le poate muta într-un folder. Mai întâi verifică rezultatele și stabilește mesajele eligibile. La aplicare, Inbox Classic le verifică din nou și le omite pe cele care nu mai corespund stării inițiale; mesajele sosite între timp nu sunt incluse. O cerere care ar schimba peste 1.000 de mesaje sau ar examina peste 10.000 de rezultate este refuzată, nu aplicată parțial până la limită. Nu se cere o nouă confirmare, deoarece agentul are deja permisiunea de organizare. Jurnalul afișează operația pe un singur rând, de exemplu „A marcat 37 de mesaje ca citite (căutare: from:news)”, iar o singură comandă de anulare poate reveni asupra părților operației care încă pot fi anulate. Înregistrarea confirmă lansarea operației în aplicație, nu finalizarea tuturor modificărilor pe server.</p>
+<h2>Consultarea și modificarea accesului</h2>
+<p><b>Instrumente</b> &gt; <b>Agenți IA</b> afișează programele cărora le-ați permis sau refuzat accesul și istoricul acțiunilor agenților, de la cele mai recente.</p>
+<p>Citirile agentului, inclusiv cele ale mesajelor, conversațiilor, atașărilor, listelor, regulilor și contactelor, sunt grupate pe program și oră, de exemplu „A citit 14 mesaje și a căutat de 3 ori”. Selectați rândul pentru a vedea subiectele, numele fișierelor, criteriile căutărilor și listele consultate, fără textul mesajelor. Cererea pentru o atașare este înregistrată chiar dacă fișierul este apoi refuzat din cauza tipului sau dimensiunii; nu este deschis într-o altă aplicație. Numărul dintr-o listă poate include rânduri de conversații. Jurnalul păstrează activitatea până la 30 de zile; unele înregistrări obișnuite pot fi eliminate mai devreme dacă sunt prea multe. Golirea jurnalului șterge înregistrările citirilor și ascunde acțiunile, fără a reseta limitele programului.</p>
+<ul>
+    <li>Cu <b>Modificare</b> schimbați permisiunile unui program.</li>
+    <li>Cu <b>Eliminare</b> eliminați programul din listă, împreună cu permisiunile și istoricul său. Programul nu este dezinstalat. La următoarea conectare, Inbox Classic vă cere din nou acordul.</li>
+    <li>Cu <b>Anulare</b> anulați modificări precum marcarea ca citit, semnalizarea sau culoarea ei, mutarea, marcarea ca nedorit, arhivarea sau ștergerea. Puteți anula și trimiterea unui mesaj care se află încă în Mesaje de trimis, inclusiv după expirarea numărătorii inverse obișnuite, dar nu puteți retrage un mesaj deja trimis.</li>
+    <li>Cu <b>Anulare pe interval</b> anulați modificările reversibile făcute de programul selectat în intervalul ales, de exemplu în ultima oră, începând cu cele mai recente. Numărul se referă la operații din jurnal, nu la mesaje; o operație anulată doar parțial se numără o dată.</li>
+</ul>
+<p>La anulare sunt omise mesajele care nu mai sunt în locația sau starea așteptată. O intrare din jurnal este numărată ca anulată chiar dacă anularea a reușit doar parțial. Un agent își poate anula propriile modificări, dar niciodată pe cele ale altui program.</p>
+<aside class="warning">Mesajele altor persoane pot conține instrucțiuni menite să păcălească un agent, de exemplu să vă redirecționeze sau să vă șteargă mesajele. Inbox Classic ascunde de agenți textul care nu vă este afișat și le cere să trateze mesajele ca date, nu ca instrucțiuni de urmat. Un agent poate fi totuși păcălit. Acordați numai permisiunile necesare.</aside>
+<nav class="related"><a href="agents-connect.html">Conectarea unui agent IA</a> <a href="agents-sending.html">Când un agent trimite e-mail</a> <a href="data-storage.html">Unde sunt păstrate e-mailurile și parolele</a></nav>
+</main></div>
+</body>
+</html>

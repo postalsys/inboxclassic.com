@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'">
+<title>Mesaje criptate și semnate</title>
+<style>body{margin:16px 24px;line-height:1.5}body>:not(.web),main{max-width:42em}h1{font-size:1.6em;margin:0 0 4px}h2{font-size:1.2em;margin:1.4em 0 .4em}p.summary{font-size:1.05em;opacity:.8;margin-top:0}ol,ul{padding-left:1.6em}li{margin:.3em 0}table{border-collapse:collapse;margin:.6em 0}th,td{text-align:left;padding:4px 12px 4px 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent);vertical-align:top}kbd{font-size:.9em;border:1px solid color-mix(in srgb,currentColor 35%,transparent);border-bottom-width:2px;border-radius:4px;padding:0 4px;white-space:nowrap}aside{padding:8px 12px;margin:.8em 0}.side a[aria-current]{font-weight:700;text-decoration:none}aside.warning{border-left:4px solid #c60}img.picture{max-width:100%;height:auto;margin:.6em 0;border:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related{margin-top:1.6em;padding-top:.6em;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related a{margin-right:1.2em}p.home{margin:0 0 1em;font-size:.9em}header.bar{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;max-width:none;padding:0 0 12px;margin:0 0 20px;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}header.bar .brand{font-weight:700;text-decoration:none;margin-right:auto}header.bar a,header.bar b{margin-right:10px}.web{display:flex;gap:32px}.web .side{flex:0 0 240px;font-size:.92em}.web .side ul{padding-left:1.1em}.web main{flex:1;min-width:0}@media(max-width:700px){.web{display:block}.web .side{display:none}}:root{color-scheme:light dark}body{font:11pt system-ui,'Adwaita Sans',Cantarell,sans-serif;color:CanvasText;background:Canvas}a{color:#1c71d8}@media(prefers-color-scheme:dark){a{color:#78aeed}}aside.note,aside.warning{background:color-mix(in srgb,CanvasText 6%,Canvas);border-radius:12px}body.windows,body.mac,body.linux{font:16px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif;margin:0;background:#f7f7fb;color:#1f2330}header.bar{max-width:1180px;margin:0 auto;padding:14px 24px;border-bottom:1px solid #e3e3ee}header.bar .brand{color:#3d4aa8;font-size:1.1em}header.bar a{color:#3d4aa8}.web{max-width:1180px;margin:0 auto;padding:24px}.web main{background:#fff;border-radius:12px;padding:28px 36px;box-shadow:0 1px 3px rgba(20,20,60,.08)}.web .side{position:sticky;top:16px;align-self:flex-start;max-height:calc(100vh - 32px);overflow:auto}.web .side a{color:#30395e;text-decoration:none}.web .side a:hover,.web main a{color:#3d4aa8}h1,h2{color:#1f2330}h2{border-bottom:none}aside.note,aside.warning{background:#f1f2fb;border:1px solid #e0e2f5;border-radius:10px}@media(prefers-color-scheme:dark){body.windows,body.mac,body.linux{background:#14151c;color:#e6e7ef}.web main{background:#1d1f29;box-shadow:none}header.bar{border-color:#2c2f3d}.web .side a{color:#c5c9e6}h1,h2{color:#e6e7ef}aside.note,aside.warning{background:#232637;border-color:#30344a}header.bar a,header.bar .brand,.web main a,.web .side a:hover{color:#9aa6ff}}</style>
+</head>
+<body class="linux">
+<header class="bar"><a class="brand" href="/">Inbox Classic</a><span class="platforms"><a href="../windows/encrypted-and-signed-mail.html">Windows</a> <a href="../mac/encrypted-and-signed-mail.html">Mac</a> <b>Linux</b></span><span class="languages"><a href="../../en/linux/encrypted-and-signed-mail.html" hreflang="en">English</a> <a href="../../ca/linux/encrypted-and-signed-mail.html" hreflang="ca">Català</a> <a href="../../cs/linux/encrypted-and-signed-mail.html" hreflang="cs">Čeština</a> <a href="../../da/linux/encrypted-and-signed-mail.html" hreflang="da">Dansk</a> <a href="../../de/linux/encrypted-and-signed-mail.html" hreflang="de">Deutsch</a> <a href="../../et/linux/encrypted-and-signed-mail.html" hreflang="et">Eesti</a> <a href="../../es/linux/encrypted-and-signed-mail.html" hreflang="es">Español</a> <a href="../../fr/linux/encrypted-and-signed-mail.html" hreflang="fr">Français</a> <a href="../../hr/linux/encrypted-and-signed-mail.html" hreflang="hr">Hrvatski</a> <a href="../../it/linux/encrypted-and-signed-mail.html" hreflang="it">Italiano</a> <a href="../../lv/linux/encrypted-and-signed-mail.html" hreflang="lv">Latviešu</a> <a href="../../lt/linux/encrypted-and-signed-mail.html" hreflang="lt">Lietuvių</a> <a href="../../hu/linux/encrypted-and-signed-mail.html" hreflang="hu">Magyar</a> <a href="../../nl/linux/encrypted-and-signed-mail.html" hreflang="nl">Nederlands</a> <a href="../../nb/linux/encrypted-and-signed-mail.html" hreflang="nb">Norsk bokmål</a> <a href="../../pl/linux/encrypted-and-signed-mail.html" hreflang="pl">Polski</a> <a href="../../pt-BR/linux/encrypted-and-signed-mail.html" hreflang="pt-BR">Português (Brasil)</a> <a href="../../pt/linux/encrypted-and-signed-mail.html" hreflang="pt">Português (Portugal)</a> <b>Română</b> <a href="../../sk/linux/encrypted-and-signed-mail.html" hreflang="sk">Slovenčina</a> <a href="../../sl/linux/encrypted-and-signed-mail.html" hreflang="sl">Slovenščina</a> <a href="../../sr-Latn/linux/encrypted-and-signed-mail.html" hreflang="sr-Latn">Srpski</a> <a href="../../fi/linux/encrypted-and-signed-mail.html" hreflang="fi">Suomi</a> <a href="../../sv/linux/encrypted-and-signed-mail.html" hreflang="sv">Svenska</a> <a href="../../tr/linux/encrypted-and-signed-mail.html" hreflang="tr">Türkçe</a> <a href="../../el/linux/encrypted-and-signed-mail.html" hreflang="el">Ελληνικά</a> <a href="../../bg/linux/encrypted-and-signed-mail.html" hreflang="bg">Български</a> <a href="../../ru/linux/encrypted-and-signed-mail.html" hreflang="ru">Русский</a> <a href="../../uk/linux/encrypted-and-signed-mail.html" hreflang="uk">Українська</a></span></header>
+<div class="web"><nav class="side"><nav class="contents">
+<h2>Primii pași</h2>
+<ul>
+<li><a href="add-account.html">Adăugarea unui cont de e-mail</a></li>
+<li><a href="gmail-outlook.html">Gmail și Outlook.com</a></li>
+<li><a href="main-window.html">Fereastra principală</a></li>
+<li><a href="layouts.html">Aspecte</a></li>
+</ul>
+<h2>Activități zilnice</h2>
+<ul>
+<li><a href="read-messages.html">Citirea mesajelor</a></li>
+<li><a href="find-messages.html">Găsirea mesajelor</a></li>
+<li><a href="conversations.html">Conversații</a></li>
+<li><a href="organize-mail.html">Semnalizarea, arhivarea și mutarea mesajelor</a></li>
+<li><a href="message-rules.html">Organizarea mesajelor noi cu ajutorul regulilor</a></li>
+<li><a href="delete-and-undo.html">Ștergerea mesajelor și anularea</a></li>
+<li><a href="folders.html">Lucrul cu folderele</a></li>
+<li><a href="write-message.html">Scrierea unui mesaj</a></li>
+<li><a href="reply-forward.html">Răspunsul și redirecționarea</a></li>
+<li><a href="attachments.html">Atașări</a></li>
+<li><a href="drafts-outbox.html">Schițe și Mesaje de trimis</a></li>
+<li><a href="signatures.html">Textul semnăturii</a></li>
+<li><a href="address-book.html">Agenda</a></li>
+<li><a href="save-print-import.html">Salvarea, imprimarea și importul mesajelor</a></li>
+<li><a href="new-mail.html">Primirea e-mailurilor noi</a></li>
+</ul>
+<h2>Mai multe conturi</h2>
+<ul>
+<li><a href="all-inboxes.html">Toate mesajele primite</a></li>
+<li><a href="manage-accounts.html">Modificarea, ordonarea și eliminarea conturilor</a></li>
+<li><a href="move-computer.html">Mutarea pe alt computer</a></li>
+</ul>
+<h2>Funcții pentru mesaje</h2>
+<ul>
+<li><a href="sign-in-codes.html">Coduri de conectare</a></li>
+<li><a href="delivery-problems.html">Mesaje care nu au fost livrate</a></li>
+<li><a href="invitations.html">Invitații în calendar</a></li>
+<li><a href="unsubscribe.html">Dezabonarea de la o listă de corespondență</a></li>
+<li><a href="brand-logos.html">Siglele mărcilor</a></li>
+</ul>
+<h2>Mesaje criptate și semnate</h2>
+<ul>
+<li><a href="encrypted-and-signed-mail.html" aria-current="page">Mesaje criptate și semnate</a></li>
+<li><a href="sign-and-encrypt.html">Semnarea și criptarea unui mesaj</a></li>
+<li><a href="encryption-keys.html">Chei de criptare</a></li>
+<li><a href="verify-a-key.html">Verificarea cheii unui contact</a></li>
+</ul>
+<h2>Setări</h2>
+<ul>
+<li><a href="options-language.html">Setări</a></li>
+<li><a href="download-ahead.html">Mesaje descărcate în avans</a></li>
+<li><a href="account-security.html">Setările de securitate ale contului</a></li>
+<li><a href="default-mail-program.html">Inbox Classic ca aplicație de e-mail</a></li>
+<li><a href="updates.html">Actualizarea Inbox Classic</a></li>
+</ul>
+<h2>Agenți IA</h2>
+<ul>
+<li><a href="agents-connect.html">Conectarea unui agent IA</a></li>
+<li><a href="agents-permissions.html">Ce poate face un agent</a></li>
+<li><a href="agents-sending.html">Când un agent trimite e-mail</a></li>
+</ul>
+<h2>Informații de referință</h2>
+<ul>
+<li><a href="keyboard-shortcuts.html">Comenzi rapide de la tastatură</a></li>
+<li><a href="search-words.html">Cuvinte de căutare</a></li>
+</ul>
+<h2>Depanare</h2>
+<ul>
+<li><a href="password-not-accepted.html">Parola nu este acceptată</a></li>
+<li><a href="certificate-errors.html">Erori de certificat</a></li>
+<li><a href="encryption-errors.html">Erori de criptare</a></li>
+<li><a href="no-connection.html">Inbox Classic nu se poate conecta</a></li>
+<li><a href="message-not-shown.html">Un mesaj nu este afișat</a></li>
+</ul>
+<h2>Confidențialitate și securitate</h2>
+<ul>
+<li><a href="pictures-tracking.html">Imagini și urmărire</a></li>
+<li><a href="links-scripts.html">Linkuri, scripturi și atașări</a></li>
+<li><a href="data-storage.html">Unde sunt păstrate e-mailurile și parolele</a></li>
+<li><a href="connections.html">Conexiunile pe care le face Inbox Classic</a></li>
+<li><a href="removing.html">Eliminarea Inbox Classic</a></li>
+</ul>
+<h2>Avansat</h2>
+<ul>
+<li><a href="sign-in-apps.html">Aplicații de conectare</a></li>
+<li><a href="command-line.html">Opțiuni din linia de comandă</a></li>
+</ul>
+</nav>
+</nav><main>
+<h1>Mesaje criptate și semnate</h1>
+<p class="summary">Bara de deasupra unui mesaj arată dacă este semnat de expeditor și dacă a fost criptat pentru dvs.</p>
+<p>O semnătură validă confirmă că mesajul nu s-a schimbat după semnare. Pentru a confirma identitatea semnatarului, trebuie să verificați și proprietarul cheii. Un mesaj criptat poate fi citit numai cu o cheie privată corespunzătoare.</p>
+<p>Bara de deasupra mesajului se referă la mesaj în întregime:</p>
+<table>
+    <tr><th>Culoare</th><th>Ce înseamnă</th></tr>
+    <tr><td>Verde</td><td>Semnat de expeditor, cu o cheie al cărei proprietar a fost confirmat de dvs.</td></tr>
+    <tr><td>Albastru</td><td>Semnat de expeditor, dar proprietarul cheii nu a fost confirmat, sau criptat pentru dvs.</td></tr>
+    <tr><td>Chihlimbariu</td><td>Ceva nu este în regulă: semnătura nu se potrivește, a semnat altcineva decât expeditorul sau o parte nu a putut fi citită.</td></tr>
+    <tr><td>Gri</td><td>Nesemnat sau cu o semnătură care nu a putut fi verificată, de exemplu deoarece lipsește cheia.</td></tr>
+</table>
+<p>Un mesaj ale cărui părți sunt protejate diferit afișează fiecare parte în propriul cadru, cu propria etichetă. Bara numără atunci părțile de fiecare fel. Faceți clic pe o etichetă sau pe <b>Detalii</b> din bară pentru a vedea cine a semnat fiecare parte, cu ce cheie și când.</p>
+<aside class="warning">Doar bara și etichetele de deasupra cadrelor sunt scrise de Inbox Classic. Un expeditor poate desena orice în propriul mesaj, inclusiv ceva care arată ca o etichetă. Uitați-vă la bară.</aside>
+<p>Imaginile de pe internet dintr-o parte criptată se încarcă doar când faceți clic pe bara imaginilor, de fiecare dată. Eticheta părții indică apoi că imaginile au fost încărcate.</p>
+<p>Imaginile și fișierele PDF atașate unei părți apar în cadrul acelei părți, niciodată în cel al alteia. Previzualizările părților criptate sunt păstrate numai în memorie. Dacă deschideți un fișier atașat într-o altă aplicație, pe disc se creează o copie temporară a fișierului decriptat.</p>
+<p>În lista fișierelor atașate, un lacăt marchează fiecare fișier dintr-o parte criptată. Țineți indicatorul mouse-ului deasupra unui fișier pentru a vedea din ce parte provine.</p>
+<p>Când răspundeți sau redirecționați, se citează doar ce a fost afișat.</p>
+<p>În lista de mesaje, un lacăt marchează un mesaj criptat, iar un sigiliu unul semnat. Dacă indexarea mesajelor decriptate este activată, lista poate afișa subiectul protejat și primele cuvinte după decriptare. Dezactivarea indexării șterge aceste date din index și readuce în listă informațiile exterioare mesajului. Notificările de mesaj nou afișează întotdeauna <b>Mesaj criptat</b>.</p>
+<p>Căutarea găsește un mesaj decriptat după cuvintele textului său, cât timp <b>Căutare în mesajele criptate</b> este activată în <b>Meniu principal</b> &gt; <b>Preferințe</b> &gt; <b>Citire</b>. Textul decriptat și subiectele protejate sunt stocate necriptat în indexul local. Agenții IA nu pot citi conținutul decriptat sau fișierele atașate unui mesaj criptat; pot vedea însă informațiile exterioare, precum adresele și data.</p>
+<nav class="related"><a href="verify-a-key.html">Verificarea cheii unui contact</a> <a href="encryption-keys.html">Chei de criptare</a></nav>
+</main></div>
+</body>
+</html>

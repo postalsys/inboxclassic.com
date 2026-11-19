@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'">
+<title>Berichten lezen</title>
+<style>body{margin:16px 24px;line-height:1.5}body>:not(.web),main{max-width:42em}h1{font-size:1.6em;margin:0 0 4px}h2{font-size:1.2em;margin:1.4em 0 .4em}p.summary{font-size:1.05em;opacity:.8;margin-top:0}ol,ul{padding-left:1.6em}li{margin:.3em 0}table{border-collapse:collapse;margin:.6em 0}th,td{text-align:left;padding:4px 12px 4px 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent);vertical-align:top}kbd{font-size:.9em;border:1px solid color-mix(in srgb,currentColor 35%,transparent);border-bottom-width:2px;border-radius:4px;padding:0 4px;white-space:nowrap}aside{padding:8px 12px;margin:.8em 0}.side a[aria-current]{font-weight:700;text-decoration:none}aside.warning{border-left:4px solid #c60}img.picture{max-width:100%;height:auto;margin:.6em 0;border:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related{margin-top:1.6em;padding-top:.6em;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related a{margin-right:1.2em}p.home{margin:0 0 1em;font-size:.9em}header.bar{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;max-width:none;padding:0 0 12px;margin:0 0 20px;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}header.bar .brand{font-weight:700;text-decoration:none;margin-right:auto}header.bar a,header.bar b{margin-right:10px}.web{display:flex;gap:32px}.web .side{flex:0 0 240px;font-size:.92em}.web .side ul{padding-left:1.1em}.web main{flex:1;min-width:0}@media(max-width:700px){.web{display:block}.web .side{display:none}}:root{color-scheme:light dark}body{font:11pt system-ui,'Adwaita Sans',Cantarell,sans-serif;color:CanvasText;background:Canvas}a{color:#1c71d8}@media(prefers-color-scheme:dark){a{color:#78aeed}}aside.note,aside.warning{background:color-mix(in srgb,CanvasText 6%,Canvas);border-radius:12px}body.windows,body.mac,body.linux{font:16px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif;margin:0;background:#f7f7fb;color:#1f2330}header.bar{max-width:1180px;margin:0 auto;padding:14px 24px;border-bottom:1px solid #e3e3ee}header.bar .brand{color:#3d4aa8;font-size:1.1em}header.bar a{color:#3d4aa8}.web{max-width:1180px;margin:0 auto;padding:24px}.web main{background:#fff;border-radius:12px;padding:28px 36px;box-shadow:0 1px 3px rgba(20,20,60,.08)}.web .side{position:sticky;top:16px;align-self:flex-start;max-height:calc(100vh - 32px);overflow:auto}.web .side a{color:#30395e;text-decoration:none}.web .side a:hover,.web main a{color:#3d4aa8}h1,h2{color:#1f2330}h2{border-bottom:none}aside.note,aside.warning{background:#f1f2fb;border:1px solid #e0e2f5;border-radius:10px}@media(prefers-color-scheme:dark){body.windows,body.mac,body.linux{background:#14151c;color:#e6e7ef}.web main{background:#1d1f29;box-shadow:none}header.bar{border-color:#2c2f3d}.web .side a{color:#c5c9e6}h1,h2{color:#e6e7ef}aside.note,aside.warning{background:#232637;border-color:#30344a}header.bar a,header.bar .brand,.web main a,.web .side a:hover{color:#9aa6ff}}</style>
+</head>
+<body class="linux">
+<header class="bar"><a class="brand" href="/">Inbox Classic</a><span class="platforms"><a href="../windows/read-messages.html">Windows</a> <a href="../mac/read-messages.html">Mac</a> <b>Linux</b></span><span class="languages"><a href="../../en/linux/read-messages.html" hreflang="en">English</a> <a href="../../ca/linux/read-messages.html" hreflang="ca">Català</a> <a href="../../cs/linux/read-messages.html" hreflang="cs">Čeština</a> <a href="../../da/linux/read-messages.html" hreflang="da">Dansk</a> <a href="../../de/linux/read-messages.html" hreflang="de">Deutsch</a> <a href="../../et/linux/read-messages.html" hreflang="et">Eesti</a> <a href="../../es/linux/read-messages.html" hreflang="es">Español</a> <a href="../../fr/linux/read-messages.html" hreflang="fr">Français</a> <a href="../../hr/linux/read-messages.html" hreflang="hr">Hrvatski</a> <a href="../../it/linux/read-messages.html" hreflang="it">Italiano</a> <a href="../../lv/linux/read-messages.html" hreflang="lv">Latviešu</a> <a href="../../lt/linux/read-messages.html" hreflang="lt">Lietuvių</a> <a href="../../hu/linux/read-messages.html" hreflang="hu">Magyar</a> <b>Nederlands</b> <a href="../../nb/linux/read-messages.html" hreflang="nb">Norsk bokmål</a> <a href="../../pl/linux/read-messages.html" hreflang="pl">Polski</a> <a href="../../pt-BR/linux/read-messages.html" hreflang="pt-BR">Português (Brasil)</a> <a href="../../pt/linux/read-messages.html" hreflang="pt">Português (Portugal)</a> <a href="../../ro/linux/read-messages.html" hreflang="ro">Română</a> <a href="../../sk/linux/read-messages.html" hreflang="sk">Slovenčina</a> <a href="../../sl/linux/read-messages.html" hreflang="sl">Slovenščina</a> <a href="../../sr-Latn/linux/read-messages.html" hreflang="sr-Latn">Srpski</a> <a href="../../fi/linux/read-messages.html" hreflang="fi">Suomi</a> <a href="../../sv/linux/read-messages.html" hreflang="sv">Svenska</a> <a href="../../tr/linux/read-messages.html" hreflang="tr">Türkçe</a> <a href="../../el/linux/read-messages.html" hreflang="el">Ελληνικά</a> <a href="../../bg/linux/read-messages.html" hreflang="bg">Български</a> <a href="../../ru/linux/read-messages.html" hreflang="ru">Русский</a> <a href="../../uk/linux/read-messages.html" hreflang="uk">Українська</a></span></header>
+<div class="web"><nav class="side"><nav class="contents">
+<h2>Aan de slag</h2>
+<ul>
+<li><a href="add-account.html">Een e-mailaccount toevoegen</a></li>
+<li><a href="gmail-outlook.html">Gmail en Outlook.com</a></li>
+<li><a href="main-window.html">Het hoofdvenster</a></li>
+<li><a href="layouts.html">Indelingen</a></li>
+</ul>
+<h2>Dagelijkse taken</h2>
+<ul>
+<li><a href="read-messages.html" aria-current="page">Berichten lezen</a></li>
+<li><a href="find-messages.html">Berichten zoeken</a></li>
+<li><a href="conversations.html">Gesprekken</a></li>
+<li><a href="organize-mail.html">Berichten markeren, archiveren en verplaatsen</a></li>
+<li><a href="message-rules.html">Nieuwe e-mail verwerken met regels</a></li>
+<li><a href="delete-and-undo.html">Berichten verwijderen en acties ongedaan maken</a></li>
+<li><a href="folders.html">Werken met mappen</a></li>
+<li><a href="write-message.html">Een bericht schrijven</a></li>
+<li><a href="reply-forward.html">Beantwoorden en doorsturen</a></li>
+<li><a href="attachments.html">Bijlagen</a></li>
+<li><a href="drafts-outbox.html">Concepten en het Postvak UIT</a></li>
+<li><a href="signatures.html">Handtekeningen</a></li>
+<li><a href="address-book.html">Het Adresboek</a></li>
+<li><a href="save-print-import.html">Berichten opslaan, afdrukken en importeren</a></li>
+<li><a href="new-mail.html">Nieuwe e-mail ophalen</a></li>
+</ul>
+<h2>Meerdere accounts</h2>
+<ul>
+<li><a href="all-inboxes.html">Alle Postvakken IN</a></li>
+<li><a href="manage-accounts.html">Accounts wijzigen, ordenen en verwijderen</a></li>
+<li><a href="move-computer.html">Naar een andere computer verhuizen</a></li>
+</ul>
+<h2>Berichtfuncties</h2>
+<ul>
+<li><a href="sign-in-codes.html">Aanmeldcodes</a></li>
+<li><a href="delivery-problems.html">Berichten die niet zijn bezorgd</a></li>
+<li><a href="invitations.html">Agenda-uitnodigingen</a></li>
+<li><a href="unsubscribe.html">Afmelden voor een mailinglijst</a></li>
+<li><a href="brand-logos.html">Merklogo’s</a></li>
+</ul>
+<h2>Versleutelde en ondertekende e-mail</h2>
+<ul>
+<li><a href="encrypted-and-signed-mail.html">Versleutelde en ondertekende e-mail</a></li>
+<li><a href="sign-and-encrypt.html">Een bericht ondertekenen en versleutelen</a></li>
+<li><a href="encryption-keys.html">Versleutelingssleutels</a></li>
+<li><a href="verify-a-key.html">De sleutel van een contactpersoon verifiëren</a></li>
+</ul>
+<h2>Instellingen</h2>
+<ul>
+<li><a href="options-language.html">Instellingen</a></li>
+<li><a href="download-ahead.html">Berichten vooraf downloaden</a></li>
+<li><a href="account-security.html">Beveiligingsinstellingen van een account</a></li>
+<li><a href="default-mail-program.html">Inbox Classic als standaardapp voor e-mail instellen</a></li>
+<li><a href="updates.html">Inbox Classic bijwerken</a></li>
+</ul>
+<h2>AI-agents</h2>
+<ul>
+<li><a href="agents-connect.html">Een AI-agent verbinden</a></li>
+<li><a href="agents-permissions.html">Wat een agent mag doen</a></li>
+<li><a href="agents-sending.html">Als een agent e-mail verzendt</a></li>
+</ul>
+<h2>Naslag</h2>
+<ul>
+<li><a href="keyboard-shortcuts.html">Sneltoetsen</a></li>
+<li><a href="search-words.html">Zoekoperatoren</a></li>
+</ul>
+<h2>Problemen oplossen</h2>
+<ul>
+<li><a href="password-not-accepted.html">Het wachtwoord wordt niet geaccepteerd</a></li>
+<li><a href="certificate-errors.html">Certificaatfouten</a></li>
+<li><a href="encryption-errors.html">Problemen met verbindingsbeveiliging</a></li>
+<li><a href="no-connection.html">Inbox Classic kan geen verbinding maken</a></li>
+<li><a href="message-not-shown.html">Een bericht wordt niet weergegeven</a></li>
+</ul>
+<h2>Privacy en beveiliging</h2>
+<ul>
+<li><a href="pictures-tracking.html">Afbeeldingen en tracking</a></li>
+<li><a href="links-scripts.html">Links, scripts en bijlagen</a></li>
+<li><a href="data-storage.html">Waar je e-mail en wachtwoorden worden bewaard</a></li>
+<li><a href="connections.html">De verbindingen die Inbox Classic maakt</a></li>
+<li><a href="removing.html">Inbox Classic verwijderen</a></li>
+</ul>
+<h2>Geavanceerd</h2>
+<ul>
+<li><a href="sign-in-apps.html">Aanmeldapps</a></li>
+<li><a href="command-line.html">Opdrachtregelopties</a></li>
+</ul>
+</nav>
+</nav><main>
+<h1>Berichten lezen</h1>
+<p class="summary">Lees een bericht in het leesvenster of in een apart venster en blader met het toetsenbord door je e-mail.</p>
+<p>Selecteer een bericht in de lijst om het in het leesvenster te zien, onder de afzender, de datum, de geadresseerden en het onderwerp. Een bericht wordt als gelezen gemarkeerd nadat het een seconde is getoond. De lijst toont de datum van elk bericht. Ligt die na het moment van ontvangst, dan wordt de ontvangstdatum gebruikt. Zo blijven berichten met een datum in de toekomst niet bovenaan staan.</p>
+<ul>
+    <li>Om het zelf te markeren, kies je <b>Bewerken</b> &gt; <b>Markeren als gelezen</b> (<kbd>Ctrl</kbd>+<kbd>Q</kbd>) of <b>Markeren als ongelezen</b>.</li>
+    <li>Om alle berichten van een map als gelezen te markeren, kies je <b>Bewerken</b> &gt; <b>Alles als gelezen markeren</b> (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>A</kbd>), of klik je met de rechtermuisknop op de map.</li>
+</ul>
+<h2>Alleen ongelezen berichten</h2>
+<p>Om alleen de berichten te tonen die je nog niet hebt gelezen, kies je <b>Beeld</b> &gt; <b>Gelezen berichten verbergen</b>, of klik je op de filterknop in de kopbalk. Het werkt in elke map en blijft aan tot je het uitzet. Een bericht dat als gelezen wordt gemarkeerd nadat je de huidige lijst hebt geopend, blijft zichtbaar tot je van lijst wisselt.</p>
+<h2>Een bericht in een apart venster</h2>
+<p>Dubbelklik op een bericht, of selecteer het en druk op <kbd>Enter</kbd>. Het venster heeft <b>Beantwoorden</b>, <b>Allen beantwoorden</b>, <b>Doorsturen</b>, <b>Afdrukken</b>, <b>Verwijderen</b>, <b>Archiveren</b> en <b>Ongewenst</b>. <b>Vorige</b> en <b>Volgende</b> bladeren door de oorspronkelijke berichtenlijst. Een concept wordt geopend in het opstelvenster, zodat je het kunt afmaken.</p>
+<h2>Lezen met het toetsenbord</h2>
+<ul>
+    <li><b>Beeld</b> &gt; <b>Volgend bericht</b> (<kbd>Ctrl</kbd>+<kbd>.</kbd>) en <b>Vorig bericht</b> (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>,</kbd>) gaan omlaag en omhoog in de lijst.</li>
+    <li><b>Beeld</b> &gt; <b>Volgend ongelezen bericht</b>, of <kbd>N</kbd> in de berichtenlijst, zoekt het volgende ongelezen bericht. Zijn er geen ongelezen berichten meer in deze map, dan stelt Inbox Classic de volgende map met ongelezen berichten voor.</li>
+    <li><b>Beeld</b> &gt; <b>Ga naar map</b> (<kbd>Ctrl</kbd>+<kbd>Y</kbd>) laat je een map uit een van je accounts kiezen. Typ een deel van de naam om de map te vinden.</li>
+    <li><b>Bewerken</b> &gt; <b>Zoeken in dit bericht</b> (<kbd>F3</kbd>) zoekt woorden in het getoonde bericht.</li>
+</ul>
+<h2>Eerdere berichten in een antwoord</h2>
+<p>Een antwoord bevat vaak de berichten die eraan voorafgingen. Inbox Classic klapt die berichten in. Klik op de knop ••• onder de nieuwe tekst om ze weer te geven.</p>
+<p>Vlak nadat je een account hebt toegevoegd, kan het venster melden dat een bericht nog wordt gedownload. Zie <a href="message-not-shown.html">Een bericht wordt niet weergegeven</a>.</p>
+
+<h2>Donkere modus</h2><p>Als je bureaublad in de donkere modus staat, krijgen berichten die je leest en schrijft ook een donkere achtergrond. Berichten met eigen achtergrondkleuren, zoals nieuwsbrieven en bonnetjes, houden hun oorspronkelijke uiterlijk, tenzij ze een donkere versie hebben. Afdrukken gebeurt altijd in de lichte modus. Om berichten in de lichte modus te houden, zet je <b>Berichten op een donkere achtergrond tonen als het systeem in de donkere modus staat</b> uit in <b>Hoofdmenu</b> &gt; <b>Voorkeuren</b> &gt; <b>Lezen</b>.</p>
+<h2>Tekstgrootte</h2>
+<p>Om berichten groter of kleiner te tonen, kies je <b>Beeld</b> &gt; <b>Tekstgrootte</b> en een grootte. Dit verandert ook de weergavegrootte terwijl je een bericht schrijft, zonder de opmaak te veranderen die de ontvangers zien. Kies <b>Gemiddeld</b> om terug te gaan naar de standaardgrootte.</p>
+<nav class="related"><a href="conversations.html">Gesprekken</a> <a href="organize-mail.html">Berichten markeren, archiveren en verplaatsen</a> <a href="message-not-shown.html">Een bericht wordt niet weergegeven</a></nav>
+</main></div>
+</body>
+</html>
