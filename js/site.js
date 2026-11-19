@@ -73,18 +73,20 @@
     let sizes = {
         windows: {
             'read-1-html': [1086, 753],
-            'account-1-form': [442, 311],
+            'account-1-form': [442, 341],
             'find-2-every-folder': [1086, 399],
             'pictures-4-list': [1086, 753],
             'write-5-new': [746, 400],
+            'write-31-encrypt': [746, 400],
             'agents-4-send': [602, 471]
         },
         mac: {
             'read-1-html': [1100, 811],
-            'account-1-form': [480, 403],
-            'find-2-every-folder': [1100, 430],
-            'pictures-4-list': [1100, 811],
+            'account-1-form': [480, 448],
+            'find-2-every-folder': [1100, 478],
+            'pictures-4-list': [1100, 805],
             'write-5-new': [760, 400],
+            'write-31-encrypt': [760, 400],
             'agents-4-send': [560, 445]
         },
         linux: {
@@ -93,6 +95,7 @@
             'find-2-every-folder': [1250, 398],
             'pictures-4-list': [1240, 740],
             'write-5-new': [750, 400],
+            'write-31-encrypt': [750, 400],
             'agents-4-send': [528, 481]
         }
     };
