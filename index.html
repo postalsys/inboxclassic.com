@@ -75,7 +75,37 @@
                             "https://inboxclassic.com/img/linux/read-1-html.png"
                         ],
                         "license": "https://opensource.org/licenses/MIT",
-                        "inLanguage": ["en", "de", "et", "fr", "es"],
+                        "inLanguage": [
+                            "en",
+                            "bg",
+                            "ca",
+                            "cs",
+                            "da",
+                            "de",
+                            "el",
+                            "es",
+                            "et",
+                            "fi",
+                            "fr",
+                            "hr",
+                            "hu",
+                            "it",
+                            "lt",
+                            "lv",
+                            "nb",
+                            "nl",
+                            "pl",
+                            "pt",
+                            "pt-BR",
+                            "ro",
+                            "ru",
+                            "sk",
+                            "sl",
+                            "sr-Latn",
+                            "sv",
+                            "tr",
+                            "uk"
+                        ],
                         "isAccessibleForFree": true,
                         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
                         "author": { "@id": "https://inboxclassic.com/#publisher" },
@@ -269,7 +299,8 @@
                             ></span>
                             <h3 class="text-lg font-semibold">Tidy up in a few clicks</h3>
                             <p class="text-base-content/70">
-                                Select many messages to flag, move or delete them at once, with Undo. Junk and one-click Unsubscribe deal with the rest.
+                                Select many messages to flag, move or delete them at once, with Undo. Message rules sort new mail as it arrives, and Junk and
+                                one-click Unsubscribe deal with the rest.
                             </p>
                         </div>
                     </div>
@@ -280,7 +311,7 @@
                             ></span>
                             <h3 class="text-lg font-semibold">At home on your system</h3>
                             <p class="text-base-content/70">
-                                Classic Windows controls on Windows, a native app on the Mac and on Linux, in English, German, French, Spanish or Estonian.
+                                Classic Windows controls on Windows, a native app on the Mac and on Linux, in your language: 29 of them, with the help in each.
                             </p>
                         </div>
                     </div>
@@ -295,8 +326,8 @@
                             data-shot="account-1-form"
                             src="img/windows/account-1-form.png"
                             width="442"
-                            height="311"
-                            alt="Add Mail Account: Sign in with Microsoft, more sign-in options, or a name and address"
+                            height="341"
+                            alt="Add Mail Account: Sign in with Google or Microsoft, more sign-in options, a name and address, or an import from another computer"
                             loading="lazy"
                         />
                         <div class="order-first lg:order-none">
@@ -355,8 +386,9 @@
                             <span class="icon-[tabler--pencil] text-primary size-7"></span>
                             <h3 class="mt-2 text-2xl font-bold">Write the way you always have</h3>
                             <p class="text-base-content/70 mt-2 text-lg">
-                                Formatting when you want it, plain text when you don't, and a signature for each account. Addresses complete as you type. Drag
-                                files in to attach them. If you are offline, the message waits in the Outbox and goes by itself.
+                                Formatting when you want it, plain text when you don't, and a signature for each account. Addresses complete as you type, and
+                                drafts save themselves as you write. Undo Send gives you a few seconds to change your mind, and if you are offline, the message
+                                waits in the Outbox and goes by itself.
                             </p>
                         </div>
                         <img
@@ -370,15 +402,41 @@
                         />
                     </div>
 
+                    <div class="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
+                        <img
+                            class="app-shot mx-auto max-w-[760px] lg:order-first"
+                            data-shot="write-31-encrypt"
+                            src="img/windows/write-31-encrypt.png"
+                            width="746"
+                            height="400"
+                            alt="The compose window with Sign and Encrypt on: a green line says the message will be encrypted and signed for you and Alice Example"
+                            loading="lazy"
+                        />
+                        <div class="order-first lg:order-none">
+                            <span class="icon-[tabler--lock] text-primary size-7"></span>
+                            <h3 class="mt-2 text-2xl font-bold">Encrypted mail, built in</h3>
+                            <p class="text-base-content/70 mt-2 text-lg">
+                                Sign and encrypt with OpenPGP, no plug-ins needed. The keys of the people you write to are found for you, and a line under the
+                                fields says who can read the message. Signed and encrypted mail you receive carries a bar saying who signed it.
+                            </p>
+                        </div>
+                    </div>
+
                     <div>
                         <h3 class="text-2xl font-bold">And the rest you expect</h3>
                         <ul class="text-base-content/80 mt-6 grid gap-x-8 gap-y-4 sm:grid-cols-2 lg:grid-cols-3">
+                            <li class="flex items-center gap-3">
+                                <span class="icon-[tabler--photo] text-primary size-5 shrink-0"></span><span>Pictures and PDF pages shown in the message</span>
+                            </li>
                             <li class="flex items-center gap-3">
                                 <span class="icon-[tabler--folders] text-primary size-5 shrink-0"></span><span>Flags in seven colours, drag and drop</span>
                             </li>
                             <li class="flex items-center gap-3">
                                 <span class="icon-[tabler--arrows-exchange] text-primary size-5 shrink-0"></span
                                 ><span>Move and copy mail between accounts</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="icon-[tabler--send] text-primary size-5 shrink-0"></span><span>All Sent and All Drafts across accounts</span>
                             </li>
                             <li class="flex items-center gap-3">
                                 <span class="icon-[tabler--mail-forward] text-primary size-5 shrink-0"></span
@@ -401,6 +459,10 @@
                             </li>
                             <li class="flex items-center gap-3">
                                 <span class="icon-[tabler--filter] text-primary size-5 shrink-0"></span><span>Show only unread mail with one click</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="icon-[tabler--device-laptop] text-primary size-5 shrink-0"></span
+                                ><span>Settings and accounts moved to a new computer in one file</span>
                             </li>
                         </ul>
                     </div>
@@ -443,7 +505,8 @@
                                     <div>
                                         <h3 class="font-semibold">See it, undo it</h3>
                                         <p class="text-base-content/70">
-                                            Changes show in the window as they happen. Tools &gt; AI Agents lists everything each agent did, with Undo.
+                                            Changes show in the window as they happen. Tools &gt; AI Agents lists what each agent read and changed, and Undo
+                                            takes back one change or everything since a time you choose.
                                         </p>
                                     </div>
                                 </li>
@@ -527,7 +590,7 @@
                             <h3 class="text-lg font-semibold">Which systems and languages?</h3>
                             <p class="text-base-content/70">
                                 Windows 10 and 11, macOS 26 or newer on Apple silicon, Ubuntu 26.04 or newer, Arch Linux and Omarchy, all with the same layout
-                                and features. It follows your system's language: English, German, Estonian, French or Spanish.
+                                and features. It follows your system's language, one of 29 from Catalan to Ukrainian, or the one you choose in its settings.
                             </p>
                         </div>
                     </div>
