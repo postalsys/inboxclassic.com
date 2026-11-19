@@ -3,6 +3,24 @@
     <channel>
         <title>Inbox Classic</title>
         <item>
+            <title>0.19.1</title>
+            <pubDate>Fri, 20 Nov 2026 00:37:06 +0200</pubDate>
+            <sparkle:version>0.19.1</sparkle:version>
+            <sparkle:shortVersionString>0.19.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## [0.19.1](https://github.com/postalsys/inbox-classic/compare/v0.19.0...v0.19.1) (2026-11-19)
+
+Two fixes for 0.19.0.
+
+### Bug Fixes
+
+* **On Linux, a large folder's list no longer goes blank.** In a folder of more than 800 messages, choosing another folder and coming back, or a sync in the background, could leave the list's rows empty, and a row selected opened nothing.
+* **On the Mac, the Tools menu now has Message Rules and Encryption Keys, and the Message menu has Create Rule from Message.** They were missing from the menu bar, so rules and keys, such as importing a key you already have, could not be reached there.
+]]></description>
+            <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.19.1/InboxClassic.dmg" length="27433239" type="application/octet-stream" sparkle:edSignature="mY4N6AjKT6D8mK5lBd2g7yrbUzgHmQdHrEagyn/wIq1tlQJt1MNjJj2WLtgnJgJuteNs0tQScS2V+xfFAdLxCQ=="/>
+        </item>
+        <item>
             <title>0.19.0</title>
             <pubDate>Thu, 19 Nov 2026 21:26:45 +0200</pubDate>
             <sparkle:version>0.19.0</sparkle:version>
@@ -65,23 +83,6 @@ Safer sending, message rules and reading comfort.
 ### Bug Fixes
 ]]></description>
             <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.18.0/InboxClassic.dmg" length="12456545" type="application/octet-stream" sparkle:edSignature="nD6nCzvIMx1+jOWNbQzMJxLk2c8vzSJfm/YmkLErkC6PTsLKtx/4fVoB6K7Pa6sr/jQVVmXXI3dxgMI+l0mfDQ=="/>
-        </item>
-        <item>
-            <title>0.17.1</title>
-            <pubDate>Sat, 14 Nov 2026 13:45:53 +0200</pubDate>
-            <sparkle:version>0.17.1</sparkle:version>
-            <sparkle:shortVersionString>0.17.1</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## [0.17.1](https://github.com/postalsys/inbox-classic/compare/v0.17.0...v0.17.1) (2026-11-14)
-
-Reviewed translations.
-
-### Bug Fixes
-
-* **Clearer wording in every language.** The German, Estonian, Spanish and French translations are reviewed, and the English is plainer too: Options names the download setting a storage limit for each account, the pictures settings speak of verified sender domains, and the .eml setting of the default app. The help pages say the same.
-]]></description>
-            <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.17.1/InboxClassic.dmg" length="12219080" type="application/octet-stream" sparkle:edSignature="gg0DBsZtw+F8mrYLqC/Z9Ikbl8+hG/3vsEKMMlqbaQFpUYz5ZuzpMWf3+VjuJAsob/Y0nxUXOKZrTxyDM31kDw=="/>
         </item>
     </channel>
 </rss>
