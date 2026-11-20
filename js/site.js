@@ -91,7 +91,7 @@
         },
         linux: {
             'read-1-html': [1250, 750],
-            'account-1-form': [551, 459],
+            'account-1-form': [540, 504],
             'find-2-every-folder': [1250, 398],
             'pictures-4-list': [1240, 740],
             'write-5-new': [750, 400],
