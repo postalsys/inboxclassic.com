@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'">
+<title>代理程式可以做什麼</title>
+<style>body{margin:16px 24px;line-height:1.5}body>:not(.web),main{max-width:42em}h1{font-size:1.6em;margin:0 0 4px}h2{font-size:1.2em;margin:1.4em 0 .4em}p.summary{font-size:1.05em;opacity:.8;margin-top:0}ol,ul{padding-left:1.6em}li{margin:.3em 0}table{border-collapse:collapse;margin:.6em 0}th,td{text-align:left;padding:4px 12px 4px 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent);vertical-align:top}kbd{font-size:.9em;border:1px solid color-mix(in srgb,currentColor 35%,transparent);border-bottom-width:2px;border-radius:4px;padding:0 4px;white-space:nowrap}aside{padding:8px 12px;margin:.8em 0}.side a[aria-current]{font-weight:700;text-decoration:none}aside.warning{border-left:4px solid #c60}img.picture{max-width:100%;height:auto;margin:.6em 0;border:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related{margin-top:1.6em;padding-top:.6em;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related a{margin-right:1.2em}p.home{margin:0 0 1em;font-size:.9em}header.bar{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;max-width:none;padding:0 0 12px;margin:0 0 20px;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}header.bar .brand{font-weight:700;text-decoration:none;margin-right:auto}header.bar a,header.bar b{margin-right:10px}.web{display:flex;gap:32px}.web .side{flex:0 0 240px;font-size:.92em}.web .side ul{padding-left:1.1em}.web main{flex:1;min-width:0}@media(max-width:700px){.web{display:block}.web .side{display:none}}body{font:10pt Tahoma,Arial,sans-serif;color:#000;background:#fff}h1,h2{color:#036}h2{border-bottom:1px solid #9ab}a{color:#03c}aside.note,aside.warning{background:#ffffe1;border:1px solid #c9c9a0}kbd{background:#f4f4f4;border-color:#999}body.windows,body.mac,body.linux{font:16px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif;margin:0;background:#f7f7fb;color:#1f2330}header.bar{max-width:1180px;margin:0 auto;padding:14px 24px;border-bottom:1px solid #e3e3ee}header.bar .brand{color:#3d4aa8;font-size:1.1em}header.bar a{color:#3d4aa8}.web{max-width:1180px;margin:0 auto;padding:24px}.web main{background:#fff;border-radius:12px;padding:28px 36px;box-shadow:0 1px 3px rgba(20,20,60,.08)}.web .side{position:sticky;top:16px;align-self:flex-start;max-height:calc(100vh - 32px);overflow:auto}.web .side a{color:#30395e;text-decoration:none}.web .side a:hover,.web main a{color:#3d4aa8}h1,h2{color:#1f2330}h2{border-bottom:none}aside.note,aside.warning{background:#f1f2fb;border:1px solid #e0e2f5;border-radius:10px}@media(prefers-color-scheme:dark){body.windows,body.mac,body.linux{background:#14151c;color:#e6e7ef}.web main{background:#1d1f29;box-shadow:none}header.bar{border-color:#2c2f3d}.web .side a{color:#c5c9e6}h1,h2{color:#e6e7ef}aside.note,aside.warning{background:#232637;border-color:#30344a}header.bar a,header.bar .brand,.web main a,.web .side a:hover{color:#9aa6ff}}</style>
+</head>
+<body class="windows">
+<header class="bar"><a class="brand" href="/">Inbox Classic</a><span class="platforms"><b>Windows</b> <a href="../mac/agents-permissions.html">Mac</a> <a href="../linux/agents-permissions.html">Linux</a></span><span class="languages"><a href="../../en/windows/agents-permissions.html" hreflang="en">English</a> <a href="../../id/windows/agents-permissions.html" hreflang="id">Bahasa Indonesia</a> <a href="../../ca/windows/agents-permissions.html" hreflang="ca">Català</a> <a href="../../cs/windows/agents-permissions.html" hreflang="cs">Čeština</a> <a href="../../da/windows/agents-permissions.html" hreflang="da">Dansk</a> <a href="../../de/windows/agents-permissions.html" hreflang="de">Deutsch</a> <a href="../../et/windows/agents-permissions.html" hreflang="et">Eesti</a> <a href="../../es/windows/agents-permissions.html" hreflang="es">Español</a> <a href="../../fr/windows/agents-permissions.html" hreflang="fr">Français</a> <a href="../../hr/windows/agents-permissions.html" hreflang="hr">Hrvatski</a> <a href="../../it/windows/agents-permissions.html" hreflang="it">Italiano</a> <a href="../../lv/windows/agents-permissions.html" hreflang="lv">Latviešu</a> <a href="../../lt/windows/agents-permissions.html" hreflang="lt">Lietuvių</a> <a href="../../hu/windows/agents-permissions.html" hreflang="hu">Magyar</a> <a href="../../nl/windows/agents-permissions.html" hreflang="nl">Nederlands</a> <a href="../../nb/windows/agents-permissions.html" hreflang="nb">Norsk bokmål</a> <a href="../../pl/windows/agents-permissions.html" hreflang="pl">Polski</a> <a href="../../pt-BR/windows/agents-permissions.html" hreflang="pt-BR">Português (Brasil)</a> <a href="../../pt/windows/agents-permissions.html" hreflang="pt">Português (Portugal)</a> <a href="../../ro/windows/agents-permissions.html" hreflang="ro">Română</a> <a href="../../sk/windows/agents-permissions.html" hreflang="sk">Slovenčina</a> <a href="../../sl/windows/agents-permissions.html" hreflang="sl">Slovenščina</a> <a href="../../sr-Latn/windows/agents-permissions.html" hreflang="sr-Latn">Srpski</a> <a href="../../fi/windows/agents-permissions.html" hreflang="fi">Suomi</a> <a href="../../sv/windows/agents-permissions.html" hreflang="sv">Svenska</a> <a href="../../vi/windows/agents-permissions.html" hreflang="vi">Tiếng Việt</a> <a href="../../tr/windows/agents-permissions.html" hreflang="tr">Türkçe</a> <a href="../../el/windows/agents-permissions.html" hreflang="el">Ελληνικά</a> <a href="../../bg/windows/agents-permissions.html" hreflang="bg">Български</a> <a href="../../ru/windows/agents-permissions.html" hreflang="ru">Русский</a> <a href="../../uk/windows/agents-permissions.html" hreflang="uk">Українська</a> <a href="../../ja/windows/agents-permissions.html" hreflang="ja">日本語</a> <a href="../../zh-Hans/windows/agents-permissions.html" hreflang="zh-Hans">简体中文</a> <b>繁體中文</b> <a href="../../ko/windows/agents-permissions.html" hreflang="ko">한국어</a></span></header>
+<div class="web"><nav class="side"><nav class="contents">
+<h2>開始使用</h2>
+<ul>
+<li><a href="add-account.html">新增郵件帳戶</a></li>
+<li><a href="gmail-outlook.html">Gmail 和 Outlook.com</a></li>
+<li><a href="main-window.html">主視窗</a></li>
+<li><a href="layouts.html">版面配置</a></li>
+</ul>
+<h2>日常工作</h2>
+<ul>
+<li><a href="read-messages.html">閱讀郵件</a></li>
+<li><a href="find-messages.html">尋找郵件</a></li>
+<li><a href="conversations.html">交談</a></li>
+<li><a href="organize-mail.html">標幟、封存和移動郵件</a></li>
+<li><a href="message-rules.html">使用規則分類新郵件</a></li>
+<li><a href="delete-and-undo.html">刪除郵件與復原</a></li>
+<li><a href="folders.html">使用資料夾</a></li>
+<li><a href="write-message.html">撰寫郵件</a></li>
+<li><a href="reply-forward.html">回覆和轉寄</a></li>
+<li><a href="attachments.html">附件</a></li>
+<li><a href="drafts-outbox.html">草稿和寄件匣</a></li>
+<li><a href="signatures.html">簽名</a></li>
+<li><a href="address-book.html">通訊錄</a></li>
+<li><a href="save-print-import.html">儲存、列印和匯入郵件</a></li>
+<li><a href="new-mail.html">取得新郵件</a></li>
+</ul>
+<h2>多個帳戶</h2>
+<ul>
+<li><a href="all-inboxes.html">所有收件匣</a></li>
+<li><a href="manage-accounts.html">變更、排列和移除帳戶</a></li>
+<li><a href="move-computer.html">移到另一部電腦</a></li>
+</ul>
+<h2>郵件功能</h2>
+<ul>
+<li><a href="sign-in-codes.html">登入代碼</a></li>
+<li><a href="delivery-problems.html">未送達的郵件</a></li>
+<li><a href="invitations.html">行事曆邀請</a></li>
+<li><a href="unsubscribe.html">退出郵寄清單</a></li>
+<li><a href="brand-logos.html">品牌標誌</a></li>
+</ul>
+<h2>加密及簽署的郵件</h2>
+<ul>
+<li><a href="encrypted-and-signed-mail.html">加密和已簽署的郵件</a></li>
+<li><a href="sign-and-encrypt.html">簽署和加密郵件</a></li>
+<li><a href="encryption-keys.html">加密金鑰</a></li>
+<li><a href="verify-a-key.html">驗證連絡人的金鑰</a></li>
+</ul>
+<h2>設定</h2>
+<ul>
+<li><a href="options-language.html">設定</a></li>
+<li><a href="download-ahead.html">預先下載的郵件</a></li>
+<li><a href="account-security.html">帳戶的安全性設定</a></li>
+<li><a href="default-mail-program.html">將 Inbox Classic 設為您的郵件應用程式</a></li>
+<li><a href="updates.html">更新 Inbox Classic</a></li>
+</ul>
+<h2>AI 代理程式</h2>
+<ul>
+<li><a href="agents-connect.html">連接 AI 代理程式</a></li>
+<li><a href="agents-permissions.html" aria-current="page">代理程式可以做什麼</a></li>
+<li><a href="agents-sending.html">代理程式寄送郵件時</a></li>
+</ul>
+<h2>參考資料</h2>
+<ul>
+<li><a href="keyboard-shortcuts.html">鍵盤快速鍵</a></li>
+<li><a href="search-words.html">搜尋字詞</a></li>
+</ul>
+<h2>疑難排解</h2>
+<ul>
+<li><a href="password-not-accepted.html">密碼不被接受</a></li>
+<li><a href="certificate-errors.html">憑證錯誤</a></li>
+<li><a href="encryption-errors.html">加密錯誤</a></li>
+<li><a href="no-connection.html">Inbox Classic 無法連線</a></li>
+<li><a href="message-not-shown.html">郵件沒有顯示</a></li>
+</ul>
+<h2>隱私權與安全性</h2>
+<ul>
+<li><a href="pictures-tracking.html">圖片和追蹤</a></li>
+<li><a href="links-scripts.html">連結、指令碼和附件</a></li>
+<li><a href="data-storage.html">您的郵件和密碼存放在哪裡</a></li>
+<li><a href="connections.html">Inbox Classic 建立的連線</a></li>
+<li><a href="removing.html">移除 Inbox Classic</a></li>
+</ul>
+<h2>進階</h2>
+<ul>
+<li><a href="sign-in-apps.html">登入應用程式</a></li>
+<li><a href="command-line.html">命令列選項</a></li>
+</ul>
+</nav>
+</nav><main>
+<h1>代理程式可以做什麼</h1>
+<p class="summary">選擇每個 AI 代理程式可以對您的郵件做什麼，並查看及復原它做過的事。</p>
+<p>某個程式的代理程式第一次連線時，Inbox Classic 會指出該程式的名稱並詢問您。請選擇它可以做什麼：</p>
+<ul>
+    <li>讀取郵件：資料夾、清單、交談、搜尋、郵件、規則和人員。支援的 PDF、Office 和圖片附件最大 10 MB；文字附件最大 256 KB</li>
+    <li>整理郵件：已讀取狀態、標幟及其色彩、垃圾郵件、移動、封存、新資料夾、重新命名您自己的資料夾、監看和忽略交談、刪除至<b>刪除的郵件</b>，以及在您同意後退出郵寄清單。部分郵件動作也可以套用在搜尋結果上，如下所述</li>
+    <li>撰寫草稿供您寄出，並在您儲存或寄出之前（包括編輯器的自動儲存）變更或移除它寫的草稿</li>
+    <li>寄送郵件，每封都要經您同意後才寄出</li>
+</ul>
+<p>接著選擇它可以看到的帳戶，然後按一下<b>允許</b>。<b>不允許</b>會拒絕該程式，之後也不會再詢問您。</p>
+<p>代理程式絕不會變更您的帳戶設定，除了它自己的草稿以外，也不會永久刪除任何東西：當它捨棄一份它寫的、您尚未儲存的草稿時，會要求永久刪除，而不會將草稿移至<b>刪除的郵件</b>。它可以讀取並試用您的郵件規則，但絕不能建立、變更或刪除規則。對於加密郵件，它只能看到外層資訊，看不到解密後的文字或附件。讀取郵件不會將郵件標示為已讀。它所做的變更會立即顯示在視窗中。</p>
+<h2>退出郵寄清單</h2>
+<p>可以整理郵件的代理程式可以要求替您取消訂閱郵寄清單。Inbox Classic 會先詢問您一次，依寄件者列出每份清單：</p>
+<ul>
+    <li><b>取消訂閱</b>會要求每份清單停止寄信給您。</li>
+    <li><b>不要取消訂閱</b>是預設選項，維持清單原狀。</li>
+</ul>
+<p>代理程式無法依據<b>垃圾郵件</b>、<b>寄件備份</b>或<b>草稿</b>中的郵件替您取消訂閱。每個程式在 24 小時內最多只能獲准 30 個要求，失敗的要求也包括在內。記錄中記下的是要求送出前的核准，而不是郵件已停止寄送的確認。</p>
+<h2>一次變更許多郵件</h2>
+<p>具有整理權限的代理程式可以變更搜尋結果的已讀取狀態、標幟、色彩、資料夾或垃圾郵件狀態。它會先計算符合條件的郵件數目，並查看範例。符合條件的郵件超過 1,000 封，或要檢查的搜尋結果超過 10,000 個時，它會拒絕這項要求。接著它會重新檢查選取的郵件，略過不再符合條件的郵件，並排除之後才送達的郵件。不需要再次核准。記錄只顯示一列；復原可能只會還原其中部分郵件。</p>
+<h2>查看和變更存取權</h2>
+<p><b>工具</b> &gt; <b>AI 代理程式</b>會列出您允許或拒絕的程式，以及代理程式做過的所有事，最新的在最前面。</p>
+<p>代理程式讀取的內容，每個程式每小時顯示為一列，例如「讀取了14封郵件和搜尋了3次」。選取該列，即可查看主旨、檔案名稱和搜尋內容，但不含郵件內文。新增項目時，超過 30 天的項目會被移除；部分變更可能更早被清除。清除記錄會移除讀取記錄並隱藏變更，但不會重設寄送或取消訂閱的限制。</p>
+<ul>
+    <li><b>變更</b>可變更程式能做的事。</li>
+    <li><b>移除</b>會移除程式已儲存的存取權和記錄，下次會再詢問您。這不會解除安裝該程式。</li>
+    <li><b>復原</b>可復原已讀取狀態、標幟或其色彩、移動、垃圾郵件標記、封存或刪除等變更，並取消傳送仍在寄件匣中等候的郵件。</li>
+    <li><b>復原自</b>會嘗試還原所選程式在您選擇的期間內所做的變更，從最新的開始。計數的是記錄項目，而不是個別郵件。</li>
+</ul>
+<p>復原會略過已不在預期位置或狀態的郵件。即使只有部分成功，記錄項目也算已還原。代理程式可以復原自己的變更，但絕不能復原其他程式的變更。</p>
+<aside class="warning">郵件是別人寫的，郵件可能試圖誘使代理程式轉寄或刪除您的郵件。Inbox Classic 會對代理程式隱藏郵件對您隱藏的文字，並告訴代理程式郵件內容不是指示。代理程式仍可能受騙。請只允許您需要的權限。</aside>
+<nav class="related"><a href="agents-connect.html">連接 AI 代理程式</a> <a href="agents-sending.html">代理程式寄送郵件時</a> <a href="data-storage.html">您的郵件和密碼存放在哪裡</a></nav>
+</main></div>
+</body>
+</html>

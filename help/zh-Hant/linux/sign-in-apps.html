@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'">
+<title>登入應用程式</title>
+<style>body{margin:16px 24px;line-height:1.5}body>:not(.web),main{max-width:42em}h1{font-size:1.6em;margin:0 0 4px}h2{font-size:1.2em;margin:1.4em 0 .4em}p.summary{font-size:1.05em;opacity:.8;margin-top:0}ol,ul{padding-left:1.6em}li{margin:.3em 0}table{border-collapse:collapse;margin:.6em 0}th,td{text-align:left;padding:4px 12px 4px 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent);vertical-align:top}kbd{font-size:.9em;border:1px solid color-mix(in srgb,currentColor 35%,transparent);border-bottom-width:2px;border-radius:4px;padding:0 4px;white-space:nowrap}aside{padding:8px 12px;margin:.8em 0}.side a[aria-current]{font-weight:700;text-decoration:none}aside.warning{border-left:4px solid #c60}img.picture{max-width:100%;height:auto;margin:.6em 0;border:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related{margin-top:1.6em;padding-top:.6em;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related a{margin-right:1.2em}p.home{margin:0 0 1em;font-size:.9em}header.bar{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;max-width:none;padding:0 0 12px;margin:0 0 20px;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}header.bar .brand{font-weight:700;text-decoration:none;margin-right:auto}header.bar a,header.bar b{margin-right:10px}.web{display:flex;gap:32px}.web .side{flex:0 0 240px;font-size:.92em}.web .side ul{padding-left:1.1em}.web main{flex:1;min-width:0}@media(max-width:700px){.web{display:block}.web .side{display:none}}:root{color-scheme:light dark}body{font:11pt system-ui,'Adwaita Sans',Cantarell,sans-serif;color:CanvasText;background:Canvas}a{color:#1c71d8}@media(prefers-color-scheme:dark){a{color:#78aeed}}aside.note,aside.warning{background:color-mix(in srgb,CanvasText 6%,Canvas);border-radius:12px}body.windows,body.mac,body.linux{font:16px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif;margin:0;background:#f7f7fb;color:#1f2330}header.bar{max-width:1180px;margin:0 auto;padding:14px 24px;border-bottom:1px solid #e3e3ee}header.bar .brand{color:#3d4aa8;font-size:1.1em}header.bar a{color:#3d4aa8}.web{max-width:1180px;margin:0 auto;padding:24px}.web main{background:#fff;border-radius:12px;padding:28px 36px;box-shadow:0 1px 3px rgba(20,20,60,.08)}.web .side{position:sticky;top:16px;align-self:flex-start;max-height:calc(100vh - 32px);overflow:auto}.web .side a{color:#30395e;text-decoration:none}.web .side a:hover,.web main a{color:#3d4aa8}h1,h2{color:#1f2330}h2{border-bottom:none}aside.note,aside.warning{background:#f1f2fb;border:1px solid #e0e2f5;border-radius:10px}@media(prefers-color-scheme:dark){body.windows,body.mac,body.linux{background:#14151c;color:#e6e7ef}.web main{background:#1d1f29;box-shadow:none}header.bar{border-color:#2c2f3d}.web .side a{color:#c5c9e6}h1,h2{color:#e6e7ef}aside.note,aside.warning{background:#232637;border-color:#30344a}header.bar a,header.bar .brand,.web main a,.web .side a:hover{color:#9aa6ff}}</style>
+</head>
+<body class="linux">
+<header class="bar"><a class="brand" href="/">Inbox Classic</a><span class="platforms"><a href="../windows/sign-in-apps.html">Windows</a> <a href="../mac/sign-in-apps.html">Mac</a> <b>Linux</b></span><span class="languages"><a href="../../en/linux/sign-in-apps.html" hreflang="en">English</a> <a href="../../id/linux/sign-in-apps.html" hreflang="id">Bahasa Indonesia</a> <a href="../../ca/linux/sign-in-apps.html" hreflang="ca">Català</a> <a href="../../cs/linux/sign-in-apps.html" hreflang="cs">Čeština</a> <a href="../../da/linux/sign-in-apps.html" hreflang="da">Dansk</a> <a href="../../de/linux/sign-in-apps.html" hreflang="de">Deutsch</a> <a href="../../et/linux/sign-in-apps.html" hreflang="et">Eesti</a> <a href="../../es/linux/sign-in-apps.html" hreflang="es">Español</a> <a href="../../fr/linux/sign-in-apps.html" hreflang="fr">Français</a> <a href="../../hr/linux/sign-in-apps.html" hreflang="hr">Hrvatski</a> <a href="../../it/linux/sign-in-apps.html" hreflang="it">Italiano</a> <a href="../../lv/linux/sign-in-apps.html" hreflang="lv">Latviešu</a> <a href="../../lt/linux/sign-in-apps.html" hreflang="lt">Lietuvių</a> <a href="../../hu/linux/sign-in-apps.html" hreflang="hu">Magyar</a> <a href="../../nl/linux/sign-in-apps.html" hreflang="nl">Nederlands</a> <a href="../../nb/linux/sign-in-apps.html" hreflang="nb">Norsk bokmål</a> <a href="../../pl/linux/sign-in-apps.html" hreflang="pl">Polski</a> <a href="../../pt-BR/linux/sign-in-apps.html" hreflang="pt-BR">Português (Brasil)</a> <a href="../../pt/linux/sign-in-apps.html" hreflang="pt">Português (Portugal)</a> <a href="../../ro/linux/sign-in-apps.html" hreflang="ro">Română</a> <a href="../../sk/linux/sign-in-apps.html" hreflang="sk">Slovenčina</a> <a href="../../sl/linux/sign-in-apps.html" hreflang="sl">Slovenščina</a> <a href="../../sr-Latn/linux/sign-in-apps.html" hreflang="sr-Latn">Srpski</a> <a href="../../fi/linux/sign-in-apps.html" hreflang="fi">Suomi</a> <a href="../../sv/linux/sign-in-apps.html" hreflang="sv">Svenska</a> <a href="../../vi/linux/sign-in-apps.html" hreflang="vi">Tiếng Việt</a> <a href="../../tr/linux/sign-in-apps.html" hreflang="tr">Türkçe</a> <a href="../../el/linux/sign-in-apps.html" hreflang="el">Ελληνικά</a> <a href="../../bg/linux/sign-in-apps.html" hreflang="bg">Български</a> <a href="../../ru/linux/sign-in-apps.html" hreflang="ru">Русский</a> <a href="../../uk/linux/sign-in-apps.html" hreflang="uk">Українська</a> <a href="../../ja/linux/sign-in-apps.html" hreflang="ja">日本語</a> <a href="../../zh-Hans/linux/sign-in-apps.html" hreflang="zh-Hans">简体中文</a> <b>繁體中文</b> <a href="../../ko/linux/sign-in-apps.html" hreflang="ko">한국어</a></span></header>
+<div class="web"><nav class="side"><nav class="contents">
+<h2>開始使用</h2>
+<ul>
+<li><a href="add-account.html">新增郵件帳戶</a></li>
+<li><a href="gmail-outlook.html">Gmail 和 Outlook.com</a></li>
+<li><a href="main-window.html">主視窗</a></li>
+<li><a href="layouts.html">版面配置</a></li>
+</ul>
+<h2>日常工作</h2>
+<ul>
+<li><a href="read-messages.html">閱讀郵件</a></li>
+<li><a href="find-messages.html">尋找郵件</a></li>
+<li><a href="conversations.html">交談</a></li>
+<li><a href="organize-mail.html">標幟、封存和移動郵件</a></li>
+<li><a href="message-rules.html">使用規則分類新郵件</a></li>
+<li><a href="delete-and-undo.html">刪除郵件與復原</a></li>
+<li><a href="folders.html">使用資料夾</a></li>
+<li><a href="write-message.html">撰寫郵件</a></li>
+<li><a href="reply-forward.html">回覆和轉寄</a></li>
+<li><a href="attachments.html">附件</a></li>
+<li><a href="drafts-outbox.html">草稿和寄件匣</a></li>
+<li><a href="signatures.html">簽名</a></li>
+<li><a href="address-book.html">通訊錄</a></li>
+<li><a href="save-print-import.html">儲存、列印和匯入郵件</a></li>
+<li><a href="new-mail.html">取得新郵件</a></li>
+</ul>
+<h2>多個帳戶</h2>
+<ul>
+<li><a href="all-inboxes.html">所有收件匣</a></li>
+<li><a href="manage-accounts.html">變更、排列和移除帳戶</a></li>
+<li><a href="move-computer.html">移到另一部電腦</a></li>
+</ul>
+<h2>郵件功能</h2>
+<ul>
+<li><a href="sign-in-codes.html">登入代碼</a></li>
+<li><a href="delivery-problems.html">未送達的郵件</a></li>
+<li><a href="invitations.html">行事曆邀請</a></li>
+<li><a href="unsubscribe.html">退出郵寄清單</a></li>
+<li><a href="brand-logos.html">品牌標誌</a></li>
+</ul>
+<h2>加密及簽署的郵件</h2>
+<ul>
+<li><a href="encrypted-and-signed-mail.html">加密和已簽署的郵件</a></li>
+<li><a href="sign-and-encrypt.html">簽署和加密郵件</a></li>
+<li><a href="encryption-keys.html">加密金鑰</a></li>
+<li><a href="verify-a-key.html">驗證連絡人的金鑰</a></li>
+</ul>
+<h2>設定</h2>
+<ul>
+<li><a href="options-language.html">設定</a></li>
+<li><a href="download-ahead.html">預先下載的郵件</a></li>
+<li><a href="account-security.html">帳戶的安全性設定</a></li>
+<li><a href="default-mail-program.html">將 Inbox Classic 設為您的郵件應用程式</a></li>
+<li><a href="updates.html">更新 Inbox Classic</a></li>
+</ul>
+<h2>AI 代理程式</h2>
+<ul>
+<li><a href="agents-connect.html">連接 AI 代理程式</a></li>
+<li><a href="agents-permissions.html">代理程式可以做什麼</a></li>
+<li><a href="agents-sending.html">代理程式寄送郵件時</a></li>
+</ul>
+<h2>參考資料</h2>
+<ul>
+<li><a href="keyboard-shortcuts.html">鍵盤快速鍵</a></li>
+<li><a href="search-words.html">搜尋字詞</a></li>
+</ul>
+<h2>疑難排解</h2>
+<ul>
+<li><a href="password-not-accepted.html">密碼不被接受</a></li>
+<li><a href="certificate-errors.html">憑證錯誤</a></li>
+<li><a href="encryption-errors.html">加密錯誤</a></li>
+<li><a href="no-connection.html">Inbox Classic 無法連線</a></li>
+<li><a href="message-not-shown.html">郵件沒有顯示</a></li>
+</ul>
+<h2>隱私權與安全性</h2>
+<ul>
+<li><a href="pictures-tracking.html">圖片和追蹤</a></li>
+<li><a href="links-scripts.html">連結、指令碼和附件</a></li>
+<li><a href="data-storage.html">您的郵件和密碼存放在哪裡</a></li>
+<li><a href="connections.html">Inbox Classic 建立的連線</a></li>
+<li><a href="removing.html">移除 Inbox Classic</a></li>
+</ul>
+<h2>進階</h2>
+<ul>
+<li><a href="sign-in-apps.html" aria-current="page">登入應用程式</a></li>
+<li><a href="command-line.html">命令列選項</a></li>
+</ul>
+</nav>
+</nav><main>
+<h1>登入應用程式</h1>
+<p class="summary">向 Google、Microsoft 或相容的 OpenID Connect 服務提供者註冊您自己的登入應用程式，以便透過瀏覽器登入。</p>
+<p>透過瀏覽器登入時，會使用一個已向服務提供者註冊的 OAuth 用戶端。Inbox Classic 有自己的 Google 和 Microsoft 用戶端。在這個設定下，內建的 Google 用戶端只保留給測試使用者，因此<b>使用 Google 帳戶登入</b>一開始是關閉的。您可以註冊自己的用戶端：在您的 Google Cloud 專案中、在您的 Microsoft Entra 租用戶中，或向支援郵件存取的相容 OpenID Connect 服務提供者註冊。</p>
+<p>若要新增登入應用程式：</p>
+<ol>
+    <li>選擇<b>檔案</b> &gt; <b>帳戶</b>。</li>
+    <li>按一下<b>登入應用程式</b>，然後按一下<b>新增</b>。</li>
+    <li>在<b>使用以下服務提供者的設定</b>旁，按一下 Google 或 Microsoft，即可填入簽發者、範圍和伺服器。若是其他服務提供者，請自行輸入。</li>
+    <li>依照底部方塊的說明，向服務提供者註冊用戶端。請註冊那裡顯示的<b>重新導向 URI</b>。</li>
+    <li>輸入<b>用戶端識別碼</b>，如果服務提供者給了您<b>用戶端密碼</b>，也請輸入。根據預設，用戶端密碼會保存在您的金鑰圈中，而且不會再次顯示。</li>
+    <li>按一下<b>檢查</b>，檢查簽發者探索及其服務位址。這不會驗證用戶端識別碼、用戶端密碼或郵件權限。然後按一下<b>確定</b>。</li>
+    <li>在<b>新增郵件帳戶</b>的第一頁，使用<b>更多登入選項</b>新增帳戶。</li>
+</ol>
+<p>在<b>登入應用程式</b>中，<b>在新帳戶中提供</b>表示是否向新帳戶提供它，內建的應用程式也包括在內。已經在使用某個應用程式的帳戶會繼續運作。<b>編輯</b>可變更應用程式，<b>移除</b>則可在沒有帳戶使用它時將其移除。</p>
+<p>如果郵件伺服器拒絕應用程式的權杖，請檢查它的範圍是否提供郵件存取權。</p>
+<nav class="related"><a href="gmail-outlook.html">Gmail 和 Outlook.com</a> <a href="add-account.html">新增郵件帳戶</a> <a href="connections.html">Inbox Classic 建立的連線</a></nav>
+</main></div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'">
+<title>エージェントがメールを送信するとき</title>
+<style>body{margin:16px 24px;line-height:1.5}body>:not(.web),main{max-width:42em}h1{font-size:1.6em;margin:0 0 4px}h2{font-size:1.2em;margin:1.4em 0 .4em}p.summary{font-size:1.05em;opacity:.8;margin-top:0}ol,ul{padding-left:1.6em}li{margin:.3em 0}table{border-collapse:collapse;margin:.6em 0}th,td{text-align:left;padding:4px 12px 4px 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent);vertical-align:top}kbd{font-size:.9em;border:1px solid color-mix(in srgb,currentColor 35%,transparent);border-bottom-width:2px;border-radius:4px;padding:0 4px;white-space:nowrap}aside{padding:8px 12px;margin:.8em 0}.side a[aria-current]{font-weight:700;text-decoration:none}aside.warning{border-left:4px solid #c60}img.picture{max-width:100%;height:auto;margin:.6em 0;border:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related{margin-top:1.6em;padding-top:.6em;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related a{margin-right:1.2em}p.home{margin:0 0 1em;font-size:.9em}header.bar{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;max-width:none;padding:0 0 12px;margin:0 0 20px;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}header.bar .brand{font-weight:700;text-decoration:none;margin-right:auto}header.bar a,header.bar b{margin-right:10px}.web{display:flex;gap:32px}.web .side{flex:0 0 240px;font-size:.92em}.web .side ul{padding-left:1.1em}.web main{flex:1;min-width:0}@media(max-width:700px){.web{display:block}.web .side{display:none}}:root{color-scheme:light dark}body{font:11pt system-ui,'Adwaita Sans',Cantarell,sans-serif;color:CanvasText;background:Canvas}a{color:#1c71d8}@media(prefers-color-scheme:dark){a{color:#78aeed}}aside.note,aside.warning{background:color-mix(in srgb,CanvasText 6%,Canvas);border-radius:12px}body.windows,body.mac,body.linux{font:16px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif;margin:0;background:#f7f7fb;color:#1f2330}header.bar{max-width:1180px;margin:0 auto;padding:14px 24px;border-bottom:1px solid #e3e3ee}header.bar .brand{color:#3d4aa8;font-size:1.1em}header.bar a{color:#3d4aa8}.web{max-width:1180px;margin:0 auto;padding:24px}.web main{background:#fff;border-radius:12px;padding:28px 36px;box-shadow:0 1px 3px rgba(20,20,60,.08)}.web .side{position:sticky;top:16px;align-self:flex-start;max-height:calc(100vh - 32px);overflow:auto}.web .side a{color:#30395e;text-decoration:none}.web .side a:hover,.web main a{color:#3d4aa8}h1,h2{color:#1f2330}h2{border-bottom:none}aside.note,aside.warning{background:#f1f2fb;border:1px solid #e0e2f5;border-radius:10px}@media(prefers-color-scheme:dark){body.windows,body.mac,body.linux{background:#14151c;color:#e6e7ef}.web main{background:#1d1f29;box-shadow:none}header.bar{border-color:#2c2f3d}.web .side a{color:#c5c9e6}h1,h2{color:#e6e7ef}aside.note,aside.warning{background:#232637;border-color:#30344a}header.bar a,header.bar .brand,.web main a,.web .side a:hover{color:#9aa6ff}}</style>
+</head>
+<body class="linux">
+<header class="bar"><a class="brand" href="/">Inbox Classic</a><span class="platforms"><a href="../windows/agents-sending.html">Windows</a> <a href="../mac/agents-sending.html">Mac</a> <b>Linux</b></span><span class="languages"><a href="../../en/linux/agents-sending.html" hreflang="en">English</a> <a href="../../id/linux/agents-sending.html" hreflang="id">Bahasa Indonesia</a> <a href="../../ca/linux/agents-sending.html" hreflang="ca">Català</a> <a href="../../cs/linux/agents-sending.html" hreflang="cs">Čeština</a> <a href="../../da/linux/agents-sending.html" hreflang="da">Dansk</a> <a href="../../de/linux/agents-sending.html" hreflang="de">Deutsch</a> <a href="../../et/linux/agents-sending.html" hreflang="et">Eesti</a> <a href="../../es/linux/agents-sending.html" hreflang="es">Español</a> <a href="../../fr/linux/agents-sending.html" hreflang="fr">Français</a> <a href="../../hr/linux/agents-sending.html" hreflang="hr">Hrvatski</a> <a href="../../it/linux/agents-sending.html" hreflang="it">Italiano</a> <a href="../../lv/linux/agents-sending.html" hreflang="lv">Latviešu</a> <a href="../../lt/linux/agents-sending.html" hreflang="lt">Lietuvių</a> <a href="../../hu/linux/agents-sending.html" hreflang="hu">Magyar</a> <a href="../../nl/linux/agents-sending.html" hreflang="nl">Nederlands</a> <a href="../../nb/linux/agents-sending.html" hreflang="nb">Norsk bokmål</a> <a href="../../pl/linux/agents-sending.html" hreflang="pl">Polski</a> <a href="../../pt-BR/linux/agents-sending.html" hreflang="pt-BR">Português (Brasil)</a> <a href="../../pt/linux/agents-sending.html" hreflang="pt">Português (Portugal)</a> <a href="../../ro/linux/agents-sending.html" hreflang="ro">Română</a> <a href="../../sk/linux/agents-sending.html" hreflang="sk">Slovenčina</a> <a href="../../sl/linux/agents-sending.html" hreflang="sl">Slovenščina</a> <a href="../../sr-Latn/linux/agents-sending.html" hreflang="sr-Latn">Srpski</a> <a href="../../fi/linux/agents-sending.html" hreflang="fi">Suomi</a> <a href="../../sv/linux/agents-sending.html" hreflang="sv">Svenska</a> <a href="../../vi/linux/agents-sending.html" hreflang="vi">Tiếng Việt</a> <a href="../../tr/linux/agents-sending.html" hreflang="tr">Türkçe</a> <a href="../../el/linux/agents-sending.html" hreflang="el">Ελληνικά</a> <a href="../../bg/linux/agents-sending.html" hreflang="bg">Български</a> <a href="../../ru/linux/agents-sending.html" hreflang="ru">Русский</a> <a href="../../uk/linux/agents-sending.html" hreflang="uk">Українська</a> <b>日本語</b> <a href="../../zh-Hans/linux/agents-sending.html" hreflang="zh-Hans">简体中文</a> <a href="../../zh-Hant/linux/agents-sending.html" hreflang="zh-Hant">繁體中文</a> <a href="../../ko/linux/agents-sending.html" hreflang="ko">한국어</a></span></header>
+<div class="web"><nav class="side"><nav class="contents">
+<h2>はじめに</h2>
+<ul>
+<li><a href="add-account.html">メール アカウントを追加する</a></li>
+<li><a href="gmail-outlook.html">GmailとOutlook.com</a></li>
+<li><a href="main-window.html">メイン ウィンドウ</a></li>
+<li><a href="layouts.html">レイアウト</a></li>
+</ul>
+<h2>日常の作業</h2>
+<ul>
+<li><a href="read-messages.html">メッセージを読む</a></li>
+<li><a href="find-messages.html">メッセージを検索する</a></li>
+<li><a href="conversations.html">スレッド</a></li>
+<li><a href="organize-mail.html">メッセージのフラグ、アーカイブ、移動</a></li>
+<li><a href="message-rules.html">ルールで新着メールを仕分ける</a></li>
+<li><a href="delete-and-undo.html">メッセージの削除と元に戻す</a></li>
+<li><a href="folders.html">フォルダーを使う</a></li>
+<li><a href="write-message.html">メッセージを作成する</a></li>
+<li><a href="reply-forward.html">返信と転送</a></li>
+<li><a href="attachments.html">添付ファイル</a></li>
+<li><a href="drafts-outbox.html">下書きと送信トレイ</a></li>
+<li><a href="signatures.html">署名</a></li>
+<li><a href="address-book.html">アドレス帳</a></li>
+<li><a href="save-print-import.html">メッセージの保存、印刷、インポート</a></li>
+<li><a href="new-mail.html">新着メールを受信する</a></li>
+</ul>
+<h2>複数のアカウント</h2>
+<ul>
+<li><a href="all-inboxes.html">すべての受信トレイ</a></li>
+<li><a href="manage-accounts.html">アカウントの変更、並べ替え、削除</a></li>
+<li><a href="move-computer.html">別のコンピューターに移行する</a></li>
+</ul>
+<h2>メッセージの機能</h2>
+<ul>
+<li><a href="sign-in-codes.html">サインイン コード</a></li>
+<li><a href="delivery-problems.html">配信されなかったメッセージ</a></li>
+<li><a href="invitations.html">予定表の招待</a></li>
+<li><a href="unsubscribe.html">メーリング リストの配信を停止する</a></li>
+<li><a href="brand-logos.html">ブランドのロゴ</a></li>
+</ul>
+<h2>暗号化されたメールと署名されたメール</h2>
+<ul>
+<li><a href="encrypted-and-signed-mail.html">暗号化されたメールと署名されたメール</a></li>
+<li><a href="sign-and-encrypt.html">メッセージにデジタル署名して暗号化する</a></li>
+<li><a href="encryption-keys.html">暗号化キー</a></li>
+<li><a href="verify-a-key.html">連絡先のキーを確認する</a></li>
+</ul>
+<h2>設定</h2>
+<ul>
+<li><a href="options-language.html">設定</a></li>
+<li><a href="download-ahead.html">事前にダウンロードするメッセージ</a></li>
+<li><a href="account-security.html">アカウントのセキュリティ設定</a></li>
+<li><a href="default-mail-program.html">Inbox Classicを既定のメール アプリにする</a></li>
+<li><a href="updates.html">Inbox Classicを更新する</a></li>
+</ul>
+<h2>AIエージェント</h2>
+<ul>
+<li><a href="agents-connect.html">AIエージェントを接続する</a></li>
+<li><a href="agents-permissions.html">エージェントに許可すること</a></li>
+<li><a href="agents-sending.html" aria-current="page">エージェントがメールを送信するとき</a></li>
+</ul>
+<h2>リファレンス</h2>
+<ul>
+<li><a href="keyboard-shortcuts.html">キーボード ショートカット</a></li>
+<li><a href="search-words.html">検索語</a></li>
+</ul>
+<h2>トラブルシューティング</h2>
+<ul>
+<li><a href="password-not-accepted.html">パスワードが受け付けられない</a></li>
+<li><a href="certificate-errors.html">証明書のエラー</a></li>
+<li><a href="encryption-errors.html">暗号化のエラー</a></li>
+<li><a href="no-connection.html">Inbox Classicが接続できない</a></li>
+<li><a href="message-not-shown.html">メッセージが表示されない</a></li>
+</ul>
+<h2>プライバシーとセキュリティ</h2>
+<ul>
+<li><a href="pictures-tracking.html">画像とトラッキング</a></li>
+<li><a href="links-scripts.html">リンク、スクリプト、添付ファイル</a></li>
+<li><a href="data-storage.html">メールとパスワードの保存場所</a></li>
+<li><a href="connections.html">Inbox Classicが行う接続</a></li>
+<li><a href="removing.html">Inbox Classicを削除する</a></li>
+</ul>
+<h2>高度な使い方</h2>
+<ul>
+<li><a href="sign-in-apps.html">サインイン アプリ</a></li>
+<li><a href="command-line.html">コマンドライン オプション</a></li>
+</ul>
+</nav>
+</nav><main>
+<h1>エージェントがメールを送信するとき</h1>
+<p class="summary">AIエージェントが送信しようとするメッセージは、すべて先にあなたに表示され、送信トレイで待ってから送られます。</p>
+<p>エージェントがメールを送信できるのは、あなたが許可した場合だけで、1通ごとにあなたの承認が必要です。</p>
+<img class="picture" src="pictures/agents-4-send.png" alt="エージェントが書いたメッセージを送信するかどうかを確認するウィンドウ。各受信者と、新しいアドレスの印が表示されています">
+<p>エージェントが送信しようとすると、Inbox Classicはすべての受信者をアドレスで示してメッセージを表示します。これまでにメールを送ったことのないアドレスには<b>新しいアドレス</b>の印が付きます。</p>
+<ol>
+    <li>受信者と本文を読みます。</li>
+    <li>次のいずれかを選択します。
+        <ul>
+            <li><b>送信</b>：送信トレイに追加します。誤って承認しないように、ボタンは少し時間が経ってから使えるようになります。</li>
+            <li><b>先に編集</b>：新しいメッセージとして開き、あなたが変更できるようにします。</li>
+            <li><b>送信しない</b>（既定）：送信しません。</li>
+        </ul>
+    </li>
+</ol>
+<p>エージェントは1通ずつ確認を求めます。返答に時間がかかると、エージェントにはメッセージがあなたの返答を待っていることが伝えられ、後で結果を問い合わせることができます。既定では、エージェントが書くメッセージと下書きは、あなたが書くものと同じように署名で終わりますが、エージェントは署名を省くこともできます。</p>
+<p>承認されたメッセージは、送信が試みられるまで送信トレイで30秒待ちます。ログに記録されるのは送信トレイへの追加で、配信の完了ではありません。送信トレイにある間は、30秒を過ぎていても、そこで削除するか、<b>ツール</b> &gt; <b>AIエージェント</b>で<b>元に戻す</b>をクリックできます。</p>
+<h2>招待への返答</h2>
+<p>メールの送信を許可されたエージェントは、同じ確認の画面を通じて、予定表の招待をあなたに代わって承諾、仮承諾、辞退できます。確認の画面の本文の上には、どの招待への返答か、イベントがいつかが表示されます。Inbox Classicは招待そのものから主催者宛ての返答を作成するため、メッセージを開いて先に変更することはできません。返答ごとにあなたの承認が必要で、アカウントの署名は付きません。ローカルの返答状態は、メール サーバーが受け付けた時点で変わります。主催者の予定表による確認は行われません。</p>
+<h2>エージェントが書いた下書き</h2>
+<p>エージェントが書いた下書きを開くと、メッセージの上の行にエージェントの名前が表示されます。送信する前に、受信者と本文を確認してください。</p>
+<img class="picture" src="pictures/agents-8-draft.png" alt="AIエージェントが書いた下書きを専用のウィンドウで開いたところ。本文の上にエージェントの名前を示す行があります">
+<p>エージェントは、あなたが編集画面で保存するまで（自動保存を含む）、自分の下書きを変更したり削除したりできます。保存した時点から、その下書きはあなたのものになります。</p>
+<aside class="warning">Webの閲覧やファイルの読み取りなど、ほかのツールも持つエージェントは、読んだ内容をそれらを通じて外部に渡す可能性があります。Inbox Classicにはそれを見ることができません。エージェントに送信を許可するのは、必要な場合だけにしてください。</aside>
+<nav class="related"><a href="agents-permissions.html">エージェントに許可すること</a> <a href="agents-connect.html">AIエージェントを接続する</a> <a href="drafts-outbox.html">下書きと送信トレイ</a></nav>
+</main></div>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'">
+<title>閱讀郵件</title>
+<style>body{margin:16px 24px;line-height:1.5}body>:not(.web),main{max-width:42em}h1{font-size:1.6em;margin:0 0 4px}h2{font-size:1.2em;margin:1.4em 0 .4em}p.summary{font-size:1.05em;opacity:.8;margin-top:0}ol,ul{padding-left:1.6em}li{margin:.3em 0}table{border-collapse:collapse;margin:.6em 0}th,td{text-align:left;padding:4px 12px 4px 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent);vertical-align:top}kbd{font-size:.9em;border:1px solid color-mix(in srgb,currentColor 35%,transparent);border-bottom-width:2px;border-radius:4px;padding:0 4px;white-space:nowrap}aside{padding:8px 12px;margin:.8em 0}.side a[aria-current]{font-weight:700;text-decoration:none}aside.warning{border-left:4px solid #c60}img.picture{max-width:100%;height:auto;margin:.6em 0;border:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related{margin-top:1.6em;padding-top:.6em;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related a{margin-right:1.2em}p.home{margin:0 0 1em;font-size:.9em}header.bar{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;max-width:none;padding:0 0 12px;margin:0 0 20px;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}header.bar .brand{font-weight:700;text-decoration:none;margin-right:auto}header.bar a,header.bar b{margin-right:10px}.web{display:flex;gap:32px}.web .side{flex:0 0 240px;font-size:.92em}.web .side ul{padding-left:1.1em}.web main{flex:1;min-width:0}@media(max-width:700px){.web{display:block}.web .side{display:none}}:root{color-scheme:light dark}body{font:11pt system-ui,'Adwaita Sans',Cantarell,sans-serif;color:CanvasText;background:Canvas}a{color:#1c71d8}@media(prefers-color-scheme:dark){a{color:#78aeed}}aside.note,aside.warning{background:color-mix(in srgb,CanvasText 6%,Canvas);border-radius:12px}body.windows,body.mac,body.linux{font:16px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif;margin:0;background:#f7f7fb;color:#1f2330}header.bar{max-width:1180px;margin:0 auto;padding:14px 24px;border-bottom:1px solid #e3e3ee}header.bar .brand{color:#3d4aa8;font-size:1.1em}header.bar a{color:#3d4aa8}.web{max-width:1180px;margin:0 auto;padding:24px}.web main{background:#fff;border-radius:12px;padding:28px 36px;box-shadow:0 1px 3px rgba(20,20,60,.08)}.web .side{position:sticky;top:16px;align-self:flex-start;max-height:calc(100vh - 32px);overflow:auto}.web .side a{color:#30395e;text-decoration:none}.web .side a:hover,.web main a{color:#3d4aa8}h1,h2{color:#1f2330}h2{border-bottom:none}aside.note,aside.warning{background:#f1f2fb;border:1px solid #e0e2f5;border-radius:10px}@media(prefers-color-scheme:dark){body.windows,body.mac,body.linux{background:#14151c;color:#e6e7ef}.web main{background:#1d1f29;box-shadow:none}header.bar{border-color:#2c2f3d}.web .side a{color:#c5c9e6}h1,h2{color:#e6e7ef}aside.note,aside.warning{background:#232637;border-color:#30344a}header.bar a,header.bar .brand,.web main a,.web .side a:hover{color:#9aa6ff}}</style>
+</head>
+<body class="linux">
+<header class="bar"><a class="brand" href="/">Inbox Classic</a><span class="platforms"><a href="../windows/read-messages.html">Windows</a> <a href="../mac/read-messages.html">Mac</a> <b>Linux</b></span><span class="languages"><a href="../../en/linux/read-messages.html" hreflang="en">English</a> <a href="../../id/linux/read-messages.html" hreflang="id">Bahasa Indonesia</a> <a href="../../ca/linux/read-messages.html" hreflang="ca">Català</a> <a href="../../cs/linux/read-messages.html" hreflang="cs">Čeština</a> <a href="../../da/linux/read-messages.html" hreflang="da">Dansk</a> <a href="../../de/linux/read-messages.html" hreflang="de">Deutsch</a> <a href="../../et/linux/read-messages.html" hreflang="et">Eesti</a> <a href="../../es/linux/read-messages.html" hreflang="es">Español</a> <a href="../../fr/linux/read-messages.html" hreflang="fr">Français</a> <a href="../../hr/linux/read-messages.html" hreflang="hr">Hrvatski</a> <a href="../../it/linux/read-messages.html" hreflang="it">Italiano</a> <a href="../../lv/linux/read-messages.html" hreflang="lv">Latviešu</a> <a href="../../lt/linux/read-messages.html" hreflang="lt">Lietuvių</a> <a href="../../hu/linux/read-messages.html" hreflang="hu">Magyar</a> <a href="../../nl/linux/read-messages.html" hreflang="nl">Nederlands</a> <a href="../../nb/linux/read-messages.html" hreflang="nb">Norsk bokmål</a> <a href="../../pl/linux/read-messages.html" hreflang="pl">Polski</a> <a href="../../pt-BR/linux/read-messages.html" hreflang="pt-BR">Português (Brasil)</a> <a href="../../pt/linux/read-messages.html" hreflang="pt">Português (Portugal)</a> <a href="../../ro/linux/read-messages.html" hreflang="ro">Română</a> <a href="../../sk/linux/read-messages.html" hreflang="sk">Slovenčina</a> <a href="../../sl/linux/read-messages.html" hreflang="sl">Slovenščina</a> <a href="../../sr-Latn/linux/read-messages.html" hreflang="sr-Latn">Srpski</a> <a href="../../fi/linux/read-messages.html" hreflang="fi">Suomi</a> <a href="../../sv/linux/read-messages.html" hreflang="sv">Svenska</a> <a href="../../vi/linux/read-messages.html" hreflang="vi">Tiếng Việt</a> <a href="../../tr/linux/read-messages.html" hreflang="tr">Türkçe</a> <a href="../../el/linux/read-messages.html" hreflang="el">Ελληνικά</a> <a href="../../bg/linux/read-messages.html" hreflang="bg">Български</a> <a href="../../ru/linux/read-messages.html" hreflang="ru">Русский</a> <a href="../../uk/linux/read-messages.html" hreflang="uk">Українська</a> <a href="../../ja/linux/read-messages.html" hreflang="ja">日本語</a> <a href="../../zh-Hans/linux/read-messages.html" hreflang="zh-Hans">简体中文</a> <b>繁體中文</b> <a href="../../ko/linux/read-messages.html" hreflang="ko">한국어</a></span></header>
+<div class="web"><nav class="side"><nav class="contents">
+<h2>開始使用</h2>
+<ul>
+<li><a href="add-account.html">新增郵件帳戶</a></li>
+<li><a href="gmail-outlook.html">Gmail 和 Outlook.com</a></li>
+<li><a href="main-window.html">主視窗</a></li>
+<li><a href="layouts.html">版面配置</a></li>
+</ul>
+<h2>日常工作</h2>
+<ul>
+<li><a href="read-messages.html" aria-current="page">閱讀郵件</a></li>
+<li><a href="find-messages.html">尋找郵件</a></li>
+<li><a href="conversations.html">交談</a></li>
+<li><a href="organize-mail.html">標幟、封存和移動郵件</a></li>
+<li><a href="message-rules.html">使用規則分類新郵件</a></li>
+<li><a href="delete-and-undo.html">刪除郵件與復原</a></li>
+<li><a href="folders.html">使用資料夾</a></li>
+<li><a href="write-message.html">撰寫郵件</a></li>
+<li><a href="reply-forward.html">回覆和轉寄</a></li>
+<li><a href="attachments.html">附件</a></li>
+<li><a href="drafts-outbox.html">草稿和寄件匣</a></li>
+<li><a href="signatures.html">簽名</a></li>
+<li><a href="address-book.html">通訊錄</a></li>
+<li><a href="save-print-import.html">儲存、列印和匯入郵件</a></li>
+<li><a href="new-mail.html">取得新郵件</a></li>
+</ul>
+<h2>多個帳戶</h2>
+<ul>
+<li><a href="all-inboxes.html">所有收件匣</a></li>
+<li><a href="manage-accounts.html">變更、排列和移除帳戶</a></li>
+<li><a href="move-computer.html">移到另一部電腦</a></li>
+</ul>
+<h2>郵件功能</h2>
+<ul>
+<li><a href="sign-in-codes.html">登入代碼</a></li>
+<li><a href="delivery-problems.html">未送達的郵件</a></li>
+<li><a href="invitations.html">行事曆邀請</a></li>
+<li><a href="unsubscribe.html">退出郵寄清單</a></li>
+<li><a href="brand-logos.html">品牌標誌</a></li>
+</ul>
+<h2>加密及簽署的郵件</h2>
+<ul>
+<li><a href="encrypted-and-signed-mail.html">加密和已簽署的郵件</a></li>
+<li><a href="sign-and-encrypt.html">簽署和加密郵件</a></li>
+<li><a href="encryption-keys.html">加密金鑰</a></li>
+<li><a href="verify-a-key.html">驗證連絡人的金鑰</a></li>
+</ul>
+<h2>設定</h2>
+<ul>
+<li><a href="options-language.html">設定</a></li>
+<li><a href="download-ahead.html">預先下載的郵件</a></li>
+<li><a href="account-security.html">帳戶的安全性設定</a></li>
+<li><a href="default-mail-program.html">將 Inbox Classic 設為您的郵件應用程式</a></li>
+<li><a href="updates.html">更新 Inbox Classic</a></li>
+</ul>
+<h2>AI 代理程式</h2>
+<ul>
+<li><a href="agents-connect.html">連接 AI 代理程式</a></li>
+<li><a href="agents-permissions.html">代理程式可以做什麼</a></li>
+<li><a href="agents-sending.html">代理程式寄送郵件時</a></li>
+</ul>
+<h2>參考資料</h2>
+<ul>
+<li><a href="keyboard-shortcuts.html">鍵盤快速鍵</a></li>
+<li><a href="search-words.html">搜尋字詞</a></li>
+</ul>
+<h2>疑難排解</h2>
+<ul>
+<li><a href="password-not-accepted.html">密碼不被接受</a></li>
+<li><a href="certificate-errors.html">憑證錯誤</a></li>
+<li><a href="encryption-errors.html">加密錯誤</a></li>
+<li><a href="no-connection.html">Inbox Classic 無法連線</a></li>
+<li><a href="message-not-shown.html">郵件沒有顯示</a></li>
+</ul>
+<h2>隱私權與安全性</h2>
+<ul>
+<li><a href="pictures-tracking.html">圖片和追蹤</a></li>
+<li><a href="links-scripts.html">連結、指令碼和附件</a></li>
+<li><a href="data-storage.html">您的郵件和密碼存放在哪裡</a></li>
+<li><a href="connections.html">Inbox Classic 建立的連線</a></li>
+<li><a href="removing.html">移除 Inbox Classic</a></li>
+</ul>
+<h2>進階</h2>
+<ul>
+<li><a href="sign-in-apps.html">登入應用程式</a></li>
+<li><a href="command-line.html">命令列選項</a></li>
+</ul>
+</nav>
+</nav><main>
+<h1>閱讀郵件</h1>
+<p class="summary">在讀取窗格或獨立視窗中閱讀郵件，並使用鍵盤瀏覽您的郵件。</p>
+<p>在清單中選取郵件，即可在讀取窗格中查看它，上方會顯示寄件者、日期、收件者和主旨。郵件顯示一秒後會標示為已讀取。清單會顯示每封郵件的日期，但絕不會晚於它送達的時間，因此日期在未來的郵件不會一直停留在最上方。</p>
+<p>回到資料夾時，如果您上次檢視的郵件或其交談仍在清單中，Inbox Classic 就會將其選取。否則會選取最新的郵件或其交談。收合的交談會顯示它的第一封郵件。Inbox Classic 重新啟動後仍會記住資料夾和上次檢視的郵件。</p>
+<ul>
+    <li>若要自行標示，請選擇<b>編輯</b> &gt; <b>標示為已讀取</b>（<kbd>Ctrl</kbd>+<kbd>Q</kbd>）或<b>標示為未讀取</b>。</li>
+    <li>若要將資料夾中的每封郵件都標示為已讀取，請選擇<b>編輯</b> &gt; <b>全部標示為已讀取</b>（<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>A</kbd>），或以滑鼠右鍵按一下資料夾。</li>
+</ul>
+<h2>只顯示未讀取郵件</h2>
+<p>若只要列出您尚未閱讀的郵件，請選擇<b>檢視</b> &gt; <b>隱藏已讀取的郵件</b>，或按一下標題列中的篩選按鈕。它在每個資料夾中都有效，並會保持開啟，直到您將它關閉。進入目前清單後才標示為已讀取的郵件，在您切換清單之前都會繼續顯示。</p>
+<h2>在獨立視窗中開啟郵件</h2>
+<p>按兩下郵件，或選取郵件後按 <kbd>Enter</kbd>。視窗中有<b>回覆</b>、<b>全部回覆</b>、<b>轉寄</b>、<b>列印</b>、<b>刪除</b>、<b>封存</b>和<b>垃圾郵件</b>。<b>上一封</b>和<b>下一封</b>會在它所來自的清單中前後移動。草稿則會開啟以供您完成。</p>
+<h2>使用鍵盤閱讀</h2>
+<ul>
+    <li><b>檢視</b> &gt; <b>下一封郵件</b>（<kbd>Ctrl</kbd>+<kbd>.</kbd>）和<b>上一封郵件</b>（<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>,</kbd>）會在清單中向下和向上移動。</li>
+    <li><b>檢視</b> &gt; <b>下一封未讀取郵件</b>，或在郵件清單中按 <kbd>N</kbd>，會找到下一封未讀取郵件。目前資料夾中已沒有未讀取郵件時，它可能會詢問是否要前往另一個有未讀取郵件的資料夾。</li>
+    <li><b>檢視</b> &gt; <b>前往資料夾</b>（<kbd>Ctrl</kbd>+<kbd>Y</kbd>）可開啟任何帳戶的任何資料夾。輸入名稱的一部分即可找到它。</li>
+    <li><b>編輯</b> &gt; <b>在這封郵件中尋找</b>（<kbd>F3</kbd>）會在顯示的郵件中尋找字詞。</li>
+</ul>
+<h2>回覆中先前的郵件</h2>
+<p>回覆通常會帶著之前的郵件。Inbox Classic 會將它們摺疊在寄件者所寫內容下方的 ••• 按鈕後面。按一下按鈕即可查看。</p>
+<p>剛新增帳戶時，窗格可能會顯示郵件仍在下載中。請參閱<a href="message-not-shown.html">郵件沒有顯示</a>。</p>
+
+<h2>深色模式</h2><p>當您的桌面處於深色模式時，您閱讀和撰寫的郵件也會使用深色背景。有自己背景色彩的郵件，例如電子報和收據，除非提供了深色版本，否則會保持原本的外觀。列印時一律使用淺色模式。若要讓郵件保持淺色模式，請在<b>主選單</b> &gt; <b>偏好設定</b> &gt; <b>閱讀</b>中關閉<b>系統處於深色模式時，以深色背景顯示郵件</b>。</p>
+<h2>文字大小</h2>
+<p>若要放大或縮小郵件的顯示，請選擇<b>檢視</b> &gt; <b>文字大小</b>，然後選取一種大小。這也會變更您撰寫郵件時的顯示大小，但不會變更收件者看到的格式。選擇<b>中</b>即可回到預設的顯示大小。</p>
+<nav class="related"><a href="conversations.html">交談</a> <a href="organize-mail.html">標幟、封存和移動郵件</a> <a href="message-not-shown.html">郵件沒有顯示</a></nav>
+</main></div>
+</body>
+</html>

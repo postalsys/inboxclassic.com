@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'">
+<title>連接 AI 代理程式</title>
+<style>body{margin:16px 24px;line-height:1.5}body>:not(.web),main{max-width:42em}h1{font-size:1.6em;margin:0 0 4px}h2{font-size:1.2em;margin:1.4em 0 .4em}p.summary{font-size:1.05em;opacity:.8;margin-top:0}ol,ul{padding-left:1.6em}li{margin:.3em 0}table{border-collapse:collapse;margin:.6em 0}th,td{text-align:left;padding:4px 12px 4px 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent);vertical-align:top}kbd{font-size:.9em;border:1px solid color-mix(in srgb,currentColor 35%,transparent);border-bottom-width:2px;border-radius:4px;padding:0 4px;white-space:nowrap}aside{padding:8px 12px;margin:.8em 0}.side a[aria-current]{font-weight:700;text-decoration:none}aside.warning{border-left:4px solid #c60}img.picture{max-width:100%;height:auto;margin:.6em 0;border:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related{margin-top:1.6em;padding-top:.6em;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related a{margin-right:1.2em}p.home{margin:0 0 1em;font-size:.9em}header.bar{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;max-width:none;padding:0 0 12px;margin:0 0 20px;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}header.bar .brand{font-weight:700;text-decoration:none;margin-right:auto}header.bar a,header.bar b{margin-right:10px}.web{display:flex;gap:32px}.web .side{flex:0 0 240px;font-size:.92em}.web .side ul{padding-left:1.1em}.web main{flex:1;min-width:0}@media(max-width:700px){.web{display:block}.web .side{display:none}}:root{color-scheme:light dark}body{font:13px -apple-system,BlinkMacSystemFont,sans-serif;color:CanvasText;background:Canvas}a{color:LinkText}aside.note,aside.warning{background:color-mix(in srgb,CanvasText 6%,Canvas);border-radius:8px}kbd{font-family:-apple-system,sans-serif}body.windows,body.mac,body.linux{font:16px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif;margin:0;background:#f7f7fb;color:#1f2330}header.bar{max-width:1180px;margin:0 auto;padding:14px 24px;border-bottom:1px solid #e3e3ee}header.bar .brand{color:#3d4aa8;font-size:1.1em}header.bar a{color:#3d4aa8}.web{max-width:1180px;margin:0 auto;padding:24px}.web main{background:#fff;border-radius:12px;padding:28px 36px;box-shadow:0 1px 3px rgba(20,20,60,.08)}.web .side{position:sticky;top:16px;align-self:flex-start;max-height:calc(100vh - 32px);overflow:auto}.web .side a{color:#30395e;text-decoration:none}.web .side a:hover,.web main a{color:#3d4aa8}h1,h2{color:#1f2330}h2{border-bottom:none}aside.note,aside.warning{background:#f1f2fb;border:1px solid #e0e2f5;border-radius:10px}@media(prefers-color-scheme:dark){body.windows,body.mac,body.linux{background:#14151c;color:#e6e7ef}.web main{background:#1d1f29;box-shadow:none}header.bar{border-color:#2c2f3d}.web .side a{color:#c5c9e6}h1,h2{color:#e6e7ef}aside.note,aside.warning{background:#232637;border-color:#30344a}header.bar a,header.bar .brand,.web main a,.web .side a:hover{color:#9aa6ff}}</style>
+</head>
+<body class="mac">
+<header class="bar"><a class="brand" href="/">Inbox Classic</a><span class="platforms"><a href="../windows/agents-connect.html">Windows</a> <b>Mac</b> <a href="../linux/agents-connect.html">Linux</a></span><span class="languages"><a href="../../en/mac/agents-connect.html" hreflang="en">English</a> <a href="../../id/mac/agents-connect.html" hreflang="id">Bahasa Indonesia</a> <a href="../../ca/mac/agents-connect.html" hreflang="ca">Català</a> <a href="../../cs/mac/agents-connect.html" hreflang="cs">Čeština</a> <a href="../../da/mac/agents-connect.html" hreflang="da">Dansk</a> <a href="../../de/mac/agents-connect.html" hreflang="de">Deutsch</a> <a href="../../et/mac/agents-connect.html" hreflang="et">Eesti</a> <a href="../../es/mac/agents-connect.html" hreflang="es">Español</a> <a href="../../fr/mac/agents-connect.html" hreflang="fr">Français</a> <a href="../../hr/mac/agents-connect.html" hreflang="hr">Hrvatski</a> <a href="../../it/mac/agents-connect.html" hreflang="it">Italiano</a> <a href="../../lv/mac/agents-connect.html" hreflang="lv">Latviešu</a> <a href="../../lt/mac/agents-connect.html" hreflang="lt">Lietuvių</a> <a href="../../hu/mac/agents-connect.html" hreflang="hu">Magyar</a> <a href="../../nl/mac/agents-connect.html" hreflang="nl">Nederlands</a> <a href="../../nb/mac/agents-connect.html" hreflang="nb">Norsk bokmål</a> <a href="../../pl/mac/agents-connect.html" hreflang="pl">Polski</a> <a href="../../pt-BR/mac/agents-connect.html" hreflang="pt-BR">Português (Brasil)</a> <a href="../../pt/mac/agents-connect.html" hreflang="pt">Português (Portugal)</a> <a href="../../ro/mac/agents-connect.html" hreflang="ro">Română</a> <a href="../../sk/mac/agents-connect.html" hreflang="sk">Slovenčina</a> <a href="../../sl/mac/agents-connect.html" hreflang="sl">Slovenščina</a> <a href="../../sr-Latn/mac/agents-connect.html" hreflang="sr-Latn">Srpski</a> <a href="../../fi/mac/agents-connect.html" hreflang="fi">Suomi</a> <a href="../../sv/mac/agents-connect.html" hreflang="sv">Svenska</a> <a href="../../vi/mac/agents-connect.html" hreflang="vi">Tiếng Việt</a> <a href="../../tr/mac/agents-connect.html" hreflang="tr">Türkçe</a> <a href="../../el/mac/agents-connect.html" hreflang="el">Ελληνικά</a> <a href="../../bg/mac/agents-connect.html" hreflang="bg">Български</a> <a href="../../ru/mac/agents-connect.html" hreflang="ru">Русский</a> <a href="../../uk/mac/agents-connect.html" hreflang="uk">Українська</a> <a href="../../ja/mac/agents-connect.html" hreflang="ja">日本語</a> <a href="../../zh-Hans/mac/agents-connect.html" hreflang="zh-Hans">简体中文</a> <b>繁體中文</b> <a href="../../ko/mac/agents-connect.html" hreflang="ko">한국어</a></span></header>
+<div class="web"><nav class="side"><nav class="contents">
+<h2>開始使用</h2>
+<ul>
+<li><a href="add-account.html">新增郵件帳戶</a></li>
+<li><a href="gmail-outlook.html">Gmail 和 Outlook.com</a></li>
+<li><a href="main-window.html">主視窗</a></li>
+<li><a href="layouts.html">版面配置</a></li>
+</ul>
+<h2>日常工作</h2>
+<ul>
+<li><a href="read-messages.html">閱讀郵件</a></li>
+<li><a href="find-messages.html">尋找郵件</a></li>
+<li><a href="conversations.html">交談</a></li>
+<li><a href="organize-mail.html">標幟、封存和移動郵件</a></li>
+<li><a href="message-rules.html">使用規則分類新郵件</a></li>
+<li><a href="delete-and-undo.html">刪除郵件與復原</a></li>
+<li><a href="folders.html">使用資料夾</a></li>
+<li><a href="write-message.html">撰寫郵件</a></li>
+<li><a href="reply-forward.html">回覆和轉寄</a></li>
+<li><a href="attachments.html">附件</a></li>
+<li><a href="drafts-outbox.html">草稿和寄件匣</a></li>
+<li><a href="signatures.html">簽名</a></li>
+<li><a href="address-book.html">通訊錄</a></li>
+<li><a href="save-print-import.html">儲存、列印和匯入郵件</a></li>
+<li><a href="new-mail.html">取得新郵件</a></li>
+</ul>
+<h2>多個帳戶</h2>
+<ul>
+<li><a href="all-inboxes.html">所有收件匣</a></li>
+<li><a href="manage-accounts.html">變更、排列和移除帳戶</a></li>
+<li><a href="move-computer.html">移到另一部電腦</a></li>
+</ul>
+<h2>郵件功能</h2>
+<ul>
+<li><a href="sign-in-codes.html">登入代碼</a></li>
+<li><a href="delivery-problems.html">未送達的郵件</a></li>
+<li><a href="invitations.html">行事曆邀請</a></li>
+<li><a href="unsubscribe.html">退出郵寄清單</a></li>
+<li><a href="brand-logos.html">品牌標誌</a></li>
+</ul>
+<h2>加密及簽署的郵件</h2>
+<ul>
+<li><a href="encrypted-and-signed-mail.html">加密和已簽署的郵件</a></li>
+<li><a href="sign-and-encrypt.html">簽署和加密郵件</a></li>
+<li><a href="encryption-keys.html">加密金鑰</a></li>
+<li><a href="verify-a-key.html">驗證連絡人的金鑰</a></li>
+</ul>
+<h2>設定</h2>
+<ul>
+<li><a href="options-language.html">設定</a></li>
+<li><a href="download-ahead.html">預先下載的郵件</a></li>
+<li><a href="account-security.html">帳戶的安全性設定</a></li>
+<li><a href="default-mail-program.html">將 Inbox Classic 設為您的郵件應用程式</a></li>
+<li><a href="updates.html">更新 Inbox Classic</a></li>
+</ul>
+<h2>AI 代理程式</h2>
+<ul>
+<li><a href="agents-connect.html" aria-current="page">連接 AI 代理程式</a></li>
+<li><a href="agents-permissions.html">代理程式可以做什麼</a></li>
+<li><a href="agents-sending.html">代理程式寄送郵件時</a></li>
+</ul>
+<h2>參考資料</h2>
+<ul>
+<li><a href="keyboard-shortcuts.html">鍵盤快速鍵</a></li>
+<li><a href="search-words.html">搜尋字詞</a></li>
+</ul>
+<h2>疑難排解</h2>
+<ul>
+<li><a href="password-not-accepted.html">密碼不被接受</a></li>
+<li><a href="certificate-errors.html">憑證錯誤</a></li>
+<li><a href="encryption-errors.html">加密錯誤</a></li>
+<li><a href="no-connection.html">Inbox Classic 無法連線</a></li>
+<li><a href="message-not-shown.html">郵件沒有顯示</a></li>
+</ul>
+<h2>隱私權與安全性</h2>
+<ul>
+<li><a href="pictures-tracking.html">圖片和追蹤</a></li>
+<li><a href="links-scripts.html">連結、指令碼和附件</a></li>
+<li><a href="data-storage.html">您的郵件和密碼存放在哪裡</a></li>
+<li><a href="connections.html">Inbox Classic 建立的連線</a></li>
+<li><a href="removing.html">移除 Inbox Classic</a></li>
+</ul>
+<h2>進階</h2>
+<ul>
+<li><a href="sign-in-apps.html">登入應用程式</a></li>
+<li><a href="command-line.html">命令列選項</a></li>
+</ul>
+</nav>
+</nav><main>
+<h1>連接 AI 代理程式</h1>
+<p class="summary">讓 Claude 等 AI 代理程式透過 Inbox Classic 讀取和整理您的郵件。</p>
+<p>您可以讓 AI 代理程式處理您的郵件。它可以是 Claude、Cursor，或其他支援模型內容通訊協定（MCP）的程式。Inbox Classic 本身沒有 AI，除非您允許代理程式進入，否則不會有任何內容傳送到 AI 服務。</p>
+<p>若要連接代理程式：</p>
+<ol>
+    <li>選擇<b>工具</b> &gt; <b>AI 代理程式</b>，然後按一下<b>如何連接代理程式</b>。Inbox Classic 會顯示要加入代理程式設定中的幾行內容。</li>
+    <li>將這幾行加入代理程式的 MCP 伺服器。在 Claude Desktop 中，位置是<i> Settings &gt; Developer &gt; Edit Config</i>。</li>
+    <li>啟動代理程式。它第一次連線時，Inbox Classic 會詢問您允許它做什麼。</li>
+</ol>
+<p>如果 Inbox Classic 沒有執行，代理程式會在背景啟動它。只有在這部電腦上以您的身分執行的程式才能連線到它。</p>
+<p>Inbox Classic 會向系統查詢是哪個程式啟動了代理程式，而不是聽信代理程式的說法，因此代理程式無法只靠自稱是另一個程式，就取得您給那個程式的存取權。如果代理程式自稱是其他程式，詢問視窗會告訴您。這能將不同程式的存取權分開，但無法防範以您的身分執行的有害程式，因為那種程式本來就能讀取您的郵件。</p>
+<p>代理程式也可以持續關注您的收件匣、某個帳戶或資料夾，並在郵件有變動時收到通知。它還能提供兩個現成的要求：「Triage my inbox」和「Summarize unread」。兩者都遵守您給代理程式的權限，以這種方式讀取的內容也和它讀取的其他內容一樣，會顯示在它的記錄中。</p>
+<p>Claude Code 等代理程式從同一個可辨識的終端機程式啟動時，會共用存取權。Inbox Classic 只會針對從「終端機」啟動的程式詢問一次，這些程式共用您允許的權限。若要讓某個代理程式擁有自己的存取權，請在它的設定中，於 <code>--mcp</code> 之後加上 <code>--name</code> 和您自訂的名稱，例如 <code>"args": ["--mcp", "--name", "Claude Code"]</code>。Inbox Classic 之後就會以這個名稱詢問您。自訂的名稱並不能驗證代理程式的身分。</p>
+<p>若要一次關閉所有代理程式，請在<b>工具</b> &gt; <b>AI 代理程式</b>中關閉<b>允許 AI 代理程式連接 Inbox Classic</b>。</p>
+<nav class="related"><a href="agents-permissions.html">代理程式可以做什麼</a> <a href="agents-sending.html">代理程式寄送郵件時</a> <a href="command-line.html">命令列選項</a></nav>
+</main></div>
+</body>
+</html>

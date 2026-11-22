@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'">
+<title>暗号化されたメールと署名されたメール</title>
+<style>body{margin:16px 24px;line-height:1.5}body>:not(.web),main{max-width:42em}h1{font-size:1.6em;margin:0 0 4px}h2{font-size:1.2em;margin:1.4em 0 .4em}p.summary{font-size:1.05em;opacity:.8;margin-top:0}ol,ul{padding-left:1.6em}li{margin:.3em 0}table{border-collapse:collapse;margin:.6em 0}th,td{text-align:left;padding:4px 12px 4px 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent);vertical-align:top}kbd{font-size:.9em;border:1px solid color-mix(in srgb,currentColor 35%,transparent);border-bottom-width:2px;border-radius:4px;padding:0 4px;white-space:nowrap}aside{padding:8px 12px;margin:.8em 0}.side a[aria-current]{font-weight:700;text-decoration:none}aside.warning{border-left:4px solid #c60}img.picture{max-width:100%;height:auto;margin:.6em 0;border:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related{margin-top:1.6em;padding-top:.6em;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related a{margin-right:1.2em}p.home{margin:0 0 1em;font-size:.9em}header.bar{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;max-width:none;padding:0 0 12px;margin:0 0 20px;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}header.bar .brand{font-weight:700;text-decoration:none;margin-right:auto}header.bar a,header.bar b{margin-right:10px}.web{display:flex;gap:32px}.web .side{flex:0 0 240px;font-size:.92em}.web .side ul{padding-left:1.1em}.web main{flex:1;min-width:0}@media(max-width:700px){.web{display:block}.web .side{display:none}}:root{color-scheme:light dark}body{font:11pt system-ui,'Adwaita Sans',Cantarell,sans-serif;color:CanvasText;background:Canvas}a{color:#1c71d8}@media(prefers-color-scheme:dark){a{color:#78aeed}}aside.note,aside.warning{background:color-mix(in srgb,CanvasText 6%,Canvas);border-radius:12px}body.windows,body.mac,body.linux{font:16px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif;margin:0;background:#f7f7fb;color:#1f2330}header.bar{max-width:1180px;margin:0 auto;padding:14px 24px;border-bottom:1px solid #e3e3ee}header.bar .brand{color:#3d4aa8;font-size:1.1em}header.bar a{color:#3d4aa8}.web{max-width:1180px;margin:0 auto;padding:24px}.web main{background:#fff;border-radius:12px;padding:28px 36px;box-shadow:0 1px 3px rgba(20,20,60,.08)}.web .side{position:sticky;top:16px;align-self:flex-start;max-height:calc(100vh - 32px);overflow:auto}.web .side a{color:#30395e;text-decoration:none}.web .side a:hover,.web main a{color:#3d4aa8}h1,h2{color:#1f2330}h2{border-bottom:none}aside.note,aside.warning{background:#f1f2fb;border:1px solid #e0e2f5;border-radius:10px}@media(prefers-color-scheme:dark){body.windows,body.mac,body.linux{background:#14151c;color:#e6e7ef}.web main{background:#1d1f29;box-shadow:none}header.bar{border-color:#2c2f3d}.web .side a{color:#c5c9e6}h1,h2{color:#e6e7ef}aside.note,aside.warning{background:#232637;border-color:#30344a}header.bar a,header.bar .brand,.web main a,.web .side a:hover{color:#9aa6ff}}</style>
+</head>
+<body class="linux">
+<header class="bar"><a class="brand" href="/">Inbox Classic</a><span class="platforms"><a href="../windows/encrypted-and-signed-mail.html">Windows</a> <a href="../mac/encrypted-and-signed-mail.html">Mac</a> <b>Linux</b></span><span class="languages"><a href="../../en/linux/encrypted-and-signed-mail.html" hreflang="en">English</a> <a href="../../id/linux/encrypted-and-signed-mail.html" hreflang="id">Bahasa Indonesia</a> <a href="../../ca/linux/encrypted-and-signed-mail.html" hreflang="ca">Català</a> <a href="../../cs/linux/encrypted-and-signed-mail.html" hreflang="cs">Čeština</a> <a href="../../da/linux/encrypted-and-signed-mail.html" hreflang="da">Dansk</a> <a href="../../de/linux/encrypted-and-signed-mail.html" hreflang="de">Deutsch</a> <a href="../../et/linux/encrypted-and-signed-mail.html" hreflang="et">Eesti</a> <a href="../../es/linux/encrypted-and-signed-mail.html" hreflang="es">Español</a> <a href="../../fr/linux/encrypted-and-signed-mail.html" hreflang="fr">Français</a> <a href="../../hr/linux/encrypted-and-signed-mail.html" hreflang="hr">Hrvatski</a> <a href="../../it/linux/encrypted-and-signed-mail.html" hreflang="it">Italiano</a> <a href="../../lv/linux/encrypted-and-signed-mail.html" hreflang="lv">Latviešu</a> <a href="../../lt/linux/encrypted-and-signed-mail.html" hreflang="lt">Lietuvių</a> <a href="../../hu/linux/encrypted-and-signed-mail.html" hreflang="hu">Magyar</a> <a href="../../nl/linux/encrypted-and-signed-mail.html" hreflang="nl">Nederlands</a> <a href="../../nb/linux/encrypted-and-signed-mail.html" hreflang="nb">Norsk bokmål</a> <a href="../../pl/linux/encrypted-and-signed-mail.html" hreflang="pl">Polski</a> <a href="../../pt-BR/linux/encrypted-and-signed-mail.html" hreflang="pt-BR">Português (Brasil)</a> <a href="../../pt/linux/encrypted-and-signed-mail.html" hreflang="pt">Português (Portugal)</a> <a href="../../ro/linux/encrypted-and-signed-mail.html" hreflang="ro">Română</a> <a href="../../sk/linux/encrypted-and-signed-mail.html" hreflang="sk">Slovenčina</a> <a href="../../sl/linux/encrypted-and-signed-mail.html" hreflang="sl">Slovenščina</a> <a href="../../sr-Latn/linux/encrypted-and-signed-mail.html" hreflang="sr-Latn">Srpski</a> <a href="../../fi/linux/encrypted-and-signed-mail.html" hreflang="fi">Suomi</a> <a href="../../sv/linux/encrypted-and-signed-mail.html" hreflang="sv">Svenska</a> <a href="../../vi/linux/encrypted-and-signed-mail.html" hreflang="vi">Tiếng Việt</a> <a href="../../tr/linux/encrypted-and-signed-mail.html" hreflang="tr">Türkçe</a> <a href="../../el/linux/encrypted-and-signed-mail.html" hreflang="el">Ελληνικά</a> <a href="../../bg/linux/encrypted-and-signed-mail.html" hreflang="bg">Български</a> <a href="../../ru/linux/encrypted-and-signed-mail.html" hreflang="ru">Русский</a> <a href="../../uk/linux/encrypted-and-signed-mail.html" hreflang="uk">Українська</a> <b>日本語</b> <a href="../../zh-Hans/linux/encrypted-and-signed-mail.html" hreflang="zh-Hans">简体中文</a> <a href="../../zh-Hant/linux/encrypted-and-signed-mail.html" hreflang="zh-Hant">繁體中文</a> <a href="../../ko/linux/encrypted-and-signed-mail.html" hreflang="ko">한국어</a></span></header>
+<div class="web"><nav class="side"><nav class="contents">
+<h2>はじめに</h2>
+<ul>
+<li><a href="add-account.html">メール アカウントを追加する</a></li>
+<li><a href="gmail-outlook.html">GmailとOutlook.com</a></li>
+<li><a href="main-window.html">メイン ウィンドウ</a></li>
+<li><a href="layouts.html">レイアウト</a></li>
+</ul>
+<h2>日常の作業</h2>
+<ul>
+<li><a href="read-messages.html">メッセージを読む</a></li>
+<li><a href="find-messages.html">メッセージを検索する</a></li>
+<li><a href="conversations.html">スレッド</a></li>
+<li><a href="organize-mail.html">メッセージのフラグ、アーカイブ、移動</a></li>
+<li><a href="message-rules.html">ルールで新着メールを仕分ける</a></li>
+<li><a href="delete-and-undo.html">メッセージの削除と元に戻す</a></li>
+<li><a href="folders.html">フォルダーを使う</a></li>
+<li><a href="write-message.html">メッセージを作成する</a></li>
+<li><a href="reply-forward.html">返信と転送</a></li>
+<li><a href="attachments.html">添付ファイル</a></li>
+<li><a href="drafts-outbox.html">下書きと送信トレイ</a></li>
+<li><a href="signatures.html">署名</a></li>
+<li><a href="address-book.html">アドレス帳</a></li>
+<li><a href="save-print-import.html">メッセージの保存、印刷、インポート</a></li>
+<li><a href="new-mail.html">新着メールを受信する</a></li>
+</ul>
+<h2>複数のアカウント</h2>
+<ul>
+<li><a href="all-inboxes.html">すべての受信トレイ</a></li>
+<li><a href="manage-accounts.html">アカウントの変更、並べ替え、削除</a></li>
+<li><a href="move-computer.html">別のコンピューターに移行する</a></li>
+</ul>
+<h2>メッセージの機能</h2>
+<ul>
+<li><a href="sign-in-codes.html">サインイン コード</a></li>
+<li><a href="delivery-problems.html">配信されなかったメッセージ</a></li>
+<li><a href="invitations.html">予定表の招待</a></li>
+<li><a href="unsubscribe.html">メーリング リストの配信を停止する</a></li>
+<li><a href="brand-logos.html">ブランドのロゴ</a></li>
+</ul>
+<h2>暗号化されたメールと署名されたメール</h2>
+<ul>
+<li><a href="encrypted-and-signed-mail.html" aria-current="page">暗号化されたメールと署名されたメール</a></li>
+<li><a href="sign-and-encrypt.html">メッセージにデジタル署名して暗号化する</a></li>
+<li><a href="encryption-keys.html">暗号化キー</a></li>
+<li><a href="verify-a-key.html">連絡先のキーを確認する</a></li>
+</ul>
+<h2>設定</h2>
+<ul>
+<li><a href="options-language.html">設定</a></li>
+<li><a href="download-ahead.html">事前にダウンロードするメッセージ</a></li>
+<li><a href="account-security.html">アカウントのセキュリティ設定</a></li>
+<li><a href="default-mail-program.html">Inbox Classicを既定のメール アプリにする</a></li>
+<li><a href="updates.html">Inbox Classicを更新する</a></li>
+</ul>
+<h2>AIエージェント</h2>
+<ul>
+<li><a href="agents-connect.html">AIエージェントを接続する</a></li>
+<li><a href="agents-permissions.html">エージェントに許可すること</a></li>
+<li><a href="agents-sending.html">エージェントがメールを送信するとき</a></li>
+</ul>
+<h2>リファレンス</h2>
+<ul>
+<li><a href="keyboard-shortcuts.html">キーボード ショートカット</a></li>
+<li><a href="search-words.html">検索語</a></li>
+</ul>
+<h2>トラブルシューティング</h2>
+<ul>
+<li><a href="password-not-accepted.html">パスワードが受け付けられない</a></li>
+<li><a href="certificate-errors.html">証明書のエラー</a></li>
+<li><a href="encryption-errors.html">暗号化のエラー</a></li>
+<li><a href="no-connection.html">Inbox Classicが接続できない</a></li>
+<li><a href="message-not-shown.html">メッセージが表示されない</a></li>
+</ul>
+<h2>プライバシーとセキュリティ</h2>
+<ul>
+<li><a href="pictures-tracking.html">画像とトラッキング</a></li>
+<li><a href="links-scripts.html">リンク、スクリプト、添付ファイル</a></li>
+<li><a href="data-storage.html">メールとパスワードの保存場所</a></li>
+<li><a href="connections.html">Inbox Classicが行う接続</a></li>
+<li><a href="removing.html">Inbox Classicを削除する</a></li>
+</ul>
+<h2>高度な使い方</h2>
+<ul>
+<li><a href="sign-in-apps.html">サインイン アプリ</a></li>
+<li><a href="command-line.html">コマンドライン オプション</a></li>
+</ul>
+</nav>
+</nav><main>
+<h1>暗号化されたメールと署名されたメール</h1>
+<p class="summary">メッセージの上のバーに、差出人による署名があるかどうか、あなた宛てに暗号化されているかどうかが表示されます。</p>
+<p>有効な署名は、署名された後に内容が変更されていないことを示します。誰が署名したかを確かめるには、キーの所有者も確認してください。暗号化されたメッセージは、対応する秘密キーがなければ読めません。</p>
+<p>メッセージの上のバーは、メッセージ全体の状態を示します。</p>
+<table>
+    <tr><th>色</th><th>意味</th></tr>
+    <tr><td>緑</td><td>差出人が、あなたが所有者を確認済みのキーで署名しています。</td></tr>
+    <tr><td>青</td><td>差出人が、あなたが所有者を確認していないキーで署名しているか、あなた宛てに暗号化されています。</td></tr>
+    <tr><td>黄色</td><td>問題があります。署名が一致しない、差出人以外の人が署名している、または読めない部分があります。</td></tr>
+    <tr><td>灰色</td><td>署名がないか、キーがないなどの理由で署名を確認できませんでした。</td></tr>
+</table>
+<p>部分によって保護の方法が異なるメッセージでは、各部分がそれぞれの枠の中に、それぞれのラベル付きで表示されます。バーには種類ごとの部分の数が表示されます。ラベル、またはバーの<b>詳細</b>をクリックすると、各部分に誰が、どのキーで、いつ署名したかが表示されます。</p>
+<aside class="warning">Inbox Classicが表示しているのは、バーと枠の上のラベルだけです。送信者は自分のメッセージの中に、ラベルに見えるものを含めて何でも描くことができます。バーを確認してください。</aside>
+<p>暗号化された部分にあるインターネット上の画像は、バーの<b>画像をダウンロード</b>をクリックしたときだけ、毎回読み込まれます。その後、ラベルには画像が読み込まれたことが表示されます。</p>
+<p>ある部分に添付された画像とPDFファイルは、その部分の枠の中にだけ表示され、ほかの部分の枠には表示されません。復号されたプレビューはメモリ上に保持されます。添付ファイルを別のアプリで開くと、暗号化されていない一時コピーが書き出されます。保存すると、指定した場所にコピーが書き出されます。</p>
+<p>添付ファイルの一覧では、暗号化された部分の各ファイルにロックのマークが付きます。ファイルをポイントすると、どの部分のものかが表示されます。</p>
+<p>返信や転送では、表示されていた内容だけが引用されます。</p>
+<p>メッセージ一覧では、暗号化されたメッセージにロックのマーク、署名されたメッセージに印章のマークが付きます。これらのマークは、署名の有効性やキーの所有者を確認するものではありません。復号と索引の作成が成功すると、一覧に保護された件名と冒頭の文章が表示されることがあります。それ以外の場合は代わりの表示になり、新着メールの通知には常に<b>暗号化されたメッセージ</b>と表示されます。</p>
+<p><b>メイン メニュー</b> &gt; <b>設定</b> &gt; <b>読み取り</b>で<b>暗号化されたメッセージ内も検索する</b>がオンの場合、利用できる秘密キーがあれば、復号された本文と保護された件名が暗号化されないままローカルの検索索引に追加されます。オフにすると、これらの派生データが削除され、外側の件名に戻ります。AIエージェントに見えるのは外側の情報だけで、復号された本文、保護された件名、添付ファイルは見えません。</p>
+<nav class="related"><a href="verify-a-key.html">連絡先のキーを確認する</a> <a href="encryption-keys.html">暗号化キー</a></nav>
+</main></div>
+</body>
+</html>

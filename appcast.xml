@@ -3,6 +3,39 @@
     <channel>
         <title>Inbox Classic</title>
         <item>
+            <title>0.20.1</title>
+            <pubDate>Sun, 22 Nov 2026 18:38:36 +0200</pubDate>
+            <sparkle:version>0.20.1</sparkle:version>
+            <sparkle:shortVersionString>0.20.1</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## [0.20.1](https://github.com/postalsys/inbox-classic/compare/v0.19.1...v0.20.1) (2026-11-22)
+
+Six new languages, a mailing-list bar for unsubscribing, and search that finds words written without spaces.
+
+### Features
+
+* **Japanese, Simplified Chinese, Traditional Chinese, Korean, Indonesian and Vietnamese.** The windows, the menus and the help in each, reviewed. Chinese follows your system: Taiwan, Hong Kong and Macau get Traditional Chinese, other regions Simplified. On Windows, Japanese, Chinese and Korean are drawn in the font Windows itself uses for them.
+* **Search finds Chinese, Japanese and Korean words** inside a subject or message, though these languages write no spaces between words. Replies and forwards recognise their reply prefixes (回复, 返信, 회신, 转发 and others), so a subject no longer collects "Re: 回复:".
+* **A mailing-list bar replaces the Unsubscribe link.** A message from a list shows a bar naming the list, with an Unsubscribe button. Unsubscribe from List is also in the Message menu and on a message's right-click menu. After you unsubscribe, the bar says when you asked, and tells you if the list keeps writing more than two days later.
+* **The other actions that looked like links are now buttons**: Download Pictures, Try Again, Create Rule and Clear search, and the setup buttons of Add Mail Account and AI Agents.
+* **A folder opens with a message.** Coming back to a folder shows the message you left it on, a folder opened for the first time shows its newest message, and the app starts in the folder it was closed in.
+* **Outlook.com and Microsoft 365 mail gets sign-in code cards, one-click Unsubscribe, brand logos and confirmed senders.** Microsoft gives its verdict on a sender in a different header from other providers, which the app now reads.
+* **Flag changes are not lost.** Read, flagged, colours and junk marks made offline, or while a connection failed, reach the server on the next Send/Recv.
+
+### Bug Fixes
+
+* **Typing Chinese, Japanese or Korean:** on the Mac, the search box no longer searches text you are still composing; on Linux, Enter in an address field confirms the composition instead of picking an address.
+* **On Windows, message boxes' buttons (Yes, No, OK, Cancel) are in the app's language,** not in Windows' own.
+* **Undo brings back every copy of a message moved together,** such as one delivered both by a mailing list and as a Cc.
+* **Undo and Mark All Read work on more than 1000 messages** with servers that limit how many one command may touch, and selecting thousands of separate messages no longer fails.
+* **Lists stay where you scrolled them** when they are read again after new mail, and a click while a list is being read is no longer lost.
+* **On Linux, rows drawn while scrolling quickly are filled in**, a row selected while still blank keeps its message, and a draft always opens.
+* **Unsubscribe by mail from a message window** writes from that message's account, on the Mac and Linux.
+]]></description>
+            <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.20.1/InboxClassic.dmg" length="29547296" type="application/octet-stream" sparkle:edSignature="O3Bh7VEugZk0QGle03jzPfE3U8QN4NPPdBPuDoRoHVe5SjxHAAwLnPrDb/Ug8CNONrna9904fg+FDVKm/G+0Dg=="/>
+        </item>
+        <item>
             <title>0.19.1</title>
             <pubDate>Fri, 20 Nov 2026 00:37:06 +0200</pubDate>
             <sparkle:version>0.19.1</sparkle:version>
@@ -57,32 +90,6 @@ Encrypted mail, attachment previews, 24 more languages, and lists that stay fast
 * On Windows, a dialog keeps its focus when it comes back to the front.
 ]]></description>
             <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.19.0/InboxClassic.dmg" length="27422415" type="application/octet-stream" sparkle:edSignature="GHn5BopLbc3jsOjjOU6jlrbE8R+WYC6fH3UswEJFfuHaNf+hwTua0SFRO5+DAac+kA3RMWYMbWIfdGREeqyJDQ=="/>
-        </item>
-        <item>
-            <title>0.18.0</title>
-            <pubDate>Sun, 15 Nov 2026 04:31:29 +0200</pubDate>
-            <sparkle:version>0.18.0</sparkle:version>
-            <sparkle:shortVersionString>0.18.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## [0.18.0](https://github.com/postalsys/inbox-classic/compare/v0.17.1...v0.18.0) (2026-11-15)
-
-Safer sending, message rules and reading comfort.
-
-### Features
-
-* **Drafts are saved as you write**, a few seconds after you stop typing and every half a minute while you go on. If Inbox Classic or your computer stops unexpectedly, the messages you were writing open again at the next start.
-* **Undo Send**: a message waits a few seconds before it goes, with a countdown and an Undo button in the status bar, and Edit > Undo takes it back. The wait is 10 seconds by default; choose 5 to 30 seconds, or none, in Options (Settings on the Mac, Preferences on Linux).
-* **A reminder when a file seems forgotten**: a message that says something is attached, with no file attached, asks before it goes. Only your own text counts, not the quoted message or your signature.
-* **Message Rules** (Tools > Message Rules) sort new Inbox mail as it arrives: a search in the search box's words, and what to do with what matches (move, mark read, flag, archive, junk, delete, or not notify). Start one from a message (Message > Create Rule from Message) or from a search (Create Rule… on the search bar). The new `list:` search word finds a mailing list's mail.
-* **Send from another address**: list your aliases in the account's properties, choose one in the compose window's From list, and a reply goes from the address the message was sent to.
-* **The Flagged folder** at the top of the folder list shows the flagged messages of all your accounts.
-* **View > Text Size** shows messages and the text you write larger or smaller, with no shortcut keys to change it by accident.
-* **Messages in dark mode** on the Mac and Linux: when the system is dark, mail as people write it is shown dark too, and so is the editor; newsletters and receipts keep their own design. A setting turns it off.
-
-### Bug Fixes
-]]></description>
-            <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.18.0/InboxClassic.dmg" length="12456545" type="application/octet-stream" sparkle:edSignature="nD6nCzvIMx1+jOWNbQzMJxLk2c8vzSJfm/YmkLErkC6PTsLKtx/4fVoB6K7Pa6sr/jQVVmXXI3dxgMI+l0mfDQ=="/>
         </item>
     </channel>
 </rss>

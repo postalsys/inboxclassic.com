@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'">
+<title>邮件和密码的保存位置</title>
+<style>body{margin:16px 24px;line-height:1.5}body>:not(.web),main{max-width:42em}h1{font-size:1.6em;margin:0 0 4px}h2{font-size:1.2em;margin:1.4em 0 .4em}p.summary{font-size:1.05em;opacity:.8;margin-top:0}ol,ul{padding-left:1.6em}li{margin:.3em 0}table{border-collapse:collapse;margin:.6em 0}th,td{text-align:left;padding:4px 12px 4px 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent);vertical-align:top}kbd{font-size:.9em;border:1px solid color-mix(in srgb,currentColor 35%,transparent);border-bottom-width:2px;border-radius:4px;padding:0 4px;white-space:nowrap}aside{padding:8px 12px;margin:.8em 0}.side a[aria-current]{font-weight:700;text-decoration:none}aside.warning{border-left:4px solid #c60}img.picture{max-width:100%;height:auto;margin:.6em 0;border:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related{margin-top:1.6em;padding-top:.6em;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related a{margin-right:1.2em}p.home{margin:0 0 1em;font-size:.9em}header.bar{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;max-width:none;padding:0 0 12px;margin:0 0 20px;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}header.bar .brand{font-weight:700;text-decoration:none;margin-right:auto}header.bar a,header.bar b{margin-right:10px}.web{display:flex;gap:32px}.web .side{flex:0 0 240px;font-size:.92em}.web .side ul{padding-left:1.1em}.web main{flex:1;min-width:0}@media(max-width:700px){.web{display:block}.web .side{display:none}}:root{color-scheme:light dark}body{font:13px -apple-system,BlinkMacSystemFont,sans-serif;color:CanvasText;background:Canvas}a{color:LinkText}aside.note,aside.warning{background:color-mix(in srgb,CanvasText 6%,Canvas);border-radius:8px}kbd{font-family:-apple-system,sans-serif}body.windows,body.mac,body.linux{font:16px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif;margin:0;background:#f7f7fb;color:#1f2330}header.bar{max-width:1180px;margin:0 auto;padding:14px 24px;border-bottom:1px solid #e3e3ee}header.bar .brand{color:#3d4aa8;font-size:1.1em}header.bar a{color:#3d4aa8}.web{max-width:1180px;margin:0 auto;padding:24px}.web main{background:#fff;border-radius:12px;padding:28px 36px;box-shadow:0 1px 3px rgba(20,20,60,.08)}.web .side{position:sticky;top:16px;align-self:flex-start;max-height:calc(100vh - 32px);overflow:auto}.web .side a{color:#30395e;text-decoration:none}.web .side a:hover,.web main a{color:#3d4aa8}h1,h2{color:#1f2330}h2{border-bottom:none}aside.note,aside.warning{background:#f1f2fb;border:1px solid #e0e2f5;border-radius:10px}@media(prefers-color-scheme:dark){body.windows,body.mac,body.linux{background:#14151c;color:#e6e7ef}.web main{background:#1d1f29;box-shadow:none}header.bar{border-color:#2c2f3d}.web .side a{color:#c5c9e6}h1,h2{color:#e6e7ef}aside.note,aside.warning{background:#232637;border-color:#30344a}header.bar a,header.bar .brand,.web main a,.web .side a:hover{color:#9aa6ff}}</style>
+</head>
+<body class="mac">
+<header class="bar"><a class="brand" href="/">Inbox Classic</a><span class="platforms"><a href="../windows/data-storage.html">Windows</a> <b>Mac</b> <a href="../linux/data-storage.html">Linux</a></span><span class="languages"><a href="../../en/mac/data-storage.html" hreflang="en">English</a> <a href="../../id/mac/data-storage.html" hreflang="id">Bahasa Indonesia</a> <a href="../../ca/mac/data-storage.html" hreflang="ca">Català</a> <a href="../../cs/mac/data-storage.html" hreflang="cs">Čeština</a> <a href="../../da/mac/data-storage.html" hreflang="da">Dansk</a> <a href="../../de/mac/data-storage.html" hreflang="de">Deutsch</a> <a href="../../et/mac/data-storage.html" hreflang="et">Eesti</a> <a href="../../es/mac/data-storage.html" hreflang="es">Español</a> <a href="../../fr/mac/data-storage.html" hreflang="fr">Français</a> <a href="../../hr/mac/data-storage.html" hreflang="hr">Hrvatski</a> <a href="../../it/mac/data-storage.html" hreflang="it">Italiano</a> <a href="../../lv/mac/data-storage.html" hreflang="lv">Latviešu</a> <a href="../../lt/mac/data-storage.html" hreflang="lt">Lietuvių</a> <a href="../../hu/mac/data-storage.html" hreflang="hu">Magyar</a> <a href="../../nl/mac/data-storage.html" hreflang="nl">Nederlands</a> <a href="../../nb/mac/data-storage.html" hreflang="nb">Norsk bokmål</a> <a href="../../pl/mac/data-storage.html" hreflang="pl">Polski</a> <a href="../../pt-BR/mac/data-storage.html" hreflang="pt-BR">Português (Brasil)</a> <a href="../../pt/mac/data-storage.html" hreflang="pt">Português (Portugal)</a> <a href="../../ro/mac/data-storage.html" hreflang="ro">Română</a> <a href="../../sk/mac/data-storage.html" hreflang="sk">Slovenčina</a> <a href="../../sl/mac/data-storage.html" hreflang="sl">Slovenščina</a> <a href="../../sr-Latn/mac/data-storage.html" hreflang="sr-Latn">Srpski</a> <a href="../../fi/mac/data-storage.html" hreflang="fi">Suomi</a> <a href="../../sv/mac/data-storage.html" hreflang="sv">Svenska</a> <a href="../../vi/mac/data-storage.html" hreflang="vi">Tiếng Việt</a> <a href="../../tr/mac/data-storage.html" hreflang="tr">Türkçe</a> <a href="../../el/mac/data-storage.html" hreflang="el">Ελληνικά</a> <a href="../../bg/mac/data-storage.html" hreflang="bg">Български</a> <a href="../../ru/mac/data-storage.html" hreflang="ru">Русский</a> <a href="../../uk/mac/data-storage.html" hreflang="uk">Українська</a> <a href="../../ja/mac/data-storage.html" hreflang="ja">日本語</a> <b>简体中文</b> <a href="../../zh-Hant/mac/data-storage.html" hreflang="zh-Hant">繁體中文</a> <a href="../../ko/mac/data-storage.html" hreflang="ko">한국어</a></span></header>
+<div class="web"><nav class="side"><nav class="contents">
+<h2>入门</h2>
+<ul>
+<li><a href="add-account.html">添加邮件帐户</a></li>
+<li><a href="gmail-outlook.html">Gmail 和 Outlook.com</a></li>
+<li><a href="main-window.html">主窗口</a></li>
+<li><a href="layouts.html">布局</a></li>
+</ul>
+<h2>日常任务</h2>
+<ul>
+<li><a href="read-messages.html">阅读邮件</a></li>
+<li><a href="find-messages.html">查找邮件</a></li>
+<li><a href="conversations.html">对话</a></li>
+<li><a href="organize-mail.html">为邮件加标志、存档和移动邮件</a></li>
+<li><a href="message-rules.html">用规则整理新邮件</a></li>
+<li><a href="delete-and-undo.html">删除邮件和撤消</a></li>
+<li><a href="folders.html">使用文件夹</a></li>
+<li><a href="write-message.html">撰写邮件</a></li>
+<li><a href="reply-forward.html">答复和转发</a></li>
+<li><a href="attachments.html">附件</a></li>
+<li><a href="drafts-outbox.html">草稿和发件箱</a></li>
+<li><a href="signatures.html">签名</a></li>
+<li><a href="address-book.html">通讯簿</a></li>
+<li><a href="save-print-import.html">保存、打印和导入邮件</a></li>
+<li><a href="new-mail.html">接收新邮件</a></li>
+</ul>
+<h2>多个帐户</h2>
+<ul>
+<li><a href="all-inboxes.html">所有收件箱</a></li>
+<li><a href="manage-accounts.html">更改、排列和删除帐户</a></li>
+<li><a href="move-computer.html">迁移到另一台计算机</a></li>
+</ul>
+<h2>邮件功能</h2>
+<ul>
+<li><a href="sign-in-codes.html">验证码</a></li>
+<li><a href="delivery-problems.html">未投递的邮件</a></li>
+<li><a href="invitations.html">日历邀请</a></li>
+<li><a href="unsubscribe.html">退订邮件列表</a></li>
+<li><a href="brand-logos.html">品牌徽标</a></li>
+</ul>
+<h2>加密和签名邮件</h2>
+<ul>
+<li><a href="encrypted-and-signed-mail.html">加密邮件和签名邮件</a></li>
+<li><a href="sign-and-encrypt.html">对邮件签名和加密</a></li>
+<li><a href="encryption-keys.html">加密密钥</a></li>
+<li><a href="verify-a-key.html">验证联系人的密钥</a></li>
+</ul>
+<h2>设置</h2>
+<ul>
+<li><a href="options-language.html">设置</a></li>
+<li><a href="download-ahead.html">提前下载的邮件</a></li>
+<li><a href="account-security.html">帐户安全设置</a></li>
+<li><a href="default-mail-program.html">将 Inbox Classic 设为邮件应用</a></li>
+<li><a href="updates.html">更新 Inbox Classic</a></li>
+</ul>
+<h2>AI 代理</h2>
+<ul>
+<li><a href="agents-connect.html">连接 AI 代理</a></li>
+<li><a href="agents-permissions.html">代理可以做什么</a></li>
+<li><a href="agents-sending.html">AI 代理发送邮件时</a></li>
+</ul>
+<h2>参考</h2>
+<ul>
+<li><a href="keyboard-shortcuts.html">键盘快捷键</a></li>
+<li><a href="search-words.html">搜索词</a></li>
+</ul>
+<h2>疑难解答</h2>
+<ul>
+<li><a href="password-not-accepted.html">密码未被接受</a></li>
+<li><a href="certificate-errors.html">证书错误</a></li>
+<li><a href="encryption-errors.html">加密错误</a></li>
+<li><a href="no-connection.html">Inbox Classic 无法连接</a></li>
+<li><a href="message-not-shown.html">邮件未显示</a></li>
+</ul>
+<h2>隐私和安全</h2>
+<ul>
+<li><a href="pictures-tracking.html">图片和跟踪</a></li>
+<li><a href="links-scripts.html">链接、脚本和附件</a></li>
+<li><a href="data-storage.html" aria-current="page">邮件和密码的保存位置</a></li>
+<li><a href="connections.html">Inbox Classic 建立的连接</a></li>
+<li><a href="removing.html">删除 Inbox Classic</a></li>
+</ul>
+<h2>高级</h2>
+<ul>
+<li><a href="sign-in-apps.html">登录应用</a></li>
+<li><a href="command-line.html">命令行选项</a></li>
+</ul>
+</nav>
+</nav><main>
+<h1>邮件和密码的保存位置</h1>
+<p class="summary">Inbox Classic 在您的计算机上保存了哪些内容，以及保存在哪里。</p>
+<ul>
+    <li><b>已下载的邮件和帐户设置</b>默认保存在<code>~/Library/Application Support/Inbox Classic/store.db</code>中。启动选项或您的环境可以更改此位置。已同步的邮件保留在服务器上；发件箱只在本地。缓存的副本在保存期间可供脱机阅读。数据库和搜索索引并未整体加密。</li>
+    <li><b>密码</b>、浏览器登录令牌和登录应用的客户端密码通常保存在您的登录钥匙串中的 <i>InboxClassic</i> 下，并针对您的 Mac 帐户加密。“钥匙串访问”中可以看到它们。这些凭据不保存在邮件数据库中。在仅内存模式下，它们只保留到应用退出为止。</li>
+    <li><b>加密密钥</b>与已下载的邮件保存在一起。您的私钥在那里由一个与密码保存在一起的密钥加密，因此单凭邮件文件无法打开它们。</li>
+</ul>
+<p>搜索、退信说明、对话分组和验证码识别都在您的计算机上运行。这些功能不会将您的邮件内容发送到外部服务。</p>
+<p>只有在您允许时，AI 代理才能看到您的邮件，而且只能看到您选择的帐户。请参阅<a href="agents-permissions.html">代理可以做什么</a>。</p>
+<nav class="related"><a href="connections.html">Inbox Classic 建立的连接</a> <a href="removing.html">删除 Inbox Classic</a> <a href="account-security.html">帐户安全设置</a></nav>
+</main></div>
+</body>
+</html>

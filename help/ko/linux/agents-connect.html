@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'">
+<title>AI 에이전트 연결</title>
+<style>body{margin:16px 24px;line-height:1.5}body>:not(.web),main{max-width:42em}h1{font-size:1.6em;margin:0 0 4px}h2{font-size:1.2em;margin:1.4em 0 .4em}p.summary{font-size:1.05em;opacity:.8;margin-top:0}ol,ul{padding-left:1.6em}li{margin:.3em 0}table{border-collapse:collapse;margin:.6em 0}th,td{text-align:left;padding:4px 12px 4px 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent);vertical-align:top}kbd{font-size:.9em;border:1px solid color-mix(in srgb,currentColor 35%,transparent);border-bottom-width:2px;border-radius:4px;padding:0 4px;white-space:nowrap}aside{padding:8px 12px;margin:.8em 0}.side a[aria-current]{font-weight:700;text-decoration:none}aside.warning{border-left:4px solid #c60}img.picture{max-width:100%;height:auto;margin:.6em 0;border:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related{margin-top:1.6em;padding-top:.6em;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related a{margin-right:1.2em}p.home{margin:0 0 1em;font-size:.9em}header.bar{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;max-width:none;padding:0 0 12px;margin:0 0 20px;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}header.bar .brand{font-weight:700;text-decoration:none;margin-right:auto}header.bar a,header.bar b{margin-right:10px}.web{display:flex;gap:32px}.web .side{flex:0 0 240px;font-size:.92em}.web .side ul{padding-left:1.1em}.web main{flex:1;min-width:0}@media(max-width:700px){.web{display:block}.web .side{display:none}}:root{color-scheme:light dark}body{font:11pt system-ui,'Adwaita Sans',Cantarell,sans-serif;color:CanvasText;background:Canvas}a{color:#1c71d8}@media(prefers-color-scheme:dark){a{color:#78aeed}}aside.note,aside.warning{background:color-mix(in srgb,CanvasText 6%,Canvas);border-radius:12px}body.windows,body.mac,body.linux{font:16px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif;margin:0;background:#f7f7fb;color:#1f2330}header.bar{max-width:1180px;margin:0 auto;padding:14px 24px;border-bottom:1px solid #e3e3ee}header.bar .brand{color:#3d4aa8;font-size:1.1em}header.bar a{color:#3d4aa8}.web{max-width:1180px;margin:0 auto;padding:24px}.web main{background:#fff;border-radius:12px;padding:28px 36px;box-shadow:0 1px 3px rgba(20,20,60,.08)}.web .side{position:sticky;top:16px;align-self:flex-start;max-height:calc(100vh - 32px);overflow:auto}.web .side a{color:#30395e;text-decoration:none}.web .side a:hover,.web main a{color:#3d4aa8}h1,h2{color:#1f2330}h2{border-bottom:none}aside.note,aside.warning{background:#f1f2fb;border:1px solid #e0e2f5;border-radius:10px}@media(prefers-color-scheme:dark){body.windows,body.mac,body.linux{background:#14151c;color:#e6e7ef}.web main{background:#1d1f29;box-shadow:none}header.bar{border-color:#2c2f3d}.web .side a{color:#c5c9e6}h1,h2{color:#e6e7ef}aside.note,aside.warning{background:#232637;border-color:#30344a}header.bar a,header.bar .brand,.web main a,.web .side a:hover{color:#9aa6ff}}</style>
+</head>
+<body class="linux">
+<header class="bar"><a class="brand" href="/">Inbox Classic</a><span class="platforms"><a href="../windows/agents-connect.html">Windows</a> <a href="../mac/agents-connect.html">Mac</a> <b>Linux</b></span><span class="languages"><a href="../../en/linux/agents-connect.html" hreflang="en">English</a> <a href="../../id/linux/agents-connect.html" hreflang="id">Bahasa Indonesia</a> <a href="../../ca/linux/agents-connect.html" hreflang="ca">Català</a> <a href="../../cs/linux/agents-connect.html" hreflang="cs">Čeština</a> <a href="../../da/linux/agents-connect.html" hreflang="da">Dansk</a> <a href="../../de/linux/agents-connect.html" hreflang="de">Deutsch</a> <a href="../../et/linux/agents-connect.html" hreflang="et">Eesti</a> <a href="../../es/linux/agents-connect.html" hreflang="es">Español</a> <a href="../../fr/linux/agents-connect.html" hreflang="fr">Français</a> <a href="../../hr/linux/agents-connect.html" hreflang="hr">Hrvatski</a> <a href="../../it/linux/agents-connect.html" hreflang="it">Italiano</a> <a href="../../lv/linux/agents-connect.html" hreflang="lv">Latviešu</a> <a href="../../lt/linux/agents-connect.html" hreflang="lt">Lietuvių</a> <a href="../../hu/linux/agents-connect.html" hreflang="hu">Magyar</a> <a href="../../nl/linux/agents-connect.html" hreflang="nl">Nederlands</a> <a href="../../nb/linux/agents-connect.html" hreflang="nb">Norsk bokmål</a> <a href="../../pl/linux/agents-connect.html" hreflang="pl">Polski</a> <a href="../../pt-BR/linux/agents-connect.html" hreflang="pt-BR">Português (Brasil)</a> <a href="../../pt/linux/agents-connect.html" hreflang="pt">Português (Portugal)</a> <a href="../../ro/linux/agents-connect.html" hreflang="ro">Română</a> <a href="../../sk/linux/agents-connect.html" hreflang="sk">Slovenčina</a> <a href="../../sl/linux/agents-connect.html" hreflang="sl">Slovenščina</a> <a href="../../sr-Latn/linux/agents-connect.html" hreflang="sr-Latn">Srpski</a> <a href="../../fi/linux/agents-connect.html" hreflang="fi">Suomi</a> <a href="../../sv/linux/agents-connect.html" hreflang="sv">Svenska</a> <a href="../../vi/linux/agents-connect.html" hreflang="vi">Tiếng Việt</a> <a href="../../tr/linux/agents-connect.html" hreflang="tr">Türkçe</a> <a href="../../el/linux/agents-connect.html" hreflang="el">Ελληνικά</a> <a href="../../bg/linux/agents-connect.html" hreflang="bg">Български</a> <a href="../../ru/linux/agents-connect.html" hreflang="ru">Русский</a> <a href="../../uk/linux/agents-connect.html" hreflang="uk">Українська</a> <a href="../../ja/linux/agents-connect.html" hreflang="ja">日本語</a> <a href="../../zh-Hans/linux/agents-connect.html" hreflang="zh-Hans">简体中文</a> <a href="../../zh-Hant/linux/agents-connect.html" hreflang="zh-Hant">繁體中文</a> <b>한국어</b></span></header>
+<div class="web"><nav class="side"><nav class="contents">
+<h2>시작하기</h2>
+<ul>
+<li><a href="add-account.html">메일 계정 추가</a></li>
+<li><a href="gmail-outlook.html">Gmail 및 Outlook.com</a></li>
+<li><a href="main-window.html">기본 창</a></li>
+<li><a href="layouts.html">레이아웃</a></li>
+</ul>
+<h2>일상 작업</h2>
+<ul>
+<li><a href="read-messages.html">메시지 읽기</a></li>
+<li><a href="find-messages.html">메시지 찾기</a></li>
+<li><a href="conversations.html">대화</a></li>
+<li><a href="organize-mail.html">메시지에 플래그 지정, 보관 및 이동</a></li>
+<li><a href="message-rules.html">규칙으로 새 메일 정리</a></li>
+<li><a href="delete-and-undo.html">메시지 삭제 및 실행 취소</a></li>
+<li><a href="folders.html">폴더 작업</a></li>
+<li><a href="write-message.html">메시지 작성</a></li>
+<li><a href="reply-forward.html">회신 및 전달</a></li>
+<li><a href="attachments.html">첨부 파일</a></li>
+<li><a href="drafts-outbox.html">임시 보관함 및 보낼 편지함</a></li>
+<li><a href="signatures.html">서명</a></li>
+<li><a href="address-book.html">주소록</a></li>
+<li><a href="save-print-import.html">메시지 저장, 인쇄 및 가져오기</a></li>
+<li><a href="new-mail.html">새 메일 받기</a></li>
+</ul>
+<h2>여러 계정</h2>
+<ul>
+<li><a href="all-inboxes.html">모든 받은 편지함</a></li>
+<li><a href="manage-accounts.html">계정 변경, 정렬 및 제거</a></li>
+<li><a href="move-computer.html">다른 컴퓨터로 옮기기</a></li>
+</ul>
+<h2>메시지 기능</h2>
+<ul>
+<li><a href="sign-in-codes.html">로그인 코드</a></li>
+<li><a href="delivery-problems.html">배달되지 않은 메시지</a></li>
+<li><a href="invitations.html">일정 초대</a></li>
+<li><a href="unsubscribe.html">메일링 리스트 구독 취소</a></li>
+<li><a href="brand-logos.html">브랜드 로고</a></li>
+</ul>
+<h2>암호화 및 서명된 메일</h2>
+<ul>
+<li><a href="encrypted-and-signed-mail.html">암호화 및 서명된 메일</a></li>
+<li><a href="sign-and-encrypt.html">메시지 서명 및 암호화</a></li>
+<li><a href="encryption-keys.html">암호화 키</a></li>
+<li><a href="verify-a-key.html">연락처의 키 소유자 확인</a></li>
+</ul>
+<h2>설정</h2>
+<ul>
+<li><a href="options-language.html">설정</a></li>
+<li><a href="download-ahead.html">미리 다운로드한 메시지</a></li>
+<li><a href="account-security.html">계정 보안 설정</a></li>
+<li><a href="default-mail-program.html">Inbox Classic을 메일 앱으로 사용</a></li>
+<li><a href="updates.html">Inbox Classic 업데이트</a></li>
+</ul>
+<h2>AI 에이전트</h2>
+<ul>
+<li><a href="agents-connect.html" aria-current="page">AI 에이전트 연결</a></li>
+<li><a href="agents-permissions.html">에이전트에 허용하는 작업</a></li>
+<li><a href="agents-sending.html">에이전트가 메일을 보낼 때</a></li>
+</ul>
+<h2>참조 정보</h2>
+<ul>
+<li><a href="keyboard-shortcuts.html">바로 가기 키</a></li>
+<li><a href="search-words.html">검색어</a></li>
+</ul>
+<h2>문제 해결</h2>
+<ul>
+<li><a href="password-not-accepted.html">암호가 받아들여지지 않음</a></li>
+<li><a href="certificate-errors.html">인증서 오류</a></li>
+<li><a href="encryption-errors.html">암호화 오류</a></li>
+<li><a href="no-connection.html">Inbox Classic이 연결할 수 없음</a></li>
+<li><a href="message-not-shown.html">메시지가 표시되지 않음</a></li>
+</ul>
+<h2>개인 정보 및 보안</h2>
+<ul>
+<li><a href="pictures-tracking.html">그림과 추적</a></li>
+<li><a href="links-scripts.html">링크, 스크립트 및 첨부 파일</a></li>
+<li><a href="data-storage.html">메일과 암호가 저장되는 위치</a></li>
+<li><a href="connections.html">Inbox Classic이 만드는 연결</a></li>
+<li><a href="removing.html">Inbox Classic 제거</a></li>
+</ul>
+<h2>고급</h2>
+<ul>
+<li><a href="sign-in-apps.html">로그인 앱</a></li>
+<li><a href="command-line.html">명령줄 옵션</a></li>
+</ul>
+</nav>
+</nav><main>
+<h1>AI 에이전트 연결</h1>
+<p class="summary">Claude 같은 AI 에이전트가 Inbox Classic을 통해 메일을 읽고 정리하도록 허용합니다.</p>
+<p>AI 에이전트가 메일을 다루도록 허용할 수 있습니다. 에이전트는 Claude, Cursor 또는 MCP(Model Context Protocol)를 지원하는 다른 프로그램일 수 있습니다. Inbox Classic 자체에는 AI가 없으며, 에이전트를 허용하지 않는 한 어떤 내용도 AI 서비스로 전송되지 않습니다.</p>
+<p>에이전트를 연결하려면 다음과 같이 합니다.</p>
+<ol>
+    <li><b>도구</b> &gt; <b>AI 에이전트</b>를 선택하고 <b>에이전트 연결 방법</b> 단추를 클릭합니다. 에이전트 설정에 추가할 줄이 Inbox Classic에 표시됩니다.</li>
+    <li>이 줄을 에이전트의 MCP 서버 설정에 추가합니다. Claude Desktop에서는 <i>Settings &gt; Developer &gt; Edit Config</i>입니다.</li>
+    <li>에이전트를 시작합니다. 에이전트가 처음 연결되면 Inbox Classic이 에이전트에 허용할 작업을 묻습니다.</li>
+</ol>
+<p>Inbox Classic이 실행 중이 아니면 에이전트가 백그라운드에서 Inbox Classic을 시작합니다. 이 컴퓨터에서 사용자 본인의 계정으로 실행되는 프로그램만 Inbox Classic에 연결할 수 있습니다.</p>
+<p>Inbox Classic은 에이전트가 밝히는 이름을 그대로 믿지 않고, 에이전트를 시작한 프로그램이 무엇인지 시스템에 확인합니다. 따라서 에이전트가 다른 프로그램이라고 주장하는 것만으로는 그 프로그램에 허용한 권한을 얻을 수 없습니다. 에이전트가 다른 프로그램이라고 밝히면 확인 질문에 그 사실이 표시됩니다. 이 방식은 에이전트끼리 서로 분리할 뿐이며, 사용자 계정으로 실행되는 유해한 프로그램은 어차피 메일을 읽을 수 있으므로 그런 프로그램으로부터 보호해 주지는 않습니다.</p>
+<p>에이전트는 받은 편지함, 계정 또는 폴더를 지켜보다가 메일이 바뀌면 알림을 받을 수도 있으며, “받은 편지함 분류”와 “읽지 않은 메일 요약”이라는 두 가지 기본 요청을 제공할 수 있습니다. 두 요청 모두 에이전트에 허용한 범위를 따르며, 이렇게 읽은 내용도 다른 읽기와 마찬가지로 에이전트의 기록에 표시됩니다.</p>
+<p>Claude Code 같은 에이전트는 Inbox Classic이 인식한 동일한 터미널 프로그램에서 시작되면 권한을 공유합니다. 터미널에서 시작한 프로그램에 대해 한 번만 묻고, 그 프로그램들은 허용한 권한을 함께 사용합니다. 에이전트에 별도의 권한을 주려면 에이전트 설정에서 <code>--mcp</code> 뒤에 <code>--name</code>과 원하는 이름을 추가합니다(예: <code>"args": ["--mcp", "--name", "Claude Code"]</code>). 그러면 Inbox Classic이 그 이름으로 에이전트에 대해 묻습니다. 지정한 이름이 에이전트의 신원을 확인해 주지는 않습니다.</p>
+<p>모든 에이전트를 한 번에 끄려면 <b>도구</b> &gt; <b>AI 에이전트</b> 창에서 <b>AI 에이전트가 Inbox Classic에 연결하도록 허용</b> 확인란의 선택을 취소합니다.</p>
+<nav class="related"><a href="agents-permissions.html">에이전트에 허용하는 작업</a> <a href="agents-sending.html">에이전트가 메일을 보낼 때</a> <a href="command-line.html">명령줄 옵션</a></nav>
+</main></div>
+</body>
+</html>

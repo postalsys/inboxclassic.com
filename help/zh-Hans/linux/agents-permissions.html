@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'">
+<title>代理可以做什么</title>
+<style>body{margin:16px 24px;line-height:1.5}body>:not(.web),main{max-width:42em}h1{font-size:1.6em;margin:0 0 4px}h2{font-size:1.2em;margin:1.4em 0 .4em}p.summary{font-size:1.05em;opacity:.8;margin-top:0}ol,ul{padding-left:1.6em}li{margin:.3em 0}table{border-collapse:collapse;margin:.6em 0}th,td{text-align:left;padding:4px 12px 4px 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent);vertical-align:top}kbd{font-size:.9em;border:1px solid color-mix(in srgb,currentColor 35%,transparent);border-bottom-width:2px;border-radius:4px;padding:0 4px;white-space:nowrap}aside{padding:8px 12px;margin:.8em 0}.side a[aria-current]{font-weight:700;text-decoration:none}aside.warning{border-left:4px solid #c60}img.picture{max-width:100%;height:auto;margin:.6em 0;border:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related{margin-top:1.6em;padding-top:.6em;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related a{margin-right:1.2em}p.home{margin:0 0 1em;font-size:.9em}header.bar{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;max-width:none;padding:0 0 12px;margin:0 0 20px;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}header.bar .brand{font-weight:700;text-decoration:none;margin-right:auto}header.bar a,header.bar b{margin-right:10px}.web{display:flex;gap:32px}.web .side{flex:0 0 240px;font-size:.92em}.web .side ul{padding-left:1.1em}.web main{flex:1;min-width:0}@media(max-width:700px){.web{display:block}.web .side{display:none}}:root{color-scheme:light dark}body{font:11pt system-ui,'Adwaita Sans',Cantarell,sans-serif;color:CanvasText;background:Canvas}a{color:#1c71d8}@media(prefers-color-scheme:dark){a{color:#78aeed}}aside.note,aside.warning{background:color-mix(in srgb,CanvasText 6%,Canvas);border-radius:12px}body.windows,body.mac,body.linux{font:16px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif;margin:0;background:#f7f7fb;color:#1f2330}header.bar{max-width:1180px;margin:0 auto;padding:14px 24px;border-bottom:1px solid #e3e3ee}header.bar .brand{color:#3d4aa8;font-size:1.1em}header.bar a{color:#3d4aa8}.web{max-width:1180px;margin:0 auto;padding:24px}.web main{background:#fff;border-radius:12px;padding:28px 36px;box-shadow:0 1px 3px rgba(20,20,60,.08)}.web .side{position:sticky;top:16px;align-self:flex-start;max-height:calc(100vh - 32px);overflow:auto}.web .side a{color:#30395e;text-decoration:none}.web .side a:hover,.web main a{color:#3d4aa8}h1,h2{color:#1f2330}h2{border-bottom:none}aside.note,aside.warning{background:#f1f2fb;border:1px solid #e0e2f5;border-radius:10px}@media(prefers-color-scheme:dark){body.windows,body.mac,body.linux{background:#14151c;color:#e6e7ef}.web main{background:#1d1f29;box-shadow:none}header.bar{border-color:#2c2f3d}.web .side a{color:#c5c9e6}h1,h2{color:#e6e7ef}aside.note,aside.warning{background:#232637;border-color:#30344a}header.bar a,header.bar .brand,.web main a,.web .side a:hover{color:#9aa6ff}}</style>
+</head>
+<body class="linux">
+<header class="bar"><a class="brand" href="/">Inbox Classic</a><span class="platforms"><a href="../windows/agents-permissions.html">Windows</a> <a href="../mac/agents-permissions.html">Mac</a> <b>Linux</b></span><span class="languages"><a href="../../en/linux/agents-permissions.html" hreflang="en">English</a> <a href="../../id/linux/agents-permissions.html" hreflang="id">Bahasa Indonesia</a> <a href="../../ca/linux/agents-permissions.html" hreflang="ca">Català</a> <a href="../../cs/linux/agents-permissions.html" hreflang="cs">Čeština</a> <a href="../../da/linux/agents-permissions.html" hreflang="da">Dansk</a> <a href="../../de/linux/agents-permissions.html" hreflang="de">Deutsch</a> <a href="../../et/linux/agents-permissions.html" hreflang="et">Eesti</a> <a href="../../es/linux/agents-permissions.html" hreflang="es">Español</a> <a href="../../fr/linux/agents-permissions.html" hreflang="fr">Français</a> <a href="../../hr/linux/agents-permissions.html" hreflang="hr">Hrvatski</a> <a href="../../it/linux/agents-permissions.html" hreflang="it">Italiano</a> <a href="../../lv/linux/agents-permissions.html" hreflang="lv">Latviešu</a> <a href="../../lt/linux/agents-permissions.html" hreflang="lt">Lietuvių</a> <a href="../../hu/linux/agents-permissions.html" hreflang="hu">Magyar</a> <a href="../../nl/linux/agents-permissions.html" hreflang="nl">Nederlands</a> <a href="../../nb/linux/agents-permissions.html" hreflang="nb">Norsk bokmål</a> <a href="../../pl/linux/agents-permissions.html" hreflang="pl">Polski</a> <a href="../../pt-BR/linux/agents-permissions.html" hreflang="pt-BR">Português (Brasil)</a> <a href="../../pt/linux/agents-permissions.html" hreflang="pt">Português (Portugal)</a> <a href="../../ro/linux/agents-permissions.html" hreflang="ro">Română</a> <a href="../../sk/linux/agents-permissions.html" hreflang="sk">Slovenčina</a> <a href="../../sl/linux/agents-permissions.html" hreflang="sl">Slovenščina</a> <a href="../../sr-Latn/linux/agents-permissions.html" hreflang="sr-Latn">Srpski</a> <a href="../../fi/linux/agents-permissions.html" hreflang="fi">Suomi</a> <a href="../../sv/linux/agents-permissions.html" hreflang="sv">Svenska</a> <a href="../../vi/linux/agents-permissions.html" hreflang="vi">Tiếng Việt</a> <a href="../../tr/linux/agents-permissions.html" hreflang="tr">Türkçe</a> <a href="../../el/linux/agents-permissions.html" hreflang="el">Ελληνικά</a> <a href="../../bg/linux/agents-permissions.html" hreflang="bg">Български</a> <a href="../../ru/linux/agents-permissions.html" hreflang="ru">Русский</a> <a href="../../uk/linux/agents-permissions.html" hreflang="uk">Українська</a> <a href="../../ja/linux/agents-permissions.html" hreflang="ja">日本語</a> <b>简体中文</b> <a href="../../zh-Hant/linux/agents-permissions.html" hreflang="zh-Hant">繁體中文</a> <a href="../../ko/linux/agents-permissions.html" hreflang="ko">한국어</a></span></header>
+<div class="web"><nav class="side"><nav class="contents">
+<h2>入门</h2>
+<ul>
+<li><a href="add-account.html">添加邮件帐户</a></li>
+<li><a href="gmail-outlook.html">Gmail 和 Outlook.com</a></li>
+<li><a href="main-window.html">主窗口</a></li>
+<li><a href="layouts.html">布局</a></li>
+</ul>
+<h2>日常任务</h2>
+<ul>
+<li><a href="read-messages.html">阅读邮件</a></li>
+<li><a href="find-messages.html">查找邮件</a></li>
+<li><a href="conversations.html">对话</a></li>
+<li><a href="organize-mail.html">为邮件加标志、存档和移动邮件</a></li>
+<li><a href="message-rules.html">用规则整理新邮件</a></li>
+<li><a href="delete-and-undo.html">删除邮件和撤消</a></li>
+<li><a href="folders.html">使用文件夹</a></li>
+<li><a href="write-message.html">撰写邮件</a></li>
+<li><a href="reply-forward.html">答复和转发</a></li>
+<li><a href="attachments.html">附件</a></li>
+<li><a href="drafts-outbox.html">草稿和发件箱</a></li>
+<li><a href="signatures.html">签名</a></li>
+<li><a href="address-book.html">通讯簿</a></li>
+<li><a href="save-print-import.html">保存、打印和导入邮件</a></li>
+<li><a href="new-mail.html">接收新邮件</a></li>
+</ul>
+<h2>多个帐户</h2>
+<ul>
+<li><a href="all-inboxes.html">所有收件箱</a></li>
+<li><a href="manage-accounts.html">更改、排列和删除帐户</a></li>
+<li><a href="move-computer.html">迁移到另一台计算机</a></li>
+</ul>
+<h2>邮件功能</h2>
+<ul>
+<li><a href="sign-in-codes.html">验证码</a></li>
+<li><a href="delivery-problems.html">未投递的邮件</a></li>
+<li><a href="invitations.html">日历邀请</a></li>
+<li><a href="unsubscribe.html">退订邮件列表</a></li>
+<li><a href="brand-logos.html">品牌徽标</a></li>
+</ul>
+<h2>加密和签名邮件</h2>
+<ul>
+<li><a href="encrypted-and-signed-mail.html">加密邮件和签名邮件</a></li>
+<li><a href="sign-and-encrypt.html">对邮件签名和加密</a></li>
+<li><a href="encryption-keys.html">加密密钥</a></li>
+<li><a href="verify-a-key.html">验证联系人的密钥</a></li>
+</ul>
+<h2>设置</h2>
+<ul>
+<li><a href="options-language.html">设置</a></li>
+<li><a href="download-ahead.html">提前下载的邮件</a></li>
+<li><a href="account-security.html">帐户安全设置</a></li>
+<li><a href="default-mail-program.html">将 Inbox Classic 设为邮件应用</a></li>
+<li><a href="updates.html">更新 Inbox Classic</a></li>
+</ul>
+<h2>AI 代理</h2>
+<ul>
+<li><a href="agents-connect.html">连接 AI 代理</a></li>
+<li><a href="agents-permissions.html" aria-current="page">代理可以做什么</a></li>
+<li><a href="agents-sending.html">AI 代理发送邮件时</a></li>
+</ul>
+<h2>参考</h2>
+<ul>
+<li><a href="keyboard-shortcuts.html">键盘快捷键</a></li>
+<li><a href="search-words.html">搜索词</a></li>
+</ul>
+<h2>疑难解答</h2>
+<ul>
+<li><a href="password-not-accepted.html">密码未被接受</a></li>
+<li><a href="certificate-errors.html">证书错误</a></li>
+<li><a href="encryption-errors.html">加密错误</a></li>
+<li><a href="no-connection.html">Inbox Classic 无法连接</a></li>
+<li><a href="message-not-shown.html">邮件未显示</a></li>
+</ul>
+<h2>隐私和安全</h2>
+<ul>
+<li><a href="pictures-tracking.html">图片和跟踪</a></li>
+<li><a href="links-scripts.html">链接、脚本和附件</a></li>
+<li><a href="data-storage.html">邮件和密码的保存位置</a></li>
+<li><a href="connections.html">Inbox Classic 建立的连接</a></li>
+<li><a href="removing.html">删除 Inbox Classic</a></li>
+</ul>
+<h2>高级</h2>
+<ul>
+<li><a href="sign-in-apps.html">登录应用</a></li>
+<li><a href="command-line.html">命令行选项</a></li>
+</ul>
+</nav>
+</nav><main>
+<h1>代理可以做什么</h1>
+<p class="summary">选择每个 AI 代理可以对您的邮件做什么，并查看和撤消它所做的操作。</p>
+<p>某个程序的代理第一次连接时，Inbox Classic 会询问您，并指明该程序的名称。请选择它可以做什么：</p>
+<ul>
+    <li>读取邮件：文件夹、列表、对话、搜索、邮件、规则和联系人。受支持的 PDF、Office 和图片附件最大 10 MB，文本附件最大 256 KB</li>
+    <li>整理邮件：已读状态、标志及其颜色、垃圾邮件、移动、存档、新建文件夹、重命名您自己的文件夹、监视和忽略对话、删除到<b>已删除邮件</b>，以及在您同意后退订邮件列表。某些邮件操作也可以作用于搜索结果，如下文所述</li>
+    <li>撰写草稿供您发送，并在您保存或发送之前更改或删除它写的草稿，包括编辑器中的自动保存</li>
+    <li>发送邮件，每封邮件都要在您同意后才会发送</li>
+</ul>
+<p>然后选择它可以查看的帐户，并单击<b>允许</b>。<b>不允许</b>会拒绝该程序，以后也不会再就它询问您。</p>
+<p>代理从不更改您的帐户设置，除了它自己的草稿之外，也不会永久删除任何内容：当它放弃一封自己写的、您尚未保存的草稿时，它会请求永久删除，而不会把草稿移到<b>已删除邮件</b>。它可以读取和试用您的邮件规则，但从不创建、更改或删除规则。对于加密邮件，它只能看到外层信息，看不到解密后的文本或附件。阅读不会把邮件标记为已读。它所做的更改会立即显示在窗口中。</p>
+<h2>退订邮件列表</h2>
+<p>可以整理邮件的代理可以请求为您退订邮件列表。Inbox Classic 会先询问您一次，并按发件人列出每个邮件列表：</p>
+<ul>
+    <li><b>退订</b>会请求每个邮件列表停止向您发送邮件。</li>
+    <li><b>不退订</b>是默认选项，保持这些邮件列表不变。</li>
+</ul>
+<p>代理无法通过<b>垃圾邮件</b>、<b>已发送邮件</b>或<b>草稿</b>中的邮件请求退订。每个程序在 24 小时内最多可以获准 30 个请求，失败的请求也计算在内。日志记录的是请求发送前的批准，而不是邮件已停止发送的确认。</p>
+<h2>一次更改多封邮件</h2>
+<p>具有整理权限的代理可以更改搜索结果的已读状态、标志、颜色、文件夹或垃圾邮件状态。它会先统计符合条件的邮件并查看示例。符合条件的邮件超过 1,000 封，或者要检查的搜索结果超过 10,000 个时，它会拒绝该请求。然后它会重新检查所选邮件，跳过不再符合条件的邮件，并排除之后才到达的邮件。不需要再次批准。日志中只显示一行；撤消可能只能还原其中部分邮件。</p>
+<h2>查看和更改访问权限</h2>
+<p><b>工具</b> &gt; <b>AI 代理</b>列出您允许或拒绝的程序，以及代理所做的全部操作，最新的在前。</p>
+<p>代理读取的内容按程序和小时各显示为一行，例如“读取了14封邮件和搜索了3次”。用该行的箭头展开它可以查看主题、文件名和搜索内容，但不包括邮件正文。添加新条目时，超过 30 天的条目会被删除；某些更改可能会更早被清理。清除日志会删除阅读记录并隐藏更改，但不会重置发送或退订限制。</p>
+<ul>
+    <li><b>更改</b>可以更改程序能做什么。</li>
+    <li><b>删除</b>会删除程序已保存的访问权限和日志，下次它连接时会再次询问您。这不会卸载该程序。</li>
+    <li><b>撤消</b>可以撤回已读状态、标志或其颜色、移动、垃圾邮件、存档或删除操作，以及仍在发件箱中的邮件。</li>
+    <li><b>按时间段撤消</b>会尝试撤回所选程序在您选择的时间段内所做的更改，从最新的开始。计数的是日志条目，而不是单封邮件。</li>
+</ul>
+<p>撤消会跳过不再处于预期位置或状态的邮件。即使只有部分成功，日志条目也算作已撤回。代理可以撤消它自己的更改，但不能撤消其他程序的更改。</p>
+<aside class="warning">邮件是别人写的，有的邮件会试图诱使代理转发或删除您的邮件。Inbox Classic 会向代理隐藏邮件对您隐藏的文本，并告诉代理邮件内容不是指令。但代理仍有可能被欺骗。请只允许您需要的操作。</aside>
+<nav class="related"><a href="agents-connect.html">连接 AI 代理</a> <a href="agents-sending.html">AI 代理发送邮件时</a> <a href="data-storage.html">邮件和密码的保存位置</a></nav>
+</main></div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'">
+<title>Sắp xếp thư mới bằng quy tắc</title>
+<style>body{margin:16px 24px;line-height:1.5}body>:not(.web),main{max-width:42em}h1{font-size:1.6em;margin:0 0 4px}h2{font-size:1.2em;margin:1.4em 0 .4em}p.summary{font-size:1.05em;opacity:.8;margin-top:0}ol,ul{padding-left:1.6em}li{margin:.3em 0}table{border-collapse:collapse;margin:.6em 0}th,td{text-align:left;padding:4px 12px 4px 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent);vertical-align:top}kbd{font-size:.9em;border:1px solid color-mix(in srgb,currentColor 35%,transparent);border-bottom-width:2px;border-radius:4px;padding:0 4px;white-space:nowrap}aside{padding:8px 12px;margin:.8em 0}.side a[aria-current]{font-weight:700;text-decoration:none}aside.warning{border-left:4px solid #c60}img.picture{max-width:100%;height:auto;margin:.6em 0;border:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related{margin-top:1.6em;padding-top:.6em;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related a{margin-right:1.2em}p.home{margin:0 0 1em;font-size:.9em}header.bar{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;max-width:none;padding:0 0 12px;margin:0 0 20px;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}header.bar .brand{font-weight:700;text-decoration:none;margin-right:auto}header.bar a,header.bar b{margin-right:10px}.web{display:flex;gap:32px}.web .side{flex:0 0 240px;font-size:.92em}.web .side ul{padding-left:1.1em}.web main{flex:1;min-width:0}@media(max-width:700px){.web{display:block}.web .side{display:none}}body{font:10pt Tahoma,Arial,sans-serif;color:#000;background:#fff}h1,h2{color:#036}h2{border-bottom:1px solid #9ab}a{color:#03c}aside.note,aside.warning{background:#ffffe1;border:1px solid #c9c9a0}kbd{background:#f4f4f4;border-color:#999}body.windows,body.mac,body.linux{font:16px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif;margin:0;background:#f7f7fb;color:#1f2330}header.bar{max-width:1180px;margin:0 auto;padding:14px 24px;border-bottom:1px solid #e3e3ee}header.bar .brand{color:#3d4aa8;font-size:1.1em}header.bar a{color:#3d4aa8}.web{max-width:1180px;margin:0 auto;padding:24px}.web main{background:#fff;border-radius:12px;padding:28px 36px;box-shadow:0 1px 3px rgba(20,20,60,.08)}.web .side{position:sticky;top:16px;align-self:flex-start;max-height:calc(100vh - 32px);overflow:auto}.web .side a{color:#30395e;text-decoration:none}.web .side a:hover,.web main a{color:#3d4aa8}h1,h2{color:#1f2330}h2{border-bottom:none}aside.note,aside.warning{background:#f1f2fb;border:1px solid #e0e2f5;border-radius:10px}@media(prefers-color-scheme:dark){body.windows,body.mac,body.linux{background:#14151c;color:#e6e7ef}.web main{background:#1d1f29;box-shadow:none}header.bar{border-color:#2c2f3d}.web .side a{color:#c5c9e6}h1,h2{color:#e6e7ef}aside.note,aside.warning{background:#232637;border-color:#30344a}header.bar a,header.bar .brand,.web main a,.web .side a:hover{color:#9aa6ff}}</style>
+</head>
+<body class="windows">
+<header class="bar"><a class="brand" href="/">Inbox Classic</a><span class="platforms"><b>Windows</b> <a href="../mac/message-rules.html">Mac</a> <a href="../linux/message-rules.html">Linux</a></span><span class="languages"><a href="../../en/windows/message-rules.html" hreflang="en">English</a> <a href="../../id/windows/message-rules.html" hreflang="id">Bahasa Indonesia</a> <a href="../../ca/windows/message-rules.html" hreflang="ca">Català</a> <a href="../../cs/windows/message-rules.html" hreflang="cs">Čeština</a> <a href="../../da/windows/message-rules.html" hreflang="da">Dansk</a> <a href="../../de/windows/message-rules.html" hreflang="de">Deutsch</a> <a href="../../et/windows/message-rules.html" hreflang="et">Eesti</a> <a href="../../es/windows/message-rules.html" hreflang="es">Español</a> <a href="../../fr/windows/message-rules.html" hreflang="fr">Français</a> <a href="../../hr/windows/message-rules.html" hreflang="hr">Hrvatski</a> <a href="../../it/windows/message-rules.html" hreflang="it">Italiano</a> <a href="../../lv/windows/message-rules.html" hreflang="lv">Latviešu</a> <a href="../../lt/windows/message-rules.html" hreflang="lt">Lietuvių</a> <a href="../../hu/windows/message-rules.html" hreflang="hu">Magyar</a> <a href="../../nl/windows/message-rules.html" hreflang="nl">Nederlands</a> <a href="../../nb/windows/message-rules.html" hreflang="nb">Norsk bokmål</a> <a href="../../pl/windows/message-rules.html" hreflang="pl">Polski</a> <a href="../../pt-BR/windows/message-rules.html" hreflang="pt-BR">Português (Brasil)</a> <a href="../../pt/windows/message-rules.html" hreflang="pt">Português (Portugal)</a> <a href="../../ro/windows/message-rules.html" hreflang="ro">Română</a> <a href="../../sk/windows/message-rules.html" hreflang="sk">Slovenčina</a> <a href="../../sl/windows/message-rules.html" hreflang="sl">Slovenščina</a> <a href="../../sr-Latn/windows/message-rules.html" hreflang="sr-Latn">Srpski</a> <a href="../../fi/windows/message-rules.html" hreflang="fi">Suomi</a> <a href="../../sv/windows/message-rules.html" hreflang="sv">Svenska</a> <b>Tiếng Việt</b> <a href="../../tr/windows/message-rules.html" hreflang="tr">Türkçe</a> <a href="../../el/windows/message-rules.html" hreflang="el">Ελληνικά</a> <a href="../../bg/windows/message-rules.html" hreflang="bg">Български</a> <a href="../../ru/windows/message-rules.html" hreflang="ru">Русский</a> <a href="../../uk/windows/message-rules.html" hreflang="uk">Українська</a> <a href="../../ja/windows/message-rules.html" hreflang="ja">日本語</a> <a href="../../zh-Hans/windows/message-rules.html" hreflang="zh-Hans">简体中文</a> <a href="../../zh-Hant/windows/message-rules.html" hreflang="zh-Hant">繁體中文</a> <a href="../../ko/windows/message-rules.html" hreflang="ko">한국어</a></span></header>
+<div class="web"><nav class="side"><nav class="contents">
+<h2>Bắt đầu</h2>
+<ul>
+<li><a href="add-account.html">Thêm tài khoản email</a></li>
+<li><a href="gmail-outlook.html">Gmail và Outlook.com</a></li>
+<li><a href="main-window.html">Cửa sổ chính</a></li>
+<li><a href="layouts.html">Bố trí</a></li>
+</ul>
+<h2>Công việc hằng ngày</h2>
+<ul>
+<li><a href="read-messages.html">Đọc thư</a></li>
+<li><a href="find-messages.html">Tìm thư</a></li>
+<li><a href="conversations.html">Cuộc hội thoại</a></li>
+<li><a href="organize-mail.html">Gắn cờ, lưu trữ và di chuyển thư</a></li>
+<li><a href="message-rules.html" aria-current="page">Sắp xếp thư mới bằng quy tắc</a></li>
+<li><a href="delete-and-undo.html">Xóa thư và hoàn tác</a></li>
+<li><a href="folders.html">Làm việc với thư mục</a></li>
+<li><a href="write-message.html">Viết thư</a></li>
+<li><a href="reply-forward.html">Trả lời và chuyển tiếp</a></li>
+<li><a href="attachments.html">Tệp đính kèm</a></li>
+<li><a href="drafts-outbox.html">Thư nháp và Hộp thư đi</a></li>
+<li><a href="signatures.html">Chữ ký</a></li>
+<li><a href="address-book.html">Sổ địa chỉ</a></li>
+<li><a href="save-print-import.html">Lưu, in và nhập thư</a></li>
+<li><a href="new-mail.html">Nhận thư mới</a></li>
+</ul>
+<h2>Nhiều tài khoản</h2>
+<ul>
+<li><a href="all-inboxes.html">Tất cả Hộp thư đến</a></li>
+<li><a href="manage-accounts.html">Thay đổi, sắp xếp và gỡ bỏ tài khoản</a></li>
+<li><a href="move-computer.html">Chuyển sang máy tính khác</a></li>
+</ul>
+<h2>Tính năng của thư</h2>
+<ul>
+<li><a href="sign-in-codes.html">Mã đăng nhập</a></li>
+<li><a href="delivery-problems.html">Thư không gửi được</a></li>
+<li><a href="invitations.html">Lời mời lịch</a></li>
+<li><a href="unsubscribe.html">Rời khỏi danh sách gửi thư</a></li>
+<li><a href="brand-logos.html">Biểu trưng thương hiệu</a></li>
+</ul>
+<h2>Thư đã mã hóa và đã ký</h2>
+<ul>
+<li><a href="encrypted-and-signed-mail.html">Thư đã mã hóa và đã ký</a></li>
+<li><a href="sign-and-encrypt.html">Ký số và mã hóa thư</a></li>
+<li><a href="encryption-keys.html">Khóa mã hóa</a></li>
+<li><a href="verify-a-key.html">Xác minh khóa của liên hệ</a></li>
+</ul>
+<h2>Cài đặt</h2>
+<ul>
+<li><a href="options-language.html">Cài đặt</a></li>
+<li><a href="download-ahead.html">Thư được tải xuống trước</a></li>
+<li><a href="account-security.html">Thiết đặt bảo mật tài khoản</a></li>
+<li><a href="default-mail-program.html">Đặt Inbox Classic làm ứng dụng email</a></li>
+<li><a href="updates.html">Cập nhật Inbox Classic</a></li>
+</ul>
+<h2>Tác nhân AI</h2>
+<ul>
+<li><a href="agents-connect.html">Kết nối tác nhân AI</a></li>
+<li><a href="agents-permissions.html">Những gì tác nhân được làm</a></li>
+<li><a href="agents-sending.html">Khi tác nhân gửi thư</a></li>
+</ul>
+<h2>Tham khảo</h2>
+<ul>
+<li><a href="keyboard-shortcuts.html">Phím tắt</a></li>
+<li><a href="search-words.html">Từ khóa tìm kiếm</a></li>
+</ul>
+<h2>Khắc phục sự cố</h2>
+<ul>
+<li><a href="password-not-accepted.html">Mật khẩu không được chấp nhận</a></li>
+<li><a href="certificate-errors.html">Lỗi chứng chỉ</a></li>
+<li><a href="encryption-errors.html">Lỗi mã hóa</a></li>
+<li><a href="no-connection.html">Inbox Classic không kết nối được</a></li>
+<li><a href="message-not-shown.html">Thư không hiện</a></li>
+</ul>
+<h2>Quyền riêng tư và bảo mật</h2>
+<ul>
+<li><a href="pictures-tracking.html">Ảnh và theo dõi</a></li>
+<li><a href="links-scripts.html">Liên kết, tập lệnh và tệp đính kèm</a></li>
+<li><a href="data-storage.html">Nơi lưu thư và mật khẩu của bạn</a></li>
+<li><a href="connections.html">Các kết nối Inbox Classic thực hiện</a></li>
+<li><a href="removing.html">Gỡ bỏ Inbox Classic</a></li>
+</ul>
+<h2>Nâng cao</h2>
+<ul>
+<li><a href="sign-in-apps.html">Ứng dụng đăng nhập</a></li>
+<li><a href="command-line.html">Tùy chọn dòng lệnh</a></li>
+</ul>
+</nav>
+</nav><main>
+<h1>Sắp xếp thư mới bằng quy tắc</h1>
+<p class="summary">Tự động di chuyển, đánh dấu là đã đọc, gắn cờ hoặc lưu trữ các thư đến khớp với tiêu chí của bạn.</p>
+<p>Một quy tắc kết hợp tiêu chí tìm kiếm với các hành động áp dụng cho thư khớp khi thư đến Hộp thư đến. Ví dụ, quy tắc với <code>from:news@example.com</code> có thể chuyển bản tin từ địa chỉ đó vào một thư mục riêng và đánh dấu là đã đọc.</p>
+<p>Để tạo quy tắc:</p>
+<ol>
+    <li>Chọn <b>Công cụ</b> &gt; <b>Quy tắc thư</b>, rồi bấm <b>Mới</b>.</li>
+    <li>Nhập tên và điền <b>Tiêu chí tìm kiếm</b> bằng các từ giống như trong hộp tìm kiếm, như <code>from:</code>, <code>subject:</code> hoặc <code>list:</code>. Dòng bên dưới đếm số thư khớp trong Hộp thư đến của tài khoản đang chọn, hoặc của mọi tài khoản nếu chưa chọn tài khoản nào.</li>
+    <li>Chọn một hoặc nhiều hành động cho thư khớp: chuyển vào một thư mục, đánh dấu là đã đọc, gắn cờ, lưu trữ, chuyển vào Email rác, xóa hoặc tắt thông báo.</li>
+    <li>Bấm <b>OK</b>.</li>
+</ol>
+<p>Bạn cũng có thể tạo quy tắc từ một thư hoặc một lần tìm kiếm. Chọn <b>Thư</b> &gt; <b>Tạo quy tắc từ thư</b> để điền sẵn người gửi hoặc danh sách gửi thư của thư đang chọn. Bấm <b>Tạo quy tắc</b> phía trên kết quả tìm kiếm để dùng tiêu chí tìm kiếm hiện tại.</p>
+<h2>Cách quy tắc hoạt động</h2>
+<p>Quy tắc xử lý thư mới đến Hộp thư đến khi Inbox Classic đang chạy, kể cả khi cửa sổ chính bị ẩn. Thư đã có chỉ bị ảnh hưởng nếu bạn chọn <b>Áp dụng cho cả các thư đã có trong Hộp thư đến</b>. Các quy tắc khớp chạy theo thứ tự trong danh sách. Khi một quy tắc đã lên lịch chuyển hợp lệ một thư ra khỏi Hộp thư đến, các quy tắc sau bị bỏ qua cho thư đó. Việc xử lý trên máy chủ vẫn có thể thất bại. Bỏ chọn hộp kiểm của một quy tắc trong danh sách để tắt quy tắc mà không xóa nó.</p>
+<h2>Thay đổi quy tắc</h2>
+<p>Để sửa một quy tắc, chọn quy tắc trong danh sách và bấm <b>Sửa</b>, hoặc bấm đúp vào nó. Dùng <b>Di chuyển lên</b> và <b>Di chuyển xuống</b> để đổi thứ tự, hoặc <b>Xóa</b> để xóa quy tắc. Trong trình sửa quy tắc, <b>Hiện</b> đóng trình sửa mà không lưu thay đổi và tìm trong mọi Hộp thư đến bằng truy vấn đã nhập. Khác với số thư khớp, lần tìm kiếm này không giữ giới hạn theo tài khoản.</p>
+<p>Quy tắc áp dụng cho thư mới trong Hộp thư đến, nên không hỗ trợ bộ lọc theo thư mục và theo ngày. Nếu bạn dùng <code>in:</code>, <code>before:</code>, <code>after:</code>, <code>older_than:</code> hoặc <code>newer_than:</code>, một thông báo sẽ giải thích vì sao không dùng được các bộ lọc này. Quy tắc không thể gửi thư hay xóa vĩnh viễn thư: <b>Xóa</b> chỉ chuyển thư vào <b>Mục đã xóa</b> nếu thư mục đó tồn tại.</p>
+<aside class="note">Quy tắc chạy trên máy tính này. Để sắp xếp thư khi máy tính tắt, hãy dùng bộ lọc của nhà cung cấp email.</aside>
+<nav class="related"><a href="find-messages.html">Tìm thư</a> <a href="search-words.html">Từ khóa tìm kiếm</a> <a href="organize-mail.html">Gắn cờ, lưu trữ và di chuyển thư</a></nav>
+</main></div>
+</body>
+</html>
