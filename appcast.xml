@@ -3,6 +3,33 @@
     <channel>
         <title>Inbox Classic</title>
         <item>
+            <title>0.21.0</title>
+            <pubDate>Mon, 23 Nov 2026 18:39:43 +0200</pubDate>
+            <sparkle:version>0.21.0</sparkle:version>
+            <sparkle:shortVersionString>0.21.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## [0.21.0](https://github.com/postalsys/inbox-classic/compare/v0.20.1...v0.21.0) (2026-11-23)
+
+Publish your encryption key and find other people's, and sender checks that a forged message can no longer fool.
+
+### Features
+
+* **Publish your key.** Encryption Keys > Publish puts your public key on keys.openpgp.org so others can find it by your address. The server sends a confirmation link to each address not yet listed; an address is listed only once you open its link.
+* **Find Key.** A message signed with a key you do not have offers Find Key beside its label: the key is looked up by its fingerprint, and the label then names who signed it. Contact Properties has Find Key for a contact without a usable key, and Encrypt looks up recipients' keys by itself, first at the address's own domain, then on keys.openpgp.org (which can be turned off in Reading settings).
+* **Import from Clipboard** in Encryption Keys adds a key copied as text, and **Import Key** on a key attached to a message adds it from the message. Keys that come in mail are taken as public keys only.
+* **The Address Book marks contacts who have a key**, with a stronger mark for keys you have verified.
+* **Trust sender checks from**, in Account Properties, names the servers whose checks on senders the account believes. It is filled in for well-known providers (with every regional Zoho server), and you can add your own server's name if it writes its checks under another one.
+
+### Bug Fixes
+
+* **Sender checks only believe your own provider's newest verdict**, the one your mail server writes on top of the message. A sender could write a verdict of their own lower down; at Zoho, which keeps such headers and whose own verdicts the app did not recognise, a forged message could show as a confirmed sender, offer a sign-in code card or show a brand logo. Messages from the last 90 days are checked again in the background after the update.
+* **More real senders are confirmed.** Mail from a subdomain of a confirmed domain (such as news.shop.com for shop.com) now counts, as do Gmail, Yahoo and GMX verdicts that name the signer only by its address, and verdicts with comments inside them (as some self-hosted servers write).
+* **Brand logos need the provider's own logo check**, aligned with the sender, and a certified mark where the provider reports one.
+]]></description>
+            <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.21.0/InboxClassic.dmg" length="30084807" type="application/octet-stream" sparkle:edSignature="j/P6/gj1Pyq6DD6KMOa5mGb+5FwbgV2m3lElgxmiaVA4LWHmEOCJx9xtJc8mFbvVncxkXBLmjCnUNPyL+6VgCA=="/>
+        </item>
+        <item>
             <title>0.20.1</title>
             <pubDate>Sun, 22 Nov 2026 18:38:36 +0200</pubDate>
             <sparkle:version>0.20.1</sparkle:version>
@@ -52,44 +79,6 @@ Two fixes for 0.19.0.
 * **On the Mac, the Tools menu now has Message Rules and Encryption Keys, and the Message menu has Create Rule from Message.** They were missing from the menu bar, so rules and keys, such as importing a key you already have, could not be reached there.
 ]]></description>
             <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.19.1/InboxClassic.dmg" length="27433239" type="application/octet-stream" sparkle:edSignature="mY4N6AjKT6D8mK5lBd2g7yrbUzgHmQdHrEagyn/wIq1tlQJt1MNjJj2WLtgnJgJuteNs0tQScS2V+xfFAdLxCQ=="/>
-        </item>
-        <item>
-            <title>0.19.0</title>
-            <pubDate>Thu, 19 Nov 2026 21:26:45 +0200</pubDate>
-            <sparkle:version>0.19.0</sparkle:version>
-            <sparkle:shortVersionString>0.19.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## [0.19.0](https://github.com/postalsys/inbox-classic/compare/v0.18.0...v0.19.0) (2026-11-19)
-
-Encrypted mail, attachment previews, 24 more languages, and lists that stay fast in large mailboxes.
-
-### Features
-
-* **Encrypted and signed mail (OpenPGP)**: a bar over a signed or encrypted message says who signed it and whether it was encrypted, and Details names each part and its key. In the compose window, Sign and Encrypt (on the toolbar and in Tools) protect what you send, and a reply to encrypted mail starts encrypted. Tools > Encryption Keys makes, imports, backs up and verifies keys. Your contacts' keys are found on their domain's Web Key Directory, on keys.openpgp.org (a setting turns it off) or in the Autocrypt headers of their mail. Search finds encrypted messages once they are decrypted, and `is:encrypted` and `is:signed` find them by their kind.
-* **Attachment previews**: pictures and the first pages of PDF files show after the message's text. Inbox Classic draws them itself, as it now does every picture inside a message, so no picture of a sender's is decoded by the web view. A setting on the Reading page of the settings turns them off.
-* **Open attachments with a double-click**: a strip under the message header lists each file, with Open, Save As and Save All. Files that can run code, such as programs, scripts and Office files with macros, are only saved, never opened.
-* **24 more languages**: Brazilian and European Portuguese, Bulgarian, Catalan, Croatian, Czech, Danish, Dutch, Finnish, Greek, Hungarian, Italian, Latvian, Lithuanian, Norwegian Bokmål, Polish, Romanian, Russian, Serbian (Latin), Slovak, Slovenian, Swedish, Turkish and Ukrainian, with the whole help in each.
-* **Move to another computer**: File > Export Settings and Accounts writes one file with the parts you choose: settings, accounts, sign-in apps, contacts, encryption keys, message rules and trusted senders. With a passphrase, the file is encrypted and also carries passwords and private keys. File > Import Settings and Accounts shows what the file holds before anything changes, and Add Mail Account offers it on a new computer.
-* **All Sent and All Drafts**: with two or more accounts, the folder list shows every account's sent mail and drafts together, under All Inboxes.
-* **The folder list starts with the Inbox**: with one account, Inbox and Flagged come first and there is no account heading.
-* **Settings in three pages**, General, Reading and Downloading, with the same groups in the same order on Windows, the Mac and Linux.
-* **Fast in large mailboxes**: a folder shows the moment you click it, and moves, deletes and marks happen at once while the server catches up. On a mailbox of 229,000 messages, a folder's list loads in under a millisecond.
-* **AI agents**:
-  * Agents can work with whole conversations and with all the messages of a search at once, answer invitations, set flag colours and manage folders. A draft an agent writes says so when you open it.
-  * Unsubscribing asks you first.
-  * Tools > AI Agents shows what each program read, and Undo Since takes back what one did in a chosen period.
-  * Inbox Classic asks the system which program is connecting, so one program cannot use the access you gave another.
-  * Agents never see the text of encrypted mail.
-
-### Bug Fixes
-
-* Searching Turkish text treats ı as i, and sorting by sender or subject follows every alphabet.
-* A sync in the background no longer replaces what you just did in the list.
-* On the Mac, Return, Enter and Esc always answer a question with its safe button, and a compose window comes to the front while the app is in the background.
-* On Windows, a dialog keeps its focus when it comes back to the front.
-]]></description>
-            <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.19.0/InboxClassic.dmg" length="27422415" type="application/octet-stream" sparkle:edSignature="GHn5BopLbc3jsOjjOU6jlrbE8R+WYC6fH3UswEJFfuHaNf+hwTua0SFRO5+DAac+kA3RMWYMbWIfdGREeqyJDQ=="/>
         </item>
     </channel>
 </rss>

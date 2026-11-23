@@ -107,15 +107,24 @@
     <li>Choose the account and click <b>Make Key</b>. The key is used for the account’s address and its other addresses.</li>
     <li>Click <b>Save a Backup</b> and choose a passphrase. Keep the file and the passphrase in different safe places.</li>
 </ol>
-<aside class="warning">Without a backup, your key cannot be recovered if this computer is lost or reset, and mail encrypted to it can no longer be read.</aside>
+<aside class="warning">Keep a backup of your private key. If this computer is lost or reset, you cannot restore the key without a backup and may be unable to decrypt older mail.</aside>
 <h2>Keys stay protected without passphrases</h2>
 <p>Your private keys are protected by a key kept in the keychain, so you do not normally type a passphrase to use them. Passphrases protect backups and may be needed when importing. If a key is locked, first check that system storage is available and unlocked. If its protection key is missing, click <b>Import</b> and choose its backup.</p>
 <h2>Adding keys</h2>
 <p>Click <b>Import</b> to add a key from a file, such as one a contact sent you or a backup of your own. A private key protected by a passphrase asks for it once. Inbox Classic then asks whether to use an imported key of yours for your addresses.</p>
+<p>To add a key copied as text, click <b>Import from Clipboard</b>. To add a public key attached to a message, open the attachment’s menu and choose <b>Import Key</b>. Only public keys can be imported directly from mail. To restore your own private key, save the attachment and import its file here.</p>
 <p>A contact’s key is used for their address from then on. If a different key for the same address turns up later, the current one stays in use until you choose the new one in the contact’s properties.</p>
 <p>To share your public key, select it and click <b>Export</b>. You can also choose your account’s key in its properties, on the <b>Security</b> tab.</p>
-<p>When a usable recipient key is missing, Inbox Classic asks the address’s domain first, then keys.openpgp.org if that lookup is enabled. You can also search by fingerprint or key ID; that sends the identifier instead of an email address. To never ask keys.openpgp.org, turn off <b>Look up keys on keys.openpgp.org</b> under Inbox Classic &gt; <b>Settings</b> &gt; <b>Reading</b>.</p>
+<h2>Finding keys</h2>
+<p>When you turn on encryption for a recipient who has no key, Inbox Classic asks the address’s domain first, then keys.openpgp.org if that lookup is enabled. To look for a missing or unusable contact key yourself, open the contact in the Address Book and click <b>Find Key</b>. The Address Book marks contacts with usable keys and shows a stronger mark for verified keys.</p>
+<p>A message signed with a key you do not have says that the key is not known. Click <b>Find Key</b> beside its label to look it up on keys.openpgp.org. This sends the signature’s key fingerprint or key ID, not an email address. If a key is found, Inbox Classic checks the signature again and updates the label. Finding a key does not verify its owner.</p>
+<p>To stop looking up keys on keys.openpgp.org, turn off <b>Look up keys on keys.openpgp.org</b> under Inbox Classic &gt; <b>Settings</b> &gt; <b>Reading</b>.</p>
+<h2>Publishing your key</h2>
+<p>To let others find your key, select one of your own keys and click <b>Publish</b>. Inbox Classic uploads its public part to keys.openpgp.org and requests confirmation links for addresses that are not yet listed. Open each link to make that address searchable. Addresses already listed do not need another confirmation.</p>
+<h2>Keys that travel with mail</h2>
 <p>Keys also travel with mail. When Autocrypt is enabled, messages from an address with a selected key carry its public key, which other apps that read it can use to encrypt to you. When you open a message that carries its sender’s key, Inbox Classic keeps that key, unverified; a different key for an address that already has one waits for you to choose. To stop sending yours, turn off <b>Send my public key with my messages (Autocrypt)</b> on the account’s <b>Security</b> tab.</p>
+<h2>Expired, revoked and removed keys</h2>
+<p>An expired or revoked key is shown as such in the list and is no longer used for new encryption. A key’s later expiry does not by itself invalidate signatures made while it was valid. To stop using a key, select it and click <b>Remove</b>. Keep a backup before removing your own key: you may need it to decrypt older mail.</p>
 <nav class="related"><a href="verify-a-key.html">Verify a contact’s key</a> <a href="address-book.html">The Address Book</a> <a href="manage-accounts.html">Change, order and remove accounts</a></nav>
 </main></div>
 </body>
