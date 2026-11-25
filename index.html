@@ -65,7 +65,7 @@
                         "url": "https://inboxclassic.com/",
                         "applicationCategory": "CommunicationApplication",
                         "applicationSubCategory": "Email client",
-                        "operatingSystem": "Windows 10, Windows 11, macOS 26 or newer, Ubuntu 26.04 or newer, Arch Linux",
+                        "operatingSystem": "Windows 10, Windows 11, macOS 26 or newer, Ubuntu 26.04 or newer, Fedora 44 or newer, Arch Linux",
                         "downloadUrl": "https://github.com/postalsys/inbox-classic/releases/latest",
                         "releaseNotes": "https://github.com/postalsys/inbox-classic/releases",
                         "image": "https://inboxclassic.com/img/logo-512.png",
@@ -198,19 +198,30 @@
                                 <span class="icon-[tabler--download] size-5"></span>Download for Linux<span class="icon-[tabler--chevron-down] size-4"></span>
                             </summary>
                             <div class="linux-menu">
+                                <div class="linux-choice">
+                                    <span class="linux-choice-name">Ubuntu</span
+                                    ><span class="linux-choice-note"
+                                        >26.04 or newer, .deb for
+                                        <a
+                                            class="underline plausible-event-name=Download plausible-event-os=linux plausible-event-location=hero"
+                                            href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-amd64.deb"
+                                            >x86-64</a
+                                        >
+                                        or
+                                        <a
+                                            class="underline plausible-event-name=Download plausible-event-os=linux-arm64 plausible-event-location=hero"
+                                            href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-arm64.deb"
+                                            >ARM64</a
+                                        ></span
+                                    >
+                                </div>
                                 <a
-                                    class="linux-choice plausible-event-name=Download plausible-event-os=linux plausible-event-location=hero"
-                                    href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-amd64.deb"
-                                    ><span class="linux-choice-name">Ubuntu</span><span class="linux-choice-note">26.04 or newer, x86-64, .deb</span></a
-                                >
-                                <a
-                                    class="linux-choice plausible-event-name=Download plausible-event-os=linux-arm64 plausible-event-location=hero"
-                                    href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-arm64.deb"
-                                    ><span class="linux-choice-name">Ubuntu on ARM64</span><span class="linux-choice-note">26.04 or newer, .deb</span></a
+                                    class="linux-choice plausible-event-name=Download plausible-event-os=linux-fedora plausible-event-location=hero"
+                                    href="#linux-fedora"
+                                    ><span class="linux-choice-name">Fedora</span><span class="linux-choice-note">44 or newer, with dnf</span></a
                                 >
                                 <a class="linux-choice" href="#linux-omarchy"
-                                    ><span class="linux-choice-name">Arch Linux and Omarchy</span
-                                    ><span class="linux-choice-note">x86_64 and aarch64, with pacman</span></a
+                                    ><span class="linux-choice-name">Arch Linux and Omarchy</span><span class="linux-choice-note">with pacman</span></a
                                 >
                                 <a class="linux-more" href="#linux-apt">Updates with apt on Ubuntu</a>
                             </div>
@@ -223,7 +234,7 @@
                         <p>Free and open source, from the makers of Nodemailer</p>
                         <p class="os-note" data-os="windows">Windows 10 and 11</p>
                         <p class="os-note" data-os="mac">macOS 26 or newer, on Apple silicon</p>
-                        <p class="os-note" data-os="linux">Ubuntu 26.04 or newer, Arch Linux and Omarchy</p>
+                        <p class="os-note" data-os="linux">Ubuntu 26.04 or newer, Fedora 44 or newer, Arch Linux and Omarchy</p>
                         <p class="os-also">
                             Also for
                             <a class="ms-1 underline" data-os="windows" href="#download-windows">Windows</a>
@@ -594,8 +605,9 @@
                         <div class="card-body">
                             <h3 class="text-lg font-semibold">Which systems and languages?</h3>
                             <p class="text-base-content/70">
-                                Windows 10 and 11, macOS 26 or newer on Apple silicon, Ubuntu 26.04 or newer, Arch Linux and Omarchy, all with the same layout
-                                and features. It follows your system's language, one of 29 from Catalan to Ukrainian, or the one you choose in its settings.
+                                Windows 10 and 11, macOS 26 or newer on Apple silicon, Ubuntu 26.04 or newer, Fedora 44 or newer, Arch Linux and Omarchy, all
+                                with the same layout and features. It follows your system's language, one of 29 from Catalan to Ukrainian, or the one you choose
+                                in its settings.
                             </p>
                         </div>
                     </div>
@@ -620,6 +632,57 @@
                             <p class="text-base-content/70 mt-2">
                                 It is signed with the Postal Systems release key, the same key that signs each release's
                                 <code class="ui-code">hashes.txt</code>. Already installed the .deb? This updates it in place.
+                            </p>
+                        </div>
+                    </div>
+                    <div id="linux-fedora" class="card bg-base-100 min-w-0 shadow-md md:col-span-2">
+                        <div class="card-body">
+                            <h3 class="text-lg font-semibold">How do I install it on Fedora?</h3>
+                            <p class="text-base-content/70">
+                                Install the package of the latest release with dnf, which brings GTK, libadwaita and WebKitGTK from Fedora's own repositories.
+                                It needs Fedora 44 or newer. In a terminal:
+                            </p>
+                            <div class="ui-terminal mt-2" data-tabs>
+                                <div class="ui-terminal-bar">
+                                    <span class="ui-terminal-title">Terminal</span>
+                                    <div class="ui-terminal-tabs hidden" role="tablist" aria-label="Processor">
+                                        <button type="button" role="tab" id="linux-fedora-tab-x86_64" aria-controls="linux-fedora-x86_64" aria-selected="true">
+                                            Intel / AMD
+                                        </button>
+                                        <button
+                                            type="button"
+                                            role="tab"
+                                            id="linux-fedora-tab-aarch64"
+                                            aria-controls="linux-fedora-aarch64"
+                                            aria-selected="false"
+                                            tabindex="-1"
+                                        >
+                                            ARM
+                                        </button>
+                                    </div>
+                                    <button type="button" class="copy-btn btn btn-text btn-xs hidden" data-copy="linux-fedora-commands">
+                                        <span class="icon-[tabler--copy] size-4"></span><span class="copy-label" aria-live="polite">Copy</span>
+                                    </button>
+                                </div>
+                                <div id="linux-fedora-commands">
+                                    <div id="linux-fedora-x86_64" class="ui-terminal-body" role="tabpanel" aria-labelledby="linux-fedora-tab-x86_64">
+                                        <p class="ui-terminal-label">Intel / AMD (x86-64)</p>
+                                        <code
+                                            >sudo dnf install https://github.com/<wbr />postalsys/<wbr />inbox-classic/<wbr />releases/latest/download/<wbr />InboxClassic-x86_64.rpm</code
+                                        >
+                                    </div>
+                                    <div id="linux-fedora-aarch64" class="ui-terminal-body" role="tabpanel" aria-labelledby="linux-fedora-tab-aarch64">
+                                        <p class="ui-terminal-label">ARM (aarch64)</p>
+                                        <code
+                                            >sudo dnf install https://github.com/<wbr />postalsys/<wbr />inbox-classic/<wbr />releases/latest/download/<wbr />InboxClassic-aarch64.rpm</code
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-base-content/70 mt-2">
+                                The package adds the Inbox Classic repository, signed with the same release key as each release's
+                                <code class="ui-code">hashes.txt</code>, so new versions come with <code class="ui-code">dnf upgrade</code> and the system's own
+                                updates.
                             </p>
                         </div>
                     </div>
@@ -710,19 +773,30 @@
                                     ></span>
                                 </summary>
                                 <div class="linux-menu">
+                                    <div class="linux-choice">
+                                        <span class="linux-choice-name">Ubuntu</span
+                                        ><span class="linux-choice-note"
+                                            >26.04 or newer, .deb for
+                                            <a
+                                                class="underline plausible-event-name=Download plausible-event-os=linux plausible-event-location=bottom"
+                                                href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-amd64.deb"
+                                                >x86-64</a
+                                            >
+                                            or
+                                            <a
+                                                class="underline plausible-event-name=Download plausible-event-os=linux-arm64 plausible-event-location=bottom"
+                                                href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-arm64.deb"
+                                                >ARM64</a
+                                            ></span
+                                        >
+                                    </div>
                                     <a
-                                        class="linux-choice plausible-event-name=Download plausible-event-os=linux plausible-event-location=bottom"
-                                        href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-amd64.deb"
-                                        ><span class="linux-choice-name">Ubuntu</span><span class="linux-choice-note">26.04 or newer, x86-64, .deb</span></a
-                                    >
-                                    <a
-                                        class="linux-choice plausible-event-name=Download plausible-event-os=linux-arm64 plausible-event-location=bottom"
-                                        href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-arm64.deb"
-                                        ><span class="linux-choice-name">Ubuntu on ARM64</span><span class="linux-choice-note">26.04 or newer, .deb</span></a
+                                        class="linux-choice plausible-event-name=Download plausible-event-os=linux-fedora plausible-event-location=bottom"
+                                        href="#linux-fedora"
+                                        ><span class="linux-choice-name">Fedora</span><span class="linux-choice-note">44 or newer, with dnf</span></a
                                     >
                                     <a class="linux-choice" href="#linux-omarchy"
-                                        ><span class="linux-choice-name">Arch Linux and Omarchy</span
-                                        ><span class="linux-choice-note">x86_64 and aarch64, with pacman</span></a
+                                        ><span class="linux-choice-name">Arch Linux and Omarchy</span><span class="linux-choice-note">with pacman</span></a
                                     >
                                     <a class="linux-more" href="#linux-apt">Updates with apt on Ubuntu</a>
                                 </div>
@@ -731,7 +805,7 @@
                         <div class="text-base-content/60 mt-4 space-y-1 text-sm">
                             <p class="os-note" data-os="windows">Windows 10 and 11</p>
                             <p class="os-note" data-os="mac">macOS 26 or newer, on Apple silicon</p>
-                            <p class="os-note" data-os="linux">Ubuntu 26.04 or newer, Arch Linux and Omarchy</p>
+                            <p class="os-note" data-os="linux">Ubuntu 26.04 or newer, Fedora 44 or newer, Arch Linux and Omarchy</p>
                             <p class="os-also">
                                 Also for
                                 <a class="link link-animated ms-1" data-os="windows" href="#download-windows">Windows</a>
