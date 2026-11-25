@@ -193,12 +193,28 @@
                             href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic.dmg"
                             ><span class="icon-[tabler--download] size-5"></span>Download for Mac</a
                         >
-                        <a
-                            class="os-download btn btn-lg btn-on-brand max-sm:w-64 plausible-event-name=Download plausible-event-os=linux plausible-event-location=hero"
-                            data-os="linux"
-                            href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-amd64.deb"
-                            ><span class="icon-[tabler--download] size-5"></span>Download for Linux</a
-                        >
+                        <details class="os-download linux-chooser" data-os="linux">
+                            <summary class="btn btn-lg btn-on-brand max-sm:w-64">
+                                <span class="icon-[tabler--download] size-5"></span>Download for Linux<span class="icon-[tabler--chevron-down] size-4"></span>
+                            </summary>
+                            <div class="linux-menu">
+                                <a
+                                    class="linux-choice plausible-event-name=Download plausible-event-os=linux plausible-event-location=hero"
+                                    href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-amd64.deb"
+                                    ><span class="linux-choice-name">Ubuntu</span><span class="linux-choice-note">26.04 or newer, x86-64, .deb</span></a
+                                >
+                                <a
+                                    class="linux-choice plausible-event-name=Download plausible-event-os=linux-arm64 plausible-event-location=hero"
+                                    href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-arm64.deb"
+                                    ><span class="linux-choice-name">Ubuntu on ARM64</span><span class="linux-choice-note">26.04 or newer, .deb</span></a
+                                >
+                                <a class="linux-choice" href="#linux-omarchy"
+                                    ><span class="linux-choice-name">Arch Linux and Omarchy</span
+                                    ><span class="linux-choice-note">x86_64 and aarch64, with pacman</span></a
+                                >
+                                <a class="linux-more" href="#linux-apt">Updates with apt on Ubuntu</a>
+                            </div>
+                        </details>
                         <a class="btn btn-lg btn-on-brand-outline max-sm:w-64" href="https://github.com/postalsys/inbox-classic"
                             ><span class="icon-[tabler--brand-github] size-5"></span>View on GitHub</a
                         >
@@ -207,18 +223,7 @@
                         <p>Free and open source, from the makers of Nodemailer</p>
                         <p class="os-note" data-os="windows">Windows 10 and 11</p>
                         <p class="os-note" data-os="mac">macOS 26 or newer, on Apple silicon</p>
-                        <p class="os-note" data-os="linux">
-                            Ubuntu 26.04 or newer, x86-64<span class="mx-1 opacity-60"> &middot;</span>
-                            <a
-                                class="underline plausible-event-name=Download plausible-event-os=linux-arm64 plausible-event-location=hero"
-                                href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-arm64.deb"
-                                >ARM64</a
-                            >
-                            <span class="block whitespace-nowrap sm:inline"
-                                ><span class="mx-1 hidden opacity-60 sm:inline">&middot;</span> <a class="underline" href="#linux-apt">Install with apt</a>
-                                <span class="mx-1 opacity-60">&middot;</span> <a class="underline" href="#linux-omarchy">Arch / Omarchy</a></span
-                            >
-                        </p>
+                        <p class="os-note" data-os="linux">Ubuntu 26.04 or newer, Arch Linux and Omarchy</p>
                         <p class="os-also">
                             Also for
                             <a class="ms-1 underline" data-os="windows" href="#download-windows">Windows</a>
@@ -698,29 +703,35 @@
                                 href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic.dmg"
                                 ><span class="icon-[tabler--download] size-5"></span>Download for Mac</a
                             >
-                            <a
-                                class="os-download btn btn-primary btn-lg plausible-event-name=Download plausible-event-os=linux plausible-event-location=bottom"
-                                data-os="linux"
-                                href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-amd64.deb"
-                                ><span class="icon-[tabler--download] size-5"></span>Download for Linux</a
-                            >
+                            <details class="os-download linux-chooser" data-os="linux">
+                                <summary class="btn btn-lg btn-primary max-sm:w-64">
+                                    <span class="icon-[tabler--download] size-5"></span>Download for Linux<span
+                                        class="icon-[tabler--chevron-down] size-4"
+                                    ></span>
+                                </summary>
+                                <div class="linux-menu">
+                                    <a
+                                        class="linux-choice plausible-event-name=Download plausible-event-os=linux plausible-event-location=bottom"
+                                        href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-amd64.deb"
+                                        ><span class="linux-choice-name">Ubuntu</span><span class="linux-choice-note">26.04 or newer, x86-64, .deb</span></a
+                                    >
+                                    <a
+                                        class="linux-choice plausible-event-name=Download plausible-event-os=linux-arm64 plausible-event-location=bottom"
+                                        href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-arm64.deb"
+                                        ><span class="linux-choice-name">Ubuntu on ARM64</span><span class="linux-choice-note">26.04 or newer, .deb</span></a
+                                    >
+                                    <a class="linux-choice" href="#linux-omarchy"
+                                        ><span class="linux-choice-name">Arch Linux and Omarchy</span
+                                        ><span class="linux-choice-note">x86_64 and aarch64, with pacman</span></a
+                                    >
+                                    <a class="linux-more" href="#linux-apt">Updates with apt on Ubuntu</a>
+                                </div>
+                            </details>
                         </div>
                         <div class="text-base-content/60 mt-4 space-y-1 text-sm">
                             <p class="os-note" data-os="windows">Windows 10 and 11</p>
                             <p class="os-note" data-os="mac">macOS 26 or newer, on Apple silicon</p>
-                            <p class="os-note" data-os="linux">
-                                Ubuntu 26.04 or newer, x86-64<span class="mx-1 opacity-60"> &middot;</span>
-                                <a
-                                    class="link link-animated plausible-event-name=Download plausible-event-os=linux-arm64 plausible-event-location=bottom"
-                                    href="https://github.com/postalsys/inbox-classic/releases/latest/download/InboxClassic-arm64.deb"
-                                    >ARM64</a
-                                >
-                                <span class="block whitespace-nowrap sm:inline"
-                                    ><span class="mx-1 hidden opacity-60 sm:inline">&middot;</span>
-                                    <a class="link link-animated" href="#linux-apt">Install with apt</a> <span class="mx-1 opacity-60">&middot;</span>
-                                    <a class="link link-animated" href="#linux-omarchy">Arch / Omarchy</a></span
-                                >
-                            </p>
+                            <p class="os-note" data-os="linux">Ubuntu 26.04 or newer, Arch Linux and Omarchy</p>
                             <p class="os-also">
                                 Also for
                                 <a class="link link-animated ms-1" data-os="windows" href="#download-windows">Windows</a>
