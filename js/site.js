@@ -202,3 +202,20 @@
         });
     }
 })();
+
+// The Linux download chooser (a <details>): closed by a click elsewhere, by Escape, and once a choice is taken
+(function () {
+    const choosers = () => document.querySelectorAll('details.linux-chooser[open]');
+    document.addEventListener('click', event => {
+        for (const chooser of choosers()) {
+            if (!chooser.contains(event.target) || event.target.closest('.linux-menu a')) chooser.open = false;
+        }
+    });
+    document.addEventListener('keydown', event => {
+        if (event.key !== 'Escape') return;
+        for (const chooser of choosers()) {
+            chooser.open = false;
+            chooser.querySelector('summary').focus();
+        }
+    });
+})();
