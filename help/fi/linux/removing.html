@@ -39,11 +39,13 @@
 <ul>
 <li><a href="all-inboxes.html">Kaikki saapuneet</a></li>
 <li><a href="manage-accounts.html">Tilien muuttaminen, järjestäminen ja poistaminen</a></li>
+<li><a href="sync.html">Tietokoneiden synkronointi</a></li>
 <li><a href="move-computer.html">Siirtyminen toiselle tietokoneelle</a></li>
 </ul>
 <h2>Viestien ominaisuudet</h2>
 <ul>
 <li><a href="sign-in-codes.html">Kirjautumiskoodit</a></li>
+<li><a href="reactions.html">Emojireaktiot</a></li>
 <li><a href="delivery-problems.html">Viestit, joita ei toimitettu</a></li>
 <li><a href="invitations.html">Kalenterikutsut</a></li>
 <li><a href="unsubscribe.html">Postituslistalta eroaminen</a></li>
@@ -102,7 +104,7 @@
 <p class="summary">Poista Inbox Classic ja valitse, säilytätkö sovelluksen paikalliset tiedot.</p>
 
 
-<p>Poista paketti komennolla <code>sudo apt remove inbox-classic</code> tai Arch Linuxissa ja Omarchyssa komennolla <code>sudo pacman -R inbox-classic</code>. Sovelluksen paikalliset tiedot säilyvät oletusarvoisesti kansiossa <code>~/.local/share/inbox-classic</code>, kunnes poistat myös tämän kansion. Sen poistaminen poistaa myös luonnokset, lähetysjonon, yhteystiedot, asetukset ja avaimet, mutta ei käyttöjärjestelmän kirjautumistietovaraston merkintöjä.</p>
+<p>Poista paketti komennolla <code>sudo apt remove inbox-classic</code>, Fedorassa komennolla <code>sudo dnf remove inbox-classic</code> tai Arch Linuxissa ja Omarchyssa komennolla <code>sudo pacman -R inbox-classic</code>. Sovelluksen paikalliset tiedot säilyvät oletusarvoisesti kansiossa <code>~/.local/share/inbox-classic</code>, kunnes poistat myös tämän kansion. Sen poistaminen poistaa myös luonnokset, lähetysjonon, yhteystiedot, asetukset ja avaimet, mutta ei käyttöjärjestelmän kirjautumistietovaraston merkintöjä.</p>
 <p>Sovelluksen poistaminen ei poista palvelimilla olevia viestejä.</p>
 <p>Jos haluat poistaa myös tilien tallennetut kirjautumistiedot, poista tilit ennen sovelluksen poistamista kohdassa <b>Tiedosto</b> &gt; <b>Tilit</b>. Tilin poistaminen ei tyhjennä sovelluksen kaikkia muita salaisuuksia kirjautumistietovarastosta. Yksittäisen tilin poistamisesta kerrotaan aiheessa <a href="manage-accounts.html">Tilien muuttaminen, järjestäminen ja poistaminen</a>.</p>
 <nav class="related"><a href="data-storage.html">Missä postiasi ja salasanojasi säilytetään</a> <a href="updates.html">Inbox Classicin päivittäminen</a> <a href="manage-accounts.html">Tilien muuttaminen, järjestäminen ja poistaminen</a></nav>

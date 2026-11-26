@@ -39,11 +39,13 @@
 <ul>
 <li><a href="all-inboxes.html">모든 받은 편지함</a></li>
 <li><a href="manage-accounts.html">계정 변경, 정렬 및 제거</a></li>
+<li><a href="sync.html">컴퓨터 간 동기화</a></li>
 <li><a href="move-computer.html">다른 컴퓨터로 옮기기</a></li>
 </ul>
 <h2>메시지 기능</h2>
 <ul>
 <li><a href="sign-in-codes.html">로그인 코드</a></li>
+<li><a href="reactions.html">이모지 반응</a></li>
 <li><a href="delivery-problems.html">배달되지 않은 메시지</a></li>
 <li><a href="invitations.html">일정 초대</a></li>
 <li><a href="unsubscribe.html">메일링 리스트 구독 취소</a></li>
@@ -102,7 +104,7 @@
 <p class="summary">컴퓨터에서 Inbox Classic을 제거하고, 로컬 데이터를 유지할지 선택합니다.</p>
 
 
-<p><code>sudo apt remove inbox-classic</code> 명령으로 패키지를 제거합니다. Arch Linux와 Omarchy에서는 <code>sudo pacman -R inbox-classic</code> 명령을 사용합니다. 다운로드한 메일은 <code>~/.local/share/inbox-classic</code> 폴더도 삭제할 때까지 그곳에 남아 있습니다.</p>
+<p><code>sudo apt remove inbox-classic</code> 명령으로 패키지를 제거합니다. Fedora에서는 <code>sudo dnf remove inbox-classic</code> 명령을, Arch Linux와 Omarchy에서는 <code>sudo pacman -R inbox-classic</code> 명령을 사용합니다. 다운로드한 메일은 <code>~/.local/share/inbox-classic</code> 폴더도 삭제할 때까지 그곳에 남아 있습니다.</p>
 <p>이러한 기본 데이터 폴더에는 연락처, 키, 설정도 들어 있으므로 폴더를 삭제하면 이 로컬 데이터가 모두 제거됩니다. 위치를 바꾼 경우에는 위치가 다를 수 있습니다. 제거해도 서버의 메일은 삭제되지 않으며, 시스템 암호 저장소의 자격 증명이 반드시 제거되는 것도 아닙니다.</p>
 <p>저장된 계정 로그인 자격 증명을 제거하려면 먼저 <b>파일</b> &gt; <b>계정</b> 명령으로 각 계정을 제거합니다. 계정 하나만 제거하려면 <a href="manage-accounts.html">계정 변경, 정렬 및 제거</a> 항목을 참조하십시오.</p>
 <nav class="related"><a href="data-storage.html">메일과 암호가 저장되는 위치</a> <a href="updates.html">Inbox Classic 업데이트</a> <a href="manage-accounts.html">계정 변경, 정렬 및 제거</a></nav>

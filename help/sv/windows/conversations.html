@@ -39,11 +39,13 @@
 <ul>
 <li><a href="all-inboxes.html">Alla inkorgar</a></li>
 <li><a href="manage-accounts.html">Ändra, ordna och ta bort konton</a></li>
+<li><a href="sync.html">Synkronisera dina datorer</a></li>
 <li><a href="move-computer.html">Flytta till en annan dator</a></li>
 </ul>
 <h2>Meddelandefunktioner</h2>
 <ul>
 <li><a href="sign-in-codes.html">Engångskoder</a></li>
+<li><a href="reactions.html">Emoji-reaktioner</a></li>
 <li><a href="delivery-problems.html">Meddelanden som inte levererades</a></li>
 <li><a href="invitations.html">Kalenderinbjudningar</a></li>
 <li><a href="unsubscribe.html">Lämna en e-postlista</a></li>
@@ -100,11 +102,22 @@
 </nav><main>
 <h1>Konversationer</h1>
 <p class="summary">Meddelanden som svarar på varandra samlas på en rad, och du kan bevaka eller ignorera en konversation.</p>
-<p>En konversation visas på en rad med uppgifterna från sitt första meddelande och antalet meddelanden. Raden är fetstilad om något meddelande är oläst. Vid sortering efter datum eller mottagningstid avgör det senaste meddelandet placeringen; annars används det första. Antalet och lässtatusen gäller meddelandena i den aktuella listan.</p>
+<p>En hopfälld konversation har en rad. Den visar konversationens ämne, antalet meddelanden i den aktuella listan och hur många av dem som är nya, som i <i>(3, 1 nytt)</i>. Avsändaren och de första orden kommer från meddelandet som raden öppnar: det äldsta olästa, eller det senaste när alla är lästa. Raden är fetstilad så länge något av dess meddelanden är oläst. Vid sortering efter datum eller mottagningstid avgör det senaste meddelandet placeringen; annars används det första.</p>
+<h2>Hela konversationen i läsfönstret</h2>
+<p>Markera en konversations rad för att läsa meddelandena tillsammans, med början vid det äldsta olästa meddelandet, eller det senaste när alla är lästa. Till en början är olästa meddelanden och meddelandet du börjar vid öppna; de andra lästa meddelandena är hopfällda till en rad med avsändare, datum och de första orden. Klicka på en rad för att öppna meddelandet och klicka igen för att fälla ihop det. Dina egna svar i Skickat, dina utkast och meddelanden som du har lagt i andra mappar visas också, vart och ett med namnet på sin mapp. Meddelanden i Skräppost och Borttaget utelämnas.</p>
 <ul>
-    <li>Om du vill se dess andra meddelanden klickar du på <b>+</b> framför den, eller trycker på <kbd>→</kbd>. Om du vill dölja dem klickar du på <b>-</b>, eller trycker på <kbd>←</kbd>.</li>
+    <li>Svara, Svara alla, Vidarebefordra och Skriv ut gäller meddelandet med den färgade kanten. När du öppnar ett meddelande markeras det; när du fäller ihop det kan ett annat öppet meddelande markeras.</li>
+    <li>Olästa meddelanden som visas öppna markeras som lästa efter en stund.</li>
+    <li><b>Arkiv</b> &gt; <b>Skriv ut konversation</b> skriver ut de hämtade meddelandena i konversationen, ett efter ett. Signerade eller krypterade meddelanden utelämnas; öppna och skriv ut dem var för sig.</li>
+    <li>Dubbelklicka på raden för att öppna konversationen i ett eget fönster.</li>
+    <li>Ett signerat eller krypterat meddelande visas aldrig i följden. Dess rad talar om att det öppnas för sig; klicka på raden för att läsa det ensamt.</li>
+    <li>En lång konversation visar först de 20 senaste meddelandena samt tidigare meddelanden som behövs för att ta med meddelandet du börjar vid. När de äldsta meddelandena visas först kan du klicka på länken för att visa tidigare meddelanden.</li>
+</ul>
+<p>Om du hellre vill se ett meddelande i taget stänger du av <b>Visa hela konversationen i läsfönstret</b> i <b>Verktyg</b> &gt; <b>Alternativ</b> &gt; <b>Läsning</b>. En konversations rad öppnar då dess äldsta olästa meddelande, eller det senaste när alla är lästa. Med <b>Ordning i konversationer</b> på samma sida väljer du om de äldsta eller senaste meddelandena ska visas först, både i läsfönstret och under en expanderad konversations rad.</p>
+<ul>
+    <li>Om du vill lista dess meddelanden under raden klickar du på <b>+</b> framför den, eller trycker på <kbd>→</kbd>. Om du vill dölja dem klickar du på <b>-</b>, eller trycker på <kbd>←</kbd>. Om du markerar ett av meddelandena under raden visas bara det meddelandet.</li>
     <li><b>Visa</b> &gt; <b>Expandera alla konversationer</b> och <b>Komprimera alla konversationer</b> gör samma sak för hela listan.</li>
-    <li>När du tar bort, flyttar, arkiverar, skräppostmarkerar, lästmarkerar eller flaggar en hopfälld konversation påverkas dess meddelanden i den aktuella listan.</li>
+    <li>När du tar bort, flyttar, arkiverar, skräppostmarkerar, lästmarkerar eller flaggar en hopfälld konversation påverkas dess meddelanden i den aktuella listan. Om konversationen även har meddelanden i andra mappar frågar Inbox Classic vid borttagning, flyttning och arkivering om åtgärden ska gälla <b>Endast den här mappen</b> eller <b>Hela konversationen</b>. När åtgärden omfattar andra mappar lämnar arkivering och flyttning skickade meddelanden och utkast i de mapparna där de är.</li>
 </ul>
 <p>Om du vill visa varje meddelande på en egen rad stänger du av <b>Gruppera meddelanden efter konversation</b> i <b>Verktyg</b> &gt; <b>Alternativ</b> &gt; <b>Läsning</b>.</p>
 <h2>Bevaka en konversation</h2>

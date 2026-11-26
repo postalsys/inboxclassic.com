@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'">
+<title>Synkronisera dina datorer</title>
+<style>body{margin:16px 24px;line-height:1.5}body>:not(.web),main{max-width:42em}h1{font-size:1.6em;margin:0 0 4px}h2{font-size:1.2em;margin:1.4em 0 .4em}p.summary{font-size:1.05em;opacity:.8;margin-top:0}ol,ul{padding-left:1.6em}li{margin:.3em 0}table{border-collapse:collapse;margin:.6em 0}th,td{text-align:left;padding:4px 12px 4px 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent);vertical-align:top}kbd{font-size:.9em;border:1px solid color-mix(in srgb,currentColor 35%,transparent);border-bottom-width:2px;border-radius:4px;padding:0 4px;white-space:nowrap}aside{padding:8px 12px;margin:.8em 0}.side a[aria-current]{font-weight:700;text-decoration:none}aside.warning{border-left:4px solid #c60}img.picture{max-width:100%;height:auto;margin:.6em 0;border:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related{margin-top:1.6em;padding-top:.6em;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related a{margin-right:1.2em}p.home{margin:0 0 1em;font-size:.9em}header.bar{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;max-width:none;padding:0 0 12px;margin:0 0 20px;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}header.bar .brand{font-weight:700;text-decoration:none;margin-right:auto}header.bar a,header.bar b{margin-right:10px}.web{display:flex;gap:32px}.web .side{flex:0 0 240px;font-size:.92em}.web .side ul{padding-left:1.1em}.web main{flex:1;min-width:0}@media(max-width:700px){.web{display:block}.web .side{display:none}}:root{color-scheme:light dark}body{font:11pt system-ui,'Adwaita Sans',Cantarell,sans-serif;color:CanvasText;background:Canvas}a{color:#1c71d8}@media(prefers-color-scheme:dark){a{color:#78aeed}}aside.note,aside.warning{background:color-mix(in srgb,CanvasText 6%,Canvas);border-radius:12px}body.windows,body.mac,body.linux{font:16px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif;margin:0;background:#f7f7fb;color:#1f2330}header.bar{max-width:1180px;margin:0 auto;padding:14px 24px;border-bottom:1px solid #e3e3ee}header.bar .brand{color:#3d4aa8;font-size:1.1em}header.bar a{color:#3d4aa8}.web{max-width:1180px;margin:0 auto;padding:24px}.web main{background:#fff;border-radius:12px;padding:28px 36px;box-shadow:0 1px 3px rgba(20,20,60,.08)}.web .side{position:sticky;top:16px;align-self:flex-start;max-height:calc(100vh - 32px);overflow:auto}.web .side a{color:#30395e;text-decoration:none}.web .side a:hover,.web main a{color:#3d4aa8}h1,h2{color:#1f2330}h2{border-bottom:none}aside.note,aside.warning{background:#f1f2fb;border:1px solid #e0e2f5;border-radius:10px}@media(prefers-color-scheme:dark){body.windows,body.mac,body.linux{background:#14151c;color:#e6e7ef}.web main{background:#1d1f29;box-shadow:none}header.bar{border-color:#2c2f3d}.web .side a{color:#c5c9e6}h1,h2{color:#e6e7ef}aside.note,aside.warning{background:#232637;border-color:#30344a}header.bar a,header.bar .brand,.web main a,.web .side a:hover{color:#9aa6ff}}</style>
+</head>
+<body class="linux">
+<header class="bar"><a class="brand" href="/">Inbox Classic</a><span class="platforms"><a href="../windows/sync.html">Windows</a> <a href="../mac/sync.html">Mac</a> <b>Linux</b></span><span class="languages"><a href="../../en/linux/sync.html" hreflang="en">English</a> <a href="../../id/linux/sync.html" hreflang="id">Bahasa Indonesia</a> <a href="../../ca/linux/sync.html" hreflang="ca">Català</a> <a href="../../cs/linux/sync.html" hreflang="cs">Čeština</a> <a href="../../da/linux/sync.html" hreflang="da">Dansk</a> <a href="../../de/linux/sync.html" hreflang="de">Deutsch</a> <a href="../../et/linux/sync.html" hreflang="et">Eesti</a> <a href="../../es/linux/sync.html" hreflang="es">Español</a> <a href="../../fr/linux/sync.html" hreflang="fr">Français</a> <a href="../../hr/linux/sync.html" hreflang="hr">Hrvatski</a> <a href="../../it/linux/sync.html" hreflang="it">Italiano</a> <a href="../../lv/linux/sync.html" hreflang="lv">Latviešu</a> <a href="../../lt/linux/sync.html" hreflang="lt">Lietuvių</a> <a href="../../hu/linux/sync.html" hreflang="hu">Magyar</a> <a href="../../nl/linux/sync.html" hreflang="nl">Nederlands</a> <a href="../../nb/linux/sync.html" hreflang="nb">Norsk bokmål</a> <a href="../../pl/linux/sync.html" hreflang="pl">Polski</a> <a href="../../pt-BR/linux/sync.html" hreflang="pt-BR">Português (Brasil)</a> <a href="../../pt/linux/sync.html" hreflang="pt">Português (Portugal)</a> <a href="../../ro/linux/sync.html" hreflang="ro">Română</a> <a href="../../sk/linux/sync.html" hreflang="sk">Slovenčina</a> <a href="../../sl/linux/sync.html" hreflang="sl">Slovenščina</a> <a href="../../sr-Latn/linux/sync.html" hreflang="sr-Latn">Srpski</a> <a href="../../fi/linux/sync.html" hreflang="fi">Suomi</a> <b>Svenska</b> <a href="../../vi/linux/sync.html" hreflang="vi">Tiếng Việt</a> <a href="../../tr/linux/sync.html" hreflang="tr">Türkçe</a> <a href="../../el/linux/sync.html" hreflang="el">Ελληνικά</a> <a href="../../bg/linux/sync.html" hreflang="bg">Български</a> <a href="../../ru/linux/sync.html" hreflang="ru">Русский</a> <a href="../../uk/linux/sync.html" hreflang="uk">Українська</a> <a href="../../ja/linux/sync.html" hreflang="ja">日本語</a> <a href="../../zh-Hans/linux/sync.html" hreflang="zh-Hans">简体中文</a> <a href="../../zh-Hant/linux/sync.html" hreflang="zh-Hant">繁體中文</a> <a href="../../ko/linux/sync.html" hreflang="ko">한국어</a></span></header>
+<div class="web"><nav class="side"><nav class="contents">
+<h2>Kom igång</h2>
+<ul>
+<li><a href="add-account.html">Lägga till ett e-postkonto</a></li>
+<li><a href="gmail-outlook.html">Gmail och Outlook.com</a></li>
+<li><a href="main-window.html">Huvudfönstret</a></li>
+<li><a href="layouts.html">Layouter</a></li>
+</ul>
+<h2>Vanliga uppgifter</h2>
+<ul>
+<li><a href="read-messages.html">Läsa meddelanden</a></li>
+<li><a href="find-messages.html">Hitta meddelanden</a></li>
+<li><a href="conversations.html">Konversationer</a></li>
+<li><a href="organize-mail.html">Flagga, arkivera och flytta meddelanden</a></li>
+<li><a href="message-rules.html">Sortera ny e-post med regler</a></li>
+<li><a href="delete-and-undo.html">Ta bort meddelanden och ångra</a></li>
+<li><a href="folders.html">Arbeta med mappar</a></li>
+<li><a href="write-message.html">Skriva ett meddelande</a></li>
+<li><a href="reply-forward.html">Svara och vidarebefordra</a></li>
+<li><a href="attachments.html">Bilagor</a></li>
+<li><a href="drafts-outbox.html">Utkast och Utkorgen</a></li>
+<li><a href="signatures.html">Textsignaturer</a></li>
+<li><a href="address-book.html">Adressboken</a></li>
+<li><a href="save-print-import.html">Spara, skriv ut och importera meddelanden</a></li>
+<li><a href="new-mail.html">Hämta ny e-post</a></li>
+</ul>
+<h2>Flera konton</h2>
+<ul>
+<li><a href="all-inboxes.html">Alla inkorgar</a></li>
+<li><a href="manage-accounts.html">Ändra, ordna och ta bort konton</a></li>
+<li><a href="sync.html" aria-current="page">Synkronisera dina datorer</a></li>
+<li><a href="move-computer.html">Flytta till en annan dator</a></li>
+</ul>
+<h2>Meddelandefunktioner</h2>
+<ul>
+<li><a href="sign-in-codes.html">Engångskoder</a></li>
+<li><a href="reactions.html">Emoji-reaktioner</a></li>
+<li><a href="delivery-problems.html">Meddelanden som inte levererades</a></li>
+<li><a href="invitations.html">Kalenderinbjudningar</a></li>
+<li><a href="unsubscribe.html">Lämna en e-postlista</a></li>
+<li><a href="brand-logos.html">Varumärkeslogotyper</a></li>
+</ul>
+<h2>Krypterad och signerad e-post</h2>
+<ul>
+<li><a href="encrypted-and-signed-mail.html">Krypterad och signerad e-post</a></li>
+<li><a href="sign-and-encrypt.html">Signera och kryptera ett meddelande</a></li>
+<li><a href="encryption-keys.html">Krypteringsnycklar</a></li>
+<li><a href="verify-a-key.html">Verifiera en kontakts nyckel</a></li>
+</ul>
+<h2>Inställningar</h2>
+<ul>
+<li><a href="options-language.html">Inställningar</a></li>
+<li><a href="download-ahead.html">Meddelanden som hämtas i förväg</a></li>
+<li><a href="account-security.html">Säkerhetsinställningar för konton</a></li>
+<li><a href="default-mail-program.html">Gör Inbox Classic till ditt e-postprogram</a></li>
+<li><a href="updates.html">Uppdatera Inbox Classic</a></li>
+</ul>
+<h2>AI-agenter</h2>
+<ul>
+<li><a href="agents-connect.html">Ansluta en AI-agent</a></li>
+<li><a href="agents-permissions.html">Vad en agent får göra</a></li>
+<li><a href="agents-sending.html">När en agent skickar e-post</a></li>
+</ul>
+<h2>Referens</h2>
+<ul>
+<li><a href="keyboard-shortcuts.html">Kortkommandon</a></li>
+<li><a href="search-words.html">Sökord</a></li>
+</ul>
+<h2>Felsökning</h2>
+<ul>
+<li><a href="password-not-accepted.html">Lösenordet godtas inte</a></li>
+<li><a href="certificate-errors.html">Certifikatfel</a></li>
+<li><a href="encryption-errors.html">Krypteringsfel</a></li>
+<li><a href="no-connection.html">Inbox Classic kan inte ansluta</a></li>
+<li><a href="message-not-shown.html">Ett meddelande visas inte</a></li>
+</ul>
+<h2>Integritet och säkerhet</h2>
+<ul>
+<li><a href="pictures-tracking.html">Bilder och spårning</a></li>
+<li><a href="links-scripts.html">Länkar, skript och bilagor</a></li>
+<li><a href="data-storage.html">Var din e-post och dina lösenord sparas</a></li>
+<li><a href="connections.html">Inbox Classics nätverksanslutningar</a></li>
+<li><a href="removing.html">Ta bort Inbox Classic</a></li>
+</ul>
+<h2>Avancerat</h2>
+<ul>
+<li><a href="sign-in-apps.html">Inloggningsappar</a></li>
+<li><a href="command-line.html">Kommandoradsalternativ</a></li>
+</ul>
+</nav>
+</nav><main>
+<h1>Synkronisera dina datorer</h1>
+<p class="summary">Håll dina konton, nycklar, kontakter, regler och inställningar likadana på alla datorer, via en mapp eller lagring som du äger.</p>
+<p>Synkronisering sparar din konfiguration på en plats som du väljer: en mapp som Dropbox, OneDrive, iCloud Drive, Google Drive, Nextcloud eller Syncthing kopierar mellan dina datorer, eller S3-kompatibel lagring. Synkroniserade data krypteras med din synkroniseringslösenfras innan de lämnar datorn. Synkronisering överför inte meddelanden, inte heller utkast som bara är sparade på den här datorn.</p>
+<h2>Konfigurera synkronisering på din första dator</h2>
+<aside class="warning">Förvara synkroniseringslösenfrasen på ett säkert ställe. Utan den kan ingen annan dator ansluta.</aside>
+<ol>
+    <li>Öppna <b>Huvudmeny</b> &gt; <b>Inställningar</b> &gt; <b>Synkronisering</b> och klicka på <b>Konfigurera synkronisering</b>.</li>
+    <li>Välj <b>En mapp</b> och klicka på <b>Välj</b>, eller välj <b>S3-kompatibel lagring</b> och fyll i uppgifterna. Klicka på <b>Nästa</b>.</li>
+    <li>Skriv en synkroniseringslösenfras två gånger. Ange också ett namn på den här datorn. Välj vad som ska synkroniseras och klicka på <b>Slå på synkronisering</b>.</li>
+</ol>
+<h2>Lägg till en annan dator</h2>
+<ol>
+    <li>Öppna <b>Huvudmeny</b> &gt; <b>Inställningar</b> &gt; <b>Synkronisering</b> på den andra datorn, klicka på <b>Konfigurera synkronisering</b> och välj samma mapp eller lagring. Klicka på <b>Nästa</b>.</li>
+    <li>Skriv synkroniseringslösenfrasen och ett namn på den här datorn. Välj vad som ska synkroniseras och klicka på <b>Slå på synkronisering</b>.</li>
+</ol>
+<p>Befintliga data slås ihop med synkroniserade data. Motsvarande konton och kontakter slås ihop. Konton som läggs till hämtar de meddelanden som finns tillgängliga på deras e-postservrar.</p>
+<h2>Medan den synkroniserar</h2>
+<p>Varje dator synkroniserar med några minuters mellanrum och när du klickar på <b>Synkronisera nu</b>. När ändringar är i konflikt behåller synkroniseringen en version och sparar ersatta värden i <b>Historik</b>, så att du kan återställa dem. Lösenord, inloggningsuppgifter och privata nycklar sparas inte i den här historiken. När en annan dator tar bort ett konto visas det i huvudfönstret.</p>
+<p>Om du vill sluta synkronisera en dator som du inte längre använder klickar du på <b>Datorer</b> och tar bort den. Om du vill sluta synkronisera den här datorn klickar du på <b>Stäng av synkronisering</b>: allt förblir som det är.</p>
+<nav class="related"><a href="move-computer.html">Flytta till en annan dator</a> <a href="manage-accounts.html">Ändra, ordna och ta bort konton</a> <a href="encryption-keys.html">Krypteringsnycklar</a></nav>
+</main></div>
+</body>
+</html>

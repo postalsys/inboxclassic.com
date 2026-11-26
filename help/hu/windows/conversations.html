@@ -39,11 +39,13 @@
 <ul>
 <li><a href="all-inboxes.html">Összes beérkezett üzenet</a></li>
 <li><a href="manage-accounts.html">Fiókok módosítása, átrendezése és eltávolítása</a></li>
+<li><a href="sync.html">Számítógépek szinkronizálása</a></li>
 <li><a href="move-computer.html">Átköltözés másik számítógépre</a></li>
 </ul>
 <h2>Üzenetfunkciók</h2>
 <ul>
 <li><a href="sign-in-codes.html">Bejelentkezési kódok</a></li>
+<li><a href="reactions.html">Emoji-reakciók</a></li>
 <li><a href="delivery-problems.html">Kézbesítési problémák</a></li>
 <li><a href="invitations.html">Naptármeghívások</a></li>
 <li><a href="unsubscribe.html">Leiratkozás levelezőlistáról</a></li>
@@ -100,11 +102,22 @@
 </nav><main>
 <h1>Beszélgetések</h1>
 <p class="summary">Az összetartozó üzeneteket beszélgetésekbe csoportosíthatja, a beszélgetéseket pedig figyelheti vagy figyelmen kívül hagyhatja.</p>
-<p>Az összecsukott beszélgetést az első üzenete képviseli, mellette az üzenetek számával. A sor félkövér, ha van olvasatlan üzenet a beszélgetésben. Dátum szerinti rendezéskor a legújabb üzenet határozza meg a beszélgetés helyét. A darabszám és az olvasottsági állapot az aktuális lista üzeneteire vonatkozik.</p>
+<p>Az összecsukott beszélgetés egy sort foglal el. Ebben látható a beszélgetés tárgya, az aktuális listában lévő üzeneteinek száma és az, hogy ezek közül hány új, például <i>(3, 1 új)</i>. A feladó és az első szavak annak az üzenetnek a sajátjai, amelyet a sor megnyit: a legrégebbi olvasatlané, vagy ha mind olvasott, a legújabbé. A sor félkövér, ha van olvasatlan üzenet a beszélgetésben. Dátum vagy érkezési idő szerinti rendezéskor a legújabb üzenet, más rendezéskor az első üzenet határozza meg a beszélgetés helyét.</p>
+<h2>A teljes beszélgetés az olvasóablakban</h2>
+<p>Jelölje ki egy beszélgetés sorát, hogy együtt olvashassa az üzeneteit, a legrégebbi olvasatlannál kezdve, vagy a legújabbnál, ha mind olvasott. Kezdetben az olvasatlan üzenetek és a kezdő üzenet nyitva vannak; a többi olvasott üzenet egy sorrá van összecsukva a feladóval, a dátummal és az első szavakkal. Kattintson egy sorra az üzenet megnyitásához, majd ismét az összecsukásához. Megjelennek az Elküldött elemek mappában lévő válaszai, a piszkozatai és a más mappákba áthelyezett üzenetei is, mindegyik a mappája nevével. A Levélszemét és a Törölt elemek mappa üzenetei nem jelennek meg.</p>
 <ul>
-    <li>A többi üzenet megtekintéséhez kattintson az előtte lévő <b>+</b> jelre, vagy nyomja meg a <kbd>→</kbd> billentyűt. Az elrejtésükhöz kattintson a <b>-</b> jelre, vagy nyomja meg a <kbd>←</kbd> billentyűt.</li>
+    <li>A Válasz, a Válasz mindenkinek, a Továbbítás és a Nyomtatás a színes szegélyű üzenetre vonatkozik. Egy üzenet megnyitása kijelöli azt; összecsukásakor egy másik nyitott üzenet válhat kijelöltté.</li>
+    <li>A nyitva megjelenített olvasatlan üzenetek egy pillanat múlva olvasottként lesznek megjelölve.</li>
+    <li><b>Fájl</b> &gt; <b>Beszélgetés nyomtatása</b> a beszélgetés letöltött üzeneteit nyomtatja ki egymás után. Az aláírt vagy titkosított üzenetek kimaradnak; ezeket külön nyissa meg és nyomtassa ki.</li>
+    <li>Kattintson duplán a sorra, ha a beszélgetést külön ablakban szeretné megnyitni.</li>
+    <li>Az aláírt vagy titkosított üzenet sosem jelenik meg a többivel együtt. A sora jelzi, hogy külön nyílik meg; kattintson a sorra, ha önmagában szeretné elolvasni.</li>
+    <li>Egy hosszú beszélgetés kezdetben a legújabb 20 üzenetét mutatja, valamint azokat a korábbi üzeneteket, amelyek a kezdő üzenet megjelenítéséhez szükségesek. Ha a legrégebbi üzenet van elöl, a hivatkozásra kattintva jelenítheti meg a korábbi üzeneteket.</li>
+</ul>
+<p>Ha inkább egyszerre egy üzenetet szeretne látni, kapcsolja ki a <b>Teljes beszélgetés megjelenítése az olvasóablakban</b> beállítást itt: <b>Eszközök</b> &gt; <b>Beállítások</b> &gt; <b>Olvasás</b>. Ekkor a beszélgetés sora a legrégebbi olvasatlan üzenetet nyitja meg, vagy a legújabbat, ha mind olvasott. Ugyanezen az oldalon az <b>Üzenetek sorrendje a beszélgetésben</b> beállítással választhatja ki, hogy a legrégebbi vagy a legújabb üzenet legyen elöl, az olvasóablakban és a kibontott beszélgetés sora alatt is.</p>
+<ul>
+    <li>Ha a beszélgetés üzeneteit a sora alatt szeretné felsorolni, kattintson az előtte lévő <b>+</b> jelre, vagy nyomja meg a <kbd>→</kbd> billentyűt. Az elrejtésükhöz kattintson a <b>-</b> jelre, vagy nyomja meg a <kbd>←</kbd> billentyűt. Ha a sor alatti üzenetek egyikét jelöli ki, csak az az üzenet jelenik meg.</li>
     <li>A teljes listát ezekkel a parancsokkal bonthatja ki vagy csukhatja össze: <b>Nézet</b> &gt; <b>Minden beszélgetés kibontása</b>, illetve <b>Minden beszélgetés összecsukása</b>.</li>
-    <li>Összecsukott beszélgetésnél a törlés, áthelyezés, archiválás, levélszemétként vagy olvasottként jelölés és a jelölő használata a beszélgetés aktuális listában szereplő üzeneteit érinti.</li>
+    <li>Összecsukott beszélgetésnél a törlés, áthelyezés, archiválás, levélszemétként vagy olvasottként jelölés és a jelölő használata a beszélgetés aktuális listában szereplő üzeneteit érinti. Ha a beszélgetésnek más mappákban is vannak üzenetei, a törlés, az áthelyezés és az archiválás megkérdezi, melyikre vonatkozzon a művelet: <b>Csak ez a mappa</b> vagy <b>Teljes beszélgetés</b>. Más mappák bevonásakor az archiválás és az áthelyezés az ezekben lévő elküldött üzeneteket és piszkozatokat a helyükön hagyja.</li>
 </ul>
 <p>Ha minden üzenetet külön sorban szeretne látni, kapcsolja ki az <b>Üzenetek csoportosítása beszélgetés szerint</b> beállítást itt: <b>Eszközök</b> &gt; <b>Beállítások</b> &gt; <b>Olvasás</b>.</p>
 <h2>Beszélgetés figyelése</h2>

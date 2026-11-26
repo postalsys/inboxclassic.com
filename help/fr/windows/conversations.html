@@ -39,11 +39,13 @@
 <ul>
 <li><a href="all-inboxes.html">Toutes les boîtes</a></li>
 <li><a href="manage-accounts.html">Modifier, ordonner et supprimer des comptes</a></li>
+<li><a href="sync.html">Synchroniser vos ordinateurs</a></li>
 <li><a href="move-computer.html">Changer d’ordinateur</a></li>
 </ul>
 <h2>Fonctions des messages</h2>
 <ul>
 <li><a href="sign-in-codes.html">Codes de connexion</a></li>
+<li><a href="reactions.html">Réactions par emoji</a></li>
 <li><a href="delivery-problems.html">Messages non remis</a></li>
 <li><a href="invitations.html">Invitations de calendrier</a></li>
 <li><a href="unsubscribe.html">Quitter une liste de diffusion</a></li>
@@ -100,11 +102,22 @@
 </nav><main>
 <h1>Conversations</h1>
 <p class="summary">Regroupez les messages d’une même conversation sur une seule ligne et choisissez de surveiller ou d’ignorer la conversation.</p>
-<p>Chaque conversation occupe une ligne dans la liste, qui affiche son premier message et le nombre de messages qu’elle contient. La ligne est en gras si au moins un message est non lu. Lors d’un tri par date, sa position dépend du message le plus récent. Le nombre et l’état de lecture concernent les messages de la liste en cours.</p>
+<p>Une conversation réduite occupe une ligne. Elle affiche le sujet de la conversation, le nombre de ses messages dans la liste en cours et combien d’entre eux sont nouveaux, comme dans <i>(3, 1 nouveau)</i>. L’expéditeur et les premiers mots sont ceux du message qu’elle ouvre : le plus ancien message non lu, ou le plus récent lorsque tous sont lus. Elle est en gras tant qu’un de ses messages est non lu. Les tris par date et par date de réception utilisent son message le plus récent ; les autres tris utilisent son premier message.</p>
+<h2>Toute la conversation dans le volet de lecture</h2>
+<p>Sélectionnez la ligne d’une conversation pour lire ses messages ensemble, à partir du plus ancien message non lu, ou du plus récent lorsque tous sont lus. Au départ, les messages non lus et le message de départ sont ouverts ; les autres messages lus sont réduits à une ligne indiquant l’expéditeur, la date et les premiers mots. Cliquez sur une ligne pour ouvrir ce message, et cliquez de nouveau pour le réduire. Vos propres réponses dans Éléments envoyés, vos brouillons et les messages que vous avez classés dans d’autres dossiers sont aussi affichés, chacun avec le nom de son dossier. Les messages de Courrier indésirable et d’Éléments supprimés sont exclus.</p>
 <ul>
-    <li>Pour voir ses autres messages, cliquez sur le <b>+</b> devant elle, ou appuyez sur <kbd>→</kbd>. Pour les masquer, cliquez sur le <b>-</b>, ou appuyez sur <kbd>←</kbd>.</li>
+    <li>Répondre, Répondre à tous, Transférer et Imprimer agissent sur le message à la bordure colorée. Ouvrir un message le sélectionne ; le réduire peut sélectionner un autre message ouvert.</li>
+    <li>Les messages non lus affichés ouverts sont marqués comme lus après un instant.</li>
+    <li><b>Fichier</b> &gt; <b>Imprimer la conversation</b> imprime les messages téléchargés de la conversation, l’un après l’autre. Les messages signés ou chiffrés sont exclus ; ouvrez-les et imprimez-les séparément.</li>
+    <li>Double-cliquez sur la ligne pour ouvrir la conversation dans sa propre fenêtre.</li>
+    <li>Un message signé ou chiffré n’est jamais affiché dans la pile. Sa ligne indique qu’il s’ouvre seul ; cliquez sur la ligne pour le lire séparément.</li>
+    <li>Une longue conversation affiche d’abord ses 20 messages les plus récents, ainsi que les messages plus anciens nécessaires pour inclure le message de départ. Lorsque les messages sont classés du plus ancien au plus récent, cliquez sur le lien pour afficher les messages précédents.</li>
+</ul>
+<p>Pour voir un seul message à la fois, désactivez <b>Afficher toute la conversation dans le volet de lecture</b> dans <b>Outils</b> &gt; <b>Options</b> &gt; <b>Lecture</b>. La ligne d’une conversation ouvre alors son plus ancien message non lu, ou son plus récent lorsque tous sont lus. Utilisez <b>Ordre de la conversation</b>, sur la même page, pour choisir d’afficher d’abord les messages les plus anciens ou les plus récents, dans le volet de lecture comme sous la ligne d’une conversation développée.</p>
+<ul>
+    <li>Pour afficher ses messages sous sa ligne, cliquez sur le <b>+</b> devant elle, ou appuyez sur <kbd>→</kbd>. Pour les masquer, cliquez sur le <b>-</b>, ou appuyez sur <kbd>←</kbd>. Sélectionner l’un des messages sous la ligne affiche ce message seul.</li>
     <li><b>Affichage</b> &gt; <b>Développer toutes les conversations</b> et <b>Réduire toutes les conversations</b> font de même pour toute la liste.</li>
-    <li>Lorsque vous supprimez, déplacez, archivez ou marquez une conversation réduite, l’action s’applique à tous ses messages présents dans la liste en cours. Cela concerne aussi le marquage comme lu ou indésirable et l’ajout d’un indicateur.</li>
+    <li>Lorsque vous supprimez, déplacez, archivez ou marquez une conversation réduite, l’action s’applique à tous ses messages présents dans la liste en cours. Cela concerne aussi le marquage comme lu ou indésirable et l’ajout d’un indicateur. Lorsque la conversation a aussi des messages dans d’autres dossiers, Supprimer, Déplacer et Archiver demandent s’il faut agir sur <b>Ce dossier uniquement</b> ou sur <b>Toute la conversation</b>. Lorsque l’action inclut d’autres dossiers, Archiver et Déplacer laissent les messages envoyés et les brouillons de ces dossiers à leur place.</li>
 </ul>
 <p>Pour afficher chaque message sur sa propre ligne, désactivez <b>Regrouper les messages par conversation</b> dans <b>Outils</b> &gt; <b>Options</b> &gt; <b>Lecture</b>.</p>
 <h2>Surveiller une conversation</h2>

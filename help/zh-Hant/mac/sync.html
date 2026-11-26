@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'">
+<title>同步您的電腦</title>
+<style>body{margin:16px 24px;line-height:1.5}body>:not(.web),main{max-width:42em}h1{font-size:1.6em;margin:0 0 4px}h2{font-size:1.2em;margin:1.4em 0 .4em}p.summary{font-size:1.05em;opacity:.8;margin-top:0}ol,ul{padding-left:1.6em}li{margin:.3em 0}table{border-collapse:collapse;margin:.6em 0}th,td{text-align:left;padding:4px 12px 4px 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent);vertical-align:top}kbd{font-size:.9em;border:1px solid color-mix(in srgb,currentColor 35%,transparent);border-bottom-width:2px;border-radius:4px;padding:0 4px;white-space:nowrap}aside{padding:8px 12px;margin:.8em 0}.side a[aria-current]{font-weight:700;text-decoration:none}aside.warning{border-left:4px solid #c60}img.picture{max-width:100%;height:auto;margin:.6em 0;border:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related{margin-top:1.6em;padding-top:.6em;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related a{margin-right:1.2em}p.home{margin:0 0 1em;font-size:.9em}header.bar{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;max-width:none;padding:0 0 12px;margin:0 0 20px;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}header.bar .brand{font-weight:700;text-decoration:none;margin-right:auto}header.bar a,header.bar b{margin-right:10px}.web{display:flex;gap:32px}.web .side{flex:0 0 240px;font-size:.92em}.web .side ul{padding-left:1.1em}.web main{flex:1;min-width:0}@media(max-width:700px){.web{display:block}.web .side{display:none}}:root{color-scheme:light dark}body{font:13px -apple-system,BlinkMacSystemFont,sans-serif;color:CanvasText;background:Canvas}a{color:LinkText}aside.note,aside.warning{background:color-mix(in srgb,CanvasText 6%,Canvas);border-radius:8px}kbd{font-family:-apple-system,sans-serif}body.windows,body.mac,body.linux{font:16px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif;margin:0;background:#f7f7fb;color:#1f2330}header.bar{max-width:1180px;margin:0 auto;padding:14px 24px;border-bottom:1px solid #e3e3ee}header.bar .brand{color:#3d4aa8;font-size:1.1em}header.bar a{color:#3d4aa8}.web{max-width:1180px;margin:0 auto;padding:24px}.web main{background:#fff;border-radius:12px;padding:28px 36px;box-shadow:0 1px 3px rgba(20,20,60,.08)}.web .side{position:sticky;top:16px;align-self:flex-start;max-height:calc(100vh - 32px);overflow:auto}.web .side a{color:#30395e;text-decoration:none}.web .side a:hover,.web main a{color:#3d4aa8}h1,h2{color:#1f2330}h2{border-bottom:none}aside.note,aside.warning{background:#f1f2fb;border:1px solid #e0e2f5;border-radius:10px}@media(prefers-color-scheme:dark){body.windows,body.mac,body.linux{background:#14151c;color:#e6e7ef}.web main{background:#1d1f29;box-shadow:none}header.bar{border-color:#2c2f3d}.web .side a{color:#c5c9e6}h1,h2{color:#e6e7ef}aside.note,aside.warning{background:#232637;border-color:#30344a}header.bar a,header.bar .brand,.web main a,.web .side a:hover{color:#9aa6ff}}</style>
+</head>
+<body class="mac">
+<header class="bar"><a class="brand" href="/">Inbox Classic</a><span class="platforms"><a href="../windows/sync.html">Windows</a> <b>Mac</b> <a href="../linux/sync.html">Linux</a></span><span class="languages"><a href="../../en/mac/sync.html" hreflang="en">English</a> <a href="../../id/mac/sync.html" hreflang="id">Bahasa Indonesia</a> <a href="../../ca/mac/sync.html" hreflang="ca">Català</a> <a href="../../cs/mac/sync.html" hreflang="cs">Čeština</a> <a href="../../da/mac/sync.html" hreflang="da">Dansk</a> <a href="../../de/mac/sync.html" hreflang="de">Deutsch</a> <a href="../../et/mac/sync.html" hreflang="et">Eesti</a> <a href="../../es/mac/sync.html" hreflang="es">Español</a> <a href="../../fr/mac/sync.html" hreflang="fr">Français</a> <a href="../../hr/mac/sync.html" hreflang="hr">Hrvatski</a> <a href="../../it/mac/sync.html" hreflang="it">Italiano</a> <a href="../../lv/mac/sync.html" hreflang="lv">Latviešu</a> <a href="../../lt/mac/sync.html" hreflang="lt">Lietuvių</a> <a href="../../hu/mac/sync.html" hreflang="hu">Magyar</a> <a href="../../nl/mac/sync.html" hreflang="nl">Nederlands</a> <a href="../../nb/mac/sync.html" hreflang="nb">Norsk bokmål</a> <a href="../../pl/mac/sync.html" hreflang="pl">Polski</a> <a href="../../pt-BR/mac/sync.html" hreflang="pt-BR">Português (Brasil)</a> <a href="../../pt/mac/sync.html" hreflang="pt">Português (Portugal)</a> <a href="../../ro/mac/sync.html" hreflang="ro">Română</a> <a href="../../sk/mac/sync.html" hreflang="sk">Slovenčina</a> <a href="../../sl/mac/sync.html" hreflang="sl">Slovenščina</a> <a href="../../sr-Latn/mac/sync.html" hreflang="sr-Latn">Srpski</a> <a href="../../fi/mac/sync.html" hreflang="fi">Suomi</a> <a href="../../sv/mac/sync.html" hreflang="sv">Svenska</a> <a href="../../vi/mac/sync.html" hreflang="vi">Tiếng Việt</a> <a href="../../tr/mac/sync.html" hreflang="tr">Türkçe</a> <a href="../../el/mac/sync.html" hreflang="el">Ελληνικά</a> <a href="../../bg/mac/sync.html" hreflang="bg">Български</a> <a href="../../ru/mac/sync.html" hreflang="ru">Русский</a> <a href="../../uk/mac/sync.html" hreflang="uk">Українська</a> <a href="../../ja/mac/sync.html" hreflang="ja">日本語</a> <a href="../../zh-Hans/mac/sync.html" hreflang="zh-Hans">简体中文</a> <b>繁體中文</b> <a href="../../ko/mac/sync.html" hreflang="ko">한국어</a></span></header>
+<div class="web"><nav class="side"><nav class="contents">
+<h2>開始使用</h2>
+<ul>
+<li><a href="add-account.html">新增郵件帳戶</a></li>
+<li><a href="gmail-outlook.html">Gmail 和 Outlook.com</a></li>
+<li><a href="main-window.html">主視窗</a></li>
+<li><a href="layouts.html">版面配置</a></li>
+</ul>
+<h2>日常工作</h2>
+<ul>
+<li><a href="read-messages.html">閱讀郵件</a></li>
+<li><a href="find-messages.html">尋找郵件</a></li>
+<li><a href="conversations.html">交談</a></li>
+<li><a href="organize-mail.html">標幟、封存和移動郵件</a></li>
+<li><a href="message-rules.html">使用規則分類新郵件</a></li>
+<li><a href="delete-and-undo.html">刪除郵件與復原</a></li>
+<li><a href="folders.html">使用資料夾</a></li>
+<li><a href="write-message.html">撰寫郵件</a></li>
+<li><a href="reply-forward.html">回覆和轉寄</a></li>
+<li><a href="attachments.html">附件</a></li>
+<li><a href="drafts-outbox.html">草稿和寄件匣</a></li>
+<li><a href="signatures.html">簽名</a></li>
+<li><a href="address-book.html">通訊錄</a></li>
+<li><a href="save-print-import.html">儲存、列印和匯入郵件</a></li>
+<li><a href="new-mail.html">取得新郵件</a></li>
+</ul>
+<h2>多個帳戶</h2>
+<ul>
+<li><a href="all-inboxes.html">所有收件匣</a></li>
+<li><a href="manage-accounts.html">變更、排列和移除帳戶</a></li>
+<li><a href="sync.html" aria-current="page">同步您的電腦</a></li>
+<li><a href="move-computer.html">移到另一部電腦</a></li>
+</ul>
+<h2>郵件功能</h2>
+<ul>
+<li><a href="sign-in-codes.html">登入代碼</a></li>
+<li><a href="reactions.html">表情回應</a></li>
+<li><a href="delivery-problems.html">未送達的郵件</a></li>
+<li><a href="invitations.html">行事曆邀請</a></li>
+<li><a href="unsubscribe.html">退出郵寄清單</a></li>
+<li><a href="brand-logos.html">品牌標誌</a></li>
+</ul>
+<h2>加密及簽署的郵件</h2>
+<ul>
+<li><a href="encrypted-and-signed-mail.html">加密和已簽署的郵件</a></li>
+<li><a href="sign-and-encrypt.html">簽署和加密郵件</a></li>
+<li><a href="encryption-keys.html">加密金鑰</a></li>
+<li><a href="verify-a-key.html">驗證連絡人的金鑰</a></li>
+</ul>
+<h2>設定</h2>
+<ul>
+<li><a href="options-language.html">設定</a></li>
+<li><a href="download-ahead.html">預先下載的郵件</a></li>
+<li><a href="account-security.html">帳戶的安全性設定</a></li>
+<li><a href="default-mail-program.html">將 Inbox Classic 設為您的郵件應用程式</a></li>
+<li><a href="updates.html">更新 Inbox Classic</a></li>
+</ul>
+<h2>AI 代理程式</h2>
+<ul>
+<li><a href="agents-connect.html">連接 AI 代理程式</a></li>
+<li><a href="agents-permissions.html">代理程式可以做什麼</a></li>
+<li><a href="agents-sending.html">代理程式寄送郵件時</a></li>
+</ul>
+<h2>參考資料</h2>
+<ul>
+<li><a href="keyboard-shortcuts.html">鍵盤快速鍵</a></li>
+<li><a href="search-words.html">搜尋字詞</a></li>
+</ul>
+<h2>疑難排解</h2>
+<ul>
+<li><a href="password-not-accepted.html">密碼不被接受</a></li>
+<li><a href="certificate-errors.html">憑證錯誤</a></li>
+<li><a href="encryption-errors.html">加密錯誤</a></li>
+<li><a href="no-connection.html">Inbox Classic 無法連線</a></li>
+<li><a href="message-not-shown.html">郵件沒有顯示</a></li>
+</ul>
+<h2>隱私權與安全性</h2>
+<ul>
+<li><a href="pictures-tracking.html">圖片和追蹤</a></li>
+<li><a href="links-scripts.html">連結、指令碼和附件</a></li>
+<li><a href="data-storage.html">您的郵件和密碼存放在哪裡</a></li>
+<li><a href="connections.html">Inbox Classic 建立的連線</a></li>
+<li><a href="removing.html">移除 Inbox Classic</a></li>
+</ul>
+<h2>進階</h2>
+<ul>
+<li><a href="sign-in-apps.html">登入應用程式</a></li>
+<li><a href="command-line.html">命令列選項</a></li>
+</ul>
+</nav>
+</nav><main>
+<h1>同步您的電腦</h1>
+<p class="summary">透過您自己的資料夾或儲存空間，讓每部電腦上的帳戶、金鑰、連絡人、規則和設定保持一致。</p>
+<p>同步會將您的設定儲存在您選擇的位置：可以是 Dropbox、OneDrive、iCloud Drive、Google Drive、Nextcloud 或 Syncthing 在您的電腦之間複製的資料夾，也可以是 S3 相容儲存空間。同步資料在離開電腦之前，會以您的同步密語加密。同步不會傳輸郵件，也不會傳輸僅儲存在本機的草稿。</p>
+<h2>在第一部電腦上設定同步</h2>
+<aside class="warning">請將同步密語保存在安全的地方。沒有它，其他電腦就無法加入。</aside>
+<ol>
+    <li>開啟Inbox Classic &gt; <b>設定</b> &gt; <b>同步</b>，然後按一下<b>設定同步</b>。</li>
+    <li>選擇<b>資料夾</b>並按一下<b>選擇</b>，或選擇<b>S3 相容儲存空間</b>並填寫其詳細資料。按一下<b>下一步</b>。</li>
+    <li>輸入兩次同步密語，並輸入這部電腦的名稱。選擇要同步的項目，然後按一下<b>開啟同步</b>。</li>
+</ol>
+<h2>新增另一部電腦</h2>
+<ol>
+    <li>在另一部電腦上，開啟Inbox Classic &gt; <b>設定</b> &gt; <b>同步</b>，按一下<b>設定同步</b>，然後選擇同一個資料夾或儲存空間。按一下<b>下一步</b>。</li>
+    <li>輸入您在第一部電腦上選擇的同步密語，以及這部電腦的名稱。選擇要同步的項目，然後按一下<b>開啟同步</b>。</li>
+</ol>
+<p>這部電腦上已有的資料會與同步資料合併，相符的帳戶和連絡人會合為一個。新增的帳戶會下載伺服器上可用的郵件；現有帳戶會保留已下載的郵件。</p>
+<h2>同步期間</h2>
+<p>每部電腦每隔幾分鐘同步一次，在您按一下<b>立即同步</b>時也會同步。不同電腦的變更發生衝突時，會保留其中一個版本，被取代的值會顯示在<b>歷程記錄</b>中，您可以在那裡還原。密碼、登入認證和私密金鑰不會保存在歷程記錄中。當另一部電腦移除帳戶時，主視窗會顯示相關訊息。</p>
+<p>若要停止同步一部您不再使用的電腦，請按一下<b>電腦</b>並將它移除。若要停止同步這部電腦，請按一下<b>關閉同步</b>：所有項目都會維持原狀。</p>
+<nav class="related"><a href="move-computer.html">移到另一部電腦</a> <a href="manage-accounts.html">變更、排列和移除帳戶</a> <a href="encryption-keys.html">加密金鑰</a></nav>
+</main></div>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'">
+<title>Sync your computers</title>
+<style>body{margin:16px 24px;line-height:1.5}body>:not(.web),main{max-width:42em}h1{font-size:1.6em;margin:0 0 4px}h2{font-size:1.2em;margin:1.4em 0 .4em}p.summary{font-size:1.05em;opacity:.8;margin-top:0}ol,ul{padding-left:1.6em}li{margin:.3em 0}table{border-collapse:collapse;margin:.6em 0}th,td{text-align:left;padding:4px 12px 4px 0;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent);vertical-align:top}kbd{font-size:.9em;border:1px solid color-mix(in srgb,currentColor 35%,transparent);border-bottom-width:2px;border-radius:4px;padding:0 4px;white-space:nowrap}aside{padding:8px 12px;margin:.8em 0}.side a[aria-current]{font-weight:700;text-decoration:none}aside.warning{border-left:4px solid #c60}img.picture{max-width:100%;height:auto;margin:.6em 0;border:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related{margin-top:1.6em;padding-top:.6em;border-top:1px solid color-mix(in srgb,currentColor 18%,transparent)}nav.related a{margin-right:1.2em}p.home{margin:0 0 1em;font-size:.9em}header.bar{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;max-width:none;padding:0 0 12px;margin:0 0 20px;border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}header.bar .brand{font-weight:700;text-decoration:none;margin-right:auto}header.bar a,header.bar b{margin-right:10px}.web{display:flex;gap:32px}.web .side{flex:0 0 240px;font-size:.92em}.web .side ul{padding-left:1.1em}.web main{flex:1;min-width:0}@media(max-width:700px){.web{display:block}.web .side{display:none}}body{font:10pt Tahoma,Arial,sans-serif;color:#000;background:#fff}h1,h2{color:#036}h2{border-bottom:1px solid #9ab}a{color:#03c}aside.note,aside.warning{background:#ffffe1;border:1px solid #c9c9a0}kbd{background:#f4f4f4;border-color:#999}body.windows,body.mac,body.linux{font:16px/1.6 system-ui,-apple-system,'Segoe UI',sans-serif;margin:0;background:#f7f7fb;color:#1f2330}header.bar{max-width:1180px;margin:0 auto;padding:14px 24px;border-bottom:1px solid #e3e3ee}header.bar .brand{color:#3d4aa8;font-size:1.1em}header.bar a{color:#3d4aa8}.web{max-width:1180px;margin:0 auto;padding:24px}.web main{background:#fff;border-radius:12px;padding:28px 36px;box-shadow:0 1px 3px rgba(20,20,60,.08)}.web .side{position:sticky;top:16px;align-self:flex-start;max-height:calc(100vh - 32px);overflow:auto}.web .side a{color:#30395e;text-decoration:none}.web .side a:hover,.web main a{color:#3d4aa8}h1,h2{color:#1f2330}h2{border-bottom:none}aside.note,aside.warning{background:#f1f2fb;border:1px solid #e0e2f5;border-radius:10px}@media(prefers-color-scheme:dark){body.windows,body.mac,body.linux{background:#14151c;color:#e6e7ef}.web main{background:#1d1f29;box-shadow:none}header.bar{border-color:#2c2f3d}.web .side a{color:#c5c9e6}h1,h2{color:#e6e7ef}aside.note,aside.warning{background:#232637;border-color:#30344a}header.bar a,header.bar .brand,.web main a,.web .side a:hover{color:#9aa6ff}}</style>
+</head>
+<body class="windows">
+<header class="bar"><a class="brand" href="/">Inbox Classic</a><span class="platforms"><b>Windows</b> <a href="../mac/sync.html">Mac</a> <a href="../linux/sync.html">Linux</a></span><span class="languages"><b>English</b> <a href="../../id/windows/sync.html" hreflang="id">Bahasa Indonesia</a> <a href="../../ca/windows/sync.html" hreflang="ca">Català</a> <a href="../../cs/windows/sync.html" hreflang="cs">Čeština</a> <a href="../../da/windows/sync.html" hreflang="da">Dansk</a> <a href="../../de/windows/sync.html" hreflang="de">Deutsch</a> <a href="../../et/windows/sync.html" hreflang="et">Eesti</a> <a href="../../es/windows/sync.html" hreflang="es">Español</a> <a href="../../fr/windows/sync.html" hreflang="fr">Français</a> <a href="../../hr/windows/sync.html" hreflang="hr">Hrvatski</a> <a href="../../it/windows/sync.html" hreflang="it">Italiano</a> <a href="../../lv/windows/sync.html" hreflang="lv">Latviešu</a> <a href="../../lt/windows/sync.html" hreflang="lt">Lietuvių</a> <a href="../../hu/windows/sync.html" hreflang="hu">Magyar</a> <a href="../../nl/windows/sync.html" hreflang="nl">Nederlands</a> <a href="../../nb/windows/sync.html" hreflang="nb">Norsk bokmål</a> <a href="../../pl/windows/sync.html" hreflang="pl">Polski</a> <a href="../../pt-BR/windows/sync.html" hreflang="pt-BR">Português (Brasil)</a> <a href="../../pt/windows/sync.html" hreflang="pt">Português (Portugal)</a> <a href="../../ro/windows/sync.html" hreflang="ro">Română</a> <a href="../../sk/windows/sync.html" hreflang="sk">Slovenčina</a> <a href="../../sl/windows/sync.html" hreflang="sl">Slovenščina</a> <a href="../../sr-Latn/windows/sync.html" hreflang="sr-Latn">Srpski</a> <a href="../../fi/windows/sync.html" hreflang="fi">Suomi</a> <a href="../../sv/windows/sync.html" hreflang="sv">Svenska</a> <a href="../../vi/windows/sync.html" hreflang="vi">Tiếng Việt</a> <a href="../../tr/windows/sync.html" hreflang="tr">Türkçe</a> <a href="../../el/windows/sync.html" hreflang="el">Ελληνικά</a> <a href="../../bg/windows/sync.html" hreflang="bg">Български</a> <a href="../../ru/windows/sync.html" hreflang="ru">Русский</a> <a href="../../uk/windows/sync.html" hreflang="uk">Українська</a> <a href="../../ja/windows/sync.html" hreflang="ja">日本語</a> <a href="../../zh-Hans/windows/sync.html" hreflang="zh-Hans">简体中文</a> <a href="../../zh-Hant/windows/sync.html" hreflang="zh-Hant">繁體中文</a> <a href="../../ko/windows/sync.html" hreflang="ko">한국어</a></span></header>
+<div class="web"><nav class="side"><nav class="contents">
+<h2>Get started</h2>
+<ul>
+<li><a href="add-account.html">Add a mail account</a></li>
+<li><a href="gmail-outlook.html">Gmail and Outlook.com</a></li>
+<li><a href="main-window.html">The main window</a></li>
+<li><a href="layouts.html">Layouts</a></li>
+</ul>
+<h2>Everyday tasks</h2>
+<ul>
+<li><a href="read-messages.html">Read messages</a></li>
+<li><a href="find-messages.html">Find messages</a></li>
+<li><a href="conversations.html">Conversations</a></li>
+<li><a href="organize-mail.html">Flag, archive and move messages</a></li>
+<li><a href="message-rules.html">Sort new mail with rules</a></li>
+<li><a href="delete-and-undo.html">Delete messages and undo</a></li>
+<li><a href="folders.html">Work with folders</a></li>
+<li><a href="write-message.html">Write a message</a></li>
+<li><a href="reply-forward.html">Reply and forward</a></li>
+<li><a href="attachments.html">Attachments</a></li>
+<li><a href="drafts-outbox.html">Drafts and the Outbox</a></li>
+<li><a href="signatures.html">Signatures</a></li>
+<li><a href="address-book.html">The Address Book</a></li>
+<li><a href="save-print-import.html">Save, print and import messages</a></li>
+<li><a href="new-mail.html">Get new mail</a></li>
+</ul>
+<h2>Several accounts</h2>
+<ul>
+<li><a href="all-inboxes.html">All Inboxes</a></li>
+<li><a href="manage-accounts.html">Change, order and remove accounts</a></li>
+<li><a href="sync.html" aria-current="page">Sync your computers</a></li>
+<li><a href="move-computer.html">Move to another computer</a></li>
+</ul>
+<h2>Message features</h2>
+<ul>
+<li><a href="sign-in-codes.html">Sign-in codes</a></li>
+<li><a href="reactions.html">Emoji reactions</a></li>
+<li><a href="delivery-problems.html">Messages that were not delivered</a></li>
+<li><a href="invitations.html">Calendar invitations</a></li>
+<li><a href="unsubscribe.html">Leave a mailing list</a></li>
+<li><a href="brand-logos.html">Brand logos</a></li>
+</ul>
+<h2>Encrypted and signed mail</h2>
+<ul>
+<li><a href="encrypted-and-signed-mail.html">Encrypted and signed mail</a></li>
+<li><a href="sign-and-encrypt.html">Sign and encrypt a message</a></li>
+<li><a href="encryption-keys.html">Encryption keys</a></li>
+<li><a href="verify-a-key.html">Verify a contact’s key</a></li>
+</ul>
+<h2>Settings</h2>
+<ul>
+<li><a href="options-language.html">Settings</a></li>
+<li><a href="download-ahead.html">Messages downloaded ahead</a></li>
+<li><a href="account-security.html">Account security settings</a></li>
+<li><a href="default-mail-program.html">Make Inbox Classic your mail app</a></li>
+<li><a href="updates.html">Update Inbox Classic</a></li>
+</ul>
+<h2>AI agents</h2>
+<ul>
+<li><a href="agents-connect.html">Connect an AI agent</a></li>
+<li><a href="agents-permissions.html">What an agent may do</a></li>
+<li><a href="agents-sending.html">When an agent sends mail</a></li>
+</ul>
+<h2>Reference</h2>
+<ul>
+<li><a href="keyboard-shortcuts.html">Keyboard shortcuts</a></li>
+<li><a href="search-words.html">Search words</a></li>
+</ul>
+<h2>Troubleshooting</h2>
+<ul>
+<li><a href="password-not-accepted.html">The password is not accepted</a></li>
+<li><a href="certificate-errors.html">Certificate errors</a></li>
+<li><a href="encryption-errors.html">Encryption errors</a></li>
+<li><a href="no-connection.html">Inbox Classic cannot connect</a></li>
+<li><a href="message-not-shown.html">A message is not shown</a></li>
+</ul>
+<h2>Privacy and security</h2>
+<ul>
+<li><a href="pictures-tracking.html">Pictures and tracking</a></li>
+<li><a href="links-scripts.html">Links, scripts and attachments</a></li>
+<li><a href="data-storage.html">Where your mail and passwords are kept</a></li>
+<li><a href="connections.html">The connections Inbox Classic makes</a></li>
+<li><a href="removing.html">Remove Inbox Classic</a></li>
+</ul>
+<h2>Advanced</h2>
+<ul>
+<li><a href="sign-in-apps.html">Sign-in apps</a></li>
+<li><a href="command-line.html">Command-line options</a></li>
+</ul>
+</nav>
+</nav><main>
+<h1>Sync your computers</h1>
+<p class="summary">Keep your accounts, keys, contacts, rules and settings the same on every computer, through a folder or storage you own.</p>
+<p>Sync stores your setup in a location you choose: a folder that Dropbox, OneDrive, iCloud Drive, Google Drive, Nextcloud or Syncthing copies between your computers, or S3-compatible storage. The synced data is encrypted with your sync passphrase before it leaves the computer. Sync does not transfer messages, including drafts saved only on this computer.</p>
+<h2>Set up sync on your first computer</h2>
+<aside class="warning">Keep the sync passphrase somewhere safe. Without it, no other computer can join.</aside>
+<ol>
+    <li>Open <b>Tools</b> &gt; <b>Options</b> &gt; <b>Sync</b> and click <b>Set Up Sync</b>.</li>
+    <li>Choose <b>A folder</b> and click <b>Choose</b>, or choose <b>S3-compatible storage</b> and fill in its details. Click <b>Next</b>.</li>
+    <li>Type a sync passphrase twice and a name for this computer. Choose what to sync, then click <b>Turn On Sync</b>.</li>
+</ol>
+<h2>Add another computer</h2>
+<ol>
+    <li>On the other computer, open <b>Tools</b> &gt; <b>Options</b> &gt; <b>Sync</b>, click <b>Set Up Sync</b> and choose the same folder or storage. Click <b>Next</b>.</li>
+    <li>Enter the sync passphrase and a name for this computer. Choose what to sync, then click <b>Turn On Sync</b>.</li>
+</ol>
+<p>Existing data is merged with the synced data. Matching accounts and contacts become one. Added accounts download the messages available on their mail servers.</p>
+<h2>While it syncs</h2>
+<p>Each computer syncs every few minutes and when you click <b>Sync Now</b>. When changes conflict, sync keeps one version and saves replaced values in <b>History</b> for you to restore. Passwords, sign-in credentials and private keys are excluded from this history. When another computer removes an account, the main window says so.</p>
+<p>To stop syncing a computer you no longer use, click <b>Computers</b> and remove it. To stop syncing this computer, click <b>Turn Off Sync</b>: everything stays as it is.</p>
+<nav class="related"><a href="move-computer.html">Move to another computer</a> <a href="manage-accounts.html">Change, order and remove accounts</a> <a href="encryption-keys.html">Encryption keys</a></nav>
+</main></div>
+</body>
+</html>

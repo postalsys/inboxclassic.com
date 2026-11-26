@@ -3,6 +3,32 @@
     <channel>
         <title>Inbox Classic</title>
         <item>
+            <title>0.22.0</title>
+            <pubDate>Thu, 26 Nov 2026 11:19:43 +0200</pubDate>
+            <sparkle:version>0.22.0</sparkle:version>
+            <sparkle:shortVersionString>0.22.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description sparkle:format="markdown"><![CDATA[## [0.22.0](https://github.com/postalsys/inbox-classic/compare/v0.21.0...v0.22.0) (2026-11-26)
+
+Emoji reactions, the whole conversation in the reading pane, settings that follow you to your other computers, and Fedora packages.
+
+### Features
+
+* **Emoji reactions.** A reaction someone sends from Gmail or Outlook (or any program that follows RFC 9078) now shows on the message it is for: a badge after the subject in the list and a Reactions line in the reading pane, one chip a person. The reaction email itself leaves the lists and is marked read; it stays on the server for other mail programs. A chip's menu opens the reaction email or shows it as an email again. Only reactions from the message's own sender or recipients, signed by their domain, count; mail downloaded before the update is looked at in the background.
+* **The whole conversation in the reading pane.** Selecting a conversation shows its messages one under another, each folded or open, and Print Conversation prints the downloaded ones together. Turn it off in Reading settings to see one message at a time.
+* **Settings sync.** A new Sync page in Options (Settings on the Mac, Preferences on Linux) keeps your accounts, keys, contacts, rules and settings the same on each computer, through a folder that Dropbox, OneDrive, iCloud Drive, Google Drive, Nextcloud or Syncthing copies, or S3-compatible storage you own. Everything is encrypted with your sync passphrase before it leaves the computer; messages are not synced.
+* **Fedora packages.** Inbox Classic installs on Fedora 44 and newer with `sudo dnf install` from the latest release; the package adds the signed repository https://rpm.inboxclassic.com, so updates come with the system's own.
+* **Account Properties on the folder list.** The row named after an account has Account Properties in its menu.
+
+### Bug Fixes
+
+* **An address typed into To stays as typed** unless a suggestion begins with what you typed, so pressing Enter or a comma no longer swaps it for a different contact.
+* **The Options tabs fit in every language.**
+]]></description>
+            <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.22.0/InboxClassic.dmg" length="30790585" type="application/octet-stream" sparkle:edSignature="Rjhfe6Ll+axQ2UqLozWCnXFPfKx9P2v29klBEbdcjWGQoEtQyLIWB3ybAVJDEtARIAthm2Z/YDCDdsOTRreEBA=="/>
+        </item>
+        <item>
             <title>0.21.0</title>
             <pubDate>Mon, 23 Nov 2026 18:39:43 +0200</pubDate>
             <sparkle:version>0.21.0</sparkle:version>
@@ -61,24 +87,6 @@ Six new languages, a mailing-list bar for unsubscribing, and search that finds w
 * **Unsubscribe by mail from a message window** writes from that message's account, on the Mac and Linux.
 ]]></description>
             <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.20.1/InboxClassic.dmg" length="29547296" type="application/octet-stream" sparkle:edSignature="O3Bh7VEugZk0QGle03jzPfE3U8QN4NPPdBPuDoRoHVe5SjxHAAwLnPrDb/Ug8CNONrna9904fg+FDVKm/G+0Dg=="/>
-        </item>
-        <item>
-            <title>0.19.1</title>
-            <pubDate>Fri, 20 Nov 2026 00:37:06 +0200</pubDate>
-            <sparkle:version>0.19.1</sparkle:version>
-            <sparkle:shortVersionString>0.19.1</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>26.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[## [0.19.1](https://github.com/postalsys/inbox-classic/compare/v0.19.0...v0.19.1) (2026-11-19)
-
-Two fixes for 0.19.0.
-
-### Bug Fixes
-
-* **On Linux, a large folder's list no longer goes blank.** In a folder of more than 800 messages, choosing another folder and coming back, or a sync in the background, could leave the list's rows empty, and a row selected opened nothing.
-* **On the Mac, the Tools menu now has Message Rules and Encryption Keys, and the Message menu has Create Rule from Message.** They were missing from the menu bar, so rules and keys, such as importing a key you already have, could not be reached there.
-]]></description>
-            <enclosure url="https://github.com/postalsys/inbox-classic/releases/download/v0.19.1/InboxClassic.dmg" length="27433239" type="application/octet-stream" sparkle:edSignature="mY4N6AjKT6D8mK5lBd2g7yrbUzgHmQdHrEagyn/wIq1tlQJt1MNjJj2WLtgnJgJuteNs0tQScS2V+xfFAdLxCQ=="/>
         </item>
     </channel>
 </rss>
